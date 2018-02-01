@@ -14,13 +14,11 @@
 
 #include "tthAnalysis/NanoAOD/interface/JetExtendedPluginBase.h"
 
-#include "FWCore/Utilities/interface/Exception.h"
 #include "DataFormats/Math/interface/deltaPhi.h" // deltaPhi
 
 #include <TMath.h> // TMath::Pi
 
-#include <cmath> // fabs
-#include <math.h> // pow, sqrt
+#include <math.h> // sqrt
 
 class JetPullPlugin : public JetExtendedPluginBase
 {

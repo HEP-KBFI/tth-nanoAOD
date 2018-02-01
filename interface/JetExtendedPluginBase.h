@@ -3,7 +3,7 @@
 
 /** \class JetExtendedPluginBase
  *
- * Base-class for adding observables relevant for jet substructure analyses
+ * Base-class for adding observables relevant for jet substructure analyses as userFloats
  * to pat::Jet object
  *
  * \author Christian Veelken, Tallinn
