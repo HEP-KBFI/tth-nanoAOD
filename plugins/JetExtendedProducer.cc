@@ -50,12 +50,13 @@ class JetExtendedProducer : public edm::stream::EDProducer<>
     edm::Handle<edm::View<pat::Jet>> inputJets;
     evt.getByToken(token_, inputJets);
 
-    std::unique_ptr<pat::JetCollection> outputJets;
+    std::unique_ptr<pat::JetCollection> outputJets(new pat::JetCollection());
 
     size_t numJets = inputJets->size();
     for ( size_t idxJet = 0; idxJet < numJets; ++idxJet ) {
       edm::RefToBase<reco::Jet> inputJetRef(inputJets->refAt(idxJet));
-      pat::Jet outputJet(*inputJetRef);
+      edm::RefToBase<pat::Jet> inputPatJetRef(inputJetRef.castTo<pat::JetRef>());
+      pat::Jet outputJet(inputPatJetRef);
       for ( std::vector<JetExtendedPluginBase*>::const_iterator plugin = plugins_.begin();
 	    plugin != plugins_.end(); ++plugin ) {
 	JetValueMapPlugin* plugin_JetValueMap = dynamic_cast<JetValueMapPlugin*>(*plugin);
@@ -79,7 +80,13 @@ class JetExtendedProducer : public edm::stream::EDProducer<>
     edm::ParameterSetDescription desc;
     desc.setComment("PAT jet producer module");
     desc.add<edm::InputTag>("src")->setComment("jet input collection");
-    //desc.add<edm::VParameterSet>("plugins")->setComment("collections of plugins adding observables as userFloats");
+    edm::ParameterSetDescription desc_plugins;
+    desc_plugins.add<std::string>("pluginType")->setComment("C++ class type of plugin");
+    desc_plugins.add<std::string>("label")->setComment("Name of userFloat used to store value computed by plugin");
+    desc_plugins.add<bool>("overwrite")->setComment("Flag to enable/disable overwriting of userFloat in case a userFloat of given name already exists in the jet input collection");
+    desc_plugins.addOptional<double>("kappa")->setComment("Exponent used to compute jet charge (specific to JetChargePlugin)");
+    desc_plugins.addOptional<edm::InputTag>("src")->setComment("Name of ValueMap (specific to JetValueMapPlugin)"); 
+    desc.addVPSet("plugins", desc_plugins)->setComment("collections of plugins adding observables as userFloats");
     descriptions.add("JetExtendedProducer", desc);
   }
 
