@@ -25,6 +25,9 @@ process.source.fileNames = [
     'file:/hdfs/cms/store/mc/RunIISummer17MiniAOD/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/92X_upgrade2017_realistic_Candidate_forECALStudies_ext1-v1/70000/FC9F9AAD-29A4-E711-8FCD-0CC47A4D7670.root'
 ]
 
+runOnMC = True
+#runOnMC = False
+
 process.load("PhysicsTools.NanoAOD.nano_cff")
 
 process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService",
@@ -37,17 +40,18 @@ process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService
         engineName = cms.untracked.string('TRandom3'),
     ),
 )
-process.nanoPath = cms.Path(process.nanoSequenceMC)
-process.calibratedPatElectrons.isMC = cms.bool(True)
-process.calibratedPatPhotons.isMC = cms.bool(True)
-#for data:
-#process.nanoPath = cms.Path(process.nanoSequence)
-#process.GlobalTag.globaltag = autoCond['run2_data']
+if runOnMC:
+  process.nanoPath = cms.Path(process.nanoSequenceMC)
+  process.calibratedPatElectrons.isMC = cms.bool(True)
+  process.calibratedPatPhotons.isMC = cms.bool(True)
+else:
+  process.nanoPath = cms.Path(process.nanoSequence)
+  process.GlobalTag.globaltag = autoCond['run2_data']
 
 #--------------------------------------------------------------------------------
 # CV: customization with jet substructure observables for hadronic top reconstruction (boosted and non-boosted)
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
-addJetSubstructureObservables(process)
+addJetSubstructureObservables(process, runOnMC)
 #--------------------------------------------------------------------------------
 
 process.out = cms.OutputModule("NanoAODOutputModule",
