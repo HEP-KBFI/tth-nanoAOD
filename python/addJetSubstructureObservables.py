@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 from PhysicsTools.NanoAOD.common_cff import Var
 
-def addJetSubstructureObservables(process):
+def addJetSubstructureObservables(process, runOnMC):
 
     process.jetSubstructureSequence = cms.Sequence()
 
@@ -10,12 +10,7 @@ def addJetSubstructureObservables(process):
     # add anti-kT jets for dR = 1.2 (AK12),
     # following instructions posted by Sal on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1792/1.html)
     from JMEAnalysis.JetToolbox.jetToolbox_cff import jetToolbox
-    jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, addSoftDrop=True)
-    # CV: hotfix that is neccessary because jetToolbox has not been updated to CMSSW 9_4_x yet
-    process.ak12PFJetsPuppiConstituents = cms.EDProducer("PFJetConstituentSelector",
-        cut = cms.string(''),
-        src = cms.InputTag('ak12PFJetsPuppi')
-    )
+    jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, runOnMC=runOnMC, addSoftDrop=True)
     fatJetCollectionAK12 = 'patJetsAK12PFPuppi'
     subJetCollectionAK12 = ''
     process.jetSubstructureSequence += process.jetSequenceAK12
