@@ -4,16 +4,16 @@ from PhysicsTools.NanoAOD.common_cff import Var
 
 def addJetSubstructureObservables(process, runOnMC):
 
-    process.jetSubstructureSequence = cms.Sequence()
-
     #----------------------------------------------------------------------------
     # add anti-kT jets for dR = 1.2 (AK12),
     # following instructions posted by Sal on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1792/1.html)
     from JMEAnalysis.JetToolbox.jetToolbox_cff import jetToolbox
     jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, runOnMC=runOnMC, addSoftDrop=True, addSoftDropSubjets=True)
+    # CV: use jet energy corrections for AK8 Puppi jets
+    process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')   
+    process.patJetCorrFactorsAK12PFPuppiSoftDrop.payload = cms.string('AK8PFPuppi')
     fatJetCollectionAK12 = 'patJetsAK12PFPuppi'
     subJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked:SubJets'
-    process.jetSubstructureSequence += process.jetSequenceAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -22,26 +22,21 @@ def addJetSubstructureObservables(process, runOnMC):
     process.looseJetIdAK12 = process.looseJetIdAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
-    process.jetSubstructureSequence += process.looseJetIdAK12
     process.tightJetIdAK12 = process.tightJetIdAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
-    process.jetSubstructureSequence += process.tightJetIdAK12
     process.jetsAK12WithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
     process.jetsAK12WithUserData.userInts.tightId = cms.InputTag("tightJetIdAK8")
     process.jetsAK12WithUserData.userInts.looseId = cms.InputTag("looseJetIdAK8")
-    process.jetSubstructureSequence += process.jetsAK12WithUserData
     process.jetCorrFactorsAK12 = process.jetCorrFactorsAK8.clone(
         src = cms.InputTag('jetsAK12WithUserData')
     )
-    process.jetSubstructureSequence += process.jetCorrFactorsAK12
     process.updatedJetsAK12 = process.updatedJetsAK8.clone(
         jetSource = cms.InputTag('jetsAK12WithUserData'),
 	jetCorrFactorsSource = cms.VInputTag(cms.InputTag('jetCorrFactorsAK12'))
     )
-    process.jetSubstructureSequence += process.updatedJetsAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -58,7 +53,6 @@ def addJetSubstructureObservables(process, runOnMC):
         jetRad = cms.double(1.2),
         jetAlgo = cms.string("ak")
     )
-    process.jetSubstructureSequence += process.QJetsAdderAK12
     #----------------------------------------------------------------------------
     
     #----------------------------------------------------------------------------
@@ -85,10 +79,9 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.jetSubstructureSequence += process.extendedFatJetsAK12
     process.extendedSubJetsAK12 = cms.EDProducer("JetExtendedProducer",
         src = cms.InputTag(subJetCollectionAK12),
-        pplluginsToRun = cms.VPSet(
+        plugins = cms.VPSet(
             cms.PSet(
                 pluginType = cms.string("JetChargePlugin"),
                 label = cms.string("jetCharge"),
@@ -102,7 +95,6 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.jetSubstructureSequence += process.extendedSubJetsAK12                                           
     #----------------------------------------------------------------------------
     
     #----------------------------------------------------------------------------
@@ -117,13 +109,11 @@ def addJetSubstructureObservables(process, runOnMC):
     process.fatJetTableAK12.variables.pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10)
     process.fatJetTableAK12.variables.pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
     process.fatJetTableAK12.variables.QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10)
-    process.jetSubstructureSequence += process.fatJetTableAK12
     process.subJetTableAK12 = process.subJetTable.clone()
     process.subJetTableAK12.src = cms.InputTag('extendedSubJetsAK12')
     process.subJetTableAK12.cut = cms.string("")
     process.subJetTableAK12.name = cms.string("SubJetAK12")
     process.subJetTableAK12.doc = cms.string("ak12 sub-jets for boosted analysis")
-    process.jetSubstructureSequence += process.subJetTableAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
