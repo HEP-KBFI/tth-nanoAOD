@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 from Configuration.StandardSequences.Eras import eras
-process = cms.Process('NANO',eras.Run2_2017,eras.run2_nanoAOD_92X)
+process = cms.Process('NANO',eras.Run2_2017)
 
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
@@ -22,7 +22,7 @@ process.source.fileNames = [
 
 #sample with LHE
 #	'/store/mc/RunIISummer17MiniAOD/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8/MINIAODSIM/92X_upgrade2017_realistic_v10_ext1-v1/110000/187F7EDA-0986-E711-ABB3-02163E014C21.root'
-    'file:/hdfs/cms/store/mc/RunIISummer17MiniAOD/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/92X_upgrade2017_realistic_Candidate_forECALStudies_ext1-v1/70000/FC9F9AAD-29A4-E711-8FCD-0CC47A4D7670.root'
+  'file:/hdfs/local/karl/store/mc/RunIIFall17MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/00000/005DC030-D3F4-E711-889A-02163E01A62D.root'
 ]
 
 runOnMC = True
