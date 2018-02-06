@@ -21,7 +21,7 @@
 #include "DataFormats/Common/interface/RefToBase.h"
 
 #include "tthAnalysis/NanoAOD/interface/JetExtendedPluginBase.h"
-#include "tthAnalysis/NanoAOD/plugins/JetValueMapPlugin.cc"
+#include "tthAnalysis/NanoAOD/interface/JetValueMapPlugin.h"
 
 class JetExtendedProducer : public edm::stream::EDProducer<>
 {
