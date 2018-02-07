@@ -15,7 +15,7 @@ process.GlobalTag.globaltag = autoCond['phase1_2017_realistic']
 
 process.options   = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
 process.MessageLogger.cerr.FwkReport.reportEvery = 100
-process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(10000))
+process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(300))
 
 process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring())
 process.source.fileNames = [
@@ -73,6 +73,6 @@ process.end = cms.EndPath(process.out+process.out1)
 
 #--------------------------------------------------------------------------------
 # CV: dump python config
-#processDumpFile = open('nano.dump', 'w')
-#print >> processDumpFile, process.dumpPython()
+processDumpFile = open('nano.dump', 'w')
+print >> processDumpFile, process.dumpPython()
 #--------------------------------------------------------------------------------
