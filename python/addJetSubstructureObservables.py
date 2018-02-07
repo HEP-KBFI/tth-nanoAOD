@@ -123,7 +123,7 @@ def addJetSubstructureObservables(process, runOnMC):
     
     #----------------------------------------------------------------------------
     # add jet charge, pull, and Qjets volatility to nanoAOD
-    process.fatJetTableAK12 = process.fatJetTable.clone(
+    process.fatJetAK12Table = process.fatJetTable.clone(
         src = cms.InputTag('extendedFatJetsAK12'),
         cut = cms.string("pt > 100"),
         name = cms.string("FatJetAK12"),
@@ -141,15 +141,15 @@ def addJetSubstructureObservables(process, runOnMC):
             tau2 = Var("userFloat('NjettinessAK12Puppi:tau2')",float, doc="Nsubjettiness (2 axis)",precision=10)
         )
     )
-    process.jetSubstructureSequence += process.fatJetTableAK12
-    process.subJetTableAK12 = process.subJetTable.clone(
+    process.jetSubstructureSequence += process.fatJetAK12Table
+    process.subJetAK12Table = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK12'),
         cut = cms.string(""),
         name = cms.string("SubJetAK12"),
         doc = cms.string("ak12 sub-jets for boosted analysis"),
         variables = cms.PSet(P4Vars)
     )
-    process.jetSubstructureSequence += process.subJetTableAK12
+    process.jetSubstructureSequence += process.subJetAK12Table
     #----------------------------------------------------------------------------
 
     process.nanoSequence += process.jetSubstructureSequence
