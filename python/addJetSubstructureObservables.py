@@ -7,7 +7,12 @@ def addJetSubstructureObservables(process, runOnMC):
     #----------------------------------------------------------------------------
     # add anti-kT jets for dR = 1.2 (AK12),
     # following instructions posted by Sal on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1792/1.html)
-    from JMEAnalysis.JetToolbox.jetToolbox_cff import jetToolbox
+    #from JMEAnalysis.JetToolbox.jetToolbox_cff import jetToolbox
+    # CV: "official" version of jetToolbox does not work with nanoAOD,
+    #     as the lines https://github.com/cms-jet/JetToolbox/blob/jetToolbox_91X/python/jetToolbox_cff.py#L947-L960
+    #     add misconfigured/non-working modules for scheduled execution.
+    #     For the time-being, store fixed version of jetToolbox in tthAnalysis/NanoAOD package and use private version instead of "official" one
+    from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
     jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, runOnMC=runOnMC, addSoftDrop=True, addSoftDropSubjets=True)
     # CV: use jet energy corrections for AK8 Puppi jets
     process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')   

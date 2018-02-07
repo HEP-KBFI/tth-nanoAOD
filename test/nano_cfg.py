@@ -7,6 +7,9 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.load("Configuration.StandardSequences.GeometryDB_cff")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.load('Configuration.StandardSequences.Services_cff')
+process.load("Configuration.StandardSequences.MagneticField_AutoFromDBCurrent_cff")
+process.load("RecoBTag.Configuration.RecoBTag_cff") 
+process.load("Configuration.Geometry.GeometryRecoDB_cff")
 from Configuration.AlCa.autoCond import autoCond
 process.GlobalTag.globaltag = autoCond['phase1_2017_realistic']
 
@@ -70,6 +73,6 @@ process.end = cms.EndPath(process.out+process.out1)
 
 #--------------------------------------------------------------------------------
 # CV: dump python config
-processDumpFile = open('nano.dump', 'w')
-print >> processDumpFile, process.dumpPython()
+#processDumpFile = open('nano.dump', 'w')
+#print >> processDumpFile, process.dumpPython()
 #--------------------------------------------------------------------------------
