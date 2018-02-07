@@ -9,6 +9,14 @@
 ###############################################
 import FWCore.ParameterSet.Config as cms
 
+#--------------------------------------------------------------------------------
+# CV: this python code has been downloaded from https://github.com/cms-jet/JetToolbox/blob/jetToolbox_91X/python/jetToolbox_cff.py
+#     and lines https://github.com/cms-jet/JetToolbox/blob/jetToolbox_91X/python/jetToolbox_cff.py#L947-L960
+#     have been removed.
+#     The issue is that these lines add misconfigured/non-working modules for scheduled execution,
+#     causing a run-time exception when executing 'cmsRun nano_cfg.py'.
+#--------------------------------------------------------------------------------
+
 ##from RecoJets.Configuration.RecoPFJets_cff import ak4PFJets, ak8PFJetsCHSSoftDrop, ak8PFJetsCHSSoftDropMass, ak8PFJetsCHSPruned, ak8PFJetsCHSPrunedMass, ak8PFJetsCHSTrimmed, ak8PFJetsCHSTrimmedMass, ak8PFJetsCHSFiltered, ak8PFJetsCHSFilteredMass, ak4PFJetsCHS, ca15PFJetsCHSMassDropFiltered, hepTopTagPFJetsCHS, ak8PFJetsCHSConstituents, puppi
 from RecoJets.Configuration.RecoPFJets_cff import ak4PFJets, ak8PFJetsCHSSoftDrop, ak8PFJetsCHSSoftDropMass, ak8PFJetsCHSPruned, ak8PFJetsCHSPrunedMass, ak8PFJetsCHSTrimmed, ak8PFJetsCHSTrimmedMass, ak8PFJetsCHSFiltered, ak8PFJetsCHSFilteredMass, ak4PFJetsCHS, ca15PFJetsCHSMassDropFiltered, ak8PFJetsCHSConstituents, puppi
 from RecoJets.Configuration.RecoGenJets_cff import ak4GenJets
