@@ -24,69 +24,9 @@ def addJetSubstructureObservables(process, runOnMC):
     for moduleName in [ "patJetsAK12PFPuppi", "patJetsAK12PFPuppiSoftDrop", "patJetsAK12PFPuppiSoftDropSubjets" ]:
         module = getattr(process, moduleName)
         module.discriminatorSources = cms.VInputTag()
-    ##fatJetCollectionAK12 = 'patJetsAK12PFPuppi'
-    ##fatJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked
     fatJetCollectionAK12 = 'packedPatJetsAK12PFPuppiSoftDrop'
     subJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked:SubJets'
     #----------------------------------------------------------------------------
-
-##     #----------------------------------------------------------------------------
-##     # add softdrop mass
-##     # (taken from https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/PatAlgos/python/slimming/applySubstructure_cff.py#L201-L204)
-##     from RecoJets.JetProducers.ak8PFJetsPuppi_groomingValueMaps_cfi import ak8PFJetsPuppiSoftDropMass
-##     ak12PFJetsPuppiSoftDropMass = ak8PFJetsPuppiSoftDropMass.clone(
-##         src = cms.InputTag("ak12PFJetsPuppi"),
-##         matched = cms.InputTag("ak12PFJetsPuppiSoftDrop"),                                         
-##         distMax = cms.double(1.2)
-##     )
-##     getattr(process,"patJetsAK12PFPuppiSoftdrop").userData.userFloats.src += ['ak8PFJetsPuppiSoftDropMass'+postfix]
-##     process.jetSubstructureSequence += process.ak12PFJetsPuppiSoftDropMass
-##     #----------------------------------------------------------------------------
-
-##     #----------------------------------------------------------------------------
-##     # add N0-subjettiness
-##     # (taken from https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/PatAlgos/python/slimming/applySubstructure_cff.py#L214-L218)
-
-    
-##     addToProcessAndTask('ak12PFJetsPuppiSoftDropMass', ak12PFJetsPuppiSoftDropMass, process, task)
-    
-## ## now add AK8 groomed masses and ECF
-## 0202     from RecoJets.JetProducers.ak8PFJetsPuppi_groomingValueMaps_cfi import ak8PFJetsPuppiSoftDropMass
-## 0203     addToProcessAndTask('ak8PFJetsPuppiSoftDropMass'+postfix, ak8PFJetsPuppiSoftDropMass.clone(), process, task)
-## 0204     getattr(process,"patJetsAK8Puppi"+postfix).userData.userFloats.src += ['ak8PFJetsPuppiSoftDropMass'+postfix]
-## 0205     getattr(process,"patJetsAK8Puppi"+postfix).addTagInfos = cms.bool(False)
-## 0206     getattr(process,"patJetsAK8Puppi"+postfix).userData.userFloats.src += [
-## 0207         cms.InputTag('ak8PFJetsPuppiSoftDropValueMap'+postfix,'nb1AK8PuppiSoftDropN2'),
-## 0208         cms.InputTag('ak8PFJetsPuppiSoftDropValueMap'+postfix,'nb1AK8PuppiSoftDropN3'),
-## 0209         cms.InputTag('ak8PFJetsPuppiSoftDropValueMap'+postfix,'nb2AK8PuppiSoftDropN2'),
-## 0210         cms.InputTag('ak8PFJetsPuppiSoftDropValueMap'+postfix,'nb2AK8PuppiSoftDropN3'),
-## 0211         ]
-## 0212 
-## 0213 
-## 0214     # add PUPPI Njetiness
-## 0215     addToProcessAndTask('NjettinessAK8Puppi'+postfix, process.Njettiness.clone(), process, task)
-## 0216     getattr(process,"NjettinessAK8Puppi"+postfix).src = cms.InputTag("ak8PFJetsPuppi"+postfix)
-## 0217     getattr(process,"NjettinessAK8Puppi").cone = cms.double(0.8)
-## 0218     getattr(process,"patJetsAK8Puppi").userData.userFloats.src += ['NjettinessAK8Puppi'+postfix+':tau1','NjettinessAK8Puppi'+postfix+':tau2','NjettinessAK8Puppi'+postfix+':tau3','NjettinessAK8Puppi'+postfix+':tau4']
-## 0219 
-    
-##  from RecoJets.JetProducers.ak8PFJetsCHS_groomingValueMaps_cfi import ak8PFJetsCHSPrunedMass, ak8PFJetsCHSTrimmedMass, ak8PFJetsCHSFilteredMass, ak8PFJetsCHSSoftDropMass
-## 0055     addToProcessAndTask('ak8PFJetsCHSPrunedMass'+postfix, ak8PFJetsCHSPrunedMass.clone(), process, task)
-## 0056     addToProcessAndTask('ak8PFJetsCHSTrimmedMass'+postfix, ak8PFJetsCHSTrimmedMass.clone(), process, task)
-## 0057     addToProcessAndTask('ak8PFJetsCHSFilteredMass'+postfix, ak8PFJetsCHSFilteredMass.clone(), process, task)
-## 0058     addToProcessAndTask('ak8PFJetsCHSSoftDropMass'+postfix, ak8PFJetsCHSSoftDropMass.clone(), process, task)
-## 0059 
-## 0060     getattr(process,"patJetsAK8").userData.userFloats.src += ['ak8PFJetsCHSPrunedMass'+postfix,'ak8PFJetsCHSSoftDropMass'+postfix]  
-## 0061     getattr(process,"patJetsAK8").addTagInfos = cms.bool(False)
-## 0062 
-## 0063     # add Njetiness for CHS
-## 0064     process.load('RecoJets.JetProducers.nJettinessAdder_cfi')
-## 0065     task.add(process.Njettiness)
-## 0066     addToProcessAndTask('NjettinessAK8'+postfix, process.Njettiness.clone(), process, task)
-## 0067     getattr(process,"NjettinessAK8").src = cms.InputTag("ak8PFJetsCHS"+postfix)
-## 0068     getattr(process,"NjettinessAK8").cone = cms.double(0.8)
-## 0069     getattr(process,"patJetsAK8").userData.userFloats.src += ['NjettinessAK8'+postfix+':tau1','NjettinessAK8'+postfix+':tau2','NjettinessAK8'+postfix+':tau3','NjettinessAK8'+postfix+':tau4']
-## 0070 
 
     #----------------------------------------------------------------------------
     # add PF jet ID flags and jet energy corrections for AK12 pat::Jet collection,
