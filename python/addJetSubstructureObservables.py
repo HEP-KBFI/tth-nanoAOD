@@ -24,9 +24,59 @@ def addJetSubstructureObservables(process, runOnMC):
     for moduleName in [ "patJetsAK12PFPuppi", "patJetsAK12PFPuppiSoftDrop", "patJetsAK12PFPuppiSoftDropSubjets" ]:
         module = getattr(process, moduleName)
         module.discriminatorSources = cms.VInputTag()
+    #process.packedPatJetsAK12PFPuppiSoftDrop.fixDaughters = cms.bool(True)
+    #process.packedPatJetsAK12PFPuppiSoftDrop.packedPFCandidates = cms.InputTag('packedPFCandidates')
     fatJetCollectionAK12 = 'packedPatJetsAK12PFPuppiSoftDrop'
+
+## CV: either need to use
+
+##       subJetIdx1 = Var("?numberOfSourceCandidatePtrs()>0 && sourceCandidatePtr(0).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(0).key():-1", int, doc="index of first subjet"),
+##       subJetIdx2 = Var("?numberOfSourceCandidatePtrs()>1 && sourceCandidatePtr(1).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(1).key():-1", int, doc="index of second subjet"),
+##       subJetIdx3 = Var("?numberOfSourceCandidatePtrs()>2 && sourceCandidatePtr(2).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(2).key():-1", int, doc="index of third subjet"),
+
+## in FlatTable producer and process.slimmedJetsAK8PFPuppiSoftDropSubjets + process.slimmedJetsAK8PFPuppiSoftDropPacked modules as in lines http://cmslxr.fnal.gov/source/PhysicsTools/PatAlgos/python/slimming/applySubstructure_cff.py?v=CMSSW_9_4_0#0263 to 286
+
+## or use
+      
+##             subJetIdx1 = Var("?subjets('SoftDrop').size()>0?subjets('SoftDrop').at(0).key():-1", int, doc="index of first subjet"),
+##             subJetIdx2 = Var("?subjets('SoftDrop').size()>1?subjets('SoftDrop').at(1).key():-1", int, doc="index of second subjet"),
+##             subJetIdx3 = Var("?subjets('SoftDrop').size()>2?subjets('SoftDrop').at(2).key():-1", int, doc="index of third subjet"),
+
+## in FlatTable producer 
+    
+##     process.slimmedJetsAK8PFPuppiSoftDropSubjets = cms.EDProducer("PATJetSlimmer",
+##         src = cms.InputTag(fatJetCollectionAK12),
+##         packedPFCandidates = cms.InputTag('packedPFCandidates'),
+##         dropJetVars = cms.string("1"),
+##         dropDaughters = cms.string("0"),
+##         rekeyDaughters = cms.string("0"),
+##         dropTrackRefs = cms.string("1"),
+##         dropSpecific = cms.string("1"),
+##         dropTagInfos = cms.string("1"),
+##         modifyJets = cms.bool(True),
+##         mixedDaughters = cms.bool(False),
+##         modifierConfig = cms.PSet(modifications = cms.VPSet())
+##     )
+##     process.jetSubstructureSequence += process.slimmedJetsAK8PFPuppiSoftDropSubjets
+
+##  addToProcessAndTask("slimmedJetsAK8PFPuppiSoftDropPacked"+postfix,
+## 0282                         cms.EDProducer("BoostedJetMerger",
+## 0283                                jetSrc=cms.InputTag("selectedPatJetsAK8PFPuppiSoftDrop"),
+## 0284                                subjetSrc=cms.InputTag("slimmedJetsAK8PFPuppiSoftDropSubjets")
+## 0285                                        ),
+## 0286                         process, task )
+    
+##     fatJetCollectionAK12 = 'slimmedJetsAK8PFPuppiSoftDropSubjets'
+    #fatJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked'   
+    ##fatJetCollectionAK12 = 'packedPatJetsAK12PFPuppiSoftDrop'
     subJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked:SubJets'
     #----------------------------------------------------------------------------
+
+    process.dumpFatJetCollectionAK12 = cms.EDAnalyzer("DumpPATJets",
+        src = cms.InputTag(fatJetCollectionAK12),
+        minPt = cms.double(-1.)
+    )
+    process.jetSubstructureSequence += process.dumpFatJetCollectionAK12
 
     #----------------------------------------------------------------------------
     # add PF jet ID flags and jet energy corrections for AK12 pat::Jet collection,
@@ -134,12 +184,16 @@ def addJetSubstructureObservables(process, runOnMC):
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
             QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10),
             msoftdrop = Var("userFloat('ak12PFJetsPuppiSoftDropMass')",float, doc="Corrected soft drop mass with PUPPI",precision=10),
-            subJetIdx1 = Var("?numberOfSourceCandidatePtrs()>0 && sourceCandidatePtr(0).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(0).key():-1", int, doc="index of first subjet"),
-            subJetIdx2 = Var("?numberOfSourceCandidatePtrs()>1 && sourceCandidatePtr(1).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(1).key():-1", int, doc="index of second subjet"),
-            subJetIdx3 = Var("?numberOfSourceCandidatePtrs()>2 && sourceCandidatePtr(2).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(2).key():-1", int, doc="index of third subjet"),
+            ##subJetIdx1 = Var("?numberOfSourceCandidatePtrs()>0 && sourceCandidatePtr(0).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(0).key():-1", int, doc="index of first subjet"),
+            ##subJetIdx2 = Var("?numberOfSourceCandidatePtrs()>1 && sourceCandidatePtr(1).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(1).key():-1", int, doc="index of second subjet"),
+            ##subJetIdx3 = Var("?numberOfSourceCandidatePtrs()>2 && sourceCandidatePtr(2).numberOfSourceCandidatePtrs()>0?sourceCandidatePtr(2).key():-1", int, doc="index of third subjet"),
+            subJetIdx1 = Var("?subjets('SoftDrop').size()>0?subjets('SoftDrop').at(0).key():-1", int, doc="index of first subjet"),
+            subJetIdx2 = Var("?subjets('SoftDrop').size()>1?subjets('SoftDrop').at(1).key():-1", int, doc="index of second subjet"),
+            subJetIdx3 = Var("?subjets('SoftDrop').size()>2?subjets('SoftDrop').at(2).key():-1", int, doc="index of third subjet"),
             tau1 = Var("userFloat('NjettinessAK12Puppi:tau1')",float, doc="Nsubjettiness (1 axis)",precision=10),
             tau2 = Var("userFloat('NjettinessAK12Puppi:tau2')",float, doc="Nsubjettiness (2 axis)",precision=10),
             tau3 = Var("userFloat('NjettinessAK12Puppi:tau3')",float, doc="Nsubjettiness (3 axis)",precision=10),
+            tau4 = Var("userFloat('NjettinessAK12Puppi:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
         )
     )
     process.jetSubstructureSequence += process.fatJetAK12Table
