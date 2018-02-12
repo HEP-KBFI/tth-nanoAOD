@@ -8,7 +8,7 @@ process.load("Configuration.StandardSequences.GeometryDB_cff")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.load('Configuration.StandardSequences.Services_cff')
 process.load("Configuration.StandardSequences.MagneticField_AutoFromDBCurrent_cff")
-process.load("RecoBTag.Configuration.RecoBTag_cff") 
+process.load("RecoBTag.Configuration.RecoBTag_cff")
 process.load("Configuration.Geometry.GeometryRecoDB_cff")
 from Configuration.AlCa.autoCond import autoCond
 process.GlobalTag.globaltag = autoCond['phase1_2017_realistic']
@@ -19,15 +19,10 @@ process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(300))
 
 process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring())
 process.source.fileNames = [
-#relvals:
-# '/store/relval/CMSSW_9_3_0_pre4/RelValTTbar_13/MINIAODSIM/93X_mc2017_realistic_v1-v1/00000/1CFF7C9C-6A86-E711-A1F2-0CC47A7C35F4.root',
-# '/store/relval/CMSSW_9_3_0_pre4/RelValTTbar_13/MINIAODSIM/93X_mc2017_realistic_v1-v1/00000/107D499F-6A86-E711-8A51-0025905B8592.root',
-
-#sample with LHE
-#	'/store/mc/RunIISummer17MiniAOD/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8/MINIAODSIM/92X_upgrade2017_realistic_v10_ext1-v1/110000/187F7EDA-0986-E711-ABB3-02163E014C21.root'
-  'file:/hdfs/local/karl/store/mc/RunIIFall17MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/00000/005DC030-D3F4-E711-889A-02163E01A62D.root'
+  'file:///hdfs/local/karl/store/mc/RunIIFall17MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/00000/005DC030-D3F4-E711-889A-02163E01A62D.root'
 ]
 
+enableDiagnostics = False
 runOnMC = True
 #runOnMC = False
 
@@ -69,7 +64,26 @@ process.out1 = cms.OutputModule("NanoAODOutputModule",
     compressionLevel = cms.untracked.int32(9),
     compressionAlgorithm = cms.untracked.string("LZMA"),
 )
-process.end = cms.EndPath(process.out+process.out1)  
+
+if enableDiagnostics:
+    process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck",
+      ignoreTotal         = cms.untracked.int32(1),
+      oncePerEventMode    = cms.untracked.bool(True),
+      moduleMemorySummary = cms.untracked.bool(True),
+    )
+
+    process.Tracer = cms.Service("Tracer",
+        printTimestamps=cms.untracked.bool(True),
+    )
+
+    if hasattr(process,'options'):
+        process.options.wantSummary = cms.untracked.bool(True)
+    else:
+        process.options = cms.untracked.PSet(
+            wantSummary = cms.untracked.bool(True),
+        )
+
+process.end = cms.EndPath(process.out+process.out1)
 
 #--------------------------------------------------------------------------------
 # CV: dump python config

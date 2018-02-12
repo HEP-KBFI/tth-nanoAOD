@@ -18,7 +18,7 @@ def addJetSubstructureObservables(process, runOnMC):
     if hasattr(process, "patJetPartons"):
         process.jetSubstructureSequence += process.patJetPartons
     # CV: use jet energy corrections for AK8 Puppi jets
-    process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')   
+    process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')
     process.patJetCorrFactorsAK12PFPuppiSoftDrop.payload = cms.string('AK8PFPuppi')
     # CV: disable discriminators that cannot be computed with miniAOD inputs
     for moduleName in [ "patJetsAK12PFPuppi", "patJetsAK12PFPuppiSoftDrop", "patJetsAK12PFPuppiSoftDropSubjets" ]:
@@ -27,7 +27,7 @@ def addJetSubstructureObservables(process, runOnMC):
     fatJetCollectionAK12 = 'packedPatJetsAK12PFPuppiSoftDrop'
     subJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked:SubJets'
     #----------------------------------------------------------------------------
-    
+
     #----------------------------------------------------------------------------
     # add PF jet ID flags and jet energy corrections for AK12 pat::Jet collection,
     # following what is done for AK8 pat::Jets in https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/NanoAOD/python/jets_cff.py
@@ -53,9 +53,18 @@ def addJetSubstructureObservables(process, runOnMC):
     process.jetSubstructureSequence += process.jetCorrFactorsAK12
     process.updatedJetsAK12 = process.updatedJetsAK8.clone(
         jetSource = cms.InputTag('jetsAK12WithUserData'),
-	jetCorrFactorsSource = cms.VInputTag(cms.InputTag('jetCorrFactorsAK12'))
+        jetCorrFactorsSource = cms.VInputTag(cms.InputTag('jetCorrFactorsAK12'))
     )
     process.jetSubstructureSequence += process.updatedJetsAK12
+
+    process.selectedJetsAK12 = cms.EDFilter("PATJetSelector",
+        src      = cms.InputTag("updatedJetsAK12"),
+        cut      = cms.string("pt > 100"),
+        cutLoose = cms.string(""),
+        nLoose   = cms.uint32(0),
+        filter   = cms.bool(False),
+    )
+    process.jetSubstructureSequence += process.selectedJetsAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -69,17 +78,17 @@ def addJetSubstructureObservables(process, runOnMC):
     process.RandomNumberGeneratorService.QJetsAdderCA15 = cms.PSet(initialSeed = cms.untracked.uint32(76))
     from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
     process.QJetsAdderAK12 = QJetsAdder.clone(
-        src = cms.InputTag('updatedJetsAK12'),
+        src = cms.InputTag('selectedJetsAK12'),
         jetRad = cms.double(1.2),
         jetAlgo = cms.string("AK")
     )
     process.jetSubstructureSequence += process.QJetsAdderAK12
     #----------------------------------------------------------------------------
-    
+
     #----------------------------------------------------------------------------
     # add jet charge, pull, and Qjets volatility as userFloats to AK12 pat::Jet collection
     process.extendedFatJetsAK12 = cms.EDProducer("JetExtendedProducer",
-        src = cms.InputTag('updatedJetsAK12'),
+        src = cms.InputTag('selectedJetsAK12'),
         plugins = cms.VPSet(
             cms.PSet(
                 pluginType = cms.string("JetChargePlugin"),
@@ -119,7 +128,7 @@ def addJetSubstructureObservables(process, runOnMC):
     )
     process.jetSubstructureSequence += process.extendedSubJetsAK12
     #----------------------------------------------------------------------------
-    
+
     #----------------------------------------------------------------------------
     # add jet charge, pull, and Qjets volatility to nanoAOD
     process.fatJetAK12Table = process.fatJetTable.clone(
@@ -127,7 +136,7 @@ def addJetSubstructureObservables(process, runOnMC):
         cut = cms.string("pt > 100"),
         name = cms.string("FatJetAK12"),
         doc = cms.string("ak12 fat jets for boosted analysis"),
-        variables = cms.PSet(P4Vars,        
+        variables = cms.PSet(P4Vars,
             jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
             pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
             pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
