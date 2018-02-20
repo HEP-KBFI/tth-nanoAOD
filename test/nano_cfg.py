@@ -11,7 +11,8 @@ from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructure
 import os
 
 isDEBUG         = False
-isMC            = True
+#isMC            = True
+isMC            = False
 global_tag_data = '94X_dataRun2_ReReco_EOY17_v2'
 global_tag_mc   = '94X_mc2017_realistic_v10'
 JSONfile = os.path.join(
@@ -33,10 +34,17 @@ process.options   = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 
-process.source = cms.Source(
-  "PoolSource",
-  fileNames = cms.untracked.vstring(),
+process.source = cms.Source("PoolSource",
+  fileNames = cms.untracked.vstring()
 )
+
+#--------------------------------------------------------------------------------
+# only for testing !!
+#process.source.fileNames = cms.untracked.vstring(
+#  'file:/home/ram/VHBB_NTUPLES_2017/NANO_AOD_DEV/CMSSW_9_4_4_Feb19_2018_Latest_After_boosted_code_bugfix/src/tthAnalysis/NanoAOD/test/CE96B3D0-90FB-E711-9DB4-002590A80E1E.root'
+#)
+#process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(100))
+#--------------------------------------------------------------------------------
 
 process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService",
   calibratedPatElectrons = cms.PSet(
@@ -93,3 +101,9 @@ if isDEBUG:
 #--------------------------------------------------------------------------------
 
 process.end = cms.EndPath(process.out)
+
+#--------------------------------------------------------------------------------
+# CV: dump python config
+#processDumpFile = open('nano.dump', 'w')
+#print >> processDumpFile, process.dumpPython()
+#--------------------------------------------------------------------------------
