@@ -15,8 +15,9 @@ def addJetSubstructureObservables(process, runOnMC):
     #     For the time-being, store fixed version of jetToolbox in tthAnalysis/NanoAOD package and use private version instead of "official" one
     from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
     jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, runOnMC=runOnMC, addSoftDrop=True, addSoftDropSubjets=True, addNsub=True)
-    if hasattr(process, "patJetPartons"):
+    if hasattr(process, "patJetPartons") and runOnMC:
         process.jetSubstructureSequence += process.patJetPartons
+    process.jetSubstructureSequence += process.jetSequenceAK12
     # CV: use jet energy corrections for AK8 Puppi jets
     process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')
     process.patJetCorrFactorsAK12PFPuppiSoftDrop.payload = cms.string('AK8PFPuppi')
@@ -162,7 +163,14 @@ def addJetSubstructureObservables(process, runOnMC):
     process.jetSubstructureSequence += process.subJetAK12Table
     #----------------------------------------------------------------------------
 
-    process.nanoSequence += process.jetSubstructureSequence
+    #----------------------------------------------------------------------------
+    # CV: switch to unscheduled mode, as the jetToolbox and PAT tools do not support scheduled mode - it's a mess !!
+    #process.nanoSequence += process.jetSubstructureSequence
+    process.jetSubstructureTask = cms.Task()
+    for moduleName in process.jetSubstructureSequence.moduleNames():
+        module = getattr(process, moduleName)
+        process.jetSubstructureTask.add(module)
+    #----------------------------------------------------------------------------    
 
     #----------------------------------------------------------------------------
     # add jet charge and pull as userFloats to AK4 pat::Jet collection
