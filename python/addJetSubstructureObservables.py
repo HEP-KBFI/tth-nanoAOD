@@ -170,10 +170,12 @@ def addJetSubstructureObservables(process, runOnMC):
     for moduleName in process.jetSubstructureSequence.moduleNames():
         module = getattr(process, moduleName)
         process.jetSubstructureTask.add(module)
-    # CV: add "Table" producer modules and tasks to sequence,
+    process.jetSubstructureTables = cms.Sequence(process.fatJetAK12Table + process.subJetAK12Table)        
+    # CV: add tasks to sequence,
     #     as described on this twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile#Module_sequences
     #    (some modules are contained in 'jetSubstructureTask' and some are contained in 'patAlgosToolsTask' - it's again a mess !!)
-    process.jetSubstructureTables = cms.Sequence(process.fatJetAK12Table + process.subJetAK12Table, process.jetSubstructureTask, process.patAlgosToolsTask)
+    process.jetSubstructureTables.associate(process.jetSubstructureTask)
+    process.jetSubstructureTables.associate(process.patAlgosToolsTask)
     process.nanoSequence += process.jetSubstructureTables
     #----------------------------------------------------------------------------    
 
