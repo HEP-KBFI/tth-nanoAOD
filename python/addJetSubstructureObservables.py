@@ -15,8 +15,6 @@ def addJetSubstructureObservables(process, runOnMC):
     #     For the time-being, store fixed version of jetToolbox in tthAnalysis/NanoAOD package and use private version instead of "official" one
     from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
     jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, runOnMC=runOnMC, addSoftDrop=True, addSoftDropSubjets=True, addNsub=True)
-    if hasattr(process, "patJetPartons") and runOnMC:
-        process.jetSubstructureSequence += process.patJetPartons
     process.jetSubstructureSequence += process.jetSequenceAK12
     # CV: use jet energy corrections for AK8 Puppi jets
     process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')
@@ -27,6 +25,24 @@ def addJetSubstructureObservables(process, runOnMC):
         module.discriminatorSources = cms.VInputTag()
     fatJetCollectionAK12 = 'packedPatJetsAK12PFPuppiSoftDrop'
     subJetCollectionAK12 = 'selectedPatJetsAK12PFPuppiSoftDropPacked:SubJets'
+    #----------------------------------------------------------------------------
+
+    #----------------------------------------------------------------------------
+    # CV: add 'patJetPartons' module to 'genParticleSequence' (which runs at beginning of event processing),
+    #     to avoid run-time exception of type:
+    #
+    #       ----- Begin Fatal Exception 22-Feb-2018 10:16:02 EET-----------------------
+    #       An exception of category 'ScheduleExecutionFailure' occurred while
+    #          [0] Calling beginJob
+    #       Exception Message:
+    #       Unrunnable schedule
+    #       Module run order problem found:
+    #       ...
+    #        Running in the threaded framework would lead to indeterminate results.
+    #        Please change order of modules in mentioned Path(s) to avoid inconsistent module ordering.
+    #       ----- End Fatal Exception -------------------------------------------------
+    if hasattr(process, "patJetPartons") and hasattr(process, "genParticleSequence") and runOnMC:
+        process.genParticleSequence += process.patJetPartons
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -158,7 +174,12 @@ def addJetSubstructureObservables(process, runOnMC):
         cut = cms.string(""),
         name = cms.string("SubJetAK12"),
         doc = cms.string("ak12 sub-jets for boosted analysis"),
-        variables = cms.PSet(P4Vars)
+        variables = cms.PSet(P4Vars,
+            jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
+            pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
+            pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
+            pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
+        )
     )
     process.jetSubstructureSequence += process.subJetAK12Table
     #----------------------------------------------------------------------------
