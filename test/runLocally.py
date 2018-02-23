@@ -169,7 +169,7 @@ if __name__ == '__main__':
     formatter_class = lambda prog: SmartFormatter(prog, max_help_position = 40),
   )
   parser.add_argument('-i', '--input', dest = 'input', metavar = 'file', required = True, type = str,
-                      help = 'R|Input file containing a list of MINIAOD(SIM)')
+                      help = 'R|Input file containing a list of MINIAOD(SIM) or a single ROOT file')
   parser.add_argument('-o', '--output', dest = 'output', metavar = 'path', required = True, type = str,
                       help = 'R|Output directory where the nanoAOD Ntuples will be stored')
   parser.add_argument('-n', '--name', dest = 'name', metavar = 'name', required = True, type = str,
@@ -193,22 +193,25 @@ if __name__ == '__main__':
 
   # check if the input is valid
   input_files = []
-  with open(infile, 'r') as f:
-    for line in f:
-      line_stripped = line.rstrip('\n')
-      if not line_stripped:
-        # empty line
-        continue
-      if not line_stripped.endswith('.root'):
-        logging.warning('File %s does not appear to be a ROOT file')
-        continue
-      if not os.path.isfile(line_stripped):
-        logging.error('File %s does not exist, skipping')
-        continue
-      if line_stripped not in input_files:
-        # require the input files to be unique
-        input_files.append(line_stripped)
-      logging.debug('Preparing job for file: %s' % line_stripped)
+  if infile.lower().endswith('.root'):
+    input_files.append(infile)
+  else:
+    with open(infile, 'r') as f:
+      for line in f:
+        line_stripped = line.rstrip('\n')
+        if not line_stripped:
+          # empty line
+          continue
+        if not line_stripped.endswith('.root'):
+          logging.warning('File %s does not appear to be a ROOT file')
+          continue
+        if not os.path.isfile(line_stripped):
+          logging.error('File %s does not exist, skipping')
+          continue
+        if line_stripped not in input_files:
+          # require the input files to be unique
+          input_files.append(line_stripped)
+        logging.debug('Preparing job for file: %s' % line_stripped)
 
   # check if the script directory exists, and if not, create it
   if not os.path.isdir(script_dir):
