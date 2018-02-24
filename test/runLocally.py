@@ -1,15 +1,8 @@
 #!/usr/bin/env python
 
 # Runs nanoAOD Ntuple production with SLURM instead of CRAB
-# NB!! Make sure that you've the correct isMC flag in nano_cfg.py since this will be used
-#      as a template for the SLURM jobs
-# Also, it's imperative that nano_cfg.py sets the output filename (process.out.fileName) to tree.root
 
 import logging, sys, argparse, os, jinja2, shutil, stat
-
-NANO_CFG = os.path.join(
-  os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'nano_cfg.py'
-)
 
 makefile_template = '''.DEFAULT_GOAL := all
 SHELL := /bin/bash
@@ -149,15 +142,18 @@ done
 
 '''
 
+nano_cfg_additions = '''
+process.source.fileNames = cms.untracked.vstring('file://{{ input_filename }}')
+process.maxEvents.input  = cms.untracked.int32({{ max_events }})
+
+'''
+
 if __name__ == '__main__':
   logging.basicConfig(
     stream = sys.stdout,
     level  = logging.INFO,
     format = '%(asctime)s - %(levelname)s: %(message)s'
   )
-
-  if not os.path.isfile(NANO_CFG):
-    raise ValueError("File %s is missing!" % NANO_CFG)
 
   class SmartFormatter(argparse.HelpFormatter):
     def _split_lines(self, text, width):
@@ -168,14 +164,19 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser(
     formatter_class = lambda prog: SmartFormatter(prog, max_help_position = 40),
   )
+  type_choices = ['data', 'mc']
   parser.add_argument('-i', '--input', dest = 'input', metavar = 'file', required = True, type = str,
                       help = 'R|Input file containing a list of MINIAOD(SIM) or a single ROOT file')
   parser.add_argument('-o', '--output', dest = 'output', metavar = 'path', required = True, type = str,
                       help = 'R|Output directory where the nanoAOD Ntuples will be stored')
   parser.add_argument('-n', '--name', dest = 'name', metavar = 'name', required = True, type = str,
-                      help = 'R|Sample name (try to be specific, e.g. SingleElectron_Run2017E_17Nov2017)')
+                      help = 'R|Sample name (try to be specific, e.g. SingleElectron_Run2017E_17Nov2017_v1)')
   parser.add_argument('-s', '--script-dir', dest = 'script_dir', metavar = 'path', required = True, type = str,
                       help = 'R|Directory containing config and log files for the SLURM jobs')
+  parser.add_argument('-t', '--type', dest = 'type', metavar = 'type', required = True, type = str, choices = type_choices,
+                      help = 'R|Sample type; choices: %s' % ', '.join(list(map(lambda choice: "'%s'" % choice, type_choices))))
+  parser.add_argument('-m', '--max-events', dest = 'max_events', metavar = 'number', required = False, type = int, default = -1,
+                      help = 'R|Maximum number of events to be processed in the file')
   parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                       help = 'R|Enable verbose printout')
   args = parser.parse_args()
@@ -183,10 +184,19 @@ if __name__ == '__main__':
   if args.verbose:
     logging.getLogger().setLevel(logging.DEBUG)
 
-  infile = args.input
-  outdir = args.output
+  infile      = args.input
+  outdir      = args.output
   sample_name = args.name
-  script_dir = args.script_dir
+  script_dir  = args.script_dir
+  sample_type = args.type
+  max_events  = args.max_events
+
+  nano_cfg = os.path.join(
+    os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'nano_cfg_%s.py' % sample_type
+  )
+
+  if not os.path.isfile(nano_cfg):
+    raise ValueError("File %s is missing!" % nano_cfg)
 
   if not os.path.isfile(infile):
     raise ValueError("No such file: %s" % infile)
@@ -243,11 +253,14 @@ if __name__ == '__main__':
 
     # copy nano_cfg.py to the cfg folder and rename it according to the idx value
     cfg_file = os.path.join(cfg_dir, 'cfg_%d.py' % idx)
-    shutil.copyfile(NANO_CFG, cfg_file)
+    shutil.copyfile(nano_cfg, cfg_file)
 
     # append a line to the cfg file saying that we want to process current input file
     with open(cfg_file, 'a') as f:
-      f.write("process.source.fileNames = cms.untracked.vstring('file://%s')" % input_file)
+      f.write(jinja2.Template(nano_cfg_additions).render(
+        input_filename = input_file,
+        max_events     = max_events,
+      ))
     logging.debug('Built config file: %s' % cfg_file)
 
     # now we want to create a shell script for the job as well
