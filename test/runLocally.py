@@ -143,8 +143,9 @@ done
 '''
 
 nano_cfg_additions = '''
-process.source.fileNames = cms.untracked.vstring('file://{{ input_filename }}')
-process.maxEvents.input  = cms.untracked.int32({{ max_events }})
+process.source.fileNames  = cms.untracked.vstring('file://{{ input_filename }}')
+process.source.skipEvents = cms.untracked.uint32({{ skip_events }})
+process.maxEvents.input   = cms.untracked.int32({{ max_events }})
 
 '''
 
@@ -177,6 +178,8 @@ if __name__ == '__main__':
                       help = 'R|Sample type; choices: %s' % ', '.join(list(map(lambda choice: "'%s'" % choice, type_choices))))
   parser.add_argument('-m', '--max-events', dest = 'max_events', metavar = 'number', required = False, type = int, default = -1,
                       help = 'R|Maximum number of events to be processed in the file')
+  parser.add_argument('-S', '--skip-events', dest = 'skip_events', metavar = 'number', required = False, type = int, default = 0,
+                      help = 'R|Number of events to be skipped in the file')
   parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                       help = 'R|Enable verbose printout')
   args = parser.parse_args()
@@ -190,6 +193,7 @@ if __name__ == '__main__':
   script_dir  = args.script_dir
   sample_type = args.type
   max_events  = args.max_events
+  skip_events = args.skip_events
 
   nano_cfg = os.path.join(
     os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'nano_cfg_%s.py' % sample_type
@@ -260,6 +264,7 @@ if __name__ == '__main__':
       f.write(jinja2.Template(nano_cfg_additions).render(
         input_filename = input_file,
         max_events     = max_events,
+        skip_events    = skip_events,
       ))
     logging.debug('Built config file: %s' % cfg_file)
 
