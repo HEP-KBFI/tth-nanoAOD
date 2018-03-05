@@ -1,5 +1,5 @@
-/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                  signal                    ttHJetToNonbb_M125_amcatnlo                 0.2586   # NLO; using gitlab; prev xs 0.2151; expected 0.2118 [1][2]
-/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                   signal                    ttHToNonbb_M125_powheg                      0.2586   # NLO; using gitlab; prev xs 0.2151; expected 0.2118 [1][2]
+/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                  signal                    ttHJetToNonbb_M125_amcatnlo                 0.2118   # NLO; [1][2] gitlab 0.2586; prev xs 0.2151
+/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                   signal                    ttHToNonbb_M125_powheg                      0.2118   # NLO; [1][2] gitlab 0.2586; prev xs 0.2151
 
 /GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                         additional_signal_overlap GluGluHToZZTo4L                             0.01212  # ?; [3] prev/gitlab xs 0.0119
 
@@ -8,7 +8,7 @@
 
 /TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                        TTW                       TTWJetsToLNu                                0.2043   # NLO; [3] using prev/gitlab xs
 /TTWJetsToLNu_TuneCP5_PSweights_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM              TTW                       TTWJetsToLNu_PSweights                      0.2043   # NLO; [3] using prev/gitlab xs
-/TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10_ext1-v1/MINIAODSIM                                       TTWW                      TTWW                                        0.002302 # ?; using prev xs, computed as 0.011500 * 0.2002; XSDB 0.007834 @LO
+/TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10_ext1-v2/MINIAODSIM                                       TTWW                      TTWW                                        0.002302 # ?; using prev xs, computed as 0.011500 * 0.2002; XSDB *told* 0.007834 @LO
 
 /ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                    TT                        ST_s-channel_4f_leptonDecays                3.36     # NLO; [3][5][6] using prev/gitlab xs
 /ST_t-channel_antitop_4f_inclusiveDecays_TuneCP5_13TeV-powhegV2-madspin-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM TT                        ST_t-channel_antitop_4f_inclusiveDecays    80.95     # NLO; [5] using prev; gitlab xs 82.7
@@ -16,8 +16,8 @@
 /ST_tW_antitop_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                  TT                        ST_tW_antitop_5f_inclusiveDecays           35.85     # NLO; [5] prev/gitlab xs 35.6
 /ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                      TT                        ST_tW_top_5f_inclusiveDecays               35.85     # NLO; [5] prev/gitlab xs 35.6
 /TTJets_SingleLeptFromT_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                       TT                        TTJets_SingleLeptFromT                    182.18     # NNLO; [3] using prev/gitlab xs, computed as 831.76 * (1 - 0.68) * 0.32
-/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                         TT                        TTTo2L2Nu                                  88.29     # NNLO; using XSDB; prev xs 87.3
-/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                               TT                        TTTo2L2Nu_PSweights                        88.29     # NNLO; using non-PSweights; prev xs 87.3
+/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                         TT                        TTTo2L2Nu                                  88.40     # NNLO; [6][8] prev xs 87.3, XSDB (88.29) uses old BR(W->hadrons)
+/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                               TT                        TTTo2L2Nu_PSweights                        88.40     # NNLO; using non-PSweights
 /TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                  TT                        TTToSemiLeptonic                          245.0      # ?; using prev xs (FastSim)
 /TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                        TT                        TTToSemiLeptonic_PSweights                245.0      # ?; using prev xs (FastSim)
 
@@ -43,3 +43,4 @@
 # [5] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec
 # [6] http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043
 # [7] https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV
+# [8] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO
