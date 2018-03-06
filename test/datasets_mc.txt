@@ -33,8 +33,10 @@
 /TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                             Rares                     TTGJets                                     3.697    # NLO; [3] using prev/gitlab xs
 /TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                            Rares                     TTTT                                        0.008213 # NLO; using XSDB; prev/gitlab xs 0.009103
 /tZq_ll_4f_ckm_NLO_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                     Rares                     tZq_ll_4f                                   0.0758   # NLO; [3] using prev/gitlab xs
-/WW_DoubleScattering_13TeV-pythia8_TuneCP5/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                      Rares                     WW_DoubleScattering                         1.64     # LO; [3] new xs (replacing WW->ll)
+/WWTo2L2Nu_DoubleScattering_13TeV-herwigpp/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                                      Rares                     WWTo2L2Nu_DoubleScattering                  0.1743   # LO; [3][6] prev xs 0.1729; XSDB 0.1703; computed as 1.64 * (1 - 0.674)^2
 /WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                                          Rares                     WWW_4F                                      0.2086   # NLO; [3] using prev xs
+/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                                             Rares                     WZZ                                         0.05565  # NLO; [3] use prev/gitlab xs
+/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                                             Rares                     ZZZ                                         0.01398  # NLO; [3] use prev xs
 
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
 # [2] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV
