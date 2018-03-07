@@ -133,6 +133,10 @@ cat $DATASET_FILE | while read LINE; do
     continue; # it's an empty line, skip silently
   fi
 
+  if [[ "${DATASET:0:1}" == "#" ]]; then
+    continue; # it's a comment
+  fi
+
   if [[ ! "$DATASET" =~ $DATASET_PATTERN ]]; then
     echo "Not a valid sample: '$DATASET'";
     continue;
