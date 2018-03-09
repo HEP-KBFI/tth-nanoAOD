@@ -1,29 +1,33 @@
-# DAS name                                      run range       golden run range
-/SingleElectron/Run2017B-17Nov2017-v1/MINIAOD   297047-299329   297050-299329
-/SingleElectron/Run2017C-17Nov2017-v1/MINIAOD   299368-302029   299368-302029
-/SingleElectron/Run2017D-17Nov2017-v1/MINIAOD   302030-302663   302031-302663
-/SingleElectron/Run2017E-17Nov2017-v1/MINIAOD   303818-304797   303825-304797
-/SingleElectron/Run2017F-17Nov2017-v1/MINIAOD   305040-306460   305044-306460
-/SingleMuon/Run2017B-17Nov2017-v1/MINIAOD       297047-299329   297050-299329
-/SingleMuon/Run2017C-17Nov2017-v1/MINIAOD       299368-302029   299368-302029
-/SingleMuon/Run2017D-17Nov2017-v1/MINIAOD       302031-302663   302031-302663
-/SingleMuon/Run2017E-17Nov2017-v1/MINIAOD       303824-304797   303825-304797
-/SingleMuon/Run2017F-17Nov2017-v1/MINIAOD       305040-306462   305044-306460
-/DoubleEG/Run2017B-17Nov2017-v1/MINIAOD         297047-299329   297050-299329
-/DoubleEG/Run2017C-17Nov2017-v1/MINIAOD         299368-302029   299368-302029
-/DoubleEG/Run2017D-17Nov2017-v1/MINIAOD         302030-302663   302031-302663
-/DoubleEG/Run2017E-17Nov2017-v1/MINIAOD         303818-304797   303825-304797
-/DoubleEG/Run2017F-17Nov2017-v1/MINIAOD         305040-306460   305044-306460
-/DoubleMuon/Run2017B-17Nov2017-v1/MINIAOD       297047-299329   297050-299329
-/DoubleMuon/Run2017C-17Nov2017-v1/MINIAOD       299368-302029   299368-302029
-/DoubleMuon/Run2017D-17Nov2017-v1/MINIAOD       302031-302663   302031-302663
-/DoubleMuon/Run2017E-17Nov2017-v1/MINIAOD       303824-304797   303825-304797
-/DoubleMuon/Run2017F-17Nov2017-v1/MINIAOD       305040-306462   305044-306460
-/MuonEG/Run2017B-17Nov2017-v1/MINIAOD           297047-299329   297050-299329
-/MuonEG/Run2017C-17Nov2017-v1/MINIAOD           299368-302029   299368-302029
-/MuonEG/Run2017D-17Nov2017-v1/MINIAOD           302031-302663   302031-302663
-/MuonEG/Run2017E-17Nov2017-v1/MINIAOD           303824-304797   303825-304797
-/MuonEG/Run2017F-17Nov2017-v1/MINIAOD           305040-306460   305044-306460
+# DAS name                                     run range      golden run range  totdelivered(/fb)  totrecorded(/fb)
+/SingleElectron/Run2017B-17Nov2017-v1/MINIAOD  297047-299329  297050-299329     4.995              4.767           
+/SingleElectron/Run2017C-17Nov2017-v1/MINIAOD  299368-302029  299368-302029     10.253             9.581           
+/SingleElectron/Run2017D-17Nov2017-v1/MINIAOD  302030-302663  302031-302663     4.343              4.224           
+/SingleElectron/Run2017E-17Nov2017-v1/MINIAOD  303818-304797  303825-304797     9.704              9.261           
+/SingleElectron/Run2017F-17Nov2017-v1/MINIAOD  305040-306460  305044-306460     14.104             13.462          
+/SingleMuon/Run2017B-17Nov2017-v1/MINIAOD      297047-299329  297050-299329     4.995              4.767           
+/SingleMuon/Run2017C-17Nov2017-v1/MINIAOD      299368-302029  299368-302029     10.253             9.581           
+/SingleMuon/Run2017D-17Nov2017-v1/MINIAOD      302031-302663  302031-302663     4.343              4.224           
+/SingleMuon/Run2017E-17Nov2017-v1/MINIAOD      303824-304797  303825-304797     9.704              9.261           
+/SingleMuon/Run2017F-17Nov2017-v1/MINIAOD      305040-306462  305044-306460     14.104             13.462          
+/DoubleEG/Run2017B-17Nov2017-v1/MINIAOD        297047-299329  297050-299329     4.995              4.767           
+/DoubleEG/Run2017C-17Nov2017-v1/MINIAOD        299368-302029  299368-302029     10.253             9.581           
+/DoubleEG/Run2017D-17Nov2017-v1/MINIAOD        302030-302663  302031-302663     4.343              4.224           
+/DoubleEG/Run2017E-17Nov2017-v1/MINIAOD        303818-304797  303825-304797     9.704              9.261           
+/DoubleEG/Run2017F-17Nov2017-v1/MINIAOD        305040-306460  305044-306460     14.104             13.462          
+/DoubleMuon/Run2017B-17Nov2017-v1/MINIAOD      297047-299329  297050-299329     4.995              4.767           
+/DoubleMuon/Run2017C-17Nov2017-v1/MINIAOD      299368-302029  299368-302029     10.253             9.581           
+/DoubleMuon/Run2017D-17Nov2017-v1/MINIAOD      302031-302663  302031-302663     4.343              4.224           
+/DoubleMuon/Run2017E-17Nov2017-v1/MINIAOD      303824-304797  303825-304797     9.704              9.261           
+/DoubleMuon/Run2017F-17Nov2017-v1/MINIAOD      305040-306462  305044-306460     14.104             13.462          
+/MuonEG/Run2017B-17Nov2017-v1/MINIAOD          297047-299329  297050-299329     4.995              4.767           
+/MuonEG/Run2017C-17Nov2017-v1/MINIAOD          299368-302029  299368-302029     10.253             9.581           
+/MuonEG/Run2017D-17Nov2017-v1/MINIAOD          302031-302663  302031-302663     4.343              4.224           
+/MuonEG/Run2017E-17Nov2017-v1/MINIAOD          303824-304797  303825-304797     9.704              9.261           
+/MuonEG/Run2017F-17Nov2017-v1/MINIAOD          305040-306460  305044-306460     14.104             13.462          
 
-# file generated at 2018-03-06 18:34:21 with the following command:
-# find_samples.py -V -m python/samples/metaDict_2017_data.py -d ../NanoAOD/test/datasets_data.txt
+# file generated at 2018-03-09 02:32:47 with the following command:
+# find_samples.py -V -m python/samples/metaDict_2017_data.py -d ../NanoAOD/test/datasets_data.txt -l
+# golden JSON: Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt
+# normtag: normtag_PHYSICS.json
+# totdelivered(/fb): 43.925
+# totrecorded(/fb): 41.298
