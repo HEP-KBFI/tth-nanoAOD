@@ -48,10 +48,6 @@ def addJetSubstructureObservables(process, runOnMC):
     #----------------------------------------------------------------------------
     # add PF jet ID flags and jet energy corrections for AK12 pat::Jet collection,
     # following what is done for AK8 pat::Jets in https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/NanoAOD/python/jets_cff.py
-    process.looseJetIdAK12 = process.looseJetIdAK8.clone(
-        src = cms.InputTag(fatJetCollectionAK12)
-    )
-    process.jetSubstructureSequence += process.looseJetIdAK12
     process.tightJetIdAK12 = process.tightJetIdAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
@@ -59,7 +55,6 @@ def addJetSubstructureObservables(process, runOnMC):
     process.jetsAK12WithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK12),
         userInts = cms.PSet(
-            looseId = cms.InputTag("looseJetIdAK12"),
             tightId = cms.InputTag("tightJetIdAK12")
         )
     )
@@ -191,14 +186,14 @@ def addJetSubstructureObservables(process, runOnMC):
     for moduleName in process.jetSubstructureSequence.moduleNames():
         module = getattr(process, moduleName)
         process.jetSubstructureTask.add(module)
-    process.jetSubstructureTables = cms.Sequence(process.fatJetAK12Table + process.subJetAK12Table)        
+    process.jetSubstructureTables = cms.Sequence(process.fatJetAK12Table + process.subJetAK12Table)
     # CV: add tasks to sequence,
     #     as described on this twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile#Module_sequences
     #    (some modules are contained in 'jetSubstructureTask' and some are contained in 'patAlgosToolsTask' - it's again a mess !!)
     process.jetSubstructureTables.associate(process.jetSubstructureTask)
     process.jetSubstructureTables.associate(process.patAlgosToolsTask)
     process.nanoSequence += process.jetSubstructureTables
-    #----------------------------------------------------------------------------    
+    #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
     # add jet charge and pull as userFloats to AK4 pat::Jet collection
