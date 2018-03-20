@@ -5,7 +5,7 @@ from Configuration.StandardSequences.Eras import eras
 from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeMC, nanoAOD_customizeData # custom
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables # custom
 
-process = cms.Process('NANO', eras.Run2_2017)
+process = cms.Process('NANO', eras.Run2_2017) # [*]
 
 process.load('Configuration.StandardSequences.Services_cff')
 process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi')
@@ -50,7 +50,11 @@ process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService
 
 process.nanoPath            = cms.Path(process.nanoSequenceMC)
 process                     = nanoAOD_customizeMC(process)
-process.GlobalTag.globaltag = '94X_mc2017_realistic_v10'
+process.GlobalTag.globaltag = '94X_mc2017_realistic_v14' # [*]
+
+# [*] https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_MC_re_miniAOD_94X_version_2
+# JECs according to https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_mc2017_realistic_v14:
+# JetCorrectionsRecord AK4PFchs JetCorrectorParametersCollection_Fall17_17Nov2017_V8_MC_AK4PFchs
 
 #--------------------------------------------------------------------------------
 # CV: customization with jet substructure observables for hadronic top reconstruction (boosted and non-boosted)
