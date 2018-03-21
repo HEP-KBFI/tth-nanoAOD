@@ -50,11 +50,16 @@ process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService
 
 process.nanoPath            = cms.Path(process.nanoSequenceMC)
 process                     = nanoAOD_customizeMC(process)
-process.GlobalTag.globaltag = '94X_mc2017_realistic_v14' # [*]
+process.GlobalTag.globaltag = '94X_mc2017_realistic_v13' # [**]
 
 # [*] https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_MC_re_miniAOD_94X_version_2
-# JECs according to https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_mc2017_realistic_v14:
-# JetCorrectionsRecord AK4PFchs JetCorrectorParametersCollection_Fall17_17Nov2017_V8_MC_AK4PFchs
+# [**] is not recommended according to [**], but in practice the only difference b/w v13 and v14
+#      is the JEC GT:
+#          same as 94X_mc2017_realistic_v13 with update of JECs
+#      (according to https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_mc2017_realistic_v14)
+#      The v14 GT uses Fall17_17Nov2017_V8_MC JECs, while v13 uses Fall17_17Nov2017_V6_MC
+#      At the time of writing there is no data GT supporting Fall17_17Nov2017_V8_DATA JECs, and
+#      since we want to avoid mixing different JEC versions, we decided to use v13 GT for MC.
 
 #--------------------------------------------------------------------------------
 # CV: customization with jet substructure observables for hadronic top reconstruction (boosted and non-boosted)
