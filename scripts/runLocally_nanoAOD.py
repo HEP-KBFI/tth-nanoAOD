@@ -121,7 +121,7 @@ JOB_IDS=()
 
 {% for entry in file_map.values() %}
 if [ ! -f {{ entry['output_file'] }} ]; then
-  SBATCH_OUT=`sbatch --partition=small --output={{ entry['logfile'] }} {{ entry['shell_script'] }}`
+  SBATCH_OUT=`sbatch --mem=1800M --partition=small --output={{ entry['logfile'] }} {{ entry['shell_script'] }}`
   SBATCH_JOBID=`echo "$SBATCH_OUT" | awk '{print $4}'`
   JOB_IDS+=("$SBATCH_JOBID")
   echo "Submitted job $SBATCH_JOBID"
