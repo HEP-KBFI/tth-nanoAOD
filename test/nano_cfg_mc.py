@@ -37,17 +37,6 @@ process.source = cms.Source("PoolSource",
 )
 
 # custom until end
-process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService",
-  calibratedPatElectrons = cms.PSet(
-    initialSeed = cms.untracked.uint32(81),
-    engineName  = cms.untracked.string('TRandom3'),
-  ),
-  calibratedPatPhotons = cms.PSet(
-    initialSeed = cms.untracked.uint32(81),
-    engineName  = cms.untracked.string('TRandom3'),
-  ),
-)
-
 process.nanoPath            = cms.Path(process.nanoSequenceMC)
 process                     = nanoAOD_customizeMC(process)
 process.GlobalTag.globaltag = '94X_mc2017_realistic_v13' # [**]
