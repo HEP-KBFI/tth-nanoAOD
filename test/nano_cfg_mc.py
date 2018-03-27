@@ -1,12 +1,21 @@
+# Auto generated configuration file
+# using:
+# Revision: 1.19
+# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
+# with command line options:
+# nanoAOD --step=NANO --era=Run2_2017,run2_nanoAOD_94XMiniAODv1 --no_exec --fileout=tree.root --number=-1 \
+# --customise_commands=process.MessageLogger.cerr.FwkReport.reportEvery = 1000\n\
+# process.source.fileNames = cms.untracked.vstring()\n\
+# from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; \
+# addJetSubstructureObservables(process, True)\n --mc --eventcontent NANOAODSIM --datatier NANOAODSIM \
+# --conditions 94X_mc2017_realistic_v13 --python_filename=nano_cfg_mc.py
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeMC, nanoAOD_customizeData # custom
-from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables # custom
+process = cms.Process('NANO',eras.Run2_2017,eras.run2_nanoAOD_94XMiniAODv1)
 
-process = cms.Process('NANO', eras.Run2_2017) # [*]
-
+# import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
 process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi')
 process.load('FWCore.MessageService.MessageLogger_cfi')
@@ -18,67 +27,74 @@ process.load('PhysicsTools.NanoAOD.nano_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
-process.load("Configuration.StandardSequences.GeometryDB_cff")
-
 process.maxEvents = cms.untracked.PSet(
-  input = cms.untracked.int32(-1),
+    input = cms.untracked.int32(-1)
+)
+
+# Input source
+process.source = cms.Source("PoolSource",
+    fileNames = cms.untracked.vstring('file:nanoAOD_PAT.root'),
+#    eventsToProcess = cms.untracked.VEventRange(), # custom; format: run:lumi:event, one string per event
+    secondaryFileNames = cms.untracked.vstring()
 )
 
 process.options = cms.untracked.PSet(
-  wantSummary = cms.untracked.bool(True),
+
 )
+
+# Production Info
+process.configurationMetadata = cms.untracked.PSet(
+    annotation = cms.untracked.string('nanoAOD nevts:-1'),
+    name = cms.untracked.string('Applications'),
+    version = cms.untracked.string('$Revision: 1.19 $')
+)
+
+# Output definition
+
+process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
+    compressionAlgorithm = cms.untracked.string('LZMA'),
+    compressionLevel = cms.untracked.int32(9),
+    dataset = cms.untracked.PSet(
+        dataTier = cms.untracked.string('NANOAODSIM'),
+        filterName = cms.untracked.string('')
+    ),
+    fileName = cms.untracked.string('tree.root'),
+    outputCommands = process.NANOAODSIMEventContent.outputCommands
+)
+
+# Additional output definition
+
+# Other statements
+from Configuration.AlCa.GlobalTag import GlobalTag
+process.GlobalTag = GlobalTag(process.GlobalTag, '94X_mc2017_realistic_v13', '')
+
+# Path and EndPath definitions
+process.nanoAOD_step = cms.Path(process.nanoSequenceMC)
+process.endjob_step = cms.EndPath(process.endOfProcess)
+process.NANOAODSIMoutput_step = cms.EndPath(process.NANOAODSIMoutput)
+
+# Schedule definition
+process.schedule = cms.Schedule(process.nanoAOD_step,process.endjob_step,process.NANOAODSIMoutput_step)
+from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
+associatePatAlgosToolsTask(process)
+
+# customisation of the process.
+
+# Automatic addition of the customisation function from PhysicsTools.NanoAOD.nano_cff
+from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeMC
+
+#call to customisation function nanoAOD_customizeMC imported from PhysicsTools.NanoAOD.nano_cff
+process = nanoAOD_customizeMC(process)
+
+# End of customisation functions
+
+# Customisation from command line
 
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
+process.source.fileNames = cms.untracked.vstring()
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process, True)
 
-process.source = cms.Source("PoolSource",
-  fileNames = cms.untracked.vstring(
-    #
-  ),
-)
-
-# custom until end
-process.nanoPath            = cms.Path(process.nanoSequenceMC)
-process                     = nanoAOD_customizeMC(process)
-process.GlobalTag.globaltag = '94X_mc2017_realistic_v13' # [**]
-
-# [*] https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_MC_re_miniAOD_94X_version_2
-# [**] is not recommended according to [**], but in practice the only difference b/w v13 and v14
-#      is the JEC GT:
-#          same as 94X_mc2017_realistic_v13 with update of JECs
-#      (according to https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_mc2017_realistic_v14)
-#      The v14 GT uses Fall17_17Nov2017_V8_MC JECs, while v13 uses Fall17_17Nov2017_V6_MC
-#      At the time of writing there is no data GT supporting Fall17_17Nov2017_V8_DATA JECs, and
-#      since we want to avoid mixing different JEC versions, we decided to use v13 GT for MC.
-
-#--------------------------------------------------------------------------------
-# CV: customization with jet substructure observables for hadronic top reconstruction (boosted and non-boosted)
-addJetSubstructureObservables(process, True)
-#--------------------------------------------------------------------------------
-
-process.out = cms.OutputModule("NanoAODOutputModule",
-  fileName             = cms.untracked.string('tree.root'),
-  outputCommands       = process.NanoAODEDMEventContent.outputCommands,
-#  compressionLevel     = cms.untracked.int32(9),
-#  compressionAlgorithm = cms.untracked.string("LZMA"),
-)
-
-#--------------------------------------------------------------------------------
-if False: # set True when debugging
-  process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck",
-    ignoreTotal         = cms.untracked.int32(1),
-    oncePerEventMode    = cms.untracked.bool(True),
-    moduleMemorySummary = cms.untracked.bool(True),
-  )
-  process.Tracer = cms.Service("Tracer",
-    printTimestamps = cms.untracked.bool(True),
-  )
-#--------------------------------------------------------------------------------
-
-process.end = cms.EndPath(process.out)
-
-#--------------------------------------------------------------------------------
-# CV: dump python config
-#processDumpFile = open('nano.dump', 'w')
-#print >> processDumpFile, process.dumpPython()
-#processDumpFile.close()
-#--------------------------------------------------------------------------------
+# Add early deletion of temporary data products to reduce peak memory need
+from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
+process = customiseEarlyDelete(process)
+# End adding early deletion
