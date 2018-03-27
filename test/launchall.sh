@@ -2,26 +2,36 @@
 
 # DO NOT SOURCE! IT MAY KILL YOUR SHELL!
 
-export JOB_PREFIX='NanoAOD_v1'
+export JOB_PREFIX='NanoAOD_v2'
 
-# recommended: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions#Global_Tags_for_2017_Nov_re_reco
-export AUTOCOND_DATA="94X_dataRun2_ReReco_EOY17_v2"
-# recommended: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions#Global_Tags_for_RunIIFall17DRStd
-export AUTOCOND_MC="94X_mc2017_realistic_v10"
+# https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_Data_re_miniAOD_94X_version
+# https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_MC_re_miniAOD_94X_version_2
+# JECs according to
+#   https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_dataRun2_v6
+#   https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_mc2017_realistic_v13
+#
+# The recommended MC GT is v14, but the associated JECs are Fall17_17Nov2017_V8_MC, whereas the v6
+# data GT has Fall17_17Nov2017_V6_MC JECs; so we decided to downgrade the MC GT such that both data
+# and MC JECs have the same version (the only difference between v13 and v14 MC GTs are the JECs)
+export AUTOCOND_DATA="94X_dataRun2_v6"
+export AUTOCOND_MC="94X_mc2017_realistic_v13"
 
 export JSON_FILE="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt"
 
+SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
+GENERATE_CFGS_ONLY=false
 DRYRUN=""
 export DATASET_FILE=""
 export NANOCFG_DATA=""
 export NANOCFG_MC=""
 
-show_help() { echo "Usage: $0 -f <dataset file> [-d] [-D <data cfg>] [-M <mc cfg>]" 1>&2; exit 0; }
+show_help() { echo "Usage: $0 -f <dataset file> [-d] [-g] [-D <data cfg>] [-M <mc cfg>]" 1>&2; exit 0; }
 
-while getopts "h?df:D:M:" opt; do
+while getopts "h?dfg:D:M:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -33,6 +43,8 @@ while getopts "h?df:D:M:" opt; do
      ;;
   M) export NANOCFG_MC=${OPTARG}
      ;;
+  g) GENERATE_CFGS_ONLY=true
+     ;;
   esac
 done
 
@@ -43,13 +55,44 @@ check_if_exists() {
   fi
 }
 
+generate_cfgs() {
+  export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
+process.source.fileNames = cms.untracked.vstring()\\n\
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables;"
+  export CUSTOMISE_COMMANDS_DATA="$CUSTOMISE_COMMANDS addJetSubstructureObservables(process, False)\\n"
+  export CUSTOMISE_COMMANDS_MC="$CUSTOMISE_COMMANDS addJetSubstructureObservables(process, True)\\n"
+
+  export COMMON_COMMANDS="nanoAOD --step=NANO --era=Run2_2017,run2_nanoAOD_94XMiniAODv1 --no_exec --fileout=tree.root --number=-1"
+
+  if [ -z "$NANOCFG_DATA" ]; then
+    export NANOCFG_DATA="$SCRIPT_DIRECTORY/nano_cfg_data.py"
+    echo "Generating the skeleton configuration file for CRAB data jobs: $NANOCFG_DATA"
+    cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_DATA"       \
+      --data --eventcontent NANOAOD --datatier NANOAOD --conditions $AUTOCOND_DATA \
+      --python_filename=$NANOCFG_DATA --lumiToProcess="$JSON_LUMI"
+  else
+    echo "Using the following cfg for the data jobs: $NANOCFG_DATA";
+  fi
+
+  if [ -z "$NANOCFG_MC" ]; then
+    export NANOCFG_MC="$SCRIPT_DIRECTORY/nano_cfg_mc.py"
+    echo "Generating the skeleton configuration file for CRAB MC jobs: $NANOCFG_MC"
+    cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_MC"         \
+      --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --conditions $AUTOCOND_MC \
+      --python_filename="$NANOCFG_MC"
+  else
+    echo "Using the following cfg for the MC jobs: $NANOCFG_MC";
+  fi
+}
+
 if [ -z "$DATASET_FILE" ]; then
+  if [ $GENERATE_CFGS_ONLY = true ]; then
+    generate_cfgs;
+    exit 0;
+  fi
   echo "You must provide the dataset file!";
   exit 2;
 fi
-
-SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
 
 check_if_exists "$DATASET_FILE"
 check_if_exists "$NANOCFG_DATA"
@@ -89,29 +132,7 @@ fi
 export DATASET_PATTERN="^/(.*)/(.*)/[0-9A-Za-z]+$"
 declare -A DATA_CATEGORIES=([SingleElectron]= [SingleMuon]= [Tau]= [DoubleEG]= [DoubleMuon]= [MuonEG]=)
 
-export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
-                           process.source.fileNames = []\\n"
-export COMMON_COMMANDS="nanoAOD --step=NANO --era=Run2_2017 --no_exec --fileout=tree.root --number=-1"
-
-if [ -z "$NANOCFG_DATA" ]; then
-  export NANOCFG_DATA="$SCRIPT_DIRECTORY/nanoAOD_data.py"
-  echo "Generating the skeleton configuration file for CRAB data jobs: $NANOCFG_DATA"
-  cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS"       \
-    --data --eventcontent NANOAOD --datatier NANOAOD --conditions $AUTOCOND_DATA \
-    --python_filename=$NANOCFG_DATA --lumiToProcess="$JSON_LUMI"
-else
-  echo "Using the following cfg for the data jobs: $NANOCFG_DATA";
-fi
-
-if [ -z "$NANOCFG_MC" ]; then
-  export NANOCFG_MC="$SCRIPT_DIRECTORY/nanoAOD_mc.py"
-  echo "Generating the skeleton configuration file for CRAB MC jobs: $NANOCFG_MC"
-  cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS"         \
-    --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --conditions $AUTOCOND_MC \
-    --python_filename="$NANOCFG_MC"
-else
-  echo "Using the following cfg for the MC jobs: $NANOCFG_MC";
-fi
+generate_cfgs
 
 if [[ ! "$NANOCFG_DATA" =~ ^/ ]]; then
   export NANOCFG_DATA="$PWD/$NANOCFG_DATA";
