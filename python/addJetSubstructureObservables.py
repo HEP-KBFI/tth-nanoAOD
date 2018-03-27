@@ -51,10 +51,11 @@ def addJetSubstructureObservables(process, runOnMC):
     process.tightJetIdAK12 = process.tightJetIdAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
+    process.jetSubstructureSequence += process.tightJetIdAK12
     process.tightJetIdLepVetoAK12 = process.tightJetIdLepVetoAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
-    process.jetSubstructureSequence += process.tightJetIdAK12
+    process.jetSubstructureSequence += process.tightJetIdLepVetoAK12
     process.jetsAK12WithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK12),
         userInts = cms.PSet(
