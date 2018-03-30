@@ -98,3 +98,19 @@ from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructure
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+# custom til the end; enable any of those only if you're debugging
+if False:
+  process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck",
+    ignoreTotal         = cms.untracked.int32(1),
+    oncePerEventMode    = cms.untracked.bool(True),
+    moduleMemorySummary = cms.untracked.bool(True),
+  )
+if False:
+  process.Tracer = cms.Service("Tracer",
+    printTimestamps = cms.untracked.bool(True),
+  )
+if False:
+  processDumpFile = open('nano_mc.dump', 'w')
+  print >> processDumpFile, process.dumpPython()
+  processDumpFile.close()
