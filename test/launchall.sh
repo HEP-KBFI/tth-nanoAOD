@@ -31,7 +31,7 @@ export NANOCFG_MC=""
 
 show_help() { echo "Usage: $0 -f <dataset file> [-d] [-g] [-D <data cfg>] [-M <mc cfg>]" 1>&2; exit 0; }
 
-while getopts "h?dfg:D:M:" opt; do
+while getopts "h?dgf:D:M:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -89,9 +89,10 @@ if [ -z "$DATASET_FILE" ]; then
   if [ $GENERATE_CFGS_ONLY = true ]; then
     generate_cfgs;
     exit 0;
+  else
+    echo "You must provide the dataset file!";
+    exit 2;
   fi
-  echo "You must provide the dataset file!";
-  exit 2;
 fi
 
 check_if_exists "$DATASET_FILE"
