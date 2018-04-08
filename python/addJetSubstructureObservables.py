@@ -76,7 +76,7 @@ def addJetSubstructureObservables(process, runOnMC):
 
     process.selectedJetsAK12 = cms.EDFilter("PATJetSelector",
         src      = cms.InputTag("updatedJetsAK12"),
-        cut      = cms.string("pt > 100"),
+        cut      = cms.string("pt > 100 && abs(eta) < 2.4"),
         cutLoose = cms.string(""),
         nLoose   = cms.uint32(0),
         filter   = cms.bool(False),
