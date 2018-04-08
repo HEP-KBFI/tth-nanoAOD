@@ -111,6 +111,6 @@ if False:
     printTimestamps = cms.untracked.bool(True),
   )
 if False:
-  processDumpFile = open('nano_mc.dump', 'w')
+  processDumpFile = open('nano_mc_2017.dump', 'w')
   print >> processDumpFile, process.dumpPython()
   processDumpFile.close()
