@@ -8,14 +8,10 @@ def get_env_var(env_var):
     raise ValueError("$%s not defined" % env_var)
   return os.environ[env_var]
 
-if 'JOB_PREFIX' not in os.environ:
-  raise ValueError("$JOB_PREFIX not defined")
-
-PREFIX = get_env_var('JOB_PREFIX')
-
 NANOCFG_DATA = get_env_var('NANOCFG_DATA')
 NANOCFG_MC   = get_env_var('NANOCFG_MC')
 JSON_LUMI    = get_env_var('JSON_LUMI')
+NANOAOD_VER  = get_env_var('NANOAOD_VER')
 
 is_data         = bool(int(get_env_var('IS_DATA')))
 dataset_name    = get_env_var('DATASET')
@@ -24,7 +20,7 @@ dataset_match   = re.match(dataset_pattern, dataset_name)
 if not dataset_match:
   raise ValueError("Dataset '%s' did not match to pattern '%s'" % (dataset_name, dataset_pattern))
 
-id_ = '%s_%s__%s' % (PREFIX, dataset_match.group(1), dataset_match.group(2))
+id_ = '%s_%s__%s' % (NANOAOD_VER, dataset_match.group(1), dataset_match.group(2))
 requestName      = id_
 outputDatasetTag = id_
 
@@ -50,7 +46,7 @@ config.Data.inputDataset     = dataset_name
 config.Data.inputDBS         = 'global'
 config.Data.splitting        = 'EventAwareLumiBased'
 config.Data.unitsPerJob      = 50000
-config.Data.outLFNDirBase    = '/store/user/%s/NanoAOD_2017_v2' % getUsernameFromSiteDB()
+config.Data.outLFNDirBase    = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
 config.Data.publication      = False
 config.Data.outputDatasetTag = outputDatasetTag
 

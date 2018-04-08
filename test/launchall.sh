@@ -2,8 +2,6 @@
 
 # DO NOT SOURCE! IT MAY KILL YOUR SHELL!
 
-export JOB_PREFIX='NanoAOD_v2'
-
 # https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_Data_re_miniAOD_94X_version
 # https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_MC_re_miniAOD_94X_version_2
 # JECs according to
@@ -13,13 +11,15 @@ export JOB_PREFIX='NanoAOD_v2'
 # The recommended MC GT is v14, but the associated JECs are Fall17_17Nov2017_V8_MC, whereas the v6
 # data GT has Fall17_17Nov2017_V6_MC JECs; so we decided to downgrade the MC GT such that both data
 # and MC JECs have the same version (the only difference between v13 and v14 MC GTs are the JECs)
-export AUTOCOND_DATA="94X_dataRun2_v6"
-export AUTOCOND_MC="94X_mc2017_realistic_v13"
+export AUTOCOND_DATA_2017="94X_dataRun2_v6"
+export AUTOCOND_MC_2017="94X_mc2017_realistic_v13"
+export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt"
+export ERA_ARGS_2017="Run2_2017,run2_nanoAOD_94XMiniAODv1"
 
-export JSON_FILE="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt"
-
-SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
+export AUTOCOND_DATA_2016="auto:run2_data_relval"
+export AUTOCOND_MC_2016="auto:run2_mc"
+export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
+export ERA_ARGS_2016="Run2_2016,run2_miniAOD_80XLegacy"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
@@ -29,9 +29,9 @@ export DATASET_FILE=""
 export NANOCFG_DATA=""
 export NANOCFG_MC=""
 
-show_help() { echo "Usage: $0 -f <dataset file> [-d] [-g] [-D <data cfg>] [-M <mc cfg>]" 1>&2; exit 0; }
+show_help() { echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-v version]" 1>&2; exit 0; }
 
-while getopts "h?dgf:D:M:" opt; do
+while getopts "h?dgf:D:M:e:v:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -45,6 +45,10 @@ while getopts "h?dgf:D:M:" opt; do
      ;;
   g) GENERATE_CFGS_ONLY=true
      ;;
+  e) export ERA=${OPTARG}
+     ;;
+  v) export NANOAOD_VER=${OPTARG}
+     ;;
   esac
 done
 
@@ -55,6 +59,32 @@ check_if_exists() {
   fi
 }
 
+if [ -z "$ERA" ]; then
+  echo "You need to specify era!";
+  exit 6;
+fi
+
+if [ "$ERA" == "2017" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2017
+  export AUTOCOND_MC=$AUTOCOND_MC_2017
+  export JSON_FILE=$JSON_FILE_2017
+  export ERA_ARGS=$ERA_ARGS_2017
+elif [ "$ERA" == "2016" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2016
+  export AUTOCOND_MC=$AUTOCOND_MC_2016
+  export JSON_FILE=$JSON_FILE_2016
+  export ERA_ARGS=$ERA_ARGS_2016
+else
+  echo "Invalid era: $ERA";
+fi
+
+if [ -z "$NANOAOD_VER" ]; then
+  export NANOAOD_VER="NanoAOD_$ERA_`date '+%Y%b%d'`";
+fi
+
+SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
+
 generate_cfgs() {
   export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
 process.source.fileNames = cms.untracked.vstring()\\n\
@@ -62,10 +92,10 @@ from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructure
   export CUSTOMISE_COMMANDS_DATA="$CUSTOMISE_COMMANDS addJetSubstructureObservables(process, False)\\n"
   export CUSTOMISE_COMMANDS_MC="$CUSTOMISE_COMMANDS addJetSubstructureObservables(process, True)\\n"
 
-  export COMMON_COMMANDS="nanoAOD --step=NANO --era=Run2_2017,run2_nanoAOD_94XMiniAODv1 --no_exec --fileout=tree.root --number=-1"
+  export COMMON_COMMANDS="nanoAOD --step=NANO --era=$ERA_ARGS --no_exec --fileout=tree.root --number=-1"
 
   if [ -z "$NANOCFG_DATA" ]; then
-    export NANOCFG_DATA="$SCRIPT_DIRECTORY/nano_cfg_data.py"
+    export NANOCFG_DATA="$SCRIPT_DIRECTORY/nano_cfg_data_$ERA.py"
     echo "Generating the skeleton configuration file for CRAB data jobs: $NANOCFG_DATA"
     cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_DATA"       \
       --data --eventcontent NANOAOD --datatier NANOAOD --conditions $AUTOCOND_DATA \
@@ -75,7 +105,7 @@ from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructure
   fi
 
   if [ -z "$NANOCFG_MC" ]; then
-    export NANOCFG_MC="$SCRIPT_DIRECTORY/nano_cfg_mc.py"
+    export NANOCFG_MC="$SCRIPT_DIRECTORY/nano_cfg_mc_$ERA.py"
     echo "Generating the skeleton configuration file for CRAB MC jobs: $NANOCFG_MC"
     cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_MC"         \
       --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --conditions $AUTOCOND_MC \
