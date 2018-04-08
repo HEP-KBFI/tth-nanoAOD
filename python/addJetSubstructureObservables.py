@@ -1,10 +1,11 @@
 import FWCore.ParameterSet.Config as cms
 
 from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
+from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 
 def addJetSubstructureObservables(process, runOnMC):
 
-    process.jetSubstructureSequence = cms.Sequence()
+    jetSubstructureSequence = cms.Sequence()
 
     #----------------------------------------------------------------------------
     # add anti-kT jets for dR = 1.2 (AK12),
@@ -15,7 +16,7 @@ def addJetSubstructureObservables(process, runOnMC):
     #     For the time-being, store fixed version of jetToolbox in tthAnalysis/NanoAOD package and use private version instead of "official" one
     from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
     jetToolbox(process, 'ak12', 'jetSequenceAK12', 'out', PUMethod='Puppi', miniAOD=True, runOnMC=runOnMC, addSoftDrop=True, addSoftDropSubjets=True, addNsub=True)
-    process.jetSubstructureSequence += process.jetSequenceAK12
+    jetSubstructureSequence += process.jetSequenceAK12
     # CV: use jet energy corrections for AK8 Puppi jets
     process.patJetCorrFactorsAK12PFPuppi.payload = cms.string('AK8PFPuppi')
     process.patJetCorrFactorsAK12PFPuppiSoftDrop.payload = cms.string('AK8PFPuppi')
@@ -48,14 +49,17 @@ def addJetSubstructureObservables(process, runOnMC):
     #----------------------------------------------------------------------------
     # add PF jet ID flags and jet energy corrections for AK12 pat::Jet collection,
     # following what is done for AK8 pat::Jets in https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/NanoAOD/python/jets_cff.py
+    process.looseJetIdAK12 = process.looseJetIdAK8.clone(
+        src = cms.InputTag(fatJetCollectionAK12)
+    )
     process.tightJetIdAK12 = process.tightJetIdAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
-    process.jetSubstructureSequence += process.tightJetIdAK12
     process.tightJetIdLepVetoAK12 = process.tightJetIdLepVetoAK8.clone(
         src = cms.InputTag(fatJetCollectionAK12)
     )
-    process.jetSubstructureSequence += process.tightJetIdLepVetoAK12
+    jetSubstructureSequence += process.tightJetIdAK12
+    jetSubstructureSequence += process.tightJetIdLepVetoAK12
     process.jetsAK12WithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK12),
         userInts = cms.PSet(
@@ -63,16 +67,20 @@ def addJetSubstructureObservables(process, runOnMC):
             tightIdLepVeto = cms.InputTag("tightJetIdLepVetoAK12"),
         )
     )
-    process.jetSubstructureSequence += process.jetsAK12WithUserData
+    run2_miniAOD_80XLegacy.toModify(process.jetsAK12WithUserData.userInts,
+        looseId = cms.InputTag("looseJetIdAK12"),
+        tightIdLepVeto = None,
+    )
+    jetSubstructureSequence += process.jetsAK12WithUserData
     process.jetCorrFactorsAK12 = process.jetCorrFactorsAK8.clone(
         src = cms.InputTag('jetsAK12WithUserData')
     )
-    process.jetSubstructureSequence += process.jetCorrFactorsAK12
+    jetSubstructureSequence += process.jetCorrFactorsAK12
     process.updatedJetsAK12 = process.updatedJetsAK8.clone(
         jetSource = cms.InputTag('jetsAK12WithUserData'),
         jetCorrFactorsSource = cms.VInputTag(cms.InputTag('jetCorrFactorsAK12'))
     )
-    process.jetSubstructureSequence += process.updatedJetsAK12
+    jetSubstructureSequence += process.updatedJetsAK12
 
     process.selectedJetsAK12 = cms.EDFilter("PATJetSelector",
         src      = cms.InputTag("updatedJetsAK12"),
@@ -81,7 +89,7 @@ def addJetSubstructureObservables(process, runOnMC):
         nLoose   = cms.uint32(0),
         filter   = cms.bool(False),
     )
-    process.jetSubstructureSequence += process.selectedJetsAK12
+    jetSubstructureSequence += process.selectedJetsAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -99,7 +107,7 @@ def addJetSubstructureObservables(process, runOnMC):
         jetRad = cms.double(1.2),
         jetAlgo = cms.string("AK")
     )
-    process.jetSubstructureSequence += process.QJetsAdderAK12
+    jetSubstructureSequence += process.QJetsAdderAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -126,7 +134,7 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.jetSubstructureSequence += process.extendedFatJetsAK12
+    jetSubstructureSequence += process.extendedFatJetsAK12
     process.extendedSubJetsAK12 = cms.EDProducer("JetExtendedProducer",
         src = cms.InputTag(subJetCollectionAK12),
         plugins = cms.VPSet(
@@ -143,7 +151,7 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.jetSubstructureSequence += process.extendedSubJetsAK12
+    jetSubstructureSequence += process.extendedSubJetsAK12
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -168,7 +176,7 @@ def addJetSubstructureObservables(process, runOnMC):
             tau4 = Var("userFloat('NjettinessAK12Puppi:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
         )
     )
-    process.jetSubstructureSequence += process.fatJetAK12Table
+    jetSubstructureSequence += process.fatJetAK12Table
     process.subJetAK12Table = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK12'),
         cut = cms.string(""),
@@ -181,12 +189,16 @@ def addJetSubstructureObservables(process, runOnMC):
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
         )
     )
-    process.jetSubstructureSequence += process.subJetAK12Table
+    jetSubstructureSequence += process.subJetAK12Table
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
     # CV: switch to unscheduled mode, as the jetToolbox and PAT tools do not support scheduled mode - it's a mess !!
     #process.nanoSequence += process.jetSubstructureSequence
+    process.jetSubstructureSequence = jetSubstructureSequence.copy()
+    jetSubstructureSequence_80X = jetSubstructureSequence.copy()
+    jetSubstructureSequence_80X.replace(process.tightJetIdLepVetoAK12, process.looseJetIdAK12)
+    run2_miniAOD_80XLegacy.toReplaceWith(process.jetSubstructureSequence, jetSubstructureSequence_80X)
     process.jetSubstructureTask = cms.Task()
     for moduleName in process.jetSubstructureSequence.moduleNames():
         module = getattr(process, moduleName)
