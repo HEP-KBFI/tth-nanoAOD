@@ -8,7 +8,7 @@
 # process.source.fileNames = cms.untracked.vstring()\n\
 # from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; \
 # addJetSubstructureObservables(process, False)\n --data --eventcontent NANOAOD --datatier NANOAOD \
-# --conditions 94X_dataRun2_v6 --python_filename=nano_cfg_data.py \
+# --conditions 94X_dataRun2_v6 --python_filename=nano_cfg_data_2017.py \
 # --lumiToProcess=Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt
 import FWCore.ParameterSet.Config as cms
 

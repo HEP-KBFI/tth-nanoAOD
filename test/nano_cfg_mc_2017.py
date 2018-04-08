@@ -8,7 +8,7 @@
 # process.source.fileNames = cms.untracked.vstring()\n\
 # from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; \
 # addJetSubstructureObservables(process, True)\n --mc --eventcontent NANOAODSIM --datatier NANOAODSIM \
-# --conditions 94X_mc2017_realistic_v13 --python_filename=nano_cfg_mc.py
+# --conditions 94X_mc2017_realistic_v13 --python_filename=nano_cfg_mc_2017.py
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
