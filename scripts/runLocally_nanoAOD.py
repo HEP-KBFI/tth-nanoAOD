@@ -180,6 +180,8 @@ if __name__ == '__main__':
                       help = 'R|Maximum number of events to be processed in the file')
   parser.add_argument('-S', '--skip-events', dest = 'skip_events', metavar = 'number', required = False, type = int, default = 0,
                       help = 'R|Number of events to be skipped in the file')
+  parser.add_argument('-e', '--era', dest = 'era', metavar = 'era', required = True, type = str, choices = [ '2016', '2017' ],
+                      help = 'R|Era')
   parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                       help = 'R|Enable verbose printout')
   args = parser.parse_args()
@@ -194,9 +196,11 @@ if __name__ == '__main__':
   sample_type = args.type
   max_events  = args.max_events
   skip_events = args.skip_events
+  era         = args.era
 
   nano_cfg = os.path.join(
-    os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'nano_cfg_%s.py' % sample_type
+    os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test',
+    'nano_cfg_%s_%s.py' % (sample_type, era)
   )
 
   if not os.path.isfile(nano_cfg):
