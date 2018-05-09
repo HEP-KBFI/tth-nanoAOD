@@ -29,9 +29,9 @@ export DATASET_FILE=""
 export NANOCFG_DATA=""
 export NANOCFG_MC=""
 
-show_help() { echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-v version]" 1>&2; exit 0; }
+show_help() { echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-v version] [-w whitelist]" 1>&2; exit 0; }
 
-while getopts "h?dgf:D:M:e:v:" opt; do
+while getopts "h?dgf:D:M:e:v:w:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -48,6 +48,8 @@ while getopts "h?dgf:D:M:e:v:" opt; do
   e) export ERA=${OPTARG}
      ;;
   v) export NANOAOD_VER=${OPTARG}
+     ;;
+  w) export WHITELIST=${OPTARG}
      ;;
   esac
 done

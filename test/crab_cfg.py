@@ -3,15 +3,19 @@ from CRABClient.UserUtilities import config, getUsernameFromSiteDB
 import re
 import os
 
-def get_env_var(env_var):
+def get_env_var(env_var, fail_if_not_exists = True):
   if env_var not in os.environ:
-    raise ValueError("$%s not defined" % env_var)
+    if fail_if_not_exists:
+      raise ValueError("$%s not defined" % env_var)
+    else:
+      return ''
   return os.environ[env_var]
 
 NANOCFG_DATA = get_env_var('NANOCFG_DATA')
 NANOCFG_MC   = get_env_var('NANOCFG_MC')
 JSON_LUMI    = get_env_var('JSON_LUMI')
 NANOAOD_VER  = get_env_var('NANOAOD_VER')
+WHITELIST    = get_env_var('WHITELIST', False)
 
 is_data         = bool(int(get_env_var('IS_DATA')))
 dataset_name    = get_env_var('DATASET')
@@ -55,4 +59,6 @@ config.Data.allowNonValidInputDataset = True
 if is_data:
   config.Data.lumiMask = JSON_LUMI
 
+if WHITELIST:
+  config.Site.whitelist = WHITELIST.split(',')
 config.Site.storageSite = 'T2_EE_Estonia'
