@@ -11,12 +11,15 @@ def get_env_var(env_var, fail_if_not_exists = True):
       return ''
   return os.environ[env_var]
 
-NANOCFG_DATA = get_env_var('NANOCFG_DATA')
-NANOCFG_MC   = get_env_var('NANOCFG_MC')
-JSON_LUMI    = get_env_var('JSON_LUMI')
-NANOAOD_VER  = get_env_var('NANOAOD_VER')
-WHITELIST    = get_env_var('WHITELIST', False)
+HOME_SITE     = 'T2_EE_Estonia'
+NANOCFG_DATA  = get_env_var('NANOCFG_DATA')
+NANOCFG_MC    = get_env_var('NANOCFG_MC')
+JSON_LUMI     = get_env_var('JSON_LUMI')
+NANOAOD_VER   = get_env_var('NANOAOD_VER')
+WHITELIST     = get_env_var('WHITELIST', False)
+PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
 
+is_private      = bool(int(get_env_var('IS_PRIVATE')))
 is_data         = bool(int(get_env_var('IS_DATA')))
 dataset_name    = get_env_var('DATASET')
 dataset_pattern = get_env_var('DATASET_PATTERN')
@@ -46,19 +49,29 @@ config.General.transferLogs    = True
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName   = NANOCFG_DATA if is_data else NANOCFG_MC
 
-config.Data.inputDataset     = dataset_name
-config.Data.inputDBS         = 'global'
-config.Data.splitting        = 'EventAwareLumiBased'
-config.Data.unitsPerJob      = 50000
-config.Data.outLFNDirBase    = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
-config.Data.publication      = False
-config.Data.outputDatasetTag = outputDatasetTag
+if WHITELIST:
+  config.Site.whitelist = WHITELIST.split(',')
+config.Site.storageSite = HOME_SITE
+
+if is_private:
+  config.Data.userInputFiles       = PRIVATE_FILES.split()
+  config.Data.outputPrimaryDataset = dataset_match.group(1)
+  config.Data.splitting            = 'FileBased'
+  config.Data.unitsPerJob          = 1
+  config.Data.outLFNDirBase        = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
+  config.Data.publication          = False
+  config.Data.outputDatasetTag     = outputDatasetTag
+  config.Site.whitelist            = HOME_SITE
+else:
+  config.Data.inputDataset     = dataset_name
+  config.Data.inputDBS         = 'global'
+  config.Data.splitting        = 'EventAwareLumiBased'
+  config.Data.unitsPerJob      = 50000
+  config.Data.outLFNDirBase    = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
+  config.Data.publication      = False
+  config.Data.outputDatasetTag = outputDatasetTag
 
 config.Data.allowNonValidInputDataset = True
 
 if is_data:
   config.Data.lumiMask = JSON_LUMI
-
-if WHITELIST:
-  config.Site.whitelist = WHITELIST.split(',')
-config.Site.storageSite = 'T2_EE_Estonia'

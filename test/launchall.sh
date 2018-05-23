@@ -29,9 +29,9 @@ export DATASET_FILE=""
 export NANOCFG_DATA=""
 export NANOCFG_MC=""
 
-show_help() { echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-v version] [-w whitelist]" 1>&2; exit 0; }
+show_help() { echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-v version] [-w whitelist] [-p path]" 1>&2; exit 0; }
 
-while getopts "h?dgf:D:M:e:v:w:" opt; do
+while getopts "h?dgf:D:M:e:v:w:p:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -50,6 +50,8 @@ while getopts "h?dgf:D:M:e:v:w:" opt; do
   v) export NANOAOD_VER=${OPTARG}
      ;;
   w) export WHITELIST=${OPTARG}
+     ;;
+  p) export PRIVATE_MINIAOD_PATH=${OPTARG}
      ;;
   esac
 done
@@ -131,6 +133,7 @@ check_if_exists "$DATASET_FILE"
 check_if_exists "$NANOCFG_DATA"
 check_if_exists "$NANOCFG_MC"
 check_if_exists "$JSON_LUMI"
+check_if_exists "$PRIVATE_MINIAOD_PATH"
 
 # Saving absolute path
 if [[ ! "$DATASET_FILE" =~ ^/ ]]; then
@@ -210,5 +213,25 @@ cat $DATASET_FILE | while read LINE; do
     export IS_DATA=0;
     echo "Found MC   sample: $DATASET";
   fi
+
+  export IS_PRIVATE=0;
+  DATASET_SPLIT=$(echo "$DATASET" | tr '/' ' ')
+  DATASET_LEADING_PART=$(echo "$DATASET_SPLIT" | awk '{print $1}')
+  DATASET_SUBLEADING_PART=$(echo "$DATASET_SPLIT" | awk '{print $2}')
+  if [ "$DATASET_SUBLEADING_PART" == "private" ]; then
+    echo "It's a privately produced sample";
+    PRIVATE_DATASET_PATH="$PRIVATE_MINIAOD_PATH/$DATASET_LEADING_PART";
+    if [[ ! -d "$PRIVATE_DATASET_PATH" ]]; then
+      echo "Invalid path for dataset $DATASET: $PRIVATE_DATASET_PATH";
+      exit 6;
+    fi
+    export PRIVATE_DATASET_FILES="find $PRIVATE_DATASET_PATH -type f -name '*.root'";
+    if [ -z "$PRIVATE_DATASET_FILES" ]; then
+      echo "No files found in $PRIVATE_DATASET_PATH";
+      exit 7;
+    fi
+    export IS_PRIVATE=1;
+  fi
+
   crab submit $DRYRUN --config="$SCRIPT_DIRECTORY/crab_cfg.py" --wait
 done
