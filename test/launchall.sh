@@ -221,7 +221,7 @@ cat $DATASET_FILE | while read LINE; do
   if [ "$DATASET_SUBLEADING_PART" == "private" ]; then
     echo "It's a privately produced sample";
     PRIVATE_DATASET_PATH="$PRIVATE_MINIAOD_PATH/$DATASET_LEADING_PART";
-    if [ "$PRIVATE_DATASET_PATH" != /hdfs/cms/* ]; then
+    if [[ "$PRIVATE_DATASET_PATH" != /hdfs/cms/* ]]; then
       echo "The path to private datasets must start with /hdfs/cms";
       exit 6;
     fi
