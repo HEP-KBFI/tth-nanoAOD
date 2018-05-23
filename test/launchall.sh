@@ -13,7 +13,7 @@
 # and MC JECs have the same version (the only difference between v13 and v14 MC GTs are the JECs)
 export AUTOCOND_DATA_2017="94X_dataRun2_v6"
 export AUTOCOND_MC_2017="94X_mc2017_realistic_v13"
-export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt"
+export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
 export ERA_ARGS_2017="Run2_2017,run2_nanoAOD_94XMiniAODv1"
 
 export AUTOCOND_DATA_2016="auto:run2_data_relval"

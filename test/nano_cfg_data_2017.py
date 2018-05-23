@@ -9,7 +9,7 @@
 # from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; \
 # addJetSubstructureObservables(process, False)\n --data --eventcontent NANOAOD --datatier NANOAOD \
 # --conditions 94X_dataRun2_v6 --python_filename=nano_cfg_data_2017.py \
-# --lumiToProcess=Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt
+# --lumiToProcess=Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -21,7 +21,7 @@ import os # custom
 # custom
 JSONfile = os.path.join(
   os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'data',
-  'Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt'
+  'Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt'
 )
 
 process = cms.Process('NANO',eras.Run2_2017,eras.run2_nanoAOD_94XMiniAODv1)
