@@ -225,11 +225,15 @@ cat $DATASET_FILE | while read LINE; do
       echo "Invalid path for dataset $DATASET: $PRIVATE_DATASET_PATH";
       exit 6;
     fi
-    export PRIVATE_DATASET_FILES="find $PRIVATE_DATASET_PATH -type f -name '*.root'";
+    export PRIVATE_DATASET_FILES=`find $PRIVATE_DATASET_PATH -type f -name '*.root'`;
     if [ -z "$PRIVATE_DATASET_FILES" ]; then
       echo "No files found in $PRIVATE_DATASET_PATH";
       exit 7;
     fi
+    echo "Found the following files in $DATASET:"
+    for PRIVATE_DATASET_FILE in $PRIVATE_DATASET_FILES; do
+      echo "  $PRIVATE_DATASET_FILE"
+    done
     export IS_PRIVATE=1;
   fi
 
