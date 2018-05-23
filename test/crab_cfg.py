@@ -61,7 +61,7 @@ if is_private:
   config.Data.outLFNDirBase        = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
   config.Data.publication          = False
   config.Data.outputDatasetTag     = outputDatasetTag
-  config.Site.whitelist            = HOME_SITE
+  config.Site.whitelist            = [ HOME_SITE ]
 else:
   config.Data.inputDataset     = dataset_name
   config.Data.inputDBS         = 'global'
