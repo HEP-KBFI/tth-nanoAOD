@@ -1,0 +1,11 @@
+/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/MINIAODSIM                    tH    THQ            0.07096 # NLO; [1]
+/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/MINIAODSIM                    tH    THW            0.01561 # NLO; [1]
+
+/private/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/MINIAODSIM Rares ST_tWll        0.01103 # LO; [2]
+/private/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/MINIAODSIM      Rares VHToNonbb_M125 0.952   # NNLO QCD+NLO EWK; [3] but [4] says 2.127
+/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/MINIAODSIM          Rares WpWpJJ_EWK_QCD 0.03711 # LO; [3]
+
+# [1] https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV
+# [2] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=ST_tWll_5f_LO_13TeV_MadGraph_pythia8
+# [3] https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns
+# [4] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8
