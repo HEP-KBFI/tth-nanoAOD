@@ -57,7 +57,7 @@ while getopts "h?dgf:D:M:e:v:w:p:" opt; do
 done
 
 check_if_exists() {
-  if [ ! -z "$1" ] && { [ ! -f "$1" ] || [ ! -d "$1" ] }; then
+  if [ ! -z "$1" ] && { [ ! -f "$1" ] || [ ! -d "$1" ]; }; then
     echo "File or directory '$1' does not exist";
     exit 1;
   fi
