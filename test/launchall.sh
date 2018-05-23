@@ -221,14 +221,18 @@ cat $DATASET_FILE | while read LINE; do
   if [ "$DATASET_SUBLEADING_PART" == "private" ]; then
     echo "It's a privately produced sample";
     PRIVATE_DATASET_PATH="$PRIVATE_MINIAOD_PATH/$DATASET_LEADING_PART";
+    if [ "$PRIVATE_DATASET_PATH" != /hdfs/cms/* ]; then
+      echo "The path to private datasets must start with /hdfs/cms";
+      exit 6;
+    fi
     if [[ ! -d "$PRIVATE_DATASET_PATH" ]]; then
       echo "Invalid path for dataset $DATASET: $PRIVATE_DATASET_PATH";
-      exit 6;
+      exit 7;
     fi
     export PRIVATE_DATASET_FILES=`find $PRIVATE_DATASET_PATH -type f -name '*.root'`;
     if [ -z "$PRIVATE_DATASET_FILES" ]; then
       echo "No files found in $PRIVATE_DATASET_PATH";
-      exit 7;
+      exit 8;
     fi
     echo "Found the following files in $DATASET:"
     for PRIVATE_DATASET_FILE in $PRIVATE_DATASET_FILES; do

@@ -54,7 +54,10 @@ if WHITELIST:
 config.Site.storageSite = HOME_SITE
 
 if is_private:
-  config.Data.userInputFiles       = PRIVATE_FILES.split()
+  config.Data.userInputFiles       = list(map(
+    lambda filename: filename.replace('/hdfs/cms', ''),
+    PRIVATE_FILES.split()
+  ))
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
   config.Data.unitsPerJob          = 1
