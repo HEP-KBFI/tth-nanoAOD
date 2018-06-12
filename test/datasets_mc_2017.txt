@@ -11,10 +11,12 @@
 /TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                1 TTZ                       TTZToLL_M10                                      0.2529    # NLO [3]
 /TTZToLLNuNu_M-10_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                      1 TTZ                       TTZToLL_M10_PSweights                            0.2529    # NLO [3]
 /TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                 1 TTZ                       TTZToLL_M-1to10                                  0.0493    # ? [8] (maybe 0.0283? [4])
+/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                      0 TTZ                       TTZJets_LO                                       0.7655    # ? 0.5297 / 0.692
 
 # ttW
 /TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                        1 TTW                       TTWJetsToLNu                                     0.2043    # NLO [3]
 /TTWJetsToLNu_TuneCP5_PSweights_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM              1 TTW                       TTWJetsToLNu_PSweights                           0.2043    # NLO [3]
+/ttWJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                      0 TTW                       TTWJets_LO                                       0.6105    # ?
 /TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10_ext1-v2/MINIAODSIM                                       1 TTWW                      TTWW                                             0.007834  # LO? [9]
 
 # single-top
