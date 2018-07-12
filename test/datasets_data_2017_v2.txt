@@ -24,6 +24,11 @@
 /MuonEG/Run2017D-17Nov2017-v1/MINIAOD          302031-302663  302031-302663     4.368              4.248           
 /MuonEG/Run2017E-17Nov2017-v1/MINIAOD          303824-304797  303825-304797     9.760              9.314           
 /MuonEG/Run2017F-17Nov2017-v1/MINIAOD          305040-306460  305044-306460     14.185             13.539          
+/Tau/Run2017B-17Nov2017-v1/MINIAOD             297047-299329  297050-299329     5.023              4.794           
+/Tau/Run2017C-17Nov2017-v1/MINIAOD             299368-302029  299368-302029     10.307             9.631           
+/Tau/Run2017D-17Nov2017-v1/MINIAOD             302031-302663  302031-302663     4.368              4.248           
+/Tau/Run2017E-17Nov2017-v1/MINIAOD             303824-304797  303825-304797     9.760              9.314           
+/Tau/Run2017F-17Nov2017-v1/MINIAOD             305040-306460  305044-306460     14.185             13.539          
 
 # file generated at 2018-05-24 14:05:21 with the following command:
 # find_samples.py -V -m python/samples/metaDict_2017_data.py -d ../NanoAOD/test/datasets_data.txt -l -c /hdfs/cms/store/user/kaehatah/NanoProduction_v2_2018Apr26
