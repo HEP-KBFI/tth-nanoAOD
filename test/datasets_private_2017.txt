@@ -4,7 +4,7 @@
 
 /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/private/MINIAODSIM 1 TT    ST_tWll        0.01103 # LO; [2]
 
-/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/MINIAODSIM      1 VH    VHToNonbb_M125 0.952   # NNLO QCD+NLO EWK; [3] but [4] says 2.127
+/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/MINIAODSIM      1 VH    VHToNonbb_M125 0.952   # NNLO QCD+NLO EWK; [3] but [4] says 2.127 or 2.505
 
 /WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/MINIAODSIM          1 Rares WpWpJJ_EWK_QCD 0.03711 # LO; [3]
 
