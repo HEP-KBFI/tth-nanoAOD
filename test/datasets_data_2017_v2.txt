@@ -31,7 +31,7 @@
 /Tau/Run2017F-17Nov2017-v1/MINIAOD             305040-306460  305044-306460     14.185             13.539          
 
 # file generated at 2018-05-24 14:05:21 with the following command:
-# find_samples.py -V -m python/samples/metaDict_2017_data.py -d ../NanoAOD/test/datasets_data.txt -l -c /hdfs/cms/store/user/kaehatah/NanoProduction_v2_2018Apr26
+# find_samples.py -V -m python/samples/metaDict_2017_data.py -d ../NanoAOD/test/datasets_data.txt -l -c /hdfs/cms/store/user/kaehatah/NanoProduction_v2_2018Apr26 /hdfs/cms/store/user/kaehatah/2018Jul12
 # golden JSON: Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt
 # normtag: normtag_PHYSICS.json
 # totdelivered(/fb): 44.171
