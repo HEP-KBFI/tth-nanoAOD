@@ -139,11 +139,11 @@
 /TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                            1 Rares                     TTTW                                             0.0007273 # ?
 
 # VH
-/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM           1 VH                        VHToNonbb_M125_v14-v2                            0.952     # NNLO QCD+NLO EWK; [3] but [24] says 2.127 or 2.505
+/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM           1 VH                        VHToNonbb_M125_v14-v2                            2.505     # ? [24]
 
 # misc
 /tZq_ll_4f_ckm_NLO_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                     1 Rares                     tZq_ll_4f                                        0.0758    # NLO [3]
-/WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 Rares                     WpWpJJ_EWK_QCD_v14-v1                            0.03711   # LO [3]
+/WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 Rares                     WpWpJJ_EWK_QCD_v14-v1                            0.04932   # LO [24]
 /WWTo2L2Nu_DoubleScattering_13TeV-herwigpp/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                                      1 Rares                     WWTo2L2Nu_DoubleScattering                       0.1743    # LO [3][6] 1.64 * (1 - 0.674)^2; [10] 0.1703
 
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR (125.00)
@@ -169,3 +169,4 @@
 # [21] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8
 # [22] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8
 # [23] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8
+# [24] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8
