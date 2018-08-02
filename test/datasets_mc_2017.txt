@@ -27,7 +27,7 @@
 /ST_tW_antitop_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                  1 TT                        ST_tW_antitop_5f_inclusiveDecays                35.85      # NLO [5]
 /ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                      1 TT                        ST_tW_top_5f_inclusiveDecays                    35.85      # NLO [5]
 /ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM            1 TT                        ST_tW_top_5f_inclusiveDecays_PSweights          35.85      # NLO [5]
-/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM      1 TT                        ST_tWll_v14-v1                                   0.01103   # LO [23]
+/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM      1 TT                        ST_tWll_v14-v1                                   0.01103   # LO [16]
 
 # ttbar
 /TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                         1 TT                        TTTo2L2Nu                                       88.29      # NNLO [12]; [15][6] 831.76 * (1 - 0.6741)^2 = 88.34
@@ -69,18 +69,18 @@
 /DYJetsToLL_M-50_HT-2500toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                 1 EWK                       DYJetsToLL_M50_HT2500toInf                       0.003749  # NNLO QCD, NLO EW; 0.003475 * 1.0789
 
 # W + jets
-/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                   1 EWK                       WJetsToLNu                                   61526.7       # NNLO [3]; k-factor = [3] / [25] = 1.1622
+/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                   1 EWK                       WJetsToLNu                                   61526.7       # NNLO [3]; k-factor = [3] / [19] = 1.1622
 /W1JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                  1 EWK                       W1JetsToLNu                                   9418.44      # NNLO; 8104 * 1.1622
 /W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                  1 EWK                       W2JetsToLNu                                   3244.85      # NNLO; 2792 * 1.1622
 /W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                  1 EWK                       W3JetsToLNu                                   1153.02      # NNLO; 992.1 * 1.1622
 /W4JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                  1 EWK                       W4JetsToLNu                                    633.05      # NNLO; 544.7 * 1.1622
-/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM    1 EWK                       WJetsToLNu_HT100To200                         1621.26      # NNLO; [16] * 1.1622
-/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM    1 EWK                       WJetsToLNu_HT200To400                          474.06      # NNLO; [17] * 1.1622
-/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM    1 EWK                       WJetsToLNu_HT400To600                           66.80	     # NNLO; [18] * 1.1622
-/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM    1 EWK                       WJetsToLNu_HT600To800                           14.96      # NNLO; [19] * 1.1622
-/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM   1 EWK                       WJetsToLNu_HT800To1200                           6.236     # NNLO; [20] * 1.1622
-/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM  1 EWK                       WJetsToLNu_HT1200To2500                          1.248     # NNLO; [21] * 1.1622
-/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM   1 EWK                       WJetsToLNu_HT2500ToInf                           0.009299  # NNLO; [22] * 1.1622
+/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM    1 EWK                       WJetsToLNu_HT100To200                         1625.94      # NNLO; 1394 * 1.1622
+/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM    1 EWK                       WJetsToLNu_HT200To400                          477.52      # NNLO; 409.4 * 1.1622
+/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM    1 EWK                       WJetsToLNu_HT400To600                           67.51	     # NNLO; 57.88 * 1.1622
+/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM    1 EWK                       WJetsToLNu_HT600To800                           15.09      # NNLO; 12.94 * 1.1622
+/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM   1 EWK                       WJetsToLNu_HT800To1200                           6.297     # NNLO; 5.399 * 1.1622
+/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM  1 EWK                       WJetsToLNu_HT1200To2500                          1.262     # NNLO; 1.082 * 1.1622
+/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM   1 EWK                       WJetsToLNu_HT2500ToInf                           0.009446  # NNLO; 0.008099 * 1.1622
 
 # di-bosons (except for WW DPS)
 /WWTo2L2Nu_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                 1 EWK                       WWTo2L2Nu                                       12.178     # NNLO [3]; [6][7] 118.7 * (1 - 0.674)^2 = 12.61
@@ -139,11 +139,11 @@
 /TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                            1 Rares                     TTTW                                             0.0007317 # ?
 
 # VH
-/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM           1 VH                        VHToNonbb_M125_v14-v2                            2.505     # ? [24]
+/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM           1 VH                        VHToNonbb_M125_v14-v2                            2.505     # ? [18]
 
 # misc
 /tZq_ll_4f_ckm_NLO_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                     1 Rares                     tZq_ll_4f                                        0.0758    # NLO [3]
-/WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 Rares                     WpWpJJ_EWK_QCD_v14-v1                            0.04932   # LO [24]
+/WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 Rares                     WpWpJJ_EWK_QCD_v14-v1                            0.04932   # LO [17]
 /WWTo2L2Nu_DoubleScattering_13TeV-herwigpp/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                                      1 Rares                     WWTo2L2Nu_DoubleScattering                       0.1743    # LO [3][6] 1.64 * (1 - 0.674)^2; [10] 0.1703
 
 # Nomenclature:
@@ -175,13 +175,7 @@
 # [13] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8
 # [14] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8
 # [15] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO (172.5)
-# [16] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8
-# [17] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8
-# [18] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8
-# [19] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8
-# [20] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8
-# [21] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8
-# [22] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8
-# [23] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8
-# [24] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8
-# [25] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8
+# [16] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8
+# [17] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8
+# [18] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8
+# [19] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8
