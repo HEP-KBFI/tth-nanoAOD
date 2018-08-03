@@ -56,7 +56,7 @@ config.Site.storageSite = HOME_SITE
 if is_private:
   config.Data.userInputFiles       = list(map(
     lambda filename: filename.replace('/hdfs/cms', ''),
-    PRIVATE_FILES.split()
+    PRIVATE_FILES.split('\n')
   ))
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
