@@ -1,11 +1,11 @@
-/HHTo4T_madgraph_pythia8_CP5_M400/private/USER   1 signal hh_4t_400   0.003934 /hdfs/cms/store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M400   # [1]
-/HHTo4T_madgraph_pythia8_CP5_M700/private/USER   1 signal hh_4t_700   0.003934 /hdfs/cms/store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M700   # [1]
+/HHTo4T_madgraph_pythia8_CP5_M400/private/USER   1 signal signal_hh_4t_400   0.003934 /hdfs/cms/store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M400   # [1]
+/HHTo4T_madgraph_pythia8_CP5_M700/private/USER   1 signal signal_hh_4t_700   0.003934 /hdfs/cms/store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M700   # [1]
 
-/HHTo2T2V_madgraph_pythia8_CP5_M400/private/USER 1 signal hh_2t2v_400 0.030092 /hdfs/cms/store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M400 # [2]
-/HHTo2T2V_madgraph_pythia8_CP5_M700/private/USER 1 signal hh_2t2v_700 0.030092 /hdfs/cms/store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M700 # [2]
+/HHTo2T2V_madgraph_pythia8_CP5_M400/private/USER 1 signal signal_hh_2t2v_400 0.030092 /hdfs/cms/store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M400 # [2]
+/HHTo2T2V_madgraph_pythia8_CP5_M700/private/USER 1 signal signal_hh_2t2v_700 0.030092 /hdfs/cms/store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M700 # [2]
 
-/HHTo4V_madgraph_pythia8_CP5_M400/private/USER   1 signal hh_4v_400   0.057547 /hdfs/cms/store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M400   # [3]
-/HHTo4V_madgraph_pythia8_CP5_M700/private/USER   1 signal hh_4v_700   0.057547 /hdfs/cms/store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M700   # [3]
+/HHTo4V_madgraph_pythia8_CP5_M400/private/USER   1 signal signal_hh_4v_400   0.057547 /hdfs/cms/store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M400   # [3]
+/HHTo4V_madgraph_pythia8_CP5_M700/private/USER   1 signal signal_hh_4v_700   0.057547 /hdfs/cms/store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M700   # [3]
 
 # XS normalized to 1 pb, assuming M = 125.00 GeV in https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
 # [1] BR(H -> tau tau)^2 = 0.06272^2 = 0.003934
