@@ -1,6 +1,6 @@
-/VBFToRadionToHHTo2B2VTo2L2Nu_M-300_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM 1 signal_radion_300_bbvv signal_hh_2b2v_300 0.026422 # [1]
-/VBFToRadionToHHTo2B2VTo2L2Nu_M-400_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM 1 signal_radion_400_bbvv signal_hh_2b2v_400 0.026422 # [1]
-/VBFToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM 1 signal_radion_750_bbvv signal_hh_2b2v_750 0.026422 # [1]
+/VBFToRadionToHHTo2B2VTo2L2Nu_M-300_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM 1 signal_vbf_spin0_300_hh_bbvv signal_vbf_spin0_300_hh_2b2v 0.026422 # [1]
+/VBFToRadionToHHTo2B2VTo2L2Nu_M-400_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM 1 signal_vbf_spin0_400_hh_bbvv signal_vbf_spin0_400_hh_2b2v 0.026422 # [1]
+/VBFToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM 1 signal_vbf_spin0_750_hh_bbvv signal_vbf_spin0_750_hh_2b2v 0.026422 # [1]
 
 # XS normalized to 1 pb, assuming M = 125.00 GeV in https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
 # [1] 2 * BR(H -> b b) * BR(H -> W W) * BR(W -> l nu)^2 = 2 * 0.5824 * 0.2137 * (3 * 0.1086)^2 = 0.026422
