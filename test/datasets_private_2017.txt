@@ -4,14 +4,13 @@
 
 /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/private/USER 1 TT    ST_tWll        0.01103 /hdfs/cms/store/user/kaehatah/private/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17 # LO; [2]
 
-/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/USER      1 VH    VHToNonbb_M125 0.9425  /hdfs/cms/store/user/kaehatah/private/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17      # ?; [6][7]; previously used [4]
+/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/USER      1 VH    VHToNonbb_M125 0.9425  /hdfs/cms/store/user/kaehatah/private/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17      # N3LO (WH) + NNLO (ZH); [5][6]
 
-/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/USER          1 Rares WpWpJJ_EWK_QCD 0.04932 /hdfs/cms/store/user/kaehatah/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17          # LO; [5]
+/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/USER          1 Rares WpWpJJ_EWK_QCD 0.04932 /hdfs/cms/store/user/kaehatah/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17          # LO; [4]
 
 # [1] https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV
 # [2] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=ST_tWll_5f_LO_13TeV_MadGraph_pythia8
 # [3] https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns
-# [4] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8
-# [5] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8
-# [6] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR (125.00)
-# [7] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV (125.00)
+# [4] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WpWpJJ_EWK-QCD_TuneCP5_13TeV-madgraph-pythia8
+# [5] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR (125.00)
+# [6] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV (125.00)

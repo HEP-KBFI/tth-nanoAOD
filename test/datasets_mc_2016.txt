@@ -189,7 +189,7 @@
 /TTTW_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM                                          1 Rares                     TTTW                                             0.0007273 # ?
 
 # VH
-/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM                                   1 VH                        VHToNonbb_M125                                   0.952     # NNLO QCD+NLO EWK; [3] but [4] says 2.127 or 2.505
+/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM                                   1 VH                        VHToNonbb_M125                                   0.9425    # N3LO (WH) + NNLO (ZH); [1][2] but [4] says 2.127 or 2.505
 
 # misc
 /tZq_ll_4f_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM                                               1 Rares                     tZq_ll_4f                                        0.0758    # NLO [3]
