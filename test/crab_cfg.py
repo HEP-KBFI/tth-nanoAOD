@@ -31,6 +31,10 @@ id_ = '%s_%s__%s' % (NANOAOD_VER, dataset_match.group(1), dataset_match.group(2)
 requestName      = id_
 outputDatasetTag = id_
 
+max_outputDatasetTag_len = 160 - len(getUsernameFromSiteDB())
+if len(outputDatasetTag) > max_outputDatasetTag_len:
+  outputDatasetTag = outputDatasetTag[:max_outputDatasetTag_len]
+
 if len(requestName) > 100:
   requestName_new = requestName[:90] + requestName[-10:]
   print("Changing old request name '{rqname_old}' -> '{rqname_new}'".format(
