@@ -74,6 +74,7 @@
 /DYJetsToLL_M-50_HT-800to1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                 1 EWK                       DYJetsToLL_M50_HT800to1200                       0.8684    # NNLO QCD, NLO EW; 0.8049 * 1.0789
 /DYJetsToLL_M-50_HT-1200to2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                1 EWK                       DYJetsToLL_M50_HT1200to2500                      0.2079    # NNLO QCD, NLO EW; 0.1927 * 1.0789
 /DYJetsToLL_M-50_HT-2500toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                 1 EWK                       DYJetsToLL_M50_HT2500toInf                       0.003749  # NNLO QCD, NLO EW; 0.003475 * 1.0789
+/DYBBJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                     1 EWK                       DYBBJetsToLL_M-50                               11.37      # ?; [21]
 
 # W + jets
 /WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                   1 EWK                       WJetsToLNu                                   61526.7       # NNLO [3]; k-factor = [3] / [19] = 1.1622
@@ -187,3 +188,4 @@
 # [18] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8
 # [19] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8
 # [20] https://arxiv.org/pdf/1610.07922.pdf (table 40)
+# [21] https://twiki.cern.ch/twiki/bin/view/CMS/IPHCCrossSection
