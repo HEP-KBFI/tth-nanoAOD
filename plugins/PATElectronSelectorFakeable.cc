@@ -237,6 +237,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     edm::ParameterSetDescription desc;
     desc.setComment("PAT electron selector module for 'fakeable' leptons used in ttH multilepton+tau analysis (HIG-18-019)");
     desc.add<edm::InputTag>("src")->setComment("electron input collection");
+    desc.add<edm::InputTag>("src_mvaRawTTH")->setComment("ttH lepton ID MVA input collection for electrons");
     desc.add<edm::InputTag>("era")->setComment("run period");
     descriptions.add("PATElectronSelectorFakeable", desc);
   }
@@ -251,31 +252,31 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
   bool debug_;
   bool apply_offline_e_trigger_cuts_;
 
-  float min_pt_;                   ///< lower cut threshold on lepton pT
-  float max_absEta_;               ///< upper cut threshold on absolute value of eta
-  float max_dxy_;                  ///< upper cut threshold on d_{xy}, distance in the transverse plane w.r.t PV
-  float max_dz_;                   ///< upper cut threshold on d_{z}, distance on the z axis w.r.t PV
-  float max_relIso_;               ///< upper cut threshold on relative isolation
-  float max_sip3d_;                ///< upper cut threshold on significance of IP
+  float min_pt_;                ///< lower cut threshold on lepton pT
+  float max_absEta_;            ///< upper cut threshold on absolute value of eta
+  float max_dxy_;               ///< upper cut threshold on d_{xy}, distance in the transverse plane w.r.t PV
+  float max_dz_;                ///< upper cut threshold on d_{z}, distance on the z axis w.r.t PV
+  float max_relIso_;            ///< upper cut threshold on relative isolation
+  float max_sip3d_;             ///< upper cut threshold on significance of IP
 //--- define cuts that dependent on eta
 //    format: central region (|eta| < 0.8) / transition region (0.8 < |eta| < 1.479) / forward region (|eta| > 1.479)
   typedef std::vector<float> vfloat;
-  vfloat binning_absEta_;          ///< eta values separating central, transition and forward region (0.8, 1.479)
-  float min_pt_trig_;              ///< lower pT threshold for applying shower shape cuts (to mimic selection applied on trigger level)
-  vfloat max_sigmaEtaEta_trig_;    ///< upper cut threshold on second shower moment in eta-direction 
-  vfloat max_HoE_trig_;            ///< upper cut threshold on ratio of energy deposits in hadronic/electromagnetic section of calorimeter
-  vfloat max_deltaEta_trig_;       ///< upper cut threshold on difference in eta between impact position of track and electron cluster
-  vfloat max_deltaPhi_trig_;       ///< upper cut threshold on difference in phi between impact position of track and electron cluster
-  float min_OoEminusOoP_trig_;     ///< lower cut threshold on difference between calorimeter energy and track momentum (1/E - 1/P)
-  vfloat max_OoEminusOoP_trig_;    ///< upper cut threshold on difference between calorimeter energy and track momentum (1/E - 1/P)
+  vfloat binning_absEta_;       ///< eta values separating central, transition and forward region (0.8, 1.479)
+  float min_pt_trig_;           ///< lower pT threshold for applying shower shape cuts (to mimic selection applied on trigger level)
+  vfloat max_sigmaEtaEta_trig_; ///< upper cut threshold on second shower moment in eta-direction 
+  vfloat max_HoE_trig_;         ///< upper cut threshold on ratio of energy deposits in hadronic/electromagnetic section of calorimeter
+  vfloat max_deltaEta_trig_;    ///< upper cut threshold on difference in eta between impact position of track and electron cluster
+  vfloat max_deltaPhi_trig_;    ///< upper cut threshold on difference in phi between impact position of track and electron cluster
+  float min_OoEminusOoP_trig_;  ///< lower cut threshold on difference between calorimeter energy and track momentum (1/E - 1/P)
+  vfloat max_OoEminusOoP_trig_; ///< upper cut threshold on difference between calorimeter energy and track momentum (1/E - 1/P)
 //-------------------------------------------------------------------------------
 //--- define cuts that dependent on lepton MVA of ttH multilepton analysis 
 //    format: electron fails / passes loose cut on lepton MVA value
-  vfloat binning_mvaTTH_;          ///< lepton MVA threshold
-  vfloat min_mvaIDraw_;            ///< lower cut on EGamma POG MVA raw value
+  vfloat binning_mvaTTH_;       ///< lepton MVA threshold
+  vfloat min_mvaIDraw_;         ///< lower cut on EGamma POG MVA raw value
 //-------------------------------------------------------------------------------
-  bool apply_conversionVeto_;         ///< apply (True) or do not apply (False) conversion veto
-  int max_nLostHits_; ///< upper cut threshold on lost hits in the innermost layer of the tracker (electrons with lost_hits equal to cut threshold pass) 
+  bool apply_conversionVeto_;   ///< apply (True) or do not apply (False) conversion veto
+  int max_nLostHits_;           ///< upper cut threshold on lost hits in the innermost layer of the tracker (electrons with lost_hits equal to cut threshold pass) 
 };
 
 #include "FWCore/Framework/interface/MakerMacros.h"
