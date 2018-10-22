@@ -105,6 +105,7 @@ process = nanoAOD_customizeData(process)
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 process.source.fileNames = cms.untracked.vstring()
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process, False)
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, False)
 
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
