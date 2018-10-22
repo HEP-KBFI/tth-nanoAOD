@@ -1,7 +1,7 @@
 
 /** \class PATMuonSelectorFakeable
  *
- * Produce collection of pat::Muon objects passing fakeable lepton selection on ttH multilepton+tau analysis (HIG-18-019).
+ * Produce collection of pat::Muon objects passing fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019).
  * The collection of pat::Muon is used to clean the collection of packedPFCandidates, 
  * which is used as input for the reconstruction of lepton subtracted AK8 jets (cf. B2G-18-008).
  *
