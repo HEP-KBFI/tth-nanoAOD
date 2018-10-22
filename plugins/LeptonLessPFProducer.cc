@@ -2,7 +2,7 @@
 /** \class LeptonLessPFProducer
  *
  * Produce collection of packedPFCandidates not associated to fakeable electrons or muons,
- * used as input for the reconstruction of lepton subtracted AK8 jets (cf. B2G-18-008).
+ * used as input for the reconstruction of lepton-subtracted AK8 jets (cf. B2G-18-008).
  *
  * WARNING: https://github.com/nickmccoll/AnalysisTreeMaker/blob/master/Utilities/plugins/LeptonLessPFProducer.cc
  *          except that no selection criteria are applied to electrons and muons
