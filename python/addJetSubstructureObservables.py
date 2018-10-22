@@ -45,7 +45,7 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.jetSequence.replace(process.updatedJetsAK8, process.updatedJetsAK8 + process.QJetsAdderAK8 + process.extendedJets)
+    process.jetSequence.replace(process.updatedJetsAK8, process.updatedJetsAK8 + process.QJetsAdderAK8 + process.extendedFatJetsAK8)
     process.finalJetsAK8.src = cms.InputTag('extendedFatJetsAK8')
     # CV: reduce pT cut on reconstructed and generator-level AK8 jets to 80 GeV
     #    (to allow for pT > 100 GeV cut to be applied on analysis level, while leaving some "room" for JES and JER uncertainties to be applied)
@@ -74,7 +74,6 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.jetSequence.replace(process.updatedJetsAK8, process.updatedJetsAK8 + process.extendedJets)
     process.genSubJetAK8Table.src = cms.InputTag('extendedSubJetsAK8')
     process.genSubJetAK8Table.jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10)
     process.genSubJetAK8Table.pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10)

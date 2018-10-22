@@ -1,3 +1,7 @@
+import FWCore.ParameterSet.Config as cms
+
+from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
+from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 
 def addLeptonSubtractedAK8Jets(process, runOnMC):
 
@@ -35,7 +39,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         vertexName = cms.InputTag("offlineSlimmedPrimaryVertices"),
         useExistingWeights = cms.bool(True)
     )
-    leptonSubtractedJetSequence += process.process.leptonLesspuppi
+    leptonSubtractedJetSequence += process.leptonLesspuppi
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -48,11 +52,11 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     jetToolbox(process, 'ak8', 'jetSequenceAK8LS', 'out', PUMethod='PuppiNoLep', JETCorrPayload='AK8PFPuppi', JETCorrLevels=JETCorrLevels, miniAOD=True, runOnMC=runOnMC,
                newPFCollection=True, nameNewPFCollection='leptonLesspuppi', addSoftDrop=True, addSoftDropSubjets=True, addNsub=True,
                subJETCorrPayload='AK4PFPuppi',subJETCorrLevels=JETCorrLevels, bTagDiscriminators=bTagDiscriminators)    
-    jetSubstructureSequence += process.jetSequenceAK8LS
+    leptonSubtractedJetSequence += process.jetSequenceAK8LS
     # CV: disable discriminators that cannot be computed with miniAOD inputs
-    for moduleName in [ "patJetsAK8LSPFPuppi", "patJetsAK8LSPFPuppiSoftDrop", "patJetsAK8LSPFPuppiSoftDropSubjets" ]:
-        module = getattr(process, moduleName)
-        module.discriminatorSources = cms.VInputTag()
+    #for moduleName in [ "patJetsAK8LSPFPuppi", "patJetsAK8LSPFPuppiSoftDrop", "patJetsAK8LSPFPuppiSoftDropSubjets" ]:
+    #    module = getattr(process, moduleName)
+    #    module.discriminatorSources = cms.VInputTag()
     fatJetCollectionAK8LS = 'packedPatJetsAK8LSPFPuppiSoftDrop'
     subJetCollectionAK8LS = 'selectedPatJetsAK8LSPFPuppiSoftDropPacked:SubJets'
     #----------------------------------------------------------------------------
@@ -87,8 +91,8 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     process.tightJetIdLepVetoAK8LS = process.tightJetIdLepVetoAK8.clone(
         src = cms.InputTag(fatJetCollectionAK8LS)
     )
-    jetSubstructureSequence += process.tightJetIdAK8LS
-    jetSubstructureSequence += process.tightJetIdLepVetoAK8LS
+    leptonSubtractedJetSequence += process.tightJetIdAK8LS
+    leptonSubtractedJetSequence += process.tightJetIdLepVetoAK8LS
     process.jetsAK8LSWithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK8LS),
         userInts = cms.PSet(
@@ -100,7 +104,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         looseId = cms.InputTag("looseJetIdAK8LS"),
         tightIdLepVeto = None,
     )
-    jetSubstructureSequence += process.jetsAK8LSWithUserData
+    leptonSubtractedJetSequence += process.jetsAK8LSWithUserData
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -115,7 +119,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         jetRad = cms.double(0.8),
         jetAlgo = cms.string("AK")
     )
-    jetSubstructureSequence += process.process.QJetsAdderAK8LS
+    leptonSubtractedJetSequence += process.QJetsAdderAK8LS
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -142,7 +146,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             )
         )
     )
-    jetSubstructureSequence += process.extendedFatJetsAK8LS
+    leptonSubtractedJetSequence += process.extendedFatJetsAK8LS
     process.extendedSubJetsAK8LS = cms.EDProducer("JetExtendedProducer",
         src = cms.InputTag(subJetCollectionAK8LS),
         plugins = cms.VPSet(
@@ -159,7 +163,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             )
         )
     )
-    jetSubstructureSequence += process.extendedSubJetsAK8LS
+    leptonSubtractedJetSequence += process.extendedSubJetsAK8LS
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -184,9 +188,9 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             tau4 = Var("userFloat('NjettinessAK12Puppi:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
         )
     )
-    jetSubstructureSequence += process.fatJetAK12Table
-    
-    process.subJetAK8LSTable = process.subJetTable.clone(
+    leptonSubtractedJetSequence += process.fatJetTableAK8LS
+        
+    process.subJetTableAK8LS = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK8LS'),
         cut = cms.string(""),
         name = cms.string("SubJetAK8LS"),
@@ -198,21 +202,21 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
         )
     )
-    jetSubstructureSequence += process.subJetAK8LSTable
+    leptonSubtractedJetSequence += process.subJetTableAK8LS
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
     # CV: switch to unscheduled mode, as the jetToolbox and PAT tools do not support scheduled mode - it's a mess !!
-    #process.nanoSequence += process.jetSubstructureSequence
-    process.jetSubstructureSequence = jetSubstructureSequence.copy()
-    jetSubstructureSequence_80X = jetSubstructureSequence.copy()
-    jetSubstructureSequence_80X.replace(process.tightJetIdLepVetoAK8LS, process.looseJetIdAK8LS)
-    run2_miniAOD_80XLegacy.toReplaceWith(process.jetSubstructureSequence, jetSubstructureSequence_80X)
+    #process.nanoSequence += process.leptonSubtractedJetSequence    
+    process.leptonSubtractedJetSequence = leptonSubtractedJetSequence.copy()
+    leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
+    leptonSubtractedJetSequence_80X.replace(process.tightJetIdLepVetoAK8LS, process.looseJetIdAK8LS)
+    run2_miniAOD_80XLegacy.toReplaceWith(process.leptonSubtractedJetSequence, leptonSubtractedJetSequence_80X)
     process.jetSubstructureTask = cms.Task()
-    for moduleName in process.jetSubstructureSequence.moduleNames():
+    for moduleName in process.leptonSubtractedJetSequence.moduleNames():
         module = getattr(process, moduleName)
         process.jetSubstructureTask.add(module)
-    process.jetSubstructureTables = cms.Sequence(process.fatJetAK8LSTable + process.subJetAK8LSTable)
+    process.jetSubstructureTables = cms.Sequence(process.fatJetTableAK8LS + process.subJetTableAK8LS)
     # CV: add tasks to sequence,
     #     as described on this twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile#Module_sequences
     #    (some modules are contained in 'jetSubstructureTask' and some are contained in 'patAlgosToolsTask' - it's again a mess !!)
