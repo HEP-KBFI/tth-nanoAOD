@@ -44,13 +44,13 @@ def addJetSubstructureObservables(process, runOnMC):
                 src = cms.InputTag('QJetsAdderAK8:QjetsVolatility')
             )
         )
-    )
-    process.jetSequence.replace(process.updatedJetsAK8, process.updatedJetsAK8 + process.QJetsAdderAK8 + process.extendedFatJetsAK8)
+    )    
     process.finalJetsAK8.src = cms.InputTag('extendedFatJetsAK8')
     # CV: reduce pT cut on reconstructed and generator-level AK8 jets to 80 GeV
     #    (to allow for pT > 100 GeV cut to be applied on analysis level, while leaving some "room" for JES and JER uncertainties to be applied)
     process.finalJetsAK8.cut = cms.string("pt > 80")
     process.genJetAK8Table.cut = cms.string("pt > 80")
+    process.genJetAK8FlavourTable.cut = cms.string("pt > 80")
     process.fatJetTable.cut = cms.string("pt > 80")
     process.fatJetTable.variables.jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10)
     process.fatJetTable.variables.pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10)
@@ -74,11 +74,12 @@ def addJetSubstructureObservables(process, runOnMC):
             )
         )
     )
-    process.genSubJetAK8Table.src = cms.InputTag('extendedSubJetsAK8')
-    process.genSubJetAK8Table.jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10)
-    process.genSubJetAK8Table.pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10)
-    process.genSubJetAK8Table.pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10)
-    process.genSubJetAK8Table.pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
+    process.subJetTable.src = cms.InputTag('extendedSubJetsAK8')
+    process.subJetTable.jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10)
+    process.subJetTable.pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10)
+    process.subJetTable.pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10)
+    process.subJetTable.pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
+    process.jetSequence.replace(process.updatedJetsAK8, process.updatedJetsAK8 + process.QJetsAdderAK8 + process.extendedFatJetsAK8 + process.extendedSubJetsAK8)
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
