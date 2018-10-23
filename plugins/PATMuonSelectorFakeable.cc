@@ -34,7 +34,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
  public:
   PATMuonSelectorFakeable(const edm::ParameterSet& cfg)
     : src_(cfg.getParameter<edm::InputTag>("src"))
-    , src_mvaRawTTH_(cfg.getParameter<edm::InputTag>("src_mvaRawTTH"))
+    , src_mvaTTH_(cfg.getParameter<edm::InputTag>("src_mvaTTH"))
     , era_(kEra_undefined)
     , debug_(cfg.getParameter<bool>("debug"))
     , min_pt_(-1.e+3)
@@ -47,7 +47,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     , apply_mediumIdPOG_(false)
   {
     token_ = consumes<edm::View<pat::Muon>>(src_);
-    token_mvaRawTTH_ = consumes<edm::ValueMap<float>>(src_mvaRawTTH_);
+    token_mvaTTH_ = consumes<edm::ValueMap<float>>(src_mvaTTH_);
 
     std::string era_string = cfg.getParameter<std::string>("era");
     if      ( era_string == "2016" ) era_ = kEra_2016;
@@ -85,8 +85,8 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
   {
     edm::Handle<edm::View<pat::Muon>> inputMuons;
     evt.getByToken(token_, inputMuons);
-    edm::Handle<edm::ValueMap<float>> inputMuons_mvaRawTTH;
-    evt.getByToken(token_mvaRawTTH_, inputMuons_mvaRawTTH);
+    edm::Handle<edm::ValueMap<float>> inputMuons_mvaTTH;
+    evt.getByToken(token_mvaTTH_, inputMuons_mvaTTH);
 
     std::unique_ptr<pat::MuonCollection> outputMuons(new pat::MuonCollection());
 
@@ -143,8 +143,8 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
 	}
 	continue;
       }
-      double mvaRawTTH = (*inputMuons_mvaRawTTH)[muon];
-      const int idxBin_mvaTTH = mvaRawTTH <= binning_mvaTTH_[0] ? 0 : 1;
+      double mvaTTH = (*inputMuons_mvaTTH)[muon];
+      const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
       if ( muon->segmentCompatibility() <= min_segmentCompatibility_[idxBin_mvaTTH] ) {
 	if ( debug_ ) {
 	  std::cout << "FAILS segmentCompatibility > " << min_segmentCompatibility_[idxBin_mvaTTH] << " cut\n";
@@ -163,16 +163,17 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     edm::ParameterSetDescription desc;
     desc.setComment("PAT muon selector module for 'fakeable' leptons used in ttH multilepton+tau analysis (HIG-18-019)");
     desc.add<edm::InputTag>("src")->setComment("muon input collection");
-    desc.add<edm::InputTag>("src_mvaRawTTH")->setComment("ttH lepton ID MVA input collection for muons");
-    desc.add<edm::InputTag>("era")->setComment("run period");
+    desc.add<edm::InputTag>("src_mvaTTH")->setComment("ttH lepton ID MVA input collection for muons");
+    desc.add<std::string>("era")->setComment("run period");
+    desc.add<bool>("debug")->setComment("debug flag");
     descriptions.add("PATMuonSelectorFakeable", desc);
   }
 
  private:
   edm::InputTag src_;
   edm::EDGetTokenT<edm::View<pat::Muon>> token_;  
-  edm::InputTag src_mvaRawTTH_;
-  edm::EDGetTokenT<edm::ValueMap<float>> token_mvaRawTTH_;
+  edm::InputTag src_mvaTTH_;
+  edm::EDGetTokenT<edm::ValueMap<float>> token_mvaTTH_;
 
   int era_;
   bool debug_;

@@ -34,7 +34,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
  public:
   PATElectronSelectorFakeable(const edm::ParameterSet& cfg)
     : src_(cfg.getParameter<edm::InputTag>("src"))
-    , src_mvaRawTTH_(cfg.getParameter<edm::InputTag>("src_mvaRawTTH"))
+    , src_mvaTTH_(cfg.getParameter<edm::InputTag>("src_mvaTTH"))
     , era_(kEra_undefined)
     , debug_(cfg.getParameter<bool>("debug"))
     , apply_offline_e_trigger_cuts_(true)
@@ -49,7 +49,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     , max_nLostHits_(0)
   {
     token_ = consumes<edm::View<pat::Electron>>(src_);
-    token_mvaRawTTH_ = consumes<edm::ValueMap<float>>(src_mvaRawTTH_);
+    token_mvaTTH_ = consumes<edm::ValueMap<float>>(src_mvaTTH_);
 
     std::string era_string = cfg.getParameter<std::string>("era");
     if      ( era_string == "2016" ) era_ = kEra_2016;
@@ -109,8 +109,8 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
   {
     edm::Handle<edm::View<pat::Electron>> inputElectrons;
     evt.getByToken(token_, inputElectrons);
-    edm::Handle<edm::ValueMap<float>> inputElectrons_mvaRawTTH;
-    evt.getByToken(token_mvaRawTTH_, inputElectrons_mvaRawTTH);
+    edm::Handle<edm::ValueMap<float>> inputElectrons_mvaTTH;
+    evt.getByToken(token_mvaTTH_, inputElectrons_mvaTTH);
 
     std::unique_ptr<pat::ElectronCollection> outputElectrons(new pat::ElectronCollection());
 
@@ -171,8 +171,8 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
 	}
 	continue;
       }
-      double mvaRawTTH = (*inputElectrons_mvaRawTTH)[electron];
-      const int idxBin_mvaTTH = mvaRawTTH <= binning_mvaTTH_[0] ? 0 : 1;
+      double mvaTTH = (*inputElectrons_mvaTTH)[electron];
+      const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
       if ( electron->userFloat("mvaFall17noIso") < min_mvaIDraw_[idxBin_mvaTTH] ) {
 	if ( debug_ ) {
 	  std::cout << "FAILS EGamma POG MVA raw >= " << min_mvaIDraw_[idxBin_mvaTTH] << " cut\n";
@@ -237,16 +237,17 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     edm::ParameterSetDescription desc;
     desc.setComment("PAT electron selector module for 'fakeable' leptons used in ttH multilepton+tau analysis (HIG-18-019)");
     desc.add<edm::InputTag>("src")->setComment("electron input collection");
-    desc.add<edm::InputTag>("src_mvaRawTTH")->setComment("ttH lepton ID MVA input collection for electrons");
-    desc.add<edm::InputTag>("era")->setComment("run period");
+    desc.add<edm::InputTag>("src_mvaTTH")->setComment("ttH lepton ID MVA input collection for electrons");
+    desc.add<std::string>("era")->setComment("run period");
+    desc.add<bool>("debug")->setComment("debug flag");
     descriptions.add("PATElectronSelectorFakeable", desc);
   }
 
  private:
   edm::InputTag src_;
   edm::EDGetTokenT<edm::View<pat::Electron>> token_;  
-  edm::InputTag src_mvaRawTTH_;
-  edm::EDGetTokenT<edm::ValueMap<float>> token_mvaRawTTH_;
+  edm::InputTag src_mvaTTH_;
+  edm::EDGetTokenT<edm::ValueMap<float>> token_mvaTTH_;
 
   int era_;
   bool debug_;
