@@ -20,6 +20,7 @@
 #include "FWCore/ParameterSet/interface/ConfigurationDescriptions.h"
 #include "FWCore/Utilities/interface/Exception.h" 
 
+#include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 #include "DataFormats/PatCandidates/interface/Electron.h"
 #include "DataFormats/PatCandidates/interface/Muon.h"
 
@@ -30,6 +31,7 @@ class LeptonLessPFProducer : public edm::stream::EDProducer<>
     : src_pfCands_(cfg.getParameter<edm::InputTag>("src_pfCands"))
     , src_electrons_(cfg.getParameter<edm::InputTag>("src_electrons"))
     , src_muons_(cfg.getParameter<edm::InputTag>("src_muons"))
+    , debug_(cfg.getParameter<bool>("debug"))
   {
     token_pfCands_ = consumes<pat::PackedCandidateCollection>(src_pfCands_);
     token_electrons_ = consumes<pat::ElectronCollection>(src_electrons_);
@@ -100,6 +102,7 @@ class LeptonLessPFProducer : public edm::stream::EDProducer<>
     desc.add<edm::InputTag>("src_pfCands")->setComment("packedPFCandidate input collection");
     desc.add<edm::InputTag>("src_electrons")->setComment("electron input collection");
     desc.add<edm::InputTag>("src_muons")->setComment("muon input collection");
+    desc.add<bool>("debug")->setComment("debug flag");
     descriptions.add("LeptonLessPFProducer", desc);
   }
 
