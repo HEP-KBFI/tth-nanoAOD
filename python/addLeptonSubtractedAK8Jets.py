@@ -209,23 +209,3 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     )
     leptonSubtractedJetSequence += process.subJetTableAK8LS
     #----------------------------------------------------------------------------
-
-    #----------------------------------------------------------------------------
-    # CV: switch to unscheduled mode, as the jetToolbox and PAT tools do not support scheduled mode - it's a mess !!
-    #process.nanoSequence += process.leptonSubtractedJetSequence    
-##     process.leptonSubtractedJetSequence = leptonSubtractedJetSequence.copy()
-##     leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
-##     leptonSubtractedJetSequence_80X.replace(process.tightJetIdLepVetoAK8LS, process.looseJetIdAK8LS)
-##     run2_miniAOD_80XLegacy.toReplaceWith(process.leptonSubtractedJetSequence, leptonSubtractedJetSequence_80X)
-##     process.leptonSubtractedJetTask = cms.Task()
-##     for moduleName in process.leptonSubtractedJetSequence.moduleNames():
-##         module = getattr(process, moduleName)
-##         process.leptonSubtractedJetTask.add(module)
-##     process.leptonSubtractedJetTables = cms.Sequence(process.fatJetTableAK8LS + process.subJetTableAK8LS)
-##     # CV: add tasks to sequence,
-##     #     as described on this twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile#Module_sequences
-##     #    (some modules are contained in 'leptonSubtractedJetTask' and some are contained in 'patAlgosToolsTask' - it's again a mess !!)
-##     process.leptonSubtractedJetTables.associate(process.leptonSubtractedJetTask)
-##     process.leptonSubtractedJetTables.associate(process.patAlgosToolsTask)
-##     process.nanoSequence += process.leptonSubtractedJetTables
-    #----------------------------------------------------------------------------
