@@ -7,7 +7,7 @@
 # --customise_commands=process.MessageLogger.cerr.FwkReport.reportEvery = 1000\n\
 # process.source.fileNames = cms.untracked.vstring()\n\
 # from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; \
-# addJetSubstructureObservables(process, True)\n --mc --eventcontent NANOAODSIM --datatier NANOAODSIM \
+# addJetSubstructureObservables(process)\n --mc --eventcontent NANOAODSIM --datatier NANOAODSIM \
 # --conditions auto:run2_mc --python_filename=nano_cfg_mc_2016.py
 import FWCore.ParameterSet.Config as cms
 
@@ -92,7 +92,7 @@ process = nanoAOD_customizeMC(process)
 
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 process.source.fileNames = cms.untracked.vstring()
-from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process, True)
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)
 
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete

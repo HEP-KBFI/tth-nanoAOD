@@ -3,9 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 
-def addJetSubstructureObservables(process, runOnMC):
-
-    jetSubstructureSequence = cms.Sequence()
+def addJetSubstructureObservables(process):
 
     #----------------------------------------------------------------------------
     # compute edm::ValueMaps with Qjets volatility (arXiv:1001.5027),
@@ -44,7 +42,7 @@ def addJetSubstructureObservables(process, runOnMC):
                 src = cms.InputTag('QJetsAdderAK8:QjetsVolatility')
             )
         )
-    )    
+    )
     process.finalJetsAK8.src = cms.InputTag('extendedFatJetsAK8')
     # CV: reduce pT cut on reconstructed and generator-level AK8 jets to 80 GeV
     #    (to allow for pT > 100 GeV cut to be applied on analysis level, while leaving some "room" for JES and JER uncertainties to be applied)
@@ -57,7 +55,7 @@ def addJetSubstructureObservables(process, runOnMC):
     process.fatJetTable.variables.pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10)
     process.fatJetTable.variables.pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
     process.fatJetTable.variables.QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10)
-       
+
     process.extendedSubJetsAK8 = cms.EDProducer("JetExtendedProducer",
         src = cms.InputTag("slimmedJetsAK8PFPuppiSoftDropPacked","SubJets"),
         plugins = cms.VPSet(
