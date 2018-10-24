@@ -27,3 +27,5 @@ ZZTo4L                         ZZTo4L_ext1
 TTZJets_LO                     TTZJets_LO_PU17                       TTZJets_LO_PU17_ext
 TTWJets_LO                     TTWJets_LO_PU17                       TTWJets_LO_PU17_ext
 ttHToNonbb_M125_powheg         ttHToNonbb_M125_powheg_v2
+GluGluHToTauTau_PU2017         GluGluHToTauTau                       GluGluHToTauTau_ext1
+VBFHToTauTau                   VBFHToTauTau_v2
