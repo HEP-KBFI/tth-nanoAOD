@@ -5,7 +5,7 @@ from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_
 
 def addLeptonSubtractedAK8Jets(process, runOnMC):
 
-    leptonSubtractedJetSequence = cms.Sequence()
+    process.leptonSubtractedJetSequence = cms.Sequence()
 
     #----------------------------------------------------------------------------
     # produce collections of electrons and muons passing fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019)
@@ -15,7 +15,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         era = cms.string("2017"),
         debug = cms.bool(False)
     )
-    leptonSubtractedJetSequence += process.fakeableElectronsTTH
+    process.leptonSubtractedJetSequence += process.fakeableElectronsTTH
 
     process.fakeableMuonsTTH = cms.EDProducer("PATMuonSelectorFakeable",
         src = cms.InputTag("linkedObjects", "muons"),
@@ -23,7 +23,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         era = cms.string("2017"),
         debug = cms.bool(False)
     )
-    leptonSubtractedJetSequence += process.fakeableMuonsTTH
+    process.leptonSubtractedJetSequence += process.fakeableMuonsTTH
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -34,7 +34,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         src_muons = cms.InputTag("fakeableMuonsTTH"),
         debug = cms.bool(True)
     )
-    leptonSubtractedJetSequence += process.leptonLessPFProducer
+    process.leptonSubtractedJetSequence += process.leptonLessPFProducer
 
     # run PUPPI algorithm (arXiv:1407.6013) on cleaned packedPFCandidates collection
     # cf. https://twiki.cern.ch/twiki/bin/view/CMS/JetToolbox#New_PF_Collection
@@ -44,7 +44,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         vertexName = cms.InputTag("offlineSlimmedPrimaryVertices"),
         useExistingWeights = cms.bool(True)
     )
-    leptonSubtractedJetSequence += process.leptonLesspuppi
+    process.leptonSubtractedJetSequence += process.leptonLesspuppi
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -53,11 +53,11 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     bTagDiscriminators = [ 'pfCombinedInclusiveSecondaryVertexV2BJetTags', 'pfBoostedDoubleSecondaryVertexAK8BJetTags' ]
     JETCorrLevels = [ 'L1FastJet', 'L2Relative', 'L3Absolute' ]
     if not runOnMC:
-        JETCorrLevels.append('L2L3Residual')  
+        JETCorrLevels.append('L2L3Residual')
     jetToolbox(process, 'ak8', 'jetSequenceAK8LS', 'out', PUMethod='Puppi', JETCorrPayload='AK8PFPuppi', postFix='NoLep', JETCorrLevels=JETCorrLevels, miniAOD=True, runOnMC=runOnMC,
                newPFCollection=True, nameNewPFCollection='leptonLesspuppi', addSoftDrop=True, addSoftDropSubjets=True, addNsub=True,
-               subJETCorrPayload='AK4PFPuppi',subJETCorrLevels=JETCorrLevels, bTagDiscriminators=bTagDiscriminators)    
-    leptonSubtractedJetSequence += process.jetSequenceAK8LS
+               subJETCorrPayload='AK4PFPuppi',subJETCorrLevels=JETCorrLevels, bTagDiscriminators=bTagDiscriminators)
+    process.leptonSubtractedJetSequence += process.jetSequenceAK8LS
     # CV: disable discriminators that cannot be computed with miniAOD inputs
     #for moduleName in [ "patJetsAK8LSPFPuppi", "patJetsAK8LSPFPuppiSoftDrop", "patJetsAK8LSPFPuppiSoftDropSubjets" ]:
     #    module = getattr(process, moduleName)
@@ -83,7 +83,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     if hasattr(process, "patJetPartons") and hasattr(process, "genParticleSequence") and runOnMC:
         process.genParticleSequence += process.patJetPartons
     #----------------------------------------------------------------------------
-    
+
     #----------------------------------------------------------------------------
     # add PF jet ID flags and jet energy corrections for AK8 pat::Jet collection,
     # following what is done for lepton-subtracted AK8 pat::Jets in https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/NanoAOD/python/jets_cff.py
@@ -96,8 +96,8 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     process.tightJetIdLepVetoAK8LS = process.tightJetIdLepVetoAK8.clone(
         src = cms.InputTag(fatJetCollectionAK8LS)
     )
-    leptonSubtractedJetSequence += process.tightJetIdAK8LS
-    leptonSubtractedJetSequence += process.tightJetIdLepVetoAK8LS
+    process.leptonSubtractedJetSequence += process.tightJetIdAK8LS
+    process.leptonSubtractedJetSequence += process.tightJetIdLepVetoAK8LS
     process.jetsAK8LSWithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK8LS),
         userInts = cms.PSet(
@@ -109,7 +109,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         looseId = cms.InputTag("looseJetIdAK8LS"),
         tightIdLepVeto = None,
     )
-    leptonSubtractedJetSequence += process.jetsAK8LSWithUserData
+    process.leptonSubtractedJetSequence += process.jetsAK8LSWithUserData
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -124,7 +124,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         jetRad = cms.double(0.8),
         jetAlgo = cms.string("AK")
     )
-    leptonSubtractedJetSequence += process.QJetsAdderAK8LS
+    process.leptonSubtractedJetSequence += process.QJetsAdderAK8LS
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -151,7 +151,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             )
         )
     )
-    leptonSubtractedJetSequence += process.extendedFatJetsAK8LS
+    process.leptonSubtractedJetSequence += process.extendedFatJetsAK8LS
     process.extendedSubJetsAK8LS = cms.EDProducer("JetExtendedProducer",
         src = cms.InputTag(subJetCollectionAK8LS),
         plugins = cms.VPSet(
@@ -168,12 +168,12 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             )
         )
     )
-    leptonSubtractedJetSequence += process.extendedSubJetsAK8LS
+    process.leptonSubtractedJetSequence += process.extendedSubJetsAK8LS
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
     # add lepton-subtracted AK8 jets to nanoAOD Ntuple
-    process.fatJetTableAK8LS = process.fatJetTable.clone(
+    process.fatJetAK8LSTable = process.fatJetTable.clone(
         src = cms.InputTag('extendedFatJetsAK8LS'),
         cut = cms.string("pt > 80 && abs(eta) < 2.4"),
         name = cms.string("FatJetAK8LS"),
@@ -193,8 +193,8 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             tau4 = Var("userFloat('NjettinessAK12Puppi:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
         )
     )
-    leptonSubtractedJetSequence += process.fatJetTableAK8LS
-        
+    process.leptonSubtractedJetSequence += process.fatJetAK8LSTable
+
     process.subJetTableAK8LS = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK8LS'),
         cut = cms.string(""),
@@ -207,5 +207,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
         )
     )
-    leptonSubtractedJetSequence += process.subJetTableAK8LS
+    process.leptonSubtractedJetSequence += process.subJetTableAK8LS
     #----------------------------------------------------------------------------
+
+    process.nanoSequence += process.leptonSubtractedJetSequence
