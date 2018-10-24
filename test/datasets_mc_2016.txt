@@ -10,7 +10,7 @@
 /THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM                                       1 tHW                       THW                                              0.01561   # NLO [16]
 
 # ggH
-/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUgenV6_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM                                 1 additional_signal_overlap GluGluHToZZTo4L                                  0.01212   # ? [3]
+/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUgenV6_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM                                 1 additional_signal_overlap GluGluHToZZTo4L                                  0.01297   # s(ggf h) * br(h -> zz) * br(z -> e/mu/tau nu)^2 [1][2][35]; previously 0.01212 [3]
 
 # ttZ
 /TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM                           1 TTZ                       TTZToLL_M10_ext1                                 0.2529    # NLO [3]
@@ -230,3 +230,4 @@
 # [32] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=DYJetsToLL_M-5to50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8
 # [33] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=DYJetsToLL_M-5to50_HT-600toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8
 # [34] https://arxiv.org/pdf/1610.07922.pdf (table 40)
+# [35] http://pdglive.lbl.gov/Particle.action?node=S044&init=0
