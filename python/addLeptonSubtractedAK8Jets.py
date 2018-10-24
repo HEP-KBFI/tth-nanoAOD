@@ -199,7 +199,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     )
     process.leptonSubtractedJetSequence += process.fatJetAK8LSTable
 
-    process.subJetTableAK8LS = process.subJetTable.clone(
+    process.subJetAK8LSTable = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK8LS'),
         cut = cms.string(""),
         name = cms.string("SubJetAK8LS"),
@@ -211,7 +211,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
         )
     )
-    process.leptonSubtractedJetSequence += process.subJetTableAK8LS
+    process.leptonSubtractedJetSequence += process.subJetAK8LSTable
     #----------------------------------------------------------------------------
 
     process.nanoSequence += process.leptonSubtractedJetSequence
