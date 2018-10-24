@@ -32,7 +32,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
         src_pfCands = cms.InputTag("packedPFCandidates"),
         src_electrons = cms.InputTag("fakeableElectronsTTH"),
         src_muons = cms.InputTag("fakeableMuonsTTH"),
-        debug = cms.bool(True)
+        debug = cms.bool(False)
     )
     process.leptonSubtractedJetSequence += process.leptonLessPFProducer
 
@@ -57,6 +57,10 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
     jetToolbox(process, 'ak8', 'jetSequenceAK8LS', 'out', PUMethod='Puppi', JETCorrPayload='AK8PFPuppi', postFix='NoLep', JETCorrLevels=JETCorrLevels, miniAOD=True, runOnMC=runOnMC,
                newPFCollection=True, nameNewPFCollection='leptonLesspuppi', addSoftDrop=True, addSoftDropSubjets=True, addNsub=True,
                subJETCorrPayload='AK4PFPuppi',subJETCorrLevels=JETCorrLevels, bTagDiscriminators=bTagDiscriminators)
+    # CV: fix ordering of modules in jet sequence
+    #    (NjettinessAK8PuppiNoLep needs to be run before selectedPatJetsAK8PFPuppiNoLepSoftDropPacked)
+    process.jetSequenceAK8LS.remove(process.NjettinessAK8PuppiNoLep)
+    process.jetSequenceAK8LS.replace(process.selectedPatJetsAK8PFPuppiNoLepSoftDropPacked, process.NjettinessAK8PuppiNoLep + process.selectedPatJetsAK8PFPuppiNoLepSoftDropPacked)
     process.leptonSubtractedJetSequence += process.jetSequenceAK8LS
     # CV: disable discriminators that cannot be computed with miniAOD inputs
     #for moduleName in [ "patJetsAK8LSPFPuppi", "patJetsAK8LSPFPuppiSoftDrop", "patJetsAK8LSPFPuppiSoftDropSubjets" ]:
@@ -184,13 +188,13 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
             QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10),
-            msoftdrop = Var("userFloat('ak12PFJetsPuppiSoftDropMass')",float, doc="Corrected soft drop mass with PUPPI",precision=10),
+            msoftdrop = Var("userFloat('ak8PFJetsPuppiNoLepSoftDropMass')",float, doc="Corrected soft drop mass with PUPPI",precision=10),
             subJetIdx1 = Var("?subjets('SoftDrop').size()>0?subjets('SoftDrop').at(0).key():-1", int, doc="index of first subjet"),
             subJetIdx2 = Var("?subjets('SoftDrop').size()>1?subjets('SoftDrop').at(1).key():-1", int, doc="index of second subjet"),
-            tau1 = Var("userFloat('NjettinessAK12Puppi:tau1')",float, doc="Nsubjettiness (1 axis)",precision=10),
-            tau2 = Var("userFloat('NjettinessAK12Puppi:tau2')",float, doc="Nsubjettiness (2 axis)",precision=10),
-            tau3 = Var("userFloat('NjettinessAK12Puppi:tau3')",float, doc="Nsubjettiness (3 axis)",precision=10),
-            tau4 = Var("userFloat('NjettinessAK12Puppi:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
+            tau1 = Var("userFloat('NjettinessAK8PuppiNoLep:tau1')",float, doc="Nsubjettiness (1 axis)",precision=10),
+            tau2 = Var("userFloat('NjettinessAK8PuppiNoLep:tau2')",float, doc="Nsubjettiness (2 axis)",precision=10),
+            tau3 = Var("userFloat('NjettinessAK8PuppiNoLep:tau3')",float, doc="Nsubjettiness (3 axis)",precision=10),
+            tau4 = Var("userFloat('NjettinessAK8PuppiNoLep:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
         )
     )
     process.leptonSubtractedJetSequence += process.fatJetAK8LSTable

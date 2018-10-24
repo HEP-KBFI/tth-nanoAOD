@@ -36,11 +36,17 @@ class LeptonLessPFProducer : public edm::stream::EDProducer<>
     token_pfCands_ = consumes<pat::PackedCandidateCollection>(src_pfCands_);
     token_electrons_ = consumes<pat::ElectronCollection>(src_electrons_);
     token_muons_ = consumes<pat::MuonCollection>(src_muons_);
+
+    produces<pat::PackedCandidateCollection>();
   }
   ~LeptonLessPFProducer() {}
 
   void produce(edm::Event& evt, const edm::EventSetup& es)
   {
+    if ( debug_ ) {
+      std::cout << "<LeptonLessPFProducer::produce>:" << std::endl;
+    }
+
     edm::Handle<pat::PackedCandidateCollection> inputPFCands;
     evt.getByToken(token_pfCands_, inputPFCands);
     edm::Handle<pat::ElectronCollection> electrons;
@@ -58,7 +64,8 @@ class LeptonLessPFProducer : public edm::stream::EDProducer<>
 	int absPdgId = std::abs(electron->associatedPackedPFCandidates()[idxPFCand]->pdgId());
 	if ( absPdgId == 11 || absPdgId == 211 || absPdgId == 22 ) {
 	  if ( debug_ ) {
-	    std::cout << "associating PFCandidate #" << electron->associatedPackedPFCandidates()[idxPFCand].key() << " to electron." << std::endl;
+	    std::cout << "associating PFCandidate #" << electron->associatedPackedPFCandidates()[idxPFCand].key() << " to electron" 
+		      << " with pT = " << electron->pt() << ", eta = " << electron->eta() << ", phi = " << electron->phi() << "." << std::endl;
 	  }
 	  filteredPFCandidateList.push_back(electron->associatedPackedPFCandidates()[idxPFCand].key());
 	}
@@ -68,15 +75,18 @@ class LeptonLessPFProducer : public edm::stream::EDProducer<>
     for ( pat::MuonCollection::const_iterator muon = muons->begin();
 	  muon != muons->end(); ++muon ) {
       if ( muon->originalObjectRef().isNull() ) {
-	std::cout << "muon with pT = " << muon->pt() << ", eta = " << muon->eta() << ", phi = " << muon->phi() << " has NULL reference to PFCandidate collection !!" << std::endl;
+	std::cout << "Warning: muon with pT = " << muon->pt() << ", eta = " << muon->eta() << ", phi = " << muon->phi() 
+		  << " has NULL reference to PFCandidate collection !!" << std::endl;
 	continue;
       }
       if ( muon->originalObjectRef().id() != inputPFCands.id() ) {
-	std::cout << "muon with pT = " << muon->pt() << ", eta = " << muon->eta() << ", phi = " << muon->phi() << " has reference to different PFCandidate collection !!" << std::endl;
+	std::cout << "Warning: muon with pT = " << muon->pt() << ", eta = " << muon->eta() << ", phi = " << muon->phi() 
+		  << " has reference to different PFCandidate collection !!" << std::endl;
 	continue;
       }
       if ( debug_ ) {
-	std::cout << "associating PFCandidate #" << muon->originalObjectRef().key() << " to muon." << std::endl;
+	std::cout << "associating PFCandidate #" << muon->originalObjectRef().key() << " to muon" 
+		  << " with pT = " << muon->pt() << ", eta = " << muon->eta() << ", phi = " << muon->phi() << "." << std::endl;
       }
       filteredPFCandidateList.push_back(muon->originalObjectRef().key());
     }
@@ -93,6 +103,8 @@ class LeptonLessPFProducer : public edm::stream::EDProducer<>
       }
       if ( !found ) outputPFCands->push_back(pfCand);
     }
+
+    evt.put(std::move(outputPFCands));
   }
 
   static void fillDescriptions(edm::ConfigurationDescriptions& descriptions)
