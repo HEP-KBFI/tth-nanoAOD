@@ -90,11 +90,14 @@ SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
 
 generate_cfgs() {
-  export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
+  export CUSTOMISE_COMMANDS_DATA="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
 process.source.fileNames = cms.untracked.vstring()\\n\
-from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables;"
-  export CUSTOMISE_COMMANDS_DATA="$CUSTOMISE_COMMANDS addJetSubstructureObservables(process, False)\\n"
-  export CUSTOMISE_COMMANDS_MC="$CUSTOMISE_COMMANDS addJetSubstructureObservables(process, True)\\n"
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process, False)\\n\
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, False)\\n"
+  export CUSTOMISE_COMMANDS_MC="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
+process.source.fileNames = cms.untracked.vstring()\\n\
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process, True)\\n\
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, True)\\n"
 
   export COMMON_COMMANDS="nanoAOD --step=NANO --era=$ERA_ARGS --no_exec --fileout=tree.root --number=-1"
 
