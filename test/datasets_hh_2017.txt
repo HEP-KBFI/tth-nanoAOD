@@ -81,7 +81,7 @@
 
 # HH -> bb tautau (GGF, 25 resonant mass points)
 /GluGluToRadionToHHTo2B2Tau_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM       1 signal_ggf_spin0_250_hh_bbtt                    signal_ggf_spin0_250_hh_2b2t                    0.073056 # [2]
-/GluGluToRadionToHHTo2B2Tau_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM       1 signal_ggf_spin0_260_hh_bbtt                    signal_ggf_spin0_260_hh_2b2t                    0.073056 # [2] still in production
+/GluGluToRadionToHHTo2B2Tau_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM       1 signal_ggf_spin0_260_hh_bbtt                    signal_ggf_spin0_260_hh_2b2t                    0.073056 # [2]
 /GluGluToRadionToHHTo2B2Tau_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM       1 signal_ggf_spin0_270_hh_bbtt                    signal_ggf_spin0_270_hh_2b2t                    0.073056 # [2]
 /GluGluToRadionToHHTo2B2Tau_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM       1 signal_ggf_spin0_280_hh_bbtt                    signal_ggf_spin0_280_hh_2b2t                    0.073056 # [2]
 /GluGluToRadionToHHTo2B2Tau_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM       1 signal_ggf_spin0_300_hh_bbtt                    signal_ggf_spin0_300_hh_2b2t                    0.073056 # [2]
