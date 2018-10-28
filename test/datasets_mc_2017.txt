@@ -6,11 +6,6 @@
 # ggH
 /GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                           1 additional_signal_overlap GluGluHToZZTo4L                                  0.01297   # s(ggf h) * br(h -> zz) * br(z -> 2 e/mu/tau)^2 [1][2][14]; previously 0.01212 [3]
 /GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                      1 additional_signal_overlap GluGluHToZZTo4L_ext1                             0.01297   # s(ggf h) * br(h -> zz) * br(z -> 2 e/mu/tau)^2 [1][2][14]; previously 0.01212 [3]
-/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                     1 HTT                       GluGluHToTauTau                                  3.0469    # s(ggf h) * br(h -> tau tau) [1][2]
-/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM                1 HTT                       GluGluHToTauTau_ext1                             3.0469    # s(ggf h) * br(h -> tau tau) [1][2]
-
-# vbf H
-/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                        1 HTT                       VBFHToTauTau                                     0.2372    # s(vbf h) * br(h -> tau tau) [1][2]
 
 # ttZ
 /TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                  1 TTZ                       TTZToLL_M10                                      0.2529    # NLO [3]
@@ -164,6 +159,11 @@
 /TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                              1 Rares                     TTZH                                             0.001131  # error 5.965e-07
 /TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                              1 Rares                     TTTW                                             0.0007317 # ?
 /TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                              1 Rares                     TTTJ                                             0.0003973  # error 1.707e-07
+
+# H -> tau tau (GGF & VBF)
+/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                     1 Rares                     GluGluHToTauTau                                  3.0469    # s(ggf h) * br(h -> tau tau) [1][2]
+/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM                1 Rares                     GluGluHToTauTau_ext1                             3.0469    # s(ggf h) * br(h -> tau tau) [1][2]
+/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                        1 Rares                     VBFHToTauTau                                     0.2372    # s(vbf h) * br(h -> tau tau) [1][2]
 
 # VH
 /VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM             1 VH                        VHToNonbb_M125_v14-v2                            0.9425    # N3LO (WH) + NNLO (ZH); [1][2]
