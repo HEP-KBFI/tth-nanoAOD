@@ -163,7 +163,7 @@
 /TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                              1 Rares                     TTTT                                             0.008213  # error 0.000012
 /TTTT_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                             1 Rares                     TTTT_PSweights                                   0.008213  # error 0.000012
 /TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                              1 Rares                     TTWH                                             0.001141  # ?
-/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                              ! Rares                     TTZH                                             0.001131  # error 5.965e-07
+/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                              1 Rares                     TTZH                                             0.001131  # error 5.965e-07
 /TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                              1 Rares                     TTTW                                             0.0007317 # ?
 /TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                              1 Rares                     TTTJ                                             0.0003973  # error 1.707e-07
 
