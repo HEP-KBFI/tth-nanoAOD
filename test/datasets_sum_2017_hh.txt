@@ -1,0 +1,2 @@
+signal_ggf_spin0_400_hh_4t signal_ggf_spin0_400_hh_4t_private
+signal_ggf_spin0_700_hh_4t signal_ggf_spin0_700_hh_4t_private
