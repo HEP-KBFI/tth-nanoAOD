@@ -194,10 +194,14 @@ def addLeptonSubtractedAK8Jets(process, runOnMC):
             tau1 = Var("userFloat('NjettinessAK8PuppiNoLep:tau1')",float, doc="Nsubjettiness (1 axis)",precision=10),
             tau2 = Var("userFloat('NjettinessAK8PuppiNoLep:tau2')",float, doc="Nsubjettiness (2 axis)",precision=10),
             tau3 = Var("userFloat('NjettinessAK8PuppiNoLep:tau3')",float, doc="Nsubjettiness (3 axis)",precision=10),
-            tau4 = Var("userFloat('NjettinessAK8PuppiNoLep:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10)
+            tau4 = Var("userFloat('NjettinessAK8PuppiNoLep:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10),
+            jetId = Var("userInt('tightId')*2+4*userInt('tightIdLepVeto')",int,doc="Jet ID flags bit1 is loose (always false in 2017 since it does not exist), bit2 is tight, bit3 is tightLepVeto")                 
         )
     )
     process.leptonSubtractedJetSequence += process.fatJetAK8LSTable
+
+    ### Era dependent customization
+    run2_miniAOD_80XLegacy.toModify(process.fatJetAK8LSTable.variables, jetId = Var("userInt('tightId')*2+userInt('looseId')",int,doc="Jet ID flags bit1 is loose, bit2 is tight"))
 
     process.subJetAK8LSTable = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK8LS'),
