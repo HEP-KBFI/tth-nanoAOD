@@ -2,6 +2,7 @@
 /ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                    1 signal                    ttHJetToNonbb_M125_amcatnlo                      0.2118    # NLO [1][2]
 /ttHJetTobb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                       0 signal                    ttHJetTobb_M125_amcatnlo                         0.2953    # NLO [1][2]
 /ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM          0 signal                    ttHToNonbb_M125_powheg                           0.2118    # NLO [1][2]
+/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM             0 signal                    ttHToNonbb_M125_powheg_ext1                      0.2118    # NLO [1][2]
 
 # ggH
 /GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                           1 additional_signal_overlap GluGluHToZZTo4L                                  0.01297   # s(ggf h) * br(h -> zz) * br(z -> 2 e/mu/tau)^2 [1][2][14]; previously 0.01212 [3]
