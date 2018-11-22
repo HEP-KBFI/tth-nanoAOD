@@ -3,3 +3,8 @@
 __init__.py*
 *.pyc
 .idea
+*.config
+*.creator
+*.files
+*.includes
+
