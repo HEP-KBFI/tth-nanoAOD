@@ -3,35 +3,35 @@ import FWCore.ParameterSet.Config as cms
 from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 
-def addLeptonSubtractedAK8Jets(process, runOnMC):
+def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
 
     process.leptonSubtractedJetSequence = cms.Sequence()
 
     #----------------------------------------------------------------------------
-    # produce collections of electrons and muons passing fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019)
-    process.fakeableElectronsTTH = cms.EDProducer("PATElectronSelectorFakeable",
+    # produce collections of electrons and muons passing loose or fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019)
+    process.electronCollectionTTH = cms.EDProducer("PATElectronSelectorFakeable" if useFakeable else "PATElectronSelectorLoose",
         src = cms.InputTag("linkedObjects", "electrons"),
         src_mvaTTH = cms.InputTag("electronMVATTH"),
         era = cms.string("2017"),
         debug = cms.bool(False)
     )
-    process.leptonSubtractedJetSequence += process.fakeableElectronsTTH
+    process.leptonSubtractedJetSequence += process.electronCollectionTTH
 
-    process.fakeableMuonsTTH = cms.EDProducer("PATMuonSelectorFakeable",
+    process.muonCollectionTTH = cms.EDProducer("PATMuonSelectorFakeable" if useFakeable else "PATMuonSelectorLoose",
         src = cms.InputTag("linkedObjects", "muons"),
         src_mvaTTH = cms.InputTag("muonMVATTH"),
         era = cms.string("2017"),
         debug = cms.bool(False)
     )
-    process.leptonSubtractedJetSequence += process.fakeableMuonsTTH
+    process.leptonSubtractedJetSequence += process.muonCollectionTTH
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
-    # produce collection of packedPFCandidates not associated to fakeable electrons or muons
+    # produce collection of packedPFCandidates not associated to loose or fakeable electrons or muons
     process.leptonLessPFProducer = cms.EDProducer('LeptonLessPFProducer',
         src_pfCands = cms.InputTag("packedPFCandidates"),
-        src_electrons = cms.InputTag("fakeableElectronsTTH"),
-        src_muons = cms.InputTag("fakeableMuonsTTH"),
+        src_electrons = cms.InputTag("electronCollectionTTH"),
+        src_muons = cms.InputTag("muonCollectionTTH"),
         debug = cms.bool(False)
     )
     process.leptonSubtractedJetSequence += process.leptonLessPFProducer
