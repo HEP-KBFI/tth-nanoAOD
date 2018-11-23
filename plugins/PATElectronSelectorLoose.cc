@@ -1,11 +1,11 @@
 
 /** \class PATElectronSelectorLoose
  *
- * Produce collection of pat::Electron objects passing fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019).
+ * Produce collection of pat::Electron objects passing loose lepton selection of ttH multilepton+tau analysis (HIG-18-019).
  * The collection of pat::Electrons is used to clean the collection of packedPFCandidates, 
  * which is used as input for the reconstruction of lepton subtracted AK8 jets (cf. B2G-18-008).
  *
- * WARNING: this code needs to match exactly https://github.com/HEP-KBFI/tth-htt/blob/master/src/RecoElectronCollectionSelectorFakeable.cc,
+ * WARNING: this code needs to match exactly https://github.com/HEP-KBFI/tth-htt/blob/master/src/RecoElectronCollectionSelectorLoose.cc,
  *          except that the cuts on pT(lepton)/pT(jet) and on the CSVv2 b-tagging discriminant of nearby jets are disabled,
  *          in order to make the electron selection independent of nearby AK4 jets
  *

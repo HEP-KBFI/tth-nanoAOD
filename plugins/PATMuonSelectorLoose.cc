@@ -1,11 +1,11 @@
 
 /** \class PATMuonSelectorLoose
  *
- * Produce collection of pat::Muon objects passing fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019).
+ * Produce collection of pat::Muon objects passing loose lepton selection of ttH multilepton+tau analysis (HIG-18-019).
  * The collection of pat::Muon is used to clean the collection of packedPFCandidates, 
  * which is used as input for the reconstruction of lepton subtracted AK8 jets (cf. B2G-18-008).
  *
- * WARNING: this code needs to match exactly https://github.com/HEP-KBFI/tth-htt/blob/master/src/RecoMuonCollectionSelectorFakeable.cc,
+ * WARNING: this code needs to match exactly https://github.com/HEP-KBFI/tth-htt/blob/master/src/RecoMuonCollectionSelectorLoose.cc,
  *          except that the cuts on pT(lepton)/pT(jet) and on the CSVv2 b-tagging discriminant of nearby jets are disabled,
  *          in order to make the muon selection independent of nearby AK4 jets
  *
