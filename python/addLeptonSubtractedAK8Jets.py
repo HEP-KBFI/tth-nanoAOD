@@ -50,7 +50,10 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     #----------------------------------------------------------------------------
     # reconstruct lepton-subtracted AK8 jets
     from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
-    bTagDiscriminators = [ 'pfCombinedInclusiveSecondaryVertexV2BJetTags', 'pfBoostedDoubleSecondaryVertexAK8BJetTags' ]
+    bTagDiscriminators = [
+        'pfCombinedInclusiveSecondaryVertexV2BJetTags', 'pfBoostedDoubleSecondaryVertexAK8BJetTags',
+        'pfCombinedMVAV2BJetTags', 'pfDeepCSVJetTags:probb', 'pfDeepCSVJetTags:probbb'
+    ]
     JETCorrLevels = [ 'L1FastJet', 'L2Relative', 'L3Absolute' ]
     if not runOnMC:
         JETCorrLevels.append('L2L3Residual')
@@ -195,7 +198,12 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
             tau2 = Var("userFloat('NjettinessAK8PuppiNoLep:tau2')",float, doc="Nsubjettiness (2 axis)",precision=10),
             tau3 = Var("userFloat('NjettinessAK8PuppiNoLep:tau3')",float, doc="Nsubjettiness (3 axis)",precision=10),
             tau4 = Var("userFloat('NjettinessAK8PuppiNoLep:tau4')",float, doc="Nsubjettiness (4 axis)",precision=10),
-            jetId = Var("userInt('tightId')*2+4*userInt('tightIdLepVeto')",int,doc="Jet ID flags bit1 is loose (always false in 2017 since it does not exist), bit2 is tight, bit3 is tightLepVeto")                 
+            jetId = Var("userInt('tightId')*2+4*userInt('tightIdLepVeto')",int,doc="Jet ID flags bit1 is loose (always false in 2017 since it does not exist), bit2 is tight, bit3 is tightLepVeto"),
+            area = Var("jetArea()", float, doc="jet catchment area, for JECs", precision=10),
+            btagCMVA = Var("bDiscriminator('pfCombinedMVAV2BJetTags')",float,doc="CMVA V2 btag discriminator",precision=10),
+            btagDeepB = Var("bDiscriminator('pfDeepCSVJetTags:probb')+bDiscriminator('pfDeepCSVJetTags:probbb')",float,doc="DeepCSV b+bb tag discriminator",precision=10),
+            btagCSVV2 = Var("bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",float,doc=" pfCombinedInclusiveSecondaryVertexV2 b-tag discriminator (aka CSVV2)",precision=10),
+            btagHbb = Var("bDiscriminator('pfBoostedDoubleSecondaryVertexAK8BJetTags')",float,doc="Higgs to BB tagger discriminator",precision=10),
         )
     )
     process.leptonSubtractedJetSequence += process.fatJetAK8LSTable
@@ -209,10 +217,13 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
         name = cms.string("SubJetAK8LS"),
         doc = cms.string("lepton-subtracted ak8  sub-jets for boosted analysis"),
         variables = cms.PSet(P4Vars,
+            btagCMVA = Var("bDiscriminator('pfCombinedMVAV2BJetTags')",float,doc="CMVA V2 btag discriminator",precision=10),
+            btagDeepB = Var("bDiscriminator('pfDeepCSVJetTags:probb')+bDiscriminator('pfDeepCSVJetTags:probbb')",float,doc="DeepCSV b+bb tag discriminator",precision=10),
+            btagCSVV2 = Var("bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",float,doc=" pfCombinedInclusiveSecondaryVertexV2 b-tag discriminator (aka CSVV2)",precision=10),
             jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
             pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
             pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
-            pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
+            pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
         )
     )
     process.leptonSubtractedJetSequence += process.subJetAK8LSTable

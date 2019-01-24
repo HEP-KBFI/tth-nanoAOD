@@ -131,7 +131,10 @@ def jetToolbox( proc, jetType, jetSequence, outputFile,
 					'pfSimpleSecondaryVertexHighPurBJetTags',
 					'pfCombinedSecondaryVertexV2BJetTags',
 					'pfCombinedInclusiveSecondaryVertexV2BJetTags',
-					'pfCombinedMVAV2BJetTags'
+					'pfCombinedMVAV2BJetTags',
+				  'pfDeepCSVJetTags:probb',
+				  'pfDeepCSVJetTags:probbb',
+				  'pfBoostedDoubleSecondaryVertexAK8BJetTags',
 			]
 
 		#### For MiniAOD
