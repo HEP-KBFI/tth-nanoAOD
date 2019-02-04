@@ -2,8 +2,11 @@ import FWCore.ParameterSet.Config as cms
 
 from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
+from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 
-def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
+def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable = True):
+
+    assert(era in [ "2016", "2017", "2018" ])
 
     process.leptonSubtractedJetSequence = cms.Sequence()
 
@@ -12,7 +15,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     process.electronCollectionTTH = cms.EDProducer("PATElectronSelectorFakeable" if useFakeable else "PATElectronSelectorLoose",
         src = cms.InputTag("linkedObjects", "electrons"),
         src_mvaTTH = cms.InputTag("electronMVATTH"),
-        era = cms.string("2017"),
+        era = cms.string(era),
         debug = cms.bool(False)
     )
     process.leptonSubtractedJetSequence += process.electronCollectionTTH
@@ -20,7 +23,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     process.muonCollectionTTH = cms.EDProducer("PATMuonSelectorFakeable" if useFakeable else "PATMuonSelectorLoose",
         src = cms.InputTag("linkedObjects", "muons"),
         src_mvaTTH = cms.InputTag("muonMVATTH"),
-        era = cms.string("2017"),
+        era = cms.string(era),
         debug = cms.bool(False)
     )
     process.leptonSubtractedJetSequence += process.muonCollectionTTH
@@ -57,13 +60,22 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     JETCorrLevels = [ 'L1FastJet', 'L2Relative', 'L3Absolute' ]
     if not runOnMC:
         JETCorrLevels.append('L2L3Residual')
-    jetToolbox(process, 'ak8', 'jetSequenceAK8LS', 'out', PUMethod='Puppi', JETCorrPayload='AK8PFPuppi', postFix='NoLep', JETCorrLevels=JETCorrLevels, miniAOD=True, runOnMC=runOnMC,
-               newPFCollection=True, nameNewPFCollection='leptonLesspuppi', addSoftDrop=True, addSoftDropSubjets=True, addNsub=True,
-               subJETCorrPayload='AK4PFPuppi',subJETCorrLevels=JETCorrLevels, bTagDiscriminators=bTagDiscriminators)
+
+    #TODO when running with run2_miniAOD_80XLegacy, JETCorrPayload = 'AK8PFchs' !
+    jetToolbox(
+        proc = process, jetType = 'ak8', jetSequence = 'jetSequenceAK8LS', outputFile = 'out', PUMethod = 'Puppi',
+        JETCorrPayload = 'AK8PFPuppi', postFix = 'NoLep', JETCorrLevels = JETCorrLevels, miniAOD = True,
+        runOnMC = runOnMC, newPFCollection = True, nameNewPFCollection = 'leptonLesspuppi', addSoftDrop = True,
+        addSoftDropSubjets = True, addNsub = True, subJETCorrPayload = 'AK4PFPuppi', subJETCorrLevels = JETCorrLevels,
+        bTagDiscriminators = bTagDiscriminators
+    )
     # CV: fix ordering of modules in jet sequence
     #    (NjettinessAK8PuppiNoLep needs to be run before selectedPatJetsAK8PFPuppiNoLepSoftDropPacked)
     process.jetSequenceAK8LS.remove(process.NjettinessAK8PuppiNoLep)
-    process.jetSequenceAK8LS.replace(process.selectedPatJetsAK8PFPuppiNoLepSoftDropPacked, process.NjettinessAK8PuppiNoLep + process.selectedPatJetsAK8PFPuppiNoLepSoftDropPacked)
+    process.jetSequenceAK8LS.replace(
+        process.selectedPatJetsAK8PFPuppiNoLepSoftDropPacked,
+        process.NjettinessAK8PuppiNoLep + process.selectedPatJetsAK8PFPuppiNoLepSoftDropPacked
+    )
     process.leptonSubtractedJetSequence += process.jetSequenceAK8LS
     # CV: disable discriminators that cannot be computed with miniAOD inputs
     #for moduleName in [ "patJetsAK8LSPFPuppi", "patJetsAK8LSPFPuppiSoftDrop", "patJetsAK8LSPFPuppiSoftDropSubjets" ]:
@@ -100,11 +112,14 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     process.tightJetIdAK8LS = process.tightJetIdAK8.clone(
         src = cms.InputTag(fatJetCollectionAK8LS)
     )
+    for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
+        modifier.toModify(process.tightJetIdAK8LS.filterParams, version = "WINTER16")
     process.tightJetIdLepVetoAK8LS = process.tightJetIdLepVetoAK8.clone(
         src = cms.InputTag(fatJetCollectionAK8LS)
     )
     process.leptonSubtractedJetSequence += process.tightJetIdAK8LS
     process.leptonSubtractedJetSequence += process.tightJetIdLepVetoAK8LS
+
     process.jetsAK8LSWithUserData = process.slimmedJetsAK8WithUserData.clone(
         src = cms.InputTag(fatJetCollectionAK8LS),
         userInts = cms.PSet(
@@ -112,10 +127,11 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
             tightIdLepVeto = cms.InputTag("tightJetIdLepVetoAK8LS"),
         )
     )
-    run2_miniAOD_80XLegacy.toModify(process.jetsAK8LSWithUserData.userInts,
-        looseId = cms.InputTag("looseJetIdAK8LS"),
-        tightIdLepVeto = None,
-    )
+    for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
+        modifier.toModify(process.jetsAK8LSWithUserData.userInts,
+            looseId = cms.InputTag("looseJetIdAK8LS"),
+            tightIdLepVeto = None,
+        )
     process.leptonSubtractedJetSequence += process.jetsAK8LSWithUserData
     #----------------------------------------------------------------------------
 
@@ -178,12 +194,14 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     process.leptonSubtractedJetSequence += process.extendedSubJetsAK8LS
     #----------------------------------------------------------------------------
 
+    suffix = "" if useFakeable else "_loose"
+
     #----------------------------------------------------------------------------
     # add lepton-subtracted AK8 jets to nanoAOD Ntuple
     process.fatJetAK8LSTable = process.fatJetTable.clone(
         src = cms.InputTag('extendedFatJetsAK8LS'),
         cut = cms.string("pt > 80 && abs(eta) < 2.4"),
-        name = cms.string("FatJetAK8LS"),
+        name = cms.string("FatJetAK8LS%s" % suffix),
         doc = cms.string("lepton-subtracted ak8 fat jets for boosted analysis"),
         variables = cms.PSet(P4Vars,
             jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
@@ -209,12 +227,21 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
     process.leptonSubtractedJetSequence += process.fatJetAK8LSTable
 
     ### Era dependent customization
-    run2_miniAOD_80XLegacy.toModify(process.fatJetAK8LSTable.variables, jetId = Var("userInt('tightId')*2+userInt('looseId')",int,doc="Jet ID flags bit1 is loose, bit2 is tight"))
+    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, msoftdrop_chs = Var("userFloat('ak8PFJetsCHSSoftDropMass')",float, doc="Legacy uncorrected soft drop mass with CHS",precision=10))
+    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau1, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau1\')"),)
+    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau2, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau2\')"),)
+    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau3, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau3\')"),)
+    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, tau4 = None)
+    for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
+        modifier.toModify(
+            process.fatJetAK8LSTable.variables,
+            jetId = Var("userInt('tightId')*2+userInt('looseId')", int, doc="Jet ID flags bit1 is loose, bit2 is tight")
+        )
 
     process.subJetAK8LSTable = process.subJetTable.clone(
         src = cms.InputTag('extendedSubJetsAK8LS'),
         cut = cms.string(""),
-        name = cms.string("SubJetAK8LS"),
+        name = cms.string("SubJetAK8LS%s" % suffix),
         doc = cms.string("lepton-subtracted ak8  sub-jets for boosted analysis"),
         variables = cms.PSet(P4Vars,
             btagCMVA = Var("bDiscriminator('pfCombinedMVAV2BJetTags')",float,doc="CMVA V2 btag discriminator",precision=10),
@@ -226,7 +253,16 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, useFakeable = True):
             pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
         )
     )
+    run2_miniAOD_80XLegacy.toModify(process.subJetAK8LSTable.variables, btagCMVA = None, btagDeepB = None)
     process.leptonSubtractedJetSequence += process.subJetAK8LSTable
     #----------------------------------------------------------------------------
 
-    process.nanoSequence += process.leptonSubtractedJetSequence
+    _leptonSubtractedJetSequence_80X = process.leptonSubtractedJetSequence.copy()
+    _leptonSubtractedJetSequence_80X.replace(process.tightJetIdLepVetoAK8LS, process.looseJetIdAK8LS)
+    run2_miniAOD_80XLegacy.toReplaceWith(process.leptonSubtractedJetSequence, _leptonSubtractedJetSequence_80X)
+
+    _leptonSubtractedJetSequence_94X2016 = process.leptonSubtractedJetSequence.copy()
+    _leptonSubtractedJetSequence_94X2016.replace(process.tightJetIdLepVetoAK8LS, process.looseJetIdAK8LS)
+    run2_nanoAOD_94X2016.toReplaceWith(process.leptonSubtractedJetSequence, _leptonSubtractedJetSequence_94X2016)
+
+    process.nanoSequenceCommon += process.leptonSubtractedJetSequence

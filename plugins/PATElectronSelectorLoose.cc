@@ -134,7 +134,7 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
         }
         continue;
       }
-      if ( !electron->userInt("mvaFall17noIso_WPL") ) {
+      if ( !electron->userInt("mvaFall17V1noIso_WPL") ) {
         if ( debug_ ) {
           std::cout << "FAILS EGamma POG MVA cut\n";
         }

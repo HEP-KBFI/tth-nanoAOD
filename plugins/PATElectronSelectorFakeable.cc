@@ -165,7 +165,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
 	}
 	continue;
       }
-      if ( !electron->userInt("mvaFall17noIso_WPL") ) {
+      if ( !electron->userInt("mvaFall17V1noIso_WPL") ) {
 	if ( debug_ ) {
 	  std::cout << "FAILS EGamma POG MVA cut\n";
 	}
@@ -173,7 +173,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
       }
       double mvaTTH = (*inputElectrons_mvaTTH)[electron];
       const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
-      if ( electron->userFloat("mvaFall17noIso") < min_mvaIDraw_[idxBin_mvaTTH] ) {
+      if ( electron->userFloat("mvaFall17V1noIso") < min_mvaIDraw_[idxBin_mvaTTH] ) {
 	if ( debug_ ) {
 	  std::cout << "FAILS EGamma POG MVA raw >= " << min_mvaIDraw_[idxBin_mvaTTH] << " cut\n";
 	}
