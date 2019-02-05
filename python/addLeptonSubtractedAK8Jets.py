@@ -265,4 +265,5 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable = True):
     _leptonSubtractedJetSequence_94X2016.replace(process.tightJetIdLepVetoAK8LS, process.looseJetIdAK8LS)
     run2_nanoAOD_94X2016.toReplaceWith(process.leptonSubtractedJetSequence, _leptonSubtractedJetSequence_94X2016)
 
-    process.nanoSequenceCommon += process.leptonSubtractedJetSequence
+    process.nanoSequence += process.leptonSubtractedJetSequence
+    process.nanoSequenceMC += process.leptonSubtractedJetSequence

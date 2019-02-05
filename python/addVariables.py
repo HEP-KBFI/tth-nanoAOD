@@ -5,8 +5,13 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94
 
 def addVariables(process):
   process.load('tthAnalysis.NanoAOD.boosted_cff')
-  process.nanoSequenceCommon.insert(process.nanoSequenceCommon.index(process.vertexSequence) + 1, boostedSequence)
-  process.nanoSequenceCommon.insert(process.nanoSequenceCommon.index(process.vertexTables  ) + 1, boostedTables)
+
+  process.boostedSequence = boostedSequence
+  process.boostedTables = boostedTables
+  process.nanoSequence += process.boostedSequence
+  process.nanoSequence += process.boostedTables
+  process.nanoSequenceMC += process.boostedSequence
+  process.nanoSequenceMC += process.boostedTables
 
   process.electronTable.variables.deltaPhiSC = Var(
     "superCluster().phi()-phi()",
