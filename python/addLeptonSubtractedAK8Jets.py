@@ -227,7 +227,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable = True):
     process.leptonSubtractedJetSequence += process.fatJetAK8LSTable
 
     ### Era dependent customization
-    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, msoftdrop_chs = Var("userFloat('ak8PFJetsCHSSoftDropMass')",float, doc="Legacy uncorrected soft drop mass with CHS",precision=10))
+    # run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, msoftdrop_chs = Var("userFloat('ak8PFJetsCHSSoftDropMass')",float, doc="Legacy uncorrected soft drop mass with CHS",precision=10))
     run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau1, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau1\')"),)
     run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau2, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau2\')"),)
     run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau3, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau3\')"),)
