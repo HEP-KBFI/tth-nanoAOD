@@ -228,10 +228,10 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable = True):
 
     ### Era dependent customization
     # run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, msoftdrop_chs = Var("userFloat('ak8PFJetsCHSSoftDropMass')",float, doc="Legacy uncorrected soft drop mass with CHS",precision=10))
-    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau1, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau1\')"),)
-    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau2, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau2\')"),)
-    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau3, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau3\')"),)
-    run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, tau4 = None)
+    # run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau1, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau1\')"),)
+    # run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau2, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau2\')"),)
+    # run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables.tau3, expr = cms.string("userFloat(\'ak8PFJetsPuppiValueMap:NjettinessAK8PuppiTau3\')"),)
+    # run2_miniAOD_80XLegacy.toModify( process.fatJetAK8LSTable.variables, tau4 = None)
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
         modifier.toModify(
             process.fatJetAK8LSTable.variables,
@@ -267,3 +267,4 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable = True):
 
     process.nanoSequence += process.leptonSubtractedJetSequence
     process.nanoSequenceMC += process.leptonSubtractedJetSequence
+    process.nanoSequenceFS += process.leptonSubtractedJetSequence

@@ -13,6 +13,8 @@ def addVariables(process, is_th = False):
   process.nanoSequence += process.boostedTables
   process.nanoSequenceMC += process.boostedSequence
   process.nanoSequenceMC += process.boostedTables
+  process.nanoSequenceFS += process.boostedSequence
+  process.nanoSequenceFS += process.boostedTables
 
   process.electronTable.variables.deltaPhiSC = Var(
     "superCluster().phi()-phi()",
