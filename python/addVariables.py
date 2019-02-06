@@ -1,9 +1,10 @@
+import FWCore.ParameterSet.Config as cms
 from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
 from PhysicsTools.NanoAOD.common_cff import Var
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 
-def addVariables(process):
+def addVariables(process, is_th = False):
   process.load('tthAnalysis.NanoAOD.boosted_cff')
 
   process.boostedSequence = boostedSequence
@@ -114,3 +115,7 @@ def addVariables(process):
     ")",
     float, doc = "DeepCSV Charm vs b,b+bb b-tag discriminator", precision = 10
   )
+
+  if is_th:
+    process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
+    process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
