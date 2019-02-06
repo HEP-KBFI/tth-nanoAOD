@@ -118,6 +118,23 @@ def addVariables(process, is_th = False):
     float, doc = "DeepCSV Charm vs b,b+bb b-tag discriminator", precision = 10
   )
 
+  process.metTable.variables.covXX = Var(
+    "getSignificanceMatrix().At(0,0)",
+    float, doc = "xx element of met covariance matrix", precision = 8
+  )
+  process.metTable.variables.covXY = Var(
+    "getSignificanceMatrix().At(0,1)",
+    float, doc = "xy element of met covariance matrix", precision = 8
+  )
+  process.metTable.variables.covYY = Var(
+    "getSignificanceMatrix().At(1,1)",
+    float, doc = "yy element of met covariance matrix", precision = 8
+  )
+  process.metTable.variables.significance = Var(
+    "metSignificance()",
+    float, doc = "MET significance", precision = 10
+  )
+
   if is_th:
     process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
     process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
