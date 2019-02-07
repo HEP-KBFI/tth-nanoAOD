@@ -21,7 +21,7 @@ TTWJetsToLNu                     TTWJetsToLNu_PSweights
 TTZToLL_M10                      TTZToLL_M10_PSweights
 VHToNonbb_M125                   VHToNonbb_M125_v14-v2
 WpWpJJ_EWK_QCD                   WpWpJJ_EWK_QCD_v14-v1
-WWToLNuQQ                        WWToLNuQQ_ext1                             WWToLNuQQ_PSweights
+WWToLNuQQ                        WWToLNuQQ_ext1                              WWToLNuQQ_PSweights
 ZZTo4L                           ZZTo4L_ext1
 TTZJets_LO                       TTZJets_LO_ext1
 TTWJets_LO                       TTWJets_LO_ext1
@@ -32,3 +32,4 @@ WWTo4Q                           WWTo4Q_PSweights
 TTTT                             TTTT_PSweights
 ttHToNonbb_M125_powheg           ttHToNonbb_M125_powheg_ext1
 WJetsToLNu                       WJetsToLNu_ext
+ST_tWll                          ST_tWll_ext1
