@@ -43,3 +43,9 @@ WGToLNuG_ext1                       WGToLNuG_ext2                       WGToLNuG
 ZGTo2LG                             ZGTo2LG_ext1
 TGJets                              TGJets_ext1
 TTGJets                             TTGJets_ext1
+THQ                                 THQ_ctcvcp
+THW                                 THW_ctcvcp
+ZH_HToBB_ZToLL                      ZH_HToBB_ZToLL_ext
+ZZTo2L2Nu                           ZZTo2L2Nu_ext
+WWToLNuQQ                           WWToLNuQQ_ext1                      WWToLNuQQ_ext2
+ZHToTauTau                          ZHToTauTau_ext
