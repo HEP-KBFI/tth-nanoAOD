@@ -4,8 +4,10 @@
 /ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM          0 signal                    ttHToNonbb_M125_powheg                           0.2118    # NLO [1][2]
 /ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM             0 signal                    ttHToNonbb_M125_powheg_ext1                      0.2118    # NLO [1][2]
 
-# tH
+# THq
 /THQ_ctcvcp_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                    0 tHq                       THQ_ctcvcp                                       0.07096   # NLO [15]
+
+# THW
 /THW_ctcvcp_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                    0 tHW                       THW_ctcvcp                                       0.01561   # NLO [15]
 
 # ggH
