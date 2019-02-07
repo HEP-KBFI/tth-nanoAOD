@@ -1,0 +1,98 @@
+[
+  {
+    "name": "mc94X",
+    "type": "mc",
+    "era": "Run2_2017,run2_nanoAOD_94XMiniAODv1",
+    "cond": "auto:phase1_2017_realistic",
+    "file": "file:///hdfs/local/karl/store/mc/RunIIFall17MiniAOD/TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/60000/A0D71AEE-13E1-E711-B3C9-FA163E629498.root",
+    "year": "2017"
+  },
+  {
+    "name": "mc94Xv2",
+    "type": "mc",
+    "era": "Run2_2017,run2_nanoAOD_94XMiniAODv2",
+    "cond": "auto:phase1_2017_realistic",
+    "file": "file:///hdfs/local/karl/store/cmst3/group/nanoAOD/pre-94XMiniAODv2/TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8.root",
+    "year": "2017"
+  },
+  {
+    "name": "mc94X2016",
+    "type": "mc",
+    "era": "Run2_2016,run2_nanoAOD_94X2016",
+    "cond": "94X_mcRun2_asymptotic_v3",
+    "file": "file:///hdfs/local/karl/store/relval/CMSSW_9_4_9_cand2/RelValTTbar_13/MINIAODSIM/94X_mcRun2_asymptotic_v3_PU_RelVal_rmaod-v1/10000/C8DD1D3F-AD83-E811-97F6-0025905B85EC.root",
+    "year": "2016"
+  },
+  {
+    "name": "mc102X",
+    "type": "mc",
+    "era": "Run2_2018,run2_nanoAOD_102Xv1",
+    "cond": "auto:phase1_2018_realistic",
+    "file": "file:///hdfs/local/karl/store/cmst3/group/nanoAOD/testFiles/2AEB2536-F68A-E811-8559-0025905A60D6.root",
+    "year": "2018"
+  },
+  {
+    "name": "mc80X",
+    "type": "mc",
+    "era": "Run2_2016,run2_miniAOD_80XLegacy",
+    "cond": "auto:run2_mc",
+    "file": "file:///hdfs/local/karl/store/mc/RunIISummer16MiniAODv2/TTJets_SingleLeptFromT_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/50000/2829381F-93BD-E611-83A9-0025907D2430.root",
+    "year": "2016"
+  },
+  {
+    "name": "data94X",
+    "type": "data",
+    "era": "Run2_2017,run2_nanoAOD_94XMiniAODv1",
+    "cond": "94X_dataRun2_v6",
+    "file": "file:///hdfs/local/karl/store/data/Run2017E/SingleMuon/MINIAOD/17Nov2017-v1/70000/42C69F78-A0DC-E711-A45B-008CFA197464.root",
+    "year": "2017"
+  },
+  {
+    "name": "data94Xv2",
+    "type": "data",
+    "era": "Run2_2017,run2_nanoAOD_94XMiniAODv2",
+    "cond": "94X_dataRun2_v6",
+    "file": "file:///hdfs/local/karl/store/cmst3/group/nanoAOD/pre-94XMiniAODv2/SingleElectron-2017E.root",
+    "year": "2017"
+  },
+  {
+    "name": "data94X2016",
+    "type": "data",
+    "era": "Run2_2016,run2_nanoAOD_94X2016",
+    "cond": "94X_dataRun2_v10",
+    "file": "file:///hdfs/local/karl/store/data/Run2016H/DoubleMuon/MINIAOD/17Jul2018-v1/00000/A0D5F54F-448E-E811-B1DC-0242AC1C0500.root",
+    "year": "2016"
+  },
+  {
+    "name": "data80X",
+    "type": "data",
+    "era": "Run2_2016,run2_miniAOD_80XLegacy",
+    "cond": "94X_dataRun2_relval_v10",
+    "file": "file:///hdfs/local/karl/store/data/Run2016H/SingleMuon/MINIAOD/03Feb2017_ver2-v1/110000/F836EEF3-E8EA-E611-AB15-0CC47AA9943A.root",
+    "year": "2016"
+  },
+  {
+    "name": "data80Xhip",
+    "type": "data",
+    "era": "Run2_2016,run2_miniAOD_80XLegacy",
+    "cond": "94X_dataRun2_relval_v10",
+    "file": "file:///hdfs/local/karl/store/data/Run2016E/SingleMuon/MINIAOD/03Feb2017-v1/110000/00EDC786-96EA-E611-9D0A-0CC47A7C347E.root",
+    "year": "2016"
+  },
+  {
+    "name": "data101X",
+    "type": "data",
+    "era": "Run2_2018,run2_nanoAOD_102Xv1",
+    "cond": "auto:run2_data_promptlike",
+    "file": "file:///hdfs/local/karl/store/cmst3/group/nanoAOD/testFiles/42BC748E-014F-E811-A1C9-FA163E935CFF.root",
+    "year": "2018"
+  },
+  {
+    "name": "fast80X",
+    "type": "fast",
+    "era": "Run2_2016,run2_miniAOD_80XLegacy",
+    "cond": "auto:run2_mc",
+    "file": "file:///hdfs/cms/store/user/matze/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a/ttZ_maod_13294.root",
+    "year": "2016"
+  }
+]
