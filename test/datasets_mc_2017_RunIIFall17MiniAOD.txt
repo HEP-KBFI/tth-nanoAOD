@@ -157,20 +157,6 @@
 # misc
 /tZq_ll_4f_ckm_NLO_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                     1 Rares                     tZq_ll_4f                                                  0.0758    # NLO [3]
 
-# Nomenclature:
-#  - if no source given, computed w/ dump_xs.py
-#  - if no accuracy given, then accuracy unknown
-#  - if neither of them given, then computed w/ dump_xs.py but accuracy unknown
-# NB!
-# - DYJetsToLL_M-4to50 samples are scaled by the k-factor derived from DYJetsToLL_M-10to50 sample
-# - it's unclear, why the measured XS of TTZJets_LO is divided by BR(Z->hadrons)
-# - the XS of QCD_Pt120to170_Mu5 is computed w/o these files b/c of IO errors:
-#     - /store/mc/RunIIFall17MiniAOD/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/50000/2647ED8A-9BDB-E711-857A-0017A4771058.root
-#     - /store/mc/RunIIFall17MiniAOD/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/40000/503E8975-90DF-E711-960F-008CFAFBFCDE.root
-# - the XS of QCD_Pt20to30_Mu5 is computed w/o these files b/c of IO errors:
-#     - /store/mc/RunIIFall17MiniAOD/QCD_Pt-20to30_MuEnrichedPt5_TuneCP5_13TeV_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/50000/1A2A17E4-FAE0-E711-9047-001E67E7195C.root
-# - the measured XSs of main and extended samples are averaged
-# References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR (125.00)
 # [2] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV (125.00)
 # [3] https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns
@@ -201,11 +187,14 @@
 # /TTJets_DiLept
 # /TTJets_SingleLeptFromTbar
 # /DYJetsToLL_M-10to50 (ext)
+# /DYJetsToLL_M-4to50_HT-70to100
 # /DYJetsToLL_M-4to50_HT-600toInf (ext)
+# /DYJetsToLL_M-50_HT-70to100
 # /DYBBJetsToLL_M-50 (ext)
 # /WJetsToLNu (main, ext)
 # /W1JetsToLNu
 # /W2JetsToLNu
+# /WJetsToLNu_HT-70To100
 # /WJetsToLNu_HT-100To200
 # /WJetsToLNu_HT-200To400
 # /WJetsToLNu_HT-400To600

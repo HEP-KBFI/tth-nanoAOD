@@ -77,6 +77,7 @@
 /DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM          1 EWK                       DYJetsToLL_M-4to50_HT-400to600_ext1                        6.726     # NLO; (5.724 + 5.711) / 2 * 1.1764
 /DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 EWK                       DYJetsToLL_M-4to50_HT-600toInf                             2.172     # NLO; 1.846 * 1.1764
 /DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM          1 EWK                       DYJetsToLL_M-4to50_HT-600toInf_ext1                        2.172     # NLO; 1.846 * 1.1764
+/DYJetsToLL_M-50_HT-70to100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                   1 EWK                       DYJetsToLL_M50_HT70to100                                 158.49      # NNLO QCD, NLO EW; 146.90 * 1.0789
 /DYJetsToLL_M-50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                  1 EWK                       DYJetsToLL_M50_HT100to200                                173.53      # NNLO QCD, NLO EW; (160.9 + 160.8) / 2 * 1.0789
 /DYJetsToLL_M-50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM             1 EWK                       DYJetsToLL_M50_HT100to200_ext1                           173.53      # NNLO QCD, NLO EW; (160.9 + 160.8) / 2 * 1.0789
 /DYJetsToLL_M-50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                  1 EWK                       DYJetsToLL_M50_HT200to400                                 53.00      # NNLO QCD, NLO EW; (48.67 + 48.47) / 2 * 1.0789
@@ -97,9 +98,10 @@
 /W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v4/MINIAODSIM                                  1 EWK                       W2JetsToLNu                                             3244.85      # NNLO; 2792 * 1.16222
 /W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                  1 EWK                       W3JetsToLNu                                             1153.02      # NNLO; 992.1 * 1.1622
 /W4JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                  1 EWK                       W4JetsToLNu                                              633.05      # NNLO; 544.7 * 1.1622
+/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                        1 EWK                       WJetsToLNu_HT70To100                                    1656.3       # ?
 /WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                       1 EWK                       WJetsToLNu_HT100To200                                   1625.94      # NNLO; 1394 * 1.1622
 /WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                       1 EWK                       WJetsToLNu_HT200To400                                    477.52      # NNLO; 409.4 * 1.1622
-/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                       1 EWK                       WJetsToLNu_HT400To600                                     67.51	     # NNLO; 57.88 * 1.1622
+/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                       1 EWK                       WJetsToLNu_HT400To600                                     67.51      # NNLO; 57.88 * 1.1622
 /WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                       1 EWK                       WJetsToLNu_HT600To800                                     15.09      # NNLO; 12.94 * 1.1622
 /WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                      1 EWK                       WJetsToLNu_HT800To1200                                     6.297     # NNLO; 5.399 * 1.1622
 /WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                     1 EWK                       WJetsToLNu_HT1200To2500                                    1.262     # NNLO; 1.082 * 1.1622
@@ -183,7 +185,7 @@
 # H -> tau tau (GGF & VBF)
 /GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                      1 Rares                     GluGluHToTauTau                                            3.0469    # s(ggf h) * br(h -> tau tau) [1][2]
 /GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM                                 1 Rares                     GluGluHToTauTau_ext1                                       3.0469    # s(ggf h) * br(h -> tau tau) [1][2]
-/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                         1 Rares                     VBFHToTauTau                                              0.2372    # s(vbf h) * br(h -> tau tau) [1][2]
+/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                         1 Rares                     VBFHToTauTau                                               0.2372    # s(vbf h) * br(h -> tau tau) [1][2]
 
 # VH
 /VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                              1 VH                        VHToNonbb_M125                                             0.9425    # N3LO (WH) + NNLO (ZH); [1][2]
@@ -202,11 +204,6 @@
 # NB!
 # - DYJetsToLL_M-4to50 samples are scaled by the k-factor derived from DYJetsToLL_M-10to50 sample
 # - it's unclear, why the measured XS of TTZJets_LO is divided by BR(Z->hadrons)
-# - the XS of QCD_Pt120to170_Mu5 is computed w/o these files b/c of IO errors:
-#     - /store/mc/RunIIFall17MiniAOD/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/50000/2647ED8A-9BDB-E711-857A-0017A4771058.root
-#     - /store/mc/RunIIFall17MiniAOD/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/40000/503E8975-90DF-E711-960F-008CFAFBFCDE.root
-# - the XS of QCD_Pt20to30_Mu5 is computed w/o these files b/c of IO errors:
-#     - /store/mc/RunIIFall17MiniAOD/QCD_Pt-20to30_MuEnrichedPt5_TuneCP5_13TeV_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v1/50000/1A2A17E4-FAE0-E711-9047-001E67E7195C.root
 # - the measured XSs of main and extended samples are averaged
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR (125.00)
@@ -229,6 +226,12 @@
 # STILL MISSING:
 # /ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM (INVALID)
 # /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM (INVALID)
+# /DYJetsToLL_M-4to50_HT-70to100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM (INVALID)
+# /DY1JetsToLL_M-10to50
+# /DY2JetsToLL_M-10to50
+# /DY3JetsToLL_M-10to50
+# /DY4JetsToLL_M-10to50
+# /DYJetsToLL_M-4to50_HT-70to100
 # /QCD_Pt_15to20_bcToE
 # /QCD_Pt-170to300_EMEnriched
 # /QCD_Pt-600to800_MuEnrichedPt5
