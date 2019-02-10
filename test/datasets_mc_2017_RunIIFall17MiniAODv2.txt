@@ -28,7 +28,7 @@
 /TTWJetsToLNu_TuneCP5_PSweights_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM              1 TTW                       TTWJetsToLNu_PSweights                                     0.2043    # NLO [3]
 /ttWJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                      0 TTW                       TTWJets_LO                                                 0.6008    # NLO QCD+EW [13]
 /ttWJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                                 0 TTW                       TTWJets_LO_ext1                                            0.6008    # NLO QCD+EW [13]
-/TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM                                       1 TTWW                      TTWW                                                       0.006983  # error 4.038e-06
+/TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM                                       1 TTWW                      TTWW_ext1                                                  0.006983  # error 4.038e-06
 
 # single-top
 /ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                    1 TT                        ST_s-channel_4f_leptonDecays                               3.36      # NLO [3][4][5]
