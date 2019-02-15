@@ -75,10 +75,10 @@
 /DYJetsToLL_M-50_HT-2500toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                1 EWK                       DYJetsToLL_M50_HT2500toInf                       0.003749  # NNLO QCD, NLO EW; 0.003475 * 1.0789
 
 # W + jets
-/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                                 0 EWK                       WJetsToLNu                                   61526.7       # NNLO [3]; k-factor = [3] / [11] = 1.1622
-/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                                            0 EWK                       WJetsToLNu_ext2                              61526.7       # NNLO [3]; k-factor = [3] / [11] = 1.1622
-/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM                                                  1 EWK                       WJetsToLNu_madgraphMLM                       61526.7       # NNLO [3]; k-factor = [3] / [11] = 1.1622
-/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM                                             1 EWK                       WJetsToLNu_madgraphMLM_ext2                  61526.7       # NNLO [3]; k-factor = [3] / [11] = 1.1622
+/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                                 0 EWK                       WJetsToLNu                                   61526.7       # NNLO [3]; k-factor = [3] / [23] = 1.1622
+/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                                            0 EWK                       WJetsToLNu_ext2                              61526.7       # NNLO [3]; k-factor = [3] / [23] = 1.1622
+/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM                                                  1 EWK                       WJetsToLNu_madgraphMLM                       61526.7       # NNLO [3]; k-factor = [3] / [23] = 1.1622
+/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM                                             1 EWK                       WJetsToLNu_madgraphMLM_ext2                  61526.7       # NNLO [3]; k-factor = [3] / [23] = 1.1622
 /W1JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                                 1 EWK                       W1JetsToLNu                                   9418.44      # NNLO; 8104 * 1.1622
 /W2JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM                                            1 EWK                       W2JetsToLNu_ext1                              3244.85      # NNLO; 2792 * 1.16222
 /W3JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM                                            1 EWK                       W3JetsToLNu_ext1                              1153.02      # NNLO; 992.1 * 1.1622
@@ -225,6 +225,7 @@
 # [20] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=DYJetsToLL_M-5to50_HT-600toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8
 # [21] https://arxiv.org/pdf/1610.07922.pdf (table 40)
 # [22] http://pdglive.lbl.gov/Particle.action?node=S044&init=0
+# [23] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8
 #
 # STILL MISSING:
 # /ttHJetToNonbb_M125
