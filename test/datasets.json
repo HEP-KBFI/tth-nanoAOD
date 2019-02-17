@@ -4698,7 +4698,8 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": []
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
         },
         "xs": {
           "value": 1.256,
