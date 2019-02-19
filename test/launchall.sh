@@ -2,24 +2,37 @@
 
 # DO NOT SOURCE! IT MAY KILL YOUR SHELL!
 
-# https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_Data_re_miniAOD_94X_version
-# https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD#2017_MC_re_miniAOD_94X_version_2
-# JECs according to
-#   https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_dataRun2_v6
-#   https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/94X_mc2017_realistic_v13
-#
-# The recommended MC GT is v14, but the associated JECs are Fall17_17Nov2017_V8_MC, whereas the v6
-# data GT has Fall17_17Nov2017_V6_MC JECs; so we decided to downgrade the MC GT such that both data
-# and MC JECs have the same version (the only difference between v13 and v14 MC GTs are the JECs)
-export AUTOCOND_DATA_2017="94X_dataRun2_v6"
-export AUTOCOND_MC_2017="94X_mc2017_realistic_v13"
-export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
-export ERA_ARGS_2017="Run2_2017,run2_nanoAOD_94XMiniAODv1"
+# GT choices based on: https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVAnalysisSummaryTable
 
-export AUTOCOND_DATA_2016="auto:run2_data_relval"
-export AUTOCOND_MC_2016="auto:run2_mc"
 export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
-export ERA_ARGS_2016="Run2_2016,run2_miniAOD_80XLegacy"
+export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
+export JSON_FILE_2018="" #TBA
+
+export AUTOCOND_DATA_2016_v2="80X_dataRun2_2016LegacyRepro_v4"
+export AUTOCOND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8"
+export ERA_ARGS_2016_v2="Run2_2016,run2_miniAOD_80XLegacy"
+export ERA_KEY_2016_v2="2016v2"
+
+export AUTOCOND_DATA_2016_v3="94X_dataRun2_v10"
+export AUTOCOND_MC_2016_v3="94X_mcRun2_asymptotic_v3"
+export ERA_ARGS_2016_v3="Run2_2016,run2_nanoAOD_94X2016"
+export ERA_KEY_2016_v3="2016v3"
+
+# these GTs were taken from previous iteration of the analysis; no recommendation found!
+export AUTOCOND_DATA_2017_v1="94X_dataRun2_v6"
+export AUTOCOND_MC_2017_v1="94X_mc2017_realistic_v14"
+export ERA_ARGS_2017_v1="Run2_2017,run2_nanoAOD_94XMiniAODv1"
+export ERA_KEY_2017_v1="2017v1"
+
+export AUTOCOND_DATA_2017_v2="94X_dataRun2_v11"
+export AUTOCOND_MC_2017_v2="94X_mc2017_realistic_v17"
+export ERA_ARGS_2017_v2="Run2_2017,run2_nanoAOD_94XMiniAODv2"
+export ERA_KEY_2017_v2="2017v2"
+
+export AUTOCOND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1"
+export AUTOCOND_MC_2018="102X_upgrade2018_realistic_v12"
+export ERA_ARGS_2018="Run2_2018"
+export ERA_KEY_2018="2018"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
@@ -28,8 +41,14 @@ DRYRUN=""
 export DATASET_FILE=""
 export NANOCFG_DATA=""
 export NANOCFG_MC=""
+export NANOCFG_FASTSIM=""
 
-show_help() { echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-v version] [-w whitelist] [-p path]" 1>&2; exit 0; }
+show_help() {
+  echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-F <fastsim cfg>]\
+ [-v version] [-w whitelist] [-p path]" 1>&2;
+  echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018" 1>&2;
+  exit 0;
+}
 
 while getopts "h?dgf:D:M:e:v:w:p:" opt; do
   case "${opt}" in
@@ -42,6 +61,8 @@ while getopts "h?dgf:D:M:e:v:w:p:" opt; do
   D) export NANOCFG_DATA=${OPTARG}
      ;;
   M) export NANOCFG_MC=${OPTARG}
+     ;;
+  F) export NANOCFG_FASTSIM=${OPTARG}
      ;;
   g) GENERATE_CFGS_ONLY=true
      ;;
@@ -68,16 +89,38 @@ if [ -z "$ERA" ]; then
   exit 6;
 fi
 
-if [ "$ERA" == "2017" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2017
-  export AUTOCOND_MC=$AUTOCOND_MC_2017
-  export JSON_FILE=$JSON_FILE_2017
-  export ERA_ARGS=$ERA_ARGS_2017
-elif [ "$ERA" == "2016" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2016
-  export AUTOCOND_MC=$AUTOCOND_MC_2016
+if [ "$ERA" == "$ERA_KEY_2016_v2" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2016_v2
+  export AUTOCOND_MC=$AUTOCOND_MC_2016_v2
+  export ERA_ARGS=$ERA_ARGS_2016_v2
   export JSON_FILE=$JSON_FILE_2016
-  export ERA_ARGS=$ERA_ARGS_2016
+  export YEAR="2016"
+elif [ "$ERA" == "$ERA_KEY_2016_v3" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2016_v3
+  export AUTOCOND_MC=$AUTOCOND_MC_2016_v3
+  export ERA_ARGS=$ERA_ARGS_2016_v3
+  export JSON_FILE=$JSON_FILE_2016
+  export YEAR="2016"
+elif [ "$ERA" == "$ERA_KEY_2017_v1" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2017_v1
+  export AUTOCOND_MC=$AUTOCOND_MC_2017_v1
+  export ERA_ARGS=$ERA_ARGS_2017_v1
+  export JSON_FILE=$JSON_FILE_2017
+  export YEAR="2017"
+elif [ "$ERA" == "$ERA_KEY_2017_v2" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2017_v2
+  export AUTOCOND_MC=$AUTOCOND_MC_2017_v2
+  export ERA_ARGS=$ERA_ARGS_2017_v2
+  export JSON_FILE=$JSON_FILE_2017
+  export YEAR="2017"
+elif [ "$ERA" == "$ERA_KEY_2018" ]; then
+  export AUTOCOND_DATA=$AUTOCOND_DATA_2018
+  export AUTOCOND_MC=$AUTOCOND_MC_2018
+  export ERA_ARGS=$ERA_ARGS_2018
+  export JSON_FILE=$JSON_FILE_2018
+  export YEAR="2018"
+  echo "Era $ERA yet not supported";
+  exit 0;
 else
   echo "Invalid era: $ERA";
 fi
@@ -86,18 +129,25 @@ if [ -z "$NANOAOD_VER" ]; then
   export NANOAOD_VER="NanoAOD_$ERA_`date '+%Y%b%d'`";
 fi
 
+if [ ! -z "$YEAR" ]; then
+  echo "Year not set";
+  exit 1;
+fi
+
 SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
 
 generate_cfgs() {
   export CUSTOMISE_COMMANDS_DATA="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
 process.source.fileNames = cms.untracked.vstring()\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
-from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, False)\\n"
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, False,'$YEAR')\\n"
   export CUSTOMISE_COMMANDS_MC="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
 process.source.fileNames = cms.untracked.vstring()\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
-from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, True)\\n"
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, True,'$YEAR')\\n"
 
   export COMMON_COMMANDS="nanoAOD --step=NANO --era=$ERA_ARGS --no_exec --fileout=tree.root --number=-1"
 
@@ -120,6 +170,16 @@ from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK
   else
     echo "Using the following cfg for the MC jobs: $NANOCFG_MC";
   fi
+
+  if [ -z "$NANOCFG_FASTSIM" ]; then
+    export $NANOCFG_FASTSIM="$SCRIPT_DIRECTORY/nano_cfg_fastsim_$ERA.py"
+    echo "Generating the skeleton configuration file for CRAB MC jobs: $NANOCFG_FASTSIM"
+    cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_MC"         \
+      --fast --eventcontent NANOAODSIM --datatier NANOAODSIM --conditions $AUTOCOND_MC \
+      --python_filename="$NANOCFG_FASTSIM"
+  else
+    echo "Using the following cfg for the MC jobs: $NANOCFG_FASTSIM";
+  fi
 }
 
 if [ -z "$DATASET_FILE" ]; then
@@ -135,6 +195,7 @@ fi
 check_if_exists "$DATASET_FILE"
 check_if_exists "$NANOCFG_DATA"
 check_if_exists "$NANOCFG_MC"
+check_if_exists "$NANOCFG_FASTSIM"
 check_if_exists "$JSON_LUMI"
 check_if_exists "$PRIVATE_MINIAOD_PATH"
 
@@ -181,6 +242,11 @@ fi
 if [[ ! "$NANOCFG_MC" =~ ^/ ]]; then
   export NANOCFG_MC="$PWD/$NANOCFG_MC";
   echo "Full path to the MC cfg file: $NANOCFG_MC";
+fi
+
+if [[ ! "$NANOCFG_FASTSIM" =~ ^/ ]]; then
+  export NANOCFG_FASTSIM="$PWD/$NANOCFG_FASTSIM";
+  echo "Full path to the FastSim cfg file: $NANOCFG_FASTSIM";
 fi
 
 echo "Submitting jobs ..."
