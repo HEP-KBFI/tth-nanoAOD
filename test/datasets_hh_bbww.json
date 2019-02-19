@@ -137,7 +137,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -169,7 +173,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -201,7 +209,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-270_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -241,6 +253,38 @@
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_300_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_300_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-300_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -297,7 +341,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-350_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -329,7 +377,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-400_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -361,7 +413,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -393,7 +449,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-500_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -401,6 +461,38 @@
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_550_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_550_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-550_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -425,7 +517,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-600_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -457,7 +553,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-650_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -489,7 +589,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-700_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -521,7 +625,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -553,7 +661,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-800_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -617,7 +729,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-900_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -649,7 +765,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-1000_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -873,7 +993,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (VBF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -881,6 +1005,166 @@
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_1_2_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_2_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (VBF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_2_1_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_2_1_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (VBF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_1_0_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_0_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (VBF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1p5_1_1_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (VBF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_0p5_1_1_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (VBF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -905,7 +1189,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_SM_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -913,6 +1201,38 @@
               "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_box_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_box_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_box_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -937,7 +1257,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_2_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -969,14 +1293,126 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_3_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_3_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_3_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_4_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_4_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_4_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_4_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_5_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_5_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_5_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_5_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_6_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_6_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_6_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -1001,7 +1437,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_7_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -1009,6 +1449,38 @@
               "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_7_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_8_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_8_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_8_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -1056,6 +1528,134 @@
     ]
   },
   {
+    "category": "signal_ggf_nonresonant_node_10_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_10_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_10_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_11_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_11_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_11_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_12_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_12_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_12_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_13_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_13_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_13_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_ggf_nonresonant_node_12_hh_bbvv",
     "comment": "",
     "samples": [
@@ -1073,6 +1673,38 @@
               "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_13_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_13_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_13_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -1833,7 +2465,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-250_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -1865,7 +2501,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -1897,7 +2537,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-270_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -1929,7 +2573,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-280_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -1961,8 +2609,18 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-300_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_300_hh_2b2t_ext1"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-300_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_300_hh_2b2t_ext1"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -1993,7 +2651,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-320_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2001,6 +2663,38 @@
               "dbs": "/GluGluToRadionToHHTo2B2Tau_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_340_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_340_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-340_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -2025,7 +2719,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-350_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2057,8 +2755,18 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-400_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v3/MINIAODSIM",
+              "alt": "signal_ggf_spin0_400_hh_2b2t_ext1"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-400_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_400_hh_2b2t_ext1"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -2089,7 +2797,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-450_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2121,7 +2833,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-500_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2153,7 +2869,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-550_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2185,7 +2905,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-600_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2217,7 +2941,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-650_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2281,7 +3009,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-750_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2313,7 +3045,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-800_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2377,7 +3113,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-900_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2633,7 +3373,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (VBF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2665,7 +3409,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (VBF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2698,7 +3446,11 @@
         "process": "HH -> bb tautau (VBF)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -2729,7 +3481,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (VBF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2761,7 +3517,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (VBF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2769,6 +3529,38 @@
               "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_0p5_1_1_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_0p5_1_1_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (VBF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -2793,7 +3585,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_SM_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2801,6 +3597,38 @@
               "dbs": "/GluGluToHHTo2B2Tau_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+    {
+    "category": "signal_ggf_nonresonant_node_box_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_box_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_box_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -2825,7 +3653,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_2_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2953,7 +3785,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_9_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2961,6 +3797,70 @@
               "dbs": "/GluGluToHHTo2B2Tau_node_9_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_10_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_10_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_10_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_11_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_11_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_11_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
@@ -2985,7 +3885,11 @@
         "use_case": "signal extraction",
         "process": "HH -> bb tautau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_12_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
@@ -2993,6 +3897,42 @@
               "dbs": "/GluGluToHHTo2B2Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 1.0,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_13_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_13_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_13_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_13_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
