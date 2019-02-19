@@ -4,6 +4,10 @@
 
 # GT choices based on: https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVAnalysisSummaryTable
 
+#TODO give NANO_CFG a default value (and put it to /hdfs/store/$USER/nanoCfgs/<version>/<date>/nano_$TYPE_$ERA_cfg.py)
+#TODO give DATASET_FILE a default value based on $JOB_TYPE, $ERA and $IS_PRIVATE flags
+#TODO remove automatic deduction of sample type, rather check $PRIVATE_MINIAOD_PATH to decide whether the samples are private
+
 export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
 export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
 export JSON_FILE_2018="" #TBA
@@ -39,18 +43,21 @@ OPTIND=1 # reset in case getopts has been used previously in the shell
 GENERATE_CFGS_ONLY=false
 DRYRUN=""
 export DATASET_FILE=""
-export NANOCFG_DATA=""
-export NANOCFG_MC=""
-export NANOCFG_FASTSIM=""
+export NANOCFG=""
+export JOB_TYPE=""
+
+TYPE_DATA="data"
+TYPE_MC="mc"
+TYPE_FAST="fast"
 
 show_help() {
-  echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-D <data cfg>] [-M <mc cfg>] [-F <fastsim cfg>]\
- [-v version] [-w whitelist] [-p path]" 1>&2;
+  echo "Usage: $0 -e <era> [-d] [-g | -f <dataset file>] [-c <cfg>] [-j <type>] [-v version] [-w whitelist] [-p path]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018" 1>&2;
+  echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST"
   exit 0;
 }
 
-while getopts "h?dgf:D:M:e:v:w:p:" opt; do
+while getopts "h?dgf:c:j:e:v:w:p:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -58,11 +65,9 @@ while getopts "h?dgf:D:M:e:v:w:p:" opt; do
      ;;
   d) DRYRUN="--dryrun"
      ;;
-  D) export NANOCFG_DATA=${OPTARG}
+  c) export NANOCFG=${OPTARG}
      ;;
-  M) export NANOCFG_MC=${OPTARG}
-     ;;
-  F) export NANOCFG_FASTSIM=${OPTARG}
+  j) export JOB_TYPE=${OPTARG}
      ;;
   g) GENERATE_CFGS_ONLY=true
      ;;
@@ -125,6 +130,11 @@ else
   echo "Invalid era: $ERA";
 fi
 
+if [ "$JOB_TYPE" != "$TYPE_DATA" ] && [ "$JOB_TYPE" != "$TYPE_MC" ] && [ "$JOB_TYPE" != "$TYPE_FAST" ]; then
+  echo "Invalid job type: $JOB_TYPE";
+  exit 1;
+fi
+
 if [ -z "$NANOAOD_VER" ]; then
   export NANOAOD_VER="NanoAOD_$ERA_`date '+%Y%b%d'`";
 fi
@@ -134,8 +144,8 @@ if [ ! -z "$YEAR" ]; then
   exit 1;
 fi
 
-SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export JSON_LUMI="$SCRIPT_DIRECTORY/../data/$JSON_FILE"
+export JSON_LUMI="$CMSSW_BASE/src/tthAnalysis/NanoAOD/data/$JSON_FILE"
+export CRAB_CFG="$CMSSW_BASE/src/tthAnalysis/NanoAOD/test/crab_cfg.py"
 
 generate_cfgs() {
   export CUSTOMISE_COMMANDS_DATA="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
@@ -149,37 +159,24 @@ from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, True,'$YEAR')\\n"
 
-  export COMMON_COMMANDS="nanoAOD --step=NANO --era=$ERA_ARGS --no_exec --fileout=tree.root --number=-1"
-
-  if [ -z "$NANOCFG_DATA" ]; then
-    export NANOCFG_DATA="$SCRIPT_DIRECTORY/nano_cfg_data_$ERA.py"
-    echo "Generating the skeleton configuration file for CRAB data jobs: $NANOCFG_DATA"
-    cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_DATA"       \
-      --data --eventcontent NANOAOD --datatier NANOAOD --conditions $AUTOCOND_DATA \
-      --python_filename=$NANOCFG_DATA --lumiToProcess="$JSON_LUMI"
+  if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
+    TIER="NANOAOD"
+    AUTOCOND=$AUTOCOND_DATA;
+    CUSTOMISE_COMMANDS=$CUSTOMISE_COMMANDS_DATA
   else
-    echo "Using the following cfg for the data jobs: $NANOCFG_DATA";
+    AUTOCOND=$AUTOCOND_MC;
+    TIER="NANOAODSIM";
+    CUSTOMISE_COMMANDS=$CUSTOMISE_COMMANDS_MC
+  fi
+  export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --no_exec --fileout=tree.root --number=-1 \
+                         --eventcontent $TIER --datatier $TIER --customise_commands=$CUSTOMISE_COMMANDS \
+                         --python_filename=$NANOCFG"
+  if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
+    CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
   fi
 
-  if [ -z "$NANOCFG_MC" ]; then
-    export NANOCFG_MC="$SCRIPT_DIRECTORY/nano_cfg_mc_$ERA.py"
-    echo "Generating the skeleton configuration file for CRAB MC jobs: $NANOCFG_MC"
-    cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_MC"         \
-      --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --conditions $AUTOCOND_MC \
-      --python_filename="$NANOCFG_MC"
-  else
-    echo "Using the following cfg for the MC jobs: $NANOCFG_MC";
-  fi
-
-  if [ -z "$NANOCFG_FASTSIM" ]; then
-    export $NANOCFG_FASTSIM="$SCRIPT_DIRECTORY/nano_cfg_fastsim_$ERA.py"
-    echo "Generating the skeleton configuration file for CRAB MC jobs: $NANOCFG_FASTSIM"
-    cmsDriver.py $COMMON_COMMANDS --customise_commands="$CUSTOMISE_COMMANDS_MC"         \
-      --fast --eventcontent NANOAODSIM --datatier NANOAODSIM --conditions $AUTOCOND_MC \
-      --python_filename="$NANOCFG_FASTSIM"
-  else
-    echo "Using the following cfg for the MC jobs: $NANOCFG_FASTSIM";
-  fi
+  echo "Generating the skeleton configuration file for CRAB $JOB_TYPE jobs: $NANOCFG"
+  cmsDriver.py $CMSDRIVER_OPTS
 }
 
 if [ -z "$DATASET_FILE" ]; then
@@ -192,10 +189,8 @@ if [ -z "$DATASET_FILE" ]; then
   fi
 fi
 
+check_if_exists "$NANOCFG"
 check_if_exists "$DATASET_FILE"
-check_if_exists "$NANOCFG_DATA"
-check_if_exists "$NANOCFG_MC"
-check_if_exists "$NANOCFG_FASTSIM"
 check_if_exists "$JSON_LUMI"
 check_if_exists "$PRIVATE_MINIAOD_PATH"
 
@@ -230,30 +225,18 @@ if [ "$VOMS_PROXY_TIMELEFT" -lt "$MIN_TIMELEFT" ]; then
 fi
 
 export DATASET_PATTERN="^/(.*)/(.*)/[0-9A-Za-z]+$"
-declare -A DATA_CATEGORIES=([SingleElectron]= [SingleMuon]= [Tau]= [DoubleEG]= [DoubleMuon]= [MuonEG]=)
 
-generate_cfgs
-
-if [[ ! "$NANOCFG_DATA" =~ ^/ ]]; then
-  export NANOCFG_DATA="$PWD/$NANOCFG_DATA";
-  echo "Full path to the data cfg file: $NANOCFG_DATA";
-fi
-
-if [[ ! "$NANOCFG_MC" =~ ^/ ]]; then
-  export NANOCFG_MC="$PWD/$NANOCFG_MC";
-  echo "Full path to the MC cfg file: $NANOCFG_MC";
-fi
-
-if [[ ! "$NANOCFG_FASTSIM" =~ ^/ ]]; then
-  export NANOCFG_FASTSIM="$PWD/$NANOCFG_FASTSIM";
-  echo "Full path to the FastSim cfg file: $NANOCFG_FASTSIM";
+if [[ ! "$NANOCFG" =~ ^/ ]]; then
+  export NANOCFG="$PWD/$NANOCFG";
+  echo "Full path to the $JOB_TYPE cfg file: $NANOCFG";
 fi
 
 echo "Submitting jobs ..."
 cat $DATASET_FILE | while read LINE; do
   export DATASET=$(echo $LINE | awk '{print $1}');
   unset DATASET_CATEGORY;
-  unset IS_DATA;
+
+  export IS_PRIVATE=0;
 
   if [ -z "$DATASET" ]; then
     continue; # it's an empty line, skip silently
@@ -275,19 +258,22 @@ cat $DATASET_FILE | while read LINE; do
     continue;
   fi
 
-  if [[ ${DATA_CATEGORIES[$DATASET_CATEGORY]-X} == ${DATA_CATEGORIES[$DATASET_CATEGORY]} ]]; then
-    export IS_DATA=1;
+  DATASET_SPLIT=$(echo "$DATASET" | tr '/' ' ')
+  DATASET_LEADING_PART=$(echo "$DATASET_SPLIT" | awk '{print $1}')
+  DATASET_THIRD_PART=$(echo "$DATASET_SPLIT" | awk '{print $3}')
+
+  if [ "$DATASET_THIRD_PART" == "MINIAOD" ]; then
     echo "Found data sample: $DATASET";
+    if [ "$JOB_TYPE" != "$TYPE_DATA" ]; then
+      echo "Requested $JOB_TYPE job instead -> aborting";
+      exit 1;
+    fi
   else
-    export IS_DATA=0;
     echo "Found MC   sample: $DATASET";
   fi
 
-  export IS_PRIVATE=0;
-  DATASET_SPLIT=$(echo "$DATASET" | tr '/' ' ')
-  DATASET_LEADING_PART=$(echo "$DATASET_SPLIT" | awk '{print $1}')
-  DATASET_SUBLEADING_PART=$(echo "$DATASET_SPLIT" | awk '{print $2}')
-  if [ "$DATASET_SUBLEADING_PART" == "private" ]; then
+
+  if [ "$DATASET_THIRD_PART" == "USER" ]; then
     echo "It's a privately produced sample";
     PRIVATE_DATASET_PATH="$PRIVATE_MINIAOD_PATH/$DATASET_LEADING_PART";
     if [[ "$PRIVATE_DATASET_PATH" != /hdfs/cms/* ]]; then
@@ -307,8 +293,7 @@ cat $DATASET_FILE | while read LINE; do
     for PRIVATE_DATASET_FILE in $PRIVATE_DATASET_FILES; do
       echo "  $PRIVATE_DATASET_FILE"
     done
-    export IS_PRIVATE=1;
   fi
 
-  crab submit $DRYRUN --config="$SCRIPT_DIRECTORY/crab_cfg.py" --wait
+  crab submit $DRYRUN --config="$CRAB_CFG" --wait
 done

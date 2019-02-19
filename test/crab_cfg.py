@@ -12,15 +12,14 @@ def get_env_var(env_var, fail_if_not_exists = True):
   return os.environ[env_var]
 
 HOME_SITE     = 'T2_EE_Estonia'
-NANOCFG_DATA  = get_env_var('NANOCFG_DATA')
-NANOCFG_MC    = get_env_var('NANOCFG_MC')
+NANOCFG       = get_env_var('NANOCFG')
 JSON_LUMI     = get_env_var('JSON_LUMI')
 NANOAOD_VER   = get_env_var('NANOAOD_VER')
 WHITELIST     = get_env_var('WHITELIST', False)
 PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
-is_data         = bool(int(get_env_var('IS_DATA')))
+job_type        = get_env_var('JOB_TYPE')
 dataset_name    = get_env_var('DATASET')
 dataset_pattern = get_env_var('DATASET_PATTERN')
 dataset_match   = re.match(dataset_pattern, dataset_name)
@@ -51,7 +50,7 @@ config.General.transferOutputs = True
 config.General.transferLogs    = True
 
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName   = NANOCFG_DATA if is_data else NANOCFG_MC
+config.JobType.psetName   = NANOCFG
 
 if WHITELIST:
   config.Site.whitelist = WHITELIST.split(',')
@@ -80,5 +79,5 @@ else:
 
 config.Data.allowNonValidInputDataset = True
 
-if is_data:
+if job_type == "data":
   config.Data.lumiMask = JSON_LUMI
