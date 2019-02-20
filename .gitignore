@@ -9,3 +9,4 @@ __init__.py*
 *.includes
 *.creator.user*
 test/cfgs
+crab.log
