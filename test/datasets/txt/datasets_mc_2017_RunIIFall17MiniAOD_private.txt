@@ -1,12 +1,12 @@
-/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHq   THQ            0.07096 /hdfs/cms/store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17                    # NLO; [1]
+/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHq   THQ            0.07096 /cms/store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17                    # NLO; [1]
 
-/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHW   THW            0.01561 /hdfs/cms/store/user/kaehatah/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17                    # NLO; [1]
+/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHW   THW            0.01561 /cms/store/user/kaehatah/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17                    # NLO; [1]
 
-/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/private/USER 1 TT    ST_tWll        0.01103 /hdfs/cms/store/user/kaehatah/private/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17 # LO; [2]
+/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/private/USER 1 TT    ST_tWll        0.01103 /cms/store/user/kaehatah/private/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17 # LO; [2]
 
-/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/USER      1 VH    VHToNonbb_M125 0.9425  /hdfs/cms/store/user/kaehatah/private/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17      # N3LO (WH) + NNLO (ZH); [4][5]
+/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/USER      1 VH    VHToNonbb_M125 0.9425  /cms/store/user/kaehatah/private/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17      # N3LO (WH) + NNLO (ZH); [4][5]
 
-/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/USER          1 Rares WpWpJJ_EWK_QCD 0.04932 /hdfs/cms/store/user/kaehatah/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17          # error 2.831e-05
+/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/USER          1 Rares WpWpJJ_EWK_QCD 0.04932 /cms/store/user/kaehatah/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17          # error 2.831e-05
 
 # [1] https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV
 # [2] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=ST_tWll_5f_LO_13TeV_MadGraph_pythia8

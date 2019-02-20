@@ -190,19 +190,19 @@ from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK
   cmsDriver.py $CMSDRIVER_OPTS --customise_commands="$CUSTOMISE_COMMANDS";
 }
 
-if [ $GENERATE_CFGS_ONLY = true ] || [ -z "$NANOCFG" ]; then
-  if [ -z "$NANOCFG" ]; then
-    export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE}_${DATASET_ERA}_cfg.py";
-    read -p "Sure you want to use this config file: $NANOCFG? " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-      [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
-    fi
-    if [ ! -d $(dirname $NANOCFG) ]; then
-      mkdir -p $(dirname $NANOCFG);
-    fi
+if [ -z "$NANOCFG" ]; then
+  export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE}_${DATASET_ERA}_cfg.py";
+  read -p "Sure you want to use this config file: $NANOCFG? " -n 1 -r
+  echo
+  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
   fi
-  generate_cfgs;
+  if [ ! -d $(dirname $NANOCFG) ]; then
+    mkdir -p $(dirname $NANOCFG);
+  fi
+fi
+generate_cfgs;
+if [ $GENERATE_CFGS_ONLY = true ]; then
   exit 0;
 fi
 
@@ -291,15 +291,11 @@ cat $DATASET_FILE | while read LINE; do
   if [ "$DATASET_THIRD_PART" == "USER" ]; then
     echo "It's a privately produced sample";
     PRIVATE_DATASET_PATH=$(echo $LINE | awk '{print $6}');
-    if [[ "$PRIVATE_DATASET_PATH" != /hdfs/cms/* ]]; then
-      echo "The path to private datasets must start with /hdfs/cms";
+    if [[ "$PRIVATE_DATASET_PATH" != /cms/* ]]; then
+      echo "The path to private datasets must start with /cms";
       exit 1;
     fi
-    if [[ ! -d "$PRIVATE_DATASET_PATH" ]]; then
-      echo "Invalid path for dataset $DATASET: $PRIVATE_DATASET_PATH";
-      exit 1;
-    fi
-    export PRIVATE_DATASET_FILES=`find $PRIVATE_DATASET_PATH -type f -name '*.root'`;
+    export PRIVATE_DATASET_FILES=`JAVA_HOME="" hdfs dfs -ls $PRIVATE_DATASET_PATH | grep root$ | awk '{print $8}'`;
     if [ -z "$PRIVATE_DATASET_FILES" ]; then
       echo "No files found in $PRIVATE_DATASET_PATH";
       exit 1;
