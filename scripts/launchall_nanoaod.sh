@@ -181,14 +181,13 @@ from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructure
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR')\\n"
 
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
-                         --number=-1 --eventcontent $TIER --datatier $TIER --customise_commands=$CUSTOMISE_COMMANDS \
-                         --python_filename=$NANOCFG"
+                         --number=-1 --eventcontent $TIER --datatier $TIER --python_filename=$NANOCFG"
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
   fi
 
   echo "Generating the skeleton configuration file for CRAB $JOB_TYPE jobs: $NANOCFG";
-  cmsDriver.py $CMSDRIVER_OPTS;
+  cmsDriver.py $CMSDRIVER_OPTS --customise_commands="$CUSTOMISE_COMMANDS";
 }
 
 if [ $GENERATE_CFGS_ONLY = true ] || [ -z "$NANOCFG" ]; then
