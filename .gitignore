@@ -8,4 +8,4 @@ __init__.py*
 *.files
 *.includes
 *.creator.user*
-
+test/cfgs
