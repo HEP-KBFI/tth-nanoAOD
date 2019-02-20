@@ -8,33 +8,33 @@ export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSO
 export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
 export JSON_FILE_2018="" #TBA
 
-export AUTOCOND_DATA_2016_v2="80X_dataRun2_2016LegacyRepro_v4"
-export AUTOCOND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8"
+export COND_DATA_2016_v2="80X_dataRun2_2016LegacyRepro_v4"
+export COND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8"
 export ERA_ARGS_2016_v2="Run2_2016,run2_miniAOD_80XLegacy"
 export ERA_KEY_2016_v2="2016v2"
 export DATASET_ERA_2016_v2="RunIISummer16MiniAODv2"
 
-export AUTOCOND_DATA_2016_v3="94X_dataRun2_v10"
-export AUTOCOND_MC_2016_v3="94X_mcRun2_asymptotic_v3"
+export COND_DATA_2016_v3="94X_dataRun2_v10"
+export COND_MC_2016_v3="94X_mcRun2_asymptotic_v3"
 export ERA_ARGS_2016_v3="Run2_2016,run2_nanoAOD_94X2016"
 export ERA_KEY_2016_v3="2016v3"
 export DATASET_ERA_2016_v3="RunIISummer16MiniAODv3"
 
 # these GTs were taken from previous iteration of the analysis; no recommendation found!
-export AUTOCOND_DATA_2017_v1="94X_dataRun2_v6"
-export AUTOCOND_MC_2017_v1="94X_mc2017_realistic_v14"
+export COND_DATA_2017_v1="94X_dataRun2_v6"
+export COND_MC_2017_v1="94X_mc2017_realistic_v14"
 export ERA_ARGS_2017_v1="Run2_2017,run2_nanoAOD_94XMiniAODv1"
 export ERA_KEY_2017_v1="2017v1"
 export DATASET_ERA_2017_v1="RunIIFall17MiniAOD"
 
-export AUTOCOND_DATA_2017_v2="94X_dataRun2_v11"
-export AUTOCOND_MC_2017_v2="94X_mc2017_realistic_v17"
+export COND_DATA_2017_v2="94X_dataRun2_v11"
+export COND_MC_2017_v2="94X_mc2017_realistic_v17"
 export ERA_ARGS_2017_v2="Run2_2017,run2_nanoAOD_94XMiniAODv2"
 export ERA_KEY_2017_v2="2017v2"
 export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 
-export AUTOCOND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1"
-export AUTOCOND_MC_2018="102X_upgrade2018_realistic_v12"
+export COND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1"
+export COND_MC_2018="102X_upgrade2018_realistic_v12"
 export ERA_ARGS_2018="Run2_2018"
 export ERA_KEY_2018="2018"
 export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
@@ -94,36 +94,36 @@ if [ -z "$ERA" ]; then
 fi
 
 if [ "$ERA" == "$ERA_KEY_2016_v2" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2016_v2
-  export AUTOCOND_MC=$AUTOCOND_MC_2016_v2
+  export COND_DATA=$COND_DATA_2016_v2
+  export COND_MC=$COND_MC_2016_v2
   export ERA_ARGS=$ERA_ARGS_2016_v2
   export DATASET_ERA=$DATASET_ERA_2016_v2
   export JSON_FILE=$JSON_FILE_2016
   export YEAR="2016"
 elif [ "$ERA" == "$ERA_KEY_2016_v3" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2016_v3
-  export AUTOCOND_MC=$AUTOCOND_MC_2016_v3
+  export COND_DATA=$COND_DATA_2016_v3
+  export COND_MC=$COND_MC_2016_v3
   export ERA_ARGS=$ERA_ARGS_2016_v3
   export DATASET_ERA=$DATASET_ERA_2016_v3
   export JSON_FILE=$JSON_FILE_2016
   export YEAR="2016"
 elif [ "$ERA" == "$ERA_KEY_2017_v1" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2017_v1
-  export AUTOCOND_MC=$AUTOCOND_MC_2017_v1
+  export COND_DATA=$COND_DATA_2017_v1
+  export COND_MC=$COND_MC_2017_v1
   export ERA_ARGS=$ERA_ARGS_2017_v1
   export DATASET_ERA=$DATASET_ERA_2017_v1
   export JSON_FILE=$JSON_FILE_2017
   export YEAR="2017"
 elif [ "$ERA" == "$ERA_KEY_2017_v2" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2017_v2
-  export AUTOCOND_MC=$AUTOCOND_MC_2017_v2
+  export COND_DATA=$COND_DATA_2017_v2
+  export COND_MC=$COND_MC_2017_v2
   export ERA_ARGS=$ERA_ARGS_2017_v2
   export DATASET_ERA=$DATASET_ERA_2017_v2
   export JSON_FILE=$JSON_FILE_2017
   export YEAR="2017"
 elif [ "$ERA" == "$ERA_KEY_2018" ]; then
-  export AUTOCOND_DATA=$AUTOCOND_DATA_2018
-  export AUTOCOND_MC=$AUTOCOND_MC_2018
+  export COND_DATA=$COND_DATA_2018
+  export COND_MC=$COND_MC_2018
   export ERA_ARGS=$ERA_ARGS_2018
   export DATASET_ERA=$DATASET_ERA_2018
   export JSON_FILE=$JSON_FILE_2018
@@ -146,6 +146,7 @@ fi
 if [ -z "$DATASET_FILE" ]; then
   export DATASET_FILE="$BASE_DIR/test/datasets/txt/datasets_${JOB_TYPE}_${YEAR}_${DATASET_ERA}.txt";
   read -p "Sure you want to run NanoAOD production on samples defined in $DATASET_FILE? " -n 1 -r
+  echo
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
   fi
@@ -163,28 +164,24 @@ if [ -z "$YEAR" ]; then
 fi
 
 generate_cfgs() {
-  export CUSTOMISE_COMMANDS_DATA="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
-process.source.fileNames = cms.untracked.vstring()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
-from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
-from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, False,'$YEAR')\\n"
-  export CUSTOMISE_COMMANDS_MC="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
-process.source.fileNames = cms.untracked.vstring()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
-from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
-from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, True,'$YEAR')\\n"
-
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     TIER="NANOAOD"
-    AUTOCOND=$AUTOCOND_DATA;
-    CUSTOMISE_COMMANDS=$CUSTOMISE_COMMANDS_DATA
+    COND=$COND_DATA;
+    PY_IS_MC="False";
   else
-    AUTOCOND=$AUTOCOND_MC;
+    COND=$COND_MC;
     TIER="NANOAODSIM";
-    CUSTOMISE_COMMANDS=$CUSTOMISE_COMMANDS_MC
+    PY_IS_MC="True";
   fi
-  export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --no_exec --fileout=tree.root --number=-1 \
-                         --eventcontent $TIER --datatier $TIER --customise_commands=$CUSTOMISE_COMMANDS \
+
+  export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
+process.source.fileNames = cms.untracked.vstring()\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR')\\n"
+
+  export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
+                         --number=-1 --eventcontent $TIER --datatier $TIER --customise_commands=$CUSTOMISE_COMMANDS \
                          --python_filename=$NANOCFG"
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
@@ -198,6 +195,7 @@ if [ $GENERATE_CFGS_ONLY = true ] || [ -z "$NANOCFG" ]; then
   if [ -z "$NANOCFG" ]; then
     export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE}_${DATASET_ERA}_cfg.py";
     read -p "Sure you want to use this config file: $NANOCFG? " -n 1 -r
+    echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
       [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
     fi
