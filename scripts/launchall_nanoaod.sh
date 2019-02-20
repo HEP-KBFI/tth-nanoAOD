@@ -143,7 +143,7 @@ if [ "$JOB_TYPE" != "$TYPE_DATA" ] && [ "$JOB_TYPE" != "$TYPE_MC" ] && [ "$JOB_T
   exit 1;
 fi
 
-if [ ! -z "$DATASET_FILE" ]; then
+if [ -z "$DATASET_FILE" ]; then
   export DATASET_FILE="$BASE_DIR/test/datasets/txt/datasets_${JOB_TYPE}_${YEAR}_${DATASET_ERA}.txt";
   read -p "Sure you want to run NanoAOD production on samples defined in $DATASET_FILE? " -n 1 -r
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
@@ -157,7 +157,7 @@ if [ -z "$NANOAOD_VER" ]; then
   export NANOAOD_VER="NanoAOD_${ERA}_`date '+%Y%b%d'`";
 fi
 
-if [ ! -z "$YEAR" ]; then
+if [ -z "$YEAR" ]; then
   echo "Year not set";
   exit 1;
 fi
@@ -194,8 +194,8 @@ from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK
   cmsDriver.py $CMSDRIVER_OPTS;
 }
 
-if [ $GENERATE_CFGS_ONLY = true ] || [ ! -z "$NANOCFG" ]; then
-  if [ ! -z "$NANOCFG" ]; then
+if [ $GENERATE_CFGS_ONLY = true ] || [ -z "$NANOCFG" ]; then
+  if [ -z "$NANOCFG" ]; then
     export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE}_${DATASET_ERA}_cfg.py";
     read -p "Sure you want to use this config file: $NANOCFG? " -n 1 -r
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
