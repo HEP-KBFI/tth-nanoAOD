@@ -176,9 +176,11 @@ generate_cfgs() {
 
   export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
 process.source.fileNames = cms.untracked.vstring()\\n\
+#process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
 from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
-from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR')\\n"
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR')\\n\
+from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False)\\n"
 
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
                          --number=-1 --eventcontent $TIER --datatier $TIER --python_filename=$NANOCFG"
