@@ -4,6 +4,7 @@ import json
 import argparse
 import os
 import collections
+import copy
 
 def get_year(campaign_str):
   campaigns = [ '16', '17', '18' ]
@@ -85,8 +86,7 @@ parser.add_argument(
 )
 parser.add_argument(
   '-o', '--output', dest = 'output', metavar = 'directory', required = False, type = str,
-  #default = os.path.join(os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'datasets', 'txt'),
-  default = os.path.join('test', 'datasets', 'txt'),
+  default = os.path.join(os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'datasets', 'txt'),
   help = 'R|Output directory where the dataset tables will be stored',
 )
 args = parser.parse_args()
@@ -105,6 +105,7 @@ table = collections.OrderedDict([
   ('fast',    collections.OrderedDict()),
   ('private', collections.OrderedDict()),
 ])
+sums = collections.OrderedDict()
 
 eras_initialized = False
 
@@ -127,13 +128,16 @@ for category_entry in json_data:
       for era in sample_entry['datasets']:
           for mc_type in table:
             table[mc_type][era] = []
+            sums[era] = []
       eras_initialized = True
 
     for era in sample_entry['datasets']:
+      sum_entry  = []
       for dataset_entry in sample_entry['datasets'][era]:
         dbs = dataset_entry['dbs']
         dataset_name = dataset_entry['alt'] if 'alt' in dataset_entry else sample_name
         location = dataset_entry['loc'] if 'loc' in dataset_entry else ''
+        sum_entry.append(dataset_name)
 
         mc_type = 'mc'
         if dbs.endswith('/USER'):
@@ -156,6 +160,8 @@ for category_entry in json_data:
             ('loc',          location),
           ])
         )
+      if len(sum_entry) > 1:
+        sums[era].append(sum_entry)
 
 for mc_type in table:
   for era in table[mc_type]:
@@ -174,3 +180,30 @@ for mc_type in table:
 
     file_name = os.path.join(output_dirname, file_name_base)
     write_datasets(table[mc_type][era], file_name)
+
+for era in sums:
+  if not sums[era]:
+    continue
+
+  file_name_base = 'sum_{base}_{year}_{campaign}.txt'.format(
+    base     = os.path.splitext(os.path.basename(input_filename))[0],
+    year     = get_year(era),
+    campaign = era,
+  )
+
+  file_name = os.path.join(output_dirname, file_name_base)
+
+  max_col_lens = {
+    n : max(map(lambda x: len(x[n]) if n < len(x) else 0, sums[era])) \
+        for n in range(max(map(lambda y: len(y), sums[era])))
+  }
+
+  with open(file_name, 'w') as f:
+    for sum_entry in sums[era]:
+      f.write(
+        '%s\n' % \
+        ' '.join(map(
+          lambda x: ('%s%s' % (x[1], ' ' * (max_col_lens[x[0]] - len(x[1])) if x[0] < len(sum_entry) - 1 else '')),
+          enumerate(sum_entry)
+        ))
+      )
