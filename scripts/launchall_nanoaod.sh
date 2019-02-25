@@ -300,10 +300,11 @@ cat $DATASET_FILE | while read LINE; do
   if [ "$DATASET_THIRD_PART" == "USER" ]; then
     echo "It's a privately produced sample";
     PRIVATE_DATASET_PATH=$(echo $LINE | awk '{print $6}');
-    if [[ "$PRIVATE_DATASET_PATH" != /cms/* ]]; then
-      echo "The path to private datasets must start with /cms";
+    if [[ "$PRIVATE_DATASET_PATH" != /store/* ]]; then
+      echo "The path to private datasets must start with /store";
       exit 1;
     fi
+    PRIVATE_DATASET_PATH="/cms${PRIVATE_DATASET_PATH}"
     export PRIVATE_DATASET_FILES=`JAVA_HOME="" hdfs dfs -ls $PRIVATE_DATASET_PATH | grep root$ | awk '{print $8}'`;
     if [ -z "$PRIVATE_DATASET_FILES" ]; then
       echo "No files found in $PRIVATE_DATASET_PATH";
