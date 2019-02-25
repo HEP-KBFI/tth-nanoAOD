@@ -180,6 +180,70 @@
     ]
   },
   {
+    "category": "signal_ggf_spin0_320_hh_tttt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_320_hh_4t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4tau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4Tau_M-320_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.003934,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_340_hh_tttt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_340_hh_4t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4tau (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4Tau_M-340_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.003934,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_ggf_spin0_350_hh_tttt",
     "comment": "",
     "samples": [
@@ -231,7 +295,13 @@
             }
           ],
           "RunIISummer16MiniAODv3": [],
-          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/HHTo4T_madgraph_pythia8_CP5_M400/private/USER",
+              "alt": "signal_ggf_spin0_400_hh_4t_private",
+              "loc": "/store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M400"
+            }
+          ],
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/GluGluToRadionToHHTo4Tau_M-400_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
@@ -447,7 +517,13 @@
             }
           ],
           "RunIISummer16MiniAODv3": [],
-          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/HHTo4T_madgraph_pythia8_CP5_M700/private/USER",
+              "alt": "signal_ggf_spin0_700_hh_4t_private",
+              "loc": "/store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M700"
+            }
+          ],
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/GluGluToRadionToHHTo4Tau_M-700_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
@@ -1112,65 +1188,137 @@
     ]
   },
   {
-    "category": "signal_ggf_spin0_320_hh_tttt",
+    "category": "signal_ggf_spin0_400_hh_wwtt",
     "comment": "",
     "samples": [
       {
-        "name": "signal_ggf_spin0_320_hh_4t",
+        "name": "signal_ggf_spin0_400_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "BR(W -> l nu) taken from http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+        "process": "HH -> 2W2tau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [
             {
-              "dbs": "/GluGluToRadionToHHTo4Tau_M-320_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+              "dbs": "/HHTo2T2V_madgraph_pythia8_CP5_M400/private/USER",
+              "alt": "signal_ggf_spin0_400_hh_2v2t_private",
+              "loc": "/store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M400"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
-          "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.003934,
+          "value": 0.030092,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
           ],
-          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+          "comment": "normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989"
         }
       }
     ]
   },
   {
-    "category": "signal_ggf_spin0_340_hh_tttt",
+    "category": "signal_ggf_spin0_700_hh_wwtt",
     "comment": "",
     "samples": [
       {
-        "name": "signal_ggf_spin0_340_hh_4t",
+        "name": "signal_ggf_spin0_700_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "BR(W -> l nu) taken from http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+        "process": "HH -> 2W2tau (GGF)",
         "datasets": {
-          "RunIISummer16MiniAODv2": [
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [
             {
-              "dbs": "/GluGluToRadionToHHTo4Tau_M-340_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+              "dbs": "/HHTo2T2V_madgraph_pythia8_CP5_M700/private/USER",
+              "alt": "signal_ggf_spin0_700_hh_2v2t_private",
+              "loc": "/store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M700"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
-          "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.003934,
+          "value": 0.030092,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
           ],
-          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+          "comment": "normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_400_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_400_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4V (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/HHTo4V_madgraph_pythia8_CP5_M400/private/USER",
+              "alt": "signal_ggf_spin0_400_hh_4v_private",
+              "loc": "/store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M400"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_700_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_700_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4V (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/HHTo4V_madgraph_pythia8_CP5_M700/private/USER",
+              "alt": "signal_ggf_spin0_700_hh_4v_private",
+              "loc": "/store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M700"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989"
         }
       }
     ]
