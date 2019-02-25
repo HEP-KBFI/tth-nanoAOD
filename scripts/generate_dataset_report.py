@@ -4,6 +4,7 @@ import json
 import jinja2
 import datetime
 import argparse
+import os
 
 HTML_TEMPLATE = """
 <!DOCTYPE html>
@@ -360,8 +361,12 @@ parser.add_argument(
   help = 'R|Input JSON file containing datasets',
 )
 parser.add_argument(
-  '-o', '--output', dest = 'output', metavar = 'file', required = False, type = str, default = 'datasets.html',
+  '-o', '--output', dest = 'output', metavar = 'file', required = False, type = str,
   help = 'R|Output HTML file',
+)
+parser.add_argument(
+  '-d', '--directory', dest = 'directory', metavar = 'directory', required = False, type = str, default = '.',
+  help = 'R|Output directory',
 )
 parser.add_argument(
   '-e', '--eras', dest = 'eras', metavar = 'eras', required = False, type = str, nargs = '+',
@@ -375,8 +380,16 @@ args = parser.parse_args()
 
 input_filename = args.input
 output_filename = args.output
+output_dirname = os.path.abspath(os.path.expanduser(args.directory))
 important_eras = args.eras
 
+if not output_filename:
+  output_filename = '%s.html' % os.path.splitext(os.path.basename(input_filename))[0]
+
+if not os.path.isdir(output_dirname):
+  raise ValueError('No such directory: %s' % args.directory)
+
+output_filename = os.path.join(output_dirname, output_filename)
 
 with open(input_filename, 'r') as f:
   json_data = json.load(f)
