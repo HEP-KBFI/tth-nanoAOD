@@ -199,18 +199,22 @@ ROW_TEMPLATE = """
       {% endif %}
       <td>
         <span class="dbs">
-          {{dataset}}
+          {{dataset[0]}}
         </span>
         <span class="links">
-          [
-          <a class="link" href="https://cmsweb.cern.ch/das/request?input={{dataset}}">
-            DAS
-          </a>]
-          [
-          <a class="link" href="https://cms-pdmv.cern.ch/mcm/requests?produce={{dataset}}">
-            PdmV
-          </a>
-          ]
+          {% if not dataset[0].endswith('/USER') %}
+            [
+            <a class="link" href="https://cmsweb.cern.ch/das/request?input={{dataset[0]}}">
+              DAS
+            </a>]
+            [
+            <a class="link" href="https://cms-pdmv.cern.ch/mcm/requests?produce={{dataset[0]}}">
+              PdmV
+            </a>
+            ]
+          {% else %}
+              [privately produced {% if dataset[1] %}FastSim{% else %}FullSim{% endif %} sample]
+          {% endif %}
         </span>
       </td>
     </tr>
@@ -331,7 +335,7 @@ def generate_table(sample, important_eras):
     rows.append(
       jinja2.Template(ROW_TEMPLATE).render(
         era = era,
-        datasets = list(map(lambda x: x['dbs'], sample['datasets'][era])),
+        datasets = list(map(lambda x: (x['dbs'], 'fastsim' in x['alt'] if 'alt' in x else False), sample['datasets'][era])),
         is_important = is_important
       )
     )
