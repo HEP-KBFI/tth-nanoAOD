@@ -149,19 +149,19 @@ ElectronRemovalForBoostProducer::produce(edm::Event& iEvent, const edm::EventSet
 
      // Additional selection
      if (! (((fabs(e.superCluster()->eta()) < 1.4442 && 
-	      e.full5x5_sigmaIetaIeta() < 0.012 && 
-	      e.hcalOverEcal() < 0.09 && 
-	      (e.ecalPFClusterIso() / e.pt()) < 0.37 && 
-	      (e.hcalPFClusterIso() / e.pt()) < 0.25 && 
-	      (e.dr03TkSumPt() / e.pt()) < 0.18 && 
-	      fabs(e.deltaEtaSuperClusterTrackAtVtx()) < 0.0095 && 
-	      fabs(e.deltaPhiSuperClusterTrackAtVtx()) < 0.065 ) || 
-	   (fabs(e.superCluster()->eta()) > 1.5660 && 
-	      e.full5x5_sigmaIetaIeta() < 0.033 && 
-	      e.hcalOverEcal() <0.09 && 
-	      (e.ecalPFClusterIso() / e.pt()) < 0.45 && 
-	      (e.hcalPFClusterIso() / e.pt()) < 0.28 && 
-	    (e.dr03TkSumPt() / e.pt()) < 0.18 )))){
+              e.full5x5_sigmaIetaIeta() < 0.012 && 
+              e.hcalOverEcal() < 0.09 && 
+              (e.ecalPFClusterIso() / e.pt()) < 0.37 && 
+              (e.hcalPFClusterIso() / e.pt()) < 0.25 && 
+              (e.dr03TkSumPt() / e.pt()) < 0.18 && 
+              fabs(e.deltaEtaSuperClusterTrackAtVtx()) < 0.0095 && 
+              fabs(e.deltaPhiSuperClusterTrackAtVtx()) < 0.065 ) || 
+           (fabs(e.superCluster()->eta()) > 1.5660 && 
+              e.full5x5_sigmaIetaIeta() < 0.033 && 
+              e.hcalOverEcal() <0.09 && 
+              (e.ecalPFClusterIso() / e.pt()) < 0.45 && 
+              (e.hcalPFClusterIso() / e.pt()) < 0.28 && 
+            (e.dr03TkSumPt() / e.pt()) < 0.18 )))){
        //std::cout << ie << " killed by extra selection" << std::endl;
        continue;
      }

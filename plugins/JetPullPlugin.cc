@@ -41,7 +41,7 @@ class JetPullPlugin : public JetExtendedPluginBase
     double averageDPhi = 0.;
     double sumWeights_1 = 0.;
     for ( std::vector<const reco::Candidate*>::const_iterator jetConstituent = jetConstituents.begin();
-	  jetConstituent != jetConstituents.end(); ++jetConstituent ) {
+          jetConstituent != jetConstituents.end(); ++jetConstituent ) {
       double jetConstituentPt = (*jetConstituent)->pt();
       double dEta = (*jetConstituent)->eta() - jetEta;
       double dPhi = deltaPhi((*jetConstituent)->phi(), jetPhi); 
@@ -58,7 +58,7 @@ class JetPullPlugin : public JetExtendedPluginBase
     double sumDPhi = 0.;
     double sumWeights_2 = 0.;
     for ( std::vector<const reco::Candidate*>::const_iterator jetConstituent = jetConstituents.begin();
-	  jetConstituent != jetConstituents.end(); ++jetConstituent ) {
+          jetConstituent != jetConstituents.end(); ++jetConstituent ) {
       double jetConstituentPt = (*jetConstituent)->pt();
       // CV: subtract average dEta and average dPhi, following https://github.com/amarini/VPlusJets/blob/master/plugins/JetExtendedProducer.cc#L292-L293 
       double dEta = ((*jetConstituent)->eta() - jetEta) - averageDEta; 

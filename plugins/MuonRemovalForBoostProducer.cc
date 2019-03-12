@@ -116,28 +116,28 @@ MuonRemovalForBoostProducer::produce(edm::Event& iEvent, const edm::EventSetup& 
      // |eta| < 2.4
      if (! (fabs(mu.eta())<2.4)){
        if (debug)
-	 std::cout << "Muon " << imu << " killed by eta" << std::endl;
+         std::cout << "Muon " << imu << " killed by eta" << std::endl;
        continue;
      }
 
      //  pT > 15
      if (! (mu.pt()>15)){
        if (debug)
-	 std::cout << "Muon " << imu << " killed by pt" << std::endl;
+         std::cout << "Muon " << imu << " killed by pt" << std::endl;
        continue;
      }
 
      // Isolation
      if (! ((mu.pfIsolationR04().sumChargedHadronPt + std::max( mu.pfIsolationR04().sumNeutralHadronEt + mu.pfIsolationR04().sumPhotonEt - 0.5 * mu.pfIsolationR04().sumPUPt,0.0)) / mu.pt() < 0.25)){
        if (debug)
-	 std::cout << "Muon " << imu << " killed by isolation" << std::endl;
+         std::cout << "Muon " << imu << " killed by isolation" << std::endl;
        continue;
      }
 
      // Tight Muon ID
      if (! (mu.isTightMuon(input_vtxs->at(0)))){
        if (debug)
-	 std::cout << "Muon " << imu << " killed by ID" << std::endl;
+         std::cout << "Muon " << imu << " killed by ID" << std::endl;
        continue;       
      }
 

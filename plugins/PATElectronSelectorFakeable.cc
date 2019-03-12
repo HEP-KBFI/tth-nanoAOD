@@ -59,32 +59,32 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
     switch ( era_ ) {
       case kEra_2016: {
-	min_pt_ = 10.;
-	binning_absEta_ = { 0.8, 1.479 };
-	min_pt_trig_ = 30.;
-	max_sigmaEtaEta_trig_ = { 0.011, 0.011, 0.030 };
-	max_HoE_trig_ = { 0.10, 0.10, 0.07 };
-	max_deltaEta_trig_ = { 0.01, 0.01, 0.008 };
-	max_deltaPhi_trig_ = { 0.04, 0.04, 0.07 };
-	min_OoEminusOoP_trig_ = -0.05;
-	max_OoEminusOoP_trig_ = { 0.010, 0.010, 0.005 };
-	binning_mvaTTH_ = { 0.75 };
-	min_mvaIDraw_ = { -1.e+3, -1.e+3 };
-	break;
+        min_pt_ = 10.;
+        binning_absEta_ = { 0.8, 1.479 };
+        min_pt_trig_ = 30.;
+        max_sigmaEtaEta_trig_ = { 0.011, 0.011, 0.030 };
+        max_HoE_trig_ = { 0.10, 0.10, 0.07 };
+        max_deltaEta_trig_ = { 0.01, 0.01, 0.008 };
+        max_deltaPhi_trig_ = { 0.04, 0.04, 0.07 };
+        min_OoEminusOoP_trig_ = -0.05;
+        max_OoEminusOoP_trig_ = { 0.010, 0.010, 0.005 };
+        binning_mvaTTH_ = { 0.75 };
+        min_mvaIDraw_ = { -1.e+3, -1.e+3 };
+        break;
       }
       case kEra_2017: {
-	min_pt_ = 7.;
-	binning_absEta_ = { 1.479 }; 
-	min_pt_trig_ = -1.; // LFR sync; used to be 30 GeV (cf. lines 237-240 in AN-2017/029 v5)
-	max_sigmaEtaEta_trig_ = { 0.011, 0.030 };
-	max_HoE_trig_ = { 0.10, 0.10 }; 
-	max_deltaEta_trig_ = { +1.e+3, +1.e+3 }; 
-	max_deltaPhi_trig_ = { +1.e+3, +1.e+3 };
-	min_OoEminusOoP_trig_ = -0.04; 
-	max_OoEminusOoP_trig_ = { +1.e+3, +1.e+3 }; 
-	binning_mvaTTH_ = { 0.90 }; 
-	min_mvaIDraw_ = { 0.50, -1.e+3 }; 
-	break;
+        min_pt_ = 7.;
+        binning_absEta_ = { 1.479 }; 
+        min_pt_trig_ = -1.; // LFR sync; used to be 30 GeV (cf. lines 237-240 in AN-2017/029 v5)
+        max_sigmaEtaEta_trig_ = { 0.011, 0.030 };
+        max_HoE_trig_ = { 0.10, 0.10 }; 
+        max_deltaEta_trig_ = { +1.e+3, +1.e+3 }; 
+        max_deltaPhi_trig_ = { +1.e+3, +1.e+3 };
+        min_OoEminusOoP_trig_ = -0.04; 
+        max_OoEminusOoP_trig_ = { +1.e+3, +1.e+3 }; 
+        binning_mvaTTH_ = { 0.90 }; 
+        min_mvaIDraw_ = { 0.50, -1.e+3 }; 
+        break;
       }      
       //case kEra_2018: {
       //
@@ -117,113 +117,113 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     for ( size_t inputElectrons_idx = 0; inputElectrons_idx < inputElectrons->size(); ++inputElectrons_idx ) {
       edm::Ptr<pat::Electron> electron = inputElectrons->ptrAt(inputElectrons_idx);
       if ( electron->pt() < min_pt_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
+        }
+        continue;
       }
       double absEta = std::fabs(electron->eta());
       if ( absEta > max_absEta_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
+        }
+        continue;
       }
       if ( std::fabs(electron->dB(pat::Electron::PV2D)) > max_dxy_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
+        }
+        continue;
       }
       if ( std::fabs(electron->dB(pat::Electron::PVDZ)) > max_dz_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
+        }
+        continue;
       }
       if ( electron->userFloat("miniIsoAll") > (max_relIso_*electron->pt()) ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
+        }
+        continue;
       }
       if ( std::fabs(electron->dB(pat::Electron::PV3D)/electron->edB(pat::Electron::PV3D)) > max_sip3d_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
+        }
+        continue;
       }
       if ( electron->gsfTrack().isNull() || electron->gsfTrack()->hitPattern().numberOfLostHits(reco::HitPattern::MISSING_INNER_HITS) > max_nLostHits_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS nLostHits <= " << max_nLostHits_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS nLostHits <= " << max_nLostHits_ << " cut\n";
+        }
+        continue;
       }
       if ( apply_conversionVeto_ && !electron->passConversionVeto() ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS conversion veto\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS conversion veto\n";
+        }
+        continue;
       }
       if ( !electron->userInt("mvaFall17V1noIso_WPL") ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS EGamma POG MVA cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS EGamma POG MVA cut\n";
+        }
+        continue;
       }
       double mvaTTH = (*inputElectrons_mvaTTH)[electron];
       const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
       if ( electron->userFloat("mvaFall17V1noIso") < min_mvaIDraw_[idxBin_mvaTTH] ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS EGamma POG MVA raw >= " << min_mvaIDraw_[idxBin_mvaTTH] << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS EGamma POG MVA raw >= " << min_mvaIDraw_[idxBin_mvaTTH] << " cut\n";
+        }
+        continue;
       }
       if ( apply_offline_e_trigger_cuts_ && electron->pt() > min_pt_trig_ ) {
-	std::size_t idxBin_absEta = binning_absEta_.size();
-	for ( std::size_t binning_absEta_idx = 0; binning_absEta_idx < binning_absEta_.size(); ++binning_absEta_idx ) {
-	  if ( absEta <= binning_absEta_[binning_absEta_idx] ) {
-	    idxBin_absEta = binning_absEta_idx;
-	    break;
-	  }
-	}
-	if ( electron->full5x5_sigmaIetaIeta() > max_sigmaEtaEta_trig_[idxBin_absEta] ) {
-	  if ( debug_ ) {
-	    std::cout << "FAILS sigmaEtaEta <= " << max_sigmaEtaEta_trig_[idxBin_absEta] << " cut\n";
-	  }
-	  continue;
-	}
-	if ( electron->hadronicOverEm() > max_HoE_trig_[idxBin_absEta] ) {
-	  if ( debug_ ) {
-	    std::cout << "FAILS HoE <= " << max_HoE_trig_[idxBin_absEta] << " cut\n";
-	  }
-	  continue;
-	}
-	if ( std::fabs(electron->deltaEtaSuperClusterTrackAtVtx()) > max_deltaEta_trig_[idxBin_absEta] ) {
-	  if ( debug_ ) {
-	    std::cout << "FAILS abs(deltaEta) <= " << max_deltaEta_trig_[idxBin_absEta] << " cut\n";
-	  }
-	  continue;
-	}
-	if ( std::fabs(electron->deltaPhiSuperClusterTrackAtVtx()) > max_deltaPhi_trig_[idxBin_absEta] ) {
-	  if ( debug_ ) {
-	    std::cout << "FAILS abs(deltaPhi) <= " << max_deltaPhi_trig_[idxBin_absEta] << " cut\n";
-	  }
-	  continue;
-	}
-	double OoEminusOoP = (1 - electron->eSuperClusterOverP())/electron->ecalEnergy();
-	if ( OoEminusOoP < min_OoEminusOoP_trig_ ) {
-	  if ( debug_ ) {
-	    std::cout << "FAILS OoEminusOoP >= " << min_OoEminusOoP_trig_ << " cut\n";
-	  }
-	  continue;
-	}
-	if ( OoEminusOoP > max_OoEminusOoP_trig_[idxBin_absEta] ) {
-	  if ( debug_ ) {
-	    std::cout << "FAILS OoEminusOoP <= " << max_OoEminusOoP_trig_[idxBin_absEta] << " cut\n";
-	  }
-	  continue;
-	}
+        std::size_t idxBin_absEta = binning_absEta_.size();
+        for ( std::size_t binning_absEta_idx = 0; binning_absEta_idx < binning_absEta_.size(); ++binning_absEta_idx ) {
+          if ( absEta <= binning_absEta_[binning_absEta_idx] ) {
+            idxBin_absEta = binning_absEta_idx;
+            break;
+          }
+        }
+        if ( electron->full5x5_sigmaIetaIeta() > max_sigmaEtaEta_trig_[idxBin_absEta] ) {
+          if ( debug_ ) {
+            std::cout << "FAILS sigmaEtaEta <= " << max_sigmaEtaEta_trig_[idxBin_absEta] << " cut\n";
+          }
+          continue;
+        }
+        if ( electron->hadronicOverEm() > max_HoE_trig_[idxBin_absEta] ) {
+          if ( debug_ ) {
+            std::cout << "FAILS HoE <= " << max_HoE_trig_[idxBin_absEta] << " cut\n";
+          }
+          continue;
+        }
+        if ( std::fabs(electron->deltaEtaSuperClusterTrackAtVtx()) > max_deltaEta_trig_[idxBin_absEta] ) {
+          if ( debug_ ) {
+            std::cout << "FAILS abs(deltaEta) <= " << max_deltaEta_trig_[idxBin_absEta] << " cut\n";
+          }
+          continue;
+        }
+        if ( std::fabs(electron->deltaPhiSuperClusterTrackAtVtx()) > max_deltaPhi_trig_[idxBin_absEta] ) {
+          if ( debug_ ) {
+            std::cout << "FAILS abs(deltaPhi) <= " << max_deltaPhi_trig_[idxBin_absEta] << " cut\n";
+          }
+          continue;
+        }
+        double OoEminusOoP = (1 - electron->eSuperClusterOverP())/electron->ecalEnergy();
+        if ( OoEminusOoP < min_OoEminusOoP_trig_ ) {
+          if ( debug_ ) {
+            std::cout << "FAILS OoEminusOoP >= " << min_OoEminusOoP_trig_ << " cut\n";
+          }
+          continue;
+        }
+        if ( OoEminusOoP > max_OoEminusOoP_trig_[idxBin_absEta] ) {
+          if ( debug_ ) {
+            std::cout << "FAILS OoEminusOoP <= " << max_OoEminusOoP_trig_[idxBin_absEta] << " cut\n";
+          }
+          continue;
+        }
       }
       // CV: electron passes all cuts
       outputElectrons->push_back(*electron);
