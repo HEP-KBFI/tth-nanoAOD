@@ -18,6 +18,38 @@
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "file": "/local/karl/store/mc/RunIIAutumn18MiniAOD/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v2/270000/1B617532-5011-4548-AEF8-72BAEC87AE9D.root"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.2118,
+          "order": "NLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
+          ],
+          "comment": ""
+        }
+      },
+      {
+        "name": "ttHJetToNonbb_M125_amcatnlo",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "ttH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "file": "/local/karl/store/mc/RunIIFall17MiniAODv2/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/20000/16DF8D68-9C42-E811-8E02-A4BF0112BCF8.root"
+            }
+          ],
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
