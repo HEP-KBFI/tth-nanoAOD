@@ -6,7 +6,7 @@
 
 export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
 export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
-export JSON_FILE_2018="" #TBA
+export JSON_FILE_2018="Cert_314472-325175_13TeV_EarlyReReco2018ABC_Collisions18_JSON.txt"
 
 export COND_DATA_2016_v2="80X_dataRun2_2016LegacyRepro_v4"
 export COND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8"
@@ -139,7 +139,7 @@ elif [ "$ERA" == "$ERA_KEY_2018" ]; then
   export DATASET_ERA=$DATASET_ERA_2018
   export JSON_FILE=$JSON_FILE_2018
   export YEAR="2018"
-  echo "Era $ERA yet not supported";
+  echo "Era $ERA yet not supported (era disabled in plugins)";
   exit 1;
 else
   echo "Invalid era: $ERA";
