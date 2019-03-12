@@ -41,6 +41,10 @@ export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
+export NOF_EVENTS="-1"
+export REPORT_FREQUENCY=1000
+export NTHREADS=1
+
 GENERATE_CFGS_ONLY=false
 DRYRUN=""
 export DATASET_FILE=""
@@ -50,15 +54,16 @@ export JOB_TYPE=""
 TYPE_DATA="data"
 TYPE_MC="mc"
 TYPE_FAST="fast"
+TYPE_SYNC="sync"
 
 show_help() {
   echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-c <cfg>] [-v version] [-w whitelist]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018" 1>&2;
-  echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST"
+  echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
 }
 
-while getopts "h?dgf:c:j:e:v:w:p:" opt; do
+while getopts "h?dgf:c:j:e:v:w:p:n:r:t:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -77,6 +82,12 @@ while getopts "h?dgf:c:j:e:v:w:p:" opt; do
   v) export NANOAOD_VER=${OPTARG}
      ;;
   w) export WHITELIST=${OPTARG}
+     ;;
+  n) export NOF_EVENTS=${OPTARG}
+     ;;
+  r) export REPORT_FREQUENCY=${OPTARG}
+     ;;
+  t) export NTHREADS=${OPTARG}
      ;;
   esac
 done
@@ -138,7 +149,10 @@ export BASE_DIR="$CMSSW_BASE/src/tthAnalysis/NanoAOD"
 export JSON_LUMI="$BASE_DIR/data/$JSON_FILE"
 export CRAB_CFG="$BASE_DIR/test/crab_cfg.py"
 
-if [ "$JOB_TYPE" != "$TYPE_DATA" ] && [ "$JOB_TYPE" != "$TYPE_MC" ] && [ "$JOB_TYPE" != "$TYPE_FAST" ]; then
+if [ "$JOB_TYPE" != "$TYPE_DATA" ] && \
+   [ "$JOB_TYPE" != "$TYPE_MC" ]   && \
+   [ "$JOB_TYPE" != "$TYPE_FAST" ] && \
+   [ "$JOB_TYPE" != "$TYPE_SYNC" ]; then
   echo "Invalid job type: $JOB_TYPE";
   exit 1;
 fi
@@ -153,6 +167,17 @@ if [ -z "$DATASET_FILE" ]; then
 fi
 
 check_if_exists "$DATASET_FILE"
+
+JOB_TYPE_NAME=$JOB_TYPE
+if [ "$JOB_TYPE" == "$TYPE_SYNC" ]; then
+  JOB_TYPE=$TYPE_MC;
+  GENERATE_CFGS_ONLY=true;
+else
+  if [ "$NOF_EVENTS" != "-1" ]; then
+    echo "You can set the number of events to other value than -1 only if you are running in $TYPE_SYNC mode"
+    exit 1;
+  fi
+fi
 
 if [ -z "$NANOAOD_VER" ]; then
   export NANOAOD_VER="NanoAOD_${ERA}_`date '+%Y%b%d'`";
@@ -174,10 +199,34 @@ generate_cfgs() {
     PY_IS_MC="True";
   fi
 
+  INPUT_FILE=""
+  if [ "$JOB_TYPE_NAME" == "$TYPE_SYNC" ]; then
+
+    INPUT_FILE=$(cat $DATASET_FILE | grep "^/" | awk '{print $5}')
+    if [ $(echo $INPUT_FILE | wc -l) != "1" ]; then
+      echo "Invalid file: $DATASET_FILE";
+      exit 1;
+    fi
+
+    if [[ $INPUT_FILE =~ ^/local/ ]] || [[ $INPUT_FILE =~ ^/cms/ ]]; then
+      if [[ $(JAVA_HOME="" hdfs dfs -ls $INPUT_FILE | grep $INPUT_FILE | wc -l) == "1" ]]; then
+        INPUT_FILE="'file:///hdfs$INPUT_FILE'";
+      else
+        echo "No such file found on /hdfs: $INPUT_FILE";
+        exit 1;
+      fi
+    elif [[ "$INPUT_FILE" =~ ^/store/ ]]; then
+      INPUT_FILE="'root://cms-xrd-global.cern.ch/$INPUT_FILE'";
+    else
+      echo "Invalid file name: $INPUT_FILE";
+      exit 1;
+    fi
+  fi
+
   CMSSW_GIT_STATUS=$(git -C $CMSSW_BASE/src log -n1 --format="%D %H %cd")
   NANOAOD_GIT_STATUS=$(git -C $BASE_DIR log -n1 --format="%D %H %cd")
-  export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = 1000\\n\
-process.source.fileNames = cms.untracked.vstring()\\n\
+  export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = $REPORT_FREQUENCY\\n\
+process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
 from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
@@ -190,7 +239,8 @@ print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
 print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n"
 
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
-                         --number=-1 --eventcontent $TIER --datatier $TIER --python_filename=$NANOCFG"
+                         --number=$NOF_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
+                         --python_filename=$NANOCFG"
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
   fi
@@ -200,7 +250,7 @@ print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n"
 }
 
 if [ -z "$NANOCFG" ]; then
-  export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE}_${DATASET_ERA}_cfg.py";
+  export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_cfg.py";
   read -p "Sure you want to use this config file: $NANOCFG? " -n 1 -r
   echo
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then

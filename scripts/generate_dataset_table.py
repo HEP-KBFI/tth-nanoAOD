@@ -4,7 +4,6 @@ import json
 import argparse
 import os
 import collections
-import copy
 
 def get_year(campaign_str):
   campaigns = [ '16', '17', '18' ]
@@ -23,6 +22,7 @@ def write_datasets(entries, file_name):
   max_category_width = get_width(entries, 'category')
   max_process_width = get_width(entries, 'process_name')
   max_loc_width = get_width(entries, 'loc')
+  max_filename_width = get_width(entries, 'filename')
   max_xs_head = max(map(lambda x: len(str(x['xs_value']).split('.')[0]), entries))
   max_xs_tail = max(map(lambda x: len(str(x['xs_value']).split('.')[1]), entries))
 
@@ -39,6 +39,7 @@ def write_datasets(entries, file_name):
       entry['category_width'] = max_category_width
       entry['process_width'] = max_process_width
       entry['loc_width'] = max_loc_width
+      entry['filename_width'] = max_filename_width
 
       xs_str = str(entry['xs_value'])
       xs_split = xs_str.split('.')
@@ -54,6 +55,8 @@ def write_datasets(entries, file_name):
       line = '{dbs:<{dbs_width}} {enabled} {category:<{category_width}} {process_name:<{process_width}} '.format(**entry)
       if entry['loc']:
         line += '{loc:<{loc_width}} '.format(**entry)
+      if entry['filename']:
+        line += '{filename:<{filename_width}} '.format(**entry)
       line +='{xs_head_padding}{xs_value}{xs_tail_padding} # {xs_order}{refs}'.format(**entry)
       if entry['xs_comment']:
         line += '; {xs_comment}'.format(**entry)
@@ -137,6 +140,7 @@ for category_entry in json_data:
         dbs = dataset_entry['dbs']
         dataset_name = dataset_entry['alt'] if 'alt' in dataset_entry else sample_name
         location = dataset_entry['loc'] if 'loc' in dataset_entry else ''
+        filename = dataset_entry['file'] if 'file' in dataset_entry else ''
         sum_entry.append(dataset_name)
 
         mc_type = 'mc'
@@ -158,6 +162,7 @@ for category_entry in json_data:
             ('xs_refs',      xs_references),
             ('xs_comment',   xs_comment),
             ('loc',          location),
+            ('filename',     filename),
           ])
         )
       if len(sum_entry) > 1:
@@ -177,6 +182,7 @@ for mc_type in table:
     if mc_type == 'private':
       file_name_base += '_{}'.format(mc_type)
     file_name_base += '.txt'
+    file_name_base = file_name_base.replace('_sync_mc_', '_sync_')
 
     file_name = os.path.join(output_dirname, file_name_base)
     write_datasets(table[mc_type][era], file_name)
