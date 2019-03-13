@@ -1,0 +1,17 @@
+# DAS name                                 run range      golden run range
+/SingleMuon/Run2018A-17Sep2018-v2/MINIAOD  315257-316995  315257-316995   
+/SingleMuon/Run2018B-17Sep2018-v1/MINIAOD  317080-319310  317080-319077   
+/SingleMuon/Run2018C-17Sep2018-v1/MINIAOD  319337-320065  319337-320065   
+/DoubleMuon/Run2018A-17Sep2018-v2/MINIAOD  315257-316995  315257-316995   
+/DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD  317080-319310  317080-319077   
+/DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD  319337-320065  319337-320065   
+/MuonEG/Run2018A-17Sep2018-v1/MINIAOD      315257-316995  315257-316995   
+/MuonEG/Run2018B-17Sep2018-v1/MINIAOD      317080-319310  317080-319077   
+/MuonEG/Run2018C-17Sep2018-v1/MINIAOD      319337-320065  319337-320065   
+/Tau/Run2018A-17Sep2018-v1/MINIAOD         315257-316995  315257-316995   
+/Tau/Run2018B-17Sep2018-v1/MINIAOD         317080-319310  317080-319077   
+/Tau/Run2018C-17Sep2018-v1/MINIAOD         319337-320065  319337-320065   
+
+# file generated at 2019-03-13 04:55:15 with the following command:
+# find_samples.py -V -m python/samples/metaDict_2018_data.py -d ../NanoAOD/test/datasets/txt/datasets_data_2018_17Sep18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_314472-325175_13TeV_EarlyReReco2018ABC_Collisions18_JSON.txt -v 10_2_4_patch1 -r 2018 -C +17Sep2018
+# golden JSON: Cert_314472-325175_13TeV_EarlyReReco2018ABC_Collisions18_JSON.txt
