@@ -34,7 +34,7 @@ export ERA_KEY_2017_v2="2017v2"
 export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 
 # there is also 102X_upgrade2018_realistic_v17 available, with JEC Fall17_17Nov2017_V32_102X_MC
-# not GTs that include Autumn18_RunABCD_V8_DATA and Autumn18_V8_MC JECs, yet
+# no GTs that include Autumn18_RunABCD_V8_DATA and Autumn18_V8_MC JECs, yet
 # https://twiki.cern.ch/twiki/bin/view/CMS/PdmV2018Analysis recommends
 # MC GT 102X_upgrade2018_realistic_v15 (JEC Fall17_17Nov2017_V23_MC)
 # [*] copy of Summer16_07Aug2017BCD_V11_DATA
@@ -260,7 +260,9 @@ addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR', False)\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
-print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n"
+print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n\
+print('GT: $COND')\\n\
+print('era: $ERA_ARGS')\\n"
 
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
                          --number=$NOF_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
