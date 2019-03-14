@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:48 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
+
 # HH -> bbWW, WW -> 2l 2v (GGF)
 /GluGluToRadionToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM  1 signal_ggf_spin0_250_hh_bbvv            signal_ggf_spin0_250_hh_2b2v            0.026422 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo2B2VTo2L2Nu_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM  1 signal_ggf_spin0_260_hh_bbvv            signal_ggf_spin0_260_hh_2b2v            0.026422 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934

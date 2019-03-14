@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:39 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
 # THq
 /THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHq   THQ_private               /store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17                    0.07096 # NLO [1]
 

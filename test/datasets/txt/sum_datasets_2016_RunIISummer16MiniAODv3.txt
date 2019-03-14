@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:39 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
 TTZToLL_M10_ext2                 TTZToLL_M10_ext3
 TTJets_DiLept                    TTJets_DiLept_ext1
 TTJets_SingleLeptFromT           TTJets_SingleLeptFromT_ext1

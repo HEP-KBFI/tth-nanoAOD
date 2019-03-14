@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:15 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_sync.json
+
 # ttH
 /ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM 1 signal ttHToNonbb_M125_powheg /local/karl/store/mc/RunIISummer16MiniAODv3/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v2/120000/F24F2D5E-DDEC-E811-AF50-90B11C08AD7D.root 0.2118 # NLO [1][2]
 

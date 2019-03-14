@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:51 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
+
 # HH -> 4tau (GGF)
 /GluGluToRadionToHHTo4Tau_M-250_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_250_hh_tttt            signal_ggf_spin0_250_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_260_hh_tttt            signal_ggf_spin0_260_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934

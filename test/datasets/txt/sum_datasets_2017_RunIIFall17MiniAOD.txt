@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:39 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
 THQ                              THQ_private
 THW                              THW_private
 GluGluHToZZTo4L                  GluGluHToZZTo4L_ext1

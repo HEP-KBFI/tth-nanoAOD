@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:39 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
 ttHToNonbb_M125_powheg           ttHToNonbb_M125_powheg_fastsim_p1     ttHToNonbb_M125_powheg_fastsim_p2 ttHToNonbb_M125_powheg_fastsim_p3
 TTZToLL_M10_ext1                 TTZToLL_M10_ext2                      TTZToLL_M10_ext3                  TTZToLL_M10_fastsim
 TTWJetsToLNu_ext1                TTWJetsToLNu_ext2                     TTWJetsToLNu_fastsim

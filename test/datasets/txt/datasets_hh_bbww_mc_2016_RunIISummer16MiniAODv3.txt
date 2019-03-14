@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:48 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
+
 # HH -> bbWW, WW -> 2l 2v (GGF)
 /GluGluToHHTo2B2VTo2L2Nu_node_3_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM               1 signal_ggf_nonresonant_node_3_hh_bbvv  signal_ggf_nonresonant_node_3_hh_2b2v  1.0      #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToHHTo2B2VTo2L2Nu_node_4_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM               1 signal_ggf_nonresonant_node_4_hh_bbvv  signal_ggf_nonresonant_node_4_hh_2b2v  1.0      #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934

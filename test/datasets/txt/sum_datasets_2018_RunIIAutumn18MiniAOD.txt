@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:39 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
 TTWW_ext1          TTWW_ext2
 ZH_HToBB_ZToLL     ZH_HToBB_ZToLL_ext1
 WZTo3LNu           WZTo3LNu_ext1

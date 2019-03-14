@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:39 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
 # ttH
 /ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p1_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p1 /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p1_3a2fa29ab1d54ae0995b28f27b405be9        0.2118  # NLO [1][2]
 /ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p2_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p2 /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p2_3a2fa29ab1d54ae0995b28f27b405be9        0.2118  # NLO [1][2]

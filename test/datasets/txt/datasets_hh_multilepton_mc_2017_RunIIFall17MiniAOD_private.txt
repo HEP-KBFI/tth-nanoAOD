@@ -1,3 +1,6 @@
+# file generated at 2019-03-14 13:07:51 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
+
 # HH -> 4tau (GGF)
 /HHTo4T_madgraph_pythia8_CP5_M400/private/USER   1 signal_ggf_spin0_400_hh_tttt signal_ggf_spin0_400_hh_4t_private   /store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M400   0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /HHTo4T_madgraph_pythia8_CP5_M700/private/USER   1 signal_ggf_spin0_700_hh_tttt signal_ggf_spin0_700_hh_4t_private   /store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M700   0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934

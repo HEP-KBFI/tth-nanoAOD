@@ -4,6 +4,8 @@ import json
 import argparse
 import os
 import collections
+import datetime
+import sys
 
 def get_year(campaign_str):
   campaigns = [ '16', '17', '18' ]
@@ -17,7 +19,7 @@ def get_year(campaign_str):
 def get_width(entries, key):
   return max(map(lambda x: len(x[key]) if key in x else 0, entries))
 
-def write_datasets(entries, file_name):
+def write_datasets(entries, file_name, comment):
   max_dbs_width = get_width(entries, 'dbs')
   max_category_width = get_width(entries, 'category')
   max_process_width = get_width(entries, 'process_name')
@@ -34,6 +36,7 @@ def write_datasets(entries, file_name):
 
   last_comment = ''
   with open(file_name, 'w') as f:
+    f.write('{}\n'.format(comment))
     for entry in entries:
       entry['dbs_width'] = max_dbs_width
       entry['category_width'] = max_category_width
@@ -93,6 +96,10 @@ parser.add_argument(
   help = 'R|Output directory where the dataset tables will be stored',
 )
 args = parser.parse_args()
+
+execution_datetime = '{date:%Y-%m-%d %H:%M:%S}'.format(date = datetime.datetime.now())
+execution_command  = ' '.join([os.path.basename(__file__)] + sys.argv[1:])
+comment = "# file generated at {} with the following command:\n# {}\n".format(execution_datetime, execution_command)
 
 input_filename = args.input
 output_dirname = args.output
@@ -185,7 +192,7 @@ for mc_type in table:
     file_name_base = file_name_base.replace('_sync_mc_', '_sync_')
 
     file_name = os.path.join(output_dirname, file_name_base)
-    write_datasets(table[mc_type][era], file_name)
+    write_datasets(table[mc_type][era], file_name, comment)
 
 for era in sums:
   if not sums[era]:
@@ -205,6 +212,7 @@ for era in sums:
   }
 
   with open(file_name, 'w') as f:
+    f.write('{}\n'.format(comment))
     for sum_entry in sums[era]:
       f.write(
         '%s\n' % \
