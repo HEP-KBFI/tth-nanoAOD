@@ -1,0 +1,15 @@
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/000DCB8B-2ADD-E711-9100-008CFAF35AC0.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/00209BEA-43DC-E711-959F-02163E01A501.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/00B6856B-58E4-E711-98D9-0025905C94D0.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/0456AE2B-BCE4-E711-ABD5-5065F37D9112.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/04632930-BCE4-E711-A2FF-24BE05C46B32.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/0497BEB1-DDDC-E711-9197-02163E0142F1.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/04E0AB43-FDDB-E711-9AB2-02163E013887.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/065CF1B2-83DC-E711-AD87-02163E019D18.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/0668577D-F7DB-E711-A8C1-02163E01A540.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/06E6B29F-C5E4-E711-B4EF-0CC47A78A30E.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/0E03F2DD-16DD-E711-AB4B-02163E0137A0.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/0E1D66E7-43DC-E711-9F33-02163E019E83.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/1074D9FE-96DC-E711-BDD3-02163E0134C8.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/109846F2-EADB-E711-9AA9-02163E014391.root
+/local/ram/SingleMuon_Run2017E_17Nov2017-v1_MINIAOD_LeptonFakeRateSync_files/121F9E40-57DC-E711-9704-02163E01A1F2.root
