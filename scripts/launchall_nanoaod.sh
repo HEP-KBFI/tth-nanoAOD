@@ -8,36 +8,42 @@ export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSO
 export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
 export JSON_FILE_2018="Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt"
 
-export COND_DATA_2016_v2="80X_dataRun2_2016LegacyRepro_v4"
-export COND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8"
+export COND_DATA_2016_v2="80X_dataRun2_2016SeptRepro_v7" # JEC Summer16_23Sep2016AllV4_DATA
+export COND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8" # JEC Summer16_23Sep2016V4_MC
 export ERA_ARGS_2016_v2="Run2_2016,run2_miniAOD_80XLegacy"
 export ERA_KEY_2016_v2="2016v2"
 export DATASET_ERA_2016_v2="RunIISummer16MiniAODv2"
 
-export COND_DATA_2016_v3="94X_dataRun2_v10"
-export COND_MC_2016_v3="94X_mcRun2_asymptotic_v3"
+export COND_DATA_2016_v3="94X_dataRun2_v10" # JEC Sum16_07Aug2017V11_and_Fall17_17Nov2017V6_DATA
+export COND_MC_2016_v3="94X_mcRun2_asymptotic_v3" # JEC Summer16_07Aug2017_V11_MC
 export ERA_ARGS_2016_v3="Run2_2016,run2_nanoAOD_94X2016"
 export ERA_KEY_2016_v3="2016v3"
 export DATASET_ERA_2016_v3="RunIISummer16MiniAODv3"
 
 # these GTs were taken from previous iteration of the analysis; no recommendation found!
-export COND_DATA_2017_v1="94X_dataRun2_v6"
-export COND_MC_2017_v1="94X_mc2017_realistic_v14"
+export COND_DATA_2017_v1="94X_dataRun2_v6" # JEC Fall17_17Nov2017BCDEF_V6_DATA
+export COND_MC_2017_v1="94X_mc2017_realistic_v14" # JEC Fall17_17Nov2017_V8_MC
 export ERA_ARGS_2017_v1="Run2_2017,run2_nanoAOD_94XMiniAODv1"
 export ERA_KEY_2017_v1="2017v1"
 export DATASET_ERA_2017_v1="RunIIFall17MiniAOD"
 
-export COND_DATA_2017_v2="94X_dataRun2_v11"
-export COND_MC_2017_v2="94X_mc2017_realistic_v17"
+export COND_DATA_2017_v2="94X_dataRun2_v11" # JEC Fall17_17Nov2017_V32_94X_DATA
+export COND_MC_2017_v2="94X_mc2017_realistic_v17" # JEC Fall17_17Nov2017_V32_94X_MC
 export ERA_ARGS_2017_v2="Run2_2017,run2_nanoAOD_94XMiniAODv2"
 export ERA_KEY_2017_v2="2017v2"
 export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 
-export COND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1"
-export COND_MC_2018="102X_upgrade2018_realistic_v12"
+# there is also 102X_upgrade2018_realistic_v17 available, with JEC Fall17_17Nov2017_V32_102X_MC
+# not GTs that include Autumn18_RunABCD_V8_DATA and Autumn18_V8_MC JECs, yet
+export COND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1" # JEC Sum16_07Aug2017V11_and_Fall17_17Nov2017V6_DATA
+export COND_MC_2018="102X_upgrade2018_realistic_v12" # JEC Fall17_17Nov2017_V23_MC
 export ERA_ARGS_2018="Run2_2018"
 export ERA_KEY_2018="2018"
 export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
+
+# there is also 102X_dataRun2_Prompt_v12 available, with JEC Fall17_17Nov2017_V32_102X_DATA
+export COND_DATA_2018_PROMPT="102X_dataRun2_Prompt_v11" # JEC Summer16_23Sep2016AllV4_DATA
+export ERA_KEY_2018="2018prompt"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
@@ -58,7 +64,7 @@ TYPE_SYNC="sync"
 
 show_help() {
   echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-c <cfg>] [-v version] [-w whitelist]" 1>&2;
-  echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018" 1>&2;
+  echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
 }
@@ -134,6 +140,19 @@ elif [ "$ERA" == "$ERA_KEY_2017_v2" ]; then
   export YEAR="2017"
 elif [ "$ERA" == "$ERA_KEY_2018" ]; then
   export COND_DATA=$COND_DATA_2018
+  export COND_MC=$COND_MC_2018
+  export ERA_ARGS=$ERA_ARGS_2018
+  export DATASET_ERA=$DATASET_ERA_2018
+  export JSON_FILE=$JSON_FILE_2018
+  export YEAR="2018"
+  echo "Era $ERA yet not supported (era disabled in plugins)";
+  exit 1;
+elif [ "$ERA" == "$ERA_KEY_2018_PROMPT" ]; then
+  if [ "$JOB_TYPE" != "$TYPE_DATA" ]; then
+    echo "$ERA makes sense only if job type is $TYPE_DATA";
+    exit 1;
+  fi
+  export COND_DATA=$COND_DATA_2018_PROMPT
   export COND_MC=$COND_MC_2018
   export ERA_ARGS=$ERA_ARGS_2018
   export DATASET_ERA=$DATASET_ERA_2018
@@ -341,6 +360,13 @@ cat $DATASET_FILE | while read LINE; do
     if [ "$JOB_TYPE" != "$TYPE_DATA" ]; then
       echo "Requested $JOB_TYPE job instead -> aborting";
       exit 1;
+    fi
+    if [[ "$ERA" == "$ERA_KEY_2018_PROMPT" ]] && [[ ! "$DATASET" =~ PromptReco ]]; then
+      echo "$DATASET not valid for $ERA_KEY_2018_PROMPT -> continuing";
+      continue;
+    elif [[ "$ERA" != "$ERA_KEY_2018_PROMPT" ]] && [[ "$DATASET" =~ PromptReco ]]; then
+      echo "$DATASET not valid for $ERA_KEY_2018_PROMPT -> continuing";
+      continue;
     fi
   else
     echo "Found MC   sample: $DATASET";
