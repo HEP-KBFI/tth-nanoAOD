@@ -6,7 +6,7 @@
 
 export JSON_FILE_2016="Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
 export JSON_FILE_2017="Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt"
-export JSON_FILE_2018="Cert_314472-325175_13TeV_EarlyReReco2018ABC_Collisions18_JSON.txt"
+export JSON_FILE_2018="Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt"
 
 export COND_DATA_2016_v2="80X_dataRun2_2016LegacyRepro_v4"
 export COND_MC_2016_v2="80X_mcRun2_asymptotic_2016_TrancheIV_v8"
