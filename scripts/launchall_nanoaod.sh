@@ -35,6 +35,8 @@ export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 
 # there is also 102X_upgrade2018_realistic_v17 available, with JEC Fall17_17Nov2017_V32_102X_MC
 # not GTs that include Autumn18_RunABCD_V8_DATA and Autumn18_V8_MC JECs, yet
+# https://twiki.cern.ch/twiki/bin/view/CMS/PdmV2018Analysis recommends
+# MC GT 102X_upgrade2018_realistic_v15 (JEC Fall17_17Nov2017_V23_MC)
 export COND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1" # JEC Sum16_07Aug2017V11_and_Fall17_17Nov2017V6_DATA
 export COND_MC_2018="102X_upgrade2018_realistic_v12" # JEC Fall17_17Nov2017_V23_MC
 export ERA_ARGS_2018="Run2_2018"
