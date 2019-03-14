@@ -37,14 +37,17 @@ export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 # not GTs that include Autumn18_RunABCD_V8_DATA and Autumn18_V8_MC JECs, yet
 # https://twiki.cern.ch/twiki/bin/view/CMS/PdmV2018Analysis recommends
 # MC GT 102X_upgrade2018_realistic_v15 (JEC Fall17_17Nov2017_V23_MC)
-export COND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1" # JEC Sum16_07Aug2017V11_and_Fall17_17Nov2017V6_DATA
+# [*] copy of Summer16_07Aug2017BCD_V11_DATA
+export COND_DATA_2018="102X_dataRun2_Sep2018Rereco_v1" # JEC Sum16_07Aug2017V11_and_Fall17_17Nov2017V6_DATA [*]
 export COND_MC_2018="102X_upgrade2018_realistic_v12" # JEC Fall17_17Nov2017_V23_MC
 export ERA_ARGS_2018="Run2_2018"
 export ERA_KEY_2018="2018"
 export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
 
-# there is also 102X_dataRun2_Prompt_v12 available, with JEC Fall17_17Nov2017_V32_102X_DATA
-export COND_DATA_2018_PROMPT="102X_dataRun2_Prompt_v11" # JEC Summer16_23Sep2016AllV4_DATA
+# there is also 102X_dataRun2_Prompt_v12 available, with JEC Fall17_17Nov2017_V32_102X_DATA [*]
+# [*] copy of Fall17_17Nov2017B_V32_102X_DATA
+# [**] copy of Summer16_23Sep2016BCDV4_DATA
+export COND_DATA_2018_PROMPT="102X_dataRun2_Prompt_v11" # JEC Summer16_23Sep2016AllV4_DATA [**]
 export ERA_KEY_2018="2018prompt"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
