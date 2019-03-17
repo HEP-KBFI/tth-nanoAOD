@@ -16,6 +16,14 @@ def addVariables(process, is_th = False):
   process.nanoSequenceFS += process.boostedSequence
   process.nanoSequenceFS += process.boostedTables
 
+  if not hasattr(process.electronTable.variables, "eCorr"):
+    # No electron scale or smearing available for 2018 era, yet:
+    # See: https://github.com/cms-sw/cmssw/blob/master/RecoEgamma/EgammaTools/python/calibratedEgammas_cff.py
+    print("Branch 'eCorr' not implemented for electrons => filling with placedholder value")
+    process.electronTable.variables.eCorr = Var(
+      "1.", float, doc = "ratio of the calibrated energy/miniaod energy", precision = 6
+    )
+
   process.electronTable.variables.deltaPhiSC = Var(
     "superCluster().phi()-phi()",
     float, doc = "delta phi (SC,ele) with sign", precision = 10
@@ -136,5 +144,6 @@ def addVariables(process, is_th = False):
   )
 
   if is_th:
+    print("Enabling tH weights")
     process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
     process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
