@@ -1,21 +1,24 @@
-# DAS name                                  run range      golden run range
-/SingleMuon/Run2018A-17Sep2018-v2/MINIAOD   315257-316995  315257-316995   
-/SingleMuon/Run2018B-17Sep2018-v1/MINIAOD   317080-319310  317080-319077   
-/SingleMuon/Run2018C-17Sep2018-v1/MINIAOD   319337-320065  319337-320065   
-/SingleMuon/Run2018D-PromptReco-v2/MINIAOD  320500-325175  320673-325172   
-/DoubleMuon/Run2018A-17Sep2018-v2/MINIAOD   315257-316995  315257-316995   
-/DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD   317080-319310  317080-319077   
-/DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD   319337-320065  319337-320065   
-/DoubleMuon/Run2018D-PromptReco-v2/MINIAOD  320500-325175  320673-325172   
-/MuonEG/Run2018A-17Sep2018-v1/MINIAOD       315257-316995  315257-316995   
-/MuonEG/Run2018B-17Sep2018-v1/MINIAOD       317080-319310  317080-319077   
-/MuonEG/Run2018C-17Sep2018-v1/MINIAOD       319337-320065  319337-320065   
-/MuonEG/Run2018D-PromptReco-v2/MINIAOD      320500-325175  320673-325172   
-/Tau/Run2018A-17Sep2018-v1/MINIAOD          315257-316995  315257-316995   
-/Tau/Run2018B-17Sep2018-v1/MINIAOD          317080-319310  317080-319077   
-/Tau/Run2018C-17Sep2018-v1/MINIAOD          319337-320065  319337-320065   
-/Tau/Run2018D-PromptReco-v2/MINIAOD         320497-325175  320673-325172   
+# DAS name                                  run range      golden run range  totdelivered(/fb)  totrecorded(/fb)
+/SingleMuon/Run2018A-17Sep2018-v2/MINIAOD   315257-316995  315257-316995     14.497             14.027          
+/SingleMuon/Run2018B-17Sep2018-v1/MINIAOD   317080-319310  317080-319077     7.310              7.061           
+/SingleMuon/Run2018C-17Sep2018-v1/MINIAOD   319337-320065  319337-320065     7.143              6.895           
+/SingleMuon/Run2018D-PromptReco-v2/MINIAOD  320500-325175  320673-325172     33.011             31.743          
+/DoubleMuon/Run2018A-17Sep2018-v2/MINIAOD   315257-316995  315257-316995     14.497             14.027          
+/DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD   317080-319310  317080-319077     7.310              7.061           
+/DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD   319337-320065  319337-320065     7.143              6.895           
+/DoubleMuon/Run2018D-PromptReco-v2/MINIAOD  320500-325175  320673-325172     33.010             31.743          
+/MuonEG/Run2018A-17Sep2018-v1/MINIAOD       315257-316995  315257-316995     14.497             14.027          
+/MuonEG/Run2018B-17Sep2018-v1/MINIAOD       317080-319310  317080-319077     7.309              7.060           
+/MuonEG/Run2018C-17Sep2018-v1/MINIAOD       319337-320065  319337-320065     7.143              6.895           
+/MuonEG/Run2018D-PromptReco-v2/MINIAOD      320500-325175  320673-325172     33.011             31.743          
+/Tau/Run2018A-17Sep2018-v1/MINIAOD          315257-316995  315257-316995     14.482             14.013          
+/Tau/Run2018B-17Sep2018-v1/MINIAOD          317080-319310  317080-319077     7.310              7.061           
+/Tau/Run2018C-17Sep2018-v1/MINIAOD          319337-320065  319337-320065     7.143              6.895           
+/Tau/Run2018D-PromptReco-v2/MINIAOD         320497-325175  320673-325172     33.010             31.743          
 
-# file generated at 2019-03-14 15:34:45 with the following command:
-# find_samples.py -V -m python/samples/metaDict_2018_data.py -d ../NanoAOD/test/datasets/txt/datasets_data_2018_17Sep18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt -v 10_2_4_patch1 -r 2018 -C +17Sep2018 +Run2018D-PromptReco
+# file generated at 2019-03-17 18:30:06 with the following command:
+# find_samples.py -V -m python/samples/metaDict_2018_data.py -d ../NanoAOD/test/datasets/txt/datasets_data_2018_17Sep18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt -v 10_2_4_patch1 -r 2018 -C +17Sep2018 +Run2018D-PromptReco -l
 # golden JSON: Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt
+# normtag: normtag_PHYSICS.json
+# totdelivered(/fb): 62.224
+# totrecorded(/fb): 59.741
