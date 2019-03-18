@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
-from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addTauAntiEleMVA2018
+from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addTauAntiEleMVA2018, addDeepTau2017v1, addDPFTau_2016_v0, addDPFTau_2016_v1
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
 
@@ -158,3 +158,6 @@ def addVariables(process, is_mc, year, is_th = False):
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
   addTauAntiEleMVA2018(process)
+  addDeepTau2017v1(process)
+  addDPFTau_2016_v0(process)
+  addDPFTau_2016_v1(process)
