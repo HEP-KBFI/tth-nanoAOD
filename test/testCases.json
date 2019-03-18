@@ -92,7 +92,7 @@
     "type": "fast",
     "era": "Run2_2016,run2_miniAOD_80XLegacy",
     "cond": "auto:run2_mc",
-    "file": "file:///hdfs/cms/store/user/matze/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a/ttZ_maod_13294.root",
+    "file": "file:///hdfs/local/karl/store/user/matze/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a/ttZ_maod_13294.root",
     "year": "2016"
   }
 ]
