@@ -27,7 +27,7 @@ def fill_template(params, output_dir, nthreads, nevents, verbose):
   template = "cmsDriver.py {name} -s NANO --{type} --eventcontent {tier} --datatier {tier} --conditions {cond} " \
              "--nThreads {nthreads} --era {era} --processName=NANO -n {nevents} --fileout {fileout} --python_filename {py_out} " \
              "--filein {file} --no_exec --customise_commands=\"process.MessageLogger.cerr.FwkReport.reportEvery = 1\\n" \
-             "from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, {is_mc}, '{year}')\\n"
+             "from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, {is_mc}, '{year}')\\n\""
   template_filled = template.format(**params)
   if verbose:
     print(template_filled)
