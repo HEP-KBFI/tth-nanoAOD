@@ -227,6 +227,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
             name = cms.string("FatJetAK8LS%s" % suffix),
             doc = cms.string("lepton-subtracted ak8 fat jets for boosted analysis"),
             variables = cms.PSet(P4Vars,
+                rawFactor = Var("1.-jecFactor('Uncorrected')",float,doc="1 - Factor to get back to raw pT",precision=10),
                 jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
                 pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
                 pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
