@@ -48,7 +48,7 @@ export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
 # [*] copy of Fall17_17Nov2017B_V32_102X_DATA
 # [**] copy of Summer16_23Sep2016BCDV4_DATA
 export COND_DATA_2018_PROMPT="102X_dataRun2_Prompt_v11" # JEC Summer16_23Sep2016AllV4_DATA [**]
-export ERA_KEY_2018="2018prompt"
+export ERA_KEY_2018_PROMPT="2018prompt"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
@@ -68,7 +68,7 @@ TYPE_FAST="fast"
 TYPE_SYNC="sync"
 
 show_help() {
-  echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-c <cfg>] [-v version] [-w whitelist]" 1>&2;
+  echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-c <cfg>] [-v version] [-w whitelist] [-n <events>] [-r <frequency>] [-t <threads>]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
@@ -252,11 +252,7 @@ generate_cfgs() {
   export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = $REPORT_FREQUENCY\\n\
 process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process)\\n\
-from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables; addJetSubstructureObservables(process)\\n\
-from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets; \
-addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR', True); \
-addLeptonSubtractedAK8Jets(process, $PY_IS_MC,'$YEAR', False)\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, $PY_IS_MC,'$YEAR')\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\

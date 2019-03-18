@@ -1,11 +1,16 @@
 import FWCore.ParameterSet.Config as cms
+
 from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
 from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addTauAntiEleMVA2018
+from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
+
 from PhysicsTools.NanoAOD.common_cff import Var
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 
-def addVariables(process, is_th = False):
+def addVariables(process, is_mc, year, is_th = False):
+  assert(is_mc or not is_th)
   process.load('tthAnalysis.NanoAOD.boosted_cff')
 
   process.boostedSequence = boostedSequence
@@ -149,4 +154,7 @@ def addVariables(process, is_th = False):
     process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
     process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
 
+  addJetSubstructureObservables(process)
+  addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
+  addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
   addTauAntiEleMVA2018(process)
