@@ -1,5 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
+from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addTauAntiEleMVA2018
 from PhysicsTools.NanoAOD.common_cff import Var
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
@@ -147,3 +148,5 @@ def addVariables(process, is_th = False):
     print("Enabling tH weights")
     process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
     process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
+
+  addTauAntiEleMVA2018(process)
