@@ -131,6 +131,10 @@ def addVariables(process, is_mc, year, is_th = False):
     ")",
     float, doc = "DeepCSV Charm vs b,b+bb b-tag discriminator", precision = 10
   )
+  process.jetTable.variables.puIdDisc = Var(
+    "userFloat('pileupJetId:fullDiscriminant')",
+    float, doc = "Pilup ID discriminant", precision = 10
+  )
 
   process.metTable.variables.covXX = Var(
     "getSignificanceMatrix().At(0,0)",
