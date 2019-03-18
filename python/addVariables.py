@@ -5,9 +5,40 @@ from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addTauAntiEleMVA2018, add
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
 
-from PhysicsTools.NanoAOD.common_cff import Var
+from PhysicsTools.NanoAOD.common_cff import Var, ExtVar
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv1_cff import run2_nanoAOD_94XMiniAODv1
+from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoAOD_94XMiniAODv2
+
+from PhysicsTools.PatUtils.L1ECALPrefiringWeightProducer_cff import prefiringweight
+
+def addL1PreFiringEventWeigh(process):
+  #NOTE L1PrefiringMaps.root does not include weights for 2018 -> branches not present in the Ntuple
+  process.prefiringweight = prefiringweight.clone()
+  for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
+    modifier.toModify(process.prefiringweight, DataEra = cms.string("2016BtoH"))
+
+  process.l1PreFiringEventWeightTable = cms.EDProducer("GlobalVariablesTableProducer",
+    variables = cms.PSet(
+      L1PreFiringWeight   = ExtVar(cms.InputTag("prefiringweight:nonPrefiringProb"),
+        "double", doc = "L1 pre-firing event correction weight (1-probability)", precision = 8
+      ),
+      L1PreFiringWeightUp = ExtVar(cms.InputTag("prefiringweight:nonPrefiringProbUp"),
+        "double", doc = "L1 pre-firing event correction weight (1-probability), up var.", precision = 8
+      ),
+      L1PreFiringWeightDn = ExtVar(cms.InputTag("prefiringweight:nonPrefiringProbDown"),
+        "double", doc = "L1 pre-firing event correction weight (1-probability), down var.", precision = 8
+      ),
+    )
+  )
+  _triggerObjectTables_withL1PreFiring = process.triggerObjectTables.copy()
+  _triggerObjectTables_withL1PreFiring.replace(
+    process.triggerObjectTable,
+    process.prefiringweight + process.l1PreFiringEventWeightTable + process.triggerObjectTable
+  )
+  for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016, run2_nanoAOD_94XMiniAODv1, run2_nanoAOD_94XMiniAODv2:
+      modifier.toReplaceWith(process.triggerObjectTables, _triggerObjectTables_withL1PreFiring)
 
 def addVariables(process, is_mc, year, is_th = False):
   assert(is_mc or not is_th)
@@ -165,3 +196,4 @@ def addVariables(process, is_mc, year, is_th = False):
   addDeepTau2017v1(process)
   addDPFTau_2016_v0(process)
   addDPFTau_2016_v1(process)
+  addL1PreFiringEventWeigh(process)
