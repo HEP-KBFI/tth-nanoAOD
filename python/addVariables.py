@@ -14,6 +14,7 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoA
 from PhysicsTools.PatUtils.L1ECALPrefiringWeightProducer_cff import prefiringweight
 
 def addL1PreFiringEventWeigh(process):
+  # Implements https://github.com/cms-nanoAOD/cmssw/pull/266
   #NOTE L1PrefiringMaps.root does not include weights for 2018 -> branches not present in the Ntuple
   process.prefiringweight = prefiringweight.clone()
   for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
@@ -39,6 +40,40 @@ def addL1PreFiringEventWeigh(process):
   )
   for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016, run2_nanoAOD_94XMiniAODv1, run2_nanoAOD_94XMiniAODv2:
       modifier.toReplaceWith(process.triggerObjectTables, _triggerObjectTables_withL1PreFiring)
+
+def addLeptonInJetVariables(process):
+  # Implements https://github.com/cms-nanoAOD/cmssw/pull/299
+  process.lepInJetVars = cms.EDProducer("LepInJetProducer",
+     srcPF = cms.InputTag("packedPFCandidates"),
+     src = cms.InputTag("slimmedJetsAK8"),
+     srcEle = cms.InputTag("slimmedElectrons"),
+     srcMu = cms.InputTag("slimmedMuons"),
+  )
+  process.slimmedJetsAK8WithUserData.userFloats.lsf3 = cms.InputTag("lepInJetVars:lsf3")
+  process.slimmedJetsAK8WithUserData.userFloats.lmd3 = cms.InputTag("lepInJetVars:lmd3")
+  process.slimmedJetsAK8WithUserData.userFloats.lep3pt = cms.InputTag("lepInJetVars:lep3pt")
+  process.slimmedJetsAK8WithUserData.userFloats.lep3eta = cms.InputTag("lepInJetVars:lep3eta")
+  process.slimmedJetsAK8WithUserData.userFloats.lep3phi = cms.InputTag("lepInJetVars:lep3phi")
+  process.slimmedJetsAK8WithUserData.userFloats.lsf3match = cms.InputTag("lepInJetVars:lsf3match")
+  process.slimmedJetsAK8WithUserData.userInts.lep3id =  cms.InputTag("lepInJetVars:lep3id")
+  process.slimmedJetsAK8WithUserData.userInts.lep3idmatch =  cms.InputTag("lepInJetVars:lep3idmatch")
+
+  process.fatJetTable.variables.lsf3 = Var("userFloat('lsf3')",float, doc="LSF (3 subjets)",precision=10)
+  process.fatJetTable.variables.lmd3 = Var("userFloat('lmd3')", float, doc="LMD (3 subjets)", precision=10)
+  process.fatJetTable.variables.lep3pt = Var("userFloat('lep3pt')", float, doc="Lep pT (3 subjets)", precision=10)
+  process.fatJetTable.variables.lep3phi = Var("userFloat('lep3phi')", float, doc="Lep phi (3 subjets)", precision=10)
+  process.fatJetTable.variables.lep3eta = Var("userFloat('lep3eta')", float, doc="Lep eta (3 subjets)", precision=10)
+  process.fatJetTable.variables.lep3id = Var("userInt('lep3id')", int, doc="Lep id (3 subjets)")
+  process.fatJetTable.variables.lsf3match = Var("userFloat('lsf3match')", float, doc="LSF match to RECO (3 subjets)", precision=10)
+  process.fatJetTable.variables.lep3idmatch = Var("userInt('lep3idmatch')", int, doc="Lep id match to RECO (3 subjets)")
+
+  process.jetSequence.insert(
+    process.jetSequence.index(process.updatedJets) + 1,
+    process.lepInJetVars
+  )
+
+  if process.slimmedJetsAK8WithUserData.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
+    process.lepInJetVars.src = "selectedUpdatedPatJetsAK8WithDeepInfo"
 
 def addVariables(process, is_mc, year, is_th = False):
   assert(is_mc or not is_th)
@@ -197,3 +232,4 @@ def addVariables(process, is_mc, year, is_th = False):
   addDPFTau_2016_v0(process)
   addDPFTau_2016_v1(process)
   addL1PreFiringEventWeigh(process)
+  addLeptonInJetVariables(process)
