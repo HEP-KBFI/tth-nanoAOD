@@ -56,11 +56,12 @@ def write_datasets(entries, file_name, comment):
         entry['refs'] = ' ' + entry['refs']
 
       line = '{dbs:<{dbs_width}} {enabled} {category:<{category_width}} {process_name:<{process_width}} '.format(**entry)
+      line +='{xs_head_padding}{xs_value}{xs_tail_padding}'.format(**entry)
       if entry['loc']:
-        line += '{loc:<{loc_width}} '.format(**entry)
+        line += ' {loc:<{loc_width}} '.format(**entry)
       if entry['filename']:
-        line += '{filename:<{filename_width}} '.format(**entry)
-      line +='{xs_head_padding}{xs_value}{xs_tail_padding} # {xs_order}{refs}'.format(**entry)
+        line += ' {filename:<{filename_width}} '.format(**entry)
+      line += ' # {xs_order}{refs}'.format(**entry)
       if entry['xs_comment']:
         line += '; {xs_comment}'.format(**entry)
       line += '\n'

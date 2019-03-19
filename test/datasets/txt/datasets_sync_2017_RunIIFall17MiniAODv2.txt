@@ -1,8 +1,8 @@
-# file generated at 2019-03-14 13:07:15 with the following command:
+# file generated at 2019-03-19 02:06:03 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_sync.json
 
 # ttH
-/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal ttHJetToNonbb_M125_amcatnlo /local/karl/store/mc/RunIIFall17MiniAODv2/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/20000/16DF8D68-9C42-E811-8E02-A4BF0112BCF8.root 0.2118 # NLO [1][2]
+/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal ttHJetToNonbb_M125_amcatnlo 0.2118 /local/karl/store/mc/RunIIFall17MiniAODv2/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/20000/16DF8D68-9C42-E811-8E02-A4BF0112BCF8.root  # NLO [1][2]
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
