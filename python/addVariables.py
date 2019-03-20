@@ -12,6 +12,7 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv1_cff import run2_nanoA
 from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoAOD_94XMiniAODv2
 
 from PhysicsTools.PatUtils.L1ECALPrefiringWeightProducer_cff import prefiringweight
+from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
 
 def addL1PreFiringEventWeigh(process):
   # Implements https://github.com/cms-nanoAOD/cmssw/pull/266
@@ -74,6 +75,35 @@ def addLeptonInJetVariables(process):
 
   if process.slimmedJetsAK8WithUserData.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
     process.lepInJetVars.src = "selectedUpdatedPatJetsAK8WithDeepInfo"
+
+def addPileupJetId(process):
+  # Recompute pileup jet ID as per 9x recipe
+  # https://twiki.cern.ch/twiki/bin/view/CMS/PileupJetID?rev=37#Information_for_13_TeV_data_anal
+  process.pileupJetIdUpdated = pileupJetId.clone(
+    jets             = cms.InputTag("slimmedJets"),
+    inputIsCorrected = True,
+    applyJec         = True,
+    vertexes         = cms.InputTag("offlineSlimmedPrimaryVertices"),
+  )
+  if process.slimmedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
+    process.pileupJetIdUpdated.jets = "selectedUpdatedPatJetsWithDeepInfo"
+
+  process.slimmedJetsWithUserData.userInts.puUpdatedId     = cms.InputTag('pileupJetIdUpdated:fullId')
+  process.slimmedJetsWithUserData.userFloats.puUpdatedDisc = cms.InputTag('pileupJetIdUpdated:fullDiscriminant')
+
+  process.jetSequence.insert(
+    process.jetSequence.index(process.slimmedJetsWithUserData),
+    process.pileupJetIdUpdated
+  )
+
+  process.jetTable.variables.puIdUpdated = Var(
+    "userInt('puUpdatedId')",
+    int, doc = "Pilup ID flags"
+  )
+  process.jetTable.variables.puIdDiscUpdated = Var(
+    "userFloat('puUpdatedDisc')",
+    float, doc = "Pilup ID discriminant (updated)", precision = 10
+  )
 
 def addVariables(process, is_mc, year, is_th = False):
   assert(is_mc or not is_th)
@@ -233,3 +263,4 @@ def addVariables(process, is_mc, year, is_th = False):
   addDPFTau_2016_v1(process)
   addL1PreFiringEventWeigh(process)
   addLeptonInJetVariables(process)
+  addPileupJetId(process)
