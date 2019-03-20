@@ -203,7 +203,6 @@ fi
 
 generate_cfgs() {
   DO_THX=$1
-  echo "DO_THX=$DO_THX";
   if [[ ! -z $DO_THX ]] && [[ $DO_THX = true ]]; then
     PY_DO_THX="True";
     PY_FILENAME=$NANOCFG_TH
@@ -224,7 +223,7 @@ generate_cfgs() {
   INPUT_FILE=""
   if [ "$JOB_TYPE_NAME" == "$TYPE_SYNC" ]; then
 
-    INPUT_FILE=$(cat $DATASET_FILE | grep "^/" | awk '{print $5}')
+    INPUT_FILE=$(cat $DATASET_FILE | grep "^/" | awk '{print $6}')
     if [ $(echo $INPUT_FILE | wc -l) != "1" ]; then
       echo "Invalid file: $DATASET_FILE";
       exit 1;
