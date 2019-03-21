@@ -98,11 +98,11 @@ def addPileupJetId(process):
 
   process.jetTable.variables.puIdUpdated = Var(
     "userInt('puUpdatedId')",
-    int, doc = "Pilup ID flags"
+    int, doc = "Pileup ID flags"
   )
   process.jetTable.variables.puIdDiscUpdated = Var(
     "userFloat('puUpdatedDisc')",
-    float, doc = "Pilup ID discriminant (updated)", precision = 10
+    float, doc = "Pileup ID discriminant (updated)", precision = 10
   )
 
 def addVariables(process, is_mc, year, is_th = False):
