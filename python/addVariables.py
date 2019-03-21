@@ -264,3 +264,14 @@ def addVariables(process, is_mc, year, is_th = False):
   addL1PreFiringEventWeigh(process)
   addLeptonInJetVariables(process)
   addPileupJetId(process)
+
+  # remove the execution of GEN plugins
+  # see https://github.com/cms-nanoAOD/cmssw/issues/277
+  if process.options.numberOfThreads.value() > 1:
+    print(
+      "Removing GEN modules: genParticles2HepMCHiggsVtx, rivetProducerHTXS, HTXSCategoryTable because running more than "
+      "1 thread ({})".format(process.options.numberOfThreads.value())
+    )
+    process.particleLevelSequence.remove(process.genParticles2HepMCHiggsVtx)
+    process.particleLevelSequence.remove(process.rivetProducerHTXS)
+    process.particleLevelTables.remove(process.HTXSCategoryTable)
