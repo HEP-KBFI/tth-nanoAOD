@@ -182,7 +182,7 @@
   },
   {
     "category": "tHq",
-    "comment": "",
+    "comment": "non-ctcvcp RunIIFall17MiniAOD, RunIIFall17MiniAODv2 and RunIIAutumn18MiniAOD samples do not contain LHE weights that recover SM",
     "samples": [
       {
         "name": "THQ",
@@ -200,22 +200,9 @@
               "dbs": "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
             }
           ],
-          "RunIIFall17MiniAOD": [
-            {
-              "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM",
-              "alt": "THQ"
-            }
-          ],
-          "RunIIFall17MiniAODv2": [
-            {
-              "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIAutumn18MiniAOD": [
-            {
-              "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
-            }
-          ]
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
         },
         "xs": {
           "value": 0.023133,
@@ -274,7 +261,7 @@
   },
   {
     "category": "tHW",
-    "comment": "",
+    "comment": "non-ctcvcp RunIIFall17MiniAOD, RunIIFall17MiniAODv2 and RunIIAutumn18MiniAOD samples do not contain LHE weights that recover SM",
     "samples": [
       {
         "name": "THW",
@@ -292,22 +279,9 @@
               "dbs": "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
             }
           ],
-          "RunIIFall17MiniAOD": [
-            {
-              "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v2/MINIAODSIM",
-              "alt": "THW"
-            }
-          ],
-          "RunIIFall17MiniAODv2": [
-            {
-              "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIAutumn18MiniAOD": [
-            {
-              "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
-            }
-          ]
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
         },
         "xs": {
           "value": 0.005089,
