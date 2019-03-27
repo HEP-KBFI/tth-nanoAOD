@@ -250,9 +250,10 @@ def addVariables(process, is_mc, year, is_th = False):
   )
 
   if is_th:
-    print("Enabling tH weights")
-    process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
-    process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, 70))))
+    nof_lhe_weights = 50 if year == "2016" else 69
+    print("Enabling {} LHE weights for tH process".format(nof_lhe_weights))
+    process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, nof_lhe_weights + 1))))
+    process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, nof_lhe_weights + 1))))
 
   addJetSubstructureObservables(process)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
