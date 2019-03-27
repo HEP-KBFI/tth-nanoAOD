@@ -160,6 +160,7 @@ TABLE_TEMPLATE = """
         {{ sample_name }}
       </a>
     </a> 
+    {% if header_text %}({{ header_text }}){% endif %}
     <span class="up_button" style="float:right">
       [
       <a href="#top" class="link">
@@ -331,7 +332,7 @@ def generate_toc(categories):
 def generate_summary(summary):
   return jinja2.Template(SUMMARY_TEMPLATE).render(summary = summary)
 
-def generate_table(sample, important_eras):
+def generate_table(sample, important_eras, comment):
   rows = []
   for era in ERAS:
     is_important = era in important_eras
@@ -353,6 +354,7 @@ def generate_table(sample, important_eras):
     order       = sample['xs']['order'],
     refs        = sample['xs']['references'],
     comment     = sample['xs']['comment'],
+    header_text = comment,
   )
 
   return table
@@ -436,7 +438,7 @@ for i, cat in enumerate(json_data):
     })
     toc_arr[-1]['nof_ok'] += int(is_ok)
 
-    html_filled += generate_table(sample, important_eras)
+    html_filled += generate_table(sample, important_eras, cat['comment'])
 
 toc_filled = generate_toc(toc_arr)
 summary_filled = generate_summary(summary_arr)
