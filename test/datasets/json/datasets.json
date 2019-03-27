@@ -214,12 +214,13 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.07096,
+          "value": 0.023133,
           "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV"
+            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043"
           ],
-          "comment": ""
+          "comment": "0.07096 * Br(W -> hadrons) b/c in non-ctcvcp samples top decays only leptonically"
         }
       },
       {
@@ -301,12 +302,13 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.01561,
+          "value": 0.005089,
           "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV"
+            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043"
           ],
-          "comment": ""
+          "comment": "0.01561 * Br(W -> hadrons) b/c in non-ctcvcp samples top decays only leptonically"
         }
       },
       {
