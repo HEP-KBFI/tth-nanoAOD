@@ -315,6 +315,9 @@ SUMMARY_TEMPLATE = """
 </div>
 """
 
+ERAS = [
+  'RunIISummer16MiniAODv2', 'RunIISummer16MiniAODv3', 'RunIIFall17MiniAOD', 'RunIIFall17MiniAODv2', 'RunIIAutumn18MiniAOD'
+]
 
 class SmartFormatter(argparse.HelpFormatter):
   def _split_lines(self, text, width):
@@ -330,7 +333,7 @@ def generate_summary(summary):
 
 def generate_table(sample, important_eras):
   rows = []
-  for era in sample['datasets']:
+  for era in ERAS:
     is_important = era in important_eras
     rows.append(
       jinja2.Template(ROW_TEMPLATE).render(
@@ -374,10 +377,7 @@ parser.add_argument(
 )
 parser.add_argument(
   '-e', '--eras', dest = 'eras', metavar = 'eras', required = False, type = str, nargs = '+',
-  choices = [
-    'RunIISummer16MiniAODv2', 'RunIISummer16MiniAODv3', 'RunIIFall17MiniAOD', 'RunIIFall17MiniAODv2', 'RunIIAutumn18MiniAOD'
-  ],
-  default = [ 'RunIISummer16MiniAODv3', 'RunIIFall17MiniAODv2', 'RunIIAutumn18MiniAOD' ],
+  choices = ERAS, default = [ 'RunIISummer16MiniAODv3', 'RunIIFall17MiniAODv2', 'RunIIAutumn18MiniAOD' ],
   help = 'R|Standout eras',
 )
 args = parser.parse_args()
@@ -421,7 +421,7 @@ for i, cat in enumerate(json_data):
   for sample in samples:
     is_ok = all(map(lambda era: len(sample['datasets'][era]) > 0, important_eras))
 
-    for era in sample['datasets']:
+    for era in ERAS:
       if era not in important_eras:
         continue
       if not sample['datasets'][era]:
