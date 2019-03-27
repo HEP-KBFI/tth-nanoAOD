@@ -204,11 +204,6 @@
             {
               "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM",
               "alt": "THQ"
-            },
-            {
-              "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER",
-              "alt": "THQ_private",
-              "loc": "/store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17"
             }
           ],
           "RunIIFall17MiniAODv2": [
@@ -243,7 +238,13 @@
               "dbs": "/THQ_ctcvcp_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
             }
           ],
-          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER",
+              "alt": "THQ_ctcvcp_private",
+              "loc": "/store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17"
+            }
+          ],
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/THQ_ctcvcp_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
@@ -290,11 +291,6 @@
             {
               "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v2/MINIAODSIM",
               "alt": "THW"
-            },
-            {
-              "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER",
-              "alt": "THW_private",
-              "loc": "/store/user/kaehatah/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17"
             }
           ],
           "RunIIFall17MiniAODv2": [
@@ -325,7 +321,13 @@
             }
           ],
           "RunIISummer16MiniAODv3": [],
-          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER",
+              "alt": "THW_ctcvcp_private",
+              "loc": "/store/user/kaehatah/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17"
+            }
+          ],
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/THW_ctcvcp_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"

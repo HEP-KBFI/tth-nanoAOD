@@ -1,11 +1,11 @@
-# file generated at 2019-03-19 02:06:14 with the following command:
+# file generated at 2019-03-27 19:40:06 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # THq
-/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHq   THQ_private               0.07096 /store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17                     # NLO [1]
+/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHq   THQ_ctcvcp_private        0.07096 /store/user/kaehatah/private/THQ_4f_Hincl_13TeV_madgraph_pythia8_Fall17                     # NLO [1]
 
 # THW
-/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHW   THW_private               0.01561 /store/user/kaehatah/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17                     # NLO [1]
+/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER                    1 tHW   THW_ctcvcp_private        0.01561 /store/user/kaehatah/private/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17                     # NLO [1]
 
 # single-top
 /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/private/USER 1 TT    ST_tWll_PSweights_private 0.01103 /store/user/kaehatah/private/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17  # LO [2]
