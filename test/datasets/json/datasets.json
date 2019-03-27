@@ -211,7 +211,11 @@
               "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.023133,
@@ -299,7 +303,11 @@
               "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.005089,
@@ -322,7 +330,11 @@
               "dbs": "/THW_ctcvcp_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/THW_ctcvcp_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [
             {
               "dbs": "/THW_5f_Hincl_13TeV_madgraph_pythia8_Fall17/private/USER",
@@ -2630,7 +2642,11 @@
               "dbs": "/DY3JetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/DY3JetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
@@ -2655,7 +2671,11 @@
               "dbs": "/DY4JetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/DY4JetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
@@ -2696,6 +2716,32 @@
             "https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=DYJetsToLL_M-5to50_HT-70to100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8"
           ],
           "comment": "301.0 * 1.1764"
+        }
+      },
+      {
+        "name": "DYJetsToLL_M-4to50_HT-70to100",
+        "enabled": 1,
+        "use_case": "flip background",
+        "process": "Z+jets",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/DYJetsToLL_M-4to50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "DYJetsToLL_M-4to50_HT-70to100_PSweights"
+            }
+          ]
+        },
+        "xs": {
+          "value": 145.5,
+          "order": "LO",
+          "references": [
+            "https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=DYJetsToLL_M-4to50_HT-70to100_TuneCP5_13TeV-madgraphMLM-pythia8"
+          ],
+          "comment": ""
         }
       },
       {
@@ -2765,7 +2811,12 @@
               "alt": "DYJetsToLL_M-4to50_HT-100to200_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "DYJetsToLL_M-4to50_HT-100to200_PSweights"
+            }
+          ]
         },
         "xs": {
           "value": 239.63,
@@ -2841,7 +2892,12 @@
               "alt": "DYJetsToLL_M-4to50_HT-200to400_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "DYJetsToLL_M-4to50_HT-200to400_PSweights"
+            }
+          ]
         },
         "xs": {
           "value": 63.79,
@@ -2917,7 +2973,12 @@
               "alt": "DYJetsToLL_M-4to50_HT-400to600_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "DYJetsToLL_M-4to50_HT-400to600_PSweights"
+            }
+          ]
         },
         "xs": {
           "value": 6.726,
@@ -2988,7 +3049,12 @@
               "alt": "DYJetsToLL_M-4to50_HT-600toInf_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "DYJetsToLL_M-4to50_HT-600toInf_PSWeights"
+            }
+          ]
         },
         "xs": {
           "value": 2.172,
@@ -3684,7 +3750,11 @@
               "dbs": "/DYBBJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/DYBBJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [
             {
               "dbs": "/DYBBJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
@@ -4396,7 +4466,11 @@
               "alt": "WWTo2L2Nu_PSweights_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WWTo2L2Nu_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 12.178,
@@ -4467,7 +4541,11 @@
               "alt": "WWToLNuQQ_PSweights_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WWToLNuQQ_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 49.997,
@@ -4559,7 +4637,11 @@
               "alt": "WWTo4Q_PSweights_ext1"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WWTo4Q_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 53.923,
@@ -4748,7 +4830,11 @@
               "dbs": "/WZTo3LNu_1Jets_MLL-4To50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/WZTo3LNu_1Jets_MLL-4To50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
