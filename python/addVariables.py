@@ -51,22 +51,14 @@ def addLeptonInJetVariables(process):
      srcMu = cms.InputTag("slimmedMuons"),
   )
   process.slimmedJetsAK8WithUserData.userFloats.lsf3 = cms.InputTag("lepInJetVars:lsf3")
-  process.slimmedJetsAK8WithUserData.userFloats.lmd3 = cms.InputTag("lepInJetVars:lmd3")
-  process.slimmedJetsAK8WithUserData.userFloats.lep3pt = cms.InputTag("lepInJetVars:lep3pt")
-  process.slimmedJetsAK8WithUserData.userFloats.lep3eta = cms.InputTag("lepInJetVars:lep3eta")
-  process.slimmedJetsAK8WithUserData.userFloats.lep3phi = cms.InputTag("lepInJetVars:lep3phi")
   process.slimmedJetsAK8WithUserData.userFloats.lsf3match = cms.InputTag("lepInJetVars:lsf3match")
-  process.slimmedJetsAK8WithUserData.userInts.lep3id =  cms.InputTag("lepInJetVars:lep3id")
   process.slimmedJetsAK8WithUserData.userInts.lep3idmatch =  cms.InputTag("lepInJetVars:lep3idmatch")
+  process.slimmedJetsAK8WithUserData.userInts.lep3indexmatch =  cms.InputTag("lepInJetVars:lep3indexmatch")
 
   process.fatJetTable.variables.lsf3 = Var("userFloat('lsf3')",float, doc="LSF (3 subjets)",precision=10)
-  process.fatJetTable.variables.lmd3 = Var("userFloat('lmd3')", float, doc="LMD (3 subjets)", precision=10)
-  process.fatJetTable.variables.lep3pt = Var("userFloat('lep3pt')", float, doc="Lep pT (3 subjets)", precision=10)
-  process.fatJetTable.variables.lep3phi = Var("userFloat('lep3phi')", float, doc="Lep phi (3 subjets)", precision=10)
-  process.fatJetTable.variables.lep3eta = Var("userFloat('lep3eta')", float, doc="Lep eta (3 subjets)", precision=10)
-  process.fatJetTable.variables.lep3id = Var("userInt('lep3id')", int, doc="Lep id (3 subjets)")
-  process.fatJetTable.variables.lsf3match = Var("userFloat('lsf3match')", float, doc="LSF match to RECO (3 subjets)", precision=10)
-  process.fatJetTable.variables.lep3idmatch = Var("userInt('lep3idmatch')", int, doc="Lep id match to RECO (3 subjets)")
+  process.fatJetTable.variables.lsf3match = Var("userFloat('lsf3match')",float, doc="LSF matched to RECO (3 subjets)",precision=10)
+  process.fatJetTable.variables.lep3idmatch = Var("userInt('lep3idmatch')",int, doc="Lep id matched to RECO (3 subjets)")
+  process.fatJetTable.variables.lep3indexmatch = Var("userInt('lep3indexmatch')",int, doc="Lep index matched to RECO (3 subjets)")
 
   process.jetSequence.insert(
     process.jetSequence.index(process.updatedJets) + 1,
