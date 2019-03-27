@@ -1,4 +1,4 @@
-# file generated at 2019-03-27 21:43:38 with the following command:
+# file generated at 2019-03-27 22:11:57 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -77,6 +77,8 @@
 /TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v2/MINIAODSIM                                        1 Rares                     TTZH                                            0.001131  # ?; error 5.965e-07; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 /TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                        1 Rares                     TTTW                                            0.0007317 # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 /TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                        1 Rares                     TTTJ                                            0.0003973 # ?; error 1.707e-07; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
+/TTWZ_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                        1 Rares                     TTWZ                                            0.002441  # LO [13]
+/TTZZ_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                        1 Rares                     TTZZ                                            0.001386  # LO [14]
 
 # VH
 /ZH_HToBB_ZToLL_M125_13TeV_powheg_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                          1 VH                        ZH_HToBB_ZToLL                                  0.05198   # ? [1][2][5]; s(ZH) * br(h -> bb) * br(z -> ll)
@@ -115,7 +117,7 @@
 /DYBBJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                        1 EWK                       DYBBJetsToLL_M-50                              14.59      # ?; error 0.008413; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 
 # W+jets
-/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                      1 EWK                       WJetsToLNu_madgraphMLM                      61526.7       # NNLO [13]; k-factor = 61526.7 / 52940.0 = 1.1622
+/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                      1 EWK                       WJetsToLNu_madgraphMLM                      61526.7       # NNLO [15]; k-factor = 61526.7 / 52940.0 = 1.1622
 /W1JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                              1 EWK                       W1JetsToLNu                                  9418.44      # NNLO; 8104 * 1.1622; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)
 /W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v3/MINIAODSIM                                     1 EWK                       W2JetsToLNu                                  3244.85      # NNLO; 2792 * 1.16222; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)
 /W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                              1 EWK                       W3JetsToLNu                                  1153.02      # NNLO; 992.1 * 1.1622; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)
@@ -125,14 +127,14 @@
 /WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11-v1/MINIAODSIM                        1 EWK                       WJetsToLNu_HT1200To2500                         1.262     # NNLO; 1.082 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer
 
 # di-bosons
-/WWTo2L2Nu_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                             1 EWK                       WWTo2L2Nu                                      12.178     # NNLO [4][6][14]; alternatively: 118.7 * (1 - 0.674)^2 = 12.61
-/WWTo2L2Nu_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM              1 EWK                       WWTo2L2Nu_PSweights_ext1                       12.178     # NNLO [4][6][14]; alternatively: 118.7 * (1 - 0.674)^2 = 12.61
-/WWToLNuQQ_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                             1 EWK                       WWToLNuQQ                                      49.997     # NNLO [4][6][14]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
-/WWToLNuQQ_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10_ext1-v1/MINIAODSIM                               1 EWK                       WWToLNuQQ_ext1                                 49.997     # NNLO [4][6][14]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
-/WWToLNuQQ_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM              1 EWK                       WWToLNuQQ_PSweights_ext1                       49.997     # NNLO [4][6][14]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
-/WWTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                    0 EWK                       WWTo1L1Nu2Q                                    49.997     # NNLO [4][6][14]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
-/WWTo4Q_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                1 EWK                       WWTo4Q                                         53.923     # NNLO [4][6][14]; alternatively: 118.7 * 0.674^2 = 53.923
-/WWTo4Q_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                 1 EWK                       WWTo4Q_PSweights_ext1                          53.923     # NNLO [4][6][14]; alternatively: 118.7 * 0.674^2 = 53.923
+/WWTo2L2Nu_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                             1 EWK                       WWTo2L2Nu                                      12.178     # NNLO [4][6][16]; alternatively: 118.7 * (1 - 0.674)^2 = 12.61
+/WWTo2L2Nu_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM              1 EWK                       WWTo2L2Nu_PSweights_ext1                       12.178     # NNLO [4][6][16]; alternatively: 118.7 * (1 - 0.674)^2 = 12.61
+/WWToLNuQQ_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                             1 EWK                       WWToLNuQQ                                      49.997     # NNLO [4][6][16]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
+/WWToLNuQQ_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10_ext1-v1/MINIAODSIM                               1 EWK                       WWToLNuQQ_ext1                                 49.997     # NNLO [4][6][16]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
+/WWToLNuQQ_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM              1 EWK                       WWToLNuQQ_PSweights_ext1                       49.997     # NNLO [4][6][16]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
+/WWTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                    0 EWK                       WWTo1L1Nu2Q                                    49.997     # NNLO [4][6][16]; alternatively: 118.7 * (1 - 0.674) * 0.674 = 52.15
+/WWTo4Q_NNPDF31_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                1 EWK                       WWTo4Q                                         53.923     # NNLO [4][6][16]; alternatively: 118.7 * 0.674^2 = 53.923
+/WWTo4Q_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                 1 EWK                       WWTo4Q_PSweights_ext1                          53.923     # NNLO [4][6][16]; alternatively: 118.7 * 0.674^2 = 53.923
 /WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM                                       1 EWK                       WZTo3LNu                                        4.42965   # NLO [6]
 /WZTo3LNu_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                  0 EWK                       WZTo3LNu_powheg                                 4.42965   # NLO [6]
 /WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                                1 EWK                       WZTo2L2Q                                        5.595     # NLO [6]
@@ -183,5 +185,7 @@
 # [10] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO
 # [11] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8
 # [12] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8
-# [13] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8
-# [14] https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV
+# [13] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTWZ_TuneCP5_13TeV-madgraph-pythia8
+# [14] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTZZ_TuneCP5_13TeV-madgraph-pythia8
+# [15] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8
+# [16] https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV
