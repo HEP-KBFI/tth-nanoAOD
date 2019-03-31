@@ -98,6 +98,9 @@ def addPileupJetId(process):
   )
 
 def addVariables(process, is_mc, year, is_th = False):
+  # see https://github.com/cms-nanoAOD/cmssw/pull/305/files#diff-83ba8ecada4b95383f59a8a2ab206052
+  process.tausMCMatchLepTauForTable.mcStatus = cms.vint32()
+
   assert(is_mc or not is_th)
   process.load('tthAnalysis.NanoAOD.boosted_cff')
 
