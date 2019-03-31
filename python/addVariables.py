@@ -171,6 +171,14 @@ def addVariables(process, is_mc, year, is_th = False):
     "-1.",
     float, doc = "jetBTagDeepCSV variable"
   )
+  process.electronTable.variables.jetBTagDeepJet = Var(
+    "?userCand('jetForLepJetVar').isNonnull()?"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probb')+"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probbb')+"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:problepb'):"
+    "-1.",
+    float, doc = "jetBTagDeepJet variable"
+  )
 
   process.muonTable.variables.jetNDauChargedMVASel = Var(
     "?userCand('jetForLepJetVar').isNonnull()?userFloat('jetNDauChargedMVASel'):0",
@@ -200,6 +208,14 @@ def addVariables(process, is_mc, year, is_th = False):
     "userCand('jetForLepJetVar').bDiscriminator('pfDeepCSVJetTags:probbb'):"
     "-1.",
     float, doc = "jetBTagDeepCSV variable"
+  )
+  process.muonTable.variables.jetBTagDeepJet = Var(
+    "?userCand('jetForLepJetVar').isNonnull()?"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probb')+"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probbb')+"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:problepb'):"
+    "-1.",
+    float, doc = "jetBTagDeepJet variable"
   )
 
   for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
