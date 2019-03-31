@@ -160,8 +160,8 @@ def addVariables(process, is_mc, year, is_th = False):
   )
   process.electronTable.variables.jetBTagCSV = Var(
     "?userCand('jetForLepJetVar').isNonnull()?"
-    "max(userCand('jetForLepJetVar').bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags'),0.0):"
-    "0.0",
+    "userCand('jetForLepJetVar').bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags'):"
+    "-1.",
     float, doc = "jetBTagCSV variable used by TTH MVA"
   )
   process.electronTable.variables.jetBTagDeepCSV = Var(
@@ -198,8 +198,8 @@ def addVariables(process, is_mc, year, is_th = False):
   )
   process.muonTable.variables.jetBTagCSV = Var(
     "?userCand('jetForLepJetVar').isNonnull()?"
-    "max(userCand('jetForLepJetVar').bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags'),0.0):"
-    "0.0",
+    "userCand('jetForLepJetVar').bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags'):"
+    "-1.",
     float, doc = "jetBTagCSV variable used by TTH MVA"
   )
   process.muonTable.variables.jetBTagDeepCSV = Var(
