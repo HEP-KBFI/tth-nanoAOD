@@ -35,7 +35,7 @@ export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 
 export COND_DATA_2018="102X_dataRun2_Sep2018ABC_v2" # JEC Autumn18_RunABCD_V8_DATA
 export COND_MC_2018="102X_upgrade2018_realistic_v18" # JEC Autumn18_V8_MC
-export ERA_ARGS_2018="Run2_2018"
+export ERA_ARGS_2018="Run2_2018,run2_nanoAOD_102Xv1"
 export ERA_KEY_2018="2018"
 export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
 
