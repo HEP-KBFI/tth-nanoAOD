@@ -116,7 +116,7 @@ if [ "$ERA" == "$ERA_KEY_2016_v2" ]; then
   export DATASET_ERA=$DATASET_ERA_2016_v2
   export JSON_FILE=$JSON_FILE_2016
   export YEAR="2016"
-  if [ ! $CMSSW_VERSION =~ ^CMSSW_9_4 ]; then
+  if [[ ! $CMSSW_VERSION =~ ^CMSSW_9_4 ]]; then
     echo "Running $ERA with data GT $COND_DATA and MC GT $COND_MC requires CMSSW version 94x";
     exit 1;
   fi
@@ -127,7 +127,7 @@ elif [ "$ERA" == "$ERA_KEY_2016_v3" ]; then
   export DATASET_ERA=$DATASET_ERA_2016_v3
   export JSON_FILE=$JSON_FILE_2016
   export YEAR="2016"
-  if [ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]; then
+  if [[ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]]; then
     echo "Running $ERA with data GT $COND_DATA and MC GT $COND_MC requires CMSSW version 102x";
     exit 1;
   fi
@@ -138,7 +138,7 @@ elif [ "$ERA" == "$ERA_KEY_2017_v1" ]; then
   export DATASET_ERA=$DATASET_ERA_2017_v1
   export JSON_FILE=$JSON_FILE_2017
   export YEAR="2017"
-  if [ ! $CMSSW_VERSION =~ ^CMSSW_9_4 ]; then
+  if [[ ! $CMSSW_VERSION =~ ^CMSSW_9_4 ]]; then
     echo "Running $ERA with data GT $COND_DATA and MC GT $COND_MC requires CMSSW version 94x";
     exit 1;
   fi
@@ -149,7 +149,7 @@ elif [ "$ERA" == "$ERA_KEY_2017_v2" ]; then
   export DATASET_ERA=$DATASET_ERA_2017_v2
   export JSON_FILE=$JSON_FILE_2017
   export YEAR="2017"
-  if [ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]; then
+  if [[ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]]; then
     echo "Running $ERA with data GT $COND_DATA and MC GT $COND_MC requires CMSSW version 102x";
     exit 1;
   fi
@@ -160,7 +160,7 @@ elif [ "$ERA" == "$ERA_KEY_2018" ]; then
   export DATASET_ERA=$DATASET_ERA_2018
   export JSON_FILE=$JSON_FILE_2018
   export YEAR="2018"
-  if [ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]; then
+  if [[ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]]; then
     echo "Running $ERA with data GT $COND_DATA and MC GT $COND_MC requires CMSSW version 102x";
     exit 1;
   fi
@@ -175,7 +175,7 @@ elif [ "$ERA" == "$ERA_KEY_2018_PROMPT" ]; then
   export DATASET_ERA=$DATASET_ERA_2018
   export JSON_FILE=$JSON_FILE_2018
   export YEAR="2018"
-  if [ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]; then
+  if [[ ! $CMSSW_VERSION =~ ^CMSSW_10_2 ]]; then
     echo "Running $ERA with data GT $COND_DATA requires CMSSW version 102x";
     exit 1;
   fi
