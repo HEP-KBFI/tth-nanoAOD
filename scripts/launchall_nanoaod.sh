@@ -443,10 +443,10 @@ cat $DATASET_FILE | while read LINE; do
   fi
 
   DATASET_LEADING_PART_UPPERCASE=$(echo $DATASET_LEADING_PART | tr '[:lower:]' '[:upper:]')
-  if [[ $DATASET_LEADING_PART_UPPERCASE =~ ^/THQ ]] || [[ $DATASET_LEADING_PART_UPPERCASE =~ ^/THW ]]; then
-    export NANOCFG=$NANOCFG_ANY;
-  else
+  if [[ $DATASET_LEADING_PART_UPPERCASE =~ ^THQ ]] || [[ $DATASET_LEADING_PART_UPPERCASE =~ ^THW ]]; then
     export NANOCFG=$NANOCFG_TH;
+  else
+    export NANOCFG=$NANOCFG_ANY;
   fi
   echo "Using config file: $NANOCFG";
 
