@@ -274,16 +274,18 @@ def addVariables(process, is_mc, year, is_th = False):
     process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, nof_lhe_weights + 1))))
     process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, nof_lhe_weights + 1))))
 
-  addJetSubstructureObservables(process)
+  addJetSubstructureObservables(process) # adds nothing to VSIZE
+  # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
-  addTauAntiEleMVA2018(process)
-  addDeepTau2017v1(process)
-  addDPFTau_2016_v0(process)
-  addDPFTau_2016_v1(process)
-  addL1PreFiringEventWeigh(process)
-  addLeptonInJetVariables(process)
-  addPileupJetId(process)
+  addTauAntiEleMVA2018(process) # add nothing to VSIZE
+  #addDeepTau2017v1(process) # adds 600MB to VSIZE
+  # enabling at least one of addDPFTau_2016_v* adds 400MB to VSIZE, but adding the second one doesn't increase the VSIZE
+  #addDPFTau_2016_v0(process)
+  #addDPFTau_2016_v1(process)
+  addL1PreFiringEventWeigh(process) # adds nothing to VSIZE
+  addLeptonInJetVariables(process) # adds < 1MB to VSIZE
+  addPileupJetId(process) # adds nothing to VSIZE
 
   # remove the execution of GEN plugins
   # see https://github.com/cms-nanoAOD/cmssw/issues/277
