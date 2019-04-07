@@ -35,7 +35,9 @@ fi
 
 BLOCKS=$(dasgoclient -query="block dataset=$DATASET" 2>/dev/null)
 BAD_BLOCKS=0
+NOF_BLOCKS=0
 for BLOCK in $BLOCKS; do
+  NOF_BLOCKS=$((NOF_BLOCKS+1))
   LUMIS=$(dasgoclient -query="lumi block=$BLOCK" 2>/dev/null);
   NOF_LUMIS_SUM=0
   for LUMI in $LUMIS; do
@@ -54,7 +56,7 @@ done
 
 if [ "$BAD_BLOCKS" -gt "0" ]; then
   echo -n "Dataset $DATASET is NOT compatible with EventAwareLumiBased splitting as it has "
-  echo    "$BAD_BLOCKS blocks containing more than $MAX_LUMIS lumis";
+  echo    "$BAD_BLOCKS blocks (out of $NOF_BLOCKS blocks) containing more than $MAX_LUMIS lumis";
 else
   echo "Dataset $DATASET is compatible with EventAwareLumiBased splitting";
 fi
