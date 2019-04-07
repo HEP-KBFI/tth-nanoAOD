@@ -33,6 +33,13 @@ if [ "$DATASET_NAME" != "$DATASET" ]; then
   exit 1;
 fi
 
+NOF_FILES=$(dasgoclient -query="dataset dataset=$DATASET | grep dataset.num_file" -unique | grep -v "^\[")
+NOF_EVENTS=$(dasgoclient -query="dataset dataset=$DATASET | grep dataset.nevents" -unique | grep -v "^\[")
+EVENTS_PER_FILE=$(python -c "print($NOF_EVENTS/$NOF_FILES)")
+echo "Number of files: $NOF_FILES"
+echo "Number of events: $NOF_EVENTS"
+echo "Average number of events per file: $EVENTS_PER_FILE"
+
 BLOCKS=$(dasgoclient -query="block dataset=$DATASET" 2>/dev/null)
 BAD_BLOCKS=0
 NOF_BLOCKS=0
