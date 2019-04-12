@@ -13,6 +13,37 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoA
 
 from PhysicsTools.PatUtils.L1ECALPrefiringWeightProducer_cff import prefiringweight
 from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
+from RecoJets.JetProducers.QGTagger_cfi import QGTagger
+
+from CondCore.CondDB.CondDB_cfi import CondDB
+
+def recomputeQGL(process):
+  process.QGPoolDBESSource = cms.ESSource("PoolDBESSource",
+    CondDB.clone(
+      connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
+    ),
+    toGet = cms.VPSet(
+      cms.PSet(
+        record = cms.string('QGLikelihoodRcd'),
+        tag    = cms.string('QGLikelihoodObject_v1_AK4PFchs_2017'),
+        label  = cms.untracked.string('QGL_AK4PFchs'),
+      ),
+    ),
+  )
+  process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
+
+  process.slimmedJetsWithUserData.userFloats.qgl = cms.InputTag('qgtagger:qgLikelihood')
+  process.jetTable.variables.qgl = Var(
+    "userFloat('qgl')",
+    float, doc = "Quark vs Gluon likelihood discriminator", precision = 10
+  )
+  process.qgtagger = QGTagger.clone(
+    srcJets             = "slimmedJets",
+    srcVertexCollection = "offlineSlimmedPrimaryVertices",
+  )
+  if process.slimmedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
+    process.qgtagger.srcJets = "selectedUpdatedPatJetsWithDeepInfo"
+  process.jetSequence.insert(1, process.qgtagger)
 
 def addL1PreFiringEventWeigh(process):
   # Implements https://github.com/cms-nanoAOD/cmssw/pull/266
@@ -286,6 +317,7 @@ def addVariables(process, is_mc, year, is_th = False):
   addL1PreFiringEventWeigh(process) # adds nothing to VSIZE
   addLeptonInJetVariables(process) # adds < 1MB to VSIZE
   addPileupJetId(process) # adds nothing to VSIZE
+  recomputeQGL(process)
 
   # remove the execution of GEN plugins
   # see https://github.com/cms-nanoAOD/cmssw/issues/277
