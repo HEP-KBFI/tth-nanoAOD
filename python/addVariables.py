@@ -17,6 +17,77 @@ from RecoJets.JetProducers.QGTagger_cfi import QGTagger
 
 from CondCore.CondDB.CondDB_cfi import CondDB
 
+import os.path
+
+def addLepMVA(process):
+  baseDir = "tthAnalysis/NanoAOD/data/LepMVA"
+
+  process.electronMVATTH.weightFile = cms.FileInPath(os.path.join(baseDir, "el_BDTG_2017.weights.xml"))
+  process.electronMVATTH.variablesOrder = cms.vstring([
+    "LepGood_pt",
+    "LepGood_eta",
+    "LepGood_jetNDauChargedMVASel",
+    "LepGood_miniRelIsoCharged",
+    "LepGood_miniRelIsoNeutral",
+    "LepGood_jetPtRelv2",
+    "LepGood_jetDF",
+    "LepGood_jetPtRatio",
+    "LepGood_dxy",
+    "LepGood_sip3d",
+    "LepGood_dz",
+    "LepGood_mvaFall17V2noIso",
+  ])
+  process.electronMVATTH.variables.LepGood_jetDF = cms.string(
+    "?userCand('jetForLepJetVar').isNonnull()?"
+    "max("
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probbb')+"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probb')+"
+    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:problepb'),"
+    "0.0"
+    ")"
+    ":0.0"
+  )
+  process.electronMVATTH.variables.LepGood_mvaFall17V2noIso = cms.string("userFloat('mvaFall17V2noIso')")
+
+  process.muonMVATTH.weightFile = cms.FileInPath(os.path.join(baseDir, "mu_BDTG_2017.weights.xml"))
+  process.muonMVATTH.variablesOrder = cms.vstring([
+    "LepGood_pt",
+    "LepGood_eta",
+    "LepGood_jetNDauChargedMVASel",
+    "LepGood_miniRelIsoCharged",
+    "LepGood_miniRelIsoNeutral",
+    "LepGood_jetPtRelv2",
+    "LepGood_jetDF",
+    "LepGood_jetPtRatio",
+    "LepGood_dxy",
+    "LepGood_sip3d",
+    "LepGood_dz",
+    "LepGood_segmentComp",
+  ])
+  process.muonMVATTH.variables.LepGood_jetDF = cms.string(
+    "?userCand('jetForLepJetVar').isNonnull()?"
+      "max("
+        "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probbb')+"
+        "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probb')+"
+        "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:problepb'),"
+        "0.0"
+      ")"
+    ":0.0"
+  )
+  process.muonMVATTH.variables.LepGood_segmentComp = cms.string("segmentCompatibility")
+
+  for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
+    modifier.toModify(
+      process.electronMVATTH,
+      weightFile = cms.FileInPath(os.path.join(baseDir, "el_BDTG_2016.weights.xml"))
+    )
+    modifier.toModify(
+      process.muonMVATTH,
+      weightFile = cms.FileInPath(os.path.join(baseDir, "mu_BDTG_2016.weights.xml"))
+    )
+
+
+
 def recomputeQGL(process):
   process.QGPoolDBESSource = cms.ESSource("PoolDBESSource",
     CondDB.clone(
@@ -318,6 +389,7 @@ def addVariables(process, is_mc, year, is_th = False):
   addLeptonInJetVariables(process) # adds < 1MB to VSIZE
   addPileupJetId(process) # adds nothing to VSIZE
   recomputeQGL(process)
+  addLepMVA(process)
 
   # remove the execution of GEN plugins
   # see https://github.com/cms-nanoAOD/cmssw/issues/277
