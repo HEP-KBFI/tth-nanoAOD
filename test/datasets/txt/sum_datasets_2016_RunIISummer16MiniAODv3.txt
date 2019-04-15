@@ -1,0 +1,42 @@
+# file generated at 2019-03-27 22:24:05 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
+TTZToLL_M10_ext2                 TTZToLL_M10_ext3
+TTJets_DiLept                    TTJets_DiLept_ext1
+TTJets_SingleLeptFromT           TTJets_SingleLeptFromT_ext1
+TTJets_SingleLeptFromTbar        TTJets_SingleLeptFromTbar_ext1
+WGToLNuG_ext1                    WGToLNuG_ext2                         WGToLNuG_ext3
+TTGJets                          TTGJets_ext1
+ZH_HToBB_ZToLL                   ZH_HToBB_ZToLL_ext1
+DYJetsToLL_M-10to50_amcatnloFXFX DYJetsToLL_M-10to50_amcatnloFXFX_ext1
+DYJetsToLL_M-5to50_HT-100to200   DYJetsToLL_M-5to50_HT-100to200_ext1
+DYJetsToLL_M-5to50_HT-200to400   DYJetsToLL_M-5to50_HT-200to400_ext1
+DYJetsToLL_M-5to50_HT-400to600   DYJetsToLL_M-5to50_HT-400to600_ext1
+DYJetsToLL_M-5to50_HT-600toInf   DYJetsToLL_M-5to50_HT-600toInf_ext1
+DYJetsToLL_M-50_ext1             DYJetsToLL_M-50_ext2
+DYJetsToLL_M50_HT100to200        DYJetsToLL_M50_HT100to200_ext1
+DYJetsToLL_M50_HT200to400        DYJetsToLL_M50_HT200to400_ext1
+DYJetsToLL_M50_HT400to600        DYJetsToLL_M50_HT400to600_ext1
+WJetsToLNu                       WJetsToLNu_ext2
+WJetsToLNu_madgraphMLM           WJetsToLNu_madgraphMLM_ext2
+WJetsToLNu_HT100To200            WJetsToLNu_HT100To200_ext1
+WJetsToLNu_HT200To400            WJetsToLNu_HT200To400_ext1            WJetsToLNu_HT200To400_ext2
+WJetsToLNu_HT400To600            WJetsToLNu_HT400To600_ext1
+WJetsToLNu_HT600To800            WJetsToLNu_HT600To800_ext1
+WJetsToLNu_HT800To1200           WJetsToLNu_HT800To1200_ext1
+WJetsToLNu_HT1200To2500          WJetsToLNu_HT1200To2500_ext1
+WJetsToLNu_HT2500ToInf           WJetsToLNu_HT2500ToInf_ext1
+WWToLNuQQ                        WWToLNuQQ_ext1
+ZZTo2L2Nu                        ZZTo2L2Nu_ext1
+QCD_Pt30to50_EMEnriched          QCD_Pt30to50_EMEnriched_ext1
+QCD_Pt50to80_EMEnriched          QCD_Pt50to80_EMEnriched_ext1
+QCD_Pt80to120_EMEnriched         QCD_Pt80to120_EMEnriched_ext1
+QCD_Pt120to170_EMEnriched        QCD_Pt120to170_EMEnriched_ext1
+QCD_Pt80to120_Mu5                QCD_Pt80to120_Mu5_ext1
+QCD_Pt120to170_Mu5               QCD_Pt120to170_Mu5_backup
+QCD_Pt170to300_Mu5               QCD_Pt170to300_Mu5_ext1               QCD_Pt170to300_Mu5_backup
+QCD_Pt300to470_Mu5               QCD_Pt300to470_Mu5_ext1               QCD_Pt300to470_Mu5_ext2
+QCD_Pt470to600_Mu5               QCD_Pt470to600_Mu5_ext1               QCD_Pt470to600_Mu5_ext2
+QCD_Pt600to800_Mu5               QCD_Pt600to800_Mu5_ext1               QCD_Pt600to800_Mu5_backup
+QCD_Pt800to1000_Mu5              QCD_Pt800to1000_Mu5_ext1              QCD_Pt800to1000_Mu5_ext2
+QCD_Pt1000toInf_Mu5              QCD_Pt1000toInf_Mu5_ext1

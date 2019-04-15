@@ -3,3 +3,10 @@
 __init__.py*
 *.pyc
 .idea
+*.config
+*.creator
+*.files
+*.includes
+*.creator.user*
+test/cfgs
+crab.log

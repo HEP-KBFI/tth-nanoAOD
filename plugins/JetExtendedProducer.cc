@@ -32,12 +32,12 @@ class JetExtendedProducer : public edm::stream::EDProducer<>
     token_ = consumes<edm::View<pat::Jet>>(src_);
     edm::VParameterSet cfgPlugins = cfg.getParameter<edm::VParameterSet>("plugins");
     for ( edm::VParameterSet::const_iterator cfgPlugin = cfgPlugins.begin();
-	  cfgPlugin != cfgPlugins.end(); ++cfgPlugin ) {
+          cfgPlugin != cfgPlugins.end(); ++cfgPlugin ) {
       std::string pluginType = cfgPlugin->getParameter<std::string>("pluginType");
       JetExtendedPluginBase* plugin = JetExtendedPluginFactory::get()->create(pluginType, *cfgPlugin);
       JetValueMapPlugin* plugin_JetValueMap = dynamic_cast<JetValueMapPlugin*>(plugin);
       if ( plugin_JetValueMap ) {
-	plugin_JetValueMap->token_ = consumes<edm::ValueMap<float>>(plugin_JetValueMap->src_);
+        plugin_JetValueMap->token_ = consumes<edm::ValueMap<float>>(plugin_JetValueMap->src_);
       }
       plugins_.push_back(plugin);
     }
@@ -58,16 +58,16 @@ class JetExtendedProducer : public edm::stream::EDProducer<>
       edm::RefToBase<pat::Jet> inputPatJetRef(inputJetRef.castTo<pat::JetRef>());
       pat::Jet outputJet(inputPatJetRef);
       for ( std::vector<JetExtendedPluginBase*>::const_iterator plugin = plugins_.begin();
-	    plugin != plugins_.end(); ++plugin ) {
-	JetValueMapPlugin* plugin_JetValueMap = dynamic_cast<JetValueMapPlugin*>(*plugin);
-	if ( plugin_JetValueMap ) {
-	  edm::Handle<edm::ValueMap<float>> valueMap;
-	  evt.getByToken(plugin_JetValueMap->token_, valueMap);
-	  double value = (*valueMap)[inputJetRef];
-	  (*plugin_JetValueMap)(outputJet, value);
-	} else {
-	  (**plugin)(outputJet);
-	}
+            plugin != plugins_.end(); ++plugin ) {
+        JetValueMapPlugin* plugin_JetValueMap = dynamic_cast<JetValueMapPlugin*>(*plugin);
+        if ( plugin_JetValueMap ) {
+          edm::Handle<edm::ValueMap<float>> valueMap;
+          evt.getByToken(plugin_JetValueMap->token_, valueMap);
+          double value = (*valueMap)[inputJetRef];
+          (*plugin_JetValueMap)(outputJet, value);
+        } else {
+          (**plugin)(outputJet);
+        }
       }
       outputJets->push_back(outputJet);
     }

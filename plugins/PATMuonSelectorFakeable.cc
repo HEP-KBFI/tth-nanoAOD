@@ -57,16 +57,16 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
     switch ( era_ ) {
       case kEra_2016: {
-	min_pt_ = 10.;
-	binning_mvaTTH_ = { 0.75 };
-	min_segmentCompatibility_ = { -1.e+3, -1.e+3 }; 
-	break;
+        min_pt_ = 10.;
+        binning_mvaTTH_ = { 0.75 };
+        min_segmentCompatibility_ = { -1.e+3, -1.e+3 }; 
+        break;
       }
       case kEra_2017: {
-	min_pt_ = 5.; 
-	binning_mvaTTH_ = { 0.90 };
-	min_segmentCompatibility_ = { 0.3, -1.e+3 };
-	break;
+        min_pt_ = 5.; 
+        binning_mvaTTH_ = { 0.90 };
+        min_segmentCompatibility_ = { 0.3, -1.e+3 };
+        break;
       }      
       //case kEra_2018: {
       //
@@ -93,63 +93,61 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     for ( size_t inputMuons_idx = 0; inputMuons_idx < inputMuons->size(); ++inputMuons_idx ) {
       edm::Ptr<pat::Muon> muon = inputMuons->ptrAt(inputMuons_idx);
       if ( muon->pt() < min_pt_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
+        }
+        continue;
       }
       double absEta = std::fabs(muon->eta());
       if ( absEta > max_absEta_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
+        }
+        continue;
       }
       if ( std::fabs(muon->dB(pat::Muon::PV2D)) > max_dxy_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
+        }
+        continue;
       }
       if ( std::fabs(muon->dB(pat::Muon::PVDZ)) > max_dz_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
+        }
+        continue;
       }
       if ( muon->userFloat("miniIsoAll") > (max_relIso_*muon->pt()) ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
+        }
+        continue;
       }
       if ( std::fabs(muon->dB(pat::Muon::PV3D)/muon->edB(pat::Muon::PV3D)) > max_sip3d_ ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
+        }
+        continue;
       }
-      // KE: no need to apply cut on loose muon ID,
-      //     as all muons on nanoAOD pass the loose muon ID
-      //if ( apply_looseIdPOG_ && !muon->passesLooseIdPOG() ) {
-      //  if ( debug_ ) {
-      //    std::cout << "FAILS loose POG cut\n";
-      //  }
-      //  continue;
-      //}
+      if ( apply_looseIdPOG_ && !muon->passed(reco::Muon::CutBasedIdLoose) ) {
+        if ( debug_ ) {
+          std::cout << "FAILS loose POG cut\n";
+        }
+        continue;
+      }
       if ( apply_mediumIdPOG_ && !muon->passed(reco::Muon::CutBasedIdMedium) ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS medium POG cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS medium POG cut\n";
+        }
+        continue;
       }
       double mvaTTH = (*inputMuons_mvaTTH)[muon];
       const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
       if ( muon->segmentCompatibility() <= min_segmentCompatibility_[idxBin_mvaTTH] ) {
-	if ( debug_ ) {
-	  std::cout << "FAILS segmentCompatibility > " << min_segmentCompatibility_[idxBin_mvaTTH] << " cut\n";
-	}
-	continue;
+        if ( debug_ ) {
+          std::cout << "FAILS segmentCompatibility > " << min_segmentCompatibility_[idxBin_mvaTTH] << " cut\n";
+        }
+        continue;
       }
       // CV: muon passes all cuts
       outputMuons->push_back(*muon);
@@ -177,7 +175,6 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
 
   int era_;
   bool debug_;
-  bool apply_offline_e_trigger_cuts_;
 
   float min_pt_;                    ///< lower cut threshold on lepton pT
   float max_absEta_;                ///< upper cut threshold on absolute value of eta

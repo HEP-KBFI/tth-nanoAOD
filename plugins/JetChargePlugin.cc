@@ -28,11 +28,11 @@ class JetChargePlugin : public JetExtendedPluginBase
     double sumCharge = 0.;
     double sumPt = 0.;
     for ( std::vector<const reco::Candidate*>::const_iterator jetConstituent = jetConstituents.begin();
-	  jetConstituent != jetConstituents.end(); ++jetConstituent ) {
+          jetConstituent != jetConstituents.end(); ++jetConstituent ) {
       double jetConstituentCharge = (*jetConstituent)->charge();
       double jetConstituentPt = (*jetConstituent)->pt();
       if ( fabs(jetConstituentCharge) > 0.5 ) {
-	sumCharge += (jetConstituentCharge*pow(jetConstituentPt, kappa_));
+        sumCharge += (jetConstituentCharge*pow(jetConstituentPt, kappa_));
       }
       sumPt += jetConstituentPt;
     }

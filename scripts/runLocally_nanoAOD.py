@@ -2,7 +2,16 @@
 
 # Runs nanoAOD Ntuple production with SLURM instead of CRAB
 
-import logging, sys, argparse, os, jinja2, shutil, stat
+from tthAnalysis.HiggsToTauTau.hdfs import hdfs
+
+import logging
+import sys
+import argparse
+import os
+import jinja2
+import shutil
+import stat
+import getpass
 
 makefile_template = '''.DEFAULT_GOAL := all
 SHELL := /bin/bash
@@ -40,9 +49,9 @@ OUTPUT_DIR="`dirname $OUTPUT_FILE`"
 
 mkdir -p $OUTPUT_DIR
 
-if [[ "$OUTPUT_DIR" =~ ^/hdfs* && ( ! -z $(which hadoop) ) ]]; then
-  cp_cmd="hadoop fs -copyFromLocal";
-  st_cmd="hadoop fs -stat '%b'";
+if [[ "$OUTPUT_DIR" =~ ^/hdfs* && ( ! -z $(which hdfs) ) ]]; then
+  cp_cmd="JAVA_HOME='' hdfs dfs -copyFromLocal";
+  st_cmd="JAVA_HOME='' hdfs dfs -stat '%b'";
   OUTPUT_DIR=${OUTPUT_DIR#/hdfs}
 else
   cp_cmd=cp;
@@ -152,8 +161,8 @@ process.maxEvents.input   = cms.untracked.int32({{ max_events }})
 if __name__ == '__main__':
   logging.basicConfig(
     stream = sys.stdout,
-    level  = logging.INFO,
-    format = '%(asctime)s - %(levelname)s: %(message)s'
+    level  = logging.DEBUG,
+    format = '%(asctime)s - %(levelname)s: %(message)s',
   )
 
   class SmartFormatter(argparse.HelpFormatter):
@@ -165,43 +174,37 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser(
     formatter_class = lambda prog: SmartFormatter(prog, max_help_position = 40),
   )
-  type_choices = ['data', 'mc']
   parser.add_argument('-i', '--input', dest = 'input', metavar = 'file', required = True, type = str,
                       help = 'R|Input file containing a list of MINIAOD(SIM) or a single ROOT file')
-  parser.add_argument('-o', '--output', dest = 'output', metavar = 'path', required = True, type = str,
+  parser.add_argument('-o', '--output', dest = 'output', metavar = 'path', required = False, type = str,
+                      default = os.path.join('/hdfs', 'local', getpass.getuser(), 'nanoProduction'),
                       help = 'R|Output directory where the nanoAOD Ntuples will be stored')
   parser.add_argument('-n', '--name', dest = 'name', metavar = 'name', required = True, type = str,
                       help = 'R|Sample name (try to be specific, e.g. SingleElectron_Run2017E_17Nov2017_v1)')
-  parser.add_argument('-s', '--script-dir', dest = 'script_dir', metavar = 'path', required = True, type = str,
+  parser.add_argument('-s', '--script-dir', dest = 'script_dir', metavar = 'path', required = False, type = str,
+                      default = os.path.join('/home', getpass.getuser(), 'nanoProduction'),
                       help = 'R|Directory containing config and log files for the SLURM jobs')
-  parser.add_argument('-t', '--type', dest = 'type', metavar = 'type', required = True, type = str, choices = type_choices,
-                      help = 'R|Sample type; choices: %s' % ', '.join(list(map(lambda choice: "'%s'" % choice, type_choices))))
   parser.add_argument('-m', '--max-events', dest = 'max_events', metavar = 'number', required = False, type = int, default = -1,
                       help = 'R|Maximum number of events to be processed in the file')
   parser.add_argument('-S', '--skip-events', dest = 'skip_events', metavar = 'number', required = False, type = int, default = 0,
                       help = 'R|Number of events to be skipped in the file')
-  parser.add_argument('-e', '--era', dest = 'era', metavar = 'era', required = True, type = str, choices = [ '2016', '2017' ],
-                      help = 'R|Era')
+  parser.add_argument('-c', '--config', dest = 'config', metavar = 'file', required = True, type = str,
+                      help = 'R|NanoAOD config file')
   parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                       help = 'R|Enable verbose printout')
   args = parser.parse_args()
-
-  if args.verbose:
-    logging.getLogger().setLevel(logging.DEBUG)
 
   infile      = args.input
   outdir      = args.output
   sample_name = args.name
   script_dir  = args.script_dir
-  sample_type = args.type
   max_events  = args.max_events
   skip_events = args.skip_events
-  era         = args.era
+  nano_cfg    = args.config
 
-  nano_cfg = os.path.join(
-    os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test',
-    'nano_cfg_%s_%s.py' % (sample_type, era)
-  )
+  logging.getLogger().setLevel(logging.DEBUG if args.verbose else logging.INFO)
+
+  script_dir = os.path.join(script_dir, sample_name)
 
   if not os.path.isfile(nano_cfg):
     raise ValueError("File %s is missing!" % nano_cfg)
@@ -221,15 +224,16 @@ if __name__ == '__main__':
           # empty line
           continue
         if not line_stripped.endswith('.root'):
-          logging.warning('File %s does not appear to be a ROOT file')
+          logging.warning('File %s does not appear to be a ROOT file' % line_stripped)
           continue
-        if not os.path.isfile(line_stripped):
-          logging.error('File %s does not exist, skipping')
+        line_path = '/hdfs%s' % line_stripped if line_stripped.startswith(('/local', '/cms')) else line_stripped
+        if not hdfs.isfile(line_path):
+          logging.error('File %s does not exist, skipping' % line_path)
           continue
-        if line_stripped not in input_files:
+        if line_path not in input_files:
           # require the input files to be unique
-          input_files.append(line_stripped)
-        logging.debug('Preparing job for file: %s' % line_stripped)
+          input_files.append(line_path)
+        logging.debug('Preparing job for file: %s' % line_path)
 
   # check if the script directory exists, and if not, create it
   if not os.path.isdir(script_dir):
