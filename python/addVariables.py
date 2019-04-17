@@ -8,10 +8,7 @@ from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
-from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv1_cff import run2_nanoAOD_94XMiniAODv1
-from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoAOD_94XMiniAODv2
 
-from PhysicsTools.PatUtils.L1ECALPrefiringWeightProducer_cff import prefiringweight
 from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
 from RecoJets.JetProducers.QGTagger_cfi import QGTagger
 
@@ -86,8 +83,6 @@ def addLepMVA(process):
       weightFile = cms.FileInPath(os.path.join(baseDir, "mu_BDTG_2016.weights.xml"))
     )
 
-
-
 def recomputeQGL(process):
   process.QGPoolDBESSource = cms.ESSource("PoolDBESSource",
     CondDB.clone(
@@ -115,34 +110,6 @@ def recomputeQGL(process):
   if process.slimmedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
     process.qgtagger.srcJets = "selectedUpdatedPatJetsWithDeepInfo"
   process.jetSequence.insert(1, process.qgtagger)
-
-def addL1PreFiringEventWeigh(process):
-  # Implements https://github.com/cms-nanoAOD/cmssw/pull/266
-  #NOTE L1PrefiringMaps.root does not include weights for 2018 -> branches not present in the Ntuple
-  process.prefiringweight = prefiringweight.clone()
-  for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
-    modifier.toModify(process.prefiringweight, DataEra = cms.string("2016BtoH"))
-
-  process.l1PreFiringEventWeightTable = cms.EDProducer("GlobalVariablesTableProducer",
-    variables = cms.PSet(
-      L1PreFiringWeight   = ExtVar(cms.InputTag("prefiringweight:nonPrefiringProb"),
-        "double", doc = "L1 pre-firing event correction weight (1-probability)", precision = 8
-      ),
-      L1PreFiringWeightUp = ExtVar(cms.InputTag("prefiringweight:nonPrefiringProbUp"),
-        "double", doc = "L1 pre-firing event correction weight (1-probability), up var.", precision = 8
-      ),
-      L1PreFiringWeightDn = ExtVar(cms.InputTag("prefiringweight:nonPrefiringProbDown"),
-        "double", doc = "L1 pre-firing event correction weight (1-probability), down var.", precision = 8
-      ),
-    )
-  )
-  _triggerObjectTables_withL1PreFiring = process.triggerObjectTables.copy()
-  _triggerObjectTables_withL1PreFiring.replace(
-    process.triggerObjectTable,
-    process.prefiringweight + process.l1PreFiringEventWeightTable + process.triggerObjectTable
-  )
-  for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016, run2_nanoAOD_94XMiniAODv1, run2_nanoAOD_94XMiniAODv2:
-      modifier.toReplaceWith(process.triggerObjectTables, _triggerObjectTables_withL1PreFiring)
 
 def addLeptonInJetVariables(process):
   # Implements https://github.com/cms-nanoAOD/cmssw/pull/299
@@ -385,14 +352,7 @@ def addVariables(process, is_mc, year, is_th = False):
   # enabling at least one of addDPFTau_2016_v* adds 400MB to VSIZE, but adding the second one doesn't increase the VSIZE
   #addDPFTau_2016_v0(process)
   #addDPFTau_2016_v1(process)
-  addL1PreFiringEventWeigh(process) # adds nothing to VSIZE
   addLeptonInJetVariables(process) # adds < 1MB to VSIZE
   addPileupJetId(process) # adds nothing to VSIZE
   recomputeQGL(process)
   addLepMVA(process)
-
-  # remove the execution of GEN plugins
-  # see https://github.com/cms-nanoAOD/cmssw/issues/277
-  process.particleLevelSequence.remove(process.genParticles2HepMCHiggsVtx)
-  process.particleLevelSequence.remove(process.rivetProducerHTXS)
-  process.particleLevelTables.remove(process.HTXSCategoryTable)
