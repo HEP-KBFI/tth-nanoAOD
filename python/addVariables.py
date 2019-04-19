@@ -7,13 +7,47 @@ from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+from Configuration.Eras.Modifier_run2_nanoAOD_102Xv1_cff import run2_nanoAOD_102Xv1
 
 from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
 from RecoJets.JetProducers.QGTagger_cfi import QGTagger
+from RecoEgamma.EgammaTools.calibratedEgammas_cff import calibratedPatElectrons
 
 from CondCore.CondDB.CondDB_cfi import CondDB
 
 import os.path
+
+def addEScaleSmearing2018(process):
+  process.calibratedPatElectrons102X = calibratedPatElectrons.clone(
+    produceCalibratedObjs = False,
+    correctionFile        = cms.string("EgammaAnalysis/ElectronTools/data/ScalesSmearings/Run2018_Step2Closure_CoarseEtaR9Gain"),
+  )
+  run2_nanoAOD_102Xv1.toModify(process.slimmedElectronsWithUserData.userFloats,
+    ecalTrkEnergyErrPostCorrNew = cms.InputTag("calibratedPatElectrons102X","ecalTrkEnergyErrPostCorr"),
+    ecalTrkEnergyPreCorrNew     = cms.InputTag("calibratedPatElectrons102X","ecalTrkEnergyPreCorr"),
+    ecalTrkEnergyPostCorrNew    = cms.InputTag("calibratedPatElectrons102X","ecalTrkEnergyPostCorr"),
+  )
+  run2_nanoAOD_102Xv1.toModify(process.electronTable.variables,
+    pt        = Var(
+      "pt*userFloat('ecalTrkEnergyPostCorrNew')/userFloat('ecalTrkEnergyPreCorrNew')",
+      float, precision = -1, doc = "p_{T}"
+    ),
+    energyErr = Var(
+      "userFloat('ecalTrkEnergyErrPostCorrNew')",
+      float, precision = 6, doc = "energy error of the cluster-track combination"
+    ),
+    eCorr     = Var(
+      "userFloat('ecalTrkEnergyPostCorrNew')/userFloat('ecalTrkEnergyPreCorrNew')",
+      float, doc = "ratio of the calibrated energy/miniaod energy"
+    ),
+  )
+  _with94XScale_sequence = process.electronSequence.copy()
+  _with94XScale_sequence.replace(
+    process.slimmedElectronsWithUserData,
+    process.calibratedPatElectrons102X + process.slimmedElectronsWithUserData
+  )
+  run2_nanoAOD_102Xv1.toReplaceWith(process.electronSequence, _with94XScale_sequence)
+
 
 def addLepMVA(process):
   baseDir = "tthAnalysis/NanoAOD/data/LepMVA"
@@ -350,3 +384,4 @@ def addVariables(process, is_mc, year, is_th = False):
   addPileupJetId(process) # adds nothing to VSIZE
   recomputeQGL(process)
   addLepMVA(process)
+  addEScaleSmearing2018(process)
