@@ -52,7 +52,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     std::string era_string = cfg.getParameter<std::string>("era");
     if      ( era_string == "2016" ) era_ = kEra_2016;
     else if ( era_string == "2017" ) era_ = kEra_2017;
-    //else if ( era_string == "2018" ) era_ = kEra_2018;
+    else if ( era_string == "2018" ) era_ = kEra_2018;
     else throw cms::Exception("PATMuonSelectorFakeable")
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
     switch ( era_ ) {
@@ -62,15 +62,13 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
         min_segmentCompatibility_ = { -1.e+3, -1.e+3 }; 
         break;
       }
+      case kEra_2018:
       case kEra_2017: {
         min_pt_ = 5.; 
         binning_mvaTTH_ = { 0.90 };
         min_segmentCompatibility_ = { 0.3, -1.e+3 };
         break;
-      }      
-      //case kEra_2018: {
-      //
-      //}
+      }
       default: assert(0);
     }
     assert(min_pt_ > 0.);

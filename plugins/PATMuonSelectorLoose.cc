@@ -50,7 +50,7 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
     std::string era_string = cfg.getParameter<std::string>("era");
     if      ( era_string == "2016" ) era_ = kEra_2016;
     else if ( era_string == "2017" ) era_ = kEra_2017;
-    //else if ( era_string == "2018" ) era_ = kEra_2018;
+    else if ( era_string == "2018" ) era_ = kEra_2018;
     else throw cms::Exception("PATMuonSelectorLoose")
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
     switch ( era_ ) {
@@ -58,13 +58,11 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
         min_pt_ = 10.;
         break;
       }
+      case kEra_2018:
       case kEra_2017: {
         min_pt_ = 5.;
         break;
-      }      
-      //case kEra_2018: {
-      //
-      //}
+      }
       default: assert(0);
     }
     assert(min_pt_ > 0.);

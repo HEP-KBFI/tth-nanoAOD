@@ -318,7 +318,7 @@ if [ $GENERATE_CFGS_ONLY = true ]; then
 fi
 
 if [ "$YEAR" == "2018" ]; then
-  echo "Cannot submit jobs for 2018 era, yet (disabled in PAT*Selector* plugins";
+  echo "Cannot submit jobs for 2018 era, yet (update in PAT*Selector* plugins)";
   exit 1;
 fi
 

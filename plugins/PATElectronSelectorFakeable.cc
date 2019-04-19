@@ -54,7 +54,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     std::string era_string = cfg.getParameter<std::string>("era");
     if      ( era_string == "2016" ) era_ = kEra_2016;
     else if ( era_string == "2017" ) era_ = kEra_2017;
-    //else if ( era_string == "2018" ) era_ = kEra_2018;
+    else if ( era_string == "2018" ) era_ = kEra_2018;
     else throw cms::Exception("PATElectronSelectorFakeable")
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
     switch ( era_ ) {
@@ -72,6 +72,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
         min_mvaIDraw_ = { -1.e+3, -1.e+3 };
         break;
       }
+      case kEra_2018:
       case kEra_2017: {
         min_pt_ = 7.;
         binning_absEta_ = { 1.479 }; 
@@ -85,10 +86,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
         binning_mvaTTH_ = { 0.90 }; 
         min_mvaIDraw_ = { 0.50, -1.e+3 }; 
         break;
-      }      
-      //case kEra_2018: {
-      //
-      //}
+      }
       default: assert(0);
     }
     assert(min_pt_ > 0.);
