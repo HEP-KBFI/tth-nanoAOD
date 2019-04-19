@@ -2,11 +2,16 @@
 <use   name="FWCore/Framework"/>
 <use   name="FWCore/ParameterSet"/>
 <use   name="FWCore/Utilities"/>
+<use   name="CommonTools/Utils"/>
 <use   name="DataFormats/Common"/>
 <use   name="DataFormats/Candidate"/>
+<use   name="DataFormats/BTauReco"/>
+<use   name="DataFormats/NanoAOD"/>
 <use   name="DataFormats/PatCandidates"/>
 <use   name="DataFormats/VertexReco"/>
+<use   name="PhysicsTools/NanoAOD"/>
 <use   name="tthAnalysis/NanoAOD"/>
+<use   name="boost"/>
 <use   name="fastjet"/>
 <use   name="fastjet-contrib"/>
 <library   file="*.cc" name="tthAnalysisNanoAODPlugins">
