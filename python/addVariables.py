@@ -231,6 +231,7 @@ def addVariables(process, is_mc, year, is_th = False):
       "1.", float, doc = "ratio of the calibrated energy/miniaod energy", precision = 6
     )
 
+  process.electronTable.variables.hoe.precision = cms.int32(12)
   process.electronTable.variables.deltaPhiSC = Var(
     "superCluster().phi()-phi()",
     float, doc = "delta phi (SC,ele) with sign", precision = 10
