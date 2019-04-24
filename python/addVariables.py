@@ -69,12 +69,12 @@ def addLepMVA(process):
   ])
   process.electronMVATTH.variables.LepGood_jetDF = cms.string(
     "?userCand('jetForLepJetVar').isNonnull()?"
-    "max("
-    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probbb')+"
-    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probb')+"
-    "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:problepb'),"
-    "0.0"
-    ")"
+      "max("
+          "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probbb')+"
+          "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:probb')+"
+          "userCand('jetForLepJetVar').bDiscriminator('pfDeepFlavourJetTags:problepb'),"
+        "0.0"
+      ")"
     ":0.0"
   )
   process.electronMVATTH.variables.LepGood_mvaFall17V2noIso = cms.string("userFloat('mvaFall17V2noIso')")
@@ -293,10 +293,15 @@ def addVariables(process, is_mc, year, is_th = False):
   )
   process.muonTable.variables.jetPtRatio = Var(
     "?userCand('jetForLepJetVar').isNonnull()?"
-    "userFloat('ptRatio'):"
-    "1.0/(1.0+(pfIsolationR04().sumChargedHadronPt + max("
-      "pfIsolationR04().sumNeutralHadronEt + pfIsolationR04().sumPhotonEt - pfIsolationR04().sumPUPt/2,0.0"
-    "))/pt)",
+      "userFloat('ptRatio'):"
+      "1.0/("
+        "1.0+("
+          "pfIsolationR04().sumChargedHadronPt + max("
+            "pfIsolationR04().sumNeutralHadronEt + pfIsolationR04().sumPhotonEt - pfIsolationR04().sumPUPt/2,"
+            "0.0"
+          ")"
+        ")/pt"
+      ")",
     float, doc = "jetPtRatio variable used by TTH MVA"
   )
   process.muonTable.variables.jetBTagCSV = Var(
@@ -324,16 +329,20 @@ def addVariables(process, is_mc, year, is_th = False):
   for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
     modifier.toModify(
       process.electronTable.variables,
-      jetPtRatio = Var(
-        "?userCand('jetForLepJetVar').isNonnull()?userFloat('ptRatio'):1",
-        float, doc = "jetPtRatio variable used by TTH MVA"
+      jetRelIso = Var(
+        "?userCand('jetForLepJetVar').isNonnull()?(1./userFloat('ptRatio'))-1.:userFloat('PFIsoAll04')/pt",
+        float, doc = "Relative isolation in matched jet"
       )
     )
     modifier.toModify(
       process.muonTable.variables,
-      jetPtRatio = Var(
-        "?userCand('jetForLepJetVar').isNonnull()?userFloat('ptRatio'):1",
-        float, doc = "jetPtRatio variable used by TTH MVA"
+      jetRelIso = Var(
+        "?userCand('jetForLepJetVar').isNonnull()?"
+        "(1./userFloat('ptRatio'))-1.:"
+        "(pfIsolationR04().sumChargedHadronPt + "
+          "max(pfIsolationR04().sumNeutralHadronEt + pfIsolationR04().sumPhotonEt - pfIsolationR04().sumPUPt/2,0.0)"
+        ")/pt",
+        float, doc = "Relative isolation in matched jet"
       )
     )
 
