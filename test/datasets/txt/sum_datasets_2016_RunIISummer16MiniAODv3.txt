@@ -7,7 +7,6 @@ TTJets_SingleLeptFromT           TTJets_SingleLeptFromT_ext1
 TTJets_SingleLeptFromTbar        TTJets_SingleLeptFromTbar_ext1
 WGToLNuG_ext1                    WGToLNuG_ext2                         WGToLNuG_ext3
 TTGJets                          TTGJets_ext1
-ZH_HToBB_ZToLL                   ZH_HToBB_ZToLL_ext1
 DYJetsToLL_M-10to50_amcatnloFXFX DYJetsToLL_M-10to50_amcatnloFXFX_ext1
 DYJetsToLL_M-5to50_HT-100to200   DYJetsToLL_M-5to50_HT-100to200_ext1
 DYJetsToLL_M-5to50_HT-200to400   DYJetsToLL_M-5to50_HT-200to400_ext1
