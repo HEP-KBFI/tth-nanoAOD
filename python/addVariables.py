@@ -7,6 +7,8 @@ from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv1_cff import run2_nanoAOD_94XMiniAODv1
+from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoAOD_94XMiniAODv2
 from Configuration.Eras.Modifier_run2_nanoAOD_102Xv1_cff import run2_nanoAOD_102Xv1
 
 from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
@@ -379,6 +381,19 @@ def addVariables(process, is_mc, year, is_th = False):
     "metSignificance()",
     float, doc = "MET significance", precision = 10
   )
+
+  for modifier in run2_nanoAOD_94XMiniAODv1, run2_nanoAOD_94XMiniAODv2:
+    modifier.toModify(
+      process.metTable,
+      src = cms.InputTag("slimmedMETsFixEE2017"),
+      doc = cms.string("Type-1 corrected PF MET, with fixEE2017 definition"),
+    )
+    modifier.toModify(
+      process.metFixEE2017Table,
+      src  = cms.InputTag("slimmedMETs"),
+      name = cms.string("METUnFixedEE2017"),
+      doc  = cms.string("slimmedMET, type-1 corrected PF MET"),
+    )
 
   if is_th:
     nof_lhe_weights = 50 if year == "2016" else 69
