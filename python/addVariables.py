@@ -134,7 +134,7 @@ def recomputeQGL(process):
   process.slimmedJetsWithUserData.userFloats.qgl = cms.InputTag('qgtagger:qgLikelihood')
   process.jetTable.variables.qgl = Var(
     "userFloat('qgl')",
-    float, doc = "Quark vs Gluon likelihood discriminator", precision = 10
+    float, doc = "Quark vs Gluon likelihood discriminator", precision = 14
   )
   process.qgtagger = QGTagger.clone(
     srcJets             = "slimmedJets",
