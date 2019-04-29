@@ -79,7 +79,11 @@ def addLepMVA(process):
       ")"
     ":0.0"
   )
+  process.electronMVATTH.variables.LepGood_jetPtRatio = cms.string(
+    "?userCand('jetForLepJetVar').isNonnull()?min(userFloat('ptRatio'),1.5):1.0/(1.0+userFloat('PFIsoAll04')/pt)"
+  )
   process.electronMVATTH.variables.LepGood_mvaFall17V2noIso = cms.string("userFloat('mvaFall17V2noIso')")
+  del process.electronMVATTH.variables.LepGood_jetBTagCSV
 
   process.muonMVATTH.weightFile = cms.FileInPath(os.path.join(baseDir, "mu_BDTG_2017.weights.xml"))
   process.muonMVATTH.variablesOrder = cms.vstring([
@@ -106,7 +110,22 @@ def addLepMVA(process):
       ")"
     ":0.0"
   )
+  process.muonMVATTH.variables.LepGood_jetPtRatio = cms.string(
+    "?userCand('jetForLepJetVar').isNonnull()?"
+      "min(userFloat('ptRatio'),1.5):"
+      "1.0/"
+        "(1.0+"
+          "(pfIsolationR04().sumChargedHadronPt + max"
+            "("
+              "pfIsolationR04().sumNeutralHadronEt + pfIsolationR04().sumPhotonEt - pfIsolationR04().sumPUPt/2,"
+              "0.0"
+            ")"
+          ")/pt"
+        ")"
+  )
   process.muonMVATTH.variables.LepGood_segmentComp = cms.string("segmentCompatibility")
+  del process.muonMVATTH.variables.LepGood_jetBTagCSV
+  del process.muonMVATTH.variables.LepGood_segmentCompatibility
 
   for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
     modifier.toModify(
@@ -116,6 +135,16 @@ def addLepMVA(process):
     modifier.toModify(
       process.muonMVATTH,
       weightFile = cms.FileInPath(os.path.join(baseDir, "mu_BDTG_2016.weights.xml"))
+    )
+    modifier.toModify(
+      process.electronMVATTH.variables,
+      LepGood_mvaIdSpring16HZZ = None,
+    )
+
+  for modifier in run2_nanoAOD_94XMiniAODv1, run2_nanoAOD_94XMiniAODv2, run2_nanoAOD_102Xv1:
+    modifier.toModify(
+      process.electronMVATTH.variables,
+      LepGood_mvaIdFall17noIso = None,
     )
 
 def recomputeQGL(process):
