@@ -1,0 +1,35 @@
+[
+  {
+    "category": "signal",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_750_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "file": "/local/karl/store/mc/RunIIFall17MiniAODv2/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph_correctedcfg/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/F86CC95D-A1B0-E811-B516-0242AC130002.root"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+        }
+      }
+    ]
+  }
+]
