@@ -170,10 +170,10 @@ def addLeptonInJetVariables(process):
      srcEle = cms.InputTag("slimmedElectrons"),
      srcMu = cms.InputTag("slimmedMuons"),
   )
-  process.slimmedJetsAK8WithUserData.userFloats.lsf3 = cms.InputTag("lepInJetVars:lsf3")
-  process.slimmedJetsAK8WithUserData.userFloats.lsf3match = cms.InputTag("lepInJetVars:lsf3match")
-  process.slimmedJetsAK8WithUserData.userInts.lep3idmatch =  cms.InputTag("lepInJetVars:lep3idmatch")
-  process.slimmedJetsAK8WithUserData.userInts.lep3indexmatch =  cms.InputTag("lepInJetVars:lep3indexmatch")
+  process.updatedJetsAK8WithUserData.userFloats.lsf3 = cms.InputTag("lepInJetVars:lsf3")
+  process.updatedJetsAK8WithUserData.userFloats.lsf3match = cms.InputTag("lepInJetVars:lsf3match")
+  process.updatedJetsAK8WithUserData.userInts.lep3idmatch =  cms.InputTag("lepInJetVars:lep3idmatch")
+  process.updatedJetsAK8WithUserData.userInts.lep3indexmatch =  cms.InputTag("lepInJetVars:lep3indexmatch")
 
   process.fatJetTable.variables.lsf3 = Var(
     "userFloat('lsf3')", float, doc = "LSF (3 subjets)", precision = 10
@@ -193,7 +193,7 @@ def addLeptonInJetVariables(process):
     process.lepInJetVars
   )
 
-  if process.slimmedJetsAK8WithUserData.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
+  if process.updatedJetsAK8WithUserData.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
     process.lepInJetVars.src = "selectedUpdatedPatJetsAK8WithDeepInfo"
 
 def addPileupJetId(process):
@@ -205,14 +205,14 @@ def addPileupJetId(process):
     applyJec         = True,
     vertexes         = cms.InputTag("offlineSlimmedPrimaryVertices"),
   )
-  if process.slimmedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
+  if process.updatedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
     process.pileupJetIdUpdated.jets = "selectedUpdatedPatJetsWithDeepInfo"
 
-  process.slimmedJetsWithUserData.userInts.puUpdatedId     = cms.InputTag('pileupJetIdUpdated:fullId')
-  process.slimmedJetsWithUserData.userFloats.puUpdatedDisc = cms.InputTag('pileupJetIdUpdated:fullDiscriminant')
+  process.updatedJetsWithUserData.userInts.puUpdatedId     = cms.InputTag('pileupJetIdUpdated:fullId')
+  process.updatedJetsWithUserData.userFloats.puUpdatedDisc = cms.InputTag('pileupJetIdUpdated:fullDiscriminant')
 
   process.jetSequence.insert(
-    process.jetSequence.index(process.slimmedJetsWithUserData),
+    process.jetSequence.index(process.updatedJetsWithUserData),
     process.pileupJetIdUpdated
   )
 

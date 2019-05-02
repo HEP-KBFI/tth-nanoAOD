@@ -138,7 +138,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
 
     jetsAK8LSWithUserData_str = 'jetsAK8LSWithUserData%s' % suffix
     setattr(process, jetsAK8LSWithUserData_str,
-        process.slimmedJetsAK8WithUserData.clone(
+        process.updatedJetsAK8WithUserData.clone(
             src = cms.InputTag(fatJetCollectionAK8LS_str),
             userInts = cms.PSet(
                 tightId = cms.InputTag(tightJetIdAK8LS_str),
