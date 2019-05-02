@@ -162,19 +162,6 @@ def recomputeQGL(process):
   )
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
-  process.slimmedJetsWithUserData.userFloats.qgl = cms.InputTag('qgtagger:qgLikelihood')
-  process.jetTable.variables.qgl = Var(
-    "userFloat('qgl')",
-    float, doc = "Quark vs Gluon likelihood discriminator", precision = 14
-  )
-  process.qgtagger = QGTagger.clone(
-    srcJets             = "slimmedJets",
-    srcVertexCollection = "offlineSlimmedPrimaryVertices",
-  )
-  if process.slimmedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
-    process.qgtagger.srcJets = "selectedUpdatedPatJetsWithDeepInfo"
-  process.jetSequence.insert(1, process.qgtagger)
-
 def addLeptonInJetVariables(process):
   # Implements https://github.com/cms-nanoAOD/cmssw/pull/299
   process.lepInJetVars = cms.EDProducer("LepInJetProducer",
