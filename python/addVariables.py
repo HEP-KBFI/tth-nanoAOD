@@ -422,7 +422,7 @@ def addVariables(process, is_mc, year, is_th = False):
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
   #addLeptonInJetVariables(process) # adds < 1MB to VSIZE
-  addPileupJetId(process) # adds nothing to VSIZE
+  #addPileupJetId(process) # adds nothing to VSIZE
   recomputeQGL(process)
   addLepMVA(process)
   addEScaleSmearing2018(process)
