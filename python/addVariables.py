@@ -434,7 +434,7 @@ def addVariables(process, is_mc, year, is_th = False):
   # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
-  addLeptonInJetVariables(process) # adds < 1MB to VSIZE
+  #addLeptonInJetVariables(process) # adds < 1MB to VSIZE
   addPileupJetId(process) # adds nothing to VSIZE
   recomputeQGL(process)
   addLepMVA(process)
