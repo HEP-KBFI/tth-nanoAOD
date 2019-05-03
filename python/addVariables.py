@@ -189,11 +189,11 @@ def addLeptonInJetVariables(process):
   )
 
   process.jetSequence.insert(
-    process.jetSequence.index(process.updatedJets) + 1,
+    process.jetSequence.index(process.updatedJetsAK8) + 1,
     process.lepInJetVars
   )
 
-  if process.updatedJetsAK8WithUserData.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
+  if process.updatedJetsAK8.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
     process.lepInJetVars.src = "selectedUpdatedPatJetsAK8WithDeepInfo"
 
 def addPileupJetId(process):
@@ -205,14 +205,14 @@ def addPileupJetId(process):
     applyJec         = True,
     vertexes         = cms.InputTag("offlineSlimmedPrimaryVertices"),
   )
-  if process.updatedJetsWithUserData.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
+  if process.updatedJets.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
     process.pileupJetIdUpdated.jets = "selectedUpdatedPatJetsWithDeepInfo"
 
   process.updatedJetsWithUserData.userInts.puUpdatedId     = cms.InputTag('pileupJetIdUpdated:fullId')
   process.updatedJetsWithUserData.userFloats.puUpdatedDisc = cms.InputTag('pileupJetIdUpdated:fullDiscriminant')
 
   process.jetSequence.insert(
-    process.jetSequence.index(process.updatedJetsWithUserData),
+    process.jetSequence.index(process.updatedJets),
     process.pileupJetIdUpdated
   )
 
