@@ -13,7 +13,7 @@ def addJetSubstructureObservables(process):
     process.RandomNumberGeneratorService.QJetsAdderAK8 = cms.PSet(initialSeed = cms.untracked.uint32(31))
     from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
     process.QJetsAdderAK8 = QJetsAdder.clone(
-        src = cms.InputTag('updatedJetsAK8'),
+        src = cms.InputTag('updatedJetsAK8WithUserData'),
         jetRad = cms.double(0.8),
         jetAlgo = cms.string("AK")
     )
@@ -22,7 +22,7 @@ def addJetSubstructureObservables(process):
     #----------------------------------------------------------------------------
     # add jet charge, pull, and Qjets volatility to AK8 pat::Jet collection
     process.extendedFatJetsAK8 = cms.EDProducer("JetExtendedProducer",
-        src = cms.InputTag('updatedJetsAK8'),
+        src = cms.InputTag('updatedJetsAK8WithUserData'),
         plugins = cms.VPSet(
             cms.PSet(
                 pluginType = cms.string("JetChargePlugin"),
@@ -77,13 +77,13 @@ def addJetSubstructureObservables(process):
     process.subJetTable.variables.pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10)
     process.subJetTable.variables.pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10)
     process.subJetTable.variables.pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10)
-    process.jetSequence.replace(process.updatedJetsAK8, process.updatedJetsAK8 + process.QJetsAdderAK8 + process.extendedFatJetsAK8 + process.extendedSubJetsAK8)
+    process.jetSequence.replace(process.updatedJetsAK8WithUserData, process.updatedJetsAK8WithUserData + process.QJetsAdderAK8 + process.extendedFatJetsAK8 + process.extendedSubJetsAK8)
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
     # add jet charge as userFloat to AK4 pat::Jet collection
     process.extendedJets = cms.EDProducer("JetExtendedProducer",
-        src = cms.InputTag('updatedJets'),
+        src = cms.InputTag('updatedJetsWithUserData'),
         plugins = cms.VPSet(
             cms.PSet(
                 pluginType = cms.string("JetChargePlugin"),
@@ -98,7 +98,7 @@ def addJetSubstructureObservables(process):
             )
         )
     )
-    process.jetSequence.replace(process.updatedJets, process.updatedJets + process.extendedJets)
+    process.jetSequence.replace(process.updatedJetsWithUserData, process.updatedJetsWithUserData + process.extendedJets)
     process.finalJets.src = cms.InputTag('extendedJets')
     process.jetTable.variables.jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10)
     process.jetTable.variables.pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10)
