@@ -12,8 +12,6 @@
 <use   name="PhysicsTools/NanoAOD"/>
 <use   name="tthAnalysis/NanoAOD"/>
 <use   name="boost"/>
-<use   name="fastjet"/>
-<use   name="fastjet-contrib"/>
 <library   file="*.cc" name="tthAnalysisNanoAODPlugins">
   <flags   EDM_PLUGIN="1"/>
 </library>

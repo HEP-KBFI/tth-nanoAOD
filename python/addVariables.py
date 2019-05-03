@@ -12,7 +12,6 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoA
 from Configuration.Eras.Modifier_run2_nanoAOD_102Xv1_cff import run2_nanoAOD_102Xv1
 
 from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
-from RecoJets.JetProducers.QGTagger_cfi import QGTagger
 from RecoEgamma.EgammaTools.calibratedEgammas_cff import calibratedPatElectrons
 
 from CondCore.CondDB.CondDB_cfi import CondDB
@@ -161,69 +160,6 @@ def recomputeQGL(process):
     ),
   )
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
-
-def addLeptonInJetVariables(process):
-  # Implements https://github.com/cms-nanoAOD/cmssw/pull/299
-  process.lepInJetVars = cms.EDProducer("LepInJetProducer",
-     srcPF = cms.InputTag("packedPFCandidates"),
-     src = cms.InputTag("slimmedJetsAK8"),
-     srcEle = cms.InputTag("slimmedElectrons"),
-     srcMu = cms.InputTag("slimmedMuons"),
-  )
-  process.updatedJetsAK8WithUserData.userFloats.lsf3 = cms.InputTag("lepInJetVars:lsf3")
-  process.updatedJetsAK8WithUserData.userFloats.lsf3match = cms.InputTag("lepInJetVars:lsf3match")
-  process.updatedJetsAK8WithUserData.userInts.lep3idmatch =  cms.InputTag("lepInJetVars:lep3idmatch")
-  process.updatedJetsAK8WithUserData.userInts.lep3indexmatch =  cms.InputTag("lepInJetVars:lep3indexmatch")
-
-  process.fatJetTable.variables.lsf3 = Var(
-    "userFloat('lsf3')", float, doc = "LSF (3 subjets)", precision = 10
-  )
-  process.fatJetTable.variables.lsf3match = Var(
-    "userFloat('lsf3match')", float, doc = "LSF matched to RECO (3 subjets)", precision = 10
-  )
-  process.fatJetTable.variables.lep3idmatch = Var(
-    "userInt('lep3idmatch')", int, doc = "Lep id matched to RECO (3 subjets)"
-  )
-  process.fatJetTable.variables.lep3indexmatch = Var(
-    "userInt('lep3indexmatch')", int, doc = "Lep index matched to RECO (3 subjets)"
-  )
-
-  process.jetSequence.insert(
-    process.jetSequence.index(process.updatedJetsAK8) + 1,
-    process.lepInJetVars
-  )
-
-  if process.updatedJetsAK8.src.configValue() == "selectedUpdatedPatJetsAK8WithDeepInfo":
-    process.lepInJetVars.src = "selectedUpdatedPatJetsAK8WithDeepInfo"
-
-def addPileupJetId(process):
-  # Recompute pileup jet ID as per 9x recipe
-  # https://twiki.cern.ch/twiki/bin/view/CMS/PileupJetID?rev=37#Information_for_13_TeV_data_anal
-  process.pileupJetIdUpdated = pileupJetId.clone(
-    jets             = cms.InputTag("slimmedJets"),
-    inputIsCorrected = True,
-    applyJec         = True,
-    vertexes         = cms.InputTag("offlineSlimmedPrimaryVertices"),
-  )
-  if process.updatedJets.src.configValue() == "selectedUpdatedPatJetsWithDeepInfo":
-    process.pileupJetIdUpdated.jets = "selectedUpdatedPatJetsWithDeepInfo"
-
-  process.updatedJetsWithUserData.userInts.puUpdatedId     = cms.InputTag('pileupJetIdUpdated:fullId')
-  process.updatedJetsWithUserData.userFloats.puUpdatedDisc = cms.InputTag('pileupJetIdUpdated:fullDiscriminant')
-
-  process.jetSequence.insert(
-    process.jetSequence.index(process.updatedJets),
-    process.pileupJetIdUpdated
-  )
-
-  process.jetTable.variables.puIdUpdated = Var(
-    "userInt('puUpdatedId')",
-    int, doc = "Pileup ID flags"
-  )
-  process.jetTable.variables.puIdDiscUpdated = Var(
-    "userFloat('puUpdatedDisc')",
-    float, doc = "Pileup ID discriminant (updated)", precision = 10
-  )
 
 def addVariables(process, is_mc, year, is_th = False):
   # see https://github.com/cms-nanoAOD/cmssw/pull/305/files#diff-83ba8ecada4b95383f59a8a2ab206052
@@ -421,8 +357,6 @@ def addVariables(process, is_mc, year, is_th = False):
   # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
-  #addLeptonInJetVariables(process) # adds < 1MB to VSIZE
-  #addPileupJetId(process) # adds nothing to VSIZE
   recomputeQGL(process)
   addLepMVA(process)
   addEScaleSmearing2018(process)
