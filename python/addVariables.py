@@ -161,11 +161,7 @@ def recomputeQGL(process):
   )
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
-def addVariables(process, is_mc, year, is_th = False):
-  # see https://github.com/cms-nanoAOD/cmssw/pull/305/files#diff-83ba8ecada4b95383f59a8a2ab206052
-  process.tausMCMatchLepTauForTable.mcStatus = cms.vint32()
-
-  assert(is_mc or not is_th)
+def addVariables(process, is_mc, year):
   process.load('tthAnalysis.NanoAOD.boosted_cff')
 
   process.boostedSequence = boostedSequence
@@ -346,12 +342,6 @@ def addVariables(process, is_mc, year, is_th = False):
       name = cms.string("METUnFixedEE2017"),
       doc  = cms.string("slimmedMET, type-1 corrected PF MET"),
     )
-
-  if is_th:
-    nof_lhe_weights = 50 if year == "2016" else 69
-    print("Enabling {} LHE weights for tH process".format(nof_lhe_weights))
-    process.genWeightsTable.namedWeightIDs = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, nof_lhe_weights + 1))))
-    process.genWeightsTable.namedWeightLabels = cms.vstring(*tuple(map(lambda x: 'rwgt_%d' % x, range(1, nof_lhe_weights + 1))))
 
   addJetSubstructureObservables(process) # adds nothing to VSIZE
   # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE

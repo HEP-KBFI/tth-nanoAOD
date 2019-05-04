@@ -227,14 +227,6 @@ if [ -z "$YEAR" ]; then
 fi
 
 generate_cfgs() {
-  DO_THX=$1
-  if [[ ! -z $DO_THX ]] && [[ $DO_THX = true ]]; then
-    PY_DO_THX="True";
-    PY_FILENAME=$NANOCFG_TH
-  else
-    PY_DO_THX="False";
-    PY_FILENAME=$NANOCFG_ANY
-  fi
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     TIER="NANOAOD"
     COND=$COND_DATA;
@@ -274,7 +266,7 @@ generate_cfgs() {
   export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = $REPORT_FREQUENCY\\n\
 process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, $PY_IS_MC,'$YEAR', $PY_DO_THX)\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, $PY_IS_MC,'$YEAR')\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
@@ -284,34 +276,28 @@ print('era: $ERA_ARGS')\\n"
 
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
                          --number=$NOF_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
-                         --python_filename=$PY_FILENAME"
+                         --python_filename=$NANOCFG"
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
   fi
 
-  echo "Generating the skeleton configuration file for CRAB $JOB_TYPE jobs: $PY_FILENAME";
+  echo "Generating the skeleton configuration file for CRAB $JOB_TYPE jobs: $NANOCFG";
   cmsDriver.py $CMSDRIVER_OPTS --customise_commands="$CUSTOMISE_COMMANDS";
 }
 
-if [ -z "$NANOCFG_ANY" ]; then
-  export NANOCFG_ANY="$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_cfg.py";
-  read -p "Sure you want to use this config file: $NANOCFG_ANY? [y/N]" -n 1 -r
+if [ -z "$NANOCFG" ]; then
+  export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_cfg.py";
+  read -p "Sure you want to use this config file: $NANOCFG? [y/N]" -n 1 -r
   echo
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
   fi
-  if [ ! -d $(dirname $NANOCFG_ANY) ]; then
-    mkdir -p $(dirname $NANOCFG_ANY);
+  if [ ! -d $(dirname $NANOCFG) ]; then
+    mkdir -p $(dirname $NANOCFG);
   fi
 fi
 generate_cfgs;
-check_if_exists "$NANOCFG_ANY"
-
-if [ "$JOB_TYPE_NAME" == "$TYPE_MC" ]; then
-  export NANOCFG_TH="$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_tH_cfg.py";
-  generate_cfgs true;
-  check_if_exists "$NANOCFG_TH"
-fi
+check_if_exists "$NANOCFG"
 
 if [ $GENERATE_CFGS_ONLY = true ]; then
   exit 0;
@@ -356,16 +342,9 @@ fi
 
 export DATASET_PATTERN="^/(.*)/(.*)/[0-9A-Za-z]+$"
 
-if [[ ! "$NANOCFG_ANY" =~ ^/ ]]; then
-  export NANOCFG_ANY="$PWD/$NANOCFG_ANY";
-  echo "Full path to the $JOB_TYPE cfg file: $NANOCFG_ANY";
-fi
-
-if [ "$JOB_TYPE_NAME" == "$TYPE_MC" ]; then
-  if [[ ! "$NANOCFG_TH" =~ ^/ ]]; then
-    export NANOCFG_TH="$PWD/$NANOCFG_TH";
-    echo "Full path to the $JOB_TYPE (tH) cfg file: $NANOCFG_TH";
-  fi
+if [[ ! "$NANOCFG" =~ ^/ ]]; then
+  export NANOCFG="$PWD/$NANOCFG";
+  echo "Full path to the $JOB_TYPE cfg file: $NANOCFG";
 fi
 
 read -p "Submitting jobs? [y/N]" -n 1 -r
@@ -402,7 +381,6 @@ cat $DATASET_FILE | while read LINE; do
   fi
 
   DATASET_SPLIT=$(echo "$DATASET" | tr '/' ' ')
-  DATASET_LEADING_PART=$(echo "$DATASET_SPLIT" | awk '{print $1}')
   DATASET_THIRD_PART=$(echo "$DATASET_SPLIT" | awk '{print $3}')
 
   if [ "$DATASET_THIRD_PART" == "MINIAOD" ]; then
@@ -442,12 +420,7 @@ cat $DATASET_FILE | while read LINE; do
     done
   fi
 
-  DATASET_LEADING_PART_UPPERCASE=$(echo $DATASET_LEADING_PART | tr '[:lower:]' '[:upper:]')
-  if [[ $DATASET_LEADING_PART_UPPERCASE =~ ^THQ ]] || [[ $DATASET_LEADING_PART_UPPERCASE =~ ^THW ]]; then
-    export NANOCFG=$NANOCFG_TH;
-  else
-    export NANOCFG=$NANOCFG_ANY;
-  fi
+  export NANOCFG=$NANOCFG;
   echo "Using config file: $NANOCFG";
 
   crab submit $DRYRUN --config="$CRAB_CFG" --wait
