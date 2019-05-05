@@ -11,7 +11,6 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv1_cff import run2_nanoA
 from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoAOD_94XMiniAODv2
 from Configuration.Eras.Modifier_run2_nanoAOD_102Xv1_cff import run2_nanoAOD_102Xv1
 
-from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
 from RecoEgamma.EgammaTools.calibratedEgammas_cff import calibratedPatElectrons
 
 from CondCore.CondDB.CondDB_cfi import CondDB
