@@ -20,7 +20,7 @@ import os.path
 def addEScaleSmearing2018(process):
   process.calibratedPatElectrons102X = calibratedPatElectrons.clone(
     produceCalibratedObjs = False,
-    correctionFile        = cms.string("EgammaAnalysis/ElectronTools/data/ScalesSmearings/Run2018_Step2Closure_CoarseEtaR9Gain"),
+    correctionFile        = cms.string("tthAnalysis/NanoAOD/data/ScalesSmearings/Run2018_Step2Closure_CoarseEtaR9Gain_v2"),
   )
   run2_nanoAOD_102Xv1.toModify(process.slimmedElectronsWithUserData.userFloats,
     ecalTrkEnergyErrPostCorrNew = cms.InputTag("calibratedPatElectrons102X","ecalTrkEnergyErrPostCorr"),
