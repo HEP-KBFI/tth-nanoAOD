@@ -1,0 +1,21 @@
+# file generated at 2019-05-11 19:11:30 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
+
+# HH -> 4tau (GGF)
+/GluGluToHHTo4Tau_node_SM_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM  1 signal_ggf_nonresonant_node_sm_hh_tttt  signal_ggf_nonresonant_node_sm_hh_4t  1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_box_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM 1 signal_ggf_nonresonant_node_box_hh_tttt signal_ggf_nonresonant_node_box_hh_4t 1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_2_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_2_hh_tttt   signal_ggf_nonresonant_node_2_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_3_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_3_hh_tttt   signal_ggf_nonresonant_node_3_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_4_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_4_hh_tttt   signal_ggf_nonresonant_node_4_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_5_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_5_hh_tttt   signal_ggf_nonresonant_node_5_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_6_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_6_hh_tttt   signal_ggf_nonresonant_node_6_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_7_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_7_hh_tttt   signal_ggf_nonresonant_node_7_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_8_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_8_hh_tttt   signal_ggf_nonresonant_node_8_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_9_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_9_hh_tttt   signal_ggf_nonresonant_node_9_hh_4t   1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_10_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM  1 signal_ggf_nonresonant_node_10_hh_tttt  signal_ggf_nonresonant_node_10_hh_4t  1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_11_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM  1 signal_ggf_nonresonant_node_11_hh_tttt  signal_ggf_nonresonant_node_11_hh_4t  1.0 #  [1][2]; normalized to 1 pb
+/GluGluToHHTo4Tau_node_12_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM  1 signal_ggf_nonresonant_node_12_hh_tttt  signal_ggf_nonresonant_node_12_hh_4t  1.0 #  [1][2]; normalized to 1 pb
+
+# References:
+# [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
+# [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043

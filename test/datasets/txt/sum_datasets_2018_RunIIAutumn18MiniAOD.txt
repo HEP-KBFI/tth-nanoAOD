@@ -1,11 +1,14 @@
-# file generated at 2019-04-25 23:30:57 with the following command:
+# file generated at 2019-05-11 19:11:38 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
-TTWW_ext1          TTWW_ext2
-ZH_HToBB_ZToLL     ZH_HToBB_ZToLL_ext1
-WZTo3LNu           WZTo3LNu_ext1
-ZZTo4L_ext1        ZZTo4L_ext2
-ZZTo2L2Nu_ext1     ZZTo2L2Nu_ext2
-QCD_Pt80to120_Mu5  QCD_Pt80to120_Mu5_ext1
-QCD_Pt300to470_Mu5 QCD_Pt300to470_Mu5_ext3
-QCD_Pt470to600_Mu5 QCD_Pt470to600_Mu5_ext1
+TTWW_ext1                           TTWW_ext2
+ZH_HToBB_ZToLL                      ZH_HToBB_ZToLL_ext1
+DYJetsToLL_M-50_amcatnloFXFX        DYJetsToLL_M-50_amcatnloFXFX_ext2
+DYJetsToLL_M50_HT400to600_PSweights DYJetsToLL_M50_HT400to600_PSweights_ext2
+WZTo3LNu                            WZTo3LNu_ext1
+ZZTo4L_ext1                         ZZTo4L_ext2
+ZZTo2L2Nu_ext1                      ZZTo2L2Nu_ext2
+QCD_Pt80to120_Mu5                   QCD_Pt80to120_Mu5_ext1
+QCD_Pt120to170_Mu5                  QCD_Pt120to170_Mu5_ext1
+QCD_Pt300to470_Mu5                  QCD_Pt300to470_Mu5_ext3
+QCD_Pt470to600_Mu5                  QCD_Pt470to600_Mu5_ext1

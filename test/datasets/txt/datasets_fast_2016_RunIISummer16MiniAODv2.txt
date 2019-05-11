@@ -1,10 +1,10 @@
-# file generated at 2019-04-25 23:30:57 with the following command:
+# file generated at 2019-05-11 19:11:38 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
-/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p1_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p1   0.2118  /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p1_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]
-/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p2_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p2   0.2118  /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p2_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]
-/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p3   0.2118  /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]
+/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p1_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p1   0.2118  /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p1_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]; XS(ttH) * (1 - BR(H->bb)) = 0.5071 * (1 - 0.5824)
+/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p2_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p2   0.2118  /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p2_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]; XS(ttH) * (1 - BR(H->bb)) = 0.5071 * (1 - 0.5824)
+/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 signal ttHToNonbb_M125_powheg_fastsim_p3   0.2118  /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]; XS(ttH) * (1 - BR(H->bb)) = 0.5071 * (1 - 0.5824)
 
 # ttZ
 /TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/matze-faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                  1 TTZ    TTZToLL_M10_fastsim                 0.2529  /store/user/matze/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a                   # NLO [3]
