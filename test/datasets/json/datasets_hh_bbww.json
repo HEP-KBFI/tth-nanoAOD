@@ -4359,7 +4359,7 @@
         "name": "signal_ggf_nonresonant_node_13_hh_2b2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> bb tautau (GGF spin0 resonant)",
+        "process": "HH -> bb tautau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
