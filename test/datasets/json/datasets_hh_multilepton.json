@@ -7,7 +7,7 @@
         "name": "signal_ggf_spin0_250_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -43,7 +43,7 @@
         "name": "signal_ggf_spin0_260_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -79,7 +79,7 @@
         "name": "signal_ggf_spin0_270_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -115,7 +115,7 @@
         "name": "signal_ggf_spin0_280_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -151,7 +151,7 @@
         "name": "signal_ggf_spin0_300_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -187,7 +187,7 @@
         "name": "signal_ggf_spin0_320_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -219,7 +219,7 @@
         "name": "signal_ggf_spin0_340_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -251,7 +251,7 @@
         "name": "signal_ggf_spin0_350_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -287,7 +287,7 @@
         "name": "signal_ggf_spin0_400_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -329,7 +329,7 @@
         "name": "signal_ggf_spin0_450_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -365,7 +365,7 @@
         "name": "signal_ggf_spin0_500_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -401,7 +401,7 @@
         "name": "signal_ggf_spin0_550_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -437,7 +437,7 @@
         "name": "signal_ggf_spin0_600_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -473,7 +473,7 @@
         "name": "signal_ggf_spin0_650_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -509,7 +509,7 @@
         "name": "signal_ggf_spin0_700_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -551,7 +551,7 @@
         "name": "signal_ggf_spin0_750_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -587,7 +587,7 @@
         "name": "signal_ggf_spin0_800_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -623,7 +623,7 @@
         "name": "signal_ggf_spin0_850_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -655,7 +655,7 @@
         "name": "signal_ggf_spin0_900_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -691,7 +691,7 @@
         "name": "signal_ggf_spin0_1000_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -723,7 +723,7 @@
         "name": "signal_ggf_spin0_250_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -755,7 +755,7 @@
         "name": "signal_ggf_spin0_260_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -787,7 +787,7 @@
         "name": "signal_ggf_spin0_270_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -819,7 +819,7 @@
         "name": "signal_ggf_spin0_280_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -851,7 +851,7 @@
         "name": "signal_ggf_spin0_300_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -883,7 +883,7 @@
         "name": "signal_ggf_spin0_320_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -915,7 +915,7 @@
         "name": "signal_ggf_spin0_350_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -947,7 +947,7 @@
         "name": "signal_ggf_spin0_400_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -985,7 +985,7 @@
         "name": "signal_ggf_spin0_450_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1017,7 +1017,7 @@
         "name": "signal_ggf_spin0_500_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1049,7 +1049,7 @@
         "name": "signal_ggf_spin0_550_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1081,7 +1081,7 @@
         "name": "signal_ggf_spin0_600_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1113,7 +1113,7 @@
         "name": "signal_ggf_spin0_650_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1145,7 +1145,7 @@
         "name": "signal_ggf_spin0_700_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1183,7 +1183,7 @@
         "name": "signal_ggf_spin0_750_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1215,7 +1215,7 @@
         "name": "signal_ggf_spin0_800_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1247,7 +1247,7 @@
         "name": "signal_ggf_spin0_850_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1279,7 +1279,7 @@
         "name": "signal_ggf_spin0_900_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1311,7 +1311,7 @@
         "name": "signal_ggf_spin0_1000_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1343,7 +1343,7 @@
         "name": "signal_ggf_spin0_250_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1375,7 +1375,7 @@
         "name": "signal_ggf_spin0_260_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1407,7 +1407,7 @@
         "name": "signal_ggf_spin0_270_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1439,7 +1439,7 @@
         "name": "signal_ggf_spin0_280_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1471,7 +1471,7 @@
         "name": "signal_ggf_spin0_300_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1503,7 +1503,7 @@
         "name": "signal_ggf_spin0_320_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1535,7 +1535,7 @@
         "name": "signal_ggf_spin0_350_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1567,7 +1567,7 @@
         "name": "signal_ggf_spin0_400_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1605,7 +1605,7 @@
         "name": "signal_ggf_spin0_450_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1637,7 +1637,7 @@
         "name": "signal_ggf_spin0_500_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1669,7 +1669,7 @@
         "name": "signal_ggf_spin0_550_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1701,7 +1701,7 @@
         "name": "signal_ggf_spin0_600_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1733,7 +1733,7 @@
         "name": "signal_ggf_spin0_650_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1765,7 +1765,7 @@
         "name": "signal_ggf_spin0_700_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1803,7 +1803,7 @@
         "name": "signal_ggf_spin0_750_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1835,7 +1835,7 @@
         "name": "signal_ggf_spin0_800_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1867,7 +1867,7 @@
         "name": "signal_ggf_spin0_850_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1899,7 +1899,7 @@
         "name": "signal_ggf_spin0_900_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1931,7 +1931,7 @@
         "name": "signal_ggf_spin0_1000_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1963,7 +1963,7 @@
         "name": "signal_vbf_nonresonant_1_1_1_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (VBF)",
+        "process": "HH -> 4tau (VBF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -1995,7 +1995,7 @@
         "name": "signal_ggf_nonresonant_node_sm_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2035,7 +2035,7 @@
         "name": "signal_ggf_nonresonant_node_box_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2071,7 +2071,7 @@
         "name": "signal_ggf_nonresonant_node_2_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2111,7 +2111,7 @@
         "name": "signal_ggf_nonresonant_node_3_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2151,7 +2151,7 @@
         "name": "signal_ggf_nonresonant_node_4_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2187,7 +2187,7 @@
         "name": "signal_ggf_nonresonant_node_5_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2223,7 +2223,7 @@
         "name": "signal_ggf_nonresonant_node_6_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2259,7 +2259,7 @@
         "name": "signal_ggf_nonresonant_node_7_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2299,7 +2299,7 @@
         "name": "signal_ggf_nonresonant_node_8_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2335,7 +2335,7 @@
         "name": "signal_ggf_nonresonant_node_9_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2375,7 +2375,7 @@
         "name": "signal_ggf_nonresonant_node_10_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2411,7 +2411,7 @@
         "name": "signal_ggf_nonresonant_node_11_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2447,7 +2447,7 @@
         "name": "signal_ggf_nonresonant_node_12_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4tau (GGF)",
+        "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [
             {
@@ -2487,7 +2487,7 @@
         "name": "signal_ggf_nonresonant_node_sm_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2519,7 +2519,7 @@
         "name": "signal_ggf_nonresonant_node_2_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2551,7 +2551,7 @@
         "name": "signal_ggf_nonresonant_node_3_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2583,7 +2583,7 @@
         "name": "signal_ggf_nonresonant_node_4_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2615,7 +2615,7 @@
         "name": "signal_ggf_nonresonant_node_5_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2647,7 +2647,7 @@
         "name": "signal_ggf_nonresonant_node_6_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2679,7 +2679,7 @@
         "name": "signal_ggf_nonresonant_node_7_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2711,7 +2711,7 @@
         "name": "signal_ggf_nonresonant_node_8_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2743,7 +2743,7 @@
         "name": "signal_ggf_nonresonant_node_9_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2775,7 +2775,7 @@
         "name": "signal_ggf_nonresonant_node_10_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2807,7 +2807,7 @@
         "name": "signal_ggf_nonresonant_node_11_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2839,7 +2839,7 @@
         "name": "signal_ggf_nonresonant_node_12_hh_2v2t",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 2W2tau (GGF)",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2871,7 +2871,7 @@
         "name": "signal_ggf_nonresonant_node_sm_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2903,7 +2903,7 @@
         "name": "signal_ggf_nonresonant_node_2_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2935,7 +2935,7 @@
         "name": "signal_ggf_nonresonant_node_3_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2967,7 +2967,7 @@
         "name": "signal_ggf_nonresonant_node_4_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -2999,7 +2999,7 @@
         "name": "signal_ggf_nonresonant_node_5_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3031,7 +3031,7 @@
         "name": "signal_ggf_nonresonant_node_6_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3063,7 +3063,7 @@
         "name": "signal_ggf_nonresonant_node_7_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3095,7 +3095,7 @@
         "name": "signal_ggf_nonresonant_node_8_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3127,7 +3127,7 @@
         "name": "signal_ggf_nonresonant_node_9_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3159,7 +3159,7 @@
         "name": "signal_ggf_nonresonant_node_10_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3191,7 +3191,7 @@
         "name": "signal_ggf_nonresonant_node_11_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
@@ -3223,7 +3223,7 @@
         "name": "signal_ggf_nonresonant_node_12_hh_4v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> 4W (GGF)",
+        "process": "HH -> 4W (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
