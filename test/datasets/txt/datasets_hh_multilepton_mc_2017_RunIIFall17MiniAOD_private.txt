@@ -1,15 +1,15 @@
-# file generated at 2019-05-11 19:31:34 with the following command:
+# file generated at 2019-05-11 21:08:30 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
 
-# HH -> 4tau (GGF resonant)
+# HH -> 4tau (GGF spin0 resonant)
 /HHTo4T_madgraph_pythia8_CP5_M400/private/USER   1 signal_ggf_spin0_400_hh_tttt signal_ggf_spin0_400_hh_4t_private   0.003934 /store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M400    #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /HHTo4T_madgraph_pythia8_CP5_M700/private/USER   1 signal_ggf_spin0_700_hh_tttt signal_ggf_spin0_700_hh_4t_private   0.003934 /store/user/kaehatah/private/HHTo4T_madgraph_pythia8_CP5_M700    #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 
-# HH -> 2W2tau (GGF resonant)
+# HH -> 2W2tau (GGF spin0 resonant)
 /HHTo2T2V_madgraph_pythia8_CP5_M400/private/USER 1 signal_ggf_spin0_400_hh_wwtt signal_ggf_spin0_400_hh_2v2t_private 0.030092 /store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M400  #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /HHTo2T2V_madgraph_pythia8_CP5_M700/private/USER 1 signal_ggf_spin0_700_hh_wwtt signal_ggf_spin0_700_hh_2v2t_private 0.030092 /store/user/kaehatah/private/HHTo2T2V_madgraph_pythia8_CP5_M700  #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 
-# HH -> 4W (GGF resonant)
+# HH -> 4W (GGF spin0 resonant)
 /HHTo4V_madgraph_pythia8_CP5_M400/private/USER   1 signal_ggf_spin0_400_hh_wwww signal_ggf_spin0_400_hh_4v_private   0.057547 /store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M400    #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /HHTo4V_madgraph_pythia8_CP5_M700/private/USER   1 signal_ggf_spin0_700_hh_wwww signal_ggf_spin0_700_hh_4v_private   0.057547 /store/user/kaehatah/private/HHTo4V_madgraph_pythia8_CP5_M700    #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 
