@@ -19,16 +19,3 @@ git fetch origin
 git checkout master-102x
 git pull
 ```
-
-Retrieve preliminary scale and smearing uncertainties of electron energies for 2018 era:
-
-```bash
-cd $CMSSW_BASE/src/EgammaAnalysis/ElectronTools/data
-git init
-git config core.sparseCheckout true
-echo -e 'ScalesSmearings/Run2018_Step2Closure_CoarseEtaR9Gain_*.dat\n' > .git/info/sparse-checkout
-git remote add origin https://github.com/cms-egamma/EgammaAnalysis-ElectronTools.git
-git fetch origin
-git checkout ScalesSmearing2018_Dev
-git pull
-```
