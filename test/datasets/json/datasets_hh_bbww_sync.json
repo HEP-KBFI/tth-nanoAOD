@@ -27,7 +27,7 @@
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
           ],
-          "comment": "normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2"
         }
       }
     ]
