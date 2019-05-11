@@ -1,7 +1,7 @@
-# file generated at 2019-05-11 19:11:30 with the following command:
+# file generated at 2019-05-11 19:25:54 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
 
-# HH -> 4tau (GGF)
+# HH -> 4tau (GGF resonant)
 /GluGluToRadionToHHTo4Tau_M-250_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                 1 signal_ggf_spin0_250_hh_tttt           signal_ggf_spin0_250_hh_4t             0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-260_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                 1 signal_ggf_spin0_260_hh_tttt           signal_ggf_spin0_260_hh_4t             0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-270_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                 1 signal_ggf_spin0_270_hh_tttt           signal_ggf_spin0_270_hh_4t             0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
@@ -21,7 +21,7 @@
 /GluGluToRadionToHHTo4Tau_M-900_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                 1 signal_ggf_spin0_900_hh_tttt           signal_ggf_spin0_900_hh_4t             0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-1000_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                1 signal_ggf_spin0_1000_hh_tttt          signal_ggf_spin0_1000_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 
-# HH -> 2W2tau (GGF)
+# HH -> 2W2tau (GGF resonant)
 /GluGluToRadionToHHTo2V2Tau_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM  1 signal_ggf_spin0_250_hh_wwtt           signal_ggf_spin0_250_hh_2v2t           0.030092 #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /GluGluToRadionToHHTo2V2Tau_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM  1 signal_ggf_spin0_260_hh_wwtt           signal_ggf_spin0_260_hh_2v2t           0.030092 #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /GluGluToRadionToHHTo2V2Tau_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM  1 signal_ggf_spin0_270_hh_wwtt           signal_ggf_spin0_270_hh_2v2t           0.030092 #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
@@ -42,7 +42,7 @@
 /GluGluToRadionToHHTo2V2Tau_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM  1 signal_ggf_spin0_900_hh_wwtt           signal_ggf_spin0_900_hh_2v2t           0.030092 #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /GluGluToRadionToHHTo2V2Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal_ggf_spin0_1000_hh_wwtt          signal_ggf_spin0_1000_hh_2v2t          0.030092 #  [1][2]; normalized to 1 pb: 2 * BR(H -> tau tau) * BR(H -> V V) = 2 * 0.06272 * 0.23989 = 0.030092; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 
-# HH -> 4W (GGF)
+# HH -> 4W (GGF resonant)
 /GluGluToRadionToHHTo4V_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM      1 signal_ggf_spin0_250_hh_wwww           signal_ggf_spin0_250_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /GluGluToRadionToHHTo4V_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM      1 signal_ggf_spin0_260_hh_wwww           signal_ggf_spin0_260_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /GluGluToRadionToHHTo4V_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM      1 signal_ggf_spin0_270_hh_wwww           signal_ggf_spin0_270_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
@@ -63,10 +63,10 @@
 /GluGluToRadionToHHTo4V_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM      1 signal_ggf_spin0_900_hh_wwww           signal_ggf_spin0_900_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 /GluGluToRadionToHHTo4V_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM     1 signal_ggf_spin0_1000_hh_wwww          signal_ggf_spin0_1000_hh_4v            0.057547 #  [1][2]; normalized to 1 pb: BR(H -> V V)^2 = 0.23989^2 = 0.057547; BR(H -> V V) = BR(H -> W W) + BR(H -> Z Z) = 0.2137 + 0.02619 = 0.23989
 
-# HH -> 4tau (VBF)
+# HH -> 4tau (VBF non-resonant)
 /VBFHHTo4Tau_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                           1 signal_vbf_nonresonant_1_1_1_hh_tttt   signal_vbf_nonresonant_1_1_1_hh_4t     1.0      #  [1][2]; normalized to 1 pb
 
-# HH -> 4tau (GGF)
+# HH -> 4tau (GGF non-resonant)
 /GluGluToHHTo4Tau_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                 1 signal_ggf_nonresonant_node_sm_hh_tttt signal_ggf_nonresonant_node_sm_hh_4t   1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_2_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                  1 signal_ggf_nonresonant_node_2_hh_tttt  signal_ggf_nonresonant_node_2_hh_4t    1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_3_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                  1 signal_ggf_nonresonant_node_3_hh_tttt  signal_ggf_nonresonant_node_3_hh_4t    1.0      #  [1][2]; normalized to 1 pb
@@ -74,7 +74,7 @@
 /GluGluToHHTo4Tau_node_9_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                  1 signal_ggf_nonresonant_node_9_hh_tttt  signal_ggf_nonresonant_node_9_hh_4t    1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                 1 signal_ggf_nonresonant_node_12_hh_tttt signal_ggf_nonresonant_node_12_hh_4t   1.0      #  [1][2]; normalized to 1 pb
 
-# HH -> 2W2tau (GGF)
+# HH -> 2W2tau (GGF non-resonant)
 /GluGluToHHTo2V2Tau_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 signal_ggf_nonresonant_node_sm_hh_wwtt signal_ggf_nonresonant_node_sm_hh_2v2t 1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo2V2Tau_node_2_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                1 signal_ggf_nonresonant_node_2_hh_wwtt  signal_ggf_nonresonant_node_2_hh_2v2t  1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo2V2Tau_node_3_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                1 signal_ggf_nonresonant_node_3_hh_wwtt  signal_ggf_nonresonant_node_3_hh_2v2t  1.0      #  [1][2]; normalized to 1 pb
@@ -88,7 +88,7 @@
 /GluGluToHHTo2V2Tau_node_11_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 signal_ggf_nonresonant_node_11_hh_wwtt signal_ggf_nonresonant_node_11_hh_2v2t 1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo2V2Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM               1 signal_ggf_nonresonant_node_12_hh_wwtt signal_ggf_nonresonant_node_12_hh_2v2t 1.0      #  [1][2]; normalized to 1 pb
 
-# HH -> 4W (GGF)
+# HH -> 4W (GGF non-resonant)
 /GluGluToHHTo4V_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                   1 signal_ggf_nonresonant_node_sm_hh_wwww signal_ggf_nonresonant_node_sm_hh_4v   1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4V_node_2_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                    1 signal_ggf_nonresonant_node_2_hh_wwww  signal_ggf_nonresonant_node_2_hh_4v    1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4V_node_3_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                    1 signal_ggf_nonresonant_node_3_hh_wwww  signal_ggf_nonresonant_node_3_hh_4v    1.0      #  [1][2]; normalized to 1 pb

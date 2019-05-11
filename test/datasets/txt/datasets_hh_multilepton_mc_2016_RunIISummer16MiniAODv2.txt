@@ -1,7 +1,7 @@
-# file generated at 2019-05-11 19:11:30 with the following command:
+# file generated at 2019-05-11 19:25:54 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
 
-# HH -> 4tau (GGF)
+# HH -> 4tau (GGF resonant)
 /GluGluToRadionToHHTo4Tau_M-250_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_250_hh_tttt            signal_ggf_spin0_250_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_260_hh_tttt            signal_ggf_spin0_260_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-270_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_270_hh_tttt            signal_ggf_spin0_270_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
@@ -20,6 +20,8 @@
 /GluGluToRadionToHHTo4Tau_M-750_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_750_hh_tttt            signal_ggf_spin0_750_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-800_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_800_hh_tttt            signal_ggf_spin0_800_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
 /GluGluToRadionToHHTo4Tau_M-900_narrow_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM 1 signal_ggf_spin0_900_hh_tttt            signal_ggf_spin0_900_hh_4t            0.003934 #  [1][2]; normalized to 1 pb: BR(H-> tau tau)^2 = 0.06272^2 = 0.003934
+
+# HH -> 4tau (GGF non-resonant)
 /GluGluToHHTo4Tau_node_SM_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM              1 signal_ggf_nonresonant_node_sm_hh_tttt  signal_ggf_nonresonant_node_sm_hh_4t  1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_box_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM             1 signal_ggf_nonresonant_node_box_hh_tttt signal_ggf_nonresonant_node_box_hh_4t 1.0      #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_2_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM               1 signal_ggf_nonresonant_node_2_hh_tttt   signal_ggf_nonresonant_node_2_hh_4t   1.0      #  [1][2]; normalized to 1 pb

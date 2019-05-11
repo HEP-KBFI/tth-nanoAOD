@@ -1,7 +1,7 @@
-# file generated at 2019-05-11 19:11:30 with the following command:
+# file generated at 2019-05-11 19:25:54 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
 
-# HH -> 4tau (GGF)
+# HH -> 4tau (GGF non-resonant)
 /GluGluToHHTo4Tau_node_SM_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM  1 signal_ggf_nonresonant_node_sm_hh_tttt  signal_ggf_nonresonant_node_sm_hh_4t  1.0 #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_box_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM 1 signal_ggf_nonresonant_node_box_hh_tttt signal_ggf_nonresonant_node_box_hh_4t 1.0 #  [1][2]; normalized to 1 pb
 /GluGluToHHTo4Tau_node_2_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM   1 signal_ggf_nonresonant_node_2_hh_tttt   signal_ggf_nonresonant_node_2_hh_4t   1.0 #  [1][2]; normalized to 1 pb
