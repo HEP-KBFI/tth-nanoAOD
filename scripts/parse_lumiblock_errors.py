@@ -59,7 +59,7 @@ def parser_errors(infn, outfn = ''):
   out = '\n'.join(map(lambda entry: '{} {}'.format(*entry), erroneous_datasets.items()))
   if out:
     if outfn:
-      outdir = os.path.isdir(outfn)
+      outdir = os.path.dirname(outfn)
       if not os.path.isdir(outdir):
         os.makedirs(outdir)
       with open(outfn) as outfile:
