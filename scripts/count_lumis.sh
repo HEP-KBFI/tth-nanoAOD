@@ -44,7 +44,7 @@ LARGEST_FILE_EVENTS=$(echo $LARGEST_FILE_LINE | awk '{print $2}')
 echo "Number of files: $NOF_FILES"
 echo "Number of events: $NOF_EVENTS"
 echo "Average number of events per file: $EVENTS_PER_FILE"
-echo "Largest file $LARGEST_FILE_NAME contains $LARGEST_FILE_EVENTS"
+echo "Largest file $LARGEST_FILE_NAME contains $LARGEST_FILE_EVENTS events"
 
 BLOCKS=$(dasgoclient -query="block dataset=$DATASET" 2>/dev/null)
 BAD_BLOCKS=0
