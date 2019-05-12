@@ -36,9 +36,15 @@ fi
 NOF_FILES=$(dasgoclient -query="dataset dataset=$DATASET | grep dataset.num_file" -unique | grep -v "^\[")
 NOF_EVENTS=$(dasgoclient -query="dataset dataset=$DATASET | grep dataset.nevents" -unique | grep -v "^\[")
 EVENTS_PER_FILE=$(python -c "print($NOF_EVENTS/$NOF_FILES)")
+
+LARGEST_FILE_LINE=$(dasgoclient -query="file dataset=$DATASET | grep file.name | grep file.nevents" | sort -nr -k2 | head -n1)
+LARGEST_FILE_NAME=$(echo $LARGEST_FILE_LINE | awk '{print $1}')
+LARGEST_FILE_EVENTS=$(echo $LARGEST_FILE_LINE | awk '{print $2}')
+
 echo "Number of files: $NOF_FILES"
 echo "Number of events: $NOF_EVENTS"
 echo "Average number of events per file: $EVENTS_PER_FILE"
+echo "Largest file $LARGEST_FILE_NAME contains $LARGEST_FILE_EVENTS"
 
 BLOCKS=$(dasgoclient -query="block dataset=$DATASET" 2>/dev/null)
 BAD_BLOCKS=0
