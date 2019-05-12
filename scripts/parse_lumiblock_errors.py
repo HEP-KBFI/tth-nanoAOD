@@ -11,6 +11,7 @@ class SmartFormatter(argparse.HelpFormatter):
     return argparse.HelpFormatter._split_lines(self, text, width)
 
 MAX_LUMIS = 100000
+MAX_FILE_RE = re.compile("Largest file .+ contains (?P<max_file_events>\d+) events")
 LUMI_ERROR_RE = re.compile("ERROR: found \d+ > {} lumis in block .+".format(MAX_LUMIS))
 DSET_ERRORS_RE = re.compile("Dataset (?P<dset>.+) is NOT compatible with EventAwareLumiBased splitting .+")
 DSET_PASS_RE = re.compile("Dataset (?P<dset>.+) is compatible with EventAwareLumiBased splitting .+")
@@ -29,15 +30,18 @@ def parser_errors(infn, outfn = ''):
       line_stripped = line.rstrip('\n')
       if not line:
         continue
+
+      max_file_match = MAX_FILE_RE.match(line_stripped)
       dset_error_match = DSET_ERRORS_RE.match(line_stripped)
       dset_pass_match = DSET_PASS_RE.match(line_stripped)
+
       if line_stripped.startswith('Checking'):
         current_dataset = line_stripped.split()[1]
         nof_events = -1
         nof_errors = 0
-      elif line_stripped.startswith('Number of events'):
+      elif max_file_match:
         assert(current_dataset)
-        nof_events = int(line_stripped.split()[-1])
+        nof_events = int(max_file_match.group('max_file_events'))
       elif LUMI_ERROR_RE.match(line_stripped):
         assert(current_dataset)
         nof_errors += 1
