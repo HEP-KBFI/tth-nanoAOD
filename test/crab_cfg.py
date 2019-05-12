@@ -17,6 +17,8 @@ JSON_LUMI     = get_env_var('JSON_LUMI')
 NANOAOD_VER   = get_env_var('NANOAOD_VER')
 WHITELIST     = get_env_var('WHITELIST', False)
 PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
+PUBLISH       = bool(int(get_env_var('PUBLISH')))
+NOF_EVENTS    = int(get_env_var('NOF_EVENTS'))
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
 job_type        = get_env_var('JOB_TYPE')
@@ -61,19 +63,16 @@ if is_private:
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
   config.Data.unitsPerJob          = 1
-  config.Data.outLFNDirBase        = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
-  config.Data.publication          = False
-  config.Data.outputDatasetTag     = outputDatasetTag
   config.Site.whitelist            = [ HOME_SITE ]
 else:
-  config.Data.inputDataset     = dataset_name
-  config.Data.inputDBS         = 'global'
-  config.Data.splitting        = 'EventAwareLumiBased'
-  config.Data.unitsPerJob      = 50000
-  config.Data.outLFNDirBase    = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
-  config.Data.publication      = False
-  config.Data.outputDatasetTag = outputDatasetTag
+  config.Data.inputDataset = dataset_name
+  config.Data.inputDBS     = 'global'
+  config.Data.splitting    = 'EventAwareLumiBased'
+  config.Data.unitsPerJob  = NOF_EVENTS
 
+config.Data.outLFNDirBase             = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
+config.Data.publication               = PUBLISH
+config.Data.outputDatasetTag          = outputDatasetTag
 config.Data.allowNonValidInputDataset = True
 
 if job_type == "data":

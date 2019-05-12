@@ -49,7 +49,8 @@ export ERA_KEY_2018_PROMPT="2018prompt"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
-export NOF_EVENTS="-1"
+export NOF_EVENTS=50000
+export NOF_CMSDRIVER_EVENTS="-1"
 export REPORT_FREQUENCY=1000
 export NTHREADS=1
 
@@ -57,6 +58,7 @@ GENERATE_CFGS_ONLY=false
 DRYRUN=""
 export DATASET_FILE=""
 export JOB_TYPE=""
+export PUBLISH=1
 
 TYPE_DATA="data"
 TYPE_MC="mc"
@@ -64,13 +66,13 @@ TYPE_FAST="fast"
 TYPE_SYNC="sync"
 
 show_help() {
-  echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] [-n <events>] [-r <frequency>] [-t <threads>]" 1>&2;
+  echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] [-n <job events>] [-N <cfg events>] [-r <frequency>] [-t <threads>] [ -p <publish: 0|1> ]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
 }
 
-while getopts "h?dgf:j:e:v:w:n:r:t:" opt; do
+while getopts "h?dgf:j:e:v:w:n:N:r:t:p:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -84,15 +86,19 @@ while getopts "h?dgf:j:e:v:w:n:r:t:" opt; do
      ;;
   e) export ERA=${OPTARG}
      ;;
-  v) export NANOAOD_VER=${OPTARG}
+  v) export NANOAOD_VER_BASE=${OPTARG}
      ;;
   w) export WHITELIST=${OPTARG}
      ;;
   n) export NOF_EVENTS=${OPTARG}
      ;;
+  N) export NOF_CMSDRIVER_EVENTS=${OPTARG}
+     ;;
   r) export REPORT_FREQUENCY=${OPTARG}
      ;;
   t) export NTHREADS=${OPTARG}
+     ;;
+  p) export PUBLISH=${OPTARG}
      ;;
   esac
 done
@@ -106,6 +112,21 @@ check_if_exists() {
 
 if [ -z "$ERA" ]; then
   echo "You need to specify era!";
+  exit 1;
+fi
+
+if [[ $PUBLISH != "0" ]] && [[ $PUBLISH != "1" ]]; then
+  echo "Invalid value for the publish option: $PUBLISH";
+  exit 1;
+fi
+
+if ! [[ $NOF_EVENTS =~ ^[0-9]+$ ]] || [[ $NOF_EVENTS == "0" ]]; then
+  echo "Option -n not a valid number: $NOF_EVENTS";
+  exit 1;
+fi
+
+if (! [[ $NOF_CMSDRIVER_EVENTS =~ ^[0-9]+$ ]] && [[ $NOF_CMSDRIVER_EVENTS != "-1" ]]) || [[ $NOF_CMSDRIVER_EVENTS == "0" ]]; then
+  echo "Option -N not a valid number: $NOF_CMSDRIVER_EVENTS";
   exit 1;
 fi
 
@@ -186,6 +207,7 @@ fi
 export BASE_DIR="$CMSSW_BASE/src/tthAnalysis/NanoAOD"
 export JSON_LUMI="$BASE_DIR/data/$JSON_FILE"
 export CRAB_CFG="$BASE_DIR/test/crab_cfg.py"
+export FILEBLOCK_LIST="$BASE_DIR/test/datasets_fileblock_err.txt"
 
 if [ "$JOB_TYPE" != "$TYPE_DATA" ] && \
    [ "$JOB_TYPE" != "$TYPE_MC" ]   && \
@@ -211,14 +233,14 @@ if [ "$JOB_TYPE" == "$TYPE_SYNC" ]; then
   JOB_TYPE=$TYPE_MC;
   GENERATE_CFGS_ONLY=true;
 else
-  if [ "$NOF_EVENTS" != "-1" ]; then
+  if [ "$NOF_CMSDRIVER_EVENTS" != "-1" ]; then
     echo "You can set the number of events to other value than -1 only if you are running in $TYPE_SYNC mode"
     exit 1;
   fi
 fi
 
-if [ -z "$NANOAOD_VER" ]; then
-  export NANOAOD_VER="NanoAOD_${ERA}_`date '+%Y%b%d'`";
+if [ -z "$NANOAOD_VER_BASE" ]; then
+  export NANOAOD_VER_BASE="${ERA}_`date '+%Y%b%d'`";
 fi
 
 if [ -z "$YEAR" ]; then
@@ -275,7 +297,7 @@ print('GT: $COND')\\n\
 print('era: $ERA_ARGS')\\n"
 
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
-                         --number=$NOF_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
+                         --number=$NOF_CMSDRIVER_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
                          --python_filename=$NANOCFG"
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
@@ -421,6 +443,7 @@ cat $DATASET_FILE | while read LINE; do
   fi
 
   export NANOCFG=$NANOCFG;
+  export NANOAOD_VER=$NANOAOD_VER_BASE
   echo "Using config file: $NANOCFG";
 
   crab submit $DRYRUN --config="$CRAB_CFG" --wait
