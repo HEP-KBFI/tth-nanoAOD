@@ -64,7 +64,7 @@ if __name__ == '__main__':
   )
   parser.add_argument(
     '-i', '--input', dest = 'input', metavar = 'file', required = True, type = str,
-    help = 'R|Input JSON file containing datasets',
+    help = 'R|Input text file containing datasets',
   )
   parser.add_argument(
     '-c', '--category-unique', dest = 'caregory_unique', action = 'store_true', default = False,
