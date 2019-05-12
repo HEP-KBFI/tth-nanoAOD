@@ -62,7 +62,7 @@ def parser_errors(infn, outfn = ''):
       outdir = os.path.dirname(outfn)
       if not os.path.isdir(outdir):
         os.makedirs(outdir)
-      with open(outfn) as outfile:
+      with open(outfn, 'w') as outfile:
         outfile.write('{}\n'.format(out))
     else:
       print(out)
