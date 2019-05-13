@@ -15,6 +15,7 @@ HOME_SITE     = 'T2_EE_Estonia'
 NANOCFG       = get_env_var('NANOCFG')
 JSON_LUMI     = get_env_var('JSON_LUMI')
 NANOAOD_VER   = get_env_var('NANOAOD_VER')
+CHUNK_VER     = get_env_var('CHUNK_VER', False)
 WHITELIST     = get_env_var('WHITELIST', False)
 PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
 PUBLISH       = bool(int(get_env_var('PUBLISH')))
@@ -29,7 +30,8 @@ dataset_match   = re.match(dataset_pattern, dataset_name)
 if not dataset_match:
   raise ValueError("Dataset '%s' did not match to pattern '%s'" % (dataset_name, dataset_pattern))
 
-id_ = '%s_%s__%s' % (NANOAOD_VER, dataset_match.group(1), dataset_match.group(2))
+id_head = '{}_{}'.format(NANOAOD_VER, CHUNK_VER) if CHUNK_VER else NANOAOD_VER
+id_     = '%s_%s__%s' % (id_head, dataset_match.group(1), dataset_match.group(2))
 requestName      = id_
 outputDatasetTag = id_
 

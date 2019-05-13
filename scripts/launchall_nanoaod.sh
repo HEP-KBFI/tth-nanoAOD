@@ -109,7 +109,7 @@ while getopts "h?dgf:j:e:v:w:n:N:r:t:p:" opt; do
      ;;
   e) export ERA=${OPTARG}
      ;;
-  v) export NANOAOD_VER_BASE=${OPTARG}
+  v) export NANOAOD_VER=${OPTARG}
      ;;
   w) export WHITELIST=${OPTARG}
      ;;
@@ -290,9 +290,9 @@ else
   fi
 fi
 
-if [ -z "$NANOAOD_VER_BASE" ]; then
-  export NANOAOD_VER_BASE="${ERA}_`date '+%Y%b%d'`";
-  echo "Set version to: $NANOAOD_VER_BASE"
+if [ -z "$NANOAOD_VER" ]; then
+  export NANOAOD_VER="${ERA}_`date '+%Y%b%d'`";
+  echo "Set version to: $NANOAOD_VER"
 fi
 
 if [ -z "$YEAR" ]; then
@@ -465,7 +465,7 @@ while read LINE; do
   export DATASET=$(echo $LINE | awk '{print $1}');
   unset DATASET_CATEGORY;
   unset NANOCFG;
-  unset NANOAOD_VER;
+  unset CHUNK_VER;
   unset FORCE_FILEBASED;
 
   export IS_PRIVATE=0;
@@ -527,7 +527,7 @@ while read LINE; do
     for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
       export FORCE_FILEBASED=1;
       export NANOCFG=$(get_cfg_name $CHUNK_IDX);
-      export NANOAOD_VER="${NANOAOD_VER_BASE}_CHUNK${CHUNK_IDX}";
+      export CHUNK_VER="CHUNK${CHUNK_IDX}"
       echo "Using config file: $NANOCFG";
 
       crab submit $DRYRUN --config="$CRAB_CFG" --wait
@@ -535,7 +535,6 @@ while read LINE; do
   else
     export FORCE_FILEBASED=0;
     export NANOCFG=$(get_cfg_name);
-    export NANOAOD_VER=$NANOAOD_VER_BASE
     echo "Using config file: $NANOCFG";
 
     crab submit $DRYRUN --config="$CRAB_CFG" --wait
