@@ -19,6 +19,7 @@ WHITELIST     = get_env_var('WHITELIST', False)
 PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
 PUBLISH       = bool(int(get_env_var('PUBLISH')))
 NOF_EVENTS    = int(get_env_var('NOF_EVENTS'))
+DO_FILEBASED  = bool(int(get_env_var('FORCE_FILEBASED')))
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
 job_type        = get_env_var('JOB_TYPE')
@@ -65,10 +66,15 @@ if is_private:
   config.Data.unitsPerJob          = 1
   config.Site.whitelist            = [ HOME_SITE ]
 else:
+  if DO_FILEBASED:
+    config.Data.splitting   = 'FileBased'
+    config.Data.unitsPerJob = 1
+  else:
+    config.Data.splitting   = 'EventAwareLumiBased'
+    config.Data.unitsPerJob = NOF_EVENTS
+
   config.Data.inputDataset = dataset_name
   config.Data.inputDBS     = 'global'
-  config.Data.splitting    = 'EventAwareLumiBased'
-  config.Data.unitsPerJob  = NOF_EVENTS
 
 config.Data.outLFNDirBase             = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
 config.Data.publication               = PUBLISH

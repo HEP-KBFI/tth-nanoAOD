@@ -49,6 +49,27 @@ export ERA_KEY_2018_PROMPT="2018prompt"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
 
+export DATASET_PATTERN="^/(.*)/(.*)/[0-9A-Za-z]+$"
+
+is_valid_dataset() {
+  DATASET_CANDIDATE=$1;
+
+  if [ -z "$DATASET_CANDIDATE" ]; then
+    return 0; # it's an empty line, skip silently
+  fi
+
+  if [[ "${DATASET_CANDIDATE:0:1}" == "#" ]]; then
+    return 0; # it's a comment
+  fi
+
+  if [[ ! "$DATASET_CANDIDATE" =~ $DATASET_PATTERN ]]; then
+    echo "Not a valid sample: '$DATASET_CANDIDATE'";
+    return 0;
+  fi
+
+  return 1;
+}
+
 export NOF_EVENTS=50000
 export NOF_CMSDRIVER_EVENTS="-1"
 export REPORT_FREQUENCY=1000
@@ -66,7 +87,9 @@ TYPE_FAST="fast"
 TYPE_SYNC="sync"
 
 show_help() {
-  echo "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] [-n <job events>] [-N <cfg events>] [-r <frequency>] [-t <threads>] [ -p <publish: 0|1> ]" 1>&2;
+  echo -ne "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] " 1>&2;
+  echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
+  echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
@@ -227,6 +250,34 @@ if [ -z "$DATASET_FILE" ]; then
 fi
 
 check_if_exists "$DATASET_FILE"
+check_if_exists "$FILEBLOCK_LIST"
+
+declare -A FILEBLOCK_ARR
+while read -r LINE; do
+  read -ra LINEARR <<<"$LINE";
+  FILEBLOCK_ARR["${LINEARR[0]}"]="${LINEARR[1]}";
+done < "$FILEBLOCK_LIST"
+echo "Found ${#FILEBLOCK_ARR[@]} datasets with fileblock errors"
+
+MAX_NOF_JOBS=1
+declare -A DATASET_ARR
+while read LINE; do
+  DATASET_CANDIDATE=$(echo $LINE | awk '{print $1}');
+
+  is_valid_dataset ${DATASET_CANDIDATE};
+  if [[ $? != "1" ]]; then
+    continue;
+  fi
+
+  if [ ${FILEBLOCK_ARR[$DATASET_CANDIDATE]} ]; then
+    MAX_EVENTS=${FILEBLOCK_ARR[$DATASET_CANDIDATE]};
+    NOF_JOBS=$(( MAX_EVENTS%NOF_EVENTS ? MAX_EVENTS/NOF_EVENTS+1 : MAX_EVENTS/NOF_EVENTS ));
+    DATASET_ARR["$DATASET_CANDIDATE"]=$NOF_JOBS;
+    MAX_NOF_JOBS=$(( MAX_NOF_JOBS > NOF_JOBS ? MAX_NOF_JOBS : NOF_JOBS ));
+  fi
+done <<< "$(cat $DATASET_FILE)"
+
+echo "Found maximum number of jobs over all datasets that have file block issues: $MAX_NOF_JOBS"
 
 JOB_TYPE_NAME=$JOB_TYPE
 if [ "$JOB_TYPE" == "$TYPE_SYNC" ]; then
@@ -241,6 +292,7 @@ fi
 
 if [ -z "$NANOAOD_VER_BASE" ]; then
   export NANOAOD_VER_BASE="${ERA}_`date '+%Y%b%d'`";
+  echo "Set version to: $NANOAOD_VER_BASE"
 fi
 
 if [ -z "$YEAR" ]; then
@@ -296,8 +348,19 @@ print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n\
 print('GT: $COND')\\n\
 print('era: $ERA_ARGS')\\n"
 
+  if [ -n "$1" ]; then
+    echo "Generating cfg file for chunk #$1 with split size $NOF_EVENTS";
+    CHUNK_IDX_CUR=$1;
+    NOF_SKIP=$(( (CHUNK_IDX_CUR-1) * NOF_EVENTS ));
+    CHUNK_COMMANDS="process.source.skipEvents=cms.untracked.uint32($NOF_SKIP)\\n";
+    export CUSTOMISE_COMMANDS="${CUSTOMISE_COMMANDS}${CHUNK_COMMANDS}";
+    export NOF_CFG_EVENTS=$NOF_EVENTS;
+  else
+    export NOF_CFG_EVENTS=$NOF_CMSDRIVER_EVENTS;
+  fi
+
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
-                         --number=$NOF_CMSDRIVER_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
+                         --number=$NOF_CFG_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
                          --python_filename=$NANOCFG"
   if [ "$JOB_TYPE" == "$TYPE_DATA" ]; then
     CMSDRIVER_OPTS="$CMSDRIVER_OPTS --lumiToProcess=$JSON_LUMI";
@@ -307,19 +370,44 @@ print('era: $ERA_ARGS')\\n"
   cmsDriver.py $CMSDRIVER_OPTS --customise_commands="$CUSTOMISE_COMMANDS";
 }
 
+get_cfg_name() {
+  if [ -n "$1" ]; then
+    echo "$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_chunk_${NOF_EVENTS}_part_${1}_cfg.py";
+  else
+    echo "$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_cfg.py";
+  fi
+}
+
 if [ -z "$NANOCFG" ]; then
-  export NANOCFG="$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_cfg.py";
+  export NANOCFG=$(get_cfg_name);
+
   read -p "Sure you want to use this config file: $NANOCFG? [y/N]" -n 1 -r
   echo
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
   fi
+
   if [ ! -d $(dirname $NANOCFG) ]; then
     mkdir -p $(dirname $NANOCFG);
   fi
 fi
 generate_cfgs;
 check_if_exists "$NANOCFG"
+
+if (( MAX_NOF_JOBS > 1 )); then
+  for CHUNK_IDX in $(seq 1 $MAX_NOF_JOBS); do
+    export NANOCFG=$(get_cfg_name $CHUNK_IDX);
+
+    read -p "Sure you want to generate config file: $NANOCFG? [y/N]" -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+      [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+    fi
+
+    generate_cfgs $CHUNK_IDX;
+    check_if_exists "$NANOCFG";
+  done
+fi
 
 if [ $GENERATE_CFGS_ONLY = true ]; then
   exit 0;
@@ -362,8 +450,6 @@ if [ "$VOMS_PROXY_TIMELEFT" -lt "$MIN_TIMELEFT" ]; then
   exit 1;
 fi
 
-export DATASET_PATTERN="^/(.*)/(.*)/[0-9A-Za-z]+$"
-
 if [[ ! "$NANOCFG" =~ ^/ ]]; then
   export NANOCFG="$PWD/$NANOCFG";
   echo "Full path to the $JOB_TYPE cfg file: $NANOCFG";
@@ -375,27 +461,21 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
 fi
 
-cat $DATASET_FILE | while read LINE; do
+while read LINE; do
   export DATASET=$(echo $LINE | awk '{print $1}');
   unset DATASET_CATEGORY;
-  unset NANOCFG
+  unset NANOCFG;
+  unset NANOAOD_VER;
+  unset FORCE_FILEBASED;
 
   export IS_PRIVATE=0;
 
-  if [ -z "$DATASET" ]; then
-    continue; # it's an empty line, skip silently
-  fi
-
-  if [[ "${DATASET:0:1}" == "#" ]]; then
-    continue; # it's a comment
-  fi
-
-  if [[ ! "$DATASET" =~ $DATASET_PATTERN ]]; then
-    echo "Not a valid sample: '$DATASET'";
+  is_valid_dataset ${DATASET};
+  if [[ $? != "1" ]]; then
     continue;
-  else
-    export DATASET_CATEGORY="${BASH_REMATCH[1]}";
   fi
+
+  export DATASET_CATEGORY="${BASH_REMATCH[1]}";
 
   if [ -z "$DATASET_CATEGORY" ]; then
     echo "Could not find the dataset category for: '$DATASET'";
@@ -442,9 +522,22 @@ cat $DATASET_FILE | while read LINE; do
     done
   fi
 
-  export NANOCFG=$NANOCFG;
-  export NANOAOD_VER=$NANOAOD_VER_BASE
-  echo "Using config file: $NANOCFG";
+  if [ ${DATASET_ARR["$DATASET"} ]; then
+    NOF_CHUNKS=${DATASET_ARR["$DATASET"]};
+    for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
+      export FORCE_FILEBASED=1;
+      export NANOCFG=$(get_cfg_name $CHUNK_IDX);
+      export NANOAOD_VER="${NANOAOD_VER_BASE}_CHUNK${CHUNK_IDX}";
+      echo "Using config file: $NANOCFG";
 
-  crab submit $DRYRUN --config="$CRAB_CFG" --wait
-done
+      crab submit $DRYRUN --config="$CRAB_CFG" --wait
+    done
+  else
+    export FORCE_FILEBASED=0;
+    export NANOCFG=$(get_cfg_name);
+    export NANOAOD_VER=$NANOAOD_VER_BASE
+    echo "Using config file: $NANOCFG";
+
+    crab submit $DRYRUN --config="$CRAB_CFG" --wait
+  fi
+done <<< "$(cat $DATASET_FILE)"
