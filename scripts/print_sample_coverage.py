@@ -39,7 +39,12 @@ html_template = """
   <body>
    
    <div>
-   {% for table in tables %}
+   {% for table in tables_res %}
+     {{ table }}
+   {% endfor %}
+   </div>
+   <div>
+   {% for table in tables_nonres_ggf %}
      {{ table }}
    {% endfor %}
    </div>
@@ -50,7 +55,7 @@ html_template = """
 table_template = """
 <table style="width:300px; float: left">
   <tr>
-    <th colspan="2" rowspan="2">{{ decay_channel }}</th>
+    <th colspan="2" rowspan="2">resonant {{ decay_channel }}</th>
     {% for production_mode in production_modes %}
       <th colspan="{{ spins|length }}">{{ production_mode }}</th>
     {% endfor %}
@@ -66,6 +71,36 @@ table_template = """
     {{ entry }}
   {% endfor %}
 </table>
+"""
+
+table_nonresonant_ggf_template = """
+<table style="width:300px; float: left">
+  <tr>
+    <th>non-resonant ggf {{ decay_mode }}</th>
+      {% for shape in shapes %}
+        <th>{{ shape }}</th>
+      {% endfor %}
+  </tr>
+  {% for entry in entries %}
+    {{ entry }}
+  {% endfor %}
+  
+</table>
+"""
+
+entry_nonresonant_ggf_template = """
+{%- for era in eras -%}
+  <tr>
+      <td style="background-color: {% if loop.index % 3 == 0 %}#ffcccc{% elif loop.index % 3 == 1 %}#ccffcc{% else %}#ffffcc{% endif %}">{{ era }}</td>
+      {%- for shape in shapes -%}
+          <td {% if nonresonant_map[decay_channel][shape][era] %}class="pos">
+            <a href="https://cmsweb.cern.ch/das/request?input={{ nonresonant_map[decay_channel][shape][era] }}">
+              x
+            </a>
+          {% else %}class="neg">{% endif %}</td>
+      {%- endfor -%}
+  </tr> 
+{%- endfor -%}
 """
 
 entry_template = """
@@ -131,8 +166,12 @@ def get_tables(fn, required):
   nonresonant_map_vbf = {}
 
   resonant_map_agg = { name : [] for name in [ 'decay_channel', 'spin', 'production_mode', 'mass_point' ] }
+  nonresonant_map_ggf_agg = { name : [] for name in [ 'decay_channel', 'shape' ] }
+  nonresonant_map_vbf_agg = { name: [] for name in [ 'decay_channel', 'cv', 'c2v', 'c3' ] }
 
   add_to_resonant_map_agg = lambda key, value: add_to_map(resonant_map_agg, key, value)
+  add_to_nonresonant_ggf_agg = lambda key, value: add_to_map(nonresonant_map_ggf_agg, key, value)
+  add_to_nonresonant_vbf_agg = lambda key, value: add_to_map(nonresonant_map_vbf_agg, key, value)
 
   for e in j:
     c = e['category']
@@ -161,27 +200,35 @@ def get_tables(fn, required):
       add_to_resonant_map_agg('production_mode', production_mode)
       add_to_resonant_map_agg('mass_point', mass_point)
 
-      #print('production = {} ; spin = {} ; mass = {} ; channel = {} ; {}'.format(
-      #  production_mode, spin, mass_point, decay_channel, ', '.join([ '%s -> %s' % x for x in s.items()]),
-      #))
     elif m_nonres_ggf:
-      production_mode = 'ggf'
       shape           = m_nonres_ggf.group(RR_SHAPE)
       decay_channel   = m_nonres_ggf.group(RR_DECAY_CHANNEL)
 
-      #print('production = {} ; shape = {} ; channel = {} ; {}'.format(
-      #  production_mode, shape, decay_channel, ', '.join([ '%s -> %s' % x for x in s.items()]),
-      #))
+      if decay_channel not in nonresonant_map_ggf:
+        nonresonant_map_ggf[decay_channel] = {}
+      nonresonant_map_ggf[decay_channel][shape] = copy.deepcopy(s)
+
+      add_to_nonresonant_ggf_agg('decay_channel', decay_channel)
+      add_to_nonresonant_ggf_agg('shape', shape)
     elif m_nonres_vbf:
-      production_mode = "vbf"
       decay_channel   = m_nonres_vbf.group(RR_DECAY_CHANNEL)
       cv              = m_nonres_vbf.group(RR_CV)
       c2v             = m_nonres_vbf.group(RR_C2V)
       c3              = m_nonres_vbf.group(RR_C3)
 
-      #print('production = {}; channel = {} ; cv = {} ; c2v = {} ; c3 = {} ; {}'.format(
-      #  production_mode, decay_channel, cv, c2v, c3, ', '.join(['%s -> %s' % x for x in s.items()]),
-      #))
+      if decay_channel not in nonresonant_map_vbf:
+        nonresonant_map_vbf[decay_channel] = {}
+      if cv not in nonresonant_map_vbf[decay_channel]:
+        nonresonant_map_vbf[decay_channel][cv] = {}
+      if c2v not in nonresonant_map_vbf[decay_channel][cv]:
+        nonresonant_map_vbf[decay_channel][cv][c2v] = {}
+      nonresonant_map_vbf[decay_channel][cv][c2v][c3] = copy.deepcopy(s)
+
+      add_to_nonresonant_vbf_agg('decay_channel', decay_channel)
+      add_to_nonresonant_vbf_agg('cv', cv)
+      add_to_nonresonant_vbf_agg('c2v', c2v)
+      add_to_nonresonant_vbf_agg('c3', c3)
+
     else:
       raise RuntimeError("Invalid category: %s" % c)
 
@@ -199,9 +246,46 @@ def get_tables(fn, required):
           resonant_map[decay_channel][production_mode][spin] = {}
         for mass_point in resonant_map_agg['mass_point']:
           if mass_point not in resonant_map[decay_channel][production_mode][spin]:
-            resonant_map[decay_channel][production_mode][spin][mass_point] = { camp : False for camp in required }
+            resonant_map[decay_channel][production_mode][spin][mass_point] = { camp : '' for camp in required }
 
-  tables = []
+  for decay_channel in nonresonant_map_ggf_agg['decay_channel']:
+    if decay_channel not in nonresonant_map_ggf:
+      nonresonant_map_ggf[decay_channel] = {}
+    for shape in nonresonant_map_ggf_agg['shape']:
+      if shape not in nonresonant_map_ggf[decay_channel]:
+        nonresonant_map_ggf[decay_channel][shape] = { camp : '' for camp in required }
+
+  for decay_channel in nonresonant_map_vbf_agg['decay_channel']:
+    if decay_channel not in nonresonant_map_vbf:
+      nonresonant_map_vbf[decay_channel] = {}
+    for cv in nonresonant_map_vbf_agg['cv']:
+      if cv not in nonresonant_map_vbf[decay_channel]:
+        nonresonant_map_vbf[decay_channel][cv] = {}
+      for c2v in nonresonant_map_vbf_agg['c2v']:
+        if c2v not in nonresonant_map_vbf[decay_channel][cv]:
+          nonresonant_map_vbf[decay_channel][cv][c2v] = {}
+        for c3 in nonresonant_map_vbf_agg['c3']:
+          if c3 not in nonresonant_map_vbf[decay_channel][cv][c2v]:
+            nonresonant_map_vbf[decay_channel][cv][c2v][c3] = { camp : '' for camp in required }
+
+  tables_nonres_ggf = []
+  for decay_channel in nonresonant_map_ggf_agg['decay_channel']:
+    entries = []
+    entry = jinja2.Template(entry_nonresonant_ggf_template).render(
+      eras = required,
+      decay_channel = decay_channel,
+      shapes = nonresonant_map_ggf_agg['shape'],
+      nonresonant_map = nonresonant_map_ggf,
+    )
+    entries.append(entry)
+    table = jinja2.Template(table_nonresonant_ggf_template).render(
+      decay_mode = decay_channel,
+      entries = entries,
+      shapes = nonresonant_map_ggf_agg['shape'],
+    )
+    tables_nonres_ggf.append(table)
+
+  tables_res = []
   for decay_channel in resonant_map_agg['decay_channel']:
     entries = []
     for idx, mass_point in enumerate(resonant_map_agg['mass_point']):
@@ -222,9 +306,9 @@ def get_tables(fn, required):
       spins = resonant_map_agg['spin'],
       entries = entries,
     )
-    tables.append(table)
+    tables_res.append(table)
 
-  return tables
+  return tables_res, tables_nonres_ggf
 
 if __name__ == '__main__':
   #basedir = os.path.join(os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'datasets', 'json',)
@@ -252,14 +336,17 @@ if __name__ == '__main__':
   )
   args = parser.parse_args()
 
-  tables = []
+  tables_res, tables_nonres_ggf = [], []
   for fn in args.input:
     if not os.path.isfile(fn):
       raise ValueError("No such file: %s" % fn)
-    tables.extend(get_tables(fn, args.eras))
+    res, nonres_ggf = get_tables(fn, args.eras)
+    tables_res.extend(res)
+    tables_nonres_ggf.extend(nonres_ggf)
 
   html = jinja2.Template(html_template).render(
-    tables = tables,
+    tables_res = tables_res,
+    tables_nonres_ggf = tables_nonres_ggf,
   )
 
   with open(args.output, 'w') as f:
