@@ -87,7 +87,8 @@ TYPE_FAST="fast"
 TYPE_SYNC="sync"
 
 show_help() {
-  echo -ne "Usage: $0 -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] " 1>&2;
+  THIS_SCRIPT=$0;
+  echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] " 1>&2;
   echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
   echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
