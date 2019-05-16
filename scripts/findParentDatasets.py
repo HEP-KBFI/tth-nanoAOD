@@ -23,7 +23,7 @@ class SmartFormatter(argparse.HelpFormatter):
 def run_cmd(cmd_str):
   cmd = subprocess.Popen(cmd_str, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
   stdout, stderr = cmd.communicate()
-  if stderr:
+  if stderr and not stderr.startswith("Picked up _JAVA_OPTIONS"):
     raise RuntimeError("Caught an error while executing '%s': %s" % (cmd_str, stderr))
   return stdout.rstrip('\n')
 
