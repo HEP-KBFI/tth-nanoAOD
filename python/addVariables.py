@@ -41,12 +41,12 @@ def addEScaleSmearing2018(process):
       float, doc = "ratio of the calibrated energy/miniaod energy"
     ),
   )
-  _with94XScale_sequence = process.electronSequence.copy()
-  _with94XScale_sequence.replace(
+  _with102XScale_sequence = process.electronSequence.copy()
+  _with102XScale_sequence.replace(
     process.slimmedElectronsWithUserData,
     process.calibratedPatElectrons102X + process.slimmedElectronsWithUserData
   )
-  run2_nanoAOD_102Xv1.toReplaceWith(process.electronSequence, _with94XScale_sequence)
+  run2_nanoAOD_102Xv1.toReplaceWith(process.electronSequence, _with102XScale_sequence)
 
 
 def addLepMVA(process):
