@@ -1,4 +1,4 @@
-# file generated at 2019-05-17 02:04:42 with the following command:
+# file generated at 2019-05-17 18:20:31 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -58,7 +58,7 @@
 /ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                       1 Rares                     ZGTo2LG_ext1                                117.864     # LO [6]
 
 # t/ttbar+gamma
-/TGJets_TuneCP5_13TeV_amcatnlo_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3/MINIAODSIM                                1 Rares                     TGJets                                        2.967     # NLO [6]
+/TGJets_leptonDecays_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                      1 Rares                     TGJets                                        2.967     # NLO [6]
 /TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                           1 Rares                     TTGJets                                       3.697     # NLO [6]
 
 # H->tautau

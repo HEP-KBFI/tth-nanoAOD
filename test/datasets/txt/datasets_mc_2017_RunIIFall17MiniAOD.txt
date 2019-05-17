@@ -1,4 +1,4 @@
-# file generated at 2019-05-17 02:04:42 with the following command:
+# file generated at 2019-05-17 18:20:31 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -55,7 +55,7 @@
 /WZG_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM                                                1 Rares                     WZG                                             0.04123   # NLO [5]
 
 # t/ttbar+gamma
-/TGJets_leptonDecays_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM               1 Rares                     TGJets                                          2.967     # NLO [5]
+/TGJets_leptonDecays_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM               1 Rares                     TGJets_PSweights                                2.967     # NLO [5]
 /TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                         1 Rares                     TTGJets                                         3.697     # NLO [5]
 /TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                    1 Rares                     TTGJets_ext1                                    3.697     # NLO [5]
 

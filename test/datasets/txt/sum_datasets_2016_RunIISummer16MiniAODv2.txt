@@ -1,4 +1,4 @@
-# file generated at 2019-05-17 02:04:42 with the following command:
+# file generated at 2019-05-17 18:20:31 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 ttHToNonbb_M125_powheg           ttHToNonbb_M125_powheg_fastsim_p1     ttHToNonbb_M125_powheg_fastsim_p2 ttHToNonbb_M125_powheg_fastsim_p3
@@ -12,7 +12,6 @@ TTJets_SingleLeptFromTbar        TTJets_SingleLeptFromTbar_ext1
 TTJets_amcatnloFXFX              TTJets_amcatnloFXFX_backup
 WGToLNuG_ext1                    WGToLNuG_ext2                         WGToLNuG_ext3
 ZGTo2LG                          ZGTo2LG_ext1
-TGJets                           TGJets_ext1
 TTGJets                          TTGJets_ext1
 ZH_HToBB_ZToLL                   ZH_HToBB_ZToLL_ext1
 ZHToTauTau                       ZHToTauTau_ext1
