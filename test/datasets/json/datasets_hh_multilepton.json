@@ -3512,6 +3512,102 @@
     ]
   },
   {
+    "category": "signal_ggf_spin2_280_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_280_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_300_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_300_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_320_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_320_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_ggf_spin2_350_hh_wwww",
     "comment": "",
     "samples": [
@@ -3591,6 +3687,38 @@
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_500_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_500_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
           "RunIIAutumn18MiniAOD": []
