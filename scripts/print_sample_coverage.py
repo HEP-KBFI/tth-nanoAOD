@@ -379,9 +379,7 @@ def get_tables(fn, required):
   return tables_res, tables_nonres_ggf, tables_nonres_vbf
 
 if __name__ == '__main__':
-  #basedir = os.path.join(os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'datasets', 'json',)
-  basedir = os.path.join('test', 'datasets', 'json')
-
+  basedir = os.path.join(os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'datasets', 'json',)
   parser = argparse.ArgumentParser(
     formatter_class = lambda prog: SmartFormatter(prog, max_help_position = 40),
   )
