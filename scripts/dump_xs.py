@@ -82,8 +82,7 @@ parser.add_argument('-n', '--max-events', dest = 'max_events', metavar = 'int', 
 parser.add_argument('-N', '--max-files', dest = 'max_files', metavar = 'int', required = False, type = int,
                     default = -1,
                     help = 'R|Maximum number of files to process')
-parser.add_argument('-g', '--global-tag', dest = 'global_tag', metavar = 'tag', required = False, type = str,
-                    default = '94X_mc2017_realistic_v13',
+parser.add_argument('-g', '--global-tag', dest = 'global_tag', metavar = 'tag', required = True, type = str,
                     help = 'R|Global tag')
 parser.add_argument('-F', '--force', dest = 'force', action = 'store_true', default = False,
                     help = "R|Force the creation of output directory if it doesn't exist")
