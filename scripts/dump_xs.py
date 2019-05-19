@@ -86,7 +86,7 @@ parser.add_argument('-g', '--global-tag', dest = 'global_tag', metavar = 'tag', 
                     default = '94X_mc2017_realistic_v13',
                     help = 'R|Global tag')
 parser.add_argument('-F', '--force', dest = 'force', action = 'store_true', default = False,
-                    help = 'R|Enable verbose printout')
+                    help = "R|Force the creation of output directory if it doesn't exist")
 parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                     help = 'R|Enable verbose printout')
 args = parser.parse_args()
