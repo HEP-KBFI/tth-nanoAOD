@@ -128,7 +128,7 @@ if not os.path.isdir(args.output):
 
 timeleft_cmd = 'voms-proxy-info --timeleft'
 timeleft_out, timeleft_err = run_cmd(timeleft_cmd)
-if timeleft_err:
+if timeleft_err and not timeleft_err.startswith('Picked up _JAVA_OPTIONS:'):
   raise RuntimeError("Could not execute '%s' because: %s" % (timeleft_cmd, timeleft_err))
 timeleft = int(timeleft_out)
 min_hours = 48
@@ -143,7 +143,7 @@ dasgo_query = "dasgoclient -query='file dataset=%s'"
 for sample_name, sample_entry in samples.items():
   dasgo_query_sample = dasgo_query % sample_entry['dbs_key']
   dasgo_out, dasgo_err = run_cmd(dasgo_query_sample)
-  if dasgo_err:
+  if dasgo_err and not dasgo_err.startswith('Picked up _JAVA_OPTIONS:'):
     raise RuntimeError("Could not execute '%s' because: %s" % (dasgo_query_sample, dasgo_err))
   sample_files = dasgo_out.split('\n')
   if not sample_files:
