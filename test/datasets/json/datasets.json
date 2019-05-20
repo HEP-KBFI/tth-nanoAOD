@@ -285,7 +285,7 @@
           ]
         },
         "xs": {
-          "value": 0.03136,
+          "value": 0.03137,
           "order": "NLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -322,7 +322,7 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.023133,
+          "value": 0.02313,
           "order": "NLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV",
@@ -401,7 +401,7 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.005089,
+          "value": 0.005087,
           "order": "NLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV",

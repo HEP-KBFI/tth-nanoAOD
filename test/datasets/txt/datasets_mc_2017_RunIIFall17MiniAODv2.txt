@@ -1,4 +1,4 @@
-# file generated at 2019-05-18 21:57:04 with the following command:
+# file generated at 2019-05-20 03:24:56 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -9,7 +9,7 @@
 /ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM                                  0 signal                    ttHTobb_M125_powheg                                    0.2953    # NLO [1][2]; XS(ttH) * BR(H->bb) = 0.5071 * 0.5824
 /TTH_4f_ctcvcp_TuneCP5_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                       0 signal                    TTH_4f_ctcvcp                                          0.5071    # NLO [2]
 /ttHTobb_ttToSemiLep_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                              0 signal                    ttHTobb_ttToSemiLep_M125                               0.1298    # NLO [1][2][3]; (XS(ttH) * BR(H->bb)) * BR(W->hadrons) * (1 - BR(W->hadrons)) * 2 = 0.2953 * 0.6741 * (1 - 0.6741) * 2
-/ttHTobb_ttTo2L2Nu_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                0 signal                    ttHTobb_ttTo2L2Nu_M125                                 0.03136   # NLO [1][2][3]; (XS(ttH) * BR(H->bb)) * (1 - BR(W->hadrons))^2 = 0.2953 * (1 - 0.6741)^2
+/ttHTobb_ttTo2L2Nu_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                0 signal                    ttHTobb_ttTo2L2Nu_M125                                 0.03137   # NLO [1][2][3]; (XS(ttH) * BR(H->bb)) * (1 - BR(W->hadrons))^2 = 0.2953 * (1 - 0.6741)^2
 
 # THq
 /THQ_ctcvcp_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                         1 tHq                       THQ_ctcvcp                                             0.07096   # NLO [4]
