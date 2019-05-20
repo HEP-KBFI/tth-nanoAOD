@@ -7,6 +7,9 @@ import os
 import re
 import subprocess
 import jinja2
+import multiprocessing
+import signal
+import psutil
 
 xsecAnalyzer_template = """
 inputFiles = [{% for file_name in file_names %}
@@ -50,6 +53,17 @@ process.p = cms.Path(process.genxsec)
 process.schedule = cms.Schedule(process.p)
 """
 
+parent_id = os.getpid()
+def handle_worker():
+  def sig_int(signal_num, frame):
+    parent = psutil.Process(parent_id)
+    for child in parent.children():
+      if child.pid != os.getpid():
+        child.kill()
+    parent.kill()
+    psutil.Process(os.getpid()).kill()
+  signal.signal(signal.SIGINT, sig_int)
+
 def run_cmd(command):
   """Runs given commands and logs stdout and stderr to files
   """
@@ -86,6 +100,8 @@ parser.add_argument('-g', '--global-tag', dest = 'global_tag', metavar = 'tag', 
                     help = 'R|Global tag')
 parser.add_argument('-F', '--force', dest = 'force', action = 'store_true', default = False,
                     help = "R|Force the creation of output directory if it doesn't exist")
+parser.add_argument('-t', '--threads', dest = 'threads', metavar = 'int', required = False, type = int, default = 8,
+                    help = 'R|Size of the thread pool')
 parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                     help = 'R|Enable verbose printout')
 args = parser.parse_args()
@@ -98,6 +114,8 @@ logging.basicConfig(
 
 if not os.path.isfile(args.input):
   raise ValueError('No such file: %s' % args.input)
+
+assert(0 < args.threads < 17)
 
 sample_name_regex = re.compile(args.filter)
 
@@ -172,9 +190,23 @@ for sample_name, sample_entry in samples.items():
   sample_entry['logfile'] = cmsrun_logfile
   logging.info('Wrote file {}'.format(cmsrun_script))
 
+xs_pool = multiprocessing.Pool(args.threads, handle_worker)
+
 for sample_name, sample_entry in samples.items():
   logging.info('Running cmsRun for {}'.format(sample_name))
-  run_cmd(sample_entry['cmd'])
+  try:
+    xs_pool.apply_async(
+      run_cmd,
+      args = (sample_entry['cmd'],)
+    )
+  except KeyboardInterrupt:
+    xs_pool.terminate()
+    sys.exit(1)
+
+xs_pool.close()
+xs_pool.join()
+
+for sample_name, sample_entry in samples.items():
   cmsrun_logfile = sample_entry['logfile']
   if not os.path.isfile(cmsrun_logfile):
     raise RuntimeError('Could not find %s' % cmsrun_logfile)
