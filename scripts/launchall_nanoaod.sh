@@ -330,6 +330,8 @@ generate_cfgs() {
       fi
     elif [[ "$INPUT_FILE" =~ ^/store/ ]]; then
       INPUT_FILE="'root://cms-xrd-global.cern.ch/$INPUT_FILE'";
+    elif [ -f "$INPUT_FILE" ]; then
+      INPUT_FILE="'file://$INPUT_FILE'";
     else
       echo "Invalid file name: $INPUT_FILE";
       exit 1;
