@@ -80,6 +80,7 @@ DRYRUN=""
 export DATASET_FILE=""
 export JOB_TYPE=""
 export PUBLISH=1
+export CFG_LABEL_STR=""
 
 TYPE_DATA="data"
 TYPE_MC="mc"
@@ -88,15 +89,15 @@ TYPE_SYNC="sync"
 
 show_help() {
   THIS_SCRIPT=$0;
-  echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist] " 1>&2;
+  echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist = ''] " 1>&2;
   echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
-  echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ]" 1>&2;
+  echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
 }
 
-while getopts "h?dgf:j:e:v:w:n:N:r:t:p:" opt; do
+while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -123,6 +124,8 @@ while getopts "h?dgf:j:e:v:w:n:N:r:t:p:" opt; do
   t) export NTHREADS=${OPTARG}
      ;;
   p) export PUBLISH=${OPTARG}
+     ;;
+  s) export CFG_LABEL_STR=${OPTARG}
      ;;
   esac
 done
@@ -386,10 +389,15 @@ print('era: $ERA_ARGS')\\n"
 }
 
 get_cfg_name() {
-  if [ -n "$1" ]; then
-    echo "$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_chunk_${NOF_EVENTS}_part_${1}_cfg.py";
+  if [ -z "$CFG_LABEL_STR" ]; then
+    CFG_PREFIX="${JOB_TYPE_NAME}";
   else
-    echo "$BASE_DIR/test/cfgs/nano_${JOB_TYPE_NAME}_${DATASET_ERA}_cfg.py";
+    CFG_PREFIX="${CFG_LABEL_STR}_${JOB_TYPE_NAME}";
+  fi
+  if [ -n "$1" ]; then
+    echo "$BASE_DIR/test/cfgs/nano_${CFG_PREFIX}_${DATASET_ERA}_chunk_${NOF_EVENTS}_part_${1}_cfg.py";
+  else
+    echo "$BASE_DIR/test/cfgs/nano_${CFG_PREFIX}_${DATASET_ERA}_cfg.py";
   fi
 }
 
