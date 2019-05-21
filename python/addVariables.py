@@ -1,6 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
+from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addDeepTau2017v2
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
 
@@ -346,6 +347,7 @@ def addVariables(process, is_mc, year):
   # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
+  addDeepTau2017v2(process)
   recomputeQGL(process)
   addLepMVA(process)
   addEScaleSmearing2018(process)
