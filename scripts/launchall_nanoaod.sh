@@ -265,6 +265,18 @@ declare -A DATASET_ARR
 while read LINE; do
   DATASET_CANDIDATE=$(echo $LINE | awk '{print $1}');
 
+  DATASET_SPLIT=$(echo "$DATASET_CANDIDATE" | tr '/' ' ');
+  DATASET_SECOND_PART=$(echo "$DATASET_SPLIT" | awk '{print $2}');
+  DATASET_THIRD_PART=$(echo "$DATASET_SPLIT" | awk '{print $3}');
+
+  if ( [[ "$JOB_TYPE" == "$TYPE_MC" ]] || [[ "$JOB_TYPE" == "$TYPE_SYNC" ]] ) && [[ "$DATASET_THIRD_PART" != "USER" ]]; then
+    DATASET_CAMPAIGN=$(echo "$DATASET_SECOND_PART" | tr '-' ' ' | awk '{print $1}');
+    if [ "$DATASET_CAMPAIGN" != "$DATASET_ERA" ]; then
+      echo "Invalid era detected in $DATASET_CANDIDATE: $DATASET_CAMPAIGN (expected ${DATASET_ERA})";
+      exit 1;
+    fi
+  fi
+
   is_valid_dataset ${DATASET_CANDIDATE};
   if [[ $? != "1" ]]; then
     continue;
