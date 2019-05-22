@@ -268,6 +268,11 @@ declare -A DATASET_ARR
 while read LINE; do
   DATASET_CANDIDATE=$(echo $LINE | awk '{print $1}');
 
+  is_valid_dataset ${DATASET_CANDIDATE};
+  if [[ $? != "1" ]]; then
+    continue;
+  fi
+
   DATASET_SPLIT=$(echo "$DATASET_CANDIDATE" | tr '/' ' ');
   DATASET_SECOND_PART=$(echo "$DATASET_SPLIT" | awk '{print $2}');
   DATASET_THIRD_PART=$(echo "$DATASET_SPLIT" | awk '{print $3}');
@@ -278,11 +283,6 @@ while read LINE; do
       echo "Invalid era detected in $DATASET_CANDIDATE: $DATASET_CAMPAIGN (expected ${DATASET_ERA})";
       exit 1;
     fi
-  fi
-
-  is_valid_dataset ${DATASET_CANDIDATE};
-  if [[ $? != "1" ]]; then
-    continue;
   fi
 
   if [ ${FILEBLOCK_ARR[$DATASET_CANDIDATE]} ]; then
