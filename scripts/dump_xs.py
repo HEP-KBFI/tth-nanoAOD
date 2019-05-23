@@ -73,6 +73,38 @@ def run_cmd(command):
   stderr = stderr.rstrip('\n')
   return stdout, stderr
 
+def print_xs(cmsrun_logfile):
+  if not os.path.isfile(cmsrun_logfile):
+    raise RuntimeError('Could not find %s' % cmsrun_logfile)
+  xs_actual = -1.
+  xs_err_actual = -1.
+  xs_units = ''
+  with open(cmsrun_logfile, 'r') as f:
+    for line in f:
+      if line.startswith('After filter: final cross section'):
+        line_stripped = line.rstrip('\n')
+        line_split = line_stripped.split()
+        if len(line_split) != 10:
+          logging.error('Unexpected line: %s' % line_stripped)
+          continue
+        try:
+          xs_actual = float(line_split[6])
+          xs_err_actual = float(line_split[8])
+          xs_units = line_split[9]
+        except:
+          logging.error('Unable to parse line: %s' % line_stripped)
+  if xs_actual > 0. and xs_err_actual > 0.:
+    expected_xs = sample_entry['expected_xs']
+    logging.warning(
+      'Expected xs of {:.6f} pb in sample {}, and measured {:.6f} +/- {:.6f} {}'.format(
+        expected_xs, sample_name, xs_actual, xs_err_actual, xs_units
+      )
+    )
+    return True
+  else:
+    logging.error('Unable to parse file %s for cross sections' % cmsrun_logfile)
+    return False
+
 class SmartFormatter(argparse.HelpFormatter):
   def _split_lines(self, text, width):
     if text.startswith('R|'):
@@ -141,9 +173,7 @@ with open(args.input, 'r') as f:
       }
 
 if not os.path.isdir(args.output):
-  logging.info('Directory {} does not exist'.format(args.output))
-  if not args.force:
-    raise ValueError('Use -F/--force to create the output directory %s' % args.output)
+  logging.info('Directory {} does not exist -> creating it'.format(args.output))
   os.makedirs(args.output)
 
 timeleft_cmd = 'voms-proxy-info --timeleft'
@@ -196,6 +226,8 @@ if not args.skip_jobs:
   xs_pool = multiprocessing.Pool(args.threads, handle_worker)
 
   for sample_name, sample_entry in samples.items():
+    if print_xs(sample_entry['logfile']) and not args.force:
+      continue
     logging.info('Running cmsRun for {}'.format(sample_name))
     try:
       xs_pool.apply_async(
@@ -210,32 +242,4 @@ if not args.skip_jobs:
   xs_pool.join()
 
 for sample_name, sample_entry in samples.items():
-  cmsrun_logfile = sample_entry['logfile']
-  if not os.path.isfile(cmsrun_logfile):
-    raise RuntimeError('Could not find %s' % cmsrun_logfile)
-  xs_actual = -1.
-  xs_err_actual = -1.
-  xs_units = ''
-  with open(cmsrun_logfile, 'r') as f:
-    for line in f:
-      if line.startswith('After filter: final cross section'):
-        line_stripped = line.rstrip('\n')
-        line_split = line_stripped.split()
-        if len(line_split) != 10:
-          logging.error('Unexpected line: %s' % line_stripped)
-          continue
-        try:
-          xs_actual = float(line_split[6])
-          xs_err_actual = float(line_split[8])
-          xs_units = line_split[9]
-        except:
-          logging.error('Unable to parse line: %s' % line_stripped)
-  if xs_actual > 0. and xs_err_actual > 0.:
-    expected_xs = sample_entry['expected_xs']
-    logging.warning(
-      'Expected xs of {:.6f} pb in sample {}, and measured {:.6f} +/- {:.6f} {}'.format(
-        expected_xs, sample_name, xs_actual, xs_err_actual, xs_units
-      )
-    )
-  else:
-    logging.error('Unable to parse file %s for cross sections' % cmsrun_logfile)
+  print_xs(sample_entry['logfile'])
