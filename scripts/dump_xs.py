@@ -102,6 +102,8 @@ parser.add_argument('-F', '--force', dest = 'force', action = 'store_true', defa
                     help = "R|Force the creation of output directory if it doesn't exist")
 parser.add_argument('-t', '--threads', dest = 'threads', metavar = 'int', required = False, type = int, default = 8,
                     help = 'R|Size of the thread pool')
+parser.add_argument('-s', '--skip-jobs', dest = 'skip_jobs', action = 'store_true', default = False,
+                    help = 'R|Do not run xsecAnalyzer')
 parser.add_argument('-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
                     help = 'R|Enable verbose printout')
 args = parser.parse_args()
@@ -190,21 +192,22 @@ for sample_name, sample_entry in samples.items():
   sample_entry['logfile'] = cmsrun_logfile
   logging.info('Wrote file {}'.format(cmsrun_script))
 
-xs_pool = multiprocessing.Pool(args.threads, handle_worker)
+if not args.skip_jobs:
+  xs_pool = multiprocessing.Pool(args.threads, handle_worker)
 
-for sample_name, sample_entry in samples.items():
-  logging.info('Running cmsRun for {}'.format(sample_name))
-  try:
-    xs_pool.apply_async(
-      run_cmd,
-      args = (sample_entry['cmd'],)
-    )
-  except KeyboardInterrupt:
-    xs_pool.terminate()
-    sys.exit(1)
+  for sample_name, sample_entry in samples.items():
+    logging.info('Running cmsRun for {}'.format(sample_name))
+    try:
+      xs_pool.apply_async(
+        run_cmd,
+        args = (sample_entry['cmd'],)
+      )
+    except KeyboardInterrupt:
+      xs_pool.terminate()
+      sys.exit(1)
 
-xs_pool.close()
-xs_pool.join()
+  xs_pool.close()
+  xs_pool.join()
 
 for sample_name, sample_entry in samples.items():
   cmsrun_logfile = sample_entry['logfile']
