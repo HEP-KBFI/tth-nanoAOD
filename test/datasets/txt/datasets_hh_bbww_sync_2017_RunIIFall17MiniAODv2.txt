@@ -2,7 +2,7 @@
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww_sync.json
 
 # HH -> bbWW, WW -> 2l 2v (GGF)
-/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal signal_ggf_spin0_750_hh_2b2v 0.026422 /afs/cern.ch/work/k/kaehatah/store/mc/RunIIFall17MiniAODv2/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph_correctedcfg/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/F86CC95D-A1B0-E811-B516-0242AC130002.root  #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
+/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal signal_ggf_spin0_750_hh_2b2v 0.026422 /local/karl/store/mc/RunIIFall17MiniAODv2/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph_correctedcfg/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/F86CC95D-A1B0-E811-B516-0242AC130002.root  #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR

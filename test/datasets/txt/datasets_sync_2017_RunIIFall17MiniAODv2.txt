@@ -2,7 +2,7 @@
 # generate_dataset_table.py -i test/datasets/json/datasets_sync.json
 
 # ttH
-/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal ttHJetToNonbb_M125_amcatnlo 0.2118 /afs/cern.ch/work/k/kaehatah/store/mc/RunIIFall17MiniAODv2/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/MINIAODSIM/PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/100000/7C60AC2B-E76F-E811-9D60-0025905B860C.root  # NLO [1][2]
+/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM 1 signal ttHJetToNonbb_M125_amcatnlo 0.2118 /local/karl/store/mc/RunIIFall17MiniAODv2/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/MINIAODSIM/PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/100000/7C60AC2B-E76F-E811-9D60-0025905B860C.root  # NLO [1][2]
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
