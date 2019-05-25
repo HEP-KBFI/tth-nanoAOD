@@ -135,11 +135,42 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
           src = cms.InputTag(fatJetCollectionAK8LS_str)
         )
     )
+    
+    #----------------------------------------------------------------------------
+    # compute edm::ValueMaps with Qjets volatility (arXiv:1001.5027),
+    # following instructions posted by Andrea Marini on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1790/1.html)
+    if not hasattr(process, "RandomNumberGeneratorService"):
+        process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService")
+    QJetsAdderAK8LS_str = 'QJetsAdderAK8LS%s' % suffix
+    setattr(process.RandomNumberGeneratorService, QJetsAdderAK8LS_str, cms.PSet(initialSeed = cms.untracked.uint32(7)))
+    from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
+    setattr(process, QJetsAdderAK8LS_str,
+        QJetsAdder.clone(
+            src = cms.InputTag(fatJetCollectionAK8LS_str),
+            jetRad = cms.double(0.8),
+            jetAlgo = cms.string("AK")
+        )
+    )
+    subStructureAK8_str = "jetsAK8LSsubStructureVars%s" % suffix
+    setattr(process, subStructureAK8_str,
+        cms.EDProducer("JetSubstructureObservableProducer",
+            src = cms.InputTag(fatJetCollectionAK8LS_str),
+            kappa = cms.double(1.),
+        )
+    )
+    #----------------------------------------------------------------------------
 
     jetsAK8LSWithUserData_str = 'jetsAK8LSWithUserData%s' % suffix
     setattr(process, jetsAK8LSWithUserData_str,
         process.updatedJetsAK8WithUserData.clone(
             src = cms.InputTag(fatJetCollectionAK8LS_str),
+            userFloats = cms.PSet(
+                jetCharge = cms.InputTag("%s:jetCharge" % subStructureAK8_str),
+                pull_dEta = cms.InputTag("%s:pullDEta" % subStructureAK8_str),
+                pull_dPhi = cms.InputTag("%s:pullDPhi" % subStructureAK8_str),
+                pull_dR   = cms.InputTag("%s:pullDR" % subStructureAK8_str),
+                QjetVolatility = cms.InputTag('%s:QjetsVolatility' % QJetsAdderAK8LS_str),
+            ),
             userInts = cms.PSet(
                 tightId = cms.InputTag(tightJetIdAK8LS_str),
                 tightIdLepVeto = cms.InputTag(tightJetIdLepVetoAK8LS_str),
@@ -155,66 +186,24 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
-    # compute edm::ValueMaps with Qjets volatility (arXiv:1001.5027),
-    # following instructions posted by Andrea Marini on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1790/1.html)
-    if not hasattr(process, "RandomNumberGeneratorService"):
-        process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService")
-    QJetsAdderAK8LS_str = 'QJetsAdderAK8LS%s' % suffix
-    setattr(process.RandomNumberGeneratorService, QJetsAdderAK8LS_str, cms.PSet(initialSeed = cms.untracked.uint32(7)))
-    from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
-    setattr(process, QJetsAdderAK8LS_str,
-        QJetsAdder.clone(
-            src = cms.InputTag(jetsAK8LSWithUserData_str),
-            jetRad = cms.double(0.8),
-            jetAlgo = cms.string("AK")
-        )
-    )
-    #----------------------------------------------------------------------------
-
-    #----------------------------------------------------------------------------
-    # add jet charge, pull, and Qjets volatility to AK8 pat::Jet collection
-    extendedFatJetsAK8LS_str = 'extendedFatJetsAK8LS%s' % suffix
-    setattr(process, extendedFatJetsAK8LS_str,
-        cms.EDProducer("JetExtendedProducer",
-            src = cms.InputTag(jetsAK8LSWithUserData_str),
-            plugins = cms.VPSet(
-                cms.PSet(
-                    pluginType = cms.string("JetChargePlugin"),
-                    label = cms.string("jetCharge"),
-                    overwrite = cms.bool(False),
-                    kappa = cms.double(1.)
-                ),
-                cms.PSet(
-                    pluginType = cms.string("JetPullPlugin"),
-                    label = cms.string("pull"),
-                    overwrite = cms.bool(False)
-                ),
-                cms.PSet(
-                    pluginType = cms.string("JetValueMapPlugin"),
-                    label = cms.string("QjetVolatility"),
-                    overwrite = cms.bool(False),
-                    src = cms.InputTag('%s:QjetsVolatility' % QJetsAdderAK8LS_str)
-                )
-            )
-        )
-    )
-    extendedSubJetsAK8LS_str = 'extendedSubJetsAK8LS%s' % suffix
-    setattr(process, extendedSubJetsAK8LS_str,
-        cms.EDProducer("JetExtendedProducer",
+    subStructureSubJetAK8_str = "subJetsAK8LSsubStructureVars%s" % suffix
+    setattr(process, subStructureSubJetAK8_str,
+        cms.EDProducer("JetSubstructureObservableProducer",
             src = cms.InputTag(subJetCollectionAK8LS_str),
-            plugins = cms.VPSet(
-                cms.PSet(
-                    pluginType = cms.string("JetChargePlugin"),
-                    label = cms.string("jetCharge"),
-                    overwrite = cms.bool(False),
-                    kappa = cms.double(1.)
-                ),
-                cms.PSet(
-                    pluginType = cms.string("JetPullPlugin"),
-                    label = cms.string("pull"),
-                    overwrite = cms.bool(False)
-                )
-            )
+            kappa = cms.double(1.),
+        )
+    )
+    subJetsAK8LSWithUserData_str = 'subJetsAK8LSWithUserData%s' % suffix
+    setattr(process, subJetsAK8LSWithUserData_str,
+        cms.EDProducer("PATJetUserDataEmbedder",
+            src = cms.InputTag(subJetCollectionAK8LS_str),
+            userFloats = cms.PSet(
+                jetCharge = cms.InputTag("%s:jetCharge" % subStructureSubJetAK8_str),
+                pull_dEta = cms.InputTag("%s:pullDEta" % subStructureSubJetAK8_str),
+                pull_dPhi = cms.InputTag("%s:pullDPhi" % subStructureSubJetAK8_str),
+                pull_dR   = cms.InputTag("%s:pullDR" % subStructureSubJetAK8_str),
+            ),
+            userInts = cms.PSet(),
         )
     )
     #----------------------------------------------------------------------------
@@ -222,7 +211,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
     fatJetAK8LSTable_str = 'fatJetAK8LS%sTable' % suffix # NB! must end with 'Table'
     setattr(process, fatJetAK8LSTable_str,
         process.fatJetTable.clone(
-            src = cms.InputTag(extendedFatJetsAK8LS_str),
+            src = cms.InputTag(jetsAK8LSWithUserData_str),
             cut = cms.string("pt > 80 && abs(eta) < 2.4"),
             name = cms.string("FatJetAK8LS%s" % suffix),
             doc = cms.string("lepton-subtracted ak8 fat jets for boosted analysis"),
@@ -260,7 +249,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
     subJetAK8LSTable_str = 'subJetAK8LS%sTable' % suffix # NB! must end with 'Table'
     setattr(process, subJetAK8LSTable_str,
         process.subJetTable.clone(
-            src = cms.InputTag(extendedSubJetsAK8LS_str),
+            src = cms.InputTag(subJetsAK8LSWithUserData_str),
             cut = cms.string(""),
             name = cms.string("SubJetAK8LS%s" % suffix),
             doc = cms.string("lepton-subtracted ak8  sub-jets for boosted analysis"),
@@ -282,10 +271,10 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
         getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
         getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLesspuppi_str) + \
         getattr(process, jetSequenceAK8LS_str) + getattr(process, tightJetIdAK8LS_str) + \
-        getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, jetsAK8LSWithUserData_str) + \
-        getattr(process, QJetsAdderAK8LS_str) + getattr(process, extendedFatJetsAK8LS_str) + \
-        getattr(process, extendedSubJetsAK8LS_str) + getattr(process, fatJetAK8LSTable_str) + \
-        getattr(process, subJetAK8LSTable_str)
+        getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
+        getattr(process, QJetsAdderAK8LS_str) + getattr(process, jetsAK8LSWithUserData_str) + \
+        getattr(process, subStructureSubJetAK8_str) + getattr(process, subJetsAK8LSWithUserData_str) + \
+        getattr(process, fatJetAK8LSTable_str) + getattr(process, subJetAK8LSTable_str)
     )
 
     #----------------------------------------------------------------------------
