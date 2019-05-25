@@ -359,7 +359,7 @@ generate_cfgs() {
 process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
 from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, $PY_IS_MC,'$YEAR')\\n\
-from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False)\\n\
+from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False, timing = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
 print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n\
