@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from tthAnalysis.NanoAOD.boosted_cff import HTTV2Sequence, HTTV2Tables
+from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
 from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addDeepTau2017v2
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
@@ -164,14 +164,14 @@ def recomputeQGL(process):
 def addVariables(process, is_mc, year):
   process.load('tthAnalysis.NanoAOD.boosted_cff')
 
-  process.HTTV2Sequence = HTTV2Sequence
-  process.HTTV2Tables = HTTV2Tables
-  process.nanoSequence += process.HTTV2Sequence
-  process.nanoSequence += process.HTTV2Tables
-  process.nanoSequenceMC += process.HTTV2Sequence
-  process.nanoSequenceMC += process.HTTV2Tables
-  process.nanoSequenceFS += process.HTTV2Sequence
-  process.nanoSequenceFS += process.HTTV2Tables
+  process.boostedSequence = boostedSequence
+  process.boostedTables = boostedTables
+  process.nanoSequence += process.boostedSequence
+  process.nanoSequence += process.boostedTables
+  process.nanoSequenceMC += process.boostedSequence
+  process.nanoSequenceMC += process.boostedTables
+  process.nanoSequenceFS += process.boostedSequence
+  process.nanoSequenceFS += process.boostedTables
 
   if not hasattr(process.electronTable.variables, "eCorr"):
     # No electron scale or smearing available for 2018 era, yet:
