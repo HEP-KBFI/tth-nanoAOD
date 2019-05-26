@@ -3,9 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from PhysicsTools.NanoAOD.common_cff import Var
 from PhysicsTools.NanoAOD.taus_cff import _tauIdWPMask
 
-from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
-from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv1_cff import run2_nanoAOD_94XMiniAODv1
 from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoAOD_94XMiniAODv2
 from Configuration.Eras.Modifier_run2_nanoAOD_102Xv1_cff import run2_nanoAOD_102Xv1
 
@@ -107,7 +105,7 @@ def addDeepTau2017v2(process):
   process.deepTau2017v2 = cms.EDProducer("DeepTauId",
     electrons              = cms.InputTag('slimmedElectrons'),
     muons                  = cms.InputTag('slimmedMuons'),
-    taus                   = cms.InputTag('slimmedTaus'),
+    taus                   = cms.InputTag('slimmedTausFiltered'),
     pfcands                = cms.InputTag('packedPFCandidates'),
     vertices               = cms.InputTag('offlineSlimmedPrimaryVertices'),
     rho                    = cms.InputTag('fixedGridRhoAll'),
@@ -150,44 +148,21 @@ def addDeepTau2017v2(process):
     ])
   addToTauTable(process, deepTau2017v2Vars)
 
-  process.finalTaus.cut = cms.string(
-    "pt > 18 && tauID('decayModeFindingNewDMs') && ("
-      "tauID('byLooseCombinedIsolationDeltaBetaCorr3Hits') || "
-      "tauID('byVLooseIsolationMVArun2v1DBoldDMwLT2015') || "
-      "tauID('byVLooseIsolationMVArun2v1DBnewDMwLT') || "
-      "tauID('byVLooseIsolationMVArun2v1DBdR03oldDMwLT') || "
-      "tauID('byVVLooseIsolationMVArun2v1DBoldDMwLT') || "
-      "tauID('byVVLooseIsolationMVArun2v1DBoldDMwLT2017v2') || "
-      "tauID('byVVLooseIsolationMVArun2v1DBnewDMwLT2017v2') || "
-      "tauID('byVVLooseIsolationMVArun2v1DBdR03oldDMwLT2017v2') ||"
-      "tauID('byVVVLooseDeepTau2017v2VSe') ||"
-      "tauID('byVLooseDeepTau2017v2VSmu') ||"
-      "tauID('byVVVLooseDeepTau2017v2VSjet')"
-    ")"
-  )
-  run2_nanoAOD_94XMiniAODv1.toModify(
-    process.finalTaus,
-    cut = cms.string(
-      "pt > 18 && tauID('decayModeFindingNewDMs') && ("
-        "tauID('byLooseCombinedIsolationDeltaBetaCorr3Hits') || "
-        "tauID('byVLooseIsolationMVArun2v1DBoldDMwLT') || "
-        "tauID('byVLooseIsolationMVArun2v1DBnewDMwLT') || "
-        "tauID('byVLooseIsolationMVArun2v1DBdR03oldDMwLT') || "
-        "tauID('byVVLooseIsolationMVArun2v1DBoldDMwLT2017v1') || "
-        "tauID('byVVLooseIsolationMVArun2v1DBoldDMwLT2017v2') || "
-        "tauID('byVVLooseIsolationMVArun2v1DBnewDMwLT2017v2') || "
-        "tauID('byVVLooseIsolationMVArun2v1DBdR03oldDMwLT2017v2')"
-      ")"
+  for modifier in run2_nanoAOD_94X2016, run2_nanoAOD_94XMiniAODv2, run2_nanoAOD_102Xv1:
+    modifier.toModify(process.finalTaus,
+      cut = cms.string(
+        "pt > 18 && tauID('decayModeFindingNewDMs') && ("
+          "tauID('byLooseCombinedIsolationDeltaBetaCorr3Hits') || "
+          "tauID('byVLooseIsolationMVArun2v1DBoldDMwLT2015') || "
+          "tauID('byVLooseIsolationMVArun2v1DBnewDMwLT') || "
+          "tauID('byVLooseIsolationMVArun2v1DBdR03oldDMwLT') || "
+          "tauID('byVVLooseIsolationMVArun2v1DBoldDMwLT') || "
+          "tauID('byVVLooseIsolationMVArun2v1DBoldDMwLT2017v2') || "
+          "tauID('byVVLooseIsolationMVArun2v1DBnewDMwLT2017v2') || "
+          "tauID('byVVLooseIsolationMVArun2v1DBdR03oldDMwLT2017v2') ||"
+          "tauID('byVVVLooseDeepTau2017v2VSe') ||"
+          "tauID('byVLooseDeepTau2017v2VSmu') ||"
+          "tauID('byVVVLooseDeepTau2017v2VSjet')"
+        ")"
+      )
     )
-  )
-  run2_miniAOD_80XLegacy.toModify(
-    process.finalTaus,
-    cuts = cms.string(
-      "pt > 18 && tauID('decayModeFindingNewDMs') && ("
-        "tauID('byLooseCombinedIsolationDeltaBetaCorr3Hits') || "
-        "tauID('byVLooseIsolationMVArun2v1DBoldDMwLT') || "
-        "tauID('byVLooseIsolationMVArun2v1DBnewDMwLT') || "
-        "tauID('byVLooseIsolationMVArun2v1DBdR03oldDMwLT')"
-      ")"
-    )
-  )
