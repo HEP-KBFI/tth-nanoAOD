@@ -1,5 +1,7 @@
 import FWCore.ParameterSet.Config as cms
+
 from  PhysicsTools.NanoAOD.common_cff import *
+
 from RecoJets.JetProducers.AnomalousCellParameters_cfi import *
 from RecoJets.JetProducers.PFJetParameters_cfi import *
 from RecoBTag.SecondaryVertex.pfCombinedInclusiveSecondaryVertexV2BJetTags_cfi import *
@@ -8,6 +10,7 @@ from RecoBTag.SecondaryVertex.pfInclusiveSecondaryVertexFinderTagInfos_cfi impor
 from RecoBTag.SecondaryVertex.candidateCombinedSecondaryVertexV2Computer_cfi import *
 from RecoBTag.SecondaryVertex.pfBoostedDoubleSVAK8TagInfos_cfi import *
 from RecoBTag.Configuration.RecoBTag_cff import *
+
 from Configuration.StandardSequences.MagneticField_AutoFromDBCurrent_cff import *
 from Configuration.Geometry.GeometryRecoDB_cff import *
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
@@ -35,7 +38,7 @@ selectedMuons = cms.EDFilter("CandPtrSelector",
     cut = cms.string("1"))
 selectedElectronsTmp = cms.EDProducer("ElectronRemovalForBoostProducer", 
     src = cms.InputTag("slimmedElectrons"),
-    mvaIDMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-tight"),
+    mvaIDMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-tight"),
     rho = cms.InputTag("fixedGridRhoFastjetAll"))
 run2_miniAOD_80XLegacy.toModify(
     selectedElectronsTmp,
@@ -56,38 +59,38 @@ chs = cms.EDProducer("CandPtrProjector",
 
 #Calculate HTT tagger
 looseOptRHTT = cms.EDProducer(
-            "HTTTopJetProducer",
-            PFJetParameters.clone(
-                src               = cms.InputTag("chs"),
-                doAreaFastjet     = cms.bool(True),
-                doRhoFastjet      = cms.bool(False),
-                jetPtMin          = cms.double(200.0)
-                ),
-            AnomalousCellParameters,
-            useExplicitGhosts = cms.bool(True),
-            algorithm           = cms.int32(1),
-            jetAlgorithm        = cms.string("CambridgeAachen"),
-            rParam              = cms.double(1.5),
-            optimalR            = cms.bool(True),
-            qJets               = cms.bool(False),
-            minFatjetPt         = cms.double(200.),
-            minSubjetPt         = cms.double(0.),
-            minCandPt           = cms.double(0.),
-            maxFatjetAbsEta     = cms.double(99.),
-            subjetMass          = cms.double(30.),
-            muCut               = cms.double(0.8),
-            filtR               = cms.double(0.3),
-            filtN               = cms.int32(5),
-            mode                = cms.int32(4),
-            minCandMass         = cms.double(0.),
-            maxCandMass         = cms.double(999999.),
-            massRatioWidth      = cms.double(999999.),
-            minM23Cut           = cms.double(0.),
-            minM13Cut           = cms.double(0.),
-            maxM13Cut           = cms.double(999999.),
-            writeCompound       = cms.bool(True),
-            jetCollInstanceName = cms.string("SubJets")
-            )
+    "HTTTopJetProducer",
+    PFJetParameters.clone(
+        src               = cms.InputTag("chs"),
+        doAreaFastjet     = cms.bool(True),
+        doRhoFastjet      = cms.bool(False),
+        jetPtMin          = cms.double(200.0)
+        ),
+    AnomalousCellParameters,
+    useExplicitGhosts = cms.bool(True),
+    algorithm           = cms.int32(1),
+    jetAlgorithm        = cms.string("CambridgeAachen"),
+    rParam              = cms.double(1.5),
+    optimalR            = cms.bool(True),
+    qJets               = cms.bool(False),
+    minFatjetPt         = cms.double(200.),
+    minSubjetPt         = cms.double(0.),
+    minCandPt           = cms.double(0.),
+    maxFatjetAbsEta     = cms.double(99.),
+    subjetMass          = cms.double(30.),
+    muCut               = cms.double(0.8),
+    filtR               = cms.double(0.3),
+    filtN               = cms.int32(5),
+    mode                = cms.int32(4),
+    minCandMass         = cms.double(0.),
+    maxCandMass         = cms.double(999999.),
+    massRatioWidth      = cms.double(999999.),
+    minM23Cut           = cms.double(0.),
+    minM13Cut           = cms.double(0.),
+    maxM13Cut           = cms.double(999999.),
+    writeCompound       = cms.bool(True),
+    jetCollInstanceName = cms.string("SubJets")
+)
 
 #Calculate subjet btags
 looseOptRHTTImpactParameterTagInfos = pfImpactParameterTagInfos.clone(
@@ -507,21 +510,31 @@ ca15SoftDropSubjetsTable = cms.EDProducer("SimpleCandidateFlatTableProducer",
     )
 )
 
-boostedSequence = cms.Sequence(
+commonBoostedSequence = cms.Sequence(
     #Prepare input objects
-    selectedMuonsTmp+selectedMuons+selectedElectronsTmp+selectedElectrons+chsTmp1+chsTmp2+chs+ca15PFJetsCHS+ \
-    #HTTV2 + subjet btags
-    looseOptRHTT+looseOptRHTTImpactParameterTagInfos+looseOptRHTTpfInclusiveSecondaryVertexFinderTagInfos+ \
-    looseOptRHTTpfCombinedInclusiveSecondaryVertexV2BJetTags+looseOptRHTTpatSubJets+looseOptRHTTSubjetsOrdered+ \
-    #CA15 double btag
-    ca15PFJetsCHSImpactParameterTagInfos+ca15PFJetsCHSpfInclusiveSecondaryVertexFinderTagInfos+ \
-    ca15PFJetsCHSpfBoostedDoubleSVTagInfos+ca15PFJetsCHSpfBoostedDoubleSecondaryVertexBJetTags+ \
-    ca15PFJetsCHSpatFatjet+ca15PFJetsCHSFatjetOrdered+ca15PFJetsCHSNSubjettiness+FatjetsWithUserData+finalFatjets+ \
-    #Softdrop CA15 jets + subjet btags
-    ca15PFSoftdropJetsCHS+ca15PFSoftdropJetsCHSImpactParameterTagInfos+ ca15PFSoftdropJetsCHSpfInclusiveSecondaryVertexFinderTagInfos+ \
-    ca15PFSoftdropJetsCHSpfCombinedInclusiveSecondaryVertexV2BJetTags+ \
-    ca15PFSoftdropJetsCHSpatSubJets+ca15PFSoftdropJetsCHSSubjetsOrdered
+    selectedMuonsTmp + selectedMuons + selectedElectronsTmp + selectedElectrons + chsTmp1 + chsTmp2 + chs + ca15PFJetsCHS
 )
-boostedTables = cms.Sequence(HTTV2Table+HTTV2InfoTable+HTTV2SubjetsTable+ \
-    ca15Table+FatjetBBTagTable+ca15SoftDropTable+ca15SoftDropSubjetsTable)
+
+HTTV2MainSequence = cms.Sequence(
+    #HTTV2 + subjet btags
+    looseOptRHTT + looseOptRHTTImpactParameterTagInfos + looseOptRHTTpfInclusiveSecondaryVertexFinderTagInfos +
+    looseOptRHTTpfCombinedInclusiveSecondaryVertexV2BJetTags + looseOptRHTTpatSubJets + looseOptRHTTSubjetsOrdered
+)
+HTTV2Sequence = cms.Sequence(commonBoostedSequence + HTTV2MainSequence)
+HTTV2Tables = cms.Sequence(HTTV2Table + HTTV2InfoTable + HTTV2SubjetsTable)
+
+ca15MainSequence = cms.Sequence(
+    #CA15 double btag
+    ca15PFJetsCHSImpactParameterTagInfos + ca15PFJetsCHSpfInclusiveSecondaryVertexFinderTagInfos +
+    ca15PFJetsCHSpfBoostedDoubleSVTagInfos + ca15PFJetsCHSpfBoostedDoubleSecondaryVertexBJetTags +
+    ca15PFJetsCHSpatFatjet + ca15PFJetsCHSFatjetOrdered + ca15PFJetsCHSNSubjettiness + FatjetsWithUserData + finalFatjets +
+    #Softdrop CA15 jets + subjet btags
+    ca15PFSoftdropJetsCHS + ca15PFSoftdropJetsCHSImpactParameterTagInfos + ca15PFSoftdropJetsCHSpfInclusiveSecondaryVertexFinderTagInfos +
+    ca15PFSoftdropJetsCHSpfCombinedInclusiveSecondaryVertexV2BJetTags + ca15PFSoftdropJetsCHSpatSubJets+ca15PFSoftdropJetsCHSSubjetsOrdered
+)
+ca15Sequence = cms.Sequence(commonBoostedSequence + ca15MainSequence)
+ca15Tables = cms.Sequence(ca15Table + FatjetBBTagTable + ca15SoftDropTable + ca15SoftDropSubjetsTable)
+
+boostedSequence = cms.Sequence(commonBoostedSequence + HTTV2MainSequence + ca15MainSequence)
+boostedTables = cms.Sequence(HTTV2Tables + ca15Tables)
 
