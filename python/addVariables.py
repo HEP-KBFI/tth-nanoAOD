@@ -343,6 +343,8 @@ def addVariables(process, is_mc, year):
       doc  = cms.string("slimmedMET, type-1 corrected PF MET"),
     )
 
+  process.jetTables.remove(process.bjetMVA)
+
   addJetSubstructureObservables(process) # adds nothing to VSIZE
   # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
