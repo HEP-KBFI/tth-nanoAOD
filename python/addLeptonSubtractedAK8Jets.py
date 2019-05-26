@@ -4,7 +4,7 @@ from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 
-def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
+def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = False):
 
     assert(era in [ "2016", "2017", "2018" ])
     suffix = "Fakeable" if useFakeable else "Loose"
@@ -137,20 +137,21 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
     )
     
     #----------------------------------------------------------------------------
-    # compute edm::ValueMaps with Qjets volatility (arXiv:1001.5027),
-    # following instructions posted by Andrea Marini on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1790/1.html)
-    if not hasattr(process, "RandomNumberGeneratorService"):
-        process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService")
-    QJetsAdderAK8LS_str = 'QJetsAdderAK8LS%s' % suffix
-    setattr(process.RandomNumberGeneratorService, QJetsAdderAK8LS_str, cms.PSet(initialSeed = cms.untracked.uint32(7)))
-    from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
-    setattr(process, QJetsAdderAK8LS_str,
-        QJetsAdder.clone(
-            src = cms.InputTag(fatJetCollectionAK8LS_str),
-            jetRad = cms.double(0.8),
-            jetAlgo = cms.string("AK")
+    if addQJets:
+        # compute edm::ValueMaps with Qjets volatility (arXiv:1001.5027),
+        # following instructions posted by Andrea Marini on JetMET Hypernews (https://hypernews.cern.ch/HyperNews/CMS/get/JetMET/1790/1.html)
+        if not hasattr(process, "RandomNumberGeneratorService"):
+            process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService")
+        QJetsAdderAK8LS_str = 'QJetsAdderAK8LS%s' % suffix
+        setattr(process.RandomNumberGeneratorService, QJetsAdderAK8LS_str, cms.PSet(initialSeed = cms.untracked.uint32(7)))
+        from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
+        setattr(process, QJetsAdderAK8LS_str,
+            QJetsAdder.clone(
+                src = cms.InputTag(fatJetCollectionAK8LS_str),
+                jetRad = cms.double(0.8),
+                jetAlgo = cms.string("AK")
+            )
         )
-    )
     subStructureAK8_str = "jetsAK8LSsubStructureVars%s" % suffix
     setattr(process, subStructureAK8_str,
         cms.EDProducer("JetSubstructureObservableProducer",
@@ -169,7 +170,6 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
                 pull_dEta = cms.InputTag("%s:pullDEta" % subStructureAK8_str),
                 pull_dPhi = cms.InputTag("%s:pullDPhi" % subStructureAK8_str),
                 pull_dR   = cms.InputTag("%s:pullDR" % subStructureAK8_str),
-                QjetVolatility = cms.InputTag('%s:QjetsVolatility' % QJetsAdderAK8LS_str),
             ),
             userInts = cms.PSet(
                 tightId = cms.InputTag(tightJetIdAK8LS_str),
@@ -177,6 +177,10 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
             )
         )
     )
+    if addQJets:
+        jetsAK8LSWithUserData = getattr(process, jetsAK8LSWithUserData_str)
+        jetsAK8LSWithUserData.userFloats.QjetVolatility = cms.InputTag('%s:QjetsVolatility' % QJetsAdderAK8LS_str)
+
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
         jetsAK8LSWithUserData = getattr(process, jetsAK8LSWithUserData_str)
         modifier.toModify(jetsAK8LSWithUserData.userInts,
@@ -221,7 +225,6 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
                 pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
                 pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
                 pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
-                QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10),
                 msoftdrop = Var("userFloat('ak8PFJetsPuppi%sSoftDropMass')" % NoLep_str,float, doc="Corrected soft drop mass with PUPPI",precision=10),
                 subJetIdx1 = Var("?subjets('SoftDrop').size()>0?subjets('SoftDrop').at(0).key():-1", int, doc="index of first subjet"),
                 subJetIdx2 = Var("?subjets('SoftDrop').size()>1?subjets('SoftDrop').at(1).key():-1", int, doc="index of second subjet"),
@@ -238,6 +241,13 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
             )
         )
     )
+    if addQJets:
+        fatJetAK8LSTable = getattr(process, fatJetAK8LSTable_str)
+        fatJetAK8LSTable.variables.QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10)
+        print("Adding Qjet volatility to %s" % jetsAK8LSWithUserData_str)
+    else:
+        print("NOT adding Qjet volatility to %s" % jetsAK8LSWithUserData_str)
+
     ### Era dependent customization
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
         fatJetAK8LSTable = getattr(process, fatJetAK8LSTable_str)
@@ -272,10 +282,15 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable):
         getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLesspuppi_str) + \
         getattr(process, jetSequenceAK8LS_str) + getattr(process, tightJetIdAK8LS_str) + \
         getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
-        getattr(process, QJetsAdderAK8LS_str) + getattr(process, jetsAK8LSWithUserData_str) + \
-        getattr(process, subStructureSubJetAK8_str) + getattr(process, subJetsAK8LSWithUserData_str) + \
-        getattr(process, fatJetAK8LSTable_str) + getattr(process, subJetAK8LSTable_str)
+        getattr(process, jetsAK8LSWithUserData_str) + getattr(process, subStructureSubJetAK8_str) + \
+        getattr(process, subJetsAK8LSWithUserData_str) + getattr(process, fatJetAK8LSTable_str) + \
+        getattr(process, subJetAK8LSTable_str)
     )
+    if addQJets:
+        leptonSubtractedJetSequence.replace(
+            getattr(process, jetsAK8LSWithUserData_str),
+            getattr(process, QJetsAdderAK8LS_str) + getattr(process, jetsAK8LSWithUserData_str)
+        )
 
     #----------------------------------------------------------------------------
 
