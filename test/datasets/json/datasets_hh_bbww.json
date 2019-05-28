@@ -2845,7 +2845,11 @@
               "dbs": "/VBFToRadionToHHTo2B2Tau_M-300_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFToRadionToHHTo2B2Tau_M-300_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
@@ -3377,7 +3381,11 @@
               "dbs": "/VBFToRadionToHHTo2B2Tau_M-1500_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFToRadionToHHTo2B2Tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
@@ -4541,7 +4549,11 @@
               "dbs": "/GluGluToRadionToHHTo2B2Tau_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-350_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
@@ -5073,7 +5085,11 @@
               "dbs": "/GluGluToRadionToHHTo2B2Tau_M-1250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
@@ -5661,7 +5677,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo2B2Tau_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2Tau_M-400_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
@@ -6140,6 +6160,38 @@
     ]
   },
   {
+    "category": "signal_ggf_spin2_1250_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_1250_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2Tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_ggf_spin2_1500_hh_bbtt",
     "comment": "",
     "samples": [
@@ -6188,6 +6240,70 @@
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2Tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_2000_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_2000_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2Tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_2500_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_2500_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2Tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
             }
           ]
         },
@@ -6521,7 +6637,11 @@
               "dbs": "/GluGluToHHTo2B2Tau_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_SM_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
@@ -6672,6 +6792,38 @@
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo2B2Tau_node_4_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_node_5_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_node_5_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_5_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
             }
           ]
         },
