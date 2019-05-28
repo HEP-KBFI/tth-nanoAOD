@@ -347,7 +347,7 @@ def addVariables(process, is_mc, year):
 
   process.slimmedTausFiltered = cms.EDFilter("PATTauSelector",
     src = cms.InputTag("slimmedTaus"),
-    cut = cms.string("pt > 18 && tauID('decayModeFinding')")
+    cut = cms.string("pt > 18 && tauID('decayModeFindingNewDMs') != 5 && tauID('decayModeFindingNewDMs') != 6"),
    )
   process.patTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw.PATTauProducer = cms.InputTag('slimmedTausFiltered')
   process.patTauDiscriminationByVVLooseIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
