@@ -1,4 +1,4 @@
-# file generated at 2019-05-22 15:22:41 with the following command:
+# file generated at 2019-05-28 09:57:10 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -146,7 +146,10 @@
 /ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                  1 EWK                       ZZTo2L2Q                                      3.22      # NLO [5]
 
 # qcd
+/QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 QCD                       QCD_Pt15to20_bcToE                       187000.0       # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
+/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 QCD                       QCD_Pt20to30_bcToE                       305500.0       # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 /QCD_Pt_30to80_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 QCD                       QCD_Pt30to80_bcToE                       361100.0       # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
+/QCD_Pt_80to170_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                   0 QCD                       QCD_Pt80to170_bcToE                       33830.0       # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 /QCD_Pt_250toInf_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                  0 QCD                       QCD_Pt250toInf_bcToE                        562.8       # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 /QCD_Pt-15to20_EMEnriched_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                          0 QCD                       QCD_Pt15to20_EMEnriched_ext1                  1.324e+06 # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
 /QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                               0 QCD                       QCD_Pt20to30_EMEnriched                       4.910e+06 # ?; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
