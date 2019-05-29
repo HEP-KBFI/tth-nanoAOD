@@ -1,6 +1,5 @@
 import FWCore.ParameterSet.Config as cms
 
-from tthAnalysis.NanoAOD.boosted_cff import boostedSequence, boostedTables
 from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addDeepTau2017v2
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
@@ -162,17 +161,6 @@ def recomputeQGL(process):
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
 def addVariables(process, is_mc, year):
-  process.load('tthAnalysis.NanoAOD.boosted_cff')
-
-  process.boostedSequence = boostedSequence
-  process.boostedTables = boostedTables
-  process.nanoSequence += process.boostedSequence
-  process.nanoSequence += process.boostedTables
-  process.nanoSequenceMC += process.boostedSequence
-  process.nanoSequenceMC += process.boostedTables
-  process.nanoSequenceFS += process.boostedSequence
-  process.nanoSequenceFS += process.boostedTables
-
   if not hasattr(process.electronTable.variables, "eCorr"):
     # No electron scale or smearing available for 2018 era, yet:
     # See: https://github.com/cms-sw/cmssw/blob/master/RecoEgamma/EgammaTools/python/calibratedEgammas_cff.py
@@ -344,64 +332,6 @@ def addVariables(process, is_mc, year):
     )
 
   process.jetTables.remove(process.bjetMVA)
-
-  process.slimmedTausFiltered = cms.EDFilter("PATTauSelector",
-    src = cms.InputTag("slimmedTaus"),
-    cut = cms.string("pt > 18 && tauID('decayModeFindingNewDMs') != 5 && tauID('decayModeFindingNewDMs') != 6"),
-   )
-  process.patTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVLooseIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-
-  process.patTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVLooseIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-
-  process.patTauDiscriminationByIsolationMVArun2v1DBoldDMdR0p3wLTraw.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVLooseIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByLooseIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByMediumIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByTightIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVTightIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMdR0p3wLT.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-
-  process.patTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVLooseIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT2017v1.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-
-  process.patTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT2015.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-
-  process.patTauDiscriminationByElectronRejectionMVA62018Raw.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVLooseElectronRejectionMVA62018.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByLooseElectronRejectionMVA62018.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByMediumElectronRejectionMVA62018.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByTightElectronRejectionMVA62018.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-  process.patTauDiscriminationByVTightElectronRejectionMVA62018.PATTauProducer = cms.InputTag('slimmedTausFiltered')
-
-  process.slimmedTausUpdated.src = cms.InputTag('slimmedTausFiltered')
-  process.patTauMVAIDsSeq.insert(0, process.slimmedTausFiltered)
 
   addJetSubstructureObservables(process) # adds nothing to VSIZE
   # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE

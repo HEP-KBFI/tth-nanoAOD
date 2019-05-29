@@ -110,7 +110,7 @@ def addDeepTau2017v2(process):
   process.deepTau2017v2 = cms.EDProducer("DeepTauId",
     electrons              = cms.InputTag('slimmedElectrons'),
     muons                  = cms.InputTag('slimmedMuons'),
-    taus                   = cms.InputTag('slimmedTausFiltered'),
+    taus                   = cms.InputTag('slimmedTaus'),
     pfcands                = cms.InputTag('packedPFCandidates'),
     vertices               = cms.InputTag('offlineSlimmedPrimaryVertices'),
     rho                    = cms.InputTag('fixedGridRhoAll'),
