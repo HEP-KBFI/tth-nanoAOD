@@ -101,7 +101,12 @@ def addDeepTau2017v2(process):
       "VVTight": 0.9733927,
     },
   }
-  file_name = 'tthAnalysis/NanoAOD/data/DeepTauId/deepTau_2017v2p6_e6.pb'
+  #file_name = 'tthAnalysis/NanoAOD/data/DeepTauId/deepTau_2017v2p6_e6.pb'
+  file_names = [
+    'core:tthAnalysis/NanoAOD/data/DeepTauId/deepTau_2017v2p6_e6_core.pb',
+    'inner:tthAnalysis/NanoAOD/data/DeepTauId/deepTau_2017v2p6_e6_inner.pb',
+    'outer:tthAnalysis/NanoAOD/data/DeepTauId/deepTau_2017v2p6_e6_outer.pb',
+  ]
   process.deepTau2017v2 = cms.EDProducer("DeepTauId",
     electrons              = cms.InputTag('slimmedElectrons'),
     muons                  = cms.InputTag('slimmedMuons'),
@@ -109,9 +114,9 @@ def addDeepTau2017v2(process):
     pfcands                = cms.InputTag('packedPFCandidates'),
     vertices               = cms.InputTag('offlineSlimmedPrimaryVertices'),
     rho                    = cms.InputTag('fixedGridRhoAll'),
-    graph_file             = cms.string(file_name),
+    graph_file             = cms.vstring(file_names),
     mem_mapped             = cms.bool(True),
-    version                = cms.uint32(getDeepTauVersion(file_name)[1]),
+    version                = cms.uint32(getDeepTauVersion(file_names[0])[1]),
     debug_level            = cms.int32(0),
   )
 
