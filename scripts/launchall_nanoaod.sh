@@ -70,7 +70,7 @@ is_valid_dataset() {
   return 1;
 }
 
-export NOF_EVENTS=50000
+export NOF_EVENTS=100000
 export NOF_CMSDRIVER_EVENTS="-1"
 export REPORT_FREQUENCY=1000
 export NTHREADS=1
