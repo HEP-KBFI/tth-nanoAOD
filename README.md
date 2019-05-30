@@ -16,6 +16,6 @@ git config core.sparseCheckout true
 echo -e 'PhysicsTools/NanoAOD/*\nDataFormats/MuonDetId/*\nRecoTauTag/RecoTau/*\n' > .git/info/sparse-checkout
 git remote add origin https://github.com/HEP-KBFI/cmssw.git
 git fetch origin
-git checkout deepTauV2
+git checkout master
 git pull
 ```
