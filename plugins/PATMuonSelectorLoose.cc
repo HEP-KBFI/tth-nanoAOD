@@ -36,7 +36,7 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
     : src_(cfg.getParameter<edm::InputTag>("src"))
     , era_(kEra_undefined)
     , debug_(cfg.getParameter<bool>("debug"))
-    , min_pt_(-1.e+3)
+    , min_pt_(5.)
     , max_absEta_(2.4)
     , max_dxy_(0.05)
     , max_dz_(0.1)
@@ -53,19 +53,6 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
     else if ( era_string == "2018" ) era_ = kEra_2018;
     else throw cms::Exception("PATMuonSelectorLoose")
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
-    switch ( era_ ) {
-      case kEra_2016: {
-        min_pt_ = 10.;
-        break;
-      }
-      case kEra_2018:
-      case kEra_2017: {
-        min_pt_ = 5.;
-        break;
-      }
-      default: assert(0);
-    }
-    assert(min_pt_ > 0.);
 
     produces<pat::MuonCollection>();
   }

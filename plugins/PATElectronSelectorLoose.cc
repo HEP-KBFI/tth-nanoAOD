@@ -36,7 +36,7 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
     : src_(cfg.getParameter<edm::InputTag>("src"))
     , era_(kEra_undefined)
     , debug_(cfg.getParameter<bool>("debug"))
-    , min_pt_(-1.e+3)
+    , min_pt_(7.)
     , max_absEta_(2.5)
     , max_dxy_(0.05) 
     , max_dz_(0.1)
@@ -53,22 +53,6 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
     else if ( era_string == "2018" ) era_ = kEra_2018;
     else throw cms::Exception("PATElectronSelectorLoose")
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
-    switch ( era_ ) {
-      case kEra_2016: {
-        min_pt_ = 10.;
-        binning_absEta_ = { 0.8, 1.479 };
-        break;
-      }
-      case kEra_2018:
-      case kEra_2017: {
-        min_pt_ = 7.;
-        binning_absEta_ = { 1.479 };
-        break;
-      }
-      default: assert(0);
-    }
-    assert(min_pt_ > 0.);
-    assert(binning_absEta_.size() > 0);
 
     produces<pat::ElectronCollection>();
   }
@@ -132,7 +116,7 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
         }
         continue;
       }
-      if ( !electron->userInt("mvaFall17V1noIso_WPL") ) {
+      if ( !electron->userInt("mvaFall17V2noIso_WPL") ) {
         if ( debug_ ) {
           std::cout << "FAILS EGamma POG MVA cut\n";
         }
@@ -169,10 +153,6 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
   float max_dz_;                ///< upper cut threshold on d_{z}, distance on the z axis w.r.t PV
   float max_relIso_;            ///< upper cut threshold on relative isolation
   float max_sip3d_;             ///< upper cut threshold on significance of IP
-//--- define cuts that dependent on eta
-//    format: central region (|eta| < 0.8) / transition region (0.8 < |eta| < 1.479) / forward region (|eta| > 1.479)
-  typedef std::vector<float> vfloat;
-  vfloat binning_absEta_;       ///< eta values separating central, transition and forward region (0.8, 1.479)
 //-------------------------------------------------------------------------------
   bool apply_conversionVeto_;   ///< apply (True) or do not apply (False) conversion veto
   int max_nLostHits_;           ///< upper cut threshold on lost hits in the innermost layer of the tracker (electrons with lost_hits equal to cut threshold pass) 
