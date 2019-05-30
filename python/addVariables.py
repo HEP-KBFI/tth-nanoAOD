@@ -34,7 +34,7 @@ def addEScaleSmearing2018(process):
     ),
     energyErr = Var(
       "userFloat('ecalTrkEnergyErrPostCorrNew')",
-      float, precision = 6, doc = "energy error of the cluster-track combination"
+      float, precision = 10, doc = "energy error of the cluster-track combination"
     ),
     eCorr     = Var(
       "userFloat('ecalTrkEnergyPostCorrNew')/userFloat('ecalTrkEnergyPreCorrNew')",
@@ -161,13 +161,6 @@ def recomputeQGL(process):
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
 def addVariables(process, is_mc, year):
-  if not hasattr(process.electronTable.variables, "eCorr"):
-    # No electron scale or smearing available for 2018 era, yet:
-    # See: https://github.com/cms-sw/cmssw/blob/master/RecoEgamma/EgammaTools/python/calibratedEgammas_cff.py
-    print("Branch 'eCorr' not implemented for electrons => filling with placedholder value")
-    process.electronTable.variables.eCorr = Var(
-      "1.", float, doc = "ratio of the calibrated energy/miniaod energy", precision = 6
-    )
 
   process.electronTable.variables.hoe.precision = cms.int32(12)
   process.electronTable.variables.deltaPhiSC = Var(
@@ -303,15 +296,15 @@ def addVariables(process, is_mc, year):
 
   process.metTable.variables.covXX = Var(
     "getSignificanceMatrix().At(0,0)",
-    float, doc = "xx element of met covariance matrix", precision = 8
+    float, doc = "xx element of met covariance matrix", precision = 10
   )
   process.metTable.variables.covXY = Var(
     "getSignificanceMatrix().At(0,1)",
-    float, doc = "xy element of met covariance matrix", precision = 8
+    float, doc = "xy element of met covariance matrix", precision = 10
   )
   process.metTable.variables.covYY = Var(
     "getSignificanceMatrix().At(1,1)",
-    float, doc = "yy element of met covariance matrix", precision = 8
+    float, doc = "yy element of met covariance matrix", precision = 10
   )
   process.metTable.variables.significance = Var(
     "metSignificance()",
@@ -333,9 +326,7 @@ def addVariables(process, is_mc, year):
 
   process.jetTables.remove(process.bjetMVA)
 
-  addJetSubstructureObservables(process) # adds nothing to VSIZE
-  # enabling one addLeptonSubtractedAK8Jets() adds 10MB to VSIZE but enabling the second one doesn't increase the VSIZE
-  addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = True)
+  addJetSubstructureObservables(process)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
   addDeepTau2017v2(process)
   recomputeQGL(process)

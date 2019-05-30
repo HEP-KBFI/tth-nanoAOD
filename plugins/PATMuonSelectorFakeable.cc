@@ -37,7 +37,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     , src_mvaTTH_(cfg.getParameter<edm::InputTag>("src_mvaTTH"))
     , era_(kEra_undefined)
     , debug_(cfg.getParameter<bool>("debug"))
-    , min_pt_(-1.e+3)
+    , min_pt_(5.)
     , max_absEta_(2.4)
     , max_dxy_(0.05)
     , max_dz_(0.1)
@@ -55,23 +55,19 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     else if ( era_string == "2018" ) era_ = kEra_2018;
     else throw cms::Exception("PATMuonSelectorFakeable")
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
+
     switch ( era_ ) {
       case kEra_2016: {
-        min_pt_ = 10.;
-        binning_mvaTTH_ = { 0.75 };
-        min_segmentCompatibility_ = { -1.e+3, -1.e+3 }; 
         break;
       }
-      case kEra_2018:
       case kEra_2017: {
-        min_pt_ = 5.; 
-        binning_mvaTTH_ = { 0.90 };
-        min_segmentCompatibility_ = { 0.3, -1.e+3 };
+        break;
+      }
+      case kEra_2018: {
         break;
       }
       default: assert(0);
     }
-    assert(min_pt_ > 0.);
     assert(binning_mvaTTH_.size() == 1);
     assert(min_segmentCompatibility_.size() == binning_mvaTTH_.size() + 1);
 
@@ -139,7 +135,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
         }
         continue;
       }
-      double mvaTTH = (*inputMuons_mvaTTH)[muon];
+      const double mvaTTH = (*inputMuons_mvaTTH)[muon];
       const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
       if ( muon->segmentCompatibility() <= min_segmentCompatibility_[idxBin_mvaTTH] ) {
         if ( debug_ ) {

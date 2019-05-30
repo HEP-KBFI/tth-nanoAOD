@@ -38,7 +38,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     , era_(kEra_undefined)
     , debug_(cfg.getParameter<bool>("debug"))
     , apply_offline_e_trigger_cuts_(true)
-    , min_pt_(-1.e+3)
+    , min_pt_(7.)
     , max_absEta_(2.5)
     , max_dxy_(0.05) 
     , max_dz_(0.1)
@@ -59,37 +59,16 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
       << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
     switch ( era_ ) {
       case kEra_2016: {
-        min_pt_ = 10.;
-        binning_absEta_ = { 0.8, 1.479 };
-        min_pt_trig_ = 30.;
-        max_sigmaEtaEta_trig_ = { 0.011, 0.011, 0.030 };
-        max_HoE_trig_ = { 0.10, 0.10, 0.07 };
-        max_deltaEta_trig_ = { 0.01, 0.01, 0.008 };
-        max_deltaPhi_trig_ = { 0.04, 0.04, 0.07 };
-        min_OoEminusOoP_trig_ = -0.05;
-        max_OoEminusOoP_trig_ = { 0.010, 0.010, 0.005 };
-        binning_mvaTTH_ = { 0.75 };
-        min_mvaIDraw_ = { -1.e+3, -1.e+3 };
         break;
       }
-      case kEra_2018:
       case kEra_2017: {
-        min_pt_ = 7.;
-        binning_absEta_ = { 1.479 }; 
-        min_pt_trig_ = -1.; // LFR sync; used to be 30 GeV (cf. lines 237-240 in AN-2017/029 v5)
-        max_sigmaEtaEta_trig_ = { 0.011, 0.030 };
-        max_HoE_trig_ = { 0.10, 0.10 }; 
-        max_deltaEta_trig_ = { +1.e+3, +1.e+3 }; 
-        max_deltaPhi_trig_ = { +1.e+3, +1.e+3 };
-        min_OoEminusOoP_trig_ = -0.04; 
-        max_OoEminusOoP_trig_ = { +1.e+3, +1.e+3 }; 
-        binning_mvaTTH_ = { 0.90 }; 
-        min_mvaIDraw_ = { 0.50, -1.e+3 }; 
+        break;
+      }
+      case kEra_2018: {
         break;
       }
       default: assert(0);
     }
-    assert(min_pt_ > 0.);
     assert(binning_absEta_.size() > 0);
     assert(max_sigmaEtaEta_trig_.size() == binning_absEta_.size() + 1);
     assert(max_HoE_trig_.size() == binning_absEta_.size() + 1);
