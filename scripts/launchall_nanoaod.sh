@@ -545,7 +545,7 @@ while read LINE; do
     done
   fi
 
-  if [ ${DATASET_ARR["$DATASET"} ]; then
+  if [ ${DATASET_ARR["$DATASET"]} ]; then
     NOF_CHUNKS=${DATASET_ARR["$DATASET"]};
     for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
       export FORCE_FILEBASED=1;
