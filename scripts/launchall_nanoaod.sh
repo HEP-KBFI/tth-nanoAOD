@@ -547,14 +547,22 @@ while read LINE; do
 
   if [ ${DATASET_ARR["$DATASET"]} ]; then
     NOF_CHUNKS=${DATASET_ARR["$DATASET"]};
-    for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
-      export FORCE_FILEBASED=1;
-      export NANOCFG=$(get_cfg_name $CHUNK_IDX);
-      export CHUNK_VER="CHUNK${CHUNK_IDX}"
+    if (( NOF_CHUNKS > 1 )); then
+      for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
+        export FORCE_FILEBASED=1;
+        export NANOCFG=$(get_cfg_name $CHUNK_IDX);
+        export CHUNK_VER="CHUNK${CHUNK_IDX}"
+        echo "Using config file: $NANOCFG";
+
+        crab submit $DRYRUN --config="$CRAB_CFG" --wait
+      done
+    else
+      export FORCE_FILEBASED=0;
+      export NANOCFG=$(get_cfg_name);
       echo "Using config file: $NANOCFG";
 
       crab submit $DRYRUN --config="$CRAB_CFG" --wait
-    done
+    fi
   else
     export FORCE_FILEBASED=0;
     export NANOCFG=$(get_cfg_name);
