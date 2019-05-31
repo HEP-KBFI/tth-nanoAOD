@@ -557,7 +557,7 @@ while read LINE; do
         crab submit $DRYRUN --config="$CRAB_CFG" --wait
       done
     else
-      export FORCE_FILEBASED=0;
+      export FORCE_FILEBASED=1;
       export NANOCFG=$(get_cfg_name);
       echo "Using config file: $NANOCFG";
 
