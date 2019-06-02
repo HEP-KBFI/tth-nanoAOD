@@ -53,7 +53,7 @@ def parse_lines(lines):
   assert(sum(parsed.values()) == nof_jobs)
   return parsed
 
-def plot(all_states, output):
+def plot(all_states, output, nof_tasks, nof_completed_tasks):
   vals   = list(map(lambda kv: kv[1], all_states))
   labels = list(map(lambda kv: kv[0], all_states))
   cols   = list(map(lambda lab: COLMAP[lab], labels))
@@ -84,9 +84,9 @@ def plot(all_states, output):
     prop = { 'size' : 12 },
   )
 
-  ax.set_title("%d jobs in %d tasks" % (tot, len(lines)))
+  ax.set_title("%d jobs in %d tasks (%d completed)" % (tot, nof_tasks, nof_completed_tasks))
 
-  plt.savefig(output, bbox_inches='tight')
+  plt.savefig(output, bbox_inches = 'tight')
   plt.close()
 
 if __name__ == '__main__':
@@ -150,6 +150,7 @@ if __name__ == '__main__':
           lines_to_parse.append(line_stripped)
     lines[subdir] = parse_lines(lines_to_parse)
 
+  nof_completed_tasks = len(filter(lambda kv: len(kv[1]) == 1 and 'finished' in kv[1], lines.items()))
   all_states = {}
   for subdir, lines_to_parse in lines.items():
     for state, values in lines_to_parse.items():
@@ -158,4 +159,4 @@ if __name__ == '__main__':
       all_states[state] += values
 
   all_states_sorted = sorted(all_states.items(), key = lambda kv: kv[1], reverse = True)
-  plot(all_states_sorted, output)
+  plot(all_states_sorted, output, len(lines), nof_completed_tasks)
