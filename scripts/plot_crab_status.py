@@ -87,6 +87,7 @@ def plot(all_states, output, nof_tasks, nof_completed_tasks):
   ax.set_title("%d jobs in %d tasks (%d completed)" % (tot, nof_tasks, nof_completed_tasks))
 
   plt.savefig(output, bbox_inches = 'tight')
+  logging.info("Saved figure to: {}".format(output))
   plt.close()
 
 if __name__ == '__main__':
@@ -149,6 +150,7 @@ if __name__ == '__main__':
         if record:
           lines_to_parse.append(line_stripped)
     lines[subdir] = parse_lines(lines_to_parse)
+    logging.debug("Task {}: {}".format(subdir, ', '.join(list(map(lambda kv: '%s -> %d' % kv, lines[subdir].items())))))
 
   nof_completed_tasks = len(filter(lambda kv: len(kv[1]) == 1 and 'finished' in kv[1], lines.items()))
   all_states = {}
