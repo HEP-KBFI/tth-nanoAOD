@@ -22,6 +22,7 @@ COLMAP = {
   'unsubmitted'  : '#b3b4b5',
   'cooloff'      : '#ffbfff',
   'transferring' : '#9bea7e',
+  'killed'       : '#420d0d',
 }
 
 CRAB_LOG_FN = 'crab.log'
@@ -62,7 +63,7 @@ def plot(all_states, output, nof_tasks, nof_completed_tasks):
   legend_labels = list(map(lambda kv: '%s %.2f%%' % (kv[0], 100. * kv[1] / tot), all_states))
 
   fig, ax = plt.subplots(figsize = (10, 8), subplot_kw = dict(aspect = "equal"))
-  wedges, texts = ax.pie(vals, startangle = 40, colors = cols)
+  wedges, texts = ax.pie(vals, startangle = 60, colors = cols)
 
   bbox_props = dict(boxstyle = "square,pad=0.3", fc = "w", ec = "k", lw = 0.72)
   kw = dict(arrowprops = dict(arrowstyle = "-"), bbox = bbox_props, zorder = 0, va = "center", fontsize = 12)
