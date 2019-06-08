@@ -4056,7 +4056,7 @@
     ]
   },
   {
-    "category": "signal_ggf_nonresonant_node_sm_hh_tttt",
+    "category": "signal_ggf_nonresonant_hh_tttt",
     "comment": "",
     "samples": [
       {
@@ -4092,13 +4092,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_box_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_box_hh_4t",
         "enabled": 1,
@@ -4128,13 +4122,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_2_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_2_hh_4t",
         "enabled": 1,
@@ -4168,13 +4156,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_3_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_3_hh_4t",
         "enabled": 1,
@@ -4208,13 +4190,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_4_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_4_hh_4t",
         "enabled": 1,
@@ -4244,13 +4220,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_5_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_5_hh_4t",
         "enabled": 1,
@@ -4280,13 +4250,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_6_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_6_hh_4t",
         "enabled": 1,
@@ -4316,13 +4280,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_7_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_7_hh_4t",
         "enabled": 1,
@@ -4356,13 +4314,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_8_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_8_hh_4t",
         "enabled": 1,
@@ -4392,13 +4344,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_9_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_9_hh_4t",
         "enabled": 1,
@@ -4432,13 +4378,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_10_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_10_hh_4t",
         "enabled": 1,
@@ -4468,13 +4408,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_11_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_11_hh_4t",
         "enabled": 1,
@@ -4504,13 +4438,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_12_hh_tttt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_12_hh_4t",
         "enabled": 1,
@@ -4548,7 +4476,7 @@
     ]
   },
   {
-    "category": "signal_ggf_nonresonant_node_sm_hh_wwtt",
+    "category": "signal_ggf_nonresonant_hh_wwtt",
     "comment": "",
     "samples": [
       {
@@ -4576,13 +4504,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_2_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_2_hh_2v2t",
         "enabled": 1,
@@ -4608,13 +4530,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_3_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_3_hh_2v2t",
         "enabled": 1,
@@ -4640,13 +4556,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_4_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_4_hh_2v2t",
         "enabled": 1,
@@ -4672,13 +4582,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_5_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_5_hh_2v2t",
         "enabled": 1,
@@ -4704,13 +4608,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_6_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_6_hh_2v2t",
         "enabled": 1,
@@ -4736,13 +4634,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_7_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_7_hh_2v2t",
         "enabled": 1,
@@ -4768,13 +4660,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_8_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_8_hh_2v2t",
         "enabled": 1,
@@ -4800,13 +4686,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_9_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_9_hh_2v2t",
         "enabled": 1,
@@ -4832,13 +4712,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_10_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_10_hh_2v2t",
         "enabled": 1,
@@ -4864,13 +4738,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_11_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_11_hh_2v2t",
         "enabled": 1,
@@ -4896,13 +4764,7 @@
           ],
           "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_12_hh_wwtt",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_12_hh_2v2t",
         "enabled": 1,
@@ -4932,7 +4794,7 @@
     ]
   },
   {
-    "category": "signal_ggf_nonresonant_node_sm_hh_wwww",
+    "category": "signal_ggf_nonresonant_hh_wwww",
     "comment": "",
     "samples": [
       {
@@ -4960,13 +4822,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_2_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_2_hh_4v",
         "enabled": 1,
@@ -4992,13 +4848,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_3_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_3_hh_4v",
         "enabled": 1,
@@ -5024,13 +4874,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_4_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_4_hh_4v",
         "enabled": 1,
@@ -5056,13 +4900,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_5_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_5_hh_4v",
         "enabled": 1,
@@ -5088,13 +4926,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_6_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_6_hh_4v",
         "enabled": 1,
@@ -5120,13 +4952,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_7_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_7_hh_4v",
         "enabled": 1,
@@ -5152,13 +4978,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_8_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_8_hh_4v",
         "enabled": 1,
@@ -5184,13 +5004,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_9_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_9_hh_4v",
         "enabled": 1,
@@ -5216,13 +5030,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_10_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_10_hh_4v",
         "enabled": 1,
@@ -5248,13 +5056,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_11_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_11_hh_4v",
         "enabled": 1,
@@ -5280,13 +5082,7 @@
           ],
           "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
-      }
-    ]
-  },
-  {
-    "category": "signal_ggf_nonresonant_node_12_hh_wwww",
-    "comment": "",
-    "samples": [
+      },
       {
         "name": "signal_ggf_nonresonant_node_12_hh_4v",
         "enabled": 1,
