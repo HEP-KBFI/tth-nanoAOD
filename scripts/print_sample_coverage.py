@@ -216,70 +216,71 @@ def get_tables(fn, required):
   add_to_nonresonant_vbf_agg = lambda key, value: add_to_map(nonresonant_map_vbf_agg, key, value)
 
   for e in j:
-    c = e['category']
-    s = { camp : e['samples'][0]['datasets'][camp][0]['dbs'] if e['samples'][0]['datasets'][camp] else '' for camp in required }
+    for sample in e['samples']:
+      c = sample['name']
+      s = { camp : sample['datasets'][camp][0]['dbs'] if sample['datasets'][camp] else '' for camp in required }
 
-    m_res        = RESONANT_REGEX.match(c)
-    m_nonres_ggf = NONRESONANT_GGF_REGEX.match(c)
-    m_nonres_vbf = NONRESONANT_VBF_REGEX.match(c)
+      m_res        = RESONANT_REGEX.match(c)
+      m_nonres_ggf = NONRESONANT_GGF_REGEX.match(c)
+      m_nonres_vbf = NONRESONANT_VBF_REGEX.match(c)
 
-    if m_res:
-      production_mode = m_res.group(RR_PRODUCTION_MODE)
-      spin            = int(m_res.group(RR_SPIN))
-      mass_point      = int(m_res.group(RR_MASS_POINT))
-      decay_channel   = m_res.group(RR_DECAY_CHANNEL)
+      if m_res:
+        production_mode = m_res.group(RR_PRODUCTION_MODE)
+        spin            = int(m_res.group(RR_SPIN))
+        mass_point      = int(m_res.group(RR_MASS_POINT))
+        decay_channel   = m_res.group(RR_DECAY_CHANNEL)
 
-      if decay_channel not in resonant_map:
-        resonant_map[decay_channel] = {}
-      if production_mode not in resonant_map[decay_channel]:
-        resonant_map[decay_channel][production_mode] = {}
-      if spin not in resonant_map[decay_channel][production_mode]:
-        resonant_map[decay_channel][production_mode][spin] = {}
-      resonant_map[decay_channel][production_mode][spin][mass_point] = copy.deepcopy(s)
+        if decay_channel not in resonant_map:
+          resonant_map[decay_channel] = {}
+        if production_mode not in resonant_map[decay_channel]:
+          resonant_map[decay_channel][production_mode] = {}
+        if spin not in resonant_map[decay_channel][production_mode]:
+          resonant_map[decay_channel][production_mode][spin] = {}
+        resonant_map[decay_channel][production_mode][spin][mass_point] = copy.deepcopy(s)
 
-      add_to_resonant_map_agg('decay_channel', decay_channel)
-      add_to_resonant_map_agg('spin', spin)
-      add_to_resonant_map_agg('production_mode', production_mode)
-      add_to_resonant_map_agg('mass_point', mass_point)
+        add_to_resonant_map_agg('decay_channel', decay_channel)
+        add_to_resonant_map_agg('spin', spin)
+        add_to_resonant_map_agg('production_mode', production_mode)
+        add_to_resonant_map_agg('mass_point', mass_point)
 
-    elif m_nonres_ggf:
-      shape           = m_nonres_ggf.group(RR_SHAPE)
-      decay_channel   = m_nonres_ggf.group(RR_DECAY_CHANNEL)
+      elif m_nonres_ggf:
+        shape           = m_nonres_ggf.group(RR_SHAPE)
+        decay_channel   = m_nonres_ggf.group(RR_DECAY_CHANNEL)
 
-      if decay_channel not in nonresonant_map_ggf:
-        nonresonant_map_ggf[decay_channel] = {}
-      nonresonant_map_ggf[decay_channel][shape] = copy.deepcopy(s)
+        if decay_channel not in nonresonant_map_ggf:
+          nonresonant_map_ggf[decay_channel] = {}
+        nonresonant_map_ggf[decay_channel][shape] = copy.deepcopy(s)
 
-      add_to_nonresonant_ggf_agg('decay_channel', decay_channel)
-      add_to_nonresonant_ggf_agg('shape', shape)
-    elif m_nonres_vbf:
-      decay_channel   = m_nonres_vbf.group(RR_DECAY_CHANNEL)
-      cv              = m_nonres_vbf.group(RR_CV)
-      c2v             = m_nonres_vbf.group(RR_C2V)
-      c3              = m_nonres_vbf.group(RR_C3)
+        add_to_nonresonant_ggf_agg('decay_channel', decay_channel)
+        add_to_nonresonant_ggf_agg('shape', shape)
+      elif m_nonres_vbf:
+        decay_channel   = m_nonres_vbf.group(RR_DECAY_CHANNEL)
+        cv              = m_nonres_vbf.group(RR_CV)
+        c2v             = m_nonres_vbf.group(RR_C2V)
+        c3              = m_nonres_vbf.group(RR_C3)
 
-      if 'p' not in cv:
-        cv += 'p0'
-      if 'p' not in c2v:
-        c2v += 'p0'
-      if 'p' not in c3:
-        c3 += 'p0'
+        if 'p' not in cv:
+          cv += 'p0'
+        if 'p' not in c2v:
+          c2v += 'p0'
+        if 'p' not in c3:
+          c3 += 'p0'
 
-      if decay_channel not in nonresonant_map_vbf:
-        nonresonant_map_vbf[decay_channel] = {}
-      if cv not in nonresonant_map_vbf[decay_channel]:
-        nonresonant_map_vbf[decay_channel][cv] = {}
-      if c2v not in nonresonant_map_vbf[decay_channel][cv]:
-        nonresonant_map_vbf[decay_channel][cv][c2v] = {}
-      nonresonant_map_vbf[decay_channel][cv][c2v][c3] = copy.deepcopy(s)
+        if decay_channel not in nonresonant_map_vbf:
+          nonresonant_map_vbf[decay_channel] = {}
+        if cv not in nonresonant_map_vbf[decay_channel]:
+          nonresonant_map_vbf[decay_channel][cv] = {}
+        if c2v not in nonresonant_map_vbf[decay_channel][cv]:
+          nonresonant_map_vbf[decay_channel][cv][c2v] = {}
+        nonresonant_map_vbf[decay_channel][cv][c2v][c3] = copy.deepcopy(s)
 
-      add_to_nonresonant_vbf_agg('decay_channel', decay_channel)
-      add_to_nonresonant_vbf_agg('cv', cv)
-      add_to_nonresonant_vbf_agg('c2v', c2v)
-      add_to_nonresonant_vbf_agg('c3', c3)
+        add_to_nonresonant_vbf_agg('decay_channel', decay_channel)
+        add_to_nonresonant_vbf_agg('cv', cv)
+        add_to_nonresonant_vbf_agg('c2v', c2v)
+        add_to_nonresonant_vbf_agg('c3', c3)
 
-    else:
-      raise RuntimeError("Invalid category: %s" % c)
+      else:
+        raise RuntimeError("Invalid category: %s" % c)
 
   resonant_map_agg['mass_point'] = sorted(resonant_map_agg['mass_point'])
 
