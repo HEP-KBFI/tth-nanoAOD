@@ -6,6 +6,9 @@ import os
 import collections
 import datetime
 import sys
+import re
+
+HH_NONRES_RE = re.compile(r'signal_ggf_nonresonant_hh_\w+')
 
 def get_year(campaign_str):
   campaigns = [ '16', '17', '18' ]
@@ -117,6 +120,7 @@ table = collections.OrderedDict([
   ('private', collections.OrderedDict()),
 ])
 sums = collections.OrderedDict()
+sums_hh_nonres = collections.OrderedDict()
 
 eras_initialized = False
 
@@ -140,6 +144,8 @@ for category_entry in json_data:
           for mc_type in table:
             table[mc_type][era] = []
             sums[era] = []
+            sums_hh_nonres[era] = {}
+
       eras_initialized = True
 
     for era in sample_entry['datasets']:
@@ -150,6 +156,11 @@ for category_entry in json_data:
         location = dataset_entry['loc'] if 'loc' in dataset_entry else ''
         filename = dataset_entry['file'] if 'file' in dataset_entry else ''
         sum_entry.append(dataset_name)
+
+        if HH_NONRES_RE.match(category):
+          if category not in sums_hh_nonres[era]:
+            sums_hh_nonres[era][category] = []
+          sums_hh_nonres[era][category].append(dataset_name)
 
         mc_type = 'mc'
         if dbs.endswith('/USER'):
@@ -175,6 +186,11 @@ for category_entry in json_data:
         )
       if len(sum_entry) > 1:
         sums[era].append(sum_entry)
+
+# assuming that there are no extended non-resonant HH samples
+for era in sums_hh_nonres:
+  for category in sums_hh_nonres[era]:
+    sums[era].append(sums_hh_nonres[era][category])
 
 for mc_type in table:
   for era in table[mc_type]:
