@@ -23,6 +23,7 @@ COLMAP = {
   'cooloff'      : '#ffbfff',
   'transferring' : '#9bea7e',
   'killed'       : '#420d0d',
+  'held'         : '#f442b3',
 }
 
 CRAB_LOG_FN = 'crab.log'
