@@ -332,3 +332,13 @@ def addVariables(process, is_mc, year):
   recomputeQGL(process)
   addLepMVA(process)
   addEScaleSmearing2018(process)
+
+  from HLTrigger.HLTfilters.triggerResultsFilter_cfi import triggerResultsFilter
+  process.triggerFilter = triggerResultsFilter.clone(
+    hltResults = cms.InputTag("TriggerResults::HLT"),
+    triggerConditions = cms.vstring('HLT_TripleMu_12_10_5_v*', 'HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ_v*'),
+    l1tResults = cms.InputTag(''),
+    throw = cms.bool(False),
+  )
+  process.nanoSequenceMC.insert(0, process.triggerFilter)
+
