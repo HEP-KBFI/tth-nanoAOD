@@ -41,10 +41,19 @@ class Triggers(object):
           'HLT_IsoMu24', # L=35.918/fb; present in all eras; unprescaled
           'HLT_IsoTkMu24', # L=35.918/fb; present in all eras; unprescaled
         },
+        '1mu_noiso' : {
+          'HLT_Mu45_eta2p1', # L=?
+          'HLT_Mu50', # L=?
+          'HLT_TkMu50', # L=?
+        },
         '1e' : {
           'HLT_Ele27_WPTight_Gsf', # L=35.918/fb; present in all eras; unprescaled
           'HLT_Ele25_eta2p1_WPTight_Gsf', # L=35.918/fb; present in all eras; unprescaled
           'HLT_Ele27_eta2p1_WPLoose_Gsf', # L=27.303/fb; present in all eras; heavily prescaled in run H
+        },
+        '1e_noiso' : {
+          'HLT_Ele105_CaloIdVT_GsfTrkIdT', # L=?
+          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=?
         },
         '1mu1tau' : {
           'HLT_IsoMu19_eta2p1_LooseIsoPFTau20_SingleL1', # L=35.918/fb; present in all eras; unprescaled
@@ -106,9 +115,16 @@ class Triggers(object):
           'HLT_IsoMu24', # L=38.046/fb; present in all eras; unprescaled (not enabled at high lumi)
           'HLT_IsoMu27', # L=41.527/fb; present in all eras; unprescaled
         },
+        '1mu_noiso' : {
+          'HLT_Mu50', # L=?
+          'HLT_Mu55', # L=?
+        },
         '1e' : {
           'HLT_Ele35_WPTight_Gsf', # L=41.527/fb; present in all eras; unprescaled
           'HLT_Ele32_WPTight_Gsf', # L=27.121/fb; present in D, E, F; missing in B, C; unprescaled
+        },
+        '1e_noiso' : {
+          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=?
         },
         # CV: tau trigger paths taken from slide 6 of presentation given by Hale Sert at HTT workshop in December 2017
         #    (https://indico.cern.ch/event/684622/contributions/2807071/attachments/1575421/2487940/141217_triggerStatusPlans_hsert.pdf),
@@ -176,9 +192,17 @@ class Triggers(object):
           'HLT_IsoMu24', # L=59.727/fb; present in all eras; unprescaled
           'HLT_IsoMu27', # L=59.735/fb; present in all eras; unprescaled
         },
+        '1mu_noiso' : {
+          'HLT_Mu50', # L=?
+          'HLT_OldMu100', # L=?
+          'HLT_TkMu100', # L=?
+        },
         '1e' : {
           'HLT_Ele32_WPTight_Gsf', # L=59.735/fb; present in all eras; unprescaled
           #'HLT_Ele35_WPTight_Gsf', # L=59.735; present in all eras; unprescaled (used by Alexei, but why ?)
+        },
+        '1e_noiso' : {
+          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=?
         },
         # CV: tau trigger paths taken from slide 12 of presentation given by Hale Sert at HTT workshop in April 2019
         #    (https://indico.cern.ch/event/803335/contributions/3359970/attachments/1829789/2996369/TriggerStatus_HTTworkshop_hsert.pdf)
