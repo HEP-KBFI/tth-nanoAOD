@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#set -x
+
 # DO NOT SOURCE! IT MAY KILL YOUR SHELL!
 
 # GT choices based on: https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVAnalysisSummaryTable
@@ -79,8 +81,8 @@ GENERATE_CFGS_ONLY=false
 DRYRUN=""
 export DATASET_FILE=""
 export JOB_TYPE=""
-export PUBLISH=1
-export HLT_FILTER=1
+export PUBLISH=0
+export HLT_FILTER=0
 export CFG_LABEL_STR=""
 
 TYPE_DATA="data"
@@ -281,7 +283,7 @@ while read LINE; do
   if [[ $? != "1" ]]; then
     continue;
   fi
-  if [ "$DATASET_CANDIDATE" =~ /QCD ]; then
+  if [[ "$DATASET_CANDIDATE" =~ ^/QCD ]]; then
     HAS_QCD=true;
   fi
 
@@ -365,11 +367,18 @@ generate_cfgs() {
     fi
   fi
 
+  if [ "$1" != "none" ]; then
+    echo "Generating cfg file using HLT filter: $1";
+    export HLT_FILTER_ARG=$1;
+  else
+    export HLT_FILTER_ARG="";
+  fi
+
   CMSSW_GIT_STATUS=$(git -C $CMSSW_BASE/src log -n1 --format="%D %H %cd")
   NANOAOD_GIT_STATUS=$(git -C $BASE_DIR log -n1 --format="%D %H %cd")
   export CUSTOMISE_COMMANDS="process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process = process, is_mc = $PY_IS_MC, year = '$YEAR', reportEvery = REPORT_FREQUENCY, hlt_filter = '')\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, is_mc = $PY_IS_MC, year = '$YEAR', reportEvery = $REPORT_FREQUENCY, hlt_filter = '$HLT_FILTER_ARG')\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False, timing = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
@@ -377,9 +386,9 @@ print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n\
 print('GT: $COND')\\n\
 print('era: $ERA_ARGS')\\n"
 
-  if [ -n "$1" ]; then
-    echo "Generating cfg file for chunk #$1 with split size $NOF_EVENTS";
-    CHUNK_IDX_CUR=$1;
+  if [ -n "$2" ]; then
+    echo "Generating cfg file for chunk #$2 with split size $NOF_EVENTS";
+    CHUNK_IDX_CUR=$2;
     NOF_SKIP=$(( (CHUNK_IDX_CUR-1) * NOF_EVENTS ));
     CHUNK_COMMANDS="process.source.skipEvents=cms.untracked.uint32($NOF_SKIP)\\n";
     export CUSTOMISE_COMMANDS="${CUSTOMISE_COMMANDS}${CHUNK_COMMANDS}";
@@ -405,15 +414,27 @@ get_cfg_name() {
   else
     CFG_PREFIX="${CFG_LABEL_STR}_${JOB_TYPE_NAME}";
   fi
-  if [ -n "$1" ]; then
-    echo "$BASE_DIR/test/cfgs/nano_${CFG_PREFIX}_${DATASET_ERA}_chunk_${NOF_EVENTS}_part_${1}_cfg.py";
-  else
-    echo "$BASE_DIR/test/cfgs/nano_${CFG_PREFIX}_${DATASET_ERA}_cfg.py";
+
+  CFG_SUFFIX=""
+  if [ "$1" != "none" ]; then
+    CFG_SUFFIX="${CFG_SUFFIX}HLTfilter_${1}_";
   fi
+  if [ "$2" != "" ]; then
+    CFG_SUFFIX="${CFG_SUFFIX}chunk_${NOF_EVENTS}_part_${2}_";
+  fi
+  echo "$BASE_DIR/test/cfgs/nano_${CFG_PREFIX}_${DATASET_ERA}_${CFG_SUFFIX}cfg.py";
 }
 
-if [ -z "$NANOCFG" ]; then
-  export NANOCFG=$(get_cfg_name);
+HLT_FILTER_OPTS=("none")
+if [[ "$HLT_FILTER" == "1" ]]; then
+  HLT_FILTER_OPTS+=("all");
+  if [ $HAS_QCD = true ]; then
+    HLT_FILTER_OPTS+=("QCD");
+  fi
+fi
+
+for HLT_FILTER_OPT in "${HLT_FILTER_OPTS[@]}"; do
+  export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT);
 
   read -p "Sure you want to use this config file: $NANOCFG? [y/N]" -n 1 -r
   echo
@@ -424,22 +445,25 @@ if [ -z "$NANOCFG" ]; then
   if [ ! -d $(dirname $NANOCFG) ]; then
     mkdir -p $(dirname $NANOCFG);
   fi
-fi
-generate_cfgs;
-check_if_exists "$NANOCFG"
+
+  generate_cfgs $HLT_FILTER_OPT;
+  check_if_exists "$NANOCFG"
+done
 
 if (( MAX_NOF_JOBS > 1 )); then
-  for CHUNK_IDX in $(seq 1 $MAX_NOF_JOBS); do
-    export NANOCFG=$(get_cfg_name $CHUNK_IDX);
+  for HLT_FILTER_OPT in $HLT_FILTER_OPTS; do
+    for CHUNK_IDX in $(seq 1 $MAX_NOF_JOBS); do
+      export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT $CHUNK_IDX);
 
-    read -p "Sure you want to generate config file: $NANOCFG? [y/N]" -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-      [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
-    fi
+      read -p "Sure you want to generate config file: $NANOCFG? [y/N]" -n 1 -r
+      echo
+      if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+      fi
 
-    generate_cfgs $CHUNK_IDX;
-    check_if_exists "$NANOCFG";
+      generate_cfgs $HLT_FILTER_OPT $CHUNK_IDX;
+      check_if_exists "$NANOCFG";
+    done
   done
 fi
 
@@ -501,7 +525,7 @@ while read LINE; do
   unset NANOCFG;
   unset CHUNK_VER;
   unset FORCE_FILEBASED;
-
+  unset HLT_FILTER_OPT;
   export IS_PRIVATE=0;
 
   is_valid_dataset ${DATASET};
@@ -518,6 +542,14 @@ while read LINE; do
 
   DATASET_SPLIT=$(echo "$DATASET" | tr '/' ' ')
   DATASET_THIRD_PART=$(echo "$DATASET_SPLIT" | awk '{print $3}')
+
+  export HLT_FILTER_OPT="";
+  if [[ $HLT_FILTER == "1" ]]; then
+    export HLT_FILTER_OPT="all";
+    if [[ "$DATASET" =~ /QCD ]]; then
+      export HLT_FILTER_OPT="QCD";
+    fi
+  fi
 
   if [ "$DATASET_THIRD_PART" == "MINIAOD" ]; then
     echo "Found data sample: $DATASET";
@@ -561,7 +593,7 @@ while read LINE; do
     if (( NOF_CHUNKS > 1 )); then
       for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
         export FORCE_FILEBASED=1;
-        export NANOCFG=$(get_cfg_name $CHUNK_IDX);
+        export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT $CHUNK_IDX);
         export CHUNK_VER="CHUNK${CHUNK_IDX}"
         echo "Using config file: $NANOCFG";
 
@@ -569,14 +601,14 @@ while read LINE; do
       done
     else
       export FORCE_FILEBASED=1;
-      export NANOCFG=$(get_cfg_name);
+      export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT);
       echo "Using config file: $NANOCFG";
 
       crab submit $DRYRUN --config="$CRAB_CFG" --wait
     fi
   else
     export FORCE_FILEBASED=0;
-    export NANOCFG=$(get_cfg_name);
+    export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT);
     echo "Using config file: $NANOCFG";
 
     crab submit $DRYRUN --config="$CRAB_CFG" --wait

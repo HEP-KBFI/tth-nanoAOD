@@ -342,14 +342,14 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
     elif hlt_filter == 'all':
       triggers_attr = 'triggers_flat'
     else:
-      raise ValueError("Invalid valut for 'hlt_filter' option: %s" % hlt_filter)
+      raise ValueError("Invalid value for 'hlt_filter' option: %s" % hlt_filter)
 
     triggers = [ '{}_v*'.format(trigger) for trigger in getattr(Triggers(year), triggers_attr) ]
     process.triggerFilter = triggerResultsFilter.clone(
-      hltResults = cms.InputTag("TriggerResults::HLT"),
+      hltResults        = cms.InputTag("TriggerResults::HLT"),
       triggerConditions = cms.vstring(triggers),
-      l1tResults = cms.InputTag(''),
-      throw = cms.bool(False),
+      l1tResults        = cms.InputTag(''),
+      throw             = cms.bool(False),
     )
 
     process.nanoAOD_step.insert(0, process.triggerFilter)
