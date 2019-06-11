@@ -351,6 +351,12 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
       l1tResults        = cms.InputTag(''),
       throw             = cms.bool(False),
     )
+    print(
+      "Filtering events based on '{}' trigger option if they pass OR of the following HLT paths: {}".format(
+        hlt_filter,
+        ', '.join(triggers)
+      )
+    )
 
     process.nanoAOD_step.insert(0, process.triggerFilter)
     output = getattr(process, 'NANOAOD{}output'.format('SIM' if is_mc else ''))
@@ -359,6 +365,8 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
     if hasattr(process, 'genWeightsTable') and process.nanoAOD_step.contains(process.genWeightsTable):
       process.nanoAOD_step.remove(process.genWeightsTable)
       process.nanoAOD_step.insert(0, process.genWeightsTable)
+  else:
+    print("NOT filtering events based on whether or not they pass OR of some combination of HLT paths")
 
   assert(reportEvery > 0)
   process.MessageLogger.cerr.FwkReport.reportEvery = reportEvery
