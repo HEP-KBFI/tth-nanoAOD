@@ -163,7 +163,7 @@ def recomputeQGL(process):
   )
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
-def addVariables(process, is_mc, year, hlt_filter = ''):
+def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages = True):
 
   process.electronTable.variables.hoe.precision = cms.int32(12)
   process.electronTable.variables.deltaPhiSC = Var(
@@ -337,18 +337,12 @@ def addVariables(process, is_mc, year, hlt_filter = ''):
   addEScaleSmearing2018(process)
 
   if hlt_filter:
-    hlt_filter_split = hlt_filter.split('|')
-    assert(len(hlt_filter_split) == 2)
-    hlt_filter_choice, tier = hlt_filter_split
-    assert(tier in [ 'NANOAOD', 'NANOAODSIM' ])
-    assert(hlt_filter_choice in [ 'QCD', 'all' ])
-
-    if hlt_filter_choice == 'QCD':
+    if hlt_filter == 'QCD':
       triggers_attr = 'triggers_leptonFR_flat'
-    elif hlt_filter_choice == 'all':
+    elif hlt_filter == 'all':
       triggers_attr = 'triggers_flat'
     else:
-      assert(False)
+      raise ValueError("Invalid valut for 'hlt_filter' option: %s" % hlt_filter)
 
     triggers = [ '{}_v*'.format(trigger) for trigger in getattr(Triggers(year), triggers_attr) ]
     process.triggerFilter = triggerResultsFilter.clone(
@@ -359,9 +353,18 @@ def addVariables(process, is_mc, year, hlt_filter = ''):
     )
 
     process.nanoAOD_step.insert(0, process.triggerFilter)
-    output = getattr(process, '{}output'.format(tier))
+    output = getattr(process, 'NANOAOD{}output'.format('SIM' if is_mc else ''))
     output.SelectEvents = cms.untracked.PSet(SelectEvents = cms.vstring('nanoAOD_step'))
 
     if hasattr(process, 'genWeightsTable') and process.nanoAOD_step.contains(process.genWeightsTable):
       process.nanoAOD_step.remove(process.genWeightsTable)
       process.nanoAOD_step.insert(0, process.genWeightsTable)
+
+  assert(reportEvery > 0)
+  process.MessageLogger.cerr.FwkReport.reportEvery = reportEvery
+
+  if suppressMessages:
+    process.MessageLogger.suppressInfo.append('genJetAK8FlavourAssociation')
+    process.MessageLogger.suppressInfo.append('mergedGenParticles')
+    process.MessageLogger.suppressWarning.append('genJetAK8FlavourAssociation')
+    process.MessageLogger.suppressWarning.append('mergedGenParticles')

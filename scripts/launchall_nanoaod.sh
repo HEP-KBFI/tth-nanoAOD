@@ -355,10 +355,9 @@ generate_cfgs() {
 
   CMSSW_GIT_STATUS=$(git -C $CMSSW_BASE/src log -n1 --format="%D %H %cd")
   NANOAOD_GIT_STATUS=$(git -C $BASE_DIR log -n1 --format="%D %H %cd")
-  export CUSTOMISE_COMMANDS="process.MessageLogger.cerr.FwkReport.reportEvery = $REPORT_FREQUENCY\\n\
-process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
+  export CUSTOMISE_COMMANDS="process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, $PY_IS_MC,'$YEAR')\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process = process, is_mc = $PY_IS_MC, year = '$YEAR', reportEvery = REPORT_FREQUENCY, hlt_filter = '')\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False, timing = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
