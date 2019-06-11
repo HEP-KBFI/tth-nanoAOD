@@ -427,7 +427,7 @@ get_cfg_name() {
 
 HLT_FILTER_OPTS=("none")
 if [[ "$HLT_FILTER" == "1" ]]; then
-  HLT_FILTER_OPTS+=("all");
+  HLT_FILTER_OPTS=("all");
   if [ $HAS_QCD = true ]; then
     HLT_FILTER_OPTS+=("QCD");
   fi
