@@ -3,6 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addDeepTau2017v2
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
+from tthAnalysis.NanoAOD.triggers import Triggers
 
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
@@ -12,6 +13,8 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94XMiniAODv2_cff import run2_nanoA
 from Configuration.Eras.Modifier_run2_nanoAOD_102Xv1_cff import run2_nanoAOD_102Xv1
 
 from RecoEgamma.EgammaTools.calibratedEgammas_cff import calibratedPatElectrons
+
+from HLTrigger.HLTfilters.triggerResultsFilter_cfi import triggerResultsFilter
 
 from CondCore.CondDB.CondDB_cfi import CondDB
 
@@ -160,7 +163,7 @@ def recomputeQGL(process):
   )
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
-def addVariables(process, is_mc, year):
+def addVariables(process, is_mc, year, hlt_filter = ''):
 
   process.electronTable.variables.hoe.precision = cms.int32(12)
   process.electronTable.variables.deltaPhiSC = Var(
@@ -333,12 +336,32 @@ def addVariables(process, is_mc, year):
   addLepMVA(process)
   addEScaleSmearing2018(process)
 
-  from HLTrigger.HLTfilters.triggerResultsFilter_cfi import triggerResultsFilter
-  process.triggerFilter = triggerResultsFilter.clone(
-    hltResults = cms.InputTag("TriggerResults::HLT"),
-    triggerConditions = cms.vstring('HLT_TripleMu_12_10_5_v*', 'HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ_v*'),
-    l1tResults = cms.InputTag(''),
-    throw = cms.bool(False),
-  )
-  process.nanoSequenceMC.insert(0, process.triggerFilter)
+  if hlt_filter:
+    hlt_filter_split = hlt_filter.split('|')
+    assert(len(hlt_filter_split) == 2)
+    hlt_filter_choice, tier = hlt_filter_split
+    assert(tier in [ 'NANOAOD', 'NANOAODSIM' ])
+    assert(hlt_filter_choice in [ 'QCD', 'all' ])
 
+    if hlt_filter_choice == 'QCD':
+      triggers_attr = 'triggers_leptonFR_flat'
+    elif hlt_filter_choice == 'all':
+      triggers_attr = 'triggers_flat'
+    else:
+      assert(False)
+
+    triggers = [ '{}_v*'.format(trigger) for trigger in getattr(Triggers(year), triggers_attr) ]
+    process.triggerFilter = triggerResultsFilter.clone(
+      hltResults = cms.InputTag("TriggerResults::HLT"),
+      triggerConditions = cms.vstring(triggers),
+      l1tResults = cms.InputTag(''),
+      throw = cms.bool(False),
+    )
+
+    process.nanoAOD_step.insert(0, process.triggerFilter)
+    output = getattr(process, '{}output'.format(tier))
+    output.SelectEvents = cms.untracked.PSet(SelectEvents = cms.vstring('nanoAOD_step'))
+
+    if hasattr(process, 'genWeightsTable') and process.nanoAOD_step.contains(process.genWeightsTable):
+      process.nanoAOD_step.remove(process.genWeightsTable)
+      process.nanoAOD_step.insert(0, process.genWeightsTable)
