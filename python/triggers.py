@@ -82,7 +82,7 @@ class Triggers(object):
           'HLT_Mu17', # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
           'HLT_Mu8', # L=3.937/pb; present in all eras; prescale factor 9123.1 (9081.0 from delivery)
           'HLT_Mu3_PFJet40', # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
-        }
+        },
       }
     elif era == "2017":
       self.triggers_analysis = {
@@ -160,7 +160,7 @@ class Triggers(object):
         '2mu' : {
           'HLT_Mu17', # L=70.038/pb; present in all eras; prescale factor 592.9 (600.1 from delivery)
           'HLT_Mu8', # L=2.605/pb; present in all eras; prescale factor 15943.0 (15120.6 from delivery)
-        }
+        },
       }
     elif era == "2018":
       self.triggers_analysis = {
@@ -229,6 +229,8 @@ class Triggers(object):
           'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=38.875/pb; present in all eras; prescale factor 1536.7 (1538.4 from delivery)
         },
         '1mu' : {
+          'HLT_Mu12', # L=?
+          'HLT_Mu15',  # L=?
           'HLT_Mu27', # L=125.783/pb; present in all eras; prescale factor 475.0 (464.6 from delivery)
           'HLT_Mu20', # L=55.273/pb; present in all eras; prescale factor 1080.8 (1082.1 from delivery)
           'HLT_Mu3_PFJet40', # L=2.695/pb; present in all eras; prescale factor 22160.5 (22182.4 from delivery)
@@ -237,7 +239,8 @@ class Triggers(object):
         '2mu' : {
           'HLT_Mu17', # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery)
           'HLT_Mu8', # L=8.546/pb; present in all eras; prescale factor 6990.5 (6981.9 from delivery)
-        }
+          'HLT_Mu19', # L=?
+        },
       }
     else:
       raise ValueError("Invalid era: %s" % era)
