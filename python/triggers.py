@@ -75,8 +75,12 @@ class Triggers(object):
           'HLT_Mu27', # L=250.508/pb; present in all eras; prescale factor 143.4 (143.0 from delivery)
         },
         '2e' : {
+          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=?
+          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=?
+          'HLT_Ele33_CaloIdM_TrackIdM_PFJet30', # L=?
           'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
           'HLT_Ele12_CaloIdM_TrackIdM_PFJet30', # L=17.714/pb; present in all eras; prescale factor 2027.9 (2032.1 from delivery)
+          'HLT_Ele10_CaloIdM_TrackIdM_CentralPFJet30_BTagCSV_p13', # L=?
         },
         '2mu': {
           'HLT_Mu17', # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
