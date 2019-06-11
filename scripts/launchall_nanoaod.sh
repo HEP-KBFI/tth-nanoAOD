@@ -80,6 +80,7 @@ DRYRUN=""
 export DATASET_FILE=""
 export JOB_TYPE=""
 export PUBLISH=1
+export HLT_FILTER=1
 export CFG_LABEL_STR=""
 
 TYPE_DATA="data"
@@ -91,13 +92,13 @@ show_help() {
   THIS_SCRIPT=$0;
   echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist = ''] " 1>&2;
   echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
-  echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ]" 1>&2;
+  echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ] [ -F <trigger filter: 0|1 = $HLT_FILTER> ]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
 }
 
-while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:" opt; do
+while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:F:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -127,6 +128,8 @@ while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:" opt; do
      ;;
   s) export CFG_LABEL_STR=${OPTARG}
      ;;
+  F) export HLT_FILTER=${OPTARG}
+     ;;
   esac
 done
 
@@ -144,6 +147,11 @@ fi
 
 if [[ $PUBLISH != "0" ]] && [[ $PUBLISH != "1" ]]; then
   echo "Invalid value for the publish option: $PUBLISH";
+  exit 1;
+fi
+
+if [[ $HLT_FILTER != "0" ]] && [[ $HLT_FILTER != "1" ]]; then
+  echo "Invalid value for the HLT filter option: $HLT_FILTER";
   exit 1;
 fi
 
@@ -264,6 +272,7 @@ done < "$FILEBLOCK_LIST"
 echo "Found ${#FILEBLOCK_ARR[@]} datasets with fileblock errors"
 
 MAX_NOF_JOBS=1
+HAS_QCD=false
 declare -A DATASET_ARR
 while read LINE; do
   DATASET_CANDIDATE=$(echo $LINE | awk '{print $1}');
@@ -271,6 +280,9 @@ while read LINE; do
   is_valid_dataset ${DATASET_CANDIDATE};
   if [[ $? != "1" ]]; then
     continue;
+  fi
+  if [ "$DATASET_CANDIDATE" =~ /QCD ]; then
+    HAS_QCD=true;
   fi
 
   DATASET_SPLIT=$(echo "$DATASET_CANDIDATE" | tr '/' ' ');
