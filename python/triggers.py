@@ -119,15 +119,15 @@ class Triggers(object):
           'HLT_IsoMu27', # L=41.527/fb; present in all eras; unprescaled
         },
         '1mu_noiso' : {
-          'HLT_Mu50', # L=?
-          'HLT_Mu55', # L=?
+          'HLT_Mu50', # L=44.171/fb; present in all eras; unprescaled
+          'HLT_Mu55', # L=27.121/fb; present in C, D, E, F; missing in B; slightly prescaled?
         },
         '1e' : {
           'HLT_Ele35_WPTight_Gsf', # L=41.527/fb; present in all eras; unprescaled
           'HLT_Ele32_WPTight_Gsf', # L=27.121/fb; present in D, E, F; missing in B, C; unprescaled
         },
         '1e_noiso' : {
-          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=?
+          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=36.733/fb; present in C, D, E, F; missing in B; unprescaled
         },
         # CV: tau trigger paths taken from slide 6 of presentation given by Hale Sert at HTT workshop in December 2017
         #    (https://indico.cern.ch/event/684622/contributions/2807071/attachments/1575421/2487940/141217_triggerStatusPlans_hsert.pdf),
