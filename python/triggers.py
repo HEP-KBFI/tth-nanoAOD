@@ -42,9 +42,9 @@ class Triggers(object):
           'HLT_IsoTkMu24', # L=35.918/fb; present in all eras; unprescaled
         },
         '1mu_noiso' : {
-          'HLT_Mu45_eta2p1', # L=?
-          'HLT_Mu50', # L=?
-          'HLT_TkMu50', # L=?
+          'HLT_Mu45_eta2p1', # L=24.252/pb; present in all eras; prescaled in runs F, G, H
+          'HLT_Mu50', # L=35.918/pb; present in all eras; unprescaled
+          'HLT_TkMu50', # L=33.182/pb; present in all eras; unprescaled (enabled mid-run B)
         },
         '1e' : {
           'HLT_Ele27_WPTight_Gsf', # L=35.918/fb; present in all eras; unprescaled
@@ -52,8 +52,8 @@ class Triggers(object):
           'HLT_Ele27_eta2p1_WPLoose_Gsf', # L=27.303/fb; present in all eras; heavily prescaled in run H
         },
         '1e_noiso' : {
-          'HLT_Ele105_CaloIdVT_GsfTrkIdT', # L=?
-          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=?
+          'HLT_Ele105_CaloIdVT_GsfTrkIdT', # L=24.252/pb; present in all eras; prescaled in runs F, G, H
+          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=35.918/pb; present in all eras; unprescaled
         },
         '1mu1tau' : {
           'HLT_IsoMu19_eta2p1_LooseIsoPFTau20_SingleL1', # L=35.918/fb; present in all eras; unprescaled
@@ -75,12 +75,11 @@ class Triggers(object):
           'HLT_Mu27', # L=250.508/pb; present in all eras; prescale factor 143.4 (143.0 from delivery)
         },
         '2e' : {
-          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=?
-          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=?
-          'HLT_Ele33_CaloIdM_TrackIdM_PFJet30', # L=?
+          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
+          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
           'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
           'HLT_Ele12_CaloIdM_TrackIdM_PFJet30', # L=17.714/pb; present in all eras; prescale factor 2027.9 (2032.1 from delivery)
-          'HLT_Ele10_CaloIdM_TrackIdM_CentralPFJet30_BTagCSV_p13', # L=?
+          'HLT_Ele10_CaloIdM_TrackIdM_CentralPFJet30_BTagCSV_p13', # L=446.445/pb; present in all eras; prescale factor 80.5 (80.6 from delivery)
         },
         '2mu': {
           'HLT_Mu17', # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
