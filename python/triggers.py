@@ -75,11 +75,11 @@ class Triggers(object):
           'HLT_Mu27', # L=250.508/pb; present in all eras; prescale factor 143.4 (143.0 from delivery)
         },
         '2e' : {
-          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
-          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
+#          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
+#          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
           'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
           'HLT_Ele12_CaloIdM_TrackIdM_PFJet30', # L=17.714/pb; present in all eras; prescale factor 2027.9 (2032.1 from delivery)
-          'HLT_Ele10_CaloIdM_TrackIdM_CentralPFJet30_BTagCSV_p13', # L=446.445/pb; present in all eras; prescale factor 80.5 (80.6 from delivery)
+#          'HLT_Ele10_CaloIdM_TrackIdM_CentralPFJet30_BTagCSV_p13', # L=446.445/pb; present in all eras; prescale factor 80.5 (80.6 from delivery)
         },
         '2mu': {
           'HLT_Mu17', # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
@@ -196,16 +196,16 @@ class Triggers(object):
           'HLT_IsoMu27', # L=59.735/fb; present in all eras; unprescaled
         },
         '1mu_noiso' : {
-          'HLT_Mu50', # L=?
-          'HLT_OldMu100', # L=?
-          'HLT_TkMu100', # L=?
+          'HLT_Mu50', # L=59.735/pb; present in all eras; unprescaled
+          'HLT_OldMu100', # L=59.735/pb; present in all eras; unprescaled
+          'HLT_TkMu100', # L=59.735/pb; present in all eras; unprescaled
         },
         '1e' : {
           'HLT_Ele32_WPTight_Gsf', # L=59.735/fb; present in all eras; unprescaled
           #'HLT_Ele35_WPTight_Gsf', # L=59.735; present in all eras; unprescaled (used by Alexei, but why ?)
         },
         '1e_noiso' : {
-          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=?
+          'HLT_Ele115_CaloIdVT_GsfTrkIdT', # L=59.735/pb; present in all eras; unprescaled
         },
         # CV: tau trigger paths taken from slide 12 of presentation given by Hale Sert at HTT workshop in April 2019
         #    (https://indico.cern.ch/event/803335/contributions/3359970/attachments/1829789/2996369/TriggerStatus_HTTworkshop_hsert.pdf)
@@ -232,8 +232,8 @@ class Triggers(object):
           'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=38.875/pb; present in all eras; prescale factor 1536.7 (1538.4 from delivery)
         },
         '1mu' : {
-          'HLT_Mu12', # L=?
-          'HLT_Mu15',  # L=?
+#          'HLT_Mu12', # L=0.002381428/pb; present in eras A, C, D; missing in B; prescale factor 25086208.8 (12646087.8 from delivery); its prescale is way too high -> to be excluded
+#          'HLT_Mu15',  # L=0.002381428/pb; present in eras A, C, D; missing in B; prescale factor 25086208.8 (12646087.8 from delivery); its prescale is way too high -> to be excluded
           'HLT_Mu27', # L=125.783/pb; present in all eras; prescale factor 475.0 (464.6 from delivery)
           'HLT_Mu20', # L=55.273/pb; present in all eras; prescale factor 1080.8 (1082.1 from delivery)
           'HLT_Mu3_PFJet40', # L=2.695/pb; present in all eras; prescale factor 22160.5 (22182.4 from delivery)
@@ -242,7 +242,7 @@ class Triggers(object):
         '2mu' : {
           'HLT_Mu17', # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery)
           'HLT_Mu8', # L=8.546/pb; present in all eras; prescale factor 6990.5 (6981.9 from delivery)
-          'HLT_Mu19', # L=?
+#          'HLT_Mu19', # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery); probably provides no edge over HLT_Mu17
         },
       }
     else:
