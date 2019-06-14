@@ -536,7 +536,7 @@ while read LINE; do
   DATASET_SPLIT=$(echo "$DATASET" | tr '/' ' ')
   DATASET_THIRD_PART=$(echo "$DATASET_SPLIT" | awk '{print $3}')
 
-  export HLT_FILTER_OPT="";
+  export HLT_FILTER_OPT="none";
   if [[ $HLT_FILTER == "1" ]]; then
     export HLT_FILTER_OPT="all";
     if [[ "$DATASET" =~ /QCD ]]; then
