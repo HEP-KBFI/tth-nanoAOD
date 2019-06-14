@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#set -x
-
 # DO NOT SOURCE! IT MAY KILL YOUR SHELL!
 
 # GT choices based on: https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVAnalysisSummaryTable
@@ -469,11 +467,6 @@ fi
 
 if [ $GENERATE_CFGS_ONLY = true ]; then
   exit 0;
-fi
-
-if [ "$YEAR" == "2018" ]; then
-  echo "Cannot submit jobs for 2018 era, yet (update in PAT*Selector* plugins)";
-  exit 1;
 fi
 
 check_if_exists "$JSON_LUMI"
