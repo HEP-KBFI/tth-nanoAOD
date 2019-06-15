@@ -131,7 +131,7 @@ parser.add_argument('-N', '--max-files', dest = 'max_files', metavar = 'int', re
 parser.add_argument('-g', '--global-tag', dest = 'global_tag', metavar = 'tag', required = True, type = str,
                     help = 'R|Global tag')
 parser.add_argument('-F', '--force', dest = 'force', action = 'store_true', default = False,
-                    help = "R|Force the creation of output directory if it doesn't exist")
+                    help = "R|Force rerunning the xsecAnalyzer job even if the output already exists")
 parser.add_argument('-t', '--threads', dest = 'threads', metavar = 'int', required = False, type = int, default = 8,
                     help = 'R|Size of the thread pool')
 parser.add_argument('-s', '--skip-jobs', dest = 'skip_jobs', action = 'store_true', default = False,
