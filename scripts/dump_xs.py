@@ -75,7 +75,8 @@ def run_cmd(command):
 
 def print_xs(cmsrun_logfile):
   if not os.path.isfile(cmsrun_logfile):
-    raise RuntimeError('Could not find %s' % cmsrun_logfile)
+    logging.warning('Could not find {}'.format(cmsrun_logfile))
+    return False
   xs_actual = -1.
   xs_err_actual = -1.
   xs_units = ''
