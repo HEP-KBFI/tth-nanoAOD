@@ -137,7 +137,7 @@ for category_entry in json_data:
     xs_references = sample_entry['xs']['references']
 
     if xs_value > 1e6:
-      xs_value = '%.3e' % xs_value
+      xs_value = '%.5e' % xs_value
 
     if not eras_initialized:
       for era in sample_entry['datasets']:
