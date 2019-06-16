@@ -491,7 +491,7 @@
           "value": 0.05324,
           "order": "LO ?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -707,7 +707,7 @@
           "value": 0.006983,
           "order": "?",
           "references": [],
-          "comment": "error 4.038e-06; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "error 4.038e-06; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       }
     ]
@@ -2053,7 +2053,7 @@
           "value": 0.04932,
           "order": "?",
           "references": [],
-          "comment": "error 2.831e-05; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "error 2.831e-05; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2095,7 +2095,7 @@
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043"
           ],
-          "comment": "1.64 * (1 - 0.674)^2; although:; measured 0.162600 +/- 0.000234 in 17v2 sample with xsecAnalyzer"
+          "comment": "1.64 * (1 - 0.674)^2; although:; measured 0.162600 +/- 0.000234 in 17v2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2140,7 +2140,7 @@
           "value": 0.008213,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2181,7 +2181,7 @@
           "value": 0.001141,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2222,7 +2222,7 @@
           "value": 0.001131,
           "order": "?",
           "references": [],
-          "comment": "error 5.965e-07; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "error 5.965e-07; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2263,7 +2263,7 @@
           "value": 0.0007317,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2304,7 +2304,7 @@
           "value": 0.0003973,
           "order": "?",
           "references": [],
-          "comment": "error 1.707e-07; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "error 1.707e-07; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2594,7 +2594,7 @@
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
           ],
-          "comment": "15820; measured in RunIIFall17MiniAOD sample with xsecAnalyzer; k-factor = 18610 / 15820 = 1.1764"
+          "comment": "15820; weighted average of 2017v2 and 2018 samples with xsecAnalyzer; k-factor = 18610 / 15820 = 1.1764"
         }
       },
       {
@@ -2633,7 +2633,7 @@
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
           ],
-          "comment": "15820; measured in RunIIFall17MiniAOD sample with xsecAnalyzer; k-factor = 18610 / 15820 = 1.1764"
+          "comment": "15820; weighted average of 2017v2 and 2018 samples with xsecAnalyzer; k-factor = 18610 / 15820 = 1.1764"
         }
       },
       {
@@ -2885,7 +2885,7 @@
           "value": 239.63,
           "order": "NLO",
           "references": [],
-          "comment": "(203.8 + 203.6) / 2 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer"
+          "comment": "(203.8 + 203.6) / 2 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -2966,7 +2966,7 @@
           "value": 63.79,
           "order": "NLO",
           "references": [],
-          "comment": "(54.23 + 54.22) / 2 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer"
+          "comment": "(54.23 + 54.22) / 2 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3047,7 +3047,7 @@
           "value": 6.726,
           "order": "NLO",
           "references": [],
-          "comment": "(5.724 + 5.711) / 2 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer"
+          "comment": "(5.724 + 5.711) / 2 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3123,7 +3123,7 @@
           "value": 2.172,
           "order": "NLO",
           "references": [],
-          "comment": "1.846 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer"
+          "comment": "1.846 * 1.1764; measured in RunIIFall17MiniAOD samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3184,7 +3184,7 @@
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
           ],
-          "comment": "1921.8 * 3; 5344; measured in RunIIFall17MiniAOD sample with xsecAnalyzer; k-factor = 5765.4 / 5344 = 1.0789"
+          "comment": "1921.8 * 3; 5344; weighted average of 2017v2 and 2018 samples with xsecAnalyzer; k-factor = 5765.4 / 5344 = 1.0789"
         }
       },
       {
@@ -3291,7 +3291,7 @@
           "value": 945.24,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "(876.4 + 875.9) / 2 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "(876.4 + 875.9) / 2 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3340,7 +3340,7 @@
           "value": 330.99,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "(306.9 + 306.7) / 2 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "(306.9 + 306.7) / 2 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3389,7 +3389,7 @@
           "value": 120.72,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "111.9 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "111.9 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3428,7 +3428,7 @@
           "value": 47.47,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "44 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "44 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3460,7 +3460,7 @@
           "value": 158.49,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "146.90 * 1.0789; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "146.90 * 1.0789; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3520,7 +3520,7 @@
           "value": 173.53,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "(160.9 + 160.8) / 2 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "(160.9 + 160.8) / 2 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3580,7 +3580,7 @@
           "value": 53.0,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "(48.67 + 48.47) / 2 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "(48.67 + 48.47) / 2 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3644,7 +3644,7 @@
           "value": 7.539,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "(6.984 + 6.992) / 2 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "(6.984 + 6.992) / 2 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3684,7 +3684,7 @@
           "value": 1.8815,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "1.744 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "1.744 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3724,7 +3724,7 @@
           "value": 0.8684,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "0.8049 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "0.8049 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3764,7 +3764,7 @@
           "value": 0.2079,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "0.1927 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "0.1927 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3804,7 +3804,7 @@
           "value": 0.003749,
           "order": "NNLO QCD, NLO EW",
           "references": [],
-          "comment": "0.003475 * 1.0789; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "0.003475 * 1.0789; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3848,7 +3848,7 @@
           "value": 14.59,
           "order": "?",
           "references": [],
-          "comment": "error 0.008413; measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "error 0.008413; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -3982,7 +3982,7 @@
           "value": 9418.44,
           "order": "NNLO",
           "references": [],
-          "comment": "8104 * 1.1622; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)"
+          "comment": "8104 * 1.1622; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (needs to be updated!)"
         }
       },
       {
@@ -4031,7 +4031,7 @@
           "value": 3244.85,
           "order": "NNLO",
           "references": [],
-          "comment": "2792 * 1.16222; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)"
+          "comment": "2792 * 1.16222; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (needs to be updated!)"
         }
       },
       {
@@ -4080,7 +4080,7 @@
           "value": 1153.02,
           "order": "NNLO",
           "references": [],
-          "comment": "992.1 * 1.1622; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)"
+          "comment": "992.1 * 1.1622; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (needs to be updated!)"
         }
       },
       {
@@ -4133,7 +4133,7 @@
           "value": 633.05,
           "order": "NNLO",
           "references": [],
-          "comment": "'; 544.7 * 1.1622; measured in RunIIFall17MiniAOD sample with xsecAnalyzer (needs to be updated!)"
+          "comment": "'; 544.7 * 1.1622; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (needs to be updated!)"
         }
       },
       {
@@ -4168,7 +4168,7 @@
           "value": 1502.72,
           "order": "NNLO",
           "references": [],
-          "comment": "'; 1293 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "'; 1293 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4217,7 +4217,7 @@
           "value": 1625.94,
           "order": "NNLO",
           "references": [],
-          "comment": "1394 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "1394 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4270,7 +4270,7 @@
           "value": 477.52,
           "order": "NNLO",
           "references": [],
-          "comment": "409.4 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "409.4 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4319,7 +4319,7 @@
           "value": 67.51,
           "order": "NNLO",
           "references": [],
-          "comment": "57.88 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "57.88 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4364,7 +4364,7 @@
           "value": 15.09,
           "order": "NNLO",
           "references": [],
-          "comment": "12.94 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "12.94 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4413,7 +4413,7 @@
           "value": 6.297,
           "order": "NNLO",
           "references": [],
-          "comment": "5.399 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "5.399 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4462,7 +4462,7 @@
           "value": 1.262,
           "order": "NNLO",
           "references": [],
-          "comment": "1.082 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "1.082 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -4507,7 +4507,7 @@
           "value": 0.009446,
           "order": "NNLO",
           "references": [],
-          "comment": "0.008099 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer"
+          "comment": "0.008099 * 1.1622; measured in RunIIFall17MiniAODv2 sample with xsecAnalyzer (error:  or )"
         }
       },
       {
@@ -5410,10 +5410,10 @@
           ]
         },
         "xs": {
-          "value": 187000.0,
+          "value": 186900.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 177.7 or 0.10%)"
         }
       },
       {
@@ -5449,10 +5449,10 @@
           ]
         },
         "xs": {
-          "value": 305500.0,
+          "value": 305561.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 207.04 or 0.07%)"
         }
       },
       {
@@ -5491,7 +5491,7 @@
           "value": 361100.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 258.95 or 0.07%)"
         }
       },
       {
@@ -5529,10 +5529,10 @@
           ]
         },
         "xs": {
-          "value": 33830.0,
+          "value": 33813.5,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 14.144 or 0.04%)"
         }
       },
       {
@@ -5568,10 +5568,10 @@
           ]
         },
         "xs": {
-          "value": 2129.0,
+          "value": 2129.17,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4371 or 0.07%)"
         }
       },
       {
@@ -5607,10 +5607,10 @@
           ]
         },
         "xs": {
-          "value": 562.8,
+          "value": 562.899,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.96174 or 0.17%)"
         }
       },
       {
@@ -5642,7 +5642,7 @@
           "value": 1324000.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 920.0 or 0.07%)"
         }
       },
       {
@@ -5678,10 +5678,10 @@
           ]
         },
         "xs": {
-          "value": 4910000.0,
+          "value": 4911560.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1951.6 or 0.04%)"
         }
       },
       {
@@ -5728,10 +5728,10 @@
           ]
         },
         "xs": {
-          "value": 6415000.0,
+          "value": 6417530.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 2296.7 or 0.04%)"
         }
       },
       {
@@ -5777,10 +5777,10 @@
           ]
         },
         "xs": {
-          "value": 1986000.0,
+          "value": 1987020.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1005.5 or 0.05%)"
         }
       },
       {
@@ -5829,7 +5829,7 @@
           "value": 366500.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 159.33 or 0.04%)"
         }
       },
       {
@@ -5878,7 +5878,7 @@
           "value": 66510.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 29.049 or 0.04%)"
         }
       },
       {
@@ -5910,10 +5910,10 @@
           ]
         },
         "xs": {
-          "value": 16430.0,
+          "value": 16560.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 8.053 or 0.05%)"
         }
       },
       {
@@ -5949,10 +5949,10 @@
           ]
         },
         "xs": {
-          "value": 1099.0,
+          "value": 1099.5,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.8645 or 0.08%)"
         }
       },
       {
@@ -5988,10 +5988,10 @@
           ]
         },
         "xs": {
-          "value": 2808000.0,
+          "value": 2809320.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1749.9 or 0.06%)"
         }
       },
       {
@@ -6027,10 +6027,10 @@
           ]
         },
         "xs": {
-          "value": 2530000.0,
+          "value": 2530520.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 658.9 or 0.03%)"
         }
       },
       {
@@ -6066,10 +6066,10 @@
           ]
         },
         "xs": {
-          "value": 1368000.0,
+          "value": 1367000.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 682.3 or 0.05%)"
         }
       },
       {
@@ -6105,10 +6105,10 @@
           ]
         },
         "xs": {
-          "value": 378000.0,
+          "value": 377900.0,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 148.91 or 0.04%)"
         }
       },
       {
@@ -6159,10 +6159,10 @@
           ]
         },
         "xs": {
-          "value": 88580.0,
+          "value": 88604.2,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 114.304 or 0.13%)"
         }
       },
       {
@@ -6213,10 +6213,10 @@
           ]
         },
         "xs": {
-          "value": 21170.0,
+          "value": 21195.2,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 27.058 or 0.13%)"
         }
       },
       {
@@ -6270,10 +6270,10 @@
           ]
         },
         "xs": {
-          "value": 7025.0,
+          "value": 7022.81,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 7.3513 or 0.10%)"
         }
       },
       {
@@ -6332,10 +6332,10 @@
           ]
         },
         "xs": {
-          "value": 620.5,
+          "value": 620.297,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.87521 or 0.14%)"
         }
       },
       {
@@ -6394,10 +6394,10 @@
           ]
         },
         "xs": {
-          "value": 59.11,
+          "value": 59.0886,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.082623 or 0.14%)"
         }
       },
       {
@@ -6451,10 +6451,10 @@
           ]
         },
         "xs": {
-          "value": 18.36,
+          "value": 18.2102,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.023961 or 0.13%)"
         }
       },
       {
@@ -6509,10 +6509,10 @@
           ]
         },
         "xs": {
-          "value": 3.275,
+          "value": 3.27549,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0016753 or 0.05%)"
         }
       },
       {
@@ -6561,7 +6561,7 @@
           "value": 1.079,
           "order": "?",
           "references": [],
-          "comment": "measured in RunIIFall17MiniAOD sample with xsecAnalyzer"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0004342 or 0.04%)"
         }
       }
     ]

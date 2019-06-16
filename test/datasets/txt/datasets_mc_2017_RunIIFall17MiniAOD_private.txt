@@ -1,4 +1,4 @@
-# file generated at 2019-06-14 02:46:27 with the following command:
+# file generated at 2019-06-16 05:10:18 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # THq
@@ -11,7 +11,7 @@
 /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17/private/USER 1 TT    ST_tWll_PSweights_private 0.01103 /store/user/kaehatah/private/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV_madgraph_pythia8_Fall17  # LO [2]
 
 # misc
-/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/USER          1 Rares WpWpJJ_EWK_QCD_private    0.04932 /store/user/kaehatah/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17           # ?; error 2.831e-05; measured in RunIIFall17MiniAOD sample with xsecAnalyzer
+/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17/private/USER          1 Rares WpWpJJ_EWK_QCD_private    0.04932 /store/user/kaehatah/private/WpWpJJ_EWK_QCD_TuneCP5_13TeV_madgraph_pythia8_Fall17           # ?; error 2.831e-05; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )
 
 # VH
 /VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17/private/USER      1 VH    VHToNonbb_M125_private    0.9425  /store/user/kaehatah/private/VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8_Fall17       # N3LO WH + NNLO ZH [3][4]
