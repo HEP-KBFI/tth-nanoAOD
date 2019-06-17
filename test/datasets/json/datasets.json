@@ -1497,12 +1497,10 @@
           ]
         },
         "xs": {
-          "value": 0.2086,
-          "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "value": 0.2154,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00034083 or 0.16%)"
         }
       },
       {
@@ -1539,12 +1537,10 @@
           ]
         },
         "xs": {
-          "value": 0.1651,
-          "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "value": 0.1676,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00024183 or 0.14%)"
         }
       },
       {
@@ -1582,11 +1578,9 @@
         },
         "xs": {
           "value": 0.05565,
-          "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2016v3 and 2017v2 samples with xsecAnalyzer (error: 7.77818e-05 or 0.14%); 2018 yielded 0.05701 +/- 6.1e-05"
         }
       },
       {
@@ -1623,12 +1617,10 @@
           ]
         },
         "xs": {
-          "value": 0.01398,
-          "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "value": 0.01473,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 2.4042e-05 or 0.16%)"
         }
       },
       {
@@ -1664,12 +1656,10 @@
           ]
         },
         "xs": {
-          "value": 0.04123,
+          "value": 0.04345,
           "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 6.364e-05 or 0.15%)"
         }
       },
       {
@@ -1719,12 +1709,10 @@
           ]
         },
         "xs": {
-          "value": 405.271,
-          "order": "LO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "value": 464.7,
+          "order": "NLO",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.20266 or 0.04%)"
         }
       },
       {
@@ -1750,6 +1738,25 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 123.9,
+          "order": "NLO",
+          "references": [],
+          "comment": "2016v3 sample with xsecAnalyzer (error: 0.1679 or 0.14%); min pt(l) = 0; min mll(SS) = 30; max 5f jets?"
+        }
+      },
+      {
+        "name": "ZGTo2LG_01J",
+        "enabled": 1,
+        "use_case": "irreducible background",
+        "process": "W/Z+gamma",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM"
@@ -1758,17 +1765,15 @@
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",
-              "alt": "ZGTo2LG_ext1"
+              "alt": "ZGTo2LG_01J_ext1"
             }
           ]
         },
         "xs": {
-          "value": 117.864,
-          "order": "LO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "value": 55.4871,
+          "order": "NLO",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.140731 or 0.25%); min pt(l) = 15; min mll(SS) = 0; max 4f jets?"
         }
       },
       {
@@ -1806,12 +1811,10 @@
           ]
         },
         "xs": {
-          "value": 2.967,
-          "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "value": 1.018,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0059227 or 0.58%)"
         }
       },
       {
@@ -1867,12 +1870,10 @@
           ]
         },
         "xs": {
-          "value": 3.697,
+          "value": 4.13755,
           "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0150618 or 0.36%)"
         }
       },
       {
@@ -1914,7 +1915,7 @@
         },
         "xs": {
           "value": 3.0469,
-          "order": "?",
+          "order": "N3LO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
@@ -1957,7 +1958,7 @@
         },
         "xs": {
           "value": 0.2372,
-          "order": "?",
+          "order": "NNLO QCD + NLO EW",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
@@ -2007,12 +2008,10 @@
           ]
         },
         "xs": {
-          "value": 0.0758,
+          "value": 0.07358,
           "order": "NLO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
-          ],
-          "comment": ""
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0002786 or 0.38%)"
         }
       },
       {
@@ -2050,10 +2049,10 @@
           ]
         },
         "xs": {
-          "value": 0.04932,
+          "value": 0.0492899,
           "order": "?",
           "references": [],
-          "comment": "error 2.831e-05; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 4.0311e-05 or 0.08%)"
         }
       },
       {
@@ -2089,13 +2088,12 @@
           ]
         },
         "xs": {
-          "value": 0.1743,
+          "value": 0.20147,
           "order": "LO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043"
           ],
-          "comment": "1.64 * (1 - 0.674)^2; although:; measured 0.162600 +/- 0.000234 in 17v2 sample with xsecAnalyzer (error:  or )"
+          "comment": "XS(WW_DPS) * (1 - 0.674)^2, where XS(WW_DPS) = 1.8957 is the weighted XS from 2017v2 and 2018 inclusive WW DPS sample; direct measurements are wildly different: 0.1697 +/- 0.000262 (2016v3), 0.1626 +/- 0.000234 (2017v2), 0.2232 +/- 0.000338 (2018)"
         }
       },
       {
@@ -2140,7 +2138,7 @@
           "value": 0.008213,
           "order": "?",
           "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 2.07846e-05 or 0.25%)"
         }
       },
       {
@@ -2178,10 +2176,10 @@
           ]
         },
         "xs": {
-          "value": 0.001141,
+          "value": 0.00114,
           "order": "?",
           "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)"
         }
       },
       {
@@ -2219,10 +2217,10 @@
           ]
         },
         "xs": {
-          "value": 0.001131,
+          "value": 0.0011305,
           "order": "?",
           "references": [],
-          "comment": "error 5.965e-07; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.13%)"
         }
       },
       {
@@ -2260,10 +2258,10 @@
           ]
         },
         "xs": {
-          "value": 0.0007317,
+          "value": 0.000732,
           "order": "?",
           "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)"
         }
       },
       {
@@ -2301,10 +2299,10 @@
           ]
         },
         "xs": {
-          "value": 0.0003973,
+          "value": 0.000397,
           "order": "?",
           "references": [],
-          "comment": "error 1.707e-07; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error:  or )"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)"
         }
       },
       {
@@ -2342,12 +2340,10 @@
           ]
         },
         "xs": {
-          "value": 0.002441,
-          "order": "LO",
-          "references": [
-            "https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTWZ_TuneCP5_13TeV-madgraph-pythia8"
-          ],
-          "comment": ""
+          "value": 0.0024455,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.06%)"
         }
       },
       {
@@ -2385,12 +2381,10 @@
           ]
         },
         "xs": {
-          "value": 0.001386,
-          "order": "LO",
-          "references": [
-            "https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTZZ_TuneCP5_13TeV-madgraph-pythia8"
-          ],
-          "comment": ""
+          "value": 0.0013865,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.10%)"
         }
       }
     ]
@@ -2440,7 +2434,7 @@
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
           ],
-          "comment": ""
+          "comment": "(s(wh) + s(zh)) * (1 - br(h -> bb))"
         }
       },
       {
