@@ -52,10 +52,11 @@ def parse_lines(lines):
     else:
       assert(nof_jobs == counts[1])
 
-  assert(sum(parsed.values()) == nof_jobs)
+  if nof_jobs < 0:
+    assert(not parsed)
   return parsed
 
-def plot(all_states, output, nof_tasks, nof_completed_tasks):
+def plot(all_states, output, nof_tasks, nof_completed_tasks, title):
   vals   = list(map(lambda kv: kv[1], all_states))
   labels = list(map(lambda kv: kv[0], all_states))
   cols   = list(map(lambda lab: COLMAP[lab], labels))
@@ -86,7 +87,9 @@ def plot(all_states, output, nof_tasks, nof_completed_tasks):
     prop = { 'size' : 12 },
   )
 
-  ax.set_title("%d jobs in %d tasks (%d completed)" % (tot, nof_tasks, nof_completed_tasks))
+  ax.set_title(
+    "{}{} jobs in {} tasks ({} completed)".format('%s: ' % title if title else '',  tot, nof_tasks, nof_completed_tasks)
+  )
 
   plt.savefig(output, bbox_inches = 'tight')
   logging.info("Saved figure to: {}".format(output))
@@ -110,6 +113,10 @@ if __name__ == '__main__':
     help = 'R|Output image',
   )
   parser.add_argument(
+    '-t', '--title', dest = 'title', metavar = 'text', required = False, type = str, default = '',
+    help = 'R|Additional title to the plot',
+  )
+  parser.add_argument(
     '-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
     help = 'R|Enable verbose printout',
   )
@@ -124,6 +131,7 @@ if __name__ == '__main__':
   in_dir  = args.input
   pattern = re.compile(args.pattern)
   output  = args.output
+  title   = args.title
 
   lines = {}
   for subdir in os.listdir(in_dir):
@@ -152,7 +160,11 @@ if __name__ == '__main__':
         if record:
           lines_to_parse.append(line_stripped)
     lines[subdir] = parse_lines(lines_to_parse)
-    logging.debug("Task {}: {}".format(subdir, ', '.join(list(map(lambda kv: '%s -> %d' % kv, lines[subdir].items())))))
+    if not lines[subdir]:
+      logging.error("No job statistics for task: {}".format(subdir))
+      del lines[subdir]
+    else:
+      logging.debug("Task {}: {}".format(subdir, ', '.join(list(map(lambda kv: '%s -> %d' % kv, lines[subdir].items())))))
 
   nof_completed_tasks = len(filter(lambda kv: len(kv[1]) == 1 and 'finished' in kv[1], lines.items()))
   all_states = {}
@@ -163,4 +175,4 @@ if __name__ == '__main__':
       all_states[state] += values
 
   all_states_sorted = sorted(all_states.items(), key = lambda kv: kv[1], reverse = True)
-  plot(all_states_sorted, output, len(lines), nof_completed_tasks)
+  plot(all_states_sorted, output, len(lines), nof_completed_tasks, title)
