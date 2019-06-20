@@ -22,7 +22,7 @@ CONFIG = {
   '2018' : {
     'json'   : 'Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt',
     'pileup' : 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/PileUp/pileup_latest.txt',
-    'md5sum' : '003a9242de4bcc47d765887f2a726af9',
+    'md5sum' : '328bc8dd78121616f440f57ac8f811e2',
   },
 }
 
