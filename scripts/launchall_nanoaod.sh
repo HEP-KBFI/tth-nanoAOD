@@ -82,6 +82,7 @@ export JOB_TYPE=""
 export PUBLISH=0
 export HLT_FILTER=0
 export CFG_LABEL_STR=""
+DATASETS_EXCLUDE_FILE=""
 
 TYPE_DATA="data"
 TYPE_MC="mc"
@@ -92,13 +93,14 @@ show_help() {
   THIS_SCRIPT=$0;
   echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist = ''] " 1>&2;
   echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
-  echo     "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ] [ -F <trigger filter: 0|1 = $HLT_FILTER> ]" 1>&2;
+  echo -ne "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ] [ -F <trigger filter: 0|1 = $HLT_FILTER> ]" 1>&2;
+  echo     "[-x <file listing datasets to exclude> = '' ]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
 }
 
-while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:F:" opt; do
+while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:F:x:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -129,6 +131,8 @@ while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:F:" opt; do
   s) export CFG_LABEL_STR=${OPTARG}
      ;;
   F) export HLT_FILTER=${OPTARG}
+     ;;
+  x) DATASETS_EXCLUDE_FILE=${OPTARG}
      ;;
   esac
 done
@@ -263,6 +267,24 @@ fi
 
 check_if_exists "$DATASET_FILE"
 check_if_exists "$FILEBLOCK_LIST"
+
+DATASETS_EXCLUDE=()
+if [ ! -z "$DATASETS_EXCLUDE_FILE" ]; then
+  if [ ! -f "$DATASETS_EXCLUDE_FILE" ]; then
+    echo "File $DATASETS_EXCLUDE_FILE does not exist";
+    exit 1;
+  fi
+
+  IFS=$'\r\n' GLOBIGNORE='*' command eval  'DATASETS_EXCLUDE=($(cat $DATASETS_EXCLUDE_FILE))'
+fi
+
+for DATASET_TO_EXCLUDE in "${DATASETS_EXCLUDE[@]}"; do
+  is_valid_dataset ${DATASET_TO_EXCLUDE};
+  if [[ $? != "1" ]]; then
+    echo "Not a valid dataset: ${DATASET_TO_EXCLUDE}";
+    exit 1;
+  fi
+done
 
 declare -A FILEBLOCK_ARR
 while read -r LINE; do
@@ -523,6 +545,19 @@ while read LINE; do
 
   is_valid_dataset ${DATASET};
   if [[ $? != "1" ]]; then
+    continue;
+  fi
+
+  IS_EXCLUDED=false;
+  for DATASET_TO_EXCLUDE in "${DATASETS_EXCLUDE[@]}"; do
+    if [[ "$DATASET" == "$DATASET_TO_EXCLUDE" ]]; then
+      IS_EXCLUDED=true;
+      break;
+    fi
+  done
+
+  if [ $IS_EXCLUDED = true ]; then
+    echo "$DATASET is exempt from CRAB submission";
     continue;
   fi
 
