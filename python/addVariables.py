@@ -376,3 +376,5 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
     process.MessageLogger.suppressInfo.append('mergedGenParticles')
     process.MessageLogger.suppressWarning.append('genJetAK8FlavourAssociation')
     process.MessageLogger.suppressWarning.append('mergedGenParticles')
+
+  process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
