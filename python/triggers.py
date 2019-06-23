@@ -71,20 +71,16 @@ class Triggers(object):
 
       self.triggers_leptonFR = {
         '1e' : set(),
-        '1mu': {
-          'HLT_Mu27', # L=250.508/pb; present in all eras; prescale factor 143.4 (143.0 from delivery)
-        },
+        '1mu': set(),
         '2e' : {
-#          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
-#          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
+          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
           'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
-          'HLT_Ele12_CaloIdM_TrackIdM_PFJet30', # L=17.714/pb; present in all eras; prescale factor 2027.9 (2032.1 from delivery)
-#          'HLT_Ele10_CaloIdM_TrackIdM_CentralPFJet30_BTagCSV_p13', # L=446.445/pb; present in all eras; prescale factor 80.5 (80.6 from delivery)
+          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         },
         '2mu': {
-          'HLT_Mu17', # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
-          'HLT_Mu8', # L=3.937/pb; present in all eras; prescale factor 9123.1 (9081.0 from delivery)
           'HLT_Mu3_PFJet40', # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
+          'HLT_Mu8',  # L=3.937/pb; present in all eras; prescale factor 9123.1 (9081.0 from delivery)
+          'HLT_Mu17',  # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
         },
       }
     elif era == "2017":
@@ -155,14 +151,14 @@ class Triggers(object):
           'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=38.216/pb; present in C, D, E, F, missing in B; prescale factor 1086.7 (1101.5 from delivery)
         },
         '1mu' : {
-          'HLT_Mu27', # L=184.944/pb; present in all eras; prescale factor 224.5 (216.1 from delivery)
-          'HLT_Mu20', # L=574.1/pb; present in all eras; prescale factor 72.3 (73.9 from delivery)
           'HLT_Mu3_PFJet40', # L=4.611/pb; present in C, D, E, F, missing in B; prescale factor 9005.6 (8870.8 from delivery)
+          'HLT_Mu20',  # L=574.1/pb; present in all eras; prescale factor 72.3 (73.9 from delivery)
+          'HLT_Mu27',  # L=184.944/pb; present in all eras; prescale factor 224.5 (216.1 from delivery)
         },
         '2e' : set(),
         '2mu' : {
+          'HLT_Mu8',  # L=2.605/pb; present in all eras; prescale factor 15943.0 (15120.6 from delivery)
           'HLT_Mu17', # L=70.038/pb; present in all eras; prescale factor 592.9 (600.1 from delivery)
-          'HLT_Mu8', # L=2.605/pb; present in all eras; prescale factor 15943.0 (15120.6 from delivery)
         },
       }
     elif era == "2018":
@@ -232,17 +228,14 @@ class Triggers(object):
           'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=38.875/pb; present in all eras; prescale factor 1536.7 (1538.4 from delivery)
         },
         '1mu' : {
-#          'HLT_Mu12', # L=0.002381428/pb; present in eras A, C, D; missing in B; prescale factor 25086208.8 (12646087.8 from delivery); its prescale is way too high -> to be excluded
-#          'HLT_Mu15',  # L=0.002381428/pb; present in eras A, C, D; missing in B; prescale factor 25086208.8 (12646087.8 from delivery); its prescale is way too high -> to be excluded
-          'HLT_Mu27', # L=125.783/pb; present in all eras; prescale factor 475.0 (464.6 from delivery)
-          'HLT_Mu20', # L=55.273/pb; present in all eras; prescale factor 1080.8 (1082.1 from delivery)
           'HLT_Mu3_PFJet40', # L=2.695/pb; present in all eras; prescale factor 22160.5 (22182.4 from delivery)
+          'HLT_Mu20',  # L=55.273/pb; present in all eras; prescale factor 1080.8 (1082.1 from delivery)
+          'HLT_Mu27',  # L=125.783/pb; present in all eras; prescale factor 475.0 (464.6 from delivery)
         },
         '2e' : set(),
         '2mu' : {
+          'HLT_Mu8',  # L=8.546/pb; present in all eras; prescale factor 6990.5 (6981.9 from delivery)
           'HLT_Mu17', # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery)
-          'HLT_Mu8', # L=8.546/pb; present in all eras; prescale factor 6990.5 (6981.9 from delivery)
-#          'HLT_Mu19', # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery); probably provides no edge over HLT_Mu17
         },
       }
     else:
