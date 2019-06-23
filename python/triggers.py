@@ -1,3 +1,4 @@
+from tthAnalysis.NanoAOD.LeptonFakeRate_trigger_cfi import leptonFR_triggers
 
 class Triggers(object):
 
@@ -69,20 +70,6 @@ class Triggers(object):
         },
       }
 
-      self.triggers_leptonFR = {
-        '1e' : set(),
-        '1mu': set(),
-        '2e' : {
-          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
-          'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
-          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
-        },
-        '2mu': {
-          'HLT_Mu3_PFJet40', # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
-          'HLT_Mu8',  # L=3.937/pb; present in all eras; prescale factor 9123.1 (9081.0 from delivery)
-          'HLT_Mu17',  # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
-        },
-      }
     elif era == "2017":
       self.triggers_analysis = {
         '3mu' : {
@@ -144,23 +131,6 @@ class Triggers(object):
         },
       }
 
-      self.triggers_leptonFR = {
-        '1e' : {
-          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=3.654/pb; present in C, D, E, F, missing in B; prescale factor 11363.9 (11029.2 from delivery)
-          'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=35.593/pb; present in C, D, E, F, missing in B; prescale factor 1166.8 (1181.3 from delivery)
-          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=38.216/pb; present in C, D, E, F, missing in B; prescale factor 1086.7 (1101.5 from delivery)
-        },
-        '1mu' : {
-          'HLT_Mu3_PFJet40', # L=4.611/pb; present in C, D, E, F, missing in B; prescale factor 9005.6 (8870.8 from delivery)
-          'HLT_Mu20',  # L=574.1/pb; present in all eras; prescale factor 72.3 (73.9 from delivery)
-          'HLT_Mu27',  # L=184.944/pb; present in all eras; prescale factor 224.5 (216.1 from delivery)
-        },
-        '2e' : set(),
-        '2mu' : {
-          'HLT_Mu8',  # L=2.605/pb; present in all eras; prescale factor 15943.0 (15120.6 from delivery)
-          'HLT_Mu17', # L=70.038/pb; present in all eras; prescale factor 592.9 (600.1 from delivery)
-        },
-      }
     elif era == "2018":
       self.triggers_analysis = {
         '3mu' : {
@@ -220,26 +190,15 @@ class Triggers(object):
           'HLT_DoubleMediumChargedIsoPFTauHPS35_Trk1_eta2p1_Reg', # L=59.735/fb; present in all eras; unprescaled
         },
       }
-
-      self.triggers_leptonFR = {
-        '1e' : {
-          'HLT_Ele8_CaloIdM_TrackIdM_PFJet30', # L=6.411/pb; present in all eras; prescale factor 9318.5 (9325.6 from delivery)
-          'HLT_Ele17_CaloIdM_TrackIdM_PFJet30', # L=38.861/pb; present in all eras; prescale factor 1537.3 (1538.9 from delivery)
-          'HLT_Ele23_CaloIdM_TrackIdM_PFJet30', # L=38.875/pb; present in all eras; prescale factor 1536.7 (1538.4 from delivery)
-        },
-        '1mu' : {
-          'HLT_Mu3_PFJet40', # L=2.695/pb; present in all eras; prescale factor 22160.5 (22182.4 from delivery)
-          'HLT_Mu20',  # L=55.273/pb; present in all eras; prescale factor 1080.8 (1082.1 from delivery)
-          'HLT_Mu27',  # L=125.783/pb; present in all eras; prescale factor 475.0 (464.6 from delivery)
-        },
-        '2e' : set(),
-        '2mu' : {
-          'HLT_Mu8',  # L=8.546/pb; present in all eras; prescale factor 6990.5 (6981.9 from delivery)
-          'HLT_Mu17', # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery)
-        },
-      }
+      
     else:
       raise ValueError("Invalid era: %s" % era)
+  
+    self.triggers_leptonFR = {}
+    for trigger_type in [ '1e', '1mu', '2e', '2mu' ]:
+      self.triggers_leptonFR[trigger_type] = {
+        hlt.path.value() for hlt in leptonFR_triggers[era][trigger_type[1:]] if hlt.trigger_type.value() == trigger_type
+      }
 
     self.triggers_all = {}
     for trigger_name in list(set(self.triggers_analysis.keys()) | set(self.triggers_leptonFR.keys())):
