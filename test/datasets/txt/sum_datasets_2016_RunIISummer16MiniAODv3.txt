@@ -1,4 +1,4 @@
-# file generated at 2019-06-17 04:13:32 with the following command:
+# file generated at 2019-06-24 15:01:49 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 TTZToLL_M10_ext2                        TTZToLL_M10_ext3
@@ -24,7 +24,7 @@ WJetsToLNu_madgraphMLM                  WJetsToLNu_madgraphMLM_ext2
 W2JetsToLNu                             W2JetsToLNu_ext1
 W3JetsToLNu                             W3JetsToLNu_ext1
 W4JetsToLNu                             W4JetsToLNu_ext2
-WJetsToLNu_HT100To200                   WJetsToLNu_HT100To200_ext1
+WJetsToLNu_HT100To200                   WJetsToLNu_HT100To200_ext1                        WJetsToLNu_HT100To200_ext2
 WJetsToLNu_HT200To400                   WJetsToLNu_HT200To400_ext1                        WJetsToLNu_HT200To400_ext2
 WJetsToLNu_HT400To600                   WJetsToLNu_HT400To600_ext1
 WJetsToLNu_HT600To800                   WJetsToLNu_HT600To800_ext1

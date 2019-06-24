@@ -4111,6 +4111,10 @@
             {
               "dbs": "/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM",
               "alt": "WJetsToLNu_HT100To200_ext1"
+            },
+            {
+              "dbs": "/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM",
+              "alt": "WJetsToLNu_HT100To200_ext2"
             }
           ],
           "RunIIFall17MiniAOD": [],
