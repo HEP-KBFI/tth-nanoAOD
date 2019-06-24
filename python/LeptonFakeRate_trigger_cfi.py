@@ -4,6 +4,14 @@ leptonFR_triggers = {
   '2016' : {
     'mu' : cms.VPSet(
       cms.PSet(
+        path = cms.string("HLT_Mu3_PFJet40"),
+        cone_minPt = cms.double(10.),
+        cone_maxPt = cms.double(32.),
+        jet_minPt = cms.double(45.),
+        average_prescale = cms.double(4849), # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
+        trigger_type = cms.string('2mu'),
+      ),
+      cms.PSet(
         path = cms.string("HLT_Mu8"),
         cone_minPt = cms.double(15.),
         cone_maxPt = cms.double(100.),
@@ -16,15 +24,7 @@ leptonFR_triggers = {
         cone_minPt = cms.double(32.),
         cone_maxPt = cms.double(100.),
         jet_minPt = cms.double(30.),
-        average_prescale = cms.double(127), # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
-        trigger_type = cms.string('2mu'),
-      ),
-      cms.PSet(
-        path = cms.string("HLT_Mu3_PFJet40"),
-        cone_minPt = cms.double(10.),
-        cone_maxPt = cms.double(32.),
-        jet_minPt = cms.double(40.),
-        average_prescale = cms.double(4849), # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
+        average_prescale = cms.double(127.0), # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
         trigger_type = cms.string('2mu'),
       ),
     ),
@@ -42,7 +42,7 @@ leptonFR_triggers = {
         cone_minPt = cms.double(25.),
         cone_maxPt = cms.double(100.),
         jet_minPt = cms.double(30.),
-        average_prescale = cms.double(572), # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
+        average_prescale = cms.double(572.4), # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         trigger_type = cms.string('2e'),
       ),
       cms.PSet(
@@ -50,7 +50,7 @@ leptonFR_triggers = {
         cone_minPt = cms.double(32.),
         cone_maxPt = cms.double(100.),
         jet_minPt = cms.double(30.),
-        average_prescale = cms.double(572), # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
+        average_prescale = cms.double(572.4), # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         trigger_type = cms.string('2e'),
       ),
     ),
@@ -81,7 +81,7 @@ leptonFR_triggers = {
         cone_maxPt = cms.double(100.),
         minRecoPt = cms.double(17.),
         jet_minPt = cms.double(30.),
-        average_prescale = cms.double(593), # L=70.038/pb; present in all eras; prescale factor 592.9 (600.1 from delivery)
+        average_prescale = cms.double(592.9), # L=70.038/pb; present in all eras; prescale factor 592.9 (600.1 from delivery)
         trigger_type = cms.string('2mu'),
       ),
       cms.PSet(
@@ -90,7 +90,7 @@ leptonFR_triggers = {
         cone_maxPt = cms.double(100.),
         minRecoPt = cms.double(20.),
         jet_minPt = cms.double(30.),
-        average_prescale = cms.double(72), # L=574.1/pb; present in all eras; prescale factor 72.3 (73.9 from delivery)
+        average_prescale = cms.double(72.3), # L=574.1/pb; present in all eras; prescale factor 72.3 (73.9 from delivery)
         trigger_type = cms.string('1mu'),
       ),
       cms.PSet(
@@ -99,7 +99,7 @@ leptonFR_triggers = {
         cone_maxPt = cms.double(100.),
         minRecoPt = cms.double(27.),
         jet_minPt = cms.double(30.),
-        average_prescale = cms.double(225), # L=184.944/pb; present in all eras; prescale factor 224.5 (216.1 from delivery)
+        average_prescale = cms.double(224.5), # L=184.944/pb; present in all eras; prescale factor 224.5 (216.1 from delivery)
         trigger_type = cms.string('1mu'),
       ),
     ),
