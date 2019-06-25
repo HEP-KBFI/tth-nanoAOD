@@ -138,6 +138,7 @@ if __name__ == '__main__':
     subdir_fp = os.path.join(in_dir, subdir)
     if not pattern.match(subdir):
       logging.debug("Skipping directory {} because it does not match the required pattern".format(subdir_fp))
+      continue
     if not os.path.isdir(subdir_fp):
       continue
     crab_log = os.path.join(subdir_fp, CRAB_LOG_FN)
