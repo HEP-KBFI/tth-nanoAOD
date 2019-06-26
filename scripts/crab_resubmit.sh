@@ -6,7 +6,7 @@ ARGV=($@)
 DIR_IDX=-1
 for (( j=0; j<ARGC; j++ )); do
   if [[ ${ARGV[j]} == "-d" ]]; then
-    DIR_IDX=(( j + 1 ));
+    DIR_IDX=$(( j + 1 ));
     break;
   fi
 done
