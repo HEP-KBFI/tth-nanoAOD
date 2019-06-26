@@ -34,9 +34,14 @@ fi
 DIR_BASENAME=$(basename $CRABDIR)
 if [[ $DIR_BASENAME =~ "CHUNK" ]] && [[ ! $DIR_BASENAME =~ "CHUNK1" ]]; then
   JOBIDS=$(crab status -d $CRABDIR --json | grep "^{" | parse_crab_errors.py | grep -v 60302 | awk '{print $2}' | tr '\n' ',' | sed 's/,$//g');
-  echo "Resubmitting job IDs: $JOBIDS";
-  crab resubmit $* --jobids=$JOBIDS;
+  if [[ -z $JOBIDS ]]; then
+    echo "No job IDs to resubmit in $CRABDIR";
+    continue;
+  else
+    echo "Resubmitting job IDs in $CRABDIR: $JOBIDS";
+    crab resubmit $* --jobids=$JOBIDS;
+  fi
 else
-  echo "Resubmitting jobs in regular fashion";
+  echo "Resubmitting jobs in regular fashion in $CRABDIR";
   crab resubmit $*;
 fi
