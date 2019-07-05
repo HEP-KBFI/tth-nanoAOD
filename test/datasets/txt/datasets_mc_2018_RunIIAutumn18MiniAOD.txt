@@ -1,4 +1,4 @@
-# file generated at 2019-07-03 14:21:22 with the following command:
+# file generated at 2019-07-05 12:43:09 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -148,8 +148,6 @@
 /ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                  1 EWK                       ZZTo2L2Q                                      3.7         # NLO; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0061628 or 0.17%)
 
 # qcd
-/QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 QCD                       QCD_Pt15to20_bcToE                       186900.0         # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 177.7 or 0.10%)
-/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 QCD                       QCD_Pt20to30_bcToE                       305561.0         # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 207.04 or 0.07%)
 /QCD_Pt_30to80_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 QCD                       QCD_Pt30to80_bcToE                       361100.0         # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 258.95 or 0.07%)
 /QCD_Pt_80to170_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                   0 QCD                       QCD_Pt80to170_bcToE                       33813.5         # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 14.144 or 0.04%)
 /QCD_Pt_170to250_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                  0 QCD                       QCD_Pt170to250_bcToE                       2129.17        # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4371 or 0.07%)
