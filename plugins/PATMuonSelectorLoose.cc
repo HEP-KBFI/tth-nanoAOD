@@ -29,9 +29,10 @@
 
 enum { kEra_undefined, kEra_2016, kEra_2017, kEra_2018 };
 
-class PATMuonSelectorLoose : public edm::stream::EDProducer<>
+class PATMuonSelectorLoose
+  : public edm::stream::EDProducer<>
 {
- public:
+public:
   PATMuonSelectorLoose(const edm::ParameterSet& cfg)
     : src_(cfg.getParameter<edm::InputTag>("src"))
     , era_(kEra_undefined)
@@ -48,11 +49,11 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
     token_ = consumes<edm::View<pat::Muon>>(src_);
 
     std::string era_string = cfg.getParameter<std::string>("era");
-    if      ( era_string == "2016" ) era_ = kEra_2016;
-    else if ( era_string == "2017" ) era_ = kEra_2017;
-    else if ( era_string == "2018" ) era_ = kEra_2018;
+    if     (era_string == "2016") era_ = kEra_2016;
+    else if(era_string == "2017") era_ = kEra_2017;
+    else if(era_string == "2018") era_ = kEra_2018;
     else throw cms::Exception("PATMuonSelectorLoose")
-      << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
+      << "Invalid Configuration parameter 'era' = " << era_string << '\n';
 
     produces<pat::MuonCollection>();
   }
@@ -65,53 +66,57 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
 
     std::unique_ptr<pat::MuonCollection> outputMuons(new pat::MuonCollection());
 
-    for ( size_t inputMuons_idx = 0; inputMuons_idx < inputMuons->size(); ++inputMuons_idx ) {
+    for(std::size_t inputMuons_idx = 0; inputMuons_idx < inputMuons->size(); ++inputMuons_idx) {
       edm::Ptr<pat::Muon> muon = inputMuons->ptrAt(inputMuons_idx);
-      if ( muon->pt() < min_pt_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
+      if(muon->pt() < min_pt_) {
+        if(debug_) {
+          std::cout << "FAILS pT = " << muon->pt() << " >= " << min_pt_ << " cut\n";
         }
         continue;
       }
-      double absEta = std::fabs(muon->eta());
-      if ( absEta > max_absEta_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
+      const double absEta = std::fabs(muon->eta());
+      if(absEta > max_absEta_) {
+        if(debug_) {
+          std::cout << "FAILS abs(eta) = " << absEta << " <= " << max_absEta_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(muon->dB(pat::Muon::PV2D)) > max_dxy_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
+      const double absDxy = std::fabs(muon->dB(pat::Muon::PV2D));
+      if(absDxy > max_dxy_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dxy) = " << absDxy << " <= " << max_dxy_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(muon->dB(pat::Muon::PVDZ)) > max_dz_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
+      const double absDz = std::fabs(muon->dB(pat::Muon::PVDZ));
+      if(absDz > max_dz_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dz) = " << absDz << " <= " << max_dz_ << " cut\n";
         }
         continue;
       }
-      if ( muon->userFloat("miniIsoAll") > (max_relIso_*muon->pt()) ) {
-        if ( debug_ ) {
-          std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
+      const double relIso = muon->userFloat("miniIsoAll") / muon->pt();
+      if(relIso > max_relIso_) {
+        if(debug_) {
+          std::cout << "FAILS relIso = " << relIso << " <= " << max_relIso_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(muon->dB(pat::Muon::PV3D)/muon->edB(pat::Muon::PV3D)) > max_sip3d_ ) {
-        if ( debug_ ) {
+      const double sip3d = std::fabs(muon->dB(pat::Muon::PV3D) / muon->edB(pat::Muon::PV3D));
+      if(sip3d > max_sip3d_) {
+        if(debug_) {
           std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
         }
         continue;
       }
-      if ( apply_looseIdPOG_ && !muon->passed(reco::Muon::CutBasedIdLoose) ) {
-        if ( debug_ ) {
+      if(apply_looseIdPOG_ && ! muon->passed(reco::Muon::CutBasedIdLoose)) {
+        if(debug_) {
           std::cout << "FAILS loose POG cut\n";
         }
         continue;
       }
-      if ( apply_mediumIdPOG_ && !muon->passed(reco::Muon::CutBasedIdMedium) ) {
-        if ( debug_ ) {
+      if(apply_mediumIdPOG_ && ! muon->passed(reco::Muon::CutBasedIdMedium)) {
+        if(debug_) {
           std::cout << "FAILS medium POG cut\n";
         }
         continue;
@@ -134,7 +139,7 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
     descriptions.add("PATMuonSelectorLoose", desc);
   }
 
- private:
+private:
   edm::InputTag src_;
   edm::EDGetTokenT<edm::View<pat::Muon>> token_;  
 
@@ -148,11 +153,6 @@ class PATMuonSelectorLoose : public edm::stream::EDProducer<>
   float max_relIso_;                ///< upper cut threshold on relative isolation
   float max_sip3d_;                 ///< upper cut threshold on significance of IP
   bool apply_looseIdPOG_;           ///< apply (True) or do not apply (False) loose PFMuon id selection
-//-------------------------------------------------------------------------------
-//--- define cuts that dependent on lepton MVA of ttH multilepton analysis 
-//    format: muon fails / passes loose cut on lepton MVA value
-  typedef std::vector<float> vfloat;  
-//-------------------------------------------------------------------------------
   bool apply_mediumIdPOG_;          ///< apply (True) or do not apply (False) medium PFMuon id selection
 };
 

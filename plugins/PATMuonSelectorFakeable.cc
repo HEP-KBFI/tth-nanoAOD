@@ -6,7 +6,7 @@
  * which is used as input for the reconstruction of lepton subtracted AK8 jets (cf. B2G-18-008).
  *
  * WARNING: this code needs to match exactly https://github.com/HEP-KBFI/tth-htt/blob/master/src/RecoMuonCollectionSelectorFakeable.cc,
- *          except that the cuts on pT(lepton)/pT(jet) and on the CSVv2 b-tagging discriminant of nearby jets are disabled,
+ *          except that the cuts on pT(lepton)/pT(jet) and on the b-tagging discriminant of nearby jets are disabled,
  *          in order to make the muon selection independent of nearby AK4 jets
  *
  * \author Christian Veelken, Tallinn
@@ -29,9 +29,10 @@
 
 enum { kEra_undefined, kEra_2016, kEra_2017, kEra_2018 };
 
-class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
+class PATMuonSelectorFakeable
+  : public edm::stream::EDProducer<>
 {
- public:
+public:
   PATMuonSelectorFakeable(const edm::ParameterSet& cfg)
     : src_(cfg.getParameter<edm::InputTag>("src"))
     , src_mvaTTH_(cfg.getParameter<edm::InputTag>("src_mvaTTH"))
@@ -43,6 +44,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     , max_dz_(0.1)
     , max_relIso_(0.4)
     , max_sip3d_(8.)
+    , wp_mvaTTH_(0.85)
     , apply_looseIdPOG_(true)
     , apply_mediumIdPOG_(false)
   {
@@ -50,26 +52,11 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     token_mvaTTH_ = consumes<edm::ValueMap<float>>(src_mvaTTH_);
 
     std::string era_string = cfg.getParameter<std::string>("era");
-    if      ( era_string == "2016" ) era_ = kEra_2016;
-    else if ( era_string == "2017" ) era_ = kEra_2017;
-    else if ( era_string == "2018" ) era_ = kEra_2018;
+    if     (era_string == "2016") era_ = kEra_2016;
+    else if(era_string == "2017") era_ = kEra_2017;
+    else if(era_string == "2018") era_ = kEra_2018;
     else throw cms::Exception("PATMuonSelectorFakeable")
-      << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
-
-    switch ( era_ ) {
-      case kEra_2016: {
-        break;
-      }
-      case kEra_2017: {
-        break;
-      }
-      case kEra_2018: {
-        break;
-      }
-      default: assert(0);
-    }
-    assert(binning_mvaTTH_.size() == 1);
-    assert(min_segmentCompatibility_.size() == binning_mvaTTH_.size() + 1);
+      << "Invalid Configuration parameter 'era' = " << era_string << '\n';
 
     produces<pat::MuonCollection>();
   }
@@ -84,62 +71,58 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
 
     std::unique_ptr<pat::MuonCollection> outputMuons(new pat::MuonCollection());
 
-    for ( size_t inputMuons_idx = 0; inputMuons_idx < inputMuons->size(); ++inputMuons_idx ) {
+    for(std::size_t inputMuons_idx = 0; inputMuons_idx < inputMuons->size(); ++inputMuons_idx) {
       edm::Ptr<pat::Muon> muon = inputMuons->ptrAt(inputMuons_idx);
-      if ( muon->pt() < min_pt_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
+      if(muon->pt() < min_pt_) {
+        if(debug_) {
+          std::cout << "FAILS pT = " << muon->pt() << " >= " << min_pt_ << " cut\n";
         }
         continue;
       }
-      double absEta = std::fabs(muon->eta());
-      if ( absEta > max_absEta_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
+      const double absEta = std::fabs(muon->eta());
+      if(absEta > max_absEta_) {
+        if(debug_) {
+          std::cout << "FAILS abs(eta) = " << absEta << " <= " << max_absEta_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(muon->dB(pat::Muon::PV2D)) > max_dxy_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
+      const double absDxy = std::fabs(muon->dB(pat::Muon::PV2D));
+      if(absDxy > max_dxy_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dxy) = " << absDxy << " <= " << max_dxy_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(muon->dB(pat::Muon::PVDZ)) > max_dz_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
+      const double absDz = std::fabs(muon->dB(pat::Muon::PVDZ));
+      if(absDz > max_dz_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dz) = " << absDz << " <= " << max_dz_ << " cut\n";
         }
         continue;
       }
-      if ( muon->userFloat("miniIsoAll") > (max_relIso_*muon->pt()) ) {
-        if ( debug_ ) {
-          std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
+      const double relIso = muon->userFloat("miniIsoAll") / muon->pt();
+      if(relIso > max_relIso_) {
+        if(debug_) {
+          std::cout << "FAILS relIso = " << relIso << " <= " << max_relIso_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(muon->dB(pat::Muon::PV3D)/muon->edB(pat::Muon::PV3D)) > max_sip3d_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
+      const double sip3d = std::fabs(muon->dB(pat::Muon::PV3D) / muon->edB(pat::Muon::PV3D));
+      if(sip3d  > max_sip3d_) {
+        if(debug_) {
+          std::cout << "FAILS sip3d = " << sip3d << " <= " << max_sip3d_ << " cut\n";
         }
         continue;
       }
-      if ( apply_looseIdPOG_ && !muon->passed(reco::Muon::CutBasedIdLoose) ) {
-        if ( debug_ ) {
+      if(apply_looseIdPOG_ && ! muon->passed(reco::Muon::CutBasedIdLoose)) {
+        if(debug_) {
           std::cout << "FAILS loose POG cut\n";
         }
         continue;
       }
-      if ( apply_mediumIdPOG_ && !muon->passed(reco::Muon::CutBasedIdMedium) ) {
-        if ( debug_ ) {
+      if(apply_mediumIdPOG_ && ! muon->passed(reco::Muon::CutBasedIdMedium)) {
+        if(debug_) {
           std::cout << "FAILS medium POG cut\n";
-        }
-        continue;
-      }
-      const double mvaTTH = (*inputMuons_mvaTTH)[muon];
-      const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
-      if ( muon->segmentCompatibility() <= min_segmentCompatibility_[idxBin_mvaTTH] ) {
-        if ( debug_ ) {
-          std::cout << "FAILS segmentCompatibility > " << min_segmentCompatibility_[idxBin_mvaTTH] << " cut\n";
         }
         continue;
       }
@@ -161,7 +144,7 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
     descriptions.add("PATMuonSelectorFakeable", desc);
   }
 
- private:
+private:
   edm::InputTag src_;
   edm::EDGetTokenT<edm::View<pat::Muon>> token_;  
   edm::InputTag src_mvaTTH_;
@@ -176,15 +159,9 @@ class PATMuonSelectorFakeable : public edm::stream::EDProducer<>
   float max_dz_;                    ///< upper cut threshold on d_{z}, distance on the z axis w.r.t PV
   float max_relIso_;                ///< upper cut threshold on relative isolation
   float max_sip3d_;                 ///< upper cut threshold on significance of IP
+  float wp_mvaTTH_;                 ///< lepton MVA WP; not used as the cuts that depend on the WP are applied to nearby jet
   bool apply_looseIdPOG_;           ///< apply (True) or do not apply (False) loose PFMuon id selection
-//-------------------------------------------------------------------------------
-//--- define cuts that dependent on lepton MVA of ttH multilepton analysis 
-//    format: muon fails / passes loose cut on lepton MVA value
-  typedef std::vector<float> vfloat;  
-  vfloat binning_mvaTTH_;        ///< lepton MVA threshold
-//-------------------------------------------------------------------------------
   bool apply_mediumIdPOG_;          ///< apply (True) or do not apply (False) medium PFMuon id selection
-  vfloat min_segmentCompatibility_; ///< upper cut threshold on compatibility of muon track segments with signature expected for muons
 };
 
 #include "FWCore/Framework/interface/MakerMacros.h"

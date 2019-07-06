@@ -29,9 +29,10 @@
 
 enum { kEra_undefined, kEra_2016, kEra_2017, kEra_2018 };
 
-class PATElectronSelectorLoose : public edm::stream::EDProducer<>
+class PATElectronSelectorLoose
+  : public edm::stream::EDProducer<>
 {
- public:
+public:
   PATElectronSelectorLoose(const edm::ParameterSet& cfg)
     : src_(cfg.getParameter<edm::InputTag>("src"))
     , era_(kEra_undefined)
@@ -48,11 +49,11 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
     token_ = consumes<edm::View<pat::Electron>>(src_);
 
     std::string era_string = cfg.getParameter<std::string>("era");
-    if      ( era_string == "2016" ) era_ = kEra_2016;
-    else if ( era_string == "2017" ) era_ = kEra_2017;
-    else if ( era_string == "2018" ) era_ = kEra_2018;
+    if     (era_string == "2016") era_ = kEra_2016;
+    else if(era_string == "2017") era_ = kEra_2017;
+    else if(era_string == "2018") era_ = kEra_2018;
     else throw cms::Exception("PATElectronSelectorLoose")
-      << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
+      << "Invalid Configuration parameter 'era' = " << era_string << '\n';
 
     produces<pat::ElectronCollection>();
   }
@@ -65,59 +66,63 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
 
     std::unique_ptr<pat::ElectronCollection> outputElectrons(new pat::ElectronCollection());
 
-    for ( size_t inputElectrons_idx = 0; inputElectrons_idx < inputElectrons->size(); ++inputElectrons_idx ) {
+    for(std::size_t inputElectrons_idx = 0; inputElectrons_idx < inputElectrons->size(); ++inputElectrons_idx) {
       edm::Ptr<pat::Electron> electron = inputElectrons->ptrAt(inputElectrons_idx);
-      if ( electron->pt() < min_pt_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
+      if(electron->pt() < min_pt_) {
+        if(debug_) {
+          std::cout << "FAILS pT = " << electron->pt() << " >= " << min_pt_ << " cut\n";
         }
         continue;
       }
-      double absEta = std::fabs(electron->eta());
-      if ( absEta > max_absEta_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
+      const double absEta = std::fabs(electron->eta());
+      if(absEta > max_absEta_) {
+        if(debug_) {
+          std::cout << "FAILS abs(eta) = " << absEta << " <= " << max_absEta_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(electron->dB(pat::Electron::PV2D)) > max_dxy_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
+      const double absDxy = std::fabs(electron->dB(pat::Electron::PV2D));
+      if(absDxy > max_dxy_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dxy) = " << absDxy << " <= " << max_dxy_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(electron->dB(pat::Electron::PVDZ)) > max_dz_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
+      const double absDz = std::fabs(electron->dB(pat::Electron::PVDZ));
+      if(absDz > max_dz_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dz) = " << absDz << " <= " << max_dz_ << " cut\n";
         }
         continue;
       }
-      if ( electron->userFloat("miniIsoAll") > (max_relIso_*electron->pt()) ) {
-        if ( debug_ ) {
-          std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
+      const double relIso = electron->userFloat("miniIsoAll") / electron->pt();
+      if(relIso > max_relIso_) {
+        if(debug_) {
+          std::cout << "FAILS relIso = " << relIso << " <= " << max_relIso_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(electron->dB(pat::Electron::PV3D)/electron->edB(pat::Electron::PV3D)) > max_sip3d_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
+      const double sip3d = std::fabs(electron->dB(pat::Electron::PV3D) / electron->edB(pat::Electron::PV3D));
+      if(sip3d > max_sip3d_ ) {
+        if(debug_) {
+          std::cout << "FAILS sip3d = " << sip3d << " <= " << max_sip3d_ << " cut\n";
         }
         continue;
       }
-      if ( electron->gsfTrack().isNull() || electron->gsfTrack()->hitPattern().numberOfLostHits(reco::HitPattern::MISSING_INNER_HITS) > max_nLostHits_ ) {
-        if ( debug_ ) {
+      if(electron->gsfTrack().isNull() || electron->gsfTrack()->hitPattern().numberOfLostHits(reco::HitPattern::MISSING_INNER_HITS) > max_nLostHits_) {
+        if(debug_) {
           std::cout << "FAILS nLostHits <= " << max_nLostHits_ << " cut\n";
         }
         continue;
       }
-      if ( apply_conversionVeto_ && !electron->passConversionVeto() ) {
-        if ( debug_ ) {
+      if(apply_conversionVeto_ && ! electron->passConversionVeto()) {
+        if(debug_) {
           std::cout << "FAILS conversion veto\n";
         }
         continue;
       }
-      if ( !electron->userInt("mvaFall17V2noIso_WPL") ) {
-        if ( debug_ ) {
+      if(! electron->userInt("mvaFall17V2noIso_WPL")) {
+        if(debug_) {
           std::cout << "FAILS EGamma POG MVA cut\n";
         }
         continue;
@@ -140,7 +145,7 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
     descriptions.add("PATElectronSelectorLoose", desc);
   }
 
- private:
+private:
   edm::InputTag src_;
   edm::EDGetTokenT<edm::View<pat::Electron>> token_;
 
@@ -153,7 +158,6 @@ class PATElectronSelectorLoose : public edm::stream::EDProducer<>
   float max_dz_;                ///< upper cut threshold on d_{z}, distance on the z axis w.r.t PV
   float max_relIso_;            ///< upper cut threshold on relative isolation
   float max_sip3d_;             ///< upper cut threshold on significance of IP
-//-------------------------------------------------------------------------------
   bool apply_conversionVeto_;   ///< apply (True) or do not apply (False) conversion veto
   int max_nLostHits_;           ///< upper cut threshold on lost hits in the innermost layer of the tracker (electrons with lost_hits equal to cut threshold pass) 
 };

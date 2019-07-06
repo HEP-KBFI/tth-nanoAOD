@@ -6,7 +6,7 @@
  * which is used as input for the reconstruction of lepton subtracted AK8 jets (cf. B2G-18-008).
  *
  * WARNING: this code needs to match exactly https://github.com/HEP-KBFI/tth-htt/blob/master/src/RecoElectronCollectionSelectorFakeable.cc,
- *          except that the cuts on pT(lepton)/pT(jet) and on the CSVv2 b-tagging discriminant of nearby jets are disabled,
+ *          except that the cuts on pT(lepton)/pT(jet) and on the b-tagging discriminant of nearby jets are disabled,
  *          in order to make the electron selection independent of nearby AK4 jets
  *
  * \author Christian Veelken, Tallinn
@@ -29,9 +29,10 @@
 
 enum { kEra_undefined, kEra_2016, kEra_2017, kEra_2018 };
 
-class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
+class PATElectronSelectorFakeable
+  : public edm::stream::EDProducer<>
 {
- public:
+public:
   PATElectronSelectorFakeable(const edm::ParameterSet& cfg)
     : src_(cfg.getParameter<edm::InputTag>("src"))
     , src_mvaTTH_(cfg.getParameter<edm::InputTag>("src_mvaTTH"))
@@ -43,8 +44,13 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     , max_dxy_(0.05) 
     , max_dz_(0.1)
     , max_relIso_(0.4)
-    , max_sip3d_(8.) 
-    , min_OoEminusOoP_trig_(-1.e+3)
+    , max_sip3d_(8.)
+    , binning_absEta_(1.479)
+    , min_sigmaEtaEta_trig_(0.011)
+    , max_sigmaEtaEta_trig_(0.019)
+    , max_HoE_trig_(0.10)
+    , min_OoEminusOoP_trig_(-0.04)
+    , wp_mvaTTH_(0.80)
     , apply_conversionVeto_(true)
     , max_nLostHits_(0)
   {
@@ -52,31 +58,11 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     token_mvaTTH_ = consumes<edm::ValueMap<float>>(src_mvaTTH_);
 
     std::string era_string = cfg.getParameter<std::string>("era");
-    if      ( era_string == "2016" ) era_ = kEra_2016;
-    else if ( era_string == "2017" ) era_ = kEra_2017;
-    else if ( era_string == "2018" ) era_ = kEra_2018;
+    if     (era_string == "2016") era_ = kEra_2016;
+    else if(era_string == "2017") era_ = kEra_2017;
+    else if(era_string == "2018") era_ = kEra_2018;
     else throw cms::Exception("PATElectronSelectorFakeable")
-      << "Invalid Configuration parameter 'era' = " << era_string << " !!\n";
-    switch ( era_ ) {
-      case kEra_2016: {
-        break;
-      }
-      case kEra_2017: {
-        break;
-      }
-      case kEra_2018: {
-        break;
-      }
-      default: assert(0);
-    }
-    assert(binning_absEta_.size() > 0);
-    assert(max_sigmaEtaEta_trig_.size() == binning_absEta_.size() + 1);
-    assert(max_HoE_trig_.size() == binning_absEta_.size() + 1);
-    assert(max_deltaEta_trig_.size() == binning_absEta_.size() + 1);
-    assert(max_deltaPhi_trig_.size() == binning_absEta_.size() + 1);
-    assert(max_OoEminusOoP_trig_.size() == binning_absEta_.size() + 1);
-    assert(binning_mvaTTH_.size() == 1);
-    assert(min_mvaIDraw_.size() == binning_mvaTTH_.size() + 1);
+      << "Invalid Configuration parameter 'era' = " << era_string << '\n';
 
     produces<pat::ElectronCollection>();
   }
@@ -91,113 +77,85 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
 
     std::unique_ptr<pat::ElectronCollection> outputElectrons(new pat::ElectronCollection());
 
-    for ( size_t inputElectrons_idx = 0; inputElectrons_idx < inputElectrons->size(); ++inputElectrons_idx ) {
+    for(std::size_t inputElectrons_idx = 0; inputElectrons_idx < inputElectrons->size(); ++inputElectrons_idx) {
       edm::Ptr<pat::Electron> electron = inputElectrons->ptrAt(inputElectrons_idx);
-      if ( electron->pt() < min_pt_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS pT >= " << min_pt_ << " cut\n";
+      if(electron->pt() < min_pt_) {
+        if(debug_) {
+          std::cout << "FAILS pT = " << electron->pt() << " >= " << min_pt_ << " cut\n";
         }
         continue;
       }
-      double absEta = std::fabs(electron->eta());
-      if ( absEta > max_absEta_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(eta) <= " << max_absEta_ << " cut\n";
+      const double absEta = std::fabs(electron->eta());
+      if(absEta > max_absEta_) {
+        if(debug_) {
+          std::cout << "FAILS abs(eta) = " << absEta << " <= " << max_absEta_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(electron->dB(pat::Electron::PV2D)) > max_dxy_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dxy) <= " << max_dxy_ << " cut\n";
+      const double absDxy = std::fabs(electron->dB(pat::Electron::PV2D));
+      if(absDxy > max_dxy_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dxy) = " << absDxy << " <= " << max_dxy_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(electron->dB(pat::Electron::PVDZ)) > max_dz_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS abs(dz) <= " << max_dz_ << " cut\n";
+      const double absDz = std::fabs(electron->dB(pat::Electron::PVDZ));
+      if(absDz > max_dz_) {
+        if(debug_) {
+          std::cout << "FAILS abs(dz) = " << absDz << " <= " << max_dz_ << " cut\n";
         }
         continue;
       }
-      if ( electron->userFloat("miniIsoAll") > (max_relIso_*electron->pt()) ) {
-        if ( debug_ ) {
-          std::cout << "FAILS relIso <= " << max_relIso_ << " cut\n";
+      const double relIso = electron->userFloat("miniIsoAll") / electron->pt();
+      if(relIso > max_relIso_) {
+        if(debug_) {
+          std::cout << "FAILS relIso = " << relIso << " <= " << max_relIso_ << " cut\n";
         }
         continue;
       }
-      if ( std::fabs(electron->dB(pat::Electron::PV3D)/electron->edB(pat::Electron::PV3D)) > max_sip3d_ ) {
-        if ( debug_ ) {
-          std::cout << "FAILS sip3d <= " << max_sip3d_ << " cut\n";
+      const double sip3d = std::fabs(electron->dB(pat::Electron::PV3D) / electron->edB(pat::Electron::PV3D));
+      if(sip3d > max_sip3d_) {
+        if(debug_) {
+          std::cout << "FAILS sip3d = " << sip3d << " <= " << max_sip3d_ << " cut\n";
         }
         continue;
       }
-      if ( electron->gsfTrack().isNull() || electron->gsfTrack()->hitPattern().numberOfLostHits(reco::HitPattern::MISSING_INNER_HITS) > max_nLostHits_ ) {
-        if ( debug_ ) {
+      if(electron->gsfTrack().isNull() || electron->gsfTrack()->hitPattern().numberOfLostHits(reco::HitPattern::MISSING_INNER_HITS) > max_nLostHits_) {
+        if(debug_) {
           std::cout << "FAILS nLostHits <= " << max_nLostHits_ << " cut\n";
         }
         continue;
       }
-      if ( apply_conversionVeto_ && !electron->passConversionVeto() ) {
-        if ( debug_ ) {
+      if(apply_conversionVeto_ && ! electron->passConversionVeto()) {
+        if(debug_) {
           std::cout << "FAILS conversion veto\n";
         }
         continue;
       }
-      if ( !electron->userInt("mvaFall17V1noIso_WPL") ) {
-        if ( debug_ ) {
+      if(! electron->userInt("mvaFall17V1noIso_WPL")) {
+        if(debug_) {
           std::cout << "FAILS EGamma POG MVA cut\n";
         }
         continue;
       }
-      double mvaTTH = (*inputElectrons_mvaTTH)[electron];
-      const int idxBin_mvaTTH = mvaTTH <= binning_mvaTTH_[0] ? 0 : 1;
-      if ( electron->userFloat("mvaFall17V1noIso") < min_mvaIDraw_[idxBin_mvaTTH] ) {
-        if ( debug_ ) {
-          std::cout << "FAILS EGamma POG MVA raw >= " << min_mvaIDraw_[idxBin_mvaTTH] << " cut\n";
-        }
-        continue;
-      }
-      if ( apply_offline_e_trigger_cuts_ && electron->pt() > min_pt_trig_ ) {
-        std::size_t idxBin_absEta = binning_absEta_.size();
-        for ( std::size_t binning_absEta_idx = 0; binning_absEta_idx < binning_absEta_.size(); ++binning_absEta_idx ) {
-          if ( absEta <= binning_absEta_[binning_absEta_idx] ) {
-            idxBin_absEta = binning_absEta_idx;
-            break;
-          }
-        }
-        if ( electron->full5x5_sigmaIetaIeta() > max_sigmaEtaEta_trig_[idxBin_absEta] ) {
-          if ( debug_ ) {
-            std::cout << "FAILS sigmaEtaEta <= " << max_sigmaEtaEta_trig_[idxBin_absEta] << " cut\n";
+      if(apply_offline_e_trigger_cuts_ && electron->pt() > min_pt_trig_) {
+        const double max_sigmaEtaEta_trig = min_sigmaEtaEta_trig_ + max_sigmaEtaEta_trig_ * (absEta > binning_absEta_);
+        if(electron->full5x5_sigmaIetaIeta() > max_sigmaEtaEta_trig) {
+          if(debug_) {
+            std::cout << "FAILS sigmaEtaEta = " << electron->full5x5_sigmaIetaIeta() << " <= " << max_sigmaEtaEta_trig << " cut\n";
           }
           continue;
         }
-        if ( electron->hadronicOverEm() > max_HoE_trig_[idxBin_absEta] ) {
-          if ( debug_ ) {
-            std::cout << "FAILS HoE <= " << max_HoE_trig_[idxBin_absEta] << " cut\n";
+        if(electron->hadronicOverEm() > max_HoE_trig_) {
+          if(debug_) {
+            std::cout << "FAILS HoE = " << electron->hadronicOverEm() << " <= " << max_HoE_trig_ << " cut\n";
           }
           continue;
         }
-        if ( std::fabs(electron->deltaEtaSuperClusterTrackAtVtx()) > max_deltaEta_trig_[idxBin_absEta] ) {
-          if ( debug_ ) {
-            std::cout << "FAILS abs(deltaEta) <= " << max_deltaEta_trig_[idxBin_absEta] << " cut\n";
-          }
-          continue;
-        }
-        if ( std::fabs(electron->deltaPhiSuperClusterTrackAtVtx()) > max_deltaPhi_trig_[idxBin_absEta] ) {
-          if ( debug_ ) {
-            std::cout << "FAILS abs(deltaPhi) <= " << max_deltaPhi_trig_[idxBin_absEta] << " cut\n";
-          }
-          continue;
-        }
-        double OoEminusOoP = (1 - electron->eSuperClusterOverP())/electron->ecalEnergy();
-        if ( OoEminusOoP < min_OoEminusOoP_trig_ ) {
-          if ( debug_ ) {
-            std::cout << "FAILS OoEminusOoP >= " << min_OoEminusOoP_trig_ << " cut\n";
-          }
-          continue;
-        }
-        if ( OoEminusOoP > max_OoEminusOoP_trig_[idxBin_absEta] ) {
-          if ( debug_ ) {
-            std::cout << "FAILS OoEminusOoP <= " << max_OoEminusOoP_trig_[idxBin_absEta] << " cut\n";
+        const double OoEminusOoP = (1 - electron->eSuperClusterOverP()) / electron->ecalEnergy();
+        if(OoEminusOoP < min_OoEminusOoP_trig_) {
+          if(debug_) {
+            std::cout << "FAILS OoEminusOoP = " << OoEminusOoP << " >= " << min_OoEminusOoP_trig_ << " cut\n";
           }
           continue;
         }
@@ -220,7 +178,7 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
     descriptions.add("PATElectronSelectorFakeable", desc);
   }
 
- private:
+private:
   edm::InputTag src_;
   edm::EDGetTokenT<edm::View<pat::Electron>> token_;  
   edm::InputTag src_mvaTTH_;
@@ -236,23 +194,13 @@ class PATElectronSelectorFakeable : public edm::stream::EDProducer<>
   float max_dz_;                ///< upper cut threshold on d_{z}, distance on the z axis w.r.t PV
   float max_relIso_;            ///< upper cut threshold on relative isolation
   float max_sip3d_;             ///< upper cut threshold on significance of IP
-//--- define cuts that dependent on eta
-//    format: central region (|eta| < 0.8) / transition region (0.8 < |eta| < 1.479) / forward region (|eta| > 1.479)
-  typedef std::vector<float> vfloat;
-  vfloat binning_absEta_;       ///< eta values separating central, transition and forward region (0.8, 1.479)
+  float binning_absEta_;        ///< eta values separating central, transition and forward region (0.8, 1.479)
   float min_pt_trig_;           ///< lower pT threshold for applying shower shape cuts (to mimic selection applied on trigger level)
-  vfloat max_sigmaEtaEta_trig_; ///< upper cut threshold on second shower moment in eta-direction 
-  vfloat max_HoE_trig_;         ///< upper cut threshold on ratio of energy deposits in hadronic/electromagnetic section of calorimeter
-  vfloat max_deltaEta_trig_;    ///< upper cut threshold on difference in eta between impact position of track and electron cluster
-  vfloat max_deltaPhi_trig_;    ///< upper cut threshold on difference in phi between impact position of track and electron cluster
+  float min_sigmaEtaEta_trig_;  ///< lower cut threshold on second shower moment in eta-direction
+  float max_sigmaEtaEta_trig_;  ///< upper cut threshold on second shower moment in eta-direction
+  float max_HoE_trig_;          ///< upper cut threshold on ratio of energy deposits in hadronic/electromagnetic section of calorimeter
   float min_OoEminusOoP_trig_;  ///< lower cut threshold on difference between calorimeter energy and track momentum (1/E - 1/P)
-  vfloat max_OoEminusOoP_trig_; ///< upper cut threshold on difference between calorimeter energy and track momentum (1/E - 1/P)
-//-------------------------------------------------------------------------------
-//--- define cuts that dependent on lepton MVA of ttH multilepton analysis 
-//    format: electron fails / passes loose cut on lepton MVA value
-  vfloat binning_mvaTTH_;       ///< lepton MVA threshold
-  vfloat min_mvaIDraw_;         ///< lower cut on EGamma POG MVA raw value
-//-------------------------------------------------------------------------------
+  float wp_mvaTTH_;             ///< lepton MVA WP; not used as the cuts that depend on the WP are applied to nearby jet
   bool apply_conversionVeto_;   ///< apply (True) or do not apply (False) conversion veto
   int max_nLostHits_;           ///< upper cut threshold on lost hits in the innermost layer of the tracker (electrons with lost_hits equal to cut threshold pass) 
 };
