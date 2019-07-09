@@ -7,10 +7,15 @@
         "name": "signal_ggf_spin0_750_hh_2b2v",
         "enabled": 1,
         "use_case": "signal extraction",
-        "process": "HH -> bbWW, WW -> 2l 2v (GGF)",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF spin0 resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-v2/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "file": "/local/karl/store/mc/RunIISummer16MiniAODv3/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-v2/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v2/110000/36841DE7-B93C-E911-BDAE-0025901F8740.root"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -28,6 +33,33 @@
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
           ],
           "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2"
+        }
+      },
+      {
+        "name": "signal_ggf_spin0_750_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2Tau_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "file": "/local/karl/store/mc/RunIIAutumn18MiniAOD/GluGluToRadionToHHTo2B2Tau_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/260000/AF84B1AB-94A0-D44F-81EC-7683BC0AD92E.root"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
         }
       }
     ]

@@ -1,0 +1,9 @@
+# file generated at 2019-07-10 02:30:16 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww_sync.json
+
+# HH -> bb tautau (GGF spin0 resonant)
+/GluGluToRadionToHHTo2B2Tau_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM 1 signal signal_ggf_spin0_750_hh_2b2t 0.073056 /local/karl/store/mc/RunIIAutumn18MiniAOD/GluGluToRadionToHHTo2B2Tau_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/260000/AF84B1AB-94A0-D44F-81EC-7683BC0AD92E.root  #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+
+# References:
+# [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
+# [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043

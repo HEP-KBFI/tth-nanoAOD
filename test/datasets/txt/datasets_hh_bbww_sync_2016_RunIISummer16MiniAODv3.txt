@@ -1,0 +1,9 @@
+# file generated at 2019-07-10 02:30:16 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww_sync.json
+
+# HH -> bbWW, WW -> 2l 2v (GGF spin0 resonant)
+/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-v2/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM 1 signal signal_ggf_spin0_750_hh_2b2v 0.026422 /local/karl/store/mc/RunIISummer16MiniAODv3/GluGluToRadionToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-v2/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v2/110000/36841DE7-B93C-E911-BDAE-0025901F8740.root  #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
+
+# References:
+# [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
+# [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043
