@@ -6,13 +6,48 @@ import argparse
 import logging
 import sys
 import re
+import copy
+import base64
+import jinja2
+import tempfile
 
+import matplotlib.dates as mdates
 import matplotlib as mpl
 if os.environ.get('DISPLAY','') == '':
   mpl.use('Agg')
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+html_template = """
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>CRAB progress</title>
+    <meta name="description" content="CRAB progress">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+  <em>
+      file automatically generated at {{ current_time }}
+    </em>
+
+   <div>
+   {% for image in images %}
+     <div style="display: inline-block; width: 500px; margin-left: 30px; overflow-wrap: break-word;">
+       <p>{{ image[0] }}</p>
+       <img src="data:image/png;base64, {{ image[1] }}" />
+     </div>
+   {% endfor %}
+   </div>
+  </body>
+</html>
+"""
 
 COLMAP = {
   'finished'     : '#49a328',
@@ -38,7 +73,11 @@ def parse_lines(lines):
   parsed = {}
   nof_jobs = -1
 
+  current_datetime = None
   for line in lines:
+    if line.startswith('INFO'):
+      datetime_str = ' '.join(line.rstrip('\n').split()[1:]).split(',')[0]
+      current_datetime = datetime.datetime.strptime(datetime_str, '%Y-%m-%d %H:%M:%S')
     line_split = line.replace('(', '').replace(')', '').split()
     if len(line_split) < 5:
       continue
@@ -54,9 +93,9 @@ def parse_lines(lines):
 
   if nof_jobs < 0:
     assert(not parsed)
-  return parsed
+  return parsed, current_datetime
 
-def plot(all_states, output, nof_tasks, nof_completed_tasks, title):
+def plot_pie(all_states, output, nof_tasks, nof_completed_tasks, title):
   vals   = list(map(lambda kv: kv[1], all_states))
   labels = list(map(lambda kv: kv[0], all_states))
   cols   = list(map(lambda lab: COLMAP[lab], labels))
@@ -95,6 +134,82 @@ def plot(all_states, output, nof_tasks, nof_completed_tasks, title):
   logging.info("Saved figure to: {}".format(output))
   plt.close()
 
+def plot_progress(data):
+  all_states = list({state for entry in data for state in entry[0].keys()})
+  available_dates = list(sorted(d[1] for d in data))
+
+  current_date = datetime.datetime.now()
+  first_date = available_dates[0] if available_dates else current_date
+  first_date = first_date.replace(hour = 0, minute = 0, second = 0, microsecond = 0)
+
+  difference_in_days = (current_date - first_date).days
+  data_augmented = {
+    first_date + datetime.timedelta(days = days_passed) : {
+      'recorded_date' : None,
+      'data' : {}
+    } for days_passed in range(difference_in_days + 1)
+  }
+
+  for entry in data:
+    entry_data = entry[0]
+    entry_date = entry[1]
+    date_found = False
+    for date_candidate in data_augmented:
+      if  date_candidate.day == entry_date.day and \
+          date_candidate.month == entry_date.month and \
+          date_candidate.year == entry_date.year:
+        if data_augmented[date_candidate]['recorded_date'] and \
+           entry_date < data_augmented[date_candidate]['recorded_date']:
+          continue
+        data_augmented[date_candidate]['recorded_date'] = entry_date
+        data_augmented[date_candidate]['data'] = { state : 0 for state in all_states }
+        for state in entry_data:
+          data_augmented[date_candidate]['data'][state] = entry_data[state]
+        date_found = True
+    assert(date_found)
+
+  prev_date = None
+  dates_sorted = sorted(data_augmented.keys())
+  for date in dates_sorted:
+    if not data_augmented[date]['recorded_date']:
+      if not prev_date:
+        assert(len(dates_sorted) == 1)
+        continue
+      data_augmented[date]['data'] = copy.deepcopy(data_augmented[prev_date]['data'])
+      data_augmented[date]['recorded_date'] = copy.deepcopy(data_augmented[prev_date]['recorded_date'])
+    prev_date = date
+
+  data_to_plot = []
+  for state in all_states:
+    data_to_plot_row = []
+    for date in dates_sorted:
+      data_to_plot_row.append(data_augmented[date]['data'][state])
+    data_to_plot.append(data_to_plot_row)
+
+  plt.figure(figsize = (5.5, 3.5))
+  plt.ylabel('Number of CRAB jobs')
+  if prev_date:
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m/%d/%Y'))
+    plt.gca().xaxis.set_major_locator(mdates.DayLocator())
+    plt.stackplot(dates_sorted, data_to_plot, colors = [ COLMAP[state] for state in all_states ], labels = all_states)
+    plt.gcf().autofmt_xdate()
+    plt.legend(loc = 'upper left', fontsize = 10)
+    plt.gca().set_xticks(plt.gca().get_xticks()[::2])
+    plt.gca().tick_params(axis = 'both', labelsize = 10)
+
+    nof_jobs = sum(col[-1] for col in data_to_plot)
+    plt.ylim(0, nof_jobs)
+
+  tmp_image = tempfile.TemporaryFile(suffix = 'png')
+  plt.savefig(tmp_image, bbox_inches = 'tight', format = 'png')
+  plt.close()
+
+  tmp_image.seek(0)
+  encoded_image = base64.b64encode(tmp_image.read())
+  tmp_image.close()
+
+  return encoded_image, first_date
+
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(
     formatter_class = lambda prog: SmartFormatter(prog, max_help_position = 40),
@@ -117,6 +232,10 @@ if __name__ == '__main__':
     help = 'R|Additional title to the plot',
   )
   parser.add_argument(
+    '-P', '--progress', dest = 'progress', metavar = 'file', required = False, type = str, default = '',
+    help = 'R|HTML file showing the progress of each CRAB task',
+  )
+  parser.add_argument(
     '-v', '--verbose', dest = 'verbose', action = 'store_true', default = False,
     help = 'R|Enable verbose printout',
   )
@@ -128,13 +247,17 @@ if __name__ == '__main__':
     format = '%(asctime)s - %(levelname)s: %(message)s',
   )
 
-  in_dir  = args.input
-  pattern = re.compile(args.pattern)
-  output  = args.output
-  title   = args.title
+  in_dir   = args.input
+  pattern  = re.compile(args.pattern)
+  output   = args.output
+  title    = args.title
+  progress = os.path.abspath(args.progress)
 
   lines = {}
   for subdir in os.listdir(in_dir):
+    if subdir not in lines:
+      lines[subdir] = []
+
     subdir_fp = os.path.join(in_dir, subdir)
     if not pattern.match(subdir):
       logging.debug("Skipping directory {} because it does not match the required pattern".format(subdir_fp))
@@ -152,6 +275,10 @@ if __name__ == '__main__':
       for line in crab_file:
         line_stripped = line.rstrip('\n')
         if line_stripped.startswith('Jobs status:'):
+          if lines_to_parse:
+            parsed_lines, parsed_datetime = parse_lines(lines_to_parse)
+            if parsed_lines and parsed_datetime:
+              lines[subdir].append((parsed_lines, parsed_datetime))
           lines_to_parse = []
           record = True
         elif line_stripped.startswith(
@@ -160,20 +287,47 @@ if __name__ == '__main__':
           record = False
         if record:
           lines_to_parse.append(line_stripped)
-    lines[subdir] = parse_lines(lines_to_parse)
-    if not lines[subdir]:
-      logging.error("No job statistics for task: {}".format(subdir))
-      del lines[subdir]
-    else:
-      logging.debug("Task {}: {}".format(subdir, ', '.join(list(map(lambda kv: '%s -> %d' % kv, lines[subdir].items())))))
 
-  nof_completed_tasks = len(filter(lambda kv: len(kv[1]) == 1 and 'finished' in kv[1], lines.items()))
+    if lines[subdir]:
+      latest_entry = lines[subdir][-1]
+      parsed_lines = latest_entry[0]
+      parsed_datetime = latest_entry[1]
+      logging.debug("Task {} ({}): {}".format(
+        subdir, parsed_datetime.isoformat(), ', '.join(list(map(lambda kv: '%s -> %d' % kv, parsed_lines.items())))
+      ))
+    else:
+      logging.error("No job statistics for task: {}".format(subdir))
+
+  if progress:
+    progress_dir = os.path.dirname(progress)
+    if not os.path.isdir(progress_dir):
+      raise ValueError("No such directory: %s" % progress_dir)
+
+    encoded_images = []
+    for subdir in sorted(lines.keys()):
+      encoded_image, first_date = plot_progress(lines[subdir])
+      encoded_images.append((subdir, encoded_image, first_date))
+    encoded_images = list(sorted(encoded_images, key = lambda entry: entry[2]))
+
+    with open(progress, 'w') as progress_file:
+      html = jinja2.Template(html_template).render(
+        images = encoded_images,
+        current_time = str(datetime.datetime.now()),
+      )
+      progress_file.write(html)
+
+  nof_completed_tasks = len(
+    filter(lambda kv: len(kv[1]) > 0 and len(kv[1][-1][0]) == 1 and 'finished' in kv[1][-1][0], lines.items())
+  )
   all_states = {}
-  for subdir, lines_to_parse in lines.items():
+  for subdir, all_lines in lines.items():
+    if not all_lines:
+      continue
+    lines_to_parse = all_lines[-1][0]
     for state, values in lines_to_parse.items():
       if state not in all_states:
         all_states[state] = 0
       all_states[state] += values
 
   all_states_sorted = sorted(all_states.items(), key = lambda kv: kv[1], reverse = True)
-  plot(all_states_sorted, output, len(lines), nof_completed_tasks, title)
+  plot_pie(all_states_sorted, output, len(lines), nof_completed_tasks, title)
