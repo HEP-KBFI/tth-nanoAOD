@@ -79,7 +79,7 @@ if __name__ == '__main__':
   )
   parser.add_argument(
     '-i', '--input', dest = 'input', metavar = 'file', required = True, type = str,
-    help = 'R|Input JSON file containing datasets',
+    help = 'R|Input log file of count_lumis_datasets.sh',
   )
   parser.add_argument(
     '-o', '--output', dest = 'output', metavar = 'file', required = False, type = str, default = '',
