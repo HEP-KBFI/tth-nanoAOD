@@ -5021,7 +5021,13 @@
           "references": [],
           "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer is 0.00809411 (error: 4.4721e-06 or 0.06%) x k-factor 1.16639"
         }
-      },
+      }
+    ]
+  },
+  {
+    "category": "WW",
+    "comment": "",
+    "samples": [
       {
         "name": "WWTo2L2Nu",
         "enabled": 1,
@@ -5245,7 +5251,13 @@
           ],
           "comment": "118.7 * 0.674^2 = 53.923"
         }
-      },
+      }
+    ]
+  },
+  {
+    "category": "WZ",
+    "comment": "",
+    "samples": [
       {
         "name": "WZTo3LNu",
         "enabled": 1,
@@ -5690,7 +5702,13 @@
           "references": [],
           "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.01504 or 0.13%)"
         }
-      },
+      }
+    ]
+  },
+  {
+    "category": "ZZ",
+    "comment": "",
+    "samples": [
       {
         "name": "ZZTo4L",
         "enabled": 1,

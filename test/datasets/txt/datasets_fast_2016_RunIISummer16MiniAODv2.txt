@@ -1,4 +1,4 @@
-# file generated at 2019-08-07 17:51:23 with the following command:
+# file generated at 2019-08-07 22:11:59 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -21,7 +21,7 @@
 /TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttjets_sl_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER 1 TT     TTToSemiLeptonic_fastsim_p2       365.52    /store/user/matze/TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttjets_sl_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9  # NNLO [3][4]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
 
 # di-bosons
-/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/matze-faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                             1 EWK    WZTo3LNu_fastsim                    5.07234 /store/user/matze/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a                              # NLO; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0103768 or 0.20%)
+/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/matze-faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                             1 WZ     WZTo3LNu_fastsim                    5.07234 /store/user/matze/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a                              # NLO; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0103768 or 0.20%)
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
