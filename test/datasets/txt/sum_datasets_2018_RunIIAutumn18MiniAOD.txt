@@ -1,6 +1,7 @@
-# file generated at 2019-07-05 12:43:09 with the following command:
+# file generated at 2019-08-07 15:25:14 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
+GluGluHToMuMu_M125                  GluGluHToMuMu_M125_ext1
 TTWW_ext1                           TTWW_ext2
 ZH_HToBB_ZToLL                      ZH_HToBB_ZToLL_ext1
 DYJetsToLL_M-50_amcatnloFXFX        DYJetsToLL_M-50_amcatnloFXFX_ext2

@@ -1,6 +1,9 @@
-# file generated at 2019-07-05 12:43:09 with the following command:
+# file generated at 2019-08-07 15:25:14 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
+GluGluHToBB_M125                        GluGluHToBB_M125_ext1
+VBFHToBB_M125                           VBFHToBB_M125_ext1
+VBFHToGG_M125_ext1                      VBFHToGG_M125_ext2
 TTZToLL_M10_ext2                        TTZToLL_M10_ext3
 ST_s-channel_4f_leptonDecays            ST_s-channel_4f_leptonDecays_PSweights
 ST_t-channel_antitop_4f_inclusiveDecays ST_t-channel_antitop_4f_inclusiveDecays_PSweights

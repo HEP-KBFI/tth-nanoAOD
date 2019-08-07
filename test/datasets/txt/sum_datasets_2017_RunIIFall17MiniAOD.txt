@@ -1,7 +1,10 @@
-# file generated at 2019-07-05 12:43:09 with the following command:
+# file generated at 2019-08-07 15:25:14 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 GluGluHToZZTo4L                  GluGluHToZZTo4L_ext1
+GluGluHToGG_M125                 GluGluHToGG_M125_PSWeights
+VBF_HToZZTo4L                    VBF_HToZZTo4L_ext1
+VBFHToGG_M125                    VBFHToGG_M125_PSWeights_ext1
 TTWJetsToLNu                     TTWJetsToLNu_PSweights
 ST_s-channel_4f_leptonDecays     ST_s-channel_4f_leptonDecays_PSweights
 ST_tW_antitop_5f_inclusiveDecays ST_tW_antitop_5f_inclusiveDecays_PSweights

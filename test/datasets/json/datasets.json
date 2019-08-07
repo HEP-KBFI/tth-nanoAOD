@@ -123,7 +123,11 @@
         "process": "ttH",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/ttH_4f_ctcvcp_TuneCP5_13TeV_madgraph_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -306,13 +310,13 @@
     ]
   },
   {
-    "category": "additional_signal_overlap",
+    "category": "ggH",
     "comment": "",
     "samples": [
       {
         "name": "GluGluHToZZTo4L",
-        "enabled": 0,
-        "use_case": "cross check against HH->ZZ->4l analysis",
+        "enabled": 1,
+        "use_case": "cross checks",
         "process": "ggH",
         "datasets": {
           "RunIISummer16MiniAODv2": [
@@ -339,6 +343,14 @@
             {
               "dbs": "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
               "alt": "GluGluHToZZTo4L_ext1"
+            },
+            {
+              "dbs": "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext3-v1/MINIAODSIM",
+              "alt": "GluGluHToZZTo4L_ext3"
+            },
+            {
+              "dbs": "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext4-v1/MINIAODSIM",
+              "alt": "GluGluHToZZTo4L_ext4"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -356,6 +368,576 @@
             "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
           "comment": "s(ggf h) * br(h -> zz) * br(z -> ll)^2 = 48.58 * 0.02619 * (3 * 0.033658)^2"
+        }
+      },
+      {
+        "name": "GluGluHToZZTo2L2Q_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluHToZZTo2L2Q_M125_13TeV_powheg2_JHUGenV709_pythia8/RunIISummer16MiniAODv2-PUMoriond17_HIG083_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/GluGluHToZZTo2L2Q_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToZZTo2L2Q_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToZZTo2L2Q_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.17963,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(ggf h) * br(h -> zz) * 2 * br(z -> ll) * br(z -> qqbar) = 48.58 * 0.02619 * 2 * (3 * 0.033658) * 0.69911"
+        }
+      },
+      {
+        "name": "GluGluHToWWToLNuQQ_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluHToWWToLNuQQ_M125_13TeV_powheg_JHUGenV628_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluHToWWToLNuQQ_M125_13TeV_powheg_JHUGenV628_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToWWToLNuQQ_M125_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToWWToLNuQQ_M125_NNPDF31_TuneCP5_PSweights_13TeV_powheg_JHUGen710_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "GluGluHToWWToLNuQQ_M125_PSweights"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToWWToLNuQQ_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 4.5621,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(ggf h) * br(h -> ww) * 2 * br(w -> lnu) * br(w -> qqbar) = 48.58 * 0.2137 * 2 * (1 - 0.674) * 0.674"
+        }
+      },
+      {
+        "name": "GluGluHToWWTo2L2Nu_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluHToWWTo2L2Nu_M125_13TeV_powheg_JHUgen_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluHToWWTo2L2Nu_M125_13TeV_powheg_JHUgen_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToWWTo2L2Nu_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToWWTo2L2Nu_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 1.1033,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(ggf h) * br(h -> ww) * br(w -> lnu)^2 = 48.58 * 0.2137 * (1 - 0.674)^2"
+        }
+      },
+      {
+        "name": "GluGluHToMuMu_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGlu_HToMuMu_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM",
+              "alt": "GluGluHToMuMu_M125"
+            },
+            {
+              "dbs": "/GluGlu_HToMuMu_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToMuMu_M125_ext1"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/GluGluHToMuMu_M-125_13TeV_powheg_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "GluGluHToMuMu_M125"
+            },
+            {
+              "dbs": "/GluGluHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToMuMu_M125_ext1"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "GluGluHToMuMu_M125"
+            },
+            {
+              "dbs": "/GluGluHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToMuMu_M125_ext1"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.010571,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(ggf h) * br(h -> mumu) = 48.58 * 0.0002176"
+        }
+      },
+      {
+        "name": "GluGluHToBB_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluHToBB_M125_13TeV_amcatnloFXFX_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM",
+              "alt": "GluGluHToBB_M125"
+            },
+            {
+              "dbs": "/GluGluHToBB_M125_13TeV_amcatnloFXFX_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToBB_M125_ext1"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluHToBB_M125_13TeV_amcatnloFXFX_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "GluGluHToBB_M125"
+            },
+            {
+              "dbs": "/GluGluHToBB_M125_13TeV_amcatnloFXFX_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToBB_M125_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToBB_M125_13TeV_amcatnloFXFX_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToBB_M125_13TeV_amcatnloFXFX_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 28.293,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(ggf h) * br(h -> bbar) = 48.58 * 0.5824"
+        }
+      },
+      {
+        "name": "GluGluHToGG_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/MINIAODSIM",
+              "alt": "GluGluHToGG_M125_ext2"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM",
+              "alt": "GluGluHToGG_M125_ext2"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM",
+              "alt": "GluGluHToGG_M125"
+            },
+            {
+              "dbs": "/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8_PSWeights/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToGG_M125_PSWeights"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.11028,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(ggf h) * br(h -> gamma gamma) = 48.58 * 0.00227"
+        }
+      }
+    ]
+  },
+  {
+    "category": "qqH",
+    "comment": "",
+    "samples": [
+      {
+        "name": "VBF_HToZZTo4L",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUgenV6_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUgenV6_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v2/MINIAODSIM",
+              "alt": "VBF_HToZZTo4L"
+            },
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM",
+              "alt": "VBF_HToZZTo4L_ext1"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "VBF_HToZZTo4L"
+            },
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
+              "alt": "VBF_HToZZTo4L_ext1"
+            },
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v2/MINIAODSIM",
+              "alt": "VBF_HToZZTo4L_ext2"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0010099,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(vbf h) * br(h -> zz) * br(z -> ll)^2 = 3.782 * 0.02619 * (3 * 0.033658)^2"
+        }
+      },
+      {
+        "name": "VBFHToWWToLNuQQ_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHToWWToLNuQQ_M125_13TeV_powheg_JHUGenV628_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHToWWToLNuQQ_M125_13TeV_powheg_JHUGenV628_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToWWToLNuQQ_M125_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHToWWToLNuQQ_M125_NNPDF31_TuneCP5_PSweights_13TeV_powheg_JHUGen710_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "VBFHToWWToLNuQQ_M125_PSweights"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHToWWToLNuQQ_M125_13TeV_powheg_JHUGen_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.35517,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(vbf h) * br(h -> ww) * 2 * br(w -> lnu) * br(w -> qqbar) = 3.782 * 0.2137 * 2 * (1 - 0.674) * 0.674"
+        }
+      },
+      {
+        "name": "VBFHToWWTo2L2Nu_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHToWWTo2L2Nu_M125_13TeV_powheg_JHUgenv628_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHToWWTo2L2Nu_M125_13TeV_powheg_JHUgenv628_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHToWWTo2L2Nu_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHToWWTo2L2Nu_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.085894,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(vbf h) * br(h -> ww) * br(w -> lnu)^2 = 3.782 * 0.2137 * (1 - 0.674)^2"
+        }
+      },
+      {
+        "name": "VBFHToMuMu_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHToMuMu_M-125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.00082296,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(vbf h) * br(h -> mumu) = 3.782 * 0.0002176"
+        }
+      },
+      {
+        "name": "VBFHToBB_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM",
+              "alt": "VBFHToBB_M125"
+            },
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToBB_M125_ext1"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "VBFHToBB_M125"
+            },
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToBB_M125_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 2.2026,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(vbf h) * br(h -> bbar) = 3.782 * 0.5824"
+        }
+      },
+      {
+        "name": "VBFHToGG_M125",
+        "enabled": 1,
+        "use_case": "cross checks",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToGG_M125_ext1"
+            },
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/MINIAODSIM",
+              "alt": "VBFHToGG_M125_ext2"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM",
+              "alt": "VBFHToGG_M125_ext1"
+            },
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM",
+              "alt": "VBFHToGG_M125_ext2"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/MINIAODSIM",
+              "alt": "VBFHToGG_M125"
+            },
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8_PSWeights/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToGG_M125_PSWeights_ext1"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "VBFHToGG_M125"
+            },
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8_PSWeights/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToGG_M125_PSWeights_ext1"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0085851,
+          "order": "?",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV",
+            "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
+          ],
+          "comment": "s(vbf h) * br(h -> gamma gamma) = 3.782 * 0.00227"
         }
       }
     ]
