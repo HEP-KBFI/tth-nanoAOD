@@ -1017,7 +1017,7 @@
           "value": 0.2432,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00052828 or 0.22%); alternatively: 0.8393 * (1 - 0.674) = 0.27361"
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00052828 or 0.22%)"
         }
       },
       {
@@ -1167,10 +1167,12 @@
           ]
         },
         "xs": {
-          "value": 0.21675,
+          "value": 0.1960,
           "order": "NLO",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00054735 or 0.25%); alternatively: 0.6008 * (1 - 0.674) = 0.1960"
+          "references": [
+            "https://arxiv.org/pdf/1610.07922.pdf (table 40)"
+          ],
+          "comment": "s(ttW) * br(w -> lnu) = 0.6008 * (1 - 0.674) = 0.1960"
         }
       },
       {
