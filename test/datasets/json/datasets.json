@@ -324,6 +324,53 @@
     "comment": "",
     "samples": [
       {
+        "name": "GluGluHToTauTau",
+        "enabled": 1,
+        "use_case": "irreducible background",
+        "process": "ggH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v3/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v3/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "GluGluHToTauTau"
+            },
+            {
+              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
+              "alt": "GluGluHToTauTau_ext1"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 3.0469,
+          "order": "N3LO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
+          ],
+          "comment": "s(ggf h) * br(h -> tau tau) = 48.58 * 0.06272"
+        }
+      },
+      {
         "name": "GluGluHToZZTo4L",
         "enabled": 1,
         "use_case": "cross checks",
@@ -662,6 +709,49 @@
     "category": "qqH",
     "comment": "",
     "samples": [
+      {
+        "name": "VBFHToTauTau",
+        "enabled": 1,
+        "use_case": "irreducible background",
+        "process": "qqH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM",
+              "alt": "VBFHToTauTau_ext1"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.2372,
+          "order": "NNLO QCD + NLO EW",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
+          ],
+          "comment": "s(vbf h) * br(h -> tau tau) = 3.782 * 0.06272"
+        }
+      },
       {
         "name": "VBF_HToZZTo4L",
         "enabled": 1,
@@ -2433,96 +2523,6 @@
           "order": "NLO",
           "references": [],
           "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0150618 or 0.36%)"
-        }
-      },
-      {
-        "name": "GluGluHToTauTau",
-        "enabled": 1,
-        "use_case": "irreducible background",
-        "process": "H->tautau",
-        "datasets": {
-          "RunIISummer16MiniAODv2": [
-            {
-              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v3/MINIAODSIM"
-            }
-          ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v3/MINIAODSIM"
-            }
-          ],
-          "RunIIFall17MiniAOD": [
-            {
-              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIFall17MiniAODv2": [
-            {
-              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM",
-              "alt": "GluGluHToTauTau"
-            },
-            {
-              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
-              "alt": "GluGluHToTauTau_ext1"
-            }
-          ],
-          "RunIIAutumn18MiniAOD": [
-            {
-              "dbs": "/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
-            }
-          ]
-        },
-        "xs": {
-          "value": 3.0469,
-          "order": "N3LO",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
-          ],
-          "comment": "s(ggf h) * br(h -> tau tau) = 48.58 * 0.06272"
-        }
-      },
-      {
-        "name": "VBFHToTauTau",
-        "enabled": 1,
-        "use_case": "irreducible background",
-        "process": "H->tautau",
-        "datasets": {
-          "RunIISummer16MiniAODv2": [
-            {
-              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM"
-            }
-          ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
-          "RunIIFall17MiniAOD": [
-            {
-              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIFall17MiniAODv2": [
-            {
-              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIAutumn18MiniAOD": [
-            {
-              "dbs": "/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM",
-              "alt": "VBFHToTauTau_ext1"
-            }
-          ]
-        },
-        "xs": {
-          "value": 0.2372,
-          "order": "NNLO QCD + NLO EW",
-          "references": [
-            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
-          ],
-          "comment": "s(vbf h) * br(h -> tau tau)"
         }
       },
       {
@@ -5073,14 +5073,13 @@
           ]
         },
         "xs": {
-          "value": 12.615,
+          "value": 12.2,
           "order": "NNLO",
           "references": [
-            "https://arxiv.org/pdf/1408.5243.pdf (table I)",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043",
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV"
+            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
+            "https://arxiv.org/pdf/1408.5243.pdf"
           ],
-          "comment": "118.7 * (1 - 0.674)^2 = 12.615"
+          "comment": ""
         }
       },
       {
@@ -5304,10 +5303,13 @@
           ]
         },
         "xs": {
-          "value": 5.07234,
+          "value": 4.43,
           "order": "NLO",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.0103768 or 0.20%)"
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
+            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+          ],
+          "comment": ""
         }
       },
       {
@@ -5341,10 +5343,13 @@
           ]
         },
         "xs": {
-          "value": 5.07234,
+          "value": 4.43,
           "order": "NLO",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer is 4.658 (error: 0.0064785 or 0.14%) -> k-factor = 5.07234 / 4.658 = 1.08895"
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
+            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+          ],
+          "comment": ""
         }
       },
       {
@@ -5763,10 +5768,13 @@
           ]
         },
         "xs": {
-          "value": 1.325,
+          "value": 1.256,
           "order": "NLO",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.002728 or 0.21%)"
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
+            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+          ],
+          "comment": ""
         }
       },
       {
