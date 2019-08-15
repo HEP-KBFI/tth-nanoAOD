@@ -5800,10 +5800,13 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 1.325,
+          "value": 1.256,
           "order": "NLO",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 ZZTo4L samples with xsecAnalyzer (error: 0.002728 or 0.21%)"
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
+            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+          ],
+          "comment": ""
         }
       },
       {
