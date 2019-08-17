@@ -157,7 +157,7 @@
     "samples": [
       {
         "name": "THQ",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "signal extraction",
         "process": "THq",
         "datasets": {
@@ -199,7 +199,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/THQ_ctcvcp_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "THQ_ctcvcp"
+              "alt": "THQ_ctcvcp",
+              "enabled": 0
             },
             {
               "dbs": "/THQ_ctcvcp_HIncl_M125_TuneCP5_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
@@ -241,7 +242,7 @@
     "samples": [
       {
         "name": "THW",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "signal extraction",
         "process": "THW",
         "datasets": {
@@ -283,7 +284,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/THW_ctcvcp_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "THW_ctcvcp"
+              "alt": "THW_ctcvcp",
+              "enabled": 0
             },
             {
               "dbs": "/THW_ctcvcp_HIncl_M125_TuneCP5_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
@@ -1679,7 +1681,7 @@
       },
       {
         "name": "TTTo2L2Nu",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background or training",
         "process": "ttbar",
         "datasets": {
@@ -1747,7 +1749,7 @@
       },
       {
         "name": "TTToSemiLeptonic",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background or training",
         "process": "ttbar",
         "datasets": {
@@ -1815,7 +1817,7 @@
       },
       {
         "name": "TTToHadronic",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background or training",
         "process": "ttbar",
         "datasets": {
@@ -1864,7 +1866,7 @@
       },
       {
         "name": "TTJets_DiLept",
-        "enabled": 0,
+        "enabled": 1,
         "use_case": "training",
         "process": "ttbar",
         "datasets": {
@@ -1916,7 +1918,7 @@
       },
       {
         "name": "TTJets_SingleLeptFromT",
-        "enabled": 0,
+        "enabled": 1,
         "use_case": "training",
         "process": "ttbar",
         "datasets": {
@@ -1968,7 +1970,7 @@
       },
       {
         "name": "TTJets_SingleLeptFromTbar",
-        "enabled": 0,
+        "enabled": 1,
         "use_case": "training",
         "process": "ttbar",
         "datasets": {
@@ -5084,7 +5086,7 @@
       },
       {
         "name": "WWToLNuQQ",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background",
         "process": "di-bosons",
         "datasets": {
@@ -5202,7 +5204,7 @@
       },
       {
         "name": "WWTo4Q",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background",
         "process": "di-bosons",
         "datasets": {
@@ -5634,7 +5636,7 @@
       },
       {
         "name": "WZTo2L2Q",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background",
         "process": "di-bosons",
         "datasets": {
@@ -5811,7 +5813,7 @@
       },
       {
         "name": "ZZTo2L2Nu",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background",
         "process": "di-bosons",
         "datasets": {
@@ -5865,7 +5867,7 @@
       },
       {
         "name": "ZZTo2L2Q",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background",
         "process": "di-bosons",
         "datasets": {
