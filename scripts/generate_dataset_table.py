@@ -173,7 +173,7 @@ for category_entry in json_data:
         table[mc_type][era].append(
           collections.OrderedDict([
             ('dbs',          dbs),
-            ('enabled',      enabled),
+            ('enabled',      sample_enabled),
             ('category',     category),
             ('comment',      process),
             ('process_name', dataset_name),
