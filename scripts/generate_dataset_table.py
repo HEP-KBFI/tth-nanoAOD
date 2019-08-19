@@ -155,6 +155,7 @@ for category_entry in json_data:
         dataset_name = dataset_entry['alt'] if 'alt' in dataset_entry else sample_name
         location = dataset_entry['loc'] if 'loc' in dataset_entry else ''
         filename = dataset_entry['file'] if 'file' in dataset_entry else ''
+        sample_enabled = dataset_entry['enabled'] if 'enabled' in dataset_entry else enabled
         sum_entry.append(dataset_name)
 
         if HH_NONRES_RE.match(category):
