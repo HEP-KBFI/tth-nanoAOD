@@ -118,7 +118,7 @@
     "samples": [
       {
         "name": "TTH_4f_ctcvcp",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "coupling study",
         "process": "ttH",
         "datasets": {
