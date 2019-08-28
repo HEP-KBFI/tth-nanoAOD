@@ -2111,6 +2111,100 @@
     ]
   },
   {
+    "category": "TTWH",
+    "comment": "",
+    "samples": [
+      {
+        "name": "TTWH",
+        "enabled": 1,
+        "use_case": "irreducible background",
+        "process": "ttbar+xx",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/TTWH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v3/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/TTWH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "TTWH_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",
+              "alt": "TTWH_ext1"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.00114,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)"
+        }
+      }
+    ]
+  },
+  {
+    "category": "TTZH",
+    "comment": "",
+    "samples": [
+      {
+        "name": "TTZH",
+        "enabled": 1,
+        "use_case": "irreducible background",
+        "process": "ttbar+xx",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/TTZH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/TTZH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "TTZH_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [
+            {
+              "dbs": "/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",
+              "alt": "TTZH_ext1"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0011305,
+          "order": "?",
+          "references": [],
+          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.13%)"
+        }
+      }
+    ]
+  },
+  {
     "category": "Rares",
     "comment": "",
     "samples": [
@@ -2700,88 +2794,6 @@
           "order": "?",
           "references": [],
           "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 2.07846e-05 or 0.25%)"
-        }
-      },
-      {
-        "name": "TTWH",
-        "enabled": 1,
-        "use_case": "irreducible background",
-        "process": "ttbar+xx",
-        "datasets": {
-          "RunIISummer16MiniAODv2": [
-            {
-              "dbs": "/TTWH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v3/MINIAODSIM"
-            }
-          ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/TTWH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
-              "alt": "TTWH_ext1"
-            }
-          ],
-          "RunIIFall17MiniAOD": [
-            {
-              "dbs": "/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIFall17MiniAODv2": [
-            {
-              "dbs": "/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIAutumn18MiniAOD": [
-            {
-              "dbs": "/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",
-              "alt": "TTWH_ext1"
-            }
-          ]
-        },
-        "xs": {
-          "value": 0.00114,
-          "order": "?",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)"
-        }
-      },
-      {
-        "name": "TTZH",
-        "enabled": 1,
-        "use_case": "irreducible background",
-        "process": "ttbar+xx",
-        "datasets": {
-          "RunIISummer16MiniAODv2": [
-            {
-              "dbs": "/TTZH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/MINIAODSIM"
-            }
-          ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/TTZH_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
-              "alt": "TTZH_ext1"
-            }
-          ],
-          "RunIIFall17MiniAOD": [
-            {
-              "dbs": "/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v2/MINIAODSIM"
-            }
-          ],
-          "RunIIFall17MiniAODv2": [
-            {
-              "dbs": "/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
-            }
-          ],
-          "RunIIAutumn18MiniAOD": [
-            {
-              "dbs": "/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",
-              "alt": "TTZH_ext1"
-            }
-          ]
-        },
-        "xs": {
-          "value": 0.0011305,
-          "order": "?",
-          "references": [],
-          "comment": "weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.13%)"
         }
       },
       {

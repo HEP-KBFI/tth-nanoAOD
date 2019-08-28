@@ -1,4 +1,4 @@
-# file generated at 2019-08-27 14:01:56 with the following command:
+# file generated at 2019-08-28 21:34:57 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -61,6 +61,10 @@
 /TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                               0 TT            TTJets_amcatnloFXFX_ext1                    831.76        # NNLO [8]
 /TTJets_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                     0 TT            TTJets_madgraphMLM                          831.76        # NNLO [8]
 
+# ttbar+xx
+/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 TTWH          TTWH_ext1                                     0.00114     # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)
+/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 TTZH          TTZH_ext1                                     0.0011305   # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.13%)
+
 # tribosons
 /WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                   1 Rares         WWW_ext1                                      0.2154      # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00034083 or 0.16%)
 /WWZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                      1 Rares         WWZ_ext1                                      0.1676      # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0.00024183 or 0.14%)
@@ -83,8 +87,6 @@
 
 # ttbar+xx
 /TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 Rares         TTTT_ext1                                     0.008213    # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 2.07846e-05 or 0.25%)
-/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 Rares         TTWH_ext1                                     0.00114     # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)
-/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 Rares         TTZH_ext1                                     0.0011305   # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.13%)
 /TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 Rares         TTTW_ext1                                     0.000732    # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)
 /TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 Rares         TTTJ_ext1                                     0.000397    # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 0 or 0%)
 /TTWZ_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                                     1 Rares         TTWZ_ext1                                     0.0024455   # ?; weighted average of 2017v2 and 2018 samples with xsecAnalyzer (error: 1.4142e-06 or 0.06%)
