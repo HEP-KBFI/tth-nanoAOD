@@ -5944,7 +5944,11 @@
             }
           ],
           "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 186900.0,
@@ -5979,7 +5983,11 @@
               "dbs": "/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 305561.0,
