@@ -21,6 +21,7 @@ PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
 PUBLISH       = bool(int(get_env_var('PUBLISH')))
 NOF_EVENTS    = int(get_env_var('NOF_EVENTS'))
 DO_FILEBASED  = bool(int(get_env_var('FORCE_FILEBASED')))
+NTHREADS      = int(get_env_var('NTHREADS'))
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
 job_type        = get_env_var('JOB_TYPE')
@@ -56,6 +57,9 @@ config.General.transferLogs    = True
 
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName   = NANOCFG
+config.JobType.numCores   = NTHREADS
+if NTHREADS > 1:
+  config.JobType.maxMemoryMB = 2000 * NTHREADS
 
 if WHITELIST:
   config.Site.whitelist = WHITELIST.split(',')
