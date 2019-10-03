@@ -144,6 +144,12 @@ check_if_exists() {
   fi
 }
 
+if [[ "$DRYRUN" != "" ]]; then
+  echo "Doing dryrun";
+else
+  echo "NOT doing dryrun";
+fi
+
 if [ -z "$ERA" ]; then
   echo "You need to specify era!";
   exit 1;
