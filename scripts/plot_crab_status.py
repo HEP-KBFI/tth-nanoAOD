@@ -76,7 +76,7 @@ def parse_lines(lines):
   current_datetime = None
   for line in lines:
     if line.startswith('INFO'):
-      datetime_str = ' '.join(line.rstrip('\n').split()[1:]).split(',')[0]
+      datetime_str = (' '.join(line.rstrip('\n').split()[1:]).split(',')[0]).split('.')[0]
       current_datetime = datetime.datetime.strptime(datetime_str, '%Y-%m-%d %H:%M:%S')
     line_split = line.replace('(', '').replace(')', '').split()
     if len(line_split) < 5:
