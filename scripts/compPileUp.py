@@ -52,9 +52,9 @@ parser.add_argument('-o', '--output', dest = 'output', metavar = 'file', require
                     help = 'R|Output file')
 parser.add_argument('-b', '--minbias', dest = 'minbias', metavar = 'xs', required = False, type = int, default = 69200,
                     help = 'R|Minimum bias cross section')
-parser.add_argument('-S', '--shift', dest = 'shift', metavar = 'float', required = False, type = float, default = 0.05,
+parser.add_argument('-S', '--shift', dest = 'shift', metavar = 'float', required = False, type = float, default = 0.046,
                     help = 'R|Relative up/down shift of minimum bias cross section')
-parser.add_argument('-n', '--nbins', dest = 'nbins', metavar = 'int', required = False, type = int, default = 200,
+parser.add_argument('-n', '--nbins', dest = 'nbins', metavar = 'int', required = False, type = int, default = 100,
                     help = 'R|Number of bins in pileup histogram')
 parser.add_argument('-N', '--name', dest = 'name', metavar = 'histogram', required = False, type = str, default = 'pileup',
                     help = 'R|Default name for the pileup histogram')
