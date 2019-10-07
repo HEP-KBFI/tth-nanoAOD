@@ -15,14 +15,17 @@ show_help() {
   exit 0;
 }
 
+RUN=0;
 DIRECTORY=""
 JOB_IDS=""
 CONFIG=""
 
-while getopts "h?d:i:c:" opt; do
+while getopts "h?rd:i:c:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
+  r) RUN=1;
+     ;;
   d) DIRECTORY=${OPTARG}
      ;;
   i) JOB_IDS=${OPTARG}
@@ -129,10 +132,11 @@ declare -A LOG_FILES
 
 for JOB_ID in $JOB_IDS; do
   FILELIST=$(echo ${INPUT_FILES_LOCAL[${JOB_ID}]} | tr ' ' '\n' | sed 's/^\|$/"/g' | sed 's/$/,/g' | tr '\n' ' ')
+  JOB_DIR=$(dirname $DIRECTORY)/run_${JOB_ID};
   REPLACEMENT="process.source.fileNames = cms.untracked.vstring($FILELIST)\n";
   REPLACEMENT+="from FWCore.PythonUtilities.LumiList import LumiList\n";
-  REPLACEMENT+="process.source.lumisToProcess = LumiList('${RUNLUMI_FILES[${JOB_ID}]}')";
-  JOB_DIR=$(dirname $DIRECTORY)/run_${JOB_ID};
+  REPLACEMENT+="process.source.lumisToProcess = LumiList('${RUNLUMI_FILES[${JOB_ID}]}')\n";
+  REPLACEMENT+="process.NANOAODoutput.fileName = cms.untracked.string('file://${JOB_DIR}/tree.root')";
   mkdir -p $JOB_DIR;
   CONFIG_FILES[$JOB_ID]=$JOB_DIR/$(basename $CONFIG);
   LOG_FILES[$JOB_ID]=$JOB_DIR/out_${JOB_ID}.log;
@@ -141,7 +145,9 @@ done
 
 for JOB_ID in $JOB_IDS; do
   echo "Executing jobs ${JOB_ID}";
-  cmsRun ${CONFIG_FILES[${JOB_ID}]} &> ${LOG_FILES[${JOB_ID}]}";
+  if [ $RUN -eq 1 ]; then
+    cmsRun ${CONFIG_FILES[${JOB_ID}]} &> ${LOG_FILES[${JOB_ID}]}";
+  fi
 done
 
 echo "All done";
