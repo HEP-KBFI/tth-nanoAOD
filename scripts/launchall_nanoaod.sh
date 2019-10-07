@@ -38,13 +38,13 @@ export ERA_KEY_2017_v2="2017v2"
 export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
 
 # requires CMSSW version 102x
-export COND_DATA_2018="102X_dataRun2_Sep2018ABC_v2" # JEC Autumn18_RunABCD_V8_DATA
+export COND_DATA_2018="102X_dataRun2_v12" # JEC Autumn18_RunABC_102X_DATA
 export COND_MC_2018="102X_upgrade2018_realistic_v18" # JEC Autumn18_V8_MC
 export ERA_ARGS_2018="Run2_2018,run2_nanoAOD_102Xv1"
 export ERA_KEY_2018="2018"
 export DATASET_ERA_2018="RunIIAutumn18MiniAOD"
 
-export COND_DATA_2018_PROMPT="102X_dataRun2_Prompt_v13" # JEC Autumn18_RunABCD_V8_DATA
+export COND_DATA_2018_PROMPT="102X_dataRun2_Prompt_v15" # JEC Autumn18_RunD_V19_DATA
 export ERA_KEY_2018_PROMPT="2018prompt"
 
 OPTIND=1 # reset in case getopts has been used previously in the shell
