@@ -135,7 +135,7 @@ for JOB_ID in $JOB_IDS; do
   JOB_DIR=$(dirname $DIRECTORY)/run_${JOB_ID};
   REPLACEMENT="process.source.fileNames = cms.untracked.vstring($FILELIST)\n";
   REPLACEMENT+="from FWCore.PythonUtilities.LumiList import LumiList\n";
-  REPLACEMENT+="process.source.lumisToProcess = LumiList('${RUNLUMI_FILES[${JOB_ID}]}')\n";
+  REPLACEMENT+="process.source.lumisToProcess = LumiList('${RUNLUMI_FILES[${JOB_ID}]}').getVLuminosityBlockRange()\n";
   REPLACEMENT+="process.NANOAODoutput.fileName = cms.untracked.string('file://${JOB_DIR}/tree.root')";
   mkdir -p $JOB_DIR;
   CONFIG_FILES[$JOB_ID]=$JOB_DIR/$(basename $CONFIG);
