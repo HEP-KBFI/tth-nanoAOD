@@ -140,7 +140,7 @@ for JOB_ID in $JOB_IDS; do
   mkdir -p $JOB_DIR;
   CONFIG_FILES[$JOB_ID]=$JOB_DIR/$(basename $CONFIG);
   LOG_FILES[$JOB_ID]=$JOB_DIR/out_${JOB_ID}.log;
-  cat $CONFIG | sed "s|process.source.fileNames = cms.untracked.vstring()|$REPLACEMENT|g" > ${CONFIG_FILES[${JOB_ID}]};
+  cat $CONFIG | sed "s|^process.source.fileNames = cms.untracked.vstring()|$REPLACEMENT|g" > ${CONFIG_FILES[${JOB_ID}]};
 done
 
 for JOB_ID in $JOB_IDS; do
