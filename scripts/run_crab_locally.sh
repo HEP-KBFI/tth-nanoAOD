@@ -116,7 +116,7 @@ for JOB_ID in $JOB_IDS; do
     INPUT_LOCAL_DIR_HDFS=/hdfs$INPUT_LOCAL_DIR
     INPUT_LOCAL_FILE=$INPUT_LOCAL_DIR_HDFS/$INPUT_FILE_BASENAME
 
-    hdfs dfs -mkdir -p $INPUT_LOCAL_DIR;
+    mkdir -p $INPUT_LOCAL_DIR;
     if [ ! -f $INPUT_LOCAL_FILE ]; then
       xrdcp root://cms-xrd-global.cern.ch/$INPUT_FILE $INPUT_LOCAL_FILE;
     fi
