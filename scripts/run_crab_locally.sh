@@ -146,7 +146,7 @@ done
 for JOB_ID in $JOB_IDS; do
   echo "Executing jobs ${JOB_ID}";
   if [ $RUN -eq 1 ]; then
-    cmsRun ${CONFIG_FILES[${JOB_ID}]} &> ${LOG_FILES[${JOB_ID}]}";
+    cmsRun ${CONFIG_FILES[${JOB_ID}]} &> ${LOG_FILES[${JOB_ID}]};
   fi
 done
 
