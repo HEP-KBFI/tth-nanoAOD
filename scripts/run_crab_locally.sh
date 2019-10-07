@@ -46,9 +46,12 @@ if [[ -z $CONFIG || ! -f $CONFIG ]]; then
 fi
 
 if [[ ! "$DIRECTORY" =~ /local$ ]]; then
-  echo "Running preparelocal on $DIRECTORY"
-  crab preparelocal -d "$DIRECTORY";
-  DIRECTORY=$DIRECTORY/local
+  DIRECTORY_LOCAL=$DIRECTORY/local;
+  if [ ! -d $DIRECTORY_LOCAL ]; then
+    echo "Running preparelocal on $DIRECTORY"
+    crab preparelocal -d "$DIRECTORY";
+  fi
+  DIRECTORY=$DIRECTORY_LOCAL;
 fi
 
 INPUTFILES_DIR=$DIRECTORY/input_files
