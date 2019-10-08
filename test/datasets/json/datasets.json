@@ -3174,7 +3174,7 @@
             "https://indico.cern.ch/event/746829/contributions/3138541/attachments/1717905/2772129/Drell-Yan_jets_crosssection.pdf",
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns"
           ],
-          "comment": "weighted average of 2016 ~ 2017v2 and 2018 samples with xsecAnalyzer is 16270.0 ~ 15820.0 (error: 1.478 ~ 2.037 or 0.01%); k-factor = 18610.0 / 16270.0 ~ 15820.0 = 1.14382 ~ 1.17636"
+          "comment": "2018 samples with xsecAnalyzer is 15820; k-factor = 18610.0 / 15820 = 1.17636"
         }
       },
       {
@@ -3238,10 +3238,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 853.90,
+          "value": 859.68,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 730.8 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 730.8 x k-factor 1.17636"
         }
       },
       {
@@ -3265,10 +3265,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 452.18,
+          "value": 455.25,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 387.0 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 387.0 x k-factor 1.17636"
         }
       },
       {
@@ -3292,10 +3292,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 111.06,
+          "value": 111.81,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 95.05 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 95.05 x k-factor 1.17636"
         }
       },
       {
@@ -3319,10 +3319,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 42.83,
+          "value": 43.12,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 36.66 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 36.66 x k-factor 1.17636"
         }
       },
       {
@@ -3343,10 +3343,10 @@
           ]
         },
         "xs": {
-          "value": 171.18,
+          "value": 172.34,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer is 146.5 x k-factor 1.1684"
+          "comment": "2018 samples with xsecAnalyzer is 146.5 x k-factor 1.17636"
         }
       },
       {
@@ -3380,10 +3380,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 261.12,
+          "value": 262.89,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 223.48 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 223.48 x k-factor 1.17636"
         }
       },
       {
@@ -3422,10 +3422,10 @@
           ]
         },
         "xs": {
-          "value": 237.42,
+          "value": 239.04,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer is 203.20 x k-factor 1.1684"
+          "comment": "2018 samples with xsecAnalyzer is 203.20 x k-factor 1.17636"
         }
       },
       {
@@ -3459,10 +3459,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 44.22,
+          "value": 44.52,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 37.85 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 37.85 x k-factor 1.17636"
         }
       },
       {
@@ -3501,10 +3501,10 @@
           ]
         },
         "xs": {
-          "value": 63.29,
+          "value": 63.72,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer is 54.17 x k-factor 1.1684"
+          "comment": "2018 samples with xsecAnalyzer is 54.17 x k-factor 1.17636"
         }
       },
       {
@@ -3538,10 +3538,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 4.255,
+          "value": 4.284,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 3.6417 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 3.6417 x k-factor 1.17636"
         }
       },
       {
@@ -3580,10 +3580,10 @@
           ]
         },
         "xs": {
-          "value": 6.6834,
+          "value": 6.729,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer is 5.72 x k-factor 1.1684"
+          "comment": "2018 samples with xsecAnalyzer is 5.72 x k-factor 1.17636"
         }
       },
       {
@@ -3617,10 +3617,10 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 1.2845,
+          "value": 1.293,
           "order": "NLO",
           "references": [],
-          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 1.09934 x k-factor 1.1684"
+          "comment": "weighted average of 2016v3 samples with xsecAnalyzer is 1.09934 x k-factor 1.17636"
         }
       },
       {
@@ -3654,10 +3654,10 @@
           ]
         },
         "xs": {
-          "value": 2.1546,
+          "value": 2.1692,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer is 1.844 x k-factor 1.1684"
+          "comment": "2018 samples with xsecAnalyzer is 1.844 x k-factor 1.17636"
         }
       },
       {
