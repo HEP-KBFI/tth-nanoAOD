@@ -5407,7 +5407,7 @@
           "value": 2.3986,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 2.522 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 2.522 x k-factor 0.95105"
         }
       },
       {
@@ -5442,7 +5442,7 @@
           "value": 0.6067,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.6379 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.6379 x k-factor 0.95105"
         }
       },
       {
@@ -5477,7 +5477,7 @@
           "value": 0.46107,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.4848 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.4848 x k-factor 0.95105"
         }
       },
       {
@@ -5512,7 +5512,7 @@
           "value": 0.3226,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.3392 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.3392 x k-factor 0.95105"
         }
       },
       {
@@ -5547,7 +5547,7 @@
           "value": 0.15607,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.1641 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.1641 x k-factor 0.95105"
         }
       },
       {
@@ -5582,7 +5582,7 @@
           "value": 0.063140,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.06639 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.06639 x k-factor 0.95105"
         }
       },
       {
@@ -5617,7 +5617,7 @@
           "value": 0.06769,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.07118 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.07118 x k-factor 0.95105"
         }
       },
       {
@@ -5652,7 +5652,7 @@
           "value": 0.090512,
           "order": "NLO",
           "references": [],
-          "comment": "2018 samples with xsecAnalyzer 0.09517 x k-factor = 2.3986"
+          "comment": "2018 samples with xsecAnalyzer 0.09517 x k-factor 0.95105"
         }
       },
       {
