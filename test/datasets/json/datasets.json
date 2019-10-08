@@ -3824,7 +3824,7 @@
           ]
         },
         "xs": {
-          "value": 1023,
+          "value": 1023.0,
           "order": "NNLO QCD, NLO EW",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer is 875.50 x k-factor 1.1684"
@@ -5968,7 +5968,7 @@
           ]
         },
         "xs": {
-          "value": 186900,
+          "value": 186900.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6007,7 +6007,7 @@
           ]
         },
         "xs": {
-          "value": 305400,
+          "value": 305400.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6046,7 +6046,7 @@
           ]
         },
         "xs": {
-          "value": 361100,
+          "value": 361100.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6087,7 +6087,7 @@
           ]
         },
         "xs": {
-          "value": 33820,
+          "value": 33820.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6126,7 +6126,7 @@
           ]
         },
         "xs": {
-          "value": 2130,
+          "value": 2130.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6165,7 +6165,7 @@
           ]
         },
         "xs": {
-          "value": 563,
+          "value": 563.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6197,7 +6197,7 @@
           ]
         },
         "xs": {
-          "value": 1324000,
+          "value": 1324000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6236,7 +6236,7 @@
           ]
         },
         "xs": {
-          "value": 4912000,
+          "value": 4912000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6286,7 +6286,7 @@
           ]
         },
         "xs": {
-          "value": 6420000,
+          "value": 6420000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6335,7 +6335,7 @@
           ]
         },
         "xs": {
-          "value": 1988000,
+          "value": 1988000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6384,7 +6384,7 @@
           ]
         },
         "xs": {
-          "value": 366500,
+          "value": 366500.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6433,7 +6433,7 @@
           ]
         },
         "xs": {
-          "value": 66510,
+          "value": 66510.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6468,7 +6468,7 @@
           ]
         },
         "xs": {
-          "value": 16560,
+          "value": 16560.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6507,7 +6507,7 @@
           ]
         },
         "xs": {
-          "value": 1100,
+          "value": 1100.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6546,7 +6546,7 @@
           ]
         },
         "xs": {
-          "value": 2811000,
+          "value": 2811000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6585,7 +6585,7 @@
           ]
         },
         "xs": {
-          "value": 2531000,
+          "value": 2531000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6624,7 +6624,7 @@
           ]
         },
         "xs": {
-          "value": 1367000,
+          "value": 1367000.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6663,7 +6663,7 @@
           ]
         },
         "xs": {
-          "value": 377900,
+          "value": 377900.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6717,7 +6717,7 @@
           ]
         },
         "xs": {
-          "value": 88620,
+          "value": 88620.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6771,7 +6771,7 @@
           ]
         },
         "xs": {
-          "value": 21190,
+          "value": 21190.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
@@ -6828,7 +6828,7 @@
           ]
         },
         "xs": {
-          "value": 7020,
+          "value": 7020.0,
           "order": "?",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
