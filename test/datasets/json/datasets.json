@@ -1,6 +1,6 @@
 [
   {
-    "category": "signal",
+    "category": "ttH",
     "comment": "",
     "samples": [
       {
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "category": "signal_ctcvcp",
+    "category": "ttH_ctcvcp",
     "comment": "",
     "samples": [
       {
