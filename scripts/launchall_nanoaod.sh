@@ -591,10 +591,10 @@ while read LINE; do
       echo "Requested $JOB_TYPE job instead -> aborting";
       exit 1;
     fi
-    if [[ "$ERA" == "$ERA_KEY_2018_PROMPT" ]] && [[ ! "$DATASET" =~ PromptReco ]]; then
+    if [[ "$ERA" == "$ERA_KEY_2018_PROMPT" ]] && [[ ! "$DATASET" =~ PromptReco && ! "$DATASET" =~ 22Jan2019 ]]; then
       echo "$DATASET not valid for $ERA_KEY_2018_PROMPT -> continuing";
       continue;
-    elif [[ "$ERA" != "$ERA_KEY_2018_PROMPT" ]] && [[ "$DATASET" =~ PromptReco ]]; then
+    elif [[ "$ERA" != "$ERA_KEY_2018_PROMPT" ]] && [[ "$DATASET" =~ PromptReco || "$DATASET" =~ 22Jan2019 ]]; then
       echo "$DATASET not valid for $ERA_KEY_2018_PROMPT -> continuing";
       continue;
     fi
