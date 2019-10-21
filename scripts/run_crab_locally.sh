@@ -142,8 +142,8 @@ for JOB_ID in $JOB_IDS; do
   REPLACEMENT+="from FWCore.PythonUtilities.LumiList import LumiList\n";
   REPLACEMENT+="process.source.lumisToProcess = LumiList('${RUNLUMI_FILES[${JOB_ID}]}').getVLuminosityBlockRange()\n";
   REPLACEMENT+="process.${TIER}output.fileName = cms.untracked.string('file://${JOB_DIR}/tree.root')\n";
-  REPLACEMENT+="process.options.numberOfThreads=cms.untracked.uint32(4)";
-  REPLACEMENT+="process.options.numberOfStreams=cms.untracked.uint32(0)";
+  REPLACEMENT+="process.options.numberOfThreads=cms.untracked.uint32(4)\n";
+  REPLACEMENT+="process.options.numberOfStreams=cms.untracked.uint32(0)\n";
   mkdir -p $JOB_DIR;
   CONFIG_FILES[$JOB_ID]=$JOB_DIR/$(basename $CONFIG);
   LOG_FILES[$JOB_ID]=$JOB_DIR/out_${JOB_ID}.log;
