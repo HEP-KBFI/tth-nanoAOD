@@ -133,10 +133,17 @@ declare -A LOG_FILES
 for JOB_ID in $JOB_IDS; do
   FILELIST=$(echo ${INPUT_FILES_LOCAL[${JOB_ID}]} | tr ' ' '\n' | sed 's/^\|$/"/g' | sed 's/$/,/g' | tr '\n' ' ')
   JOB_DIR=$(dirname $DIRECTORY)/run_${JOB_ID};
+  if [ $(grep "NANOAODSIMoutput" $CONFIG | wc -l) -gt 0 ]; then
+    TIER="NANOAODSIM";
+  else
+    TIER="NANOAOD";
+  fi
   REPLACEMENT="process.source.fileNames = cms.untracked.vstring($FILELIST)\n";
   REPLACEMENT+="from FWCore.PythonUtilities.LumiList import LumiList\n";
   REPLACEMENT+="process.source.lumisToProcess = LumiList('${RUNLUMI_FILES[${JOB_ID}]}').getVLuminosityBlockRange()\n";
-  REPLACEMENT+="process.NANOAODoutput.fileName = cms.untracked.string('file://${JOB_DIR}/tree.root')";
+  REPLACEMENT+="process.${TIER}output.fileName = cms.untracked.string('file://${JOB_DIR}/tree.root')\n";
+  REPLACEMENT+="process.options.numberOfThreads=cms.untracked.uint32(4)";
+  REPLACEMENT+="process.options.numberOfStreams=cms.untracked.uint32(0)";
   mkdir -p $JOB_DIR;
   CONFIG_FILES[$JOB_ID]=$JOB_DIR/$(basename $CONFIG);
   LOG_FILES[$JOB_ID]=$JOB_DIR/out_${JOB_ID}.log;
@@ -144,7 +151,7 @@ for JOB_ID in $JOB_IDS; do
 done
 
 for JOB_ID in $JOB_IDS; do
-  echo "Executing jobs ${JOB_ID}";
+  echo "`date` Executing jobs ${JOB_ID}";
   if [ $RUN -eq 1 ]; then
     cmsRun ${CONFIG_FILES[${JOB_ID}]} &> ${LOG_FILES[${JOB_ID}]};
   fi
