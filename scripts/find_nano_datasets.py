@@ -125,7 +125,7 @@ def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
       assert(miniaod_sublead.startswith('Run201'))
       miniaod_sublead_split = miniaod_sublead.split('-')
       assert(len(miniaod_sublead_split) > 1)
-      nanoaod_sublead = '{}-{}'.format(miniaod_sublead_split[0], data_str)
+      nanoaod_sublead = '{}.*-{}'.format(miniaod_sublead_split[0], data_str)
     elif miniaod_tier == 'MINIAODSIM':
       assert(miniaod_sublead.startswith('RunII'))
       miniaod_sublead_split = miniaod_sublead.split('-')
