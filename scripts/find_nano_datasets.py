@@ -221,5 +221,5 @@ for input_file in data:
         if nanoaod_parents[miniaod]:
           for miniaod_cand, nanoaod_cand in nanoaod_parents[miniaod].items():
             f.write('#   {} -> {}\n'.format(miniaod_cand, nanoaod_cand))
-      f.write('\n{}\n'.format(docstring))
+    f.write('\n{}\n'.format(docstring))
   logging.info('Wrote file: {}'.format(output_fn))
