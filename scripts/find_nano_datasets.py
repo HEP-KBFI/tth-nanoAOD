@@ -63,7 +63,7 @@ def check_proxy():
 def get_nanoaod(id_str, is_data):
   if not id_str:
     raise ValueError("Cannot use empty ID string")
-  query_str = "dasgoclient -query='dataset dataset=/*/*{}*/NANOAOD{} | " \
+  query_str = "dasgoclient -query='dataset dataset=/*/*{}*/NANOAOD{} status=* | " \
               "grep dataset.name | grep dataset.dataset_access_type'".format(id_str, '' if is_data else 'SIM')
   query_cmd = subprocess.Popen(query_str, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
   query_out, query_err = query_cmd.communicate()
