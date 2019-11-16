@@ -6,6 +6,7 @@ import sys
 import os
 import re
 import subprocess
+import datetime
 
 logging.basicConfig(
   stream = sys.stdout,
@@ -18,6 +19,12 @@ class SmartFormatter(argparse.HelpFormatter):
     if text.startswith('R|'):
       return text[2:].splitlines()
     return argparse.HelpFormatter._split_lines(self, text, width)
+
+def get_docstring():
+  execution_datetime = '{date:%Y-%m-%d %H:%M:%S}'.format(date = datetime.datetime.now())
+  execution_command = ' '.join([os.path.basename(__file__)] + sys.argv[1:])
+  docstring = "# file generated at {} with the following command:\n# {}\n".format(execution_datetime, execution_command)
+  return docstring
 
 def parse_input(fn):
   lines = []
@@ -165,6 +172,8 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
+docstring = get_docstring()
+
 if args.verbose:
   logging.getLogger().setLevel(logging.DEBUG)
 
@@ -208,3 +217,4 @@ for input_file in data:
       f.write('\n# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:\n')
       for miniaod in unmatched_miniaods:
         f.write('# {}\n'.format(miniaod))
+      f.write('\n{}\n'.format(docstring))
