@@ -93,7 +93,7 @@ def merge_dicts(dict_first, dict_second):
   dict_result.update(dict_second)
   return dict_result
 
-def resolve_candidate(miniaod, nanoaod_cands):
+def resolve_candidate(nanoaod_cands):
   if not nanoaod_cands:
     return ''
   nanoaod_parents = {}
@@ -111,7 +111,7 @@ def resolve_candidate(miniaod, nanoaod_cands):
       raise RuntimeError("Not a valid parent to %s: %s" % (nanoaod, nanoaod_parent))
     assert(nanoaod_parent not in nanoaod_parents)
     nanoaod_parents[nanoaod_parent] = nanoaod
-  return nanoaod_parents[miniaod] if miniaod in nanoaod_parents else ''
+  return nanoaod_parents
 
 def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
   result = {}
@@ -139,12 +139,12 @@ def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
     for nanoaod in dbs_nano:
       if nanoaod_re.match(nanoaod):
         nanoaod_cands.append(nanoaod)
-    nanoaod_cand = resolve_candidate(miniaod, nanoaod_cands)
-    if not nanoaod_cand:
+    nanoaod_parents = resolve_candidate(nanoaod_cands)
+    if miniaod not in nanoaod_parents:
       logging.error('No candidates found for: {}'.format(miniaod))
     else:
-      logging.debug('Found candidate for {}: {}'.format(miniaod, nanoaod_cand))
-    result[miniaod] = nanoaod_cand
+      logging.debug('Found candidate for {}: {}'.format(miniaod, nanoaod_parents[miniaod]))
+    result[miniaod] = nanoaod_parents
   return result
 
 parser = argparse.ArgumentParser(
@@ -196,7 +196,8 @@ logging.info('Considering {} dataset(s) in total'.format(len(dbs_nano)))
 
 for input_file in data:
   miniaods = list(map(lambda line_out: line_out[1], filter(lambda line_in: len(line_in) > 1, data[input_file])))
-  nanoaods = find_matching_nano(miniaods, dbs_nano, args.data, args.mc)
+  nanoaod_parents = find_matching_nano(miniaods, dbs_nano, args.data, args.mc)
+  nanoaods = { miniaod : (nanoaod_parents[miniaod][miniaod] if miniaod in nanoaod_parents[miniaod] else '') for miniaod in miniaods }
   max_width_nanoaod = max(map(len, nanoaods.values())) + 1
   output_fn_base = '{}_{}'.format(args.prefix, os.path.basename(input_file))
   output_fn = os.path.join(os.path.dirname(input_file), output_fn_base)
@@ -217,4 +218,8 @@ for input_file in data:
       f.write('\n# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:\n')
       for miniaod in unmatched_miniaods:
         f.write('# {}\n'.format(miniaod))
+        if nanoaod_parents[miniaod]:
+          for miniaod_cand, nanoaod_cand in nanoaod_parents[miniaod].items():
+            f.write('#   {} -> {}\n'.format(miniaod_cand, nanoaod_cand))
       f.write('\n{}\n'.format(docstring))
+  logging.info('Wrote file: {}'.format(output_fn))
