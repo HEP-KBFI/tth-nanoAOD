@@ -185,6 +185,7 @@ def runlumi_match(miniaod, nanoaod, nanoaod_status):
     return True
   else:
     assert(not nanoaod.endswith('SIM'))
+  is_compatible = True
 
   miniaod_size = get_size(miniaod)
   nanoaod_size = get_size(nanoaod)
@@ -194,15 +195,12 @@ def runlumi_match(miniaod, nanoaod, nanoaod_status):
         miniaod, miniaod_size, nanoaod, nanoaod_size
       )
     )
-    if nanoaod_status != 'PRODUCTION':
-      logging.error("Dataset {} is not in production".format(nanoaod))
-      return False
+    is_compatible = False
   elif nanoaod_size > miniaod_size:
     RuntimeError(
       "Dataset %s has more events (%d) than dataset %s (%s)" % \
       (nanoaod, nanoaod_size, miniaod, miniaod_size)
     )
-    return False
 
   runlumi_miniaod = get_runlumi(miniaod)
   runlumi_nanoaod = get_runlumi(nanoaod)
@@ -219,9 +217,7 @@ def runlumi_match(miniaod, nanoaod, nanoaod_status):
         len(run_missing_nanoaod), miniaod, nanoaod, ', '.join(map(str, list(run_missing_nanoaod)))
       )
     )
-    if nanoaod_status != 'PRODUCTION':
-      logging.error("Dataset {} is not in production".format(nanoaod))
-      return False
+    is_compatible = False
   for run in runlumi_miniaod:
     if run not in runlumi_nanoaod:
       continue
@@ -240,10 +236,12 @@ def runlumi_match(miniaod, nanoaod, nanoaod_status):
           run, miniaod, nanoaod, ', '.join(map(str, list(lumis_missing_nanoaod)))
         )
       )
-      if nanoaod_status != 'PRODUCTION':
-        logging.error("Dataset {} is not in production".format(nanoaod))
-        return False
-    return True
+      is_compatible = False
+
+  if not is_compatible and nanoaod_status != 'PRODUCTION':
+    logging.error("Dataset {} is not in production".format(nanoaod))
+    return False
+  return True
 
 def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
   result = {}
