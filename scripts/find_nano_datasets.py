@@ -119,14 +119,6 @@ def resolve_candidate(nanoaod_cands):
     nanoaod_parents[nanoaod_parent] = nanoaod
   return nanoaod_parents
 
-def get_size(dbs_name):
-  query_str = "dasgoclient -query='dataset dataset={} | grep dataset.nevents'".format(dbs_name)
-  query_out = run_query(query_str)
-  nevents_str = list(filter(lambda line: not line.startswith('['), query_out.split('\n')))
-  if len(nevents_str) != 1:
-    raise RuntimeError("Got invalid output from command %s: %s" % (query_str, query_out))
-  return int(nevents_str[0])
-
 def get_runlumi(dbs_name):
   query_str = "dasgoclient -query='run,lumi dataset={}'".format(dbs_name)
   query_out = run_query(query_str)
@@ -146,16 +138,7 @@ def runlumi_match(miniaod, nanoaod):
     assert(nanoaod.endswith('SIM'))
     return True
   else:
-    miniaod_size = get_size(miniaod)
-    nanoaod_size = get_size(nanoaod)
     assert(not nanoaod.endswith('SIM'))
-    if miniaod_size != nanoaod_size:
-      logging.error(
-        "The number of events in dataset {} ({}) does not match to the number of events in dataset {} ({})".format(
-          miniaod, miniaod_size, nanoaod, nanoaod_size
-        )
-      )
-      return False
   runlumi_miniaod = get_runlumi(miniaod)
   runlumi_nanoaod = get_runlumi(nanoaod)
   run_missing_miniaod = set(runlumi_nanoaod.keys()) - set(runlumi_miniaod.keys())
