@@ -1,45 +1,49 @@
-# DAS name                                               run range      golden run range  totdelivered(/fb)  totrecorded(/fb)
-/SingleElectron/Run2016C-Nano25Oct2019-v1/NANOAOD        275656-276283  275657-276283     2.684829143        2.572903489     
-/SingleElectron/Run2016D-Nano25Oct2019-v1/NANOAOD        276315-276811  276315-276811     4.410575787        4.242291557     
-/SingleElectron/Run2016E-Nano25Oct2019-v1/NANOAOD        276831-277420  276831-277420     4.221620633        4.025227966     
-/SingleElectron/Run2016F-Nano25Oct2019-v1/NANOAOD        277932-278808  277981-278808     3.282649450        3.104509119     
-/SingleElectron/Run2016G-Nano25Oct2019-v1/NANOAOD        278820-280385  278820-280385     7.864115715        7.575824225     
-/SingleElectron/Run2016H-Nano25Oct2019-v1/NANOAOD        281613-284044  281613-284044     8.973694189        8.639710923     
-/SingleMuon/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD  273150-275376  273158-275376     5.986278166        5.746010293     
-/SingleMuon/Run2016C-Nano25Oct2019-v1/NANOAOD            275656-276283  275657-276283     2.684829143        2.572903489     
-/SingleMuon/Run2016D-Nano25Oct2019-v1/NANOAOD            276315-276811  276315-276811     4.410575787        4.242291557     
-/SingleMuon/Run2016E-Nano25Oct2019-v1/NANOAOD            276831-277420  276831-277420     4.221830689        4.025228049     
-/SingleMuon/Run2016F-Nano25Oct2019-v1/NANOAOD            277932-278808  277981-278808     3.282649450        3.104509119     
-/SingleMuon/Run2016G-Nano25Oct2019-v1/NANOAOD            278820-280385  278820-280385     7.863983841        7.575579377     
-/SingleMuon/Run2016H-Nano25Oct2019-v1/NANOAOD            281613-284044  281613-284044     8.985336273        8.650628335     
-/DoubleEG/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD    273150-275376  273158-275376     5.990700220        5.750122448     
-/DoubleEG/Run2016C-Nano25Oct2019-v1/NANOAOD              275656-276283  275657-276283     2.684829143        2.572903489     
-/DoubleEG/Run2016D-Nano25Oct2019-v1/NANOAOD              276315-276811  276315-276811     4.410575787        4.242291557     
-/DoubleEG/Run2016E-Nano25Oct2019-v1/NANOAOD              276831-277420  276831-277420     4.221620633        4.025227966     
-/DoubleEG/Run2016F-Nano25Oct2019-v1/NANOAOD              277932-278808  277981-278808     3.282649450        3.104509119     
-/DoubleEG/Run2016G-Nano25Oct2019-v1/NANOAOD              278820-280385  278820-280385     7.864115715        7.575824225     
-/DoubleEG/Run2016H-Nano25Oct2019-v1/NANOAOD              281613-284044  281613-284044     8.984900615        8.650628257     
-/DoubleMuon/Run2016C-Nano25Oct2019-v1/NANOAOD            275656-276283  275657-276283     2.684829143        2.572903489     
-/DoubleMuon/Run2016D-Nano25Oct2019-v1/NANOAOD            276315-276811  276315-276811     4.410575787        4.242291557     
-/DoubleMuon/Run2016E-Nano25Oct2019-v1/NANOAOD            276831-277420  276831-277420     4.221830689        4.025228049     
-/DoubleMuon/Run2016F-Nano25Oct2019-v1/NANOAOD            277932-278808  277981-278808     3.282649450        3.104509119     
-/DoubleMuon/Run2016G-Nano25Oct2019-v1/NANOAOD            278820-280385  278820-280385     7.864265060        7.575824245     
-/DoubleMuon/Run2016H-Nano25Oct2019-v1/NANOAOD            281613-284044  281613-284044     8.985336273        8.650628335     
-/MuonEG/Run2016C-Nano25Oct2019-v1/NANOAOD                275656-276283  275657-276283     2.684829143        2.572903489     
-/MuonEG/Run2016D-Nano25Oct2019-v1/NANOAOD                276315-276811  276315-276811     4.410575787        4.242291557     
-/MuonEG/Run2016E-Nano25Oct2019-v1/NANOAOD                276831-277420  276831-277420     4.221830689        4.025228049     
-/MuonEG/Run2016F-Nano25Oct2019-v1/NANOAOD                277932-278808  277981-278808     3.282649450        3.104509119     
-/MuonEG/Run2016G-Nano25Oct2019-v1/NANOAOD                278820-280385  278820-280385     7.864265060        7.575824245     
-/MuonEG/Run2016H-Nano25Oct2019-v1/NANOAOD                281613-284044  281613-284044     8.985336273        8.650628335     
-/Tau/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD         273150-275376  273158-275376     5.990405333        5.750126253     
-/Tau/Run2016D-Nano25Oct2019-v1/NANOAOD                   276315-276811  276315-276811     4.410575787        4.242291557     
-/Tau/Run2016E-Nano25Oct2019-v1/NANOAOD                   276831-277420  276831-277420     4.221598150        4.024754820     
-/Tau/Run2016F-Nano25Oct2019-v1/NANOAOD                   277932-278808  277981-278808     3.282700851        3.104509108     
-/Tau/Run2016G-Nano25Oct2019-v1/NANOAOD                   278820-280385  278820-280385     7.864574525        7.575824256     
-/Tau/Run2016H-Nano25Oct2019-v1/NANOAOD                   281613-284044  281613-284044     8.984972418        8.650628331     
+# DAS name                                                   run range      golden run range  totdelivered(/fb)  totrecorded(/fb)
+/SingleElectron/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD  273150-275376  273158-275376     5.990700220        5.750122448     
+/SingleElectron/Run2016C-Nano25Oct2019-v1/NANOAOD            275656-276283  275657-276283     2.684829143        2.572903489     
+/SingleElectron/Run2016D-Nano25Oct2019-v1/NANOAOD            276315-276811  276315-276811     4.410575787        4.242291557     
+/SingleElectron/Run2016E-Nano25Oct2019-v1/NANOAOD            276831-277420  276831-277420     4.221620633        4.025227966     
+/SingleElectron/Run2016F-Nano25Oct2019-v1/NANOAOD            277932-278808  277981-278808     3.282649450        3.104509119     
+/SingleElectron/Run2016G-Nano25Oct2019-v1/NANOAOD            278820-280385  278820-280385     7.864115715        7.575824225     
+/SingleElectron/Run2016H-Nano25Oct2019-v1/NANOAOD            281613-284044  281613-284044     8.973694189        8.639710923     
+/SingleMuon/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD      273150-275376  273158-275376     5.986278166        5.746010293     
+/SingleMuon/Run2016C-Nano25Oct2019-v1/NANOAOD                275656-276283  275657-276283     2.684829143        2.572903489     
+/SingleMuon/Run2016D-Nano25Oct2019-v1/NANOAOD                276315-276811  276315-276811     4.410575787        4.242291557     
+/SingleMuon/Run2016E-Nano25Oct2019-v1/NANOAOD                276831-277420  276831-277420     4.221830689        4.025228049     
+/SingleMuon/Run2016F-Nano25Oct2019-v1/NANOAOD                277932-278808  277981-278808     3.282649450        3.104509119     
+/SingleMuon/Run2016G-Nano25Oct2019-v1/NANOAOD                278820-280385  278820-280385     7.863983841        7.575579377     
+/SingleMuon/Run2016H-Nano25Oct2019-v1/NANOAOD                281613-284044  281613-284044     8.985336273        8.650628335     
+/DoubleEG/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD        273150-275376  273158-275376     5.990700220        5.750122448     
+/DoubleEG/Run2016C-Nano25Oct2019-v1/NANOAOD                  275656-276283  275657-276283     2.684829143        2.572903489     
+/DoubleEG/Run2016D-Nano25Oct2019-v1/NANOAOD                  276315-276811  276315-276811     4.410575787        4.242291557     
+/DoubleEG/Run2016E-Nano25Oct2019-v1/NANOAOD                  276831-277420  276831-277420     4.221620633        4.025227966     
+/DoubleEG/Run2016F-Nano25Oct2019-v1/NANOAOD                  277932-278808  277981-278808     3.282649450        3.104509119     
+/DoubleEG/Run2016G-Nano25Oct2019-v1/NANOAOD                  278820-280385  278820-280385     7.864115715        7.575824225     
+/DoubleEG/Run2016H-Nano25Oct2019-v1/NANOAOD                  281613-284044  281613-284044     8.984900615        8.650628257     
+/DoubleMuon/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD      273150-275376  273158-275376     5.985954265        5.745698523     
+/DoubleMuon/Run2016C-Nano25Oct2019-v1/NANOAOD                275656-276283  275657-276283     2.684829143        2.572903489     
+/DoubleMuon/Run2016D-Nano25Oct2019-v1/NANOAOD                276315-276811  276315-276811     4.410575787        4.242291557     
+/DoubleMuon/Run2016E-Nano25Oct2019-v1/NANOAOD                276831-277420  276831-277420     4.221830689        4.025228049     
+/DoubleMuon/Run2016F-Nano25Oct2019-v1/NANOAOD                277932-278808  277981-278808     3.282649450        3.104509119     
+/DoubleMuon/Run2016G-Nano25Oct2019-v1/NANOAOD                278820-280385  278820-280385     7.864265060        7.575824245     
+/DoubleMuon/Run2016H-Nano25Oct2019-v1/NANOAOD                281613-284044  281613-284044     8.985336273        8.650628335     
+/MuonEG/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD          273150-275376  273158-275376     5.986278166        5.746010293     
+/MuonEG/Run2016C-Nano25Oct2019-v1/NANOAOD                    275656-276283  275657-276283     2.684829143        2.572903489     
+/MuonEG/Run2016D-Nano25Oct2019-v1/NANOAOD                    276315-276811  276315-276811     4.410575787        4.242291557     
+/MuonEG/Run2016E-Nano25Oct2019-v1/NANOAOD                    276831-277420  276831-277420     4.221830689        4.025228049     
+/MuonEG/Run2016F-Nano25Oct2019-v1/NANOAOD                    277932-278808  277981-278808     3.282649450        3.104509119     
+/MuonEG/Run2016G-Nano25Oct2019-v1/NANOAOD                    278820-280385  278820-280385     7.864265060        7.575824245     
+/MuonEG/Run2016H-Nano25Oct2019-v1/NANOAOD                    281613-284044  281613-284044     8.985336273        8.650628335     
+/Tau/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD             273150-275376  273158-275376     5.990405333        5.750126253     
+/Tau/Run2016C-Nano25Oct2019-v1/NANOAOD                       275656-276283  275657-276283     2.619298176        2.510184095     
+/Tau/Run2016D-Nano25Oct2019-v1/NANOAOD                       276315-276811  276315-276811     4.410575787        4.242291557     
+/Tau/Run2016E-Nano25Oct2019-v1/NANOAOD                       276831-277420  276831-277420     4.221598150        4.024754820     
+/Tau/Run2016F-Nano25Oct2019-v1/NANOAOD                       277932-278808  277981-278808     3.282700851        3.104509108     
+/Tau/Run2016G-Nano25Oct2019-v1/NANOAOD                       278820-280385  278820-280385     7.864574525        7.575824256     
+/Tau/Run2016H-Nano25Oct2019-v1/NANOAOD                       281613-284044  281613-284044     8.984972418        8.650628331     
 
-# file generated at 2019-11-18 00:40:13 with the following command:
-# find_samples.py -V -m python/samples/metaDict_2016_data_nano.py -d ../NanoAOD/test/datasets/txt/nano_datasets_data_2016_17Jul18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt -v 10_2_15 -r 2016 -C +Nano25Oct2019 -l -T NANOAOD
+# file generated at 2019-11-18 01:23:44 with the following command:
+# find_samples.py -V -m python/samples/metaDict_2016_data_nano.py -d ../NanoAOD/test/datasets/txt/nano_datasets_data_2016_17Jul18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt -v 10_2_15 -r 2016 -C +Nano25Oct2019 xver1 -l -T NANOAOD
 # golden JSON: Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt
 # normtag: normtag_PHYSICS.json
 # totdelivered(/fb): 37.461527656

@@ -28,8 +28,9 @@
 /Tau/Run2017C-Nano25Oct2019-v1/NANOAOD             299368-302029  299368-302029     10.308223079       9.632740711     
 /Tau/Run2017D-Nano25Oct2019-v1/NANOAOD             302031-302663  302031-302663     4.368215610        4.247682094     
 /Tau/Run2017E-Nano25Oct2019-v1/NANOAOD             303824-304797  303825-304797     9.759515455        9.313949739     
+/Tau/Run2017F-Nano25Oct2019-v1/NANOAOD             305040-306460  305044-306460     12.987521504       12.396214742    
 
-# file generated at 2019-11-18 00:24:10 with the following command:
+# file generated at 2019-11-18 01:09:53 with the following command:
 # find_samples.py -V -m python/samples/metaDict_2017_data_nano.py -d ../NanoAOD/test/datasets/txt/nano_datasets_data_2017_31Mar18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt -v 10_2_15 -r 2017 -C +Nano25Oct2019 -l -T NANOAOD
 # golden JSON: Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt
 # normtag: normtag_PHYSICS.json

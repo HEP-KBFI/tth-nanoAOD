@@ -219,5 +219,5 @@
 #   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext2-v1/NANOAODSIM
 
 # file generated at 2019-11-17 23:01:11 with the following command:
-# find_nano_datasets.py -i test/datasets/txt/datasets_data_2016_17Jul18.txt test/datasets/txt/datasets_data_2017_31Mar18.txt test/datasets/txt/datasets_data_2018_17Sep18.txt test/datasets/txt/datasets_data_2018_17Sep18_22Jan19.txt test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt -v
+# find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt -v
 
