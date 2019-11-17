@@ -424,7 +424,7 @@ for input_file in data:
       elif len(line) == 2:
         miniaod = line[1]
         nanoaod_cand = nanoaods[miniaod]
-        if not nanoaod_cand.endswith('SIM'):
+        if nanoaod_cand and not nanoaod_cand.endswith('SIM'):
           golden_json_eras = [ era for era in golden_jsons if era in nanoaod_cand ]
           if len(golden_json_eras) != 1:
             raise RuntimeError("Unable to find golden JSON for %s" % nanoaod_cand)
