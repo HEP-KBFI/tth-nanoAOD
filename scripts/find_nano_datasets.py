@@ -7,6 +7,7 @@ import os
 import re
 import subprocess
 import datetime
+import ast
 
 logging.basicConfig(
   stream = sys.stdout,
@@ -41,10 +42,17 @@ def parse_input(fn):
     logging.info('Found {} dataset(s) in file {}'.format(len(list(filter(lambda line: len(line) > 1, lines))), fn))
     return lines
 
+def run_query(query_str, return_err = False):
+  query = subprocess.Popen(query_str, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
+  query_out, query_err = query.communicate()
+  if return_err:
+    return query_out.rstrip('\n'), query_err.rstrip('\n')
+  else:
+    return query_out.rstrip('\n')
+
 def check_proxy():
   proxy_query = 'voms-proxy-info -timeleft'
-  proxy_cmd = subprocess.Popen(proxy_query, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
-  proxy_out, proxy_err = proxy_cmd.communicate()
+  proxy_out = run_query(proxy_query)
   if not proxy_out:
     logging.error('Got no output from command: {}'.format(proxy_query))
     return False
@@ -65,8 +73,7 @@ def get_nanoaod(id_str, is_data):
     raise ValueError("Cannot use empty ID string")
   query_str = "dasgoclient -query='dataset dataset=/*/*{}*/NANOAOD{} status=* | " \
               "grep dataset.name | grep dataset.dataset_access_type'".format(id_str, '' if is_data else 'SIM')
-  query_cmd = subprocess.Popen(query_str, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
-  query_out, query_err = query_cmd.communicate()
+  query_out = run_query(query_str)
   if not query_out:
     raise RuntimeError("No output returned by command: %s" % query_str)
   result = {}
@@ -99,11 +106,10 @@ def resolve_candidate(nanoaod_cands):
   nanoaod_parents = {}
   for nanoaod in nanoaod_cands:
     query_str = "dasgoclient -query='parent dataset={}'".format(nanoaod)
-    query_cmd = subprocess.Popen(query_str, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
-    query_out, query_err = query_cmd.communicate()
+    query_out = run_query(query_str)
     if not query_out:
       raise RuntimeError("Unable to find parent for: %s" % nanoaod)
-    query_out_split = query_out.rstrip('\n').split('\n')
+    query_out_split = query_out.split('\n')
     if len(query_out_split) != 1:
       raise RuntimeError("Got unexpected result from query %s: %s" % (query_str, query_out))
     nanoaod_parent = query_out_split[0]
@@ -112,6 +118,78 @@ def resolve_candidate(nanoaod_cands):
     assert(nanoaod_parent not in nanoaod_parents)
     nanoaod_parents[nanoaod_parent] = nanoaod
   return nanoaod_parents
+
+def get_size(dbs_name):
+  query_str = "dasgoclient -query='dataset dataset={} | grep dataset.nevents'".format(dbs_name)
+  query_out = run_query(query_str)
+  nevents_str = list(filter(lambda line: not line.startswith('['), query_out.split('\n')))
+  if len(nevents_str) != 1:
+    raise RuntimeError("Got invalid output from command %s: %s" % (query_str, query_out))
+  return int(nevents_str[0])
+
+def get_runlumi(dbs_name):
+  query_str = 'run,lumi dataset={}'.format(dbs_name)
+  query_out = run_query(query_str)
+  runlumis = {}
+  for line in query_out.split('\n'):
+    line_split = line.split()
+    if len(line_split) != 2:
+      raise RuntimeError("Unexpected line from command %s: %s" % (query_str, line))
+    run = int(line_split[0])
+    lumis = set(ast.literal_eval(line_split[1]))
+    assert(run not in runlumis)
+    runlumis[run] = lumis
+  return runlumis
+
+def runlumi_match(miniaod, nanoaod):
+  if miniaod.endswith('SIM'):
+    assert(nanoaod.endswith('SIM'))
+    return True
+  else:
+    miniaod_size = get_size(miniaod)
+    nanoaod_size = get_size(nanoaod)
+    assert(not nanoaod.endswith('SIM'))
+    if miniaod_size != nanoaod_size:
+      logging.error(
+        "The number of events in dataset {} ({}) does not match to the number of events in dataset {} ({})".format(
+          miniaod, miniaod_size, nanoaod, nanoaod_size
+        )
+      )
+      return False
+  runlumi_miniaod = get_runlumi(miniaod)
+  runlumi_nanoaod = get_runlumi(nanoaod)
+  run_missing_miniaod = set(runlumi_nanoaod.keys()) - set(runlumi_miniaod.keys())
+  if run_missing_miniaod:
+    raise RuntimeError(
+      "Found %d run numbers that are present in %s but not in %s: %s" % \
+      (len(run_missing_miniaod), nanoaod, miniaod, ', '.join(map(str, list(run_missing_miniaod))))
+    )
+  run_missing_nanoaod = set(runlumi_miniaod.keys()) - set(runlumi_nanoaod.keys())
+  if run_missing_nanoaod:
+    logging.error(
+      "Found {} run numbers that are present in {} but not in {}: {}".format(
+        len(run_missing_nanoaod), miniaod, nanoaod, ', '.join(map(str, list(run_missing_nanoaod)))
+      )
+    )
+    return False
+  for run in runlumi_miniaod:
+    lumis_miniaod = runlumi_miniaod[run]
+    lumis_nanoaod = runlumi_nanoaod[run]
+    lumis_missing_miniaod = lumis_nanoaod - lumis_miniaod
+    if lumis_missing_miniaod:
+      raise RuntimeError(
+        "Found lumis at run %d that are present in %s but not in %s: %s" % \
+        (run, nanoaod, miniaod, ', '.join(map(str, list(lumis_missing_miniaod))))
+      )
+    lumis_missing_nanoaod = lumis_miniaod - lumis_nanoaod
+    if lumis_missing_nanoaod:
+      logging.error(
+        "Found lumis at run {} that are present in {} but not in {}: {}".format(
+          run, miniaod, nanoaod, ', '.join(map(str, list(lumis_missing_nanoaod)))
+        )
+      )
+      return False
+    return True
 
 def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
   result = {}
@@ -140,7 +218,7 @@ def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
       if nanoaod_re.match(nanoaod):
         nanoaod_cands.append(nanoaod)
     nanoaod_parents = resolve_candidate(nanoaod_cands)
-    if miniaod not in nanoaod_parents:
+    if miniaod not in nanoaod_parents or not runlumi_match(miniaod, nanoaod_parents[miniaod]):
       logging.error('No candidates found for: {}'.format(miniaod))
     else:
       logging.debug('Found candidate for {}: {}'.format(miniaod, nanoaod_parents[miniaod]))
