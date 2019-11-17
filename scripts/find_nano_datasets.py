@@ -8,6 +8,10 @@ import re
 import subprocess
 import datetime
 import ast
+import psutil
+import signal
+import shlex
+import collections
 
 logging.basicConfig(
   stream = sys.stdout,
@@ -20,6 +24,40 @@ class SmartFormatter(argparse.HelpFormatter):
     if text.startswith('R|'):
       return text[2:].splitlines()
     return argparse.HelpFormatter._split_lines(self, text, width)
+
+class Alarm(Exception):
+  pass
+
+def alarm_handler(signum, frame):
+  raise Alarm
+
+class Command(object):
+  def __init__(self, cmd):
+    self.cmd = cmd
+    self.process = None
+    self.out = None
+    self.err = None
+    self.success = False
+
+  def run(self, max_tries = 20, timeout = 5):
+    ntries = 0
+    while not self.success:
+      if ntries > max_tries:
+        break
+      ntries += 1
+      signal.signal(signal.SIGALRM, alarm_handler)
+      signal.alarm(timeout)
+      self.process = subprocess.Popen(shlex.split(self.cmd), stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+      try:
+        self.out, self.err = self.process.communicate()
+        signal.alarm(0)
+      except Alarm:
+        parent = psutil.Process(self.process.pid)
+        for child in parent.children(recursive = True):
+          child.kill()
+        parent.kill()
+      else:
+        self.success = True
 
 def get_docstring():
   execution_datetime = '{date:%Y-%m-%d %H:%M:%S}'.format(date = datetime.datetime.now())
@@ -43,12 +81,12 @@ def parse_input(fn):
     return lines
 
 def run_query(query_str, return_err = False):
-  query = subprocess.Popen(query_str, stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell = True)
-  query_out, query_err = query.communicate()
+  cmd = Command(query_str)
+  cmd.run()
   if return_err:
-    return query_out.rstrip('\n'), query_err.rstrip('\n')
+    return cmd.out.rstrip('\n'), cmd.err.rstrip('\n')
   else:
-    return query_out.rstrip('\n')
+    return cmd.out.rstrip('\n')
 
 def check_proxy():
   proxy_query = 'voms-proxy-info -timeleft'
@@ -119,6 +157,14 @@ def resolve_candidate(nanoaod_cands):
     nanoaod_parents[nanoaod_parent] = nanoaod
   return nanoaod_parents
 
+def get_size(dbs_name):
+  query_str = "dasgoclient -query='dataset dataset={} | grep dataset.nevents'".format(dbs_name)
+  query_out = run_query(query_str)
+  nevents_str = list(filter(lambda line: not line.startswith('['), query_out.split('\n')))
+  if len(nevents_str) != 1:
+    raise RuntimeError("Got invalid output from command %s: %s" % (query_str, query_out))
+  return int(nevents_str[0])
+
 def get_runlumi(dbs_name):
   query_str = "dasgoclient -query='run,lumi dataset={}'".format(dbs_name)
   query_out = run_query(query_str)
@@ -133,12 +179,32 @@ def get_runlumi(dbs_name):
     runlumis[run] = lumis
   return runlumis
 
-def runlumi_match(miniaod, nanoaod):
+def runlumi_match(miniaod, nanoaod, nanoaod_status):
   if miniaod.endswith('SIM'):
     assert(nanoaod.endswith('SIM'))
     return True
   else:
     assert(not nanoaod.endswith('SIM'))
+
+  miniaod_size = get_size(miniaod)
+  nanoaod_size = get_size(nanoaod)
+  if nanoaod_size < miniaod_size:
+    logging.error(
+      "The number of events in dataset {} ({}) does not match to the number of events in dataset {} ({})".format(
+        miniaod, miniaod_size, nanoaod, nanoaod_size
+      )
+    )
+    if nanoaod_status != 'PRODUCTION':
+      logging.error("Dataset {} is not in production".format(nanoaod))
+      return False
+  elif nanoaod_size > miniaod_size:
+    logging.error(
+      "Dataset {} has more events ({}) than dataset {} ({} events)".format(
+        nanoaod, nanoaod_size, miniaod, miniaod_size
+      )
+    )
+    return False
+
   runlumi_miniaod = get_runlumi(miniaod)
   runlumi_nanoaod = get_runlumi(nanoaod)
   run_missing_miniaod = set(runlumi_nanoaod.keys()) - set(runlumi_miniaod.keys())
@@ -241,7 +307,7 @@ if args.verbose:
 if not args.prefix:
   raise ValueError("Cannot use empty prefix in the output file names")
 
-data = {}
+data = collections.OrderedDict()
 for input_file in args.input:
   if not os.path.isfile(input_file):
     raise ValueError("No such file: %s" % input_file)
@@ -268,9 +334,11 @@ for input_file in data:
       if len(line) == 1:
         f.write('{}\n'.format(line[0]))
       elif len(line) == 2:
-        if nanoaods[line[1]] and runlumi_match(line[1], nanoaods[line[1]]):
-          line_remaining = line[0].replace(line[1], '').lstrip()
-          f.write('{}{}\n'.format(nanoaods[line[1]].ljust(max_width_nanoaod), line_remaining))
+        miniaod = line[1]
+        nanoaod_cand = nanoaods[miniaod]
+        if nanoaod_cand and runlumi_match(miniaod, nanoaod_cand, dbs_nano[nanoaod_cand]):
+          line_remaining = line[0].replace(miniaod, '').lstrip()
+          f.write('{}{}\n'.format(nanoaod_cand.ljust(max_width_nanoaod), line_remaining))
         else:
           unmatched_miniaods.append(line[1])
       else:
