@@ -28,7 +28,6 @@
 /Tau/Run2017C-Nano25Oct2019-v1/NANOAOD            299368-302029  299368-302029     10.308             9.633           
 /Tau/Run2017D-Nano25Oct2019-v1/NANOAOD            302031-302663  302031-302663     4.368              4.248           
 /Tau/Run2017E-Nano25Oct2019-v1/NANOAOD            303824-304797  303825-304797     9.760              9.314           
-/Tau/Run2017F-Nano25Oct2019-v1/NANOAOD            305040-306460  305044-306460     14.180             13.534          
 
 # file generated at 2019-03-13 04:02:16 with the following command:
 # find_samples.py -V -m python/samples/metaDict_2017_data.py -d ../NanoAOD/test/datasets/txt/datasets_data_2017_31Mar18.txt -p SingleElectron SingleMuon DoubleEG DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt -v 9_4_5_cand1 -r 2017 -C +31Mar2018 -l
@@ -37,6 +36,10 @@
 # totdelivered(/fb): 44.171
 # totrecorded(/fb): 41.529
 
-# file generated at 2019-11-17 01:10:00 with the following command:
-# find_nano_datasets.py -i test/datasets/txt/datasets_data_2017_31Mar18.txt
+# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
+# /Tau/Run2017F-31Mar2018-v1/MINIAOD
+#   /Tau/Run2017F-31Mar2018-v1/MINIAOD -> /Tau/Run2017F-Nano25Oct2019-v1/NANOAOD
+
+# file generated at 2019-11-17 16:28:46 with the following command:
+# find_nano_datasets.py -i test/datasets/txt/datasets_data_2016_17Jul18.txt test/datasets/txt/datasets_data_2017_31Mar18.txt test/datasets/txt/datasets_data_2018_17Sep18.txt test/datasets/txt/datasets_data_2018_17Sep18_22Jan19.txt test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt -v
 

@@ -35,7 +35,6 @@
 /MuonEG/Run2016G-Nano25Oct2019-v1/NANOAOD                   278820-280385  278820-280385     7.864              7.576           
 /MuonEG/Run2016H-Nano25Oct2019-v1/NANOAOD                   281613-284044  281613-284044     8.985              8.651           
 /Tau/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD            273150-275376  273158-275376     5.990              5.750           
-/Tau/Run2016C-Nano25Oct2019-v1/NANOAOD                      275656-276283  275657-276283     2.685              2.573           
 /Tau/Run2016D-Nano25Oct2019-v1/NANOAOD                      276315-276811  276315-276811     4.411              4.242           
 /Tau/Run2016E-Nano25Oct2019-v1/NANOAOD                      276831-277420  276831-277420     4.222              4.025           
 /Tau/Run2016F-Nano25Oct2019-v1/NANOAOD                      277932-278808  277981-278808     3.283              3.105           
@@ -49,6 +48,10 @@
 # totdelivered(/fb): 37.462
 # totrecorded(/fb): 35.922
 
-# file generated at 2019-11-17 01:09:12 with the following command:
-# find_nano_datasets.py -i test/datasets/txt/datasets_data_2016_17Jul18.txt
+# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
+# /Tau/Run2016C-17Jul2018-v1/MINIAOD
+#   /Tau/Run2016C-17Jul2018-v1/MINIAOD -> /Tau/Run2016C-Nano25Oct2019-v1/NANOAOD
+
+# file generated at 2019-11-17 16:28:46 with the following command:
+# find_nano_datasets.py -i test/datasets/txt/datasets_data_2016_17Jul18.txt test/datasets/txt/datasets_data_2017_31Mar18.txt test/datasets/txt/datasets_data_2018_17Sep18.txt test/datasets/txt/datasets_data_2018_17Sep18_22Jan19.txt test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt -v
 

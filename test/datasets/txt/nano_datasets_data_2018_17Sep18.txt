@@ -2,23 +2,18 @@
 /SingleMuon/Run2018A-Nano25Oct2019-v1/NANOAOD      315257-316995  315257-316995     14.497025015       14.027047498    
 /SingleMuon/Run2018B-Nano25Oct2019-v1/NANOAOD      317080-319310  317080-319077     7.309761282        7.060622498     
 /SingleMuon/Run2018C-Nano25Oct2019-v1/NANOAOD      319337-320065  319337-320065     7.142572713        6.894770972     
-/SingleMuon/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD 320500-325175  320673-325172     33.010741856       31.742979336    
 /EGamma/Run2018A-Nano25Oct2019-v1/NANOAOD          315257-316995  315257-316995     14.496704627       14.026724849    
 /EGamma/Run2018B-Nano25Oct2019-v1/NANOAOD          317080-319310  317080-319077     7.309486368        7.060617356     
 /EGamma/Run2018C-Nano25Oct2019-v1/NANOAOD          319337-320065  319337-320065     7.142572713        6.894770972     
-/EGamma/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD     320497-325175  320673-325172     33.008673153       31.742618686    
 /DoubleMuon/Run2018A-Nano25Oct2019-v1/NANOAOD      315257-316995  315257-316995     14.497025015       14.027047498    
 /DoubleMuon/Run2018B-Nano25Oct2019-v1/NANOAOD      317080-319310  317080-319077     7.309761282        7.060622498     
 /DoubleMuon/Run2018C-Nano25Oct2019-v1/NANOAOD      319337-320065  319337-320065     7.142572713        6.894770972     
-/DoubleMuon/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD 320500-325175  320673-325172     33.010372331       31.742618733    
 /MuonEG/Run2018A-Nano25Oct2019-v1/NANOAOD          315257-316995  315257-316995     14.497025015       14.027047498    
 /MuonEG/Run2018B-Nano25Oct2019-v1/NANOAOD          317080-319310  317080-319077     7.309447313        7.060315291     
 /MuonEG/Run2018C-Nano25Oct2019-v1/NANOAOD          319337-320065  319337-320065     7.142572713        6.894770972     
-/MuonEG/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD     320500-325175  320673-325172     33.010741856       31.742979336    
 /Tau/Run2018A-Nano25Oct2019-v1/NANOAOD             315257-316995  315257-316995     14.481786898       14.012760083    
 /Tau/Run2018B-Nano25Oct2019-v1/NANOAOD             317080-319310  317080-319077     7.310202122        7.061034382     
 /Tau/Run2018C-Nano25Oct2019-v1/NANOAOD             319337-320065  319337-320065     7.142897398        6.894782080     
-/Tau/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD        320497-325175  320673-325172     33.009816903       31.742980641    
 
 # file generated at 2019-07-04 18:50:41 with the following command:
 # find_samples.py -V -m python/samples/metaDict_2018_data.py -d ../NanoAOD/test/datasets/txt/datasets_data_2018_17Sep18.txt -p SingleMuon EGamma DoubleMuon MuonEG Tau -g ../NanoAOD/data/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt -v 10_2_4_patch1 -r 2018 -C +17Sep2018 +Run2018D-PromptReco -l
@@ -27,6 +22,18 @@
 # totdelivered(/fb): 62.223541019
 # totrecorded(/fb): 59.740565199
 
-# file generated at 2019-11-17 01:11:24 with the following command:
-# find_nano_datasets.py -i test/datasets/txt/datasets_data_2018_17Sep18.txt
+# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
+# /SingleMuon/Run2018D-PromptReco-v2/MINIAOD
+#   /SingleMuon/Run2018D-PromptReco-v2/MINIAOD -> /SingleMuon/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD
+# /EGamma/Run2018D-PromptReco-v2/MINIAOD
+#   /EGamma/Run2018D-PromptReco-v2/MINIAOD -> /EGamma/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD
+# /DoubleMuon/Run2018D-PromptReco-v2/MINIAOD
+#   /DoubleMuon/Run2018D-PromptReco-v2/MINIAOD -> /DoubleMuon/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD
+# /MuonEG/Run2018D-PromptReco-v2/MINIAOD
+#   /MuonEG/Run2018D-PromptReco-v2/MINIAOD -> /MuonEG/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD
+# /Tau/Run2018D-PromptReco-v2/MINIAOD
+#   /Tau/Run2018D-PromptReco-v2/MINIAOD -> /Tau/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD
+
+# file generated at 2019-11-17 16:28:46 with the following command:
+# find_nano_datasets.py -i test/datasets/txt/datasets_data_2016_17Jul18.txt test/datasets/txt/datasets_data_2017_31Mar18.txt test/datasets/txt/datasets_data_2018_17Sep18.txt test/datasets/txt/datasets_data_2018_17Sep18_22Jan19.txt test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt -v
 
