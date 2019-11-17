@@ -128,7 +128,7 @@ def get_size(dbs_name):
   return int(nevents_str[0])
 
 def get_runlumi(dbs_name):
-  query_str = 'run,lumi dataset={}'.format(dbs_name)
+  query_str = "dasgoclient -query='run,lumi dataset={}'".format(dbs_name)
   query_out = run_query(query_str)
   runlumis = {}
   for line in query_out.split('\n'):
@@ -218,7 +218,7 @@ def find_matching_nano(miniaods, dbs_nano, data_str, mc_str):
       if nanoaod_re.match(nanoaod):
         nanoaod_cands.append(nanoaod)
     nanoaod_parents = resolve_candidate(nanoaod_cands)
-    if miniaod not in nanoaod_parents or not runlumi_match(miniaod, nanoaod_parents[miniaod]):
+    if miniaod not in nanoaod_parents:
       logging.error('No candidates found for: {}'.format(miniaod))
     else:
       logging.debug('Found candidate for {}: {}'.format(miniaod, nanoaod_parents[miniaod]))
@@ -285,7 +285,7 @@ for input_file in data:
       if len(line) == 1:
         f.write('{}\n'.format(line[0]))
       elif len(line) == 2:
-        if nanoaods[line[1]]:
+        if nanoaods[line[1]] and runlumi_match(line[1], nanoaods[line[1]]):
           line_remaining = line[0].replace(line[1], '').lstrip()
           f.write('{}{}\n'.format(nanoaods[line[1]].ljust(max_width_nanoaod), line_remaining))
         else:
