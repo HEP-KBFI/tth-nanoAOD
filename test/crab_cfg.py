@@ -54,8 +54,9 @@ config.General.workArea        = os.path.join(os.path.expanduser('~'), 'crab_pro
 config.General.transferOutputs = True
 config.General.transferLogs    = True
 
-config.JobType.pluginName = 'Analysis'
-config.JobType.psetName   = NANOCFG
+config.JobType.pluginName              = 'Analysis'
+config.JobType.psetName                = NANOCFG
+config.JobType.allowUndistributedCMSSW = True
 
 if WHITELIST:
   config.Site.whitelist = WHITELIST.split(',')
