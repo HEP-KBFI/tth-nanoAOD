@@ -7,6 +7,7 @@ leptonFR_triggers = {
         path = cms.string("HLT_Mu3_PFJet40"),
         cone_minPt = cms.double(10.),
         cone_maxPt = cms.double(32.),
+        minRecoPt = cms.double(-1.),
         jet_minPt = cms.double(45.),
         average_prescale = cms.double(4849), # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
         trigger_type = cms.string('2mu'),
@@ -15,6 +16,7 @@ leptonFR_triggers = {
         path = cms.string("HLT_Mu8"),
         cone_minPt = cms.double(15.),
         cone_maxPt = cms.double(100.),
+        minRecoPt = cms.double(8.),
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(9123), # L=3.937/pb; present in all eras; prescale factor 9123.1 (9081.0 from delivery)
         trigger_type = cms.string('2mu'),
@@ -23,6 +25,7 @@ leptonFR_triggers = {
         path = cms.string("HLT_Mu17"),
         cone_minPt = cms.double(32.),
         cone_maxPt = cms.double(100.),
+        minRecoPt = cms.double(17.),
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(127.0), # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
         trigger_type = cms.string('2mu'),
@@ -33,6 +36,7 @@ leptonFR_triggers = {
         path = cms.string("HLT_Ele8_CaloIdM_TrackIdM_PFJet30"),
         cone_minPt = cms.double(15.),
         cone_maxPt = cms.double(45.),
+        minRecoPt = cms.double(8.),
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(5140), # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
         trigger_type = cms.string('2e'),
@@ -41,6 +45,7 @@ leptonFR_triggers = {
         path = cms.string("HLT_Ele17_CaloIdM_TrackIdM_PFJet30"),
         cone_minPt = cms.double(25.),
         cone_maxPt = cms.double(100.),
+        minRecoPt = cms.double(17.),
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(572.4), # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         trigger_type = cms.string('2e'),
@@ -49,6 +54,7 @@ leptonFR_triggers = {
         path = cms.string("HLT_Ele23_CaloIdM_TrackIdM_PFJet30"),
         cone_minPt = cms.double(32.),
         cone_maxPt = cms.double(100.),
+        minRecoPt = cms.double(23.),
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(572.4), # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         trigger_type = cms.string('2e'),
