@@ -55,9 +55,10 @@ config.General.workArea        = os.path.join(os.path.expanduser('~'), 'crab_pro
 config.General.transferOutputs = True
 config.General.transferLogs    = True
 
-config.JobType.pluginName = 'Analysis'
-config.JobType.psetName   = NANOCFG
-config.JobType.numCores   = NTHREADS
+config.JobType.pluginName              = 'Analysis'
+config.JobType.psetName                = NANOCFG
+config.JobType.allowUndistributedCMSSW = True
+config.JobType.numCores                = NTHREADS
 if NTHREADS > 1:
   config.JobType.maxMemoryMB = 2000 * NTHREADS
 
