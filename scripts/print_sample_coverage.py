@@ -174,17 +174,17 @@ RR_CV              = 'cv'
 RR_C2V             = 'c2v'
 RR_C3              = 'c3'
 
-RESONANT_REGEX_PATTERN = r'signal_(?P<%s>(ggf|vbf))_spin(?P<%s>[0|2]{1})_(?P<%s>\d+)_hh_(?P<%s>[0-9A-Za-z]+)' % (
+RESONANT_REGEX_PATTERN = r'signal_(?P<%s>(ggf|vbf))_spin(?P<%s>[0|2]{1})_(?P<%s>\d+)_hh_(?P<%s>[0-9A-Za-z_]+)' % (
   RR_PRODUCTION_MODE, RR_SPIN, RR_MASS_POINT, RR_DECAY_CHANNEL
 )
 RESONANT_REGEX = re.compile(RESONANT_REGEX_PATTERN)
 
-NONRESONANT_GGF_REGEX_PATTERN = r'signal_ggf_nonresonant_node_(?P<%s>(SM|sm|box|\d+))_hh_(?P<%s>[0-9A-Za-z]+)' % (
+NONRESONANT_GGF_REGEX_PATTERN = r'signal_ggf_nonresonant_node_(?P<%s>(SM|sm|box|\d+))_hh_(?P<%s>[0-9A-Za-z_]+)' % (
   RR_SHAPE, RR_DECAY_CHANNEL
 )
 NONRESONANT_GGF_REGEX = re.compile(NONRESONANT_GGF_REGEX_PATTERN)
 
-NONRESONANT_VBF_REGEX_PATTERN = r'signal_vbf_nonresonant_(?P<%s>(\d+(p\d+)?))_(?P<%s>(\d+(p\d+)?))_(?P<%s>(\d+(p\d+)?))_hh_(?P<%s>[0-9A-Za-z]+)' % (
+NONRESONANT_VBF_REGEX_PATTERN = r'signal_vbf_nonresonant_(?P<%s>(\d+(p\d+)?))_(?P<%s>(\d+(p\d+)?))_(?P<%s>(\d+(p\d+)?))_hh_(?P<%s>[0-9A-Za-z_]+)' % (
   RR_CV, RR_C2V, RR_C3, RR_DECAY_CHANNEL
 )
 NONRESONANT_VBF_REGEX = re.compile(NONRESONANT_VBF_REGEX_PATTERN)
