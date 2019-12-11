@@ -160,6 +160,26 @@ def get_nanoaod(id_str, is_data):
   )
   return result
 
+def read_nanoaod(fn):
+  result = {}
+  nof_invalid = 0
+  assert(os.path.isfile(fn))
+  with open(fn, 'r') as f:
+    for line in f:
+      line_split = line.rstrip('\n').split()
+      assert(len(line_split) == 2)
+      dbs_name = line_split[0]
+      dbs_status = line_split[1]
+      assert(dbs_status in [ 'VALID', 'PRODUCTION', 'INVALID' ])
+      if dbs_status == 'INVALID':
+        nof_invalid += 1
+        continue
+      assert(dbs_name not in result)
+      result[dbs_name] = dbs_status
+  logging.info(
+    'Found {} dataset(s) plus {} invalid dataset(s) in file {}'.format(len(result), nof_invalid, fn)
+  )
+
 def merge_dicts(dict_first, dict_second):
   assert(not (set(dict_first.keys()) & set(dict_second.keys())))
   dict_result = dict_first.copy()
@@ -365,6 +385,14 @@ parser.add_argument(
   help = 'R|Input text file(s) containing list of MINIAOD(SIM) files',
 )
 parser.add_argument(
+  '-j', '--input-mc', dest = 'input_mc', metavar = 'file', required = False, type = str, default = '',
+  help = 'R|Input file containing list of all NANOAODSIM files',
+)
+parser.add_argument(
+  '-k', '--input-data', dest = 'input_data', metavar = 'file', required = False, type = str, default = '',
+  help = 'R|Input file containing list of all NANOAOD files',
+)
+parser.add_argument(
   '-p', '--prefix', dest = 'prefix', metavar = 'str', required = False, type = str, default = 'nano',
   help = 'R|Prefix added to the input file names',
 )
@@ -399,8 +427,8 @@ for input_file in args.input:
 if not check_proxy():
   sys.exit(1)
 
-dbs_data = get_nanoaod(args.data, True)
-dbs_mc = get_nanoaod(args.mc, False)
+dbs_data = read_nanoaod(args.input_data) if args.input_data else get_nanoaod(args.data, True)
+dbs_mc = read_nanoaod(args.input_mc) if args.input_mc else get_nanoaod(args.mc, False)
 dbs_nano = merge_dicts(dbs_data, dbs_mc)
 logging.info('Considering {} dataset(s) in total'.format(len(dbs_nano)))
 
