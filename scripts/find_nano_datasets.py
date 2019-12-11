@@ -179,6 +179,7 @@ def read_nanoaod(fn):
   logging.info(
     'Found {} dataset(s) plus {} invalid dataset(s) in file {}'.format(len(result), nof_invalid, fn)
   )
+  return result
 
 def merge_dicts(dict_first, dict_second):
   assert(not (set(dict_first.keys()) & set(dict_second.keys())))
