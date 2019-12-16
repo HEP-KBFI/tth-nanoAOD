@@ -13,6 +13,7 @@
 /THW_ctcvcp_5f_Hincl_13TeV_madgraph_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                   1 tHW        THW_ctcvcp                                    0.01561     # NLO [3]; cf = cv = 1.0
 
 # ggH
+/GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                    1 ggH        GluGluHToTauTau                               3.0469      # N3LO [1][2]; s(ggf h) * br(h -> tau tau) = 48.58 * 0.06272
 /GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                       1 ggH        GluGluHToZZTo4L                               0.01297     # ? [1][2][4]; s(ggf h) * br(h -> zz) * br(z -> ll)^2 = 48.58 * 0.02619 * (3 * 0.033658)^2
 /GluGluHToZZTo2L2Q_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                     1 ggH        GluGluHToZZTo2L2Q_M125                        0.17963     # ? [1][2][4]; s(ggf h) * br(h -> zz) * 2 * br(z -> ll) * br(z -> qqbar) = 48.58 * 0.02619 * 2 * (3 * 0.033658) * 0.69911
 /GluGluHToWWToLNuQQ_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                     1 ggH        GluGluHToWWToLNuQQ_M125                       4.5621      # ? [1][2][4]; s(ggf h) * br(h -> ww) * 2 * br(w -> lnu) * br(w -> qqbar) = 48.58 * 0.2137 * 2 * (1 - 0.674) * 0.674
@@ -23,6 +24,7 @@
 /GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                          1 ggH        GluGluHToGG_M125                              0.11028     # ? [1][2][4]; s(ggf h) * br(h -> gamma gamma) = 48.58 * 0.00227
 
 # qqH
+/VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                                  1 qqH        VBFHToTauTau_ext1                             0.2372      # NNLO QCD + NLO EW [1][2]; s(vbf h) * br(h -> tau tau) = 3.782 * 0.06272
 /VBF_HToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                         1 qqH        VBF_HToZZTo4L                                 0.0010099   # ? [1][2][4]; s(vbf h) * br(h -> zz) * br(z -> ll)^2 = 3.782 * 0.02619 * (3 * 0.033658)^2
 /VBFHToWWToLNuQQ_M125_13TeV_powheg_JHUGen_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                             1 qqH        VBFHToWWToLNuQQ_M125                          0.35517     # ? [1][2][4]; s(vbf h) * br(h -> ww) * 2 * br(w -> lnu) * br(w -> qqbar) = 3.782 * 0.2137 * 2 * (1 - 0.674) * 0.674
 /VBFHToWWTo2L2Nu_M125_13TeV_powheg2_JHUGenV714_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                        1 qqH        VBFHToWWTo2L2Nu_M125                          0.085894    # ? [1][2][4]; s(vbf h) * br(h -> ww) * br(w -> lnu)^2 = 3.782 * 0.2137 * (1 - 0.674)^2
@@ -94,6 +96,7 @@
 /VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                            1 VH         VHToNonbb_M125                                0.9425      # N3LO WH + NNLO ZH [1][2]; (s(wh) + s(zh)) * (1 - br(h -> bb))
 /ZH_HToBB_ZToLL_M125_13TeV_powheg_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                     1 VH         ZH_HToBB_ZToLL                                0.05198     # ? [1][2][4]; s(ZH) * br(h -> bb) * br(z -> ll)
 /ZH_HToBB_ZToLL_M125_13TeV_powheg_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                                1 VH         ZH_HToBB_ZToLL_ext1                           0.05198     # ? [1][2][4]; s(ZH) * br(h -> bb) * br(z -> ll)
+/ZHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                         1 VH         ZHToTauTau                                    0.05544     # ? [1][2][4]; s(ZH) * br(h -> tautau)
 
 # Z+jets
 /DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                        1 EWK        DYJetsToLL_M-10to50                       18610.0         # NLO [11][12]; measured on 2018 sample(s) with GenXsecAnalyzer is 15820; k-factor = 18610.0 / 15820 = 1.17636
@@ -210,13 +213,10 @@
 # [17] https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf
 
 # Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
-# /GluGluHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM
-# /VBFHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM
-# /ZHToTauTau_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM
 # /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v7/MINIAODSIM
 #   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM
 #   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext2-v1/NANOAODSIM
 
-# file generated at 2019-12-11 22:40:06 with the following command:
+# file generated at 2019-12-16 15:39:14 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 
