@@ -62,6 +62,7 @@
 /GluGluToRadionToHHTo2B2WToLNu2J_node-1_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_1_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
 /GluGluToRadionToHHTo2B2WToLNu2J_node-2_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_2_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
 /GluGluToRadionToHHTo2B2WToLNu2J_node-3_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_3_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
+/GluGluToRadionToHHTo2B2WToLNu2J_node-4_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_4_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
 /GluGluToRadionToHHTo2B2WToLNu2J_node-5_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_5_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
 /GluGluToRadionToHHTo2B2WToLNu2J_node-6_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_6_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
 /GluGluToRadionToHHTo2B2WToLNu2J_node-7_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                 1 signal_ggf_nonresonant_hh_bbvv_sl      signal_ggf_nonresonant_node_7_hh_2b2v_sl   0.109352 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742
@@ -110,8 +111,11 @@
 /GluGluToRadionToHHTo2B2Tau_M-270_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_270_hh_bbtt           signal_ggf_spin0_270_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToRadionToHHTo2B2Tau_M-320_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_320_hh_bbtt           signal_ggf_spin0_320_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToRadionToHHTo2B2Tau_M-350_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_350_hh_bbtt           signal_ggf_spin0_350_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToRadionToHHTo2B2Tau_M-400_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM           1 signal_ggf_spin0_400_hh_bbtt           signal_ggf_spin0_400_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToRadionToHHTo2B2Tau_M-450_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_450_hh_bbtt           signal_ggf_spin0_450_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToRadionToHHTo2B2Tau_M-500_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_500_hh_bbtt           signal_ggf_spin0_500_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToRadionToHHTo2B2Tau_M-550_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_550_hh_bbtt           signal_ggf_spin0_550_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToRadionToHHTo2B2Tau_M-600_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_600_hh_bbtt           signal_ggf_spin0_600_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToRadionToHHTo2B2Tau_M-800_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                1 signal_ggf_spin0_800_hh_bbtt           signal_ggf_spin0_800_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 
 # HH -> bb tautau (GGF spin2 resonant)
@@ -119,10 +123,13 @@
 /GluGluToBulkGravitonToHHTo2B2Tau_M-260_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_260_hh_bbtt           signal_ggf_spin2_260_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToBulkGravitonToHHTo2B2Tau_M-270_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_270_hh_bbtt           signal_ggf_spin2_270_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToBulkGravitonToHHTo2B2Tau_M-280_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_280_hh_bbtt           signal_ggf_spin2_280_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToBulkGravitonToHHTo2B2Tau_M-400_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM     1 signal_ggf_spin2_400_hh_bbtt           signal_ggf_spin2_400_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToBulkGravitonToHHTo2B2Tau_M-450_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_450_hh_bbtt           signal_ggf_spin2_450_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToBulkGravitonToHHTo2B2Tau_M-500_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_500_hh_bbtt           signal_ggf_spin2_500_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToBulkGravitonToHHTo2B2Tau_M-600_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_600_hh_bbtt           signal_ggf_spin2_600_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToBulkGravitonToHHTo2B2Tau_M-650_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_650_hh_bbtt           signal_ggf_spin2_650_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToBulkGravitonToHHTo2B2Tau_M-750_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_750_hh_bbtt           signal_ggf_spin2_750_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToBulkGravitonToHHTo2B2Tau_M-800_narrow_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM          1 signal_ggf_spin2_800_hh_bbtt           signal_ggf_spin2_800_hh_2b2t               0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 
 # HH -> bb tautau (VBF non-resonant)
 /VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                          1 signal_vbf_nonresonant_1_1_0_hh_bbtt   signal_vbf_nonresonant_1_1_0_hh_2b2t       0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
@@ -135,6 +142,7 @@
 # HH -> bb tautau (GGF non-resonant)
 /GluGluToHHTo2B2Tau_node_box_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                            1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_box_hh_2b2t    0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToHHTo2B2Tau_node_11_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                             1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_11_hh_2b2t     0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToHHTo2B2Tau_node_13_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                             1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_13_hh_2b2t     0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
@@ -142,30 +150,22 @@
 
 # Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
 # /GluGluToHHTo2B2VTo2L2Nu_node_2_13TeV-madgraph-v2/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v3/MINIAODSIM
-# /GluGluToRadionToHHTo2B2WToLNu2J_node-4_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToRadionToHHTo2B2Tau_M-280_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToRadionToHHTo2B2Tau_M-300_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM
 # /GluGluToRadionToHHTo2B2Tau_M-340_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToRadionToHHTo2B2Tau_M-400_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM
-# /GluGluToRadionToHHTo2B2Tau_M-450_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToRadionToHHTo2B2Tau_M-600_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToRadionToHHTo2B2Tau_M-650_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToRadionToHHTo2B2Tau_M-900_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToBulkGravitonToHHTo2B2Tau_M-300_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM
 # /GluGluToBulkGravitonToHHTo2B2Tau_M-320_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToBulkGravitonToHHTo2B2Tau_M-340_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToBulkGravitonToHHTo2B2Tau_M-350_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToBulkGravitonToHHTo2B2Tau_M-400_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM
 # /GluGluToBulkGravitonToHHTo2B2Tau_M-550_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToBulkGravitonToHHTo2B2Tau_M-750_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToBulkGravitonToHHTo2B2Tau_M-800_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToHHTo2B2Tau_node_SM_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToHHTo2B2Tau_node_2_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToHHTo2B2Tau_node_9_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToHHTo2B2Tau_node_10_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 # /GluGluToHHTo2B2Tau_node_12_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToHHTo2B2Tau_node_13_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM
 
-# file generated at 2019-12-16 15:39:14 with the following command:
+# file generated at 2019-12-17 15:25:17 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 
