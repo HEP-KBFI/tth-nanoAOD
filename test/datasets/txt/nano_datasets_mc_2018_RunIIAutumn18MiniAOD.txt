@@ -217,6 +217,6 @@
 #   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM
 #   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext2-v1/NANOAODSIM
 
-# file generated at 2019-12-17 15:25:17 with the following command:
+# file generated at 2019-12-19 18:38:54 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 
