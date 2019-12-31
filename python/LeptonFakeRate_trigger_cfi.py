@@ -11,7 +11,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(45.),
         average_prescale = cms.double(4849), # L=7.408/pb; present in all eras; prescale factor 4849.0 (4863.2 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '273158-273158', # HLT_Mu3_PFJet40_v1, 0.025/pb
           '273302-273302', # HLT_Mu3_PFJet40_v1, 0.008/pb
           '273402-273406', # HLT_Mu3_PFJet40_v1, 0.006/pb
@@ -243,7 +243,7 @@ leptonFR_triggers = {
           '284025-284025', # HLT_Mu3_PFJet40_v6, 0.001/pb
           '284029-284029', # HLT_Mu3_PFJet40_v6, 0.002/pb
           '284035-284044', # HLT_Mu3_PFJet40_v6, 0.035/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu8"),
@@ -253,7 +253,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(9123), # L=3.937/pb; present in all eras; prescale factor 9123.1 (9081.0 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '273158-273158',  # HLT_Mu8_v3, 0.14/pb
           '273302-273302',  # HLT_Mu8_v3, 0.045/pb
           '273402-273406',  # HLT_Mu8_v3, 0.033/pb
@@ -485,7 +485,7 @@ leptonFR_triggers = {
           '284025-284025',  # HLT_Mu8_v5, 0.0/pb
           '284029-284029',  # HLT_Mu8_v5, 0.001/pb
           '284035-284044',  # HLT_Mu8_v5, 0.011/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu17"),
@@ -495,7 +495,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(127.0), # L=282.781/pb; present in all eras; prescale factor 127.0 (127.4 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '273158-273158',  # HLT_Mu17_v2, 1.83/pb
           '273302-273302',  # HLT_Mu17_v2, 1.632/pb
           '273402-273406',  # HLT_Mu17_v2, 1.179/pb
@@ -727,7 +727,7 @@ leptonFR_triggers = {
           '284025-284025',  # HLT_Mu17_v4, 0.007/pb
           '284029-284029',  # HLT_Mu17_v4, 0.021/pb
           '284035-284044',  # HLT_Mu17_v4, 0.451/pb
-        ),
+        )),
       ),
     ),
     'e' : cms.VPSet(
@@ -739,7 +739,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(5140), # L=6.988/pb; present in all eras; prescale factor 5140.3 (5135.5 from delivery)
         trigger_type = cms.string('2e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '273158-273158',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v3, 0.017/pb
           '273302-273302',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v3, 0.01/pb
           '273402-273406',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v3, 0.007/pb
@@ -971,7 +971,7 @@ leptonFR_triggers = {
           '284025-284025',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v9, 0.001/pb
           '284029-284029',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v9, 0.003/pb
           '284035-284044',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v9, 0.048/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Ele17_CaloIdM_TrackIdM_PFJet30"),
@@ -981,7 +981,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(572.4), # L=62.761/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         trigger_type = cms.string('2e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '273158-273158',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v1, 2.491/pb
           '273302-273302',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v1, 0.204/pb
           '273402-273406',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v1, 0.145/pb
@@ -1213,7 +1213,7 @@ leptonFR_triggers = {
           '284025-284025',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v7, 0.004/pb
           '284029-284029',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v7, 0.012/pb
           '284035-284044',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v7, 0.179/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Ele23_CaloIdM_TrackIdM_PFJet30"),
@@ -1223,7 +1223,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(572.4), # L=62.7611/pb; present in all eras; prescale factor 572.4 (573.4 from delivery)
         trigger_type = cms.string('2e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '273158-273158',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v3, 2.491/pb
           '273302-273302',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v3, 0.204/pb
           '273402-273406',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v3, 0.145/pb
@@ -1455,7 +1455,7 @@ leptonFR_triggers = {
           '284025-284025',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v9, 0.004/pb
           '284029-284029',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v9, 0.012/pb
           '284035-284044',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v9, 0.179/pb
-        ),
+        )),
       ),
     ),
   },
@@ -1469,7 +1469,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(45.),
         average_prescale = cms.double(9006), # L=4.611/pb; present in C, D, E, F, missing in B; prescale factor 9005.6 (8870.8 from delivery)
         trigger_type = cms.string('1mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '299368-299370',  # HLT_Mu3_PFJet40_v9, 0.016/pb
           '299380-299381',  # HLT_Mu3_PFJet40_v9, 0.004/pb
           '299394-299396',  # HLT_Mu3_PFJet40_v9, 0.004/pb
@@ -1675,7 +1675,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Mu3_PFJet40_v14, 0.008/pb
           '306432-306432',  # HLT_Mu3_PFJet40_v14, 0.006/pb
           '306454-306460',  # HLT_Mu3_PFJet40_v14, 0.096/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu8"),
@@ -1685,7 +1685,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(15943), # L=2.605/pb; present in all eras; prescale factor 15943.0 (15120.6 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '297050-297050',  # HLT_Mu8_v6, 0.002/pb
           '297056-297057',  # HLT_Mu8_v6, 0.004/pb
           '297099-297101',  # HLT_Mu8_v6, 0.006/pb
@@ -1933,7 +1933,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Mu8_v11, 0.005/pb
           '306432-306432',  # HLT_Mu8_v11, 0.002/pb
           '306454-306460',  # HLT_Mu8_v11, 0.048/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu17"),
@@ -1943,7 +1943,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(592.9), # L=70.038/pb; present in all eras; prescale factor 592.9 (600.1 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '297050-297050',  # HLT_Mu17_v5, 0.158/pb
           '297056-297057',  # HLT_Mu17_v5, 0.24/pb
           '297099-297101',  # HLT_Mu17_v6, 0.402/pb
@@ -2191,7 +2191,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Mu17_v11, 0.131/pb
           '306432-306432',  # HLT_Mu17_v11, 0.074/pb
           '306454-306460',  # HLT_Mu17_v11, 1.275/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu20"),
@@ -2201,7 +2201,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(72.3), # L=574.1/pb; present in all eras; prescale factor 72.3 (73.9 from delivery)
         trigger_type = cms.string('1mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '297050-297050',  # HLT_Mu20_v5, 15.787/pb
           '297056-297057',  # HLT_Mu20_v5, 23.957/pb
           '297099-297101',  # HLT_Mu20_v6, 40.249/pb
@@ -2449,7 +2449,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Mu20_v11, 0.1/pb
           '306432-306432',  # HLT_Mu20_v11, 0.046/pb
           '306454-306460',  # HLT_Mu20_v11, 0.848/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu27"),
@@ -2459,7 +2459,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(224.5), # L=184.944/pb; present in all eras; prescale factor 224.5 (216.1 from delivery)
         trigger_type = cms.string('1mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '297050-297050',  # HLT_Mu27_v6, 0.789/pb
           '297056-297057',  # HLT_Mu27_v6, 1.198/pb
           '297099-297101',  # HLT_Mu27_v7, 1.949/pb
@@ -2707,7 +2707,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Mu27_v12, 0.315/pb
           '306432-306432',  # HLT_Mu27_v12, 0.143/pb
           '306454-306460',  # HLT_Mu27_v12, 4.256/pb
-        ),
+        )),
       ),
     ),
     'e' : cms.VPSet(
@@ -2719,7 +2719,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(11364), # L=3.654/pb; present in C, D, E, F, missing in B; prescale factor 11363.9 (11029.2 from delivery)
         trigger_type = cms.string('1e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '299368-299370',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v10, 0.03/pb
           '299380-299381',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v10, 0.003/pb
           '299394-299396',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v10, 0.003/pb
@@ -2925,7 +2925,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v16, 0.011/pb
           '306432-306432',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v16, 0.009/pb
           '306454-306460',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v16, 0.133/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Ele17_CaloIdM_TrackIdM_PFJet30"),
@@ -2935,7 +2935,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(1167), # L=35.593/pb; present in C, D, E, F, missing in B; prescale factor 1166.8 (1181.3 from delivery)
         trigger_type = cms.string('1e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '299368-299370',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v8, 0.184/pb
           '299380-299381',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v8, 0.015/pb
           '299394-299396',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v8, 0.015/pb
@@ -3141,7 +3141,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v14, 0.09/pb
           '306432-306432',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v14, 0.056/pb
           '306454-306460',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v14, 0.924/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Ele23_CaloIdM_TrackIdM_PFJet30"),
@@ -3151,7 +3151,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(1087), # L=38.216/pb; present in C, D, E, F, missing in B; prescale factor 1086.7 (1101.5 from delivery)
         trigger_type = cms.string('1e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '299368-299370',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v10, 0.184/pb
           '299380-299381',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v10, 0.015/pb
           '299394-299396',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v10, 0.015/pb
@@ -3357,7 +3357,7 @@ leptonFR_triggers = {
           '306422-306423',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v16, 0.117/pb
           '306432-306432',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v16, 0.078/pb
           '306454-306460',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v16, 1.252/pb
-        ),
+        )),
       ),
     ),
   },
@@ -3371,7 +3371,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(45.),
         average_prescale = cms.double(22160), # L=2.695/pb; present in all eras; prescale factor 22160.5 (22182.4 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Mu3_PFJet40_v14, 0.0/pb
           '315259-315259',  # HLT_Mu3_PFJet40_v14, 0.0/pb
           '315264-315265',  # HLT_Mu3_PFJet40_v14, 0.001/pb
@@ -3669,7 +3669,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Mu3_PFJet40_v16, 0.001/pb
           '325168-325170',  # HLT_Mu3_PFJet40_v16, 0.004/pb
           '325172-325172',  # HLT_Mu3_PFJet40_v16, 0.001/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu8"),
@@ -3679,7 +3679,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(6990), # L=8.546/pb; present in all eras; prescale factor 6990.5 (6981.9 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Mu8_v11, 0.0/pb
           '315259-315259',  # HLT_Mu8_v11, 0.0/pb
           '315264-315265',  # HLT_Mu8_v11, 0.001/pb
@@ -3977,7 +3977,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Mu8_v12, 0.013/pb
           '325168-325170',  # HLT_Mu8_v12, 0.061/pb
           '325172-325172',  # HLT_Mu8_v12, 0.015/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu17"),
@@ -3987,7 +3987,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(1305), # L=45.781/pb; present in all eras; prescale factor 1304.9 (1307.1 from delivery)
         trigger_type = cms.string('2mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Mu17_v11, 0.006/pb
           '315259-315259',  # HLT_Mu17_v11, 0.011/pb
           '315264-315265',  # HLT_Mu17_v11, 0.036/pb
@@ -4285,7 +4285,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Mu17_v13, 0.047/pb
           '325168-325170',  # HLT_Mu17_v13, 0.21/pb
           '325172-325172',  # HLT_Mu17_v13, 0.052/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu20"),
@@ -4295,7 +4295,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(1081), # L=55.273/pb; present in all eras; prescale factor 1080.8 (1082.1 from delivery)
         trigger_type = cms.string('1mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Mu20_v11, 0.004/pb
           '315259-315259',  # HLT_Mu20_v11, 0.007/pb
           '315264-315265',  # HLT_Mu20_v11, 0.022/pb
@@ -4593,7 +4593,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Mu20_v12, 0.059/pb
           '325168-325170',  # HLT_Mu20_v12, 0.26/pb
           '325172-325172',  # HLT_Mu20_v12, 0.064/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Mu27"),
@@ -4603,7 +4603,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(475), # L=125.783/pb; present in all eras; prescale factor 475.0 (464.6 from delivery)
         trigger_type = cms.string('1mu'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Mu27_v12, 0.054/pb
           '315259-315259',  # HLT_Mu27_v12, 0.094/pb
           '315264-315265',  # HLT_Mu27_v12, 0.208/pb
@@ -4901,7 +4901,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Mu27_v13, 0.123/pb
           '325168-325170',  # HLT_Mu27_v13, 0.546/pb
           '325172-325172',  # HLT_Mu27_v13, 0.135/pb
-        ),
+        )),
       ),
     ),
     'e' : cms.VPSet(
@@ -4913,7 +4913,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(9318), # L=6.411/pb; present in all eras; prescale factor 9318.5 (9325.6 from delivery)
         trigger_type = cms.string('1e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v16, 0.0/pb
           '315259-315259',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v16, 0.0/pb
           '315264-315265',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v16, 0.0/pb
@@ -5211,7 +5211,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v18, 0.008/pb
           '325168-325170',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v18, 0.036/pb
           '325172-325172',  # HLT_Ele8_CaloIdM_TrackIdM_PFJet30_v18, 0.009/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Ele17_CaloIdM_TrackIdM_PFJet30"),
@@ -5221,7 +5221,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(1537), # L=38.861/pb; present in all eras; prescale factor 1537.3 (1538.9 from delivery)
         trigger_type = cms.string('1e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v14, 0.0/pb
           '315259-315259',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v14, 0.0/pb
           '315264-315265',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v14, 0.002/pb
@@ -5519,7 +5519,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v16, 0.046/pb
           '325168-325170',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v16, 0.202/pb
           '325172-325172',  # HLT_Ele17_CaloIdM_TrackIdM_PFJet30_v16, 0.05/pb
-        ),
+        )),
       ),
       cms.PSet(
         path = cms.string("HLT_Ele23_CaloIdM_TrackIdM_PFJet30"),
@@ -5529,7 +5529,7 @@ leptonFR_triggers = {
         jet_minPt = cms.double(30.),
         average_prescale = cms.double(1537), # L=38.875/pb; present in all eras; prescale factor 1536.7 (1538.4 from delivery)
         trigger_type = cms.string('1e'),
-        run_ranges = cms.vstring(
+        run_ranges = cms.vstring(*(
           '315257-315257',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v16, 0.0/pb
           '315259-315259',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v16, 0.001/pb
           '315264-315265',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v16, 0.002/pb
@@ -5827,7 +5827,7 @@ leptonFR_triggers = {
           '325159-325159',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v18, 0.046/pb
           '325168-325170',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v18, 0.202/pb
           '325172-325172',  # HLT_Ele23_CaloIdM_TrackIdM_PFJet30_v18, 0.05/pb
-        ),
+        )),
       ),
     ),
   },
