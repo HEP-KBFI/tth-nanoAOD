@@ -1,5 +1,7 @@
 from tthAnalysis.NanoAOD.LeptonFakeRate_trigger_cfi import leptonFR_triggers
 
+import FWCore.ParameterSet.Config as cms
+
 class Triggers(object):
 
   def __init__(self, era):
@@ -2715,7 +2717,7 @@ class Triggers(object):
             ],
           },
         ],
-        '1mu' : {
+        '1mu' : [
           {
             'name'        : 'HLT_IsoMu22',
             'int_lumi'    : 28.564,
@@ -4028,7 +4030,7 @@ class Triggers(object):
               [284035, 284044], # HLT_IsoTkMu24_v4, 303.58/pb
             ],
           },
-        },
+        ],
         '1mu_noiso' : [
           {
             'name'        : 'HLT_Mu45_eta2p1',
@@ -18603,3 +18605,34 @@ class Triggers(object):
     self.triggers_analysis_flat = { trigger['name'] for triggers in self.triggers_analysis for trigger in self.triggers_analysis[triggers] }
     self.triggers_leptonFR_flat = { trigger         for triggers in self.triggers_leptonFR for trigger in self.triggers_leptonFR[triggers] }
     self.triggers_flat          = self.triggers_analysis_flat | self.triggers_leptonFR_flat
+
+    self.runs = cms.PSet()
+    for trigger_name in self.triggers_analysis_flat:
+      trigger_name_found = False
+      for triggers in self.triggers_analysis:
+        for trigger in self.triggers_analysis[triggers]:
+          if trigger_name == trigger['name']:
+            trigger_name_found = True
+            runs_expanded = []
+            for run_range in trigger['runs']:
+              assert(run_range[0] <= run_range[1])
+              runs_expanded.extend(list(range(run_range[0], run_range[1] + 1)))
+            assert(not hasattr(self.runs, trigger_name))
+            setattr(self.runs, trigger_name, cms.vuint32(runs_expanded))
+            break
+      if not trigger_name_found:
+        for hlt in leptonFR_triggers[era][trigger_type[1:]]:
+          if not (hlt.trigger_type.value() == trigger_type and trigger_name == hlt.path.value()):
+            continue
+          trigger_name_found = True
+          runs_expanded = []
+          for run_range in hlt.run_ranges:
+            run_range_split = run_range.split('-')
+            assert(len(run_range_split) == 2)
+            run_range_min = int(run_range_split[0])
+            run_range_max = int(run_range_split[1])
+            assert(run_range_min <= run_range_max)
+            runs_expanded.extend(list(range(run_range_min, run_range_max + 1)))
+          assert(not hasattr(self.runs, trigger_name))
+          setattr(self.runs, trigger_name, cms.vuint32(runs_expanded))
+      assert(trigger_name_found)
