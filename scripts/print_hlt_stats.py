@@ -23,6 +23,12 @@ HLT_DICT = """
             ],
           },
 """
+HLT_VSTRING = """
+        run_ranges = cms.vstring({% for run in runs %}
+          '{{run[0][0]}}-{{run[0][1]}}', # {{run[1]}}, {{run[2]}}/pb
+        {%- endfor %}
+        ),
+"""
 INT_LUMIS = {
   2016 : 35.9,
   2017 : 41.5,
@@ -115,6 +121,10 @@ if __name__ == '__main__':
   parser.add_argument('-i', '--input', dest = 'input', metavar = 'file', required = True, type = str, default = '',
     help = 'R|Output of brilcalc'
   )
+  parser.add_argument(
+    '-v', '--vstring', dest = 'vstring', action = 'store_true', default = False,
+    help = 'R|Fill vstring template',
+  )
   args = parser.parse_args()
   results = read_results(args.input)
 
@@ -125,7 +135,7 @@ if __name__ == '__main__':
   run_ranges = get_run_ranges(runs)
   era = get_era(runs)
   run_assoc = get_run_assoc(results, run_ranges)
-  dict_str = jinja2.Template(HLT_DICT).render(
+  dict_str = jinja2.Template(HLT_VSTRING if args.vstring else HLT_DICT).render(
     hlt_path    = results[0]['title'],
     int_lumi    = round(recorded_sum, 3),
     unprescaled = INT_LUMIS[era] <= recorded_sum,
