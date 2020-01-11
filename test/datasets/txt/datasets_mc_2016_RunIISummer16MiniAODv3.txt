@@ -1,4 +1,4 @@
-# file generated at 2019-10-12 22:55:31 with the following command:
+# file generated at 2020-01-11 14:12:04 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -83,9 +83,10 @@
 /WZG_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                             1 Rares      WZG                                                    0.04345     # ?; measured on 2018 sample(s) with GenXsecAnalyzer
 
 # W/Z+gamma
-/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM                               1 Rares      WGToLNuG_ext1                                        464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
-/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                               1 Rares      WGToLNuG_ext2                                        464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
-/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext3-v1/MINIAODSIM                               1 Rares      WGToLNuG_ext3                                        464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM                               0 Rares      WGToLNuG_ext1                                        464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                               0 Rares      WGToLNuG_ext2                                        464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext3-v1/MINIAODSIM                               0 Rares      WGToLNuG_ext3                                        464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                             1 Rares      WGToLNuG_01J                                         191.6         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
 /ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM                                1 Rares      ZGTo2LG_ext1                                         123.9         # NLO; measured on 2016v3 sample(s) with GenXsecAnalyzer; min pt(l) = 0; min mll(SS) = 30; max 5f jets?
 
 # t/ttbar+gamma

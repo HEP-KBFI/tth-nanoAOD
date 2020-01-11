@@ -2419,7 +2419,7 @@
       },
       {
         "name": "WGToLNuG",
-        "enabled": 1,
+        "enabled": 0,
         "use_case": "irreducible background",
         "process": "W/Z+gamma",
         "datasets": {
@@ -2465,6 +2465,41 @@
         },
         "xs": {
           "value": 464.8,
+          "order": "NLO",
+          "references": [],
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"
+        }
+      },
+      {
+        "name": "WGToLNuG_01J",
+        "enabled": 1,
+        "use_case": "irreducible background",
+        "process": "W/Z+gamma",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/WGToLNuG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/WGToLNuG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/WGToLNuG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WGToLNuG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 191.6,
           "order": "NLO",
           "references": [],
           "comment": "measured on 2018 sample(s) with GenXsecAnalyzer"

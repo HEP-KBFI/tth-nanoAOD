@@ -1,4 +1,4 @@
-# file generated at 2019-10-12 22:55:31 with the following command:
+# file generated at 2020-01-11 14:12:04 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -91,7 +91,8 @@
 /WZG_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                                 1 Rares      WZG                                                    0.04345     # ?; measured on 2018 sample(s) with GenXsecAnalyzer
 
 # W/Z+gamma
-/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                         1 Rares      WGToLNuG                                             464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                         0 Rares      WGToLNuG                                             464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM                                 1 Rares      WGToLNuG_01J                                         191.6         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
 /ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM                                  1 Rares      ZGTo2LG_01J                                           55.59        # ?; measured on 2018 sample(s) with GenXsecAnalyzer; min pt(l) = 15; min mll(SS) = 0; max 4f jets?
 
 # t/ttbar+gamma
