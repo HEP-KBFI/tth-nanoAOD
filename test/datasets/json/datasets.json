@@ -1106,13 +1106,13 @@
           ]
         },
         "xs": {
-          "value": 0.2072,
+          "value": 0.2730,
           "order": "NLO",
           "references": [
             "https://arxiv.org/pdf/1610.07922.pdf (table 40)",
             "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "assuming that BR(ttZ, m(ll) < 1 GeV) = 0"
+          "comment": "sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z -> ll/vv @ mll > 10 GeV) = s(ttZ) * (br(z->ll) * SF + br(z->vv))"
         }
       },
       {
@@ -1154,7 +1154,7 @@
             "https://arxiv.org/pdf/1610.07922.pdf (table 40)",
             "http://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "assuming that BR(ttZ, m(ll) < 1 GeV) = 0"
+          "comment": "requires an update"
         }
       },
       {
@@ -1196,12 +1196,12 @@
           ]
         },
         "xs": {
-          "value": 0.8393,
+          "value": 0.8596,
           "order": "NLO QCD+EW",
           "references": [
             "https://arxiv.org/pdf/1610.07922.pdf (table 40)"
           ],
-          "comment": ""
+          "comment": "sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z) = s(ttZ) * (br(z->ll) * SF + (1 - br(z->ll)))"
         }
       }
     ]

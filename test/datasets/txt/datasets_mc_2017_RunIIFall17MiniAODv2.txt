@@ -1,4 +1,4 @@
-# file generated at 2020-01-11 14:12:04 with the following command:
+# file generated at 2020-01-16 16:06:35 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -40,11 +40,11 @@
 /VBFHToGG_M125_13TeV_amcatnlo_pythia8_PSWeights/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM                                1 qqH        VBFHToGG_M125_PSWeights_ext1                           0.0085851   # ? [1][2][4]; s(vbf h) * br(h -> gamma gamma) = 3.782 * 0.00227
 
 # ttZ
-/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                    1 TTZ        TTZToLL_M10                                            0.2072      # NLO [4][5]; assuming that BR(ttZ, m(ll) < 1 GeV) = 0
-/TTZToLLNuNu_M-10_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                          1 TTZ        TTZToLL_M10_PSweights                                  0.2072      # NLO [4][5]; assuming that BR(ttZ, m(ll) < 1 GeV) = 0
-/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                     1 TTZ        TTZToLL_M-1to10                                        0.04537     # LO ? [4][5]; assuming that BR(ttZ, m(ll) < 1 GeV) = 0
-/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                          0 TTZ        TTZJets_LO                                             0.8393      # NLO QCD+EW [5]
-/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v3/MINIAODSIM                                     0 TTZ        TTZJets_LO_ext1                                        0.8393      # NLO QCD+EW [5]
+/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                    1 TTZ        TTZToLL_M10                                            0.273       # NLO [4][5]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z -> ll/vv @ mll > 10 GeV) = s(ttZ) * (br(z->ll) * SF + br(z->vv))
+/TTZToLLNuNu_M-10_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                          1 TTZ        TTZToLL_M10_PSweights                                  0.273       # NLO [4][5]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z -> ll/vv @ mll > 10 GeV) = s(ttZ) * (br(z->ll) * SF + br(z->vv))
+/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                     1 TTZ        TTZToLL_M-1to10                                        0.04537     # LO ? [4][5]; requires an update
+/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                          0 TTZ        TTZJets_LO                                             0.8596      # NLO QCD+EW [5]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z) = s(ttZ) * (br(z->ll) * SF + (1 - br(z->ll)))
+/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v3/MINIAODSIM                                     0 TTZ        TTZJets_LO_ext1                                        0.8596      # NLO QCD+EW [5]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z) = s(ttZ) * (br(z->ll) * SF + (1 - br(z->ll)))
 
 # ttW
 /TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                            1 TTW        TTWJetsToLNu                                           0.196       # NLO [5]; s(ttW) * br(w -> lnu) = 0.6008 * (1 - 0.674) = 0.1960

@@ -1,4 +1,4 @@
-# file generated at 2020-01-11 14:12:04 with the following command:
+# file generated at 2020-01-16 16:06:35 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -7,7 +7,7 @@
 /ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttH_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER      0 ttH ttHToNonbb_M125_powheg_fastsim_p3   0.2118 /store/user/matze/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttH_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9       # NLO [1][2]; s(ttH) * (1 - br(H -> bb)) = 0.5071 * (1 - 0.5824)
 
 # ttZ
-/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/matze-faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                  1 TTZ TTZToLL_M10_fastsim                 0.2072 /store/user/matze/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a                   # NLO [3][4]; assuming that BR(ttZ, m(ll) < 1 GeV) = 0
+/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/matze-faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                  1 TTZ TTZToLL_M10_fastsim                 0.273  /store/user/matze/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/faster_v9_ttZ_maod_54aa74f75231422e9f4d3766cb92a64a                   # NLO [3][4]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z -> ll/vv @ mll > 10 GeV) = s(ttZ) * (br(z->ll) * SF + br(z->vv))
 
 # ttW
 /TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/matze-faster_v9_ttW_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER          1 TTW TTWJetsToLNu_fastsim                0.196  /store/user/matze/TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/faster_v9_ttW_maod_54aa74f75231422e9f4d3766cb92a64a           # NLO [3]; s(ttW) * br(w -> lnu) = 0.6008 * (1 - 0.674) = 0.1960
