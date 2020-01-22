@@ -1,4 +1,4 @@
-# file generated at 2020-01-16 16:06:35 with the following command:
+# file generated at 2020-01-22 13:36:07 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -38,10 +38,10 @@
 /VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM                                           1 qqH        VBFHToGG_M125_ext2                                     0.0085851   # ? [1][2][5]; s(vbf h) * br(h -> gamma gamma) = 3.782 * 0.00227
 
 # ttZ
-/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                           1 TTZ        TTZToLL_M10_ext2                                       0.273       # NLO [5][6]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z -> ll/vv @ mll > 10 GeV) = s(ttZ) * (br(z->ll) * SF + br(z->vv))
-/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext3-v1/MINIAODSIM                           1 TTZ        TTZToLL_M10_ext3                                       0.273       # NLO [5][6]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z -> ll/vv @ mll > 10 GeV) = s(ttZ) * (br(z->ll) * SF + br(z->vv))
-/TTZToLL_M-1to10_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                          1 TTZ        TTZToLL_M-1to10                                        0.04537     # LO ? [5][6]; requires an update
-/ttZJets_13TeV_madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                                   0 TTZ        TTZJets_LO                                             0.8596      # NLO QCD+EW [6]; sample actually tty*/Z, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.24 -> s(tty*/Z) = s(ttZ) * (br(z->ll) * SF + (1 - br(z->ll)))
+/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                           1 TTZ        TTZToLL_M10_ext2                                       0.2814      # NLO [5][6]; sample actually tty*/Z
+/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext3-v1/MINIAODSIM                           1 TTZ        TTZToLL_M10_ext3                                       0.2814      # NLO [5][6]; sample actually tty*/Z
+/TTZToLL_M-1to10_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                          1 TTZ        TTZToLL_M-1to10                                        0.0822      # LO ? [5][6]; sample actually tty*/Z
+/ttZJets_13TeV_madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM                                                   0 TTZ        TTZJets_LO                                             0.8854      # NLO QCD+EW [6]; sample actually tty*/Z mll > 10 GeV, s(ttZ) = 0.8393, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.544 -> s(tty*/Z) = s(ttZ) * (br(z->ll) * SF + (1 - br(z->ll)))
 
 # ttW
 /TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM                   1 TTW        TTWJetsToLNu_ext2                                      0.196       # NLO [6]; s(ttW) * br(w -> lnu) = 0.6008 * (1 - 0.674) = 0.1960
