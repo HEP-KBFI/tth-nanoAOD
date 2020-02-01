@@ -128,6 +128,6 @@
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
 # [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043
 
-# file generated at 2019-12-19 18:38:54 with the following command:
+# file generated at 2020-02-01 18:56:27 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 

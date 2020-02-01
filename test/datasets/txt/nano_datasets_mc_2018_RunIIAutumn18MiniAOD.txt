@@ -1,4 +1,4 @@
-# file generated at 2019-10-12 22:55:31 with the following command:
+# file generated at 2020-01-22 13:36:07 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -33,9 +33,9 @@
 /VBFHToGG_M125_13TeV_amcatnlo_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                         1 qqH        VBFHToGG_M125                                 0.0085851   # ? [1][2][4]; s(vbf h) * br(h -> gamma gamma) = 3.782 * 0.00227
 
 # ttZ
-/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                         1 TTZ        TTZToLL_M10_ext1                              0.2072      # NLO [4][5]; assuming that BR(ttZ, m(ll) < 1 GeV) = 0
-/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                               1 TTZ        TTZToLL_M-1to10                               0.04537     # LO ? [4][5]; assuming that BR(ttZ, m(ll) < 1 GeV) = 0
-/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                               0 TTZ        TTZJets_LO_ext1                               0.8393      # NLO QCD+EW [5]
+/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                         1 TTZ        TTZToLL_M10_ext1                              0.2814      # NLO [4][5]; sample actually tty*/Z
+/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                               1 TTZ        TTZToLL_M-1to10                               0.0822      # LO ? [4][5]; sample actually tty*/Z
+/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                               0 TTZ        TTZJets_LO_ext1                               0.8854      # NLO QCD+EW [5]; sample actually tty*/Z mll > 10 GeV, s(ttZ) = 0.8393, SF (tty*/Z / ttZ @ mll > 10 GeV) = 1.544 -> s(tty*/Z) = s(ttZ) * (br(z->ll) * SF + (1 - br(z->ll)))
 
 # ttW
 /TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                 1 TTW        TTWJetsToLNu_ext1                             0.196       # NLO [5]; s(ttW) * br(w -> lnu) = 0.6008 * (1 - 0.674) = 0.1960
@@ -73,7 +73,8 @@
 /WZG_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                           1 Rares      WZG                                           0.04345     # ?; measured on 2018 sample(s) with GenXsecAnalyzer
 
 # W/Z+gamma
-/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                   1 Rares      WGToLNuG                                    464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM                                   0 Rares      WGToLNuG                                    464.8         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
+/WGToLNuG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                      1 Rares      WGToLNuG_01J                                191.6         # NLO; measured on 2018 sample(s) with GenXsecAnalyzer
 /ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM                       1 Rares      ZGTo2LG_01J_ext1                             55.59        # ?; measured on 2018 sample(s) with GenXsecAnalyzer; min pt(l) = 15; min mll(SS) = 0; max 4f jets?
 
 # t/ttbar+gamma
@@ -115,6 +116,7 @@
 /DYJetsToLL_M-50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM       0 EWK        DYJetsToLL_M50_HT70to100_PSweights          167.33        # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 146.70 x k-factor 1.1406
 /DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM      0 EWK        DYJetsToLL_M50_HT100to200_PSweights         183.53        # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 160.90 x k-factor 1.1406
 /DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM      0 EWK        DYJetsToLL_M50_HT200to400_PSweights          55.411       # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 48.58 x k-factor 1.1406
+/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext4-v1/NANOAODSIM 0 EWK        DYJetsToLL_M50_HT400to600_PSweights           7.9592      # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 6.978 x k-factor 1.1406
 /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext2-v1/NANOAODSIM 0 EWK        DYJetsToLL_M50_HT400to600_PSweights_ext2      7.9592      # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 6.978 x k-factor 1.1406
 /DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM      0 EWK        DYJetsToLL_M50_HT600to800_PSweights           2.0041      # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 1.757 x k-factor 1.1406
 /DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM     0 EWK        DYJetsToLL_M50_HT800to1200_PSweights          0.92367     # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 0.8098 x k-factor 1.1406
@@ -212,11 +214,6 @@
 # [16] https://arxiv.org/pdf/1408.5243.pdf
 # [17] https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf
 
-# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
-# /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v7/MINIAODSIM
-#   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM
-#   /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3/MINIAODSIM -> /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext2-v1/NANOAODSIM
-
-# file generated at 2019-12-19 18:38:54 with the following command:
+# file generated at 2020-02-01 18:56:27 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 

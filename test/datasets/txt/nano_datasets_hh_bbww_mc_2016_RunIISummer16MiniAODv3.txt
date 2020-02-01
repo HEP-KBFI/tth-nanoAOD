@@ -155,6 +155,7 @@
 /GluGluToHHTo2B2Tau_node_9_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                              1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_9_hh_2b2t      0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToHHTo2B2Tau_node_10_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                             1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_10_hh_2b2t     0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToHHTo2B2Tau_node_11_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                             1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_11_hh_2b2t     0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
+/GluGluToHHTo2B2Tau_node_12_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                             1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_12_hh_2b2t     0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 /GluGluToHHTo2B2Tau_node_13_13TeV-madgraph/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM                             1 signal_ggf_nonresonant_hh_bbtt         signal_ggf_nonresonant_node_13_hh_2b2t     0.073056 #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272
 
 # References:
@@ -164,8 +165,7 @@
 # Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
 # /GluGluToHHTo2B2VTo2L2Nu_node_2_13TeV-madgraph-v2/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v3/MINIAODSIM
 # /GluGluToRadionToHHTo2B2Tau_M-650_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
-# /GluGluToHHTo2B2Tau_node_12_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM
 
-# file generated at 2019-12-19 18:38:54 with the following command:
+# file generated at 2020-02-01 18:56:27 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 

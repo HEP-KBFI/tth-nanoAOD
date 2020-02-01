@@ -112,6 +112,7 @@
 /GluGluToBulkGravitonToHHTo4V_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_280_hh_wwww         signal_ggf_spin2_280_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
 /GluGluToBulkGravitonToHHTo4V_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_300_hh_wwww         signal_ggf_spin2_300_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
 /GluGluToBulkGravitonToHHTo4V_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_320_hh_wwww         signal_ggf_spin2_320_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
+/GluGluToBulkGravitonToHHTo4V_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_350_hh_wwww         signal_ggf_spin2_350_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
 /GluGluToBulkGravitonToHHTo4V_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_400_hh_wwww         signal_ggf_spin2_400_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
 /GluGluToBulkGravitonToHHTo4V_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_450_hh_wwww         signal_ggf_spin2_450_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
 /GluGluToBulkGravitonToHHTo4V_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM      1 signal_ggf_spin2_500_hh_wwww         signal_ggf_spin2_500_hh_4v             0.057547 #  [1][2]; normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989
@@ -168,9 +169,6 @@
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
 # [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043
 
-# Unable to find matching NANOAOD datasets for the following MINIAOD datasets:
-# /GluGluToBulkGravitonToHHTo4V_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM
-
-# file generated at 2019-12-19 18:38:54 with the following command:
+# file generated at 2020-02-01 18:56:27 with the following command:
 # find_nano_datasets.py -i test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_mc_2018_RunIIAutumn18MiniAOD.txt test/datasets/txt/datasets_hh_multilepton_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_mc_2017_RunIIFall17MiniAODv2.txt test/datasets/txt/datasets_hh_multilepton_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt test/datasets/txt/datasets_mc_2016_RunIISummer16MiniAODv3.txt -v
 
