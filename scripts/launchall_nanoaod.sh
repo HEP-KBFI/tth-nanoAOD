@@ -412,17 +412,7 @@ print('tth-nanoAOD repo: $NANOAOD_GIT_STATUS')\\n\
 print('GT: $COND')\\n\
 print('era: $ERA_ARGS')\\n"
 
-  if [ -n "$2" ]; then
-    echo "Generating cfg file for chunk #$2 with split size $NOF_EVENTS";
-    CHUNK_IDX_CUR=$2;
-    NOF_SKIP=$(( (CHUNK_IDX_CUR-1) * NOF_EVENTS ));
-    CHUNK_COMMANDS="process.source.skipEvents=cms.untracked.uint32($NOF_SKIP)\\n";
-    export CUSTOMISE_COMMANDS="${CUSTOMISE_COMMANDS}${CHUNK_COMMANDS}";
-    export NOF_CFG_EVENTS=$NOF_EVENTS;
-  else
-    export NOF_CFG_EVENTS=$NOF_CMSDRIVER_EVENTS;
-  fi
-
+  export NOF_CFG_EVENTS=$NOF_CMSDRIVER_EVENTS;
   export CMSDRIVER_OPTS="nanoAOD --step=NANO --$JOB_TYPE --era=$ERA_ARGS --conditions=$COND --no_exec --fileout=tree.root \
                          --number=$NOF_CFG_EVENTS --eventcontent $TIER --datatier $TIER --nThreads=$NTHREADS \
                          --python_filename=$NANOCFG"
@@ -444,9 +434,6 @@ get_cfg_name() {
   CFG_SUFFIX=""
   if [ "$1" != "none" ]; then
     CFG_SUFFIX="${CFG_SUFFIX}HLTfilter_${1}_";
-  fi
-  if [ "$2" != "" ]; then
-    CFG_SUFFIX="${CFG_SUFFIX}chunk_${NOF_EVENTS}_part_${2}_";
   fi
   echo "$BASE_DIR/test/cfgs/nano_${CFG_PREFIX}_${DATASET_ERA}_${CFG_SUFFIX}cfg.py";
 }
@@ -475,23 +462,6 @@ for HLT_FILTER_OPT in "${HLT_FILTER_OPTS[@]}"; do
   generate_cfgs $HLT_FILTER_OPT;
   check_if_exists "$NANOCFG"
 done
-
-if (( MAX_NOF_JOBS > 1 )); then
-  for HLT_FILTER_OPT in $HLT_FILTER_OPTS; do
-    for CHUNK_IDX in $(seq 1 $MAX_NOF_JOBS); do
-      export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT $CHUNK_IDX);
-
-      read -p "Sure you want to generate config file: $NANOCFG? [y/N]" -n 1 -r
-      echo
-      if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
-      fi
-
-      generate_cfgs $HLT_FILTER_OPT $CHUNK_IDX;
-      check_if_exists "$NANOCFG";
-    done
-  done
-fi
 
 if [ $GENERATE_CFGS_ONLY = true ]; then
   exit 0;
@@ -544,7 +514,6 @@ while read LINE; do
   export DATASET=$(echo $LINE | awk '{print $1}');
   unset DATASET_CATEGORY;
   unset NANOCFG;
-  unset CHUNK_VER;
   unset FORCE_FILEBASED;
   unset HLT_FILTER_OPT;
   export IS_PRIVATE=0;
@@ -625,14 +594,11 @@ while read LINE; do
   if [ ${DATASET_ARR["$DATASET"]} ]; then
     NOF_CHUNKS=${DATASET_ARR["$DATASET"]};
     if (( NOF_CHUNKS > 1 )); then
-      for CHUNK_IDX in $(seq 1 $NOF_CHUNKS); do
-        export FORCE_FILEBASED=1;
-        export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT $CHUNK_IDX);
-        export CHUNK_VER="CHUNK${CHUNK_IDX}"
-        echo "Using config file: $NANOCFG";
+      export FORCE_FILEBASED=1;
+      export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT);
+      echo "Using config file: $NANOCFG";
 
-        crab submit $DRYRUN --config="$CRAB_CFG" --wait
-      done
+      crab submit $DRYRUN --config="$CRAB_CFG" --wait
     else
       export FORCE_FILEBASED=1;
       export NANOCFG=$(get_cfg_name $HLT_FILTER_OPT);
