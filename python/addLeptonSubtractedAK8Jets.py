@@ -3,6 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
 
 def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = False):
 
@@ -10,50 +11,8 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     suffix = "Fakeable" if useFakeable else "Loose"
 
     #----------------------------------------------------------------------------
-    # produce collections of electrons and muons passing loose or fakeable lepton selection of ttH multilepton+tau analysis (HIG-18-019)
-    electronCollectionTTH_str = 'electronCollectionTTH%s' % suffix
-    setattr(process, electronCollectionTTH_str,
-        cms.EDProducer("PATElectronSelector%s" % suffix,
-            src = cms.InputTag("linkedObjects", "electrons"),
-            src_mvaTTH = cms.InputTag("electronMVATTH"),
-            era = cms.string(era),
-            debug = cms.bool(False)
-        )
-    )
-    muonCollectionTTH_str = 'muonCollectionTTH%s' % suffix
-    setattr(process, muonCollectionTTH_str,
-        cms.EDProducer("PATMuonSelector%s" % suffix,
-            src = cms.InputTag("linkedObjects", "muons"),
-            src_mvaTTH = cms.InputTag("muonMVATTH"),
-            era = cms.string(era),
-            debug = cms.bool(False)
-        )
-    )
-    #----------------------------------------------------------------------------
-
-    #----------------------------------------------------------------------------
     # produce collection of packedPFCandidates not associated to loose or fakeable electrons or muons
-    leptonLessPFProducer_str = 'leptonLessPFProducer%s' % suffix
-    setattr(process, leptonLessPFProducer_str,
-        cms.EDProducer('LeptonLessPFProducer',
-            src_pfCands = cms.InputTag("packedPFCandidates"),
-            src_electrons = cms.InputTag(electronCollectionTTH_str),
-            src_muons = cms.InputTag(muonCollectionTTH_str),
-            debug = cms.bool(False)
-       )
-    )
-
-    # run PUPPI algorithm (arXiv:1407.6013) on cleaned packedPFCandidates collection
-    # cf. https://twiki.cern.ch/twiki/bin/view/CMS/JetToolbox#New_PF_Collection
-    from CommonTools.PileupAlgos.Puppi_cff import puppi
-    leptonLesspuppi_str = 'leptonLesspuppi%s' % suffix
-    setattr(process, leptonLesspuppi_str,
-        puppi.clone(
-            candName = cms.InputTag(leptonLessPFProducer_str),
-            vertexName = cms.InputTag("offlineSlimmedPrimaryVertices"),
-            useExistingWeights = cms.bool(True)
-        )
-    )
+    leptonSubtractedPFCandsSequence = addLeptonSubtractedPFCands(process, era, useFakeable)
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -112,7 +71,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
-    # add PF jet ID flags and jet energy corrections for AK8 pat::Jet collection,
+    # add PF jet ID flags and jet energy corrections for AK4 pat::Jet collection,
     # following what is done for lepton-subtracted AK8 pat::Jets in https://github.com/cms-sw/cmssw/blob/master/PhysicsTools/NanoAOD/python/jets_cff.py
     looseJetIdAK8LS_str = 'looseJetIdAK8LS%s' % suffix
     setattr(process, looseJetIdAK8LS_str,
@@ -278,8 +237,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     run2_miniAOD_80XLegacy.toModify(subJetAK8LSTable.variables, btagCMVA = None, btagDeepB = None)
 
     leptonSubtractedJetSequence = cms.Sequence(
-        getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
-        getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLesspuppi_str) + \
+        leptonSubtractedPFCandsSequence + \
         getattr(process, jetSequenceAK8LS_str) + getattr(process, tightJetIdAK8LS_str) + \
         getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
         getattr(process, jetsAK8LSWithUserData_str) + getattr(process, subStructureSubJetAK8_str) + \
@@ -302,7 +260,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     _leptonSubtractedJetSequence_94X2016.replace(getattr(process, tightJetIdLepVetoAK8LS_str), getattr(process, looseJetIdAK8LS_str))
     run2_nanoAOD_94X2016.toReplaceWith(leptonSubtractedJetSequence, _leptonSubtractedJetSequence_94X2016)
 
-    leptonSubtractedJetSequence_str = 'leptonSubtractedJetSequence%s' % suffix
+    leptonSubtractedJetSequence_str = 'leptonSubtractedJetSequenceAK8LS%s' % suffix
     setattr(process, leptonSubtractedJetSequence_str, leptonSubtractedJetSequence)
     process.nanoSequence += getattr(process, leptonSubtractedJetSequence_str)
     process.nanoSequenceMC += getattr(process, leptonSubtractedJetSequence_str)

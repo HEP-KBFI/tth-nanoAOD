@@ -3,6 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from tthAnalysis.NanoAOD.taus_updatedMVAIds_cff import addDeepTau2017v2
 from tthAnalysis.NanoAOD.addJetSubstructureObservables import addJetSubstructureObservables
 from tthAnalysis.NanoAOD.addLeptonSubtractedAK8Jets import addLeptonSubtractedAK8Jets
+from tthAnalysis.NanoAOD.addLeptonSubtractedAK4Jets import addLeptonSubtractedAK4Jets
 from tthAnalysis.NanoAOD.triggers import Triggers
 
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar
@@ -331,6 +332,7 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
 
   addJetSubstructureObservables(process)
   addLeptonSubtractedAK8Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
+  addLeptonSubtractedAK4Jets(process, runOnMC = is_mc, era = year, useFakeable = False)
   addDeepTau2017v2(process)
   recomputeQGL(process)
   addLepMVA(process)
