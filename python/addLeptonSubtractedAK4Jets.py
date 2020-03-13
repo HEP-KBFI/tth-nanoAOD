@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
+from PhysicsTools.NanoAOD.common_cff import Var, ExtVar, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
@@ -12,7 +12,7 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
     #----------------------------------------------------------------------------
     # produce collection of packedPFCandidates not associated to loose or fakeable electrons or muons
-    leptonSubtractedPFCandsSequence = addLeptonSubtractedPFCands(process, era, useFakeable)
+    ( leptonSubtractedPFCandsSequence, leptonLesspuppi_str ) = addLeptonSubtractedPFCands(process, era, useFakeable)
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -98,10 +98,10 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         )
     )
 
-    jetsAK4LSWithUserData_str = 'jetsAK8LSWithUserData%s' % suffix
+    jetsAK4LSWithUserData_str = 'jetsAK4LSWithUserData%s' % suffix
     setattr(process, jetsAK4LSWithUserData_str,
         process.updatedJetsWithUserData.clone(
-            src = cms.InputTag(jetCollectionAK8LS_str),
+            src = cms.InputTag(jetCollectionAK4LS_str),
             userFloats = cms.PSet(
                 leadTrackPt = cms.InputTag("%s:leadTrackPt" % bJetVars_str),
                 leptonPtRel = cms.InputTag("%s:leptonPtRel" % bJetVars_str),
@@ -157,11 +157,10 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
     leptonSubtractedJetSequence = cms.Sequence(
         leptonSubtractedPFCandsSequence + \
-        getattr(process, jetSequenceAK8LS_str) + getattr(process, tightJetIdAK8LS_str) + \
-        getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
-        getattr(process, bJetVars_str) + getattr(process, qgtagger_str) + getattr(process, jetsAK8LSWithUserData_str) + getattr(process, subStructureSubJetAK8_str) + \
-        getattr(process, subJetsAK8LSWithUserData_str) + getattr(process, fatJetAK8LSTable_str) + \
-        getattr(process, subJetAK8LSTable_str)
+        getattr(process, jetSequenceAK4LS_str) + getattr(process, tightJetIdAK4LS_str) + \
+        getattr(process, tightJetIdLepVetoAK4LS_str) + \
+        getattr(process, bJetVars_str) + getattr(process, qgtagger_str) + getattr(process, jetsAK4LSWithUserData_str) + \
+        getattr(process, jetAK4LSTable_str)
     )
     #----------------------------------------------------------------------------
 

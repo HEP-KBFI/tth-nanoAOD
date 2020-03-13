@@ -68,4 +68,4 @@ def addLeptonSubtractedPFCands(process, era, useFakeable):
                 getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLesspuppi_str) 
             )
         )
-    return getattr(process, leptonSubtractedPFCandsSequence_str)
+    return ( getattr(process, leptonSubtractedPFCandsSequence_str), leptonLesspuppi_str )

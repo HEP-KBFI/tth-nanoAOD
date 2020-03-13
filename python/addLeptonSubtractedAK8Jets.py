@@ -12,7 +12,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
 
     #----------------------------------------------------------------------------
     # produce collection of packedPFCandidates not associated to loose or fakeable electrons or muons
-    leptonSubtractedPFCandsSequence = addLeptonSubtractedPFCands(process, era, useFakeable)
+    ( leptonSubtractedPFCandsSequence, leptonLesspuppi_str ) = addLeptonSubtractedPFCands(process, era, useFakeable)
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
