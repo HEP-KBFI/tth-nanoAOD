@@ -1,0 +1,12 @@
+# file generated at 2020-03-14 19:42:17 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_ttbar.json
+
+TTTo2L2Nu_hdampDOWN        TTTo2L2Nu_hdampDOWN_ext1
+TTTo2L2Nu_hdampUP          TTTo2L2Nu_hdampUP_ext1
+TTTo2L2Nu_ueDown           TTTo2L2Nu_ueDown_ext1
+TTTo2L2Nu_ueUp             TTTo2L2Nu_ueUp_ext1
+TTTo2L2Nu_erdON            TTTo2L2Nu_erdON_ext1
+TTTo2L2Nu_mtop169p5        TTTo2L2Nu_mtop169p5_ext1
+TTToSemiLeptonic_mtop169p5 TTToSemiLeptonic_mtop169p5_ext1
+TTTo2L2Nu_mtop175p5        TTTo2L2Nu_mtop175p5_ext1
+TTToSemiLeptonic_mtop175p5 TTToSemiLeptonic_mtop175p5_ext1

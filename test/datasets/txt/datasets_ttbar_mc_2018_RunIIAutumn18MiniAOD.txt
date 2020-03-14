@@ -1,0 +1,97 @@
+# file generated at 2020-03-14 19:42:17 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_ttbar.json
+
+# ttbar, ME-PS matching scale (hdamp) down
+/TTTo2L2Nu_hdampDOWN_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_hdampDown  TTTo2L2Nu_hdampDOWN              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_hdampDOWN_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM        0 TT_hdampDown  TTTo2L2Nu_hdampDOWN_ext1         88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_hdampDOWN_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_hdampDown  TTToSemiLeptonic_hdampDOWN      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_hdampDOWN_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_hdampDown  TTToHadronic_hdampDOWN          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, ME-PS matching scale (hdamp) up
+/TTTo2L2Nu_hdampUP_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM               0 TT_hdampUp    TTTo2L2Nu_hdampUP                88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_hdampUP_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM          0 TT_hdampUp    TTTo2L2Nu_hdampUP_ext1           88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_hdampUP_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM        0 TT_hdampUp    TTToSemiLeptonic_hdampUP        365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_hdampUP_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM            0 TT_hdampUp    TTToHadronic_hdampUP            377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, underlying event (tune) down
+/TTTo2L2Nu_TuneCP5down_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                   0 TT_ueDown     TTTo2L2Nu_ueDown                 88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_TuneCP5down_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM              0 TT_ueDown     TTTo2L2Nu_ueDown_ext1            88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_TuneCP5down_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM            0 TT_ueDown     TTToSemiLeptonic_ueDown         365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5down_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                0 TT_ueDown     TTToHadronic_ueDown             377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, underlying event (tune) up
+/TTTo2L2Nu_TuneCP5up_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                     0 TT_ueUp       TTTo2L2Nu_ueUp                   88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_TuneCP5up_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM                0 TT_ueUp       TTTo2L2Nu_ueUp_ext1              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_TuneCP5up_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM              0 TT_ueUp       TTToSemiLeptonic_ueUp           365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5up_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                  0 TT_ueUp       TTToHadronic_ueUp               377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, QCD-inspired color reconnection
+/TTTo2L2Nu_TuneCP5CR1_QCDbased_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM           0 TT_QCDbased   TTTo2L2Nu_QCDbased               88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_TuneCP5CR1_QCDbased_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM    0 TT_QCDbased   TTToSemiLeptonic_QCDbased       365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5CR1_QCDbased_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM        0 TT_QCDbased   TTToHadronic_QCDbased           377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, color reconnection with gluon move
+/TTTo2L2Nu_TuneCP5CR2_GluonMove_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_GluonMove  TTTo2L2Nu_GluonMove              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_TuneCP5CR2_GluonMove_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM   0 TT_GluonMove  TTToSemiLeptonic_GluonMove      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5CR2_GluonMove_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM       0 TT_GluonMove  TTToHadronic_GluonMove          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, MPI-based color reconnection with early resonance decays
+/TTTo2L2Nu_TuneCP5_erdON_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                 0 TT_erdON      TTTo2L2Nu_erdON                  88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_TuneCP5_erdON_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM            0 TT_erdON      TTTo2L2Nu_erdON_ext1             88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_TuneCP5_erdON_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_erdON      TTToSemiLeptonic_erdON          365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5_erdON_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM              0 TT_erdON      TTToHadronic_erdON              377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top mass = 166.5 GeV
+/TTTo2L2Nu_mtop166p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_mtop166p5  TTTo2L2Nu_mtop166p5              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_mtop166p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_mtop166p5  TTToSemiLeptonic_mtop166p5      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_mtop166p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_mtop166p5  TTToHadronic_mtop166p5          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top mass = 169.5 GeV
+/TTTo2L2Nu_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_mtop169p5  TTTo2L2Nu_mtop169p5              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM        0 TT_mtop169p5  TTTo2L2Nu_mtop169p5_ext1         88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_mtop169p5  TTToSemiLeptonic_mtop169p5      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToSemiLeptonic_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM 0 TT_mtop169p5  TTToSemiLeptonic_mtop169p5_ext1 365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_mtop169p5  TTToHadronic_mtop169p5          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top mass = 171.5 GeV
+/TTTo2L2Nu_mtop171p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_mtop171p5  TTTo2L2Nu_mtop171p5              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_mtop171p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_mtop171p5  TTToSemiLeptonic_mtop171p5      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_mtop171p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_mtop171p5  TTToHadronic_mtop171p5          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top mass = 173.5 GeV
+/TTTo2L2Nu_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_mtop173p5  TTTo2L2Nu_mtop173p5              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_mtop173p5  TTToSemiLeptonic_mtop173p5      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_mtop173p5  TTToHadronic_mtop173p5          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top mass = 175.5 GeV
+/TTTo2L2Nu_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_mtop175p5  TTTo2L2Nu_mtop175p5              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTTo2L2Nu_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM        0 TT_mtop175p5  TTTo2L2Nu_mtop175p5_ext1         88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_mtop175p5  TTToSemiLeptonic_mtop175p5      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToSemiLeptonic_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM 0 TT_mtop175p5  TTToSemiLeptonic_mtop175p5_ext1 365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_mtop175p5  TTToHadronic_mtop175p5          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top mass = 178.5 GeV
+/TTTo2L2Nu_mtop178p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_mtop178p5  TTTo2L2Nu_mtop178p5              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_mtop178p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_mtop178p5  TTToSemiLeptonic_mtop178p5      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_mtop178p5_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM          0 TT_mtop178p5  TTToHadronic_mtop178p5          377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+
+# ttbar, top decay width = 0.7 x SM (1.31 GeV)
+/TTTo2L2Nu_widthx0p7_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_widthx0p7  TTTo2L2Nu_widthx0p7              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_widthx0p7_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_widthx0p7  TTToSemiLeptonic_widthx0p7      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+
+# ttbar, top decay width = 0.85 x SM (1.31 GeV)
+/TTTo2L2Nu_widthx0p85_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM            0 TT_widthx0p85 TTTo2L2Nu_widthx0p85             88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_widthx0p85_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM     0 TT_widthx0p85 TTToSemiLeptonic_widthx0p85     365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+
+# ttbar, top decay width = 1.15 x SM (1.31 GeV)
+/TTTo2L2Nu_widthx1p15_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM            0 TT_widthx1p15 TTTo2L2Nu_widthx1p15             88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_widthx1p15_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM     0 TT_widthx1p15 TTToSemiLeptonic_widthx1p15     365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+
+# ttbar, top decay width = 1.3 x SM (1.31 GeV)
+/TTTo2L2Nu_widthx1p3_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM             0 TT_widthx1p3  TTTo2L2Nu_widthx1p3              88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_widthx1p3_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM      0 TT_widthx1p3  TTToSemiLeptonic_widthx1p3      365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+
+# References:
+# [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO
+# [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043
+# [3] https://cms-gen-dev.cern.ch/xsdb/?searchQuery=DAS=TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8
