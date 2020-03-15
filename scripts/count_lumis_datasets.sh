@@ -9,6 +9,9 @@ declare -a DATASET_FILES=(
   "test/datasets/txt/datasets_hh_bbww_mc_2016_RunIISummer16MiniAODv3.txt"
   "test/datasets/txt/datasets_hh_bbww_mc_2017_RunIIFall17MiniAODv2.txt"
   "test/datasets/txt/datasets_hh_bbww_mc_2018_RunIIAutumn18MiniAOD.txt"
+  "test/datasets/txt/datasets_ttbar_mc_2016_RunIISummer16MiniAODv3.txt"
+  "test/datasets/txt/datasets_ttbar_mc_2017_RunIIFall17MiniAODv2.txt"
+  "test/datasets/txt/datasets_ttbar_mc_2018_RunIIAutumn18MiniAOD.txt"
 )
 
 for DATASET_FILE in "${DATASET_FILES[@]}"; do
