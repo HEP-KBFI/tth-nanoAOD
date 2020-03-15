@@ -12,7 +12,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
 
     #----------------------------------------------------------------------------
     # produce collection of packedPFCandidates not associated to loose or fakeable electrons or muons
-    ( leptonSubtractedPFCandsSequence, leptonLesspuppi_str ) = addLeptonSubtractedPFCands(process, era, useFakeable)
+    ( leptonSubtractedPFCandsSequence, leptonLessPU_str ) = addLeptonSubtractedPFCands(process, era, useFakeable, 'puppi')
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -31,7 +31,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     jetToolbox(
         proc = process, jetType = 'ak8', jetSequence = jetSequenceAK8LS_str, outputFile = 'out', PUMethod = 'Puppi',
         JETCorrPayload = 'AK8PFPuppi', postFix = NoLep_str, JETCorrLevels = JETCorrLevels, miniAOD = True,
-        runOnMC = runOnMC, newPFCollection = True, nameNewPFCollection = leptonLesspuppi_str, addSoftDrop = True,
+        runOnMC = runOnMC, newPFCollection = True, nameNewPFCollection = leptonLessPU_str, addSoftDrop = True,
         addSoftDropSubjets = True, addNsub = True, subJETCorrPayload = 'AK4PFPuppi', subJETCorrLevels = JETCorrLevels,
         bTagDiscriminators = bTagDiscriminators
     )

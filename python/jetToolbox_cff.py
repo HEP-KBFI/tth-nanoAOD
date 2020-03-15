@@ -273,12 +273,12 @@ def jetToolbox( proc, jetType, jetSequence, outputFile,
 					proc.load('CommonTools.ParticleFlow.pfNoPileUpJME_cff')
 					srcForPFJets = 'pfNoPileUpJME'
 				
-			setattr( proc, jetalgo+'PFJetsCHS', 
+			setattr( proc, jetalgo+'PFJetsCHS'+postFix,
 					ak4PFJetsCHS.clone( src = cms.InputTag( srcForPFJets ), 
 						doAreaFastjet = True, 
 						rParam = jetSize, 
 						jetAlgorithm = algorithm ) ) 
-			jetSeq += getattr(proc, jetalgo+'PFJetsCHS' )
+			jetSeq += getattr(proc, jetalgo+'PFJetsCHS'+postFix )
 
 			if JETCorrPayload not in payloadList: JETCorrPayload = 'AK'+size+'PFchs'
 			if subJETCorrPayload not in payloadList: subJETCorrPayload = 'AK4PFchs'

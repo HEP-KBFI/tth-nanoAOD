@@ -12,7 +12,7 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
     #----------------------------------------------------------------------------
     # produce collection of packedPFCandidates not associated to loose or fakeable electrons or muons
-    ( leptonSubtractedPFCandsSequence, leptonLesspuppi_str ) = addLeptonSubtractedPFCands(process, era, useFakeable)
+    ( leptonSubtractedPFCandsSequence, leptonLessPU_str ) = addLeptonSubtractedPFCands(process, era, useFakeable, 'chs')
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -30,12 +30,26 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     jetSequenceAK4LS_str = 'jetSequenceAK4LS%s' % suffix
     NoLep_str = 'NoLep%s' % suffix
     jetToolbox(
-        proc = process, jetType = 'ak4', jetSequence = jetSequenceAK4LS_str, outputFile = 'out', PUMethod = 'Puppi',
-        JETCorrPayload = 'AK4PFPuppi', postFix = NoLep_str, JETCorrLevels = JETCorrLevels, miniAOD = True,
-        runOnMC = runOnMC, newPFCollection = True, nameNewPFCollection = leptonLesspuppi_str, 
+        proc = process, jetType = 'ak4', jetSequence = jetSequenceAK4LS_str, outputFile = 'out', PUMethod = 'CHS',
+        JETCorrPayload = 'AK4PFchs', postFix = NoLep_str, JETCorrLevels = JETCorrLevels, miniAOD = True,
+        runOnMC = runOnMC, newPFCollection = True, nameNewPFCollection = leptonLessPU_str,
         bTagDiscriminators = bTagDiscriminators
     )
-    jetCollectionAK4LS_str = 'packedPatJetsAK4PFPuppi%s' % NoLep_str
+
+    #TODO still not working:
+    # An exception of category 'Invalid Constituent' occurred while
+    #    [0] Processing  Event run: 1 lumi: 97 event: 162818 stream: 0
+    #    [1] Running path 'nanoAOD_step'
+    #    [2] Prefetching for module PatJetIDValueMapProducer/'tightJetIdAK4LSLoose'
+    #    [3] Prefetching for module PATJetProducer/'patJetsAK4PFCHSNoLepLoose'
+    #    [4] Prefetching for module DeepFlavourTFJetTagsProducer/'pfDeepFlavourJetTagsAK4PFCHSNoLepLoose'
+    #    [5] Calling method for module DeepFlavourTagInfoProducer/'pfDeepFlavourTagInfosAK4PFCHSNoLepLoose'
+    # Exception Message:
+    # PFJet constituent is not of PFCandidate type
+
+    #jetCollectionAK4LS_str = 'patJetsAK4PFCHS%s' % NoLep_str
+    jetCollectionAK4LS_str = 'selectedPatJetsAK4PFCHS%s' % NoLep_str
+
     #----------------------------------------------------------------------------
 
     #----------------------------------------------------------------------------
@@ -90,7 +104,6 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         )
     )
 
-    from RecoJets.JetProducers.QGTagger_cfi import QGTagger
     qgtagger_str = 'qgtaggerAK4LS%s' % suffix
     setattr(process, qgtagger_str,
         process.qgtagger.clone(

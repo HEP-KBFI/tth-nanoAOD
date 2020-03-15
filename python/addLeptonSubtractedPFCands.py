@@ -1,12 +1,9 @@
 import FWCore.ParameterSet.Config as cms
 
-from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
-from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
-from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
-
-def addLeptonSubtractedPFCands(process, era, useFakeable):
+def addLeptonSubtractedPFCands(process, era, useFakeable, puMethod):
 
     assert(era in [ "2016", "2017", "2018" ])
+    assert(puMethod in [ 'chs', 'puppi' ])
     suffix = "Fakeable" if useFakeable else "Loose"
 
     #----------------------------------------------------------------------------
@@ -46,26 +43,61 @@ def addLeptonSubtractedPFCands(process, era, useFakeable):
             )
         )
 
-    # run PUPPI algorithm (arXiv:1407.6013) on cleaned packedPFCandidates collection
-    # cf. https://twiki.cern.ch/twiki/bin/view/CMS/JetToolbox#New_PF_Collection
-    from CommonTools.PileupAlgos.Puppi_cff import puppi
-    leptonLesspuppi_str = 'leptonLesspuppi%s' % suffix
-    if not hasattr(process, leptonLesspuppi_str):
-        setattr(process, leptonLesspuppi_str,
-            puppi.clone(
-                candName = cms.InputTag(leptonLessPFProducer_str),
-                vertexName = cms.InputTag("offlineSlimmedPrimaryVertices"),
-                useExistingWeights = cms.bool(True)
+    leptonLessPU_str = 'leptonLess%s%s' % (puMethod, suffix)
+    if puMethod == 'puppi':
+        # run PUPPI algorithm (arXiv:1407.6013) on cleaned packedPFCandidates collection
+        # cf. https://twiki.cern.ch/twiki/bin/view/CMS/JetToolbox#New_PF_Collection
+        from CommonTools.PileupAlgos.Puppi_cff import puppi
+        if not hasattr(process, leptonLessPU_str):
+            setattr(process, leptonLessPU_str,
+                puppi.clone(
+                    candName = cms.InputTag(leptonLessPFProducer_str),
+                    vertexName = cms.InputTag("offlineSlimmedPrimaryVertices"),
+                    useExistingWeights = cms.bool(True)
+                )
+            )
+    elif puMethod == 'chs':
+        leptonLessCands_tmp1 = '%stmp1' % leptonLessPU_str
+        leptonLessCands_tmp2 = '%stmp2' % leptonLessPU_str
+        setattr(process, leptonLessCands_tmp1,
+            cms.EDFilter("CandPtrSelector",
+                src = cms.InputTag("packedPFCandidates"),
+                cut = cms.string("fromPV"),
             )
         )
+        setattr(process, leptonLessCands_tmp2,
+            cms.EDProducer("CandPtrProjector",
+                src = cms.InputTag(leptonLessCands_tmp1),
+                veto = cms.InputTag(muonCollectionTTH_str),
+            )
+        )
+        setattr(process, leptonLessPU_str,
+            cms.EDProducer("CandPtrProjector",
+                src = cms.InputTag(leptonLessCands_tmp2),
+                veto = cms.InputTag(electronCollectionTTH_str),
+            )
+        )
+    else:
+        raise RuntimeError("Invalid PU method: %s" % puMethod)
     #----------------------------------------------------------------------------
 
-    leptonSubtractedPFCandsSequence_str = 'leptonSubtractedPFCandsSequence%s' % suffix    
+    leptonSubtractedPFCandsSequence_str = 'leptonSubtractedPFCandsSequence%s%s' % (puMethod, suffix)
     if not hasattr(process, leptonSubtractedPFCandsSequence_str):
-        setattr(process, leptonSubtractedPFCandsSequence_str, 
-            cms.Sequence(
-                getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
-                getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLesspuppi_str) 
+        if puMethod == 'puppi':
+            setattr(process, leptonSubtractedPFCandsSequence_str,
+                cms.Sequence(
+                    getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
+                    getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLessPU_str)
+                )
             )
-        )
-    return ( getattr(process, leptonSubtractedPFCandsSequence_str), leptonLesspuppi_str )
+        elif puMethod == 'chs':
+            setattr(process, leptonSubtractedPFCandsSequence_str,
+                cms.Sequence(
+                    getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
+                    getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLessCands_tmp1) + \
+                    getattr(process, leptonLessCands_tmp2) + getattr(process, leptonLessPU_str)
+                )
+            )
+        else:
+            raise RuntimeError("Invalid PU method: %s" % puMethod)
+    return ( getattr(process, leptonSubtractedPFCandsSequence_str), leptonLessPU_str )
