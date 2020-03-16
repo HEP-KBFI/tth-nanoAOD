@@ -892,7 +892,7 @@ def jetToolbox( proc, jetType, jetSequence, outputFile,
 
 			setattr( proc, jetALGO+'PF'+PUMethod+postFix+'pileupJetIdCalculator',
 					pileupJetIdCalculator.clone(
-						jets = cms.InputTag( ( jetalgo+'PFJets'+PUMethod if not updateCollection else updateCollection ) ),
+						jets = cms.InputTag( ( jetalgo+'PFJets'+PUMethod+postFix if not updateCollection else updateCollection ) ),
 						rho = cms.InputTag("fixedGridRhoFastjetAll"),
 						vertexes = cms.InputTag(pvLabel),
 						applyJec = cms.bool(True),
@@ -902,7 +902,7 @@ def jetToolbox( proc, jetType, jetSequence, outputFile,
 			setattr( proc, jetALGO+'PF'+PUMethod+postFix+'pileupJetIdEvaluator',
 					pileupJetIdEvaluator.clone(
 						jetids = cms.InputTag(jetALGO+'PF'+PUMethod+postFix+'pileupJetIdCalculator'),
-						jets = cms.InputTag( ( jetalgo+'PFJets'+PUMethod if not updateCollection else updateCollection ) ),
+						jets = cms.InputTag( ( jetalgo+'PFJets'+PUMethod+postFix if not updateCollection else updateCollection ) ),
 						rho = cms.InputTag("fixedGridRhoFastjetAll"),
 						vertexes = cms.InputTag(pvLabel)
 						)

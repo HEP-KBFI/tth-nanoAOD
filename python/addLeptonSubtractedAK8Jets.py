@@ -3,7 +3,9 @@ import FWCore.ParameterSet.Config as cms
 from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+
 from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
+from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
 
 def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = False):
 
@@ -17,7 +19,6 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
 
     #----------------------------------------------------------------------------
     # reconstruct lepton-subtracted AK8 jets
-    from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
     bTagDiscriminators = [
         'pfCombinedInclusiveSecondaryVertexV2BJetTags', 'pfBoostedDoubleSecondaryVertexAK8BJetTags',
         'pfCombinedMVAV2BJetTags', 'pfDeepCSVJetTags:probb', 'pfDeepCSVJetTags:probbb'

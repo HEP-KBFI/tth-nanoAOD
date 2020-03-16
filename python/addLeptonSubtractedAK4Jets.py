@@ -1,9 +1,12 @@
 import FWCore.ParameterSet.Config as cms
 
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar, P4Vars
+from PhysicsTools.PatAlgos.tools.jetTools import updateJetCollection
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+
 from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
+from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
 
 def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
@@ -17,11 +20,9 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
     #----------------------------------------------------------------------------
     # reconstruct lepton-subtracted AK4 jets
-    from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
     bTagDiscriminators = [
         'pfCombinedInclusiveSecondaryVertexV2BJetTags', 
-        'pfCombinedMVAV2BJetTags', 'pfDeepCSVJetTags:probb', 'pfDeepCSVJetTags:probbb', 'pfDeepCSVJetTags:probc',
-        'pfDeepFlavourJetTags:probb', 'pfDeepFlavourJetTags:probbb', 'pfDeepFlavourJetTags:problepb'
+        'pfCombinedMVAV2BJetTags',
     ]
     JETCorrLevels = [ 'L1FastJet', 'L2Relative', 'L3Absolute' ]
     if not runOnMC:
@@ -33,22 +34,24 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         proc = process, jetType = 'ak4', jetSequence = jetSequenceAK4LS_str, outputFile = 'out', PUMethod = 'CHS',
         JETCorrPayload = 'AK4PFchs', postFix = NoLep_str, JETCorrLevels = JETCorrLevels, miniAOD = True,
         runOnMC = runOnMC, newPFCollection = True, nameNewPFCollection = leptonLessPU_str,
-        bTagDiscriminators = bTagDiscriminators
+        bTagDiscriminators = bTagDiscriminators,
     )
+    slimmedJetCollectionAK4LS_str = 'selectedPatJetsAK4PFCHS%s' % NoLep_str
 
-    #TODO still not working:
-    # An exception of category 'Invalid Constituent' occurred while
-    #    [0] Processing  Event run: 1 lumi: 97 event: 162818 stream: 0
-    #    [1] Running path 'nanoAOD_step'
-    #    [2] Prefetching for module PatJetIDValueMapProducer/'tightJetIdAK4LSLoose'
-    #    [3] Prefetching for module PATJetProducer/'patJetsAK4PFCHSNoLepLoose'
-    #    [4] Prefetching for module DeepFlavourTFJetTagsProducer/'pfDeepFlavourJetTagsAK4PFCHSNoLepLoose'
-    #    [5] Calling method for module DeepFlavourTagInfoProducer/'pfDeepFlavourTagInfosAK4PFCHSNoLepLoose'
-    # Exception Message:
-    # PFJet constituent is not of PFCandidate type
-
-    #jetCollectionAK4LS_str = 'patJetsAK4PFCHS%s' % NoLep_str
-    jetCollectionAK4LS_str = 'selectedPatJetsAK4PFCHS%s' % NoLep_str
+    bTagDiscriminators_ = [
+        'pfDeepCSVJetTags:probb', 'pfDeepCSVJetTags:probbb', 'pfDeepCSVJetTags:probc', 'pfDeepFlavourJetTags:probb',
+        'pfDeepFlavourJetTags:probbb', 'pfDeepFlavourJetTags:problepb', 'pfDeepFlavourJetTags:probc',
+    ]
+    deepInfoSuffix = 'PlusDeepInfo%s' % NoLep_str
+    updateJetCollection(
+        process,
+        jetSource = cms.InputTag(slimmedJetCollectionAK4LS_str),
+        jetCorrections = ('AK4PFchs', cms.vstring(JETCorrLevels), 'None'),
+        btagDiscriminators = bTagDiscriminators_,
+        postfix = deepInfoSuffix,
+    )
+    jetCollectionAK4LS_str = "selectedUpdatedPatJets%s" % deepInfoSuffix
+    getattr(process, jetCollectionAK4LS_str).cut = cms.string('pt > 15')
 
     #----------------------------------------------------------------------------
 
@@ -111,6 +114,31 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         )
     )
 
+    # ----------------------------------------------------------------------------
+
+    jetSubStructureVars_str = 'jetSubStructureVars%s' % NoLep_str
+    setattr(process, jetSubStructureVars_str,
+        cms.EDProducer("JetSubstructureObservableProducer",
+            src = cms.InputTag(jetCollectionAK4LS_str),
+            kappa = cms.double(1.),
+        )
+    )
+
+    # ----------------------------------------------------------------------------
+
+    # from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
+    # pileupJetId_str = 'pileupJetId%s' % NoLep_str
+    # setattr(process, pileupJetId_str,
+    #     pileupJetId.clone(
+    #         jets = cms.InputTag(jetCollectionAK4LS_str),
+    #         inputIsCorrected = True,
+    #         applyJec = True,
+    #         vertexes = cms.InputTag("offlineSlimmedPrimaryVertices")
+    #     )
+    # )
+
+    # ----------------------------------------------------------------------------
+
     jetsAK4LSWithUserData_str = 'jetsAK4LSWithUserData%s' % suffix
     setattr(process, jetsAK4LSWithUserData_str,
         process.updatedJetsWithUserData.clone(
@@ -132,12 +160,18 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
                 ptD = cms.InputTag("%s:ptD" % bJetVars_str),
                 genPtwNu = cms.InputTag("%s:genPtwNu" % bJetVars_str),
                 qgl = cms.InputTag("%s:qgLikelihood" % qgtagger_str),
+                jetCharge = cms.InputTag("%s:jetCharge" % jetSubStructureVars_str),
+                pull_dEta = cms.InputTag("%s:pullDEta" % jetSubStructureVars_str),
+                pull_dPhi = cms.InputTag("%s:pullDPhi" % jetSubStructureVars_str),
+                pull_dR = cms.InputTag("%s:pullDR" % jetSubStructureVars_str),
+                #puIdDisc = cms.InputTag("'%s:fullDiscriminant'" % pileupJetId_str),
             ),
             userInts = cms.PSet(
                 tightId = cms.InputTag(tightJetIdAK4LS_str),
                 tightIdLepVeto = cms.InputTag(tightJetIdLepVetoAK4LS_str),
                 vtxNtrk = cms.InputTag("%s:vtxNtrk" % bJetVars_str),
                 leptonPdgId = cms.InputTag("%s:leptonPdgId" % bJetVars_str),
+                #puId = cms.InputTag("'%s:fullId'" % pileupJetId_str),
             )
         )
     )
@@ -146,6 +180,13 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
             looseId = cms.InputTag("looseJetId"),
         )
     #----------------------------------------------------------------------------
+
+    bjetNN_str = 'bjetNN%s' % NoLep_str
+    setattr(process, bjetNN_str,
+        process.bjetNN.clone(
+            src = cms.InputTag(jetsAK4LSWithUserData_str),
+        )
+    )
 
     #----------------------------------------------------------------------------
     # add lepton-subtracted AK4 jets to nanoAOD Ntuple
@@ -157,11 +198,26 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
             doc = cms.string("lepton-subtracted ak4 jets"),
             externalVariables = cms.PSet(
                 #bRegOld = ExtVar(cms.InputTag("bjetMVA"),float, doc="pt corrected with b-jet regression",precision=14),
-                bRegCorr = ExtVar(cms.InputTag("bjetNN:corr"),float, doc="pt correction for b-jet energy regression",precision=12),
-                bRegRes = ExtVar(cms.InputTag("bjetNN:res"),float, doc="res on pt corrected with b-jet regression",precision=8),
+                bRegCorr = ExtVar(cms.InputTag("%s:corr" % bjetNN_str),float, doc="pt correction for b-jet energy regression",precision=12),
+                bRegRes = ExtVar(cms.InputTag("%s:res" % bjetNN_str),float, doc="res on pt corrected with b-jet regression",precision=8),
             )
         )
     )
+    # getattr(process, jetAK4LSTable_str).variables.puId = Var("userInt('puId')",int,doc="Pilup ID flags")
+    # getattr(process, jetAK4LSTable_str).variables.puIdDisc = Var("userFloat('puIdDisc')",float,doc="Pilup ID discriminant")
+    #TODO fix
+    # An exception of category 'ProductNotFound' occurred while
+    #    [0] Processing  Event run: 1 lumi: 97 event: 162818 stream: 0
+    #    [1] Running path 'nanoAOD_step'
+    #    [2] Calling method for module PATJetUserDataEmbedder/'jetsAK4LSWithUserDataLoose'
+    # Exception Message:
+    # Principal::getByToken: Found zero products matching all criteria
+    # Looking for type: edm::ValueMap<float>
+    # Looking for module label: 'pileupJetIdNoLepLoose
+    # Looking for productInstanceName: fullDiscriminant'
+
+    getattr(process, jetAK4LSTable_str).variables.puId = Var("1", int, doc = "Pilup ID flags")
+    getattr(process, jetAK4LSTable_str).variables.puIdDisc = Var("1.", float, doc = "Pilup ID discriminant")
 
     ### Era dependent customization
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
@@ -169,10 +225,17 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
           jetId = Var("userInt('tightIdLepVeto')*4+userInt('tightId')*2+userInt('looseId')",int,doc="Jet ID flags bit1 is loose, bit2 is tight, bit3 is tightLepVeto"))
 
     leptonSubtractedJetSequence = cms.Sequence(
-        leptonSubtractedPFCandsSequence + \
-        getattr(process, jetSequenceAK4LS_str) + getattr(process, tightJetIdAK4LS_str) + \
-        getattr(process, tightJetIdLepVetoAK4LS_str) + \
-        getattr(process, bJetVars_str) + getattr(process, qgtagger_str) + getattr(process, jetsAK4LSWithUserData_str) + \
+        leptonSubtractedPFCandsSequence +
+        getattr(process, jetSequenceAK4LS_str) +
+        getattr(process, slimmedJetCollectionAK4LS_str) +
+        getattr(process, tightJetIdAK4LS_str) +
+        getattr(process, tightJetIdLepVetoAK4LS_str) +
+        getattr(process, bJetVars_str) +
+        getattr(process, qgtagger_str) +
+        getattr(process, jetSubStructureVars_str) +
+        #getattr(process, pileupJetId_str) +
+        getattr(process, jetsAK4LSWithUserData_str) +
+        getattr(process, bjetNN_str) +
         getattr(process, jetAK4LSTable_str)
     )
     #----------------------------------------------------------------------------
