@@ -190,6 +190,25 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
     #----------------------------------------------------------------------------
     # add lepton-subtracted AK4 jets to nanoAOD Ntuple
+    # if runOnMC:
+    #     genJetTable_str = "genJetTable%s" % NoLep_str
+    #     setattr(process, genJetTable_str,
+    #         process.genJetTable.clone(
+    #             src = cms.InputTag("ak4GenJetsNoNu%s" % NoLep_str),
+    #             name = cms.string("GenJetAK4LS%s" % suffix),
+    #             doc = cms.string("ak4 LS%s Jets made with visible genparticles" % suffix),
+    #         )
+    #     )
+    #     genJetFlavourTable_str = "genJetFlavourTable%s" % NoLep_str
+    #     setattr(process, genJetFlavourTable_str,
+    #         process.genJetFlavourTable.clone(
+    #             name = getattr(process, genJetTable_str).name,
+    #             src = getattr(process, genJetTable_str).src,
+    #             cut = getattr(process, genJetTable_str).cut,
+    #             jetFlavourInfos = cms.InputTag("patJetFlavourAssociationAK4PFCHS%s" % NoLep_str)
+    #         )
+    #     )
+    
     jetAK4LSTable_str = 'jetAK4LS%sTable' % suffix # NB! must end with 'Table'
     setattr(process, jetAK4LSTable_str,
         process.jetTable.clone(
@@ -205,6 +224,10 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     )
     getattr(process, jetAK4LSTable_str).variables.puId = Var("userInt('puId')",int,doc="Pilup ID flags")
     getattr(process, jetAK4LSTable_str).variables.puIdDisc = Var("userFloat('puIdDisc')",float,doc="Pilup ID discriminant")
+    if runOnMC:
+        getattr(process, jetAK4LSTable_str).variables.partonFlavour = Var("partonFlavour()", int, doc="flavour from parton matching")
+        getattr(process, jetAK4LSTable_str).variables.hadronFlavour = Var("hadronFlavour()", int, doc="flavour from hadron ghost clustering")
+        # getattr(process, jetAK4LSTable_str).variables.genJetIdx = Var("?genJetFwdRef().backRef().isNonnull()?genJetFwdRef().backRef().key():-1", int, doc="index of matched gen jet")
 
     ### Era dependent customization
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
@@ -225,6 +248,8 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         getattr(process, bjetNN_str) +
         getattr(process, jetAK4LSTable_str)
     )
+    # if runOnMC:
+    #     leptonSubtractedJetSequence += getattr(process, genJetTable_str) + getattr(process, genJetFlavourTable_str)
     #----------------------------------------------------------------------------
 
     _leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
