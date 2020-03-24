@@ -208,6 +208,27 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     else:
         print("NOT adding Qjet volatility to %s" % jetsAK8LSWithUserData_str)
 
+    #----------------------------------------------------------------------------
+    # produce lepton-subtracted generator-level jets
+    from RecoJets.JetProducers.ak8GenJets_cfi import ak8GenJets
+    genjetAK8LS_str = 'genJetAK8LS'
+    setattr(process, genjetAK8LS_str,
+        ak8GenJets.clone(
+            src = cms.InputTag("leptonLessGenParticles")
+        )
+    )
+
+    # add lepton-subtracted generator-level jets to nanoAOD Ntuple
+    genjetAK8LSTable_str = 'genJetAK8LSTable'
+    setattr(process, genjetAK8LSTable_str,
+        process.genJetAK8Table.clone(
+            src = cms.InputTag(genjetAK8LS_str),
+            name = cms.string("GenJetAK8LS"),
+            doc  = cms.string("genJetsAK8LS, i.e. ak8 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+        )
+    )
+    #----------------------------------------------------------------------------
+
     ### Era dependent customization
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
         fatJetAK8LSTable = getattr(process, fatJetAK8LSTable_str)
@@ -243,7 +264,9 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
         getattr(process, jetsAK8LSWithUserData_str) + getattr(process, subStructureSubJetAK8_str) + \
         getattr(process, subJetsAK8LSWithUserData_str) + getattr(process, fatJetAK8LSTable_str) + \
-        getattr(process, subJetAK8LSTable_str)
+        getattr(process, subJetAK8LSTable_str) +
+        getattr(process, genjetAK8LS_str) +
+        getattr(process, genjetAK8LSTable_str)
     )
     if addQJets:
         leptonSubtractedJetSequence.replace(

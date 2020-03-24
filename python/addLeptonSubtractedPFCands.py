@@ -81,13 +81,39 @@ def addLeptonSubtractedPFCands(process, era, useFakeable, puMethod):
         raise RuntimeError("Invalid PU method: %s" % puMethod)
     #----------------------------------------------------------------------------
 
+    #----------------------------------------------------------------------------
+    # produce collection of generator-level particles excluding prompt leptons and leptons from tau decays
+    # (used to produce lepton-subtracted generator-level jets)
+    # NB.: Selection taken from the Higgs->tautau twiki
+    #        https://twiki.cern.ch/twiki/bin/viewauth/CMS/HiggsToTauTauWorking2016#MC_Matching
+    from RecoJets.Configuration.GenJetParticles_cff import genParticlesForJetsNoNu
+    genParticlesForJetsNoNu_str = 'genParticlesForJetsNoNuForAK4LS'
+    if not hasattr(process, genParticlesForJetsNoNu_str):
+        setattr(process, genParticlesForJetsNoNu_str,
+           genParticlesForJetsNoNu.clone(
+                src = cms.InputTag("prunedGenParticles")
+           )
+        )
+    leptonLessGenParticleProducer_str = 'leptonLessGenParticles'
+    if not hasattr(process, leptonLessGenParticleProducer_str):
+        setattr(process, leptonLessGenParticleProducer_str,
+            cms.EDFilter("CandPtrSelector",
+                src = cms.InputTag(genParticlesForJetsNoNu_str),
+                cut = cms.string('!(pt > 8 & (abs(pdgId) = 11 | abs(pdgId) = 13) & (isPromptFinalState | isDirectPromptTauDecayProductFinalState))'),
+                stableOnly = cms.bool(True),
+                filter = cms.bool(False)
+            )
+        )
+    #----------------------------------------------------------------------------
+
     leptonSubtractedPFCandsSequence_str = 'leptonSubtractedPFCandsSequence%s%s' % (puMethod, suffix)
     if not hasattr(process, leptonSubtractedPFCandsSequence_str):
         if puMethod == 'puppi':
             setattr(process, leptonSubtractedPFCandsSequence_str,
                 cms.Sequence(
                     getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
-                    getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLessPU_str)
+                    getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLessPU_str) + \
+                    getattr(process, genParticlesForJetsNoNu_str) + getattr(process, leptonLessGenParticleProducer_str)
                 )
             )
         elif puMethod == 'chs':
@@ -95,7 +121,8 @@ def addLeptonSubtractedPFCands(process, era, useFakeable, puMethod):
                 cms.Sequence(
                     getattr(process, electronCollectionTTH_str) + getattr(process, muonCollectionTTH_str) + \
                     getattr(process, leptonLessPFProducer_str) + getattr(process, leptonLessCands_tmp1) + \
-                    getattr(process, leptonLessCands_tmp2) + getattr(process, leptonLessPU_str)
+                    getattr(process, leptonLessCands_tmp2) + getattr(process, leptonLessPU_str) + \
+                    getattr(process, genParticlesForJetsNoNu_str) + getattr(process, leptonLessGenParticleProducer_str)
                 )
             )
         else:
