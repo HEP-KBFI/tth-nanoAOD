@@ -209,24 +209,44 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         print("NOT adding Qjet volatility to %s" % jetsAK8LSWithUserData_str)
 
     #----------------------------------------------------------------------------
-    # produce lepton-subtracted generator-level jets
-    from RecoJets.JetProducers.ak8GenJets_cfi import ak8GenJets
-    genjetAK8LS_str = 'genJetAK8LS'
-    setattr(process, genjetAK8LS_str,
-        ak8GenJets.clone(
-            src = cms.InputTag("leptonLessGenParticles")
-        )
-    )
 
-    # add lepton-subtracted generator-level jets to nanoAOD Ntuple
-    genjetAK8LSTable_str = 'genJetAK8LSTable'
-    setattr(process, genjetAK8LSTable_str,
-        process.genJetAK8Table.clone(
-            src = cms.InputTag(genjetAK8LS_str),
-            name = cms.string("GenJetAK8LS"),
-            doc  = cms.string("genJetsAK8LS, i.e. ak8 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+    if runOnMC:
+        #----------------------------------------------------------------------------
+        # produce lepton-subtracted generator-level jets
+        from RecoJets.JetProducers.ak8GenJets_cfi import ak8GenJets
+        genjetAK8LS_str = 'genJetAK8LS'
+        setattr(process, genjetAK8LS_str,
+            ak8GenJets.clone(
+                src = cms.InputTag("leptonLessGenParticles")
+            )
         )
-    )
+
+        # add lepton-subtracted generator-level jets to nanoAOD Ntuple
+        genjetAK8LSTable_str = 'genJetAK8LSTable'
+        setattr(process, genjetAK8LSTable_str,
+            process.genJetAK8Table.clone(
+                src = cms.InputTag(genjetAK8LS_str),
+                name = cms.string("GenJetAK8LS"),
+                doc  = cms.string("genJetsAK8LS, i.e. ak8 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+            )
+        )
+
+        # add information on generator-level parton flavor to reconstructed jets
+        genJetFlavourAssociationAK8LS_str = 'genJetFlavourAssociationAK8LS%s' % suffix
+        setattr(process, genJetFlavourAssociationAK8LS_str,
+            process.genJetAK8FlavourAssociation.clone(
+                jets = cms.InputTag(genjetAK8LS_str)
+            )
+        )
+
+        genJetFlavourAK8LSTable = 'genJetFlavourAK8LS%sTable' % suffix # NB! must end with 'Table'
+        setattr(process, genJetFlavourAK8LSTable,
+            process.genJetAK8FlavourTable.clone(
+                src = cms.InputTag(genjetAK8LS_str),
+                name = cms.string("GenJetAK8LS"),
+                jetFlavourInfos = cms.InputTag(genJetFlavourAssociationAK8LS_str)
+            )
+        )
     #----------------------------------------------------------------------------
 
     ### Era dependent customization
@@ -264,15 +284,16 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
         getattr(process, jetsAK8LSWithUserData_str) + getattr(process, subStructureSubJetAK8_str) + \
         getattr(process, subJetsAK8LSWithUserData_str) + getattr(process, fatJetAK8LSTable_str) + \
-        getattr(process, subJetAK8LSTable_str) +
-        getattr(process, genjetAK8LS_str) +
-        getattr(process, genjetAK8LSTable_str)
+        getattr(process, subJetAK8LSTable_str)
     )
     if addQJets:
         leptonSubtractedJetSequence.replace(
             getattr(process, jetsAK8LSWithUserData_str),
             getattr(process, QJetsAdderAK8LS_str) + getattr(process, jetsAK8LSWithUserData_str)
         )
+    if runOnMC:
+        leptonSubtractedJetSequence += getattr(process, genjetAK8LS_str) + getattr(process, genjetAK8LSTable_str)
+        leptonSubtractedJetSequence += getattr(process, genJetFlavourAssociationAK8LS_str) + getattr(process, genJetFlavourAK8LSTable)
 
     #----------------------------------------------------------------------------
 

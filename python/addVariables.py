@@ -293,10 +293,11 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
     ")",
     float, doc = "DeepCSV Charm vs b,b+bb b-tag discriminator", precision = 10
   )
-  process.jetTable.variables.puIdDisc = Var(
-    "userFloat('pileupJetId:fullDiscriminant')",
-    float, doc = "Pilup ID discriminant", precision = 10
-  )
+  # process.jetTable.variables.puIdDisc = Var(
+  #   "userFloat('pileupJetId:fullDiscriminant')",
+  #   float, doc = "Pilup ID discriminant", precision = 10
+  # )
+  process.jetTable.variables.puId = Var("1",int, doc = "Pilup ID")
 
   process.metTable.variables.covXX = Var(
     "getSignificanceMatrix().At(0,0)",
@@ -374,8 +375,10 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
   process.MessageLogger.cerr.FwkReport.reportEvery = reportEvery
 
   if suppressMessages:
+    process.MessageLogger.suppressInfo.append('genJetAK4FlavourAssociation')
     process.MessageLogger.suppressInfo.append('genJetAK8FlavourAssociation')
     process.MessageLogger.suppressInfo.append('mergedGenParticles')
+    process.MessageLogger.suppressWarning.append('genJetAK4FlavourAssociation')
     process.MessageLogger.suppressWarning.append('genJetAK8FlavourAssociation')
     process.MessageLogger.suppressWarning.append('mergedGenParticles')
 

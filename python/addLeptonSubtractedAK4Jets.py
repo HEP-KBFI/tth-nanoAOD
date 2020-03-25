@@ -189,6 +189,7 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     )
 
     #----------------------------------------------------------------------------
+
     # add lepton-subtracted AK4 jets to nanoAOD Ntuple
     jetAK4LSTable_str = 'jetAK4LS%sTable' % suffix # NB! must end with 'Table'
     setattr(process, jetAK4LSTable_str,
@@ -206,26 +207,48 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     getattr(process, jetAK4LSTable_str).variables.puId = Var("userInt('puId')",int,doc="Pilup ID flags")
     getattr(process, jetAK4LSTable_str).variables.puIdDisc = Var("userFloat('puIdDisc')",float,doc="Pilup ID discriminant")
 
-    #----------------------------------------------------------------------------
-    # produce lepton-subtracted generator-level jets
-    from RecoJets.JetProducers.ak4GenJets_cfi import ak4GenJets
-    genjetAK4LS_str = 'genJetAK4LS'
-    setattr(process, genjetAK4LS_str,
-        ak4GenJets.clone(
-            src = cms.InputTag("leptonLessGenParticles")
-        )
-    )
+    if runOnMC:
+        getattr(process, jetAK4LSTable_str).variables.partonFlavour = Var("partonFlavour()", int, doc="flavour from parton matching")
+        getattr(process, jetAK4LSTable_str).variables.hadronFlavour = Var("hadronFlavour()", int, doc="flavour from hadron ghost clustering")
+        # getattr(process, jetAK4LSTable_str).variables.genJetIdx = Var("?genJetFwdRef().backRef().isNonnull()?genJetFwdRef().backRef().key():-1", int, doc="index of matched gen jet")
 
-    # add lepton-subtracted generator-level jets to nanoAOD Ntuple
-    genjetAK4LSTable_str = 'genJetAK4LSTable'
-    setattr(process, genjetAK4LSTable_str,
-        process.genJetTable.clone(
-            src = cms.InputTag(genjetAK4LS_str),
-            name = cms.string("GenJetAK4LS"),
-            doc  = cms.string("genJetsAK4LS, i.e. ak4 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+        #----------------------------------------------------------------------------
+        # produce lepton-subtracted generator-level jets
+        from RecoJets.JetProducers.ak4GenJets_cfi import ak4GenJets
+        genjetAK4LS_str = 'genJetAK4LS'
+        setattr(process, genjetAK4LS_str,
+            ak4GenJets.clone(
+                src = cms.InputTag("leptonLessGenParticles")
+            )
         )
-    )
-    #----------------------------------------------------------------------------
+
+        # add lepton-subtracted generator-level jets to nanoAOD Ntuple
+        genjetAK4LSTable_str = 'genJetAK4LSTable'
+        setattr(process, genjetAK4LSTable_str,
+            process.genJetTable.clone(
+                src = cms.InputTag(genjetAK4LS_str),
+                name = cms.string("GenJetAK4LS"),
+                doc  = cms.string("genJetsAK4LS, i.e. ak4 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+            )
+        )
+
+        # add information on generator-level parton flavor to reconstructed jets
+        genJetFlavourAssociationAK4LS_str = 'genJetFlavourAssociationAK4LS%s' % suffix
+        setattr(process, genJetFlavourAssociationAK4LS_str,
+            process.genJetFlavourAssociation.clone(
+                jets = cms.InputTag(genjetAK4LS_str)
+            )
+        )
+
+        genJetFlavourAK4LSTable = 'genJetFlavourAK4LS%sTable' % suffix # NB! must end with 'Table'
+        setattr(process, genJetFlavourAK4LSTable,
+            process.genJetFlavourTable.clone(
+                src = cms.InputTag(genjetAK4LS_str),
+                name = cms.string("GenJetAK4LS"),
+                jetFlavourInfos = cms.InputTag(genJetFlavourAssociationAK4LS_str)
+            )
+        )
+        #----------------------------------------------------------------------------
 
     ### Era dependent customization
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
@@ -244,10 +267,12 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         getattr(process, pileupJetId_str) +
         getattr(process, jetsAK4LSWithUserData_str) +
         getattr(process, bjetNN_str) +
-        getattr(process, jetAK4LSTable_str) +
-        getattr(process, genjetAK4LS_str) +
-        getattr(process, genjetAK4LSTable_str)
+        getattr(process, jetAK4LSTable_str)
     )
+    if runOnMC:
+        leptonSubtractedJetSequence += getattr(process, genjetAK4LS_str) + getattr(process, genjetAK4LSTable_str)
+        leptonSubtractedJetSequence += getattr(process, genJetFlavourAssociationAK4LS_str) + getattr(process, genJetFlavourAK4LSTable)
+
     #----------------------------------------------------------------------------
 
     _leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
