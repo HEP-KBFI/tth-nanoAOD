@@ -293,10 +293,10 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
     ")",
     float, doc = "DeepCSV Charm vs b,b+bb b-tag discriminator", precision = 10
   )
-  # process.jetTable.variables.puIdDisc = Var(
-  #   "userFloat('pileupJetId:fullDiscriminant')",
-  #   float, doc = "Pilup ID discriminant", precision = 10
-  # )
+  process.jetTable.variables.puIdDisc = Var(
+    "userFloat('pileupJetId:fullDiscriminant')",
+    float, doc = "Pilup ID discriminant", precision = 10
+  )
   process.jetTable.variables.puId = Var("1",int, doc = "Pilup ID")
 
   process.metTable.variables.covXX = Var(
