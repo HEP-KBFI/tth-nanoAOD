@@ -5,7 +5,8 @@ from PhysicsTools.PatAlgos.tools.jetTools import updateJetCollection
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 
-from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
+from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands, \
+                                                           LEPTONLESSGENPARTICLEPRODUCER_STR
 from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
 
 def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
@@ -217,7 +218,7 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
         genjetAK4LS_str = 'genJetAK4LS'
         setattr(process, genjetAK4LS_str,
             ak4GenJets.clone(
-                src = cms.InputTag("leptonLessGenParticles")
+                src = cms.InputTag(LEPTONLESSGENPARTICLEPRODUCER_STR)
             )
         )
 

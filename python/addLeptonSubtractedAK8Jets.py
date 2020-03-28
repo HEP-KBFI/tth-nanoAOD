@@ -8,7 +8,8 @@ from RecoJets.JetProducers.ECF_cff import ecfNbeta1
 from RecoJets.JetProducers.nJettinessAdder_cfi import Njettiness
 from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
 
-from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
+from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands, \
+                                                           LEPTONLESSGENPARTICLEPRODUCER_STR
 from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
 
 def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = False):
@@ -239,7 +240,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         genjetAK8LS_str = 'genJetAK8LS'
         setattr(process, genjetAK8LS_str,
             ak8GenJets.clone(
-                src = cms.InputTag("leptonLessGenParticles")
+                src = cms.InputTag(LEPTONLESSGENPARTICLEPRODUCER_STR)
             )
         )
 
@@ -306,10 +307,10 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             getattr(process, jetsAK8LSWithUserData_str)
         )
     if runOnMC:
-        leptonSubtractedJetSequence += getattr(process, genjetAK8LS_str) + getattr(process, genjetAK8LSTable_str)
-        leptonSubtractedJetSequence += getattr(process, genJetFlavourAssociationAK8LS_str) + getattr(process, genJetFlavourAK8LSTable)
-
-    #----------------------------------------------------------------------------
+        leptonSubtractedJetSequence += getattr(process, genjetAK8LS_str) + \
+                                       getattr(process, genjetAK8LSTable_str) + \
+                                       getattr(process, genJetFlavourAssociationAK8LS_str) + \
+                                       getattr(process, genJetFlavourAK8LSTable)
 
     _leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
     _leptonSubtractedJetSequence_80X.replace(getattr(process, tightJetIdLepVetoAK8LS_str), getattr(process, looseJetIdAK8LS_str))

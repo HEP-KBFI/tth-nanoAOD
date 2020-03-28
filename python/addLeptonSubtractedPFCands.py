@@ -4,6 +4,9 @@ from RecoJets.Configuration.GenJetParticles_cff import genParticlesForJetsNoNu
 
 from CommonTools.PileupAlgos.Puppi_cff import puppi
 
+GENPARTICLESFORJETSNONU_STR = 'genParticlesForJetsNoNu'
+LEPTONLESSGENPARTICLEPRODUCER_STR = 'leptonLessGenParticles'
+
 def addLeptonSubtractedPFCands(process, era, useFakeable, puMethod, runOnMC):
 
     assert(era in [ "2016", "2017", "2018" ])
@@ -90,23 +93,21 @@ def addLeptonSubtractedPFCands(process, era, useFakeable, puMethod, runOnMC):
     # NB.: Selection taken from the Higgs->tautau twiki
     #        https://twiki.cern.ch/twiki/bin/viewauth/CMS/HiggsToTauTauWorking2016#MC_Matching
     if runOnMC:
-        genParticlesForJetsNoNu_str = 'genParticlesForJetsNoNu'
-        if not hasattr(process, genParticlesForJetsNoNu_str):
-            setattr(process, genParticlesForJetsNoNu_str,
-               genParticlesForJetsNoNu.clone(
-                    src = cms.InputTag("prunedGenParticles")
-               )
-            )
-        leptonLessGenParticleProducer_str = 'leptonLessGenParticles'
-        if not hasattr(process, leptonLessGenParticleProducer_str):
-            setattr(process, leptonLessGenParticleProducer_str,
-                cms.EDFilter("CandPtrSelector",
-                    src = cms.InputTag(genParticlesForJetsNoNu_str),
-                    cut = cms.string('!(pt > 8 & (abs(pdgId) = 11 | abs(pdgId) = 13) & (isPromptFinalState | isDirectPromptTauDecayProductFinalState))'),
-                    stableOnly = cms.bool(True),
-                    filter = cms.bool(False)
+        if not hasattr(process, GENPARTICLESFORJETSNONU_STR):
+            setattr(process, GENPARTICLESFORJETSNONU_STR,
+                    genParticlesForJetsNoNu.clone(
+                    src = cms.InputTag("prunedGenParticles"),
                 )
             )
+        if not hasattr(process, LEPTONLESSGENPARTICLEPRODUCER_STR):
+            setattr(process, LEPTONLESSGENPARTICLEPRODUCER_STR,
+                    cms.EDFilter("CandPtrSelector",
+                             src = cms.InputTag(GENPARTICLESFORJETSNONU_STR),
+                             cut = cms.string('!(pt > 8 & (abs(pdgId) = 11 | abs(pdgId) = 13) & (isPromptFinalState | isDirectPromptTauDecayProductFinalState))'),
+                             stableOnly = cms.bool(True),
+                             filter = cms.bool(False),
+                         )
+                    )
     #----------------------------------------------------------------------------
 
     leptonSubtractedPFCandsSequence_str = 'leptonSubtractedPFCandsSequence%s%s' % (puMethod, suffix)
@@ -130,5 +131,6 @@ def addLeptonSubtractedPFCands(process, era, useFakeable, puMethod, runOnMC):
             raise RuntimeError("Invalid PU method: %s" % puMethod)
         if runOnMC:
             leptonSubtractedPFCandsSequence = getattr(process, leptonSubtractedPFCandsSequence_str)
-            leptonSubtractedPFCandsSequence += getattr(process, genParticlesForJetsNoNu_str) + getattr(process, leptonLessGenParticleProducer_str)
+            leptonSubtractedPFCandsSequence += getattr(process, GENPARTICLESFORJETSNONU_STR) + \
+                                               getattr(process, LEPTONLESSGENPARTICLEPRODUCER_STR)
     return ( getattr(process, leptonSubtractedPFCandsSequence_str), leptonLessPU_str )
