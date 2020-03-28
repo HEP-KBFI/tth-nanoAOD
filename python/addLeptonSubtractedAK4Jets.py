@@ -198,7 +198,6 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
             name = cms.string("JetAK4LS%s" % suffix),
             doc = cms.string("lepton-subtracted ak4 jets"),
             externalVariables = cms.PSet(
-                #bRegOld = ExtVar(cms.InputTag("bjetMVA"),float, doc="pt corrected with b-jet regression",precision=14),
                 bRegCorr = ExtVar(cms.InputTag("%s:corr" % bjetNN_str),float, doc="pt correction for b-jet energy regression",precision=12),
                 bRegRes = ExtVar(cms.InputTag("%s:res" % bjetNN_str),float, doc="res on pt corrected with b-jet regression",precision=8),
             )
@@ -210,7 +209,7 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     if runOnMC:
         getattr(process, jetAK4LSTable_str).variables.partonFlavour = Var("partonFlavour()", int, doc="flavour from parton matching")
         getattr(process, jetAK4LSTable_str).variables.hadronFlavour = Var("hadronFlavour()", int, doc="flavour from hadron ghost clustering")
-        # getattr(process, jetAK4LSTable_str).variables.genJetIdx = Var("?genJetFwdRef().backRef().isNonnull()?genJetFwdRef().backRef().key():-1", int, doc="index of matched gen jet")
+        getattr(process, jetAK4LSTable_str).variables.genJetIdx = Var("?genJetFwdRef().backRef().isNonnull()?genJetFwdRef().backRef().key():-1", int, doc="index of matched gen jet")
 
         #----------------------------------------------------------------------------
         # produce lepton-subtracted generator-level jets
@@ -249,11 +248,6 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
             )
         )
         #----------------------------------------------------------------------------
-
-    ### Era dependent customization
-    for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
-        modifier.toModify(getattr(process, jetAK4LSTable_str).variables, 
-          jetId = Var("userInt('tightIdLepVeto')*4+userInt('tightId')*2+userInt('looseId')",int,doc="Jet ID flags bit1 is loose, bit2 is tight, bit3 is tightLepVeto"))
 
     leptonSubtractedJetSequence = cms.Sequence(
         leptonSubtractedPFCandsSequence +
