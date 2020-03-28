@@ -43,10 +43,11 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     # CV: fix ordering of modules in jet sequence
     #    (NjettinessAK8PuppiNoLep needs to be run before selectedPatJetsAK8PFPuppiNoLepSoftDropPacked)
     jetSequenceAK8LS = getattr(process, jetSequenceAK8LS_str)
-    jetSequenceAK8LS.remove(getattr(process, 'NjettinessAK8Puppi%s' % NoLep_str))
+    NjettinessAK8Puppi_str = 'NjettinessAK8Puppi%s' % NoLep_str
+    jetSequenceAK8LS.remove(getattr(process, NjettinessAK8Puppi_str))
     jetSequenceAK8LS.replace(
         getattr(process, 'selectedPatJetsAK8PFPuppi%sSoftDropPacked' % NoLep_str),
-        getattr(process, 'NjettinessAK8Puppi%s' % NoLep_str) + \
+        getattr(process, NjettinessAK8Puppi_str) + \
         getattr(process, 'selectedPatJetsAK8PFPuppi%sSoftDropPacked' % NoLep_str)
     )
     # CV: disable discriminators that cannot be computed with miniAOD inputs
@@ -122,6 +123,13 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             kappa = cms.double(1.),
         )
     )
+    nb1AK8PuppiSoftDrop_str = 'nb1AK8PuppiSoftDrop%s' % suffix
+    setattr(process, nb1AK8PuppiSoftDrop_str,
+            ecfNbeta1.clone(
+                src = cms.InputTag(fatJetCollectionAK8LS_str),
+                cuts = cms.vstring('', '', 'pt > 250'),
+            )
+    )
     #----------------------------------------------------------------------------
 
     jetsAK8LSWithUserData_str = 'jetsAK8LSWithUserData%s' % suffix
@@ -133,6 +141,8 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
                 pull_dEta = cms.InputTag("%s:pullDEta" % subStructureAK8_str),
                 pull_dPhi = cms.InputTag("%s:pullDPhi" % subStructureAK8_str),
                 pull_dR   = cms.InputTag("%s:pullDR" % subStructureAK8_str),
+                n2b1 = cms.InputTag("%s:ecfN2" % nb1AK8PuppiSoftDrop_str),
+                n3b1 = cms.InputTag("%s:ecfN3" % nb1AK8PuppiSoftDrop_str),
             ),
             userInts = cms.PSet(
                 tightId = cms.InputTag(tightJetIdAK8LS_str),
@@ -200,30 +210,21 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             cut = cms.string("pt > 80 && abs(eta) < 2.4"),
             name = cms.string("FatJetAK8LS%s" % suffix),
             doc = cms.string("lepton-subtracted ak8 fat jets for boosted analysis"),
-            variables = cms.PSet(P4Vars,
-                rawFactor = Var("1.-jecFactor('Uncorrected')",float,doc="1 - Factor to get back to raw pT",precision=10),
-                jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
-                pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
-                pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
-                pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
-                msoftdrop = Var("userFloat('ak8PFJetsPuppi%sSoftDropMass')" % NoLep_str,float, doc="Corrected soft drop mass with PUPPI",precision=10),
-                subJetIdx1 = Var("?subjets('SoftDrop').size()>0?subjets('SoftDrop').at(0).key():-1", int, doc="index of first subjet"),
-                subJetIdx2 = Var("?subjets('SoftDrop').size()>1?subjets('SoftDrop').at(1).key():-1", int, doc="index of second subjet"),
-                tau1 = Var("userFloat('NjettinessAK8Puppi%s:tau1')" % NoLep_str,float, doc="Nsubjettiness (1 axis)",precision=10),
-                tau2 = Var("userFloat('NjettinessAK8Puppi%s:tau2')" % NoLep_str,float, doc="Nsubjettiness (2 axis)",precision=10),
-                tau3 = Var("userFloat('NjettinessAK8Puppi%s:tau3')" % NoLep_str,float, doc="Nsubjettiness (3 axis)",precision=10),
-                tau4 = Var("userFloat('NjettinessAK8Puppi%s:tau4')" % NoLep_str,float, doc="Nsubjettiness (4 axis)",precision=10),
-                jetId = Var("userInt('tightId')*2+4*userInt('tightIdLepVeto')",int,doc="Jet ID flags bit1 is loose (always false in 2017 since it does not exist), bit2 is tight, bit3 is tightLepVeto"),
-                area = Var("jetArea()", float, doc="jet catchment area, for JECs", precision=10),
-                btagCMVA = Var("bDiscriminator('pfCombinedMVAV2BJetTags')",float,doc="CMVA V2 btag discriminator",precision=10),
-                btagDeepB = Var("bDiscriminator('pfDeepCSVJetTags:probb')+bDiscriminator('pfDeepCSVJetTags:probbb')",float,doc="DeepCSV b+bb tag discriminator",precision=10),
-                btagCSVV2 = Var("bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",float,doc=" pfCombinedInclusiveSecondaryVertexV2 b-tag discriminator (aka CSVV2)",precision=10),
-                btagHbb = Var("bDiscriminator('pfBoostedDoubleSecondaryVertexAK8BJetTags')",float,doc="Higgs to BB tagger discriminator",precision=10),
-            )
         )
     )
+    fatJetAK8LSTable = getattr(process, fatJetAK8LSTable_str)
+    fatJetAK8LSTable.variables.msoftdrop.expr = cms.string("userFloat('ak8PFJetsPuppi%sSoftDropMass')" % NoLep_str)
+    fatJetAK8LSTable.variables.subJetIdx1.expr = cms.string("?subjets('SoftDrop').size()>0?subjets('SoftDrop').at(0).key():-1")
+    fatJetAK8LSTable.variables.subJetIdx2.expr = cms.string("?subjets('SoftDrop').size()>1?subjets('SoftDrop').at(1).key():-1")
+    fatJetAK8LSTable.variables.tau1.expr = cms.string("userFloat('%s:tau1')" % NjettinessAK8Puppi_str)
+    fatJetAK8LSTable.variables.tau2.expr = cms.string("userFloat('%s:tau2')" % NjettinessAK8Puppi_str)
+    fatJetAK8LSTable.variables.tau3.expr = cms.string("userFloat('%s:tau3')" % NjettinessAK8Puppi_str)
+    fatJetAK8LSTable.variables.tau4.expr = cms.string("userFloat('%s:tau4')" % NjettinessAK8Puppi_str)
+    fatJetAK8LSTable.variables.tau4.expr = cms.string("userFloat('%s:tau4')" % NjettinessAK8Puppi_str)
+    fatJetAK8LSTable.variables.tau4.expr = cms.string("userFloat('%s:tau4')" % NjettinessAK8Puppi_str)
+    fatJetAK8LSTable.variables.n2b1.expr = cms.string("userFloat('n2b1')")
+    fatJetAK8LSTable.variables.n3b1.expr = cms.string("userFloat('n3b1')")
     if addQJets:
-        fatJetAK8LSTable = getattr(process, fatJetAK8LSTable_str)
         fatJetAK8LSTable.variables.QjetVolatility = Var("userFloat('QjetVolatility')",float, doc="Qjets volatility, computed according to arXiv:1201.1914",precision=10)
         print("Adding Qjet volatility to %s" % jetsAK8LSWithUserData_str)
     else:
@@ -269,15 +270,6 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             )
         )
     #----------------------------------------------------------------------------
-
-    ### Era dependent customization
-    for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
-        fatJetAK8LSTable = getattr(process, fatJetAK8LSTable_str)
-        modifier.toModify(
-            fatJetAK8LSTable.variables,
-            jetId = Var("userInt('tightId')*2+userInt('looseId')", int, doc="Jet ID flags bit1 is loose, bit2 is tight")
-        )
-
     subJetAK8LSTable_str = 'subJetAK8LS%sTable' % suffix # NB! must end with 'Table'
     setattr(process, subJetAK8LSTable_str,
         process.subJetTable.clone(
@@ -298,6 +290,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         getattr(process, tightJetIdAK8LS_str) +
         getattr(process, tightJetIdLepVetoAK8LS_str) +
         getattr(process, subStructureAK8_str) +
+        getattr(process, nb1AK8PuppiSoftDrop_str) +
         getattr(process, jetsAK8LSWithUserData_str) +
         getattr(process, subStructureSubJetAK8_str) +
         getattr(process, ecfNbeta1_str) +
