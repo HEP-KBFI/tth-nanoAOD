@@ -4,6 +4,10 @@ from PhysicsTools.NanoAOD.common_cff import Var, P4Vars
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
 
+from RecoJets.JetProducers.ECF_cff import ecfNbeta1
+from RecoJets.JetProducers.nJettinessAdder_cfi import Njettiness
+from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
+
 from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands
 from tthAnalysis.NanoAOD.jetToolbox_cff import jetToolbox
 
@@ -104,7 +108,6 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService")
         QJetsAdderAK8LS_str = 'QJetsAdderAK8LS%s' % suffix
         setattr(process.RandomNumberGeneratorService, QJetsAdderAK8LS_str, cms.PSet(initialSeed = cms.untracked.uint32(7)))
-        from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
         setattr(process, QJetsAdderAK8LS_str,
             QJetsAdder.clone(
                 src = cms.InputTag(fatJetCollectionAK8LS_str),
@@ -157,6 +160,18 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             kappa = cms.double(1.),
         )
     )
+    ecfNbeta1_str = "nb1AK8LSPuppiSoftDropSubjets%s" % suffix
+    setattr(process, ecfNbeta1_str,
+        ecfNbeta1.clone(
+            src = cms.InputTag(subJetCollectionAK8LS_str),
+        )
+    )
+    Njettiness_str = "NjettinessAK8LSSubjets%s" % suffix
+    setattr(process, Njettiness_str,
+        Njettiness.clone(
+            src = cms.InputTag(subJetCollectionAK8LS_str),
+        )
+    )
     subJetsAK8LSWithUserData_str = 'subJetsAK8LSWithUserData%s' % suffix
     setattr(process, subJetsAK8LSWithUserData_str,
         cms.EDProducer("PATJetUserDataEmbedder",
@@ -166,6 +181,12 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
                 pull_dEta = cms.InputTag("%s:pullDEta" % subStructureSubJetAK8_str),
                 pull_dPhi = cms.InputTag("%s:pullDPhi" % subStructureSubJetAK8_str),
                 pull_dR   = cms.InputTag("%s:pullDR" % subStructureSubJetAK8_str),
+                n2b1 = cms.InputTag("%s:ecfN2" % ecfNbeta1_str),
+                n3b1 = cms.InputTag("%s:ecfN3" % ecfNbeta1_str),
+                tau1 = cms.InputTag("%s:tau1" % Njettiness_str),
+                tau2 = cms.InputTag("%s:tau2" % Njettiness_str),
+                tau3 = cms.InputTag("%s:tau3" % Njettiness_str),
+                tau4 = cms.InputTag("%s:tau4" % Njettiness_str),
             ),
             userInts = cms.PSet(),
         )
@@ -264,32 +285,32 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
             cut = cms.string(""),
             name = cms.string("SubJetAK8LS%s" % suffix),
             doc = cms.string("lepton-subtracted ak8  sub-jets for boosted analysis"),
-            variables = cms.PSet(P4Vars,
-                btagCMVA = Var("bDiscriminator('pfCombinedMVAV2BJetTags')",float,doc="CMVA V2 btag discriminator",precision=10),
-                btagDeepB = Var("bDiscriminator('pfDeepCSVJetTags:probb')+bDiscriminator('pfDeepCSVJetTags:probbb')",float,doc="DeepCSV b+bb tag discriminator",precision=10),
-                btagCSVV2 = Var("bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",float,doc=" pfCombinedInclusiveSecondaryVertexV2 b-tag discriminator (aka CSVV2)",precision=10),
-                jetCharge = Var("userFloat('jetCharge')",float, doc="jet charge, computed according to JME-13-006",precision=10),
-                pullEta = Var("userFloat('pull_dEta')",float, doc="eta component of pull vector, computed according to arXiv:1001.5027",precision=10),
-                pullPhi = Var("userFloat('pull_dPhi')",float, doc="phi component of pull vector, computed according to arXiv:1001.5027",precision=10),
-                pullMag = Var("userFloat('pull_dR')",float, doc="magnitude of pull vector, computed according to arXiv:1001.5027",precision=10),
-            )
         )
     )
     subJetAK8LSTable = getattr(process, subJetAK8LSTable_str)
+    for var in [ 'n2b1', 'n3b1', 'tau1', 'tau2', 'tau3', 'tau4' ]:
+        getattr(subJetAK8LSTable.variables, var).expr = cms.string("userFloat('%s')" % var)
     run2_miniAOD_80XLegacy.toModify(subJetAK8LSTable.variables, btagCMVA = None, btagDeepB = None)
 
     leptonSubtractedJetSequence = cms.Sequence(
-        leptonSubtractedPFCandsSequence + \
-        getattr(process, jetSequenceAK8LS_str) + getattr(process, tightJetIdAK8LS_str) + \
-        getattr(process, tightJetIdLepVetoAK8LS_str) + getattr(process, subStructureAK8_str) + \
-        getattr(process, jetsAK8LSWithUserData_str) + getattr(process, subStructureSubJetAK8_str) + \
-        getattr(process, subJetsAK8LSWithUserData_str) + getattr(process, fatJetAK8LSTable_str) + \
+        leptonSubtractedPFCandsSequence +
+        getattr(process, jetSequenceAK8LS_str) +
+        getattr(process, tightJetIdAK8LS_str) +
+        getattr(process, tightJetIdLepVetoAK8LS_str) +
+        getattr(process, subStructureAK8_str) +
+        getattr(process, jetsAK8LSWithUserData_str) +
+        getattr(process, subStructureSubJetAK8_str) +
+        getattr(process, ecfNbeta1_str) +
+        getattr(process, Njettiness_str) +
+        getattr(process, subJetsAK8LSWithUserData_str) +
+        getattr(process, fatJetAK8LSTable_str) +
         getattr(process, subJetAK8LSTable_str)
     )
     if addQJets:
         leptonSubtractedJetSequence.replace(
             getattr(process, jetsAK8LSWithUserData_str),
-            getattr(process, QJetsAdderAK8LS_str) + getattr(process, jetsAK8LSWithUserData_str)
+            getattr(process, QJetsAdderAK8LS_str) +
+            getattr(process, jetsAK8LSWithUserData_str)
         )
     if runOnMC:
         leptonSubtractedJetSequence += getattr(process, genjetAK8LS_str) + getattr(process, genjetAK8LSTable_str)
