@@ -7,6 +7,7 @@ from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94
 from RecoJets.JetProducers.ECF_cff import ecfNbeta1
 from RecoJets.JetProducers.nJettinessAdder_cfi import Njettiness
 from RecoJets.JetProducers.qjetsadder_cfi import QJetsAdder
+from RecoJets.JetProducers.ak8GenJets_cfi import ak8GenJets
 
 from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands, \
                                                            LEPTONLESSGENPARTICLEPRODUCER_STR
@@ -236,23 +237,24 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
     if runOnMC:
         #----------------------------------------------------------------------------
         # produce lepton-subtracted generator-level jets
-        from RecoJets.JetProducers.ak8GenJets_cfi import ak8GenJets
         genjetAK8LS_str = 'genJetAK8LS'
-        setattr(process, genjetAK8LS_str,
-            ak8GenJets.clone(
-                src = cms.InputTag(LEPTONLESSGENPARTICLEPRODUCER_STR)
+        if not hasattr(process, genjetAK8LS_str):
+            setattr(process, genjetAK8LS_str,
+                ak8GenJets.clone(
+                    src = cms.InputTag(LEPTONLESSGENPARTICLEPRODUCER_STR)
+                )
             )
-        )
 
         # add lepton-subtracted generator-level jets to nanoAOD Ntuple
         genjetAK8LSTable_str = 'genJetAK8LSTable'
-        setattr(process, genjetAK8LSTable_str,
-            process.genJetAK8Table.clone(
-                src = cms.InputTag(genjetAK8LS_str),
-                name = cms.string("GenJetAK8LS"),
-                doc  = cms.string("genJetsAK8LS, i.e. ak8 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+        if not hasattr(process, genjetAK8LSTable_str):
+            setattr(process, genjetAK8LSTable_str,
+                process.genJetAK8Table.clone(
+                    src = cms.InputTag(genjetAK8LS_str),
+                    name = cms.string("GenJetAK8LS"),
+                    doc  = cms.string("genJetsAK8LS, i.e. ak8 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+                )
             )
-        )
 
         # add information on generator-level parton flavor to reconstructed jets
         genJetFlavourAssociationAK8LS_str = 'genJetFlavourAssociationAK8LS%s' % suffix

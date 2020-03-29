@@ -2,8 +2,12 @@ import FWCore.ParameterSet.Config as cms
 
 from PhysicsTools.NanoAOD.common_cff import Var, ExtVar, P4Vars
 from PhysicsTools.PatAlgos.tools.jetTools import updateJetCollection
+
 from Configuration.Eras.Modifier_run2_miniAOD_80XLegacy_cff import run2_miniAOD_80XLegacy
 from Configuration.Eras.Modifier_run2_nanoAOD_94X2016_cff import run2_nanoAOD_94X2016
+
+from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
+from RecoJets.JetProducers.ak4GenJets_cfi import ak4GenJets
 
 from tthAnalysis.NanoAOD.addLeptonSubtractedPFCands import addLeptonSubtractedPFCands, \
                                                            LEPTONLESSGENPARTICLEPRODUCER_STR
@@ -127,7 +131,6 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
     # ----------------------------------------------------------------------------
 
-    from RecoJets.JetProducers.PileupJetID_cfi import pileupJetId
     pileupJetId_str = 'pileupJetId%s' % NoLep_str
     setattr(process, pileupJetId_str,
         pileupJetId.clone(
@@ -214,23 +217,24 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
 
         #----------------------------------------------------------------------------
         # produce lepton-subtracted generator-level jets
-        from RecoJets.JetProducers.ak4GenJets_cfi import ak4GenJets
         genjetAK4LS_str = 'genJetAK4LS'
-        setattr(process, genjetAK4LS_str,
-            ak4GenJets.clone(
-                src = cms.InputTag(LEPTONLESSGENPARTICLEPRODUCER_STR)
+        if not hasattr(process, genjetAK4LS_str):
+            setattr(process, genjetAK4LS_str,
+                ak4GenJets.clone(
+                    src = cms.InputTag(LEPTONLESSGENPARTICLEPRODUCER_STR)
+                )
             )
-        )
 
         # add lepton-subtracted generator-level jets to nanoAOD Ntuple
         genjetAK4LSTable_str = 'genJetAK4LSTable'
-        setattr(process, genjetAK4LSTable_str,
-            process.genJetTable.clone(
-                src = cms.InputTag(genjetAK4LS_str),
-                name = cms.string("GenJetAK4LS"),
-                doc  = cms.string("genJetsAK4LS, i.e. ak4 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+        if not hasattr(process, genjetAK4LSTable_str):
+            setattr(process, genjetAK4LSTable_str,
+                process.genJetTable.clone(
+                    src = cms.InputTag(genjetAK4LS_str),
+                    name = cms.string("GenJetAK4LS"),
+                    doc  = cms.string("genJetsAK4LS, i.e. ak4 Jets made with visible genparticles excluding prompt leptons and leptons from tau decays"),
+                )
             )
-        )
 
         # add information on generator-level parton flavor to reconstructed jets
         genJetFlavourAssociationAK4LS_str = 'genJetFlavourAssociationAK4LS%s' % suffix
