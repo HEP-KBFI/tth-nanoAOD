@@ -277,6 +277,7 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         setattr(process, genSubJetAK8Table_str,
             process.genSubJetAK8Table.clone(
                 src = cms.InputTag(genSubJetAK8LS_str, "SubJets"),
+                cut = cms.string("pt > 8"), # same as for AK4 gen jets
                 name = cms.string("SubGenJetAK8LS%s" % suffix),
                 doc = cms.string("%s, i.e. subjets of ak8LS Jets made with visible genparticles" % genSubJetAK8LS_str),
             )
