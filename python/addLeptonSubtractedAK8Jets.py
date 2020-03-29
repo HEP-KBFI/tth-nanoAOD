@@ -272,6 +272,15 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
                 jetFlavourInfos = cms.InputTag(genJetFlavourAssociationAK8LS_str)
             )
         )
+        genSubJetAK8LS_str = "ak8GenJetsNoNuSoftDrop%s" % NoLep_str
+        genSubJetAK8Table_str = 'genSubJetAK8LS%sTable' % suffix # NB! must end with 'Table'
+        setattr(process, genSubJetAK8Table_str,
+            process.genSubJetAK8Table.clone(
+                src = cms.InputTag(genSubJetAK8LS_str, "SubJets"),
+                name = cms.string("SubGenJetAK8LS%s" % suffix),
+                doc = cms.string("%s, i.e. subjets of ak8LS Jets made with visible genparticles" % genSubJetAK8LS_str),
+            )
+        )
     #----------------------------------------------------------------------------
     subJetAK8LSTable_str = 'subJetAK8LS%sTable' % suffix # NB! must end with 'Table'
     setattr(process, subJetAK8LSTable_str,
@@ -312,7 +321,8 @@ def addLeptonSubtractedAK8Jets(process, runOnMC, era, useFakeable, addQJets = Fa
         leptonSubtractedJetSequence += getattr(process, genjetAK8LS_str) + \
                                        getattr(process, genjetAK8LSTable_str) + \
                                        getattr(process, genJetFlavourAssociationAK8LS_str) + \
-                                       getattr(process, genJetFlavourAK8LSTable)
+                                       getattr(process, genJetFlavourAK8LSTable) + \
+                                       getattr(process, genSubJetAK8Table_str)
 
     _leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
     _leptonSubtractedJetSequence_80X.replace(getattr(process, tightJetIdLepVetoAK8LS_str), getattr(process, looseJetIdAK8LS_str))
