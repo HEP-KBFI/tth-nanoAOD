@@ -1,4 +1,4 @@
-# file generated at 2020-01-22 13:36:07 with the following command:
+# file generated at 2020-03-31 22:56:07 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -196,6 +196,27 @@
 /ZZTo4L_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM                                                   1 ZZ         ZZTo4L_ext2                                            1.256       # NLO [12][17]
 /ZZTo2L2Nu_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                                     0 ZZ         ZZTo2L2Nu                                              0.564       # NLO [17]
 /ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                        0 ZZ         ZZTo2L2Q                                               5.52        # NLO [17]
+/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                     1 ZZ         ggZZTo4tau                                             0.00159     # LO [15]
+/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                                1 ZZ         ggZZTo4tau_ext1                                        0.00159     # LO [15]
+/GluGluToContinToZZTo4tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                             1 ZZ         ggZZTo4tau_TuneCP5                                     0.00159     # LO [15]
+/GluGluToContinToZZTo4tau_TuneCP5_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM                        1 ZZ         ggZZTo4tau_TuneCP5_ext2                                0.00159     # LO [15]
+/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                      1 ZZ         ggZZTo4mu                                              0.00159     # LO [15]
+/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                                 1 ZZ         ggZZTo4mu_ext1                                         0.00159     # LO [15]
+/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM                                 1 ZZ         ggZZTo4mu_ext2                                         0.00159     # LO [15]
+/GluGluToContinToZZTo4mu_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                              1 ZZ         ggZZTo4mu_TuneCP5                                      0.00159     # LO [15]
+/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM                                       1 ZZ         ggZZTo4e                                               0.00159     # LO [15]
+/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                                  1 ZZ         ggZZTo4e_ext1                                          0.00159     # LO [15]
+/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM                                  1 ZZ         ggZZTo4e_ext2                                          0.00159     # LO [15]
+/GluGluToContinToZZTo4e_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                               1 ZZ         ggZZTo4e_TuneCP5                                       0.00159     # LO [15]
+/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM                                   1 ZZ         ggZZTo2e2tau                                           0.00319     # LO [15]
+/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                              1 ZZ         ggZZTo2e2tau_ext1                                      0.00319     # LO [15]
+/GluGluToContinToZZTo2e2tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                           1 ZZ         ggZZTo2e2tau                                           0.00319     # LO [15]
+/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM                                    1 ZZ         ggZZTo2e2mu                                            0.00319     # LO [15]
+/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                               1 ZZ         ggZZTo2e2mu_ext1                                       0.00319     # LO [15]
+/GluGluToContinToZZTo2e2mu_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                            1 ZZ         ggZZTo2e2mu_TuneCP5                                    0.00319     # LO [15]
+/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM                                  1 ZZ         ggZZTo2mu2tau                                          0.00319     # LO [15]
+/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM                             1 ZZ         ggZZTo2mu2tau_ext1                                     0.00319     # LO [15]
+/GluGluToContinToZZTo2mu2tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                          1 ZZ         ggZZTo2mu2tau_TuneCP5                                  0.00319     # LO [15]
 
 # qcd
 /QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM                                  0 QCD        QCD_Pt20to30_bcToE                                305400.0         # ?; measured on 2018 sample(s) with GenXsecAnalyzer

@@ -1,4 +1,4 @@
-# file generated at 2020-01-22 13:36:07 with the following command:
+# file generated at 2020-03-31 22:56:07 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 ttHToNonbb_M125_powheg                  ttHToNonbb_M125_powheg_ext1
@@ -40,3 +40,9 @@ WWTo2L2Nu                               WWTo2L2Nu_PSweights_ext1
 WWToLNuQQ                               WWToLNuQQ_ext1                                    WWToLNuQQ_PSweights_ext1
 WWTo4Q                                  WWTo4Q_PSweights_ext1
 ZZTo4L                                  ZZTo4L_ext1                                       ZZTo4L_ext2
+ggZZTo4tau                              ggZZTo4tau_ext1                                   ggZZTo4tau_TuneCP5       ggZZTo4tau_TuneCP5_ext2
+ggZZTo4mu                               ggZZTo4mu_ext1                                    ggZZTo4mu_ext2           ggZZTo4mu_TuneCP5
+ggZZTo4e                                ggZZTo4e_ext1                                     ggZZTo4e_ext2            ggZZTo4e_TuneCP5
+ggZZTo2e2tau                            ggZZTo2e2tau_ext1                                 ggZZTo2e2tau
+ggZZTo2e2mu                             ggZZTo2e2mu_ext1                                  ggZZTo2e2mu_TuneCP5
+ggZZTo2mu2tau                           ggZZTo2mu2tau_ext1                                ggZZTo2mu2tau_TuneCP5
