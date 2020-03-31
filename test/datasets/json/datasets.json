@@ -5996,27 +5996,11 @@
             {
               "dbs": "/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM",
               "alt": "ggZZTo4tau_ext1"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
-              "alt": "ggZZTo4tau_TuneCP5"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4tau_TuneCP5_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM",
-              "alt": "ggZZTo4tau_TuneCP5_ext2"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
-              "alt": "ggZZTo4tau_TuneCP5"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4tau_TuneCP5_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM",
-              "alt": "ggZZTo4tau_TuneCP5_ext1"
             }
           ]
         },
@@ -6057,10 +6041,6 @@
             {
               "dbs": "/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM",
               "alt": "ggZZTo4mu_ext2"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4mu_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
-              "alt": "ggZZTo4mu_TuneCP5"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -6070,10 +6050,6 @@
             {
               "dbs": "/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM",
               "alt": "ggZZTo4mu_ext1"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4mu_13TeV_TuneCP5_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
-              "alt": "ggZZTo4mu_TuneCP5"
             }
           ]
         },
@@ -6114,10 +6090,6 @@
             {
               "dbs": "/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext2-v1/MINIAODSIM",
               "alt": "ggZZTo4e_ext2"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4e_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
-              "alt": "ggZZTo4e_TuneCP5"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -6127,10 +6099,6 @@
             {
               "dbs": "/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM",
               "alt": "ggZZTo4e_ext1"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo4e_13TeV_TuneCP5_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
-              "alt": "ggZZTo4e_TuneCP5"
             }
           ]
         },
@@ -6167,19 +6135,11 @@
             {
               "dbs": "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM",
               "alt": "ggZZTo2e2tau_ext1"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo2e2tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
-              "atl" : "ggZZTo2e2tau_TuneCP5"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3/MINIAODSIM"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo2e2tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
-              "alt": "ggZZTo2e2tau_TuneCP5"
             }
           ]
         },
@@ -6216,19 +6176,11 @@
             {
               "dbs": "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM",
               "alt": "ggZZTo2e2mu_ext1"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo2e2mu_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
-              "alt": "ggZZTo2e2mu_TuneCP5"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3/MINIAODSIM"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo2e2mu_13TeV_TuneCP5_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
-              "alt": "ggZZTo2e2mu_TuneCP5"
             }
           ]
         },
@@ -6265,19 +6217,11 @@
             {
               "dbs": "/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM",
               "alt": "ggZZTo2mu2tau_ext1"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo2mu2tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
-              "alt": "ggZZTo2mu2tau_TuneCP5"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v4/MINIAODSIM"
-            },
-            {
-              "dbs": "/GluGluToContinToZZTo2mu2tau_13TeV_TuneCP5_MCFM701_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
-              "alt": "ggZZTo2mu2tau_TuneCP5"
             }
           ]
         },
