@@ -1,4 +1,4 @@
-from CRABClient.UserUtilities import config, getUsernameFromSiteDB
+from CRABClient.UserUtilities import config, getUsernameFromCRIC
 
 import re
 import os
@@ -34,8 +34,9 @@ id_head = '{}_{}'.format(NANOAOD_VER, CHUNK_VER) if CHUNK_VER else NANOAOD_VER
 id_     = '%s_%s__%s' % (id_head, dataset_match.group(1), dataset_match.group(2))
 requestName      = id_
 outputDatasetTag = id_
+crabUserName = getUsernameFromCRIC()
 
-max_outputDatasetTag_len = 160 - len(getUsernameFromSiteDB())
+max_outputDatasetTag_len = 160 - len(crabUserName)
 if len(outputDatasetTag) > max_outputDatasetTag_len:
   outputDatasetTag = outputDatasetTag[:max_outputDatasetTag_len]
 
@@ -79,7 +80,7 @@ else:
   config.Data.inputDataset = dataset_name
   config.Data.inputDBS     = 'global'
 
-config.Data.outLFNDirBase             = '/store/user/%s/%s' % (getUsernameFromSiteDB(), NANOAOD_VER)
+config.Data.outLFNDirBase             = '/store/user/%s/%s' % (crabUserName, NANOAOD_VER)
 config.Data.publication               = PUBLISH
 config.Data.outputDatasetTag          = outputDatasetTag
 config.Data.allowNonValidInputDataset = True
