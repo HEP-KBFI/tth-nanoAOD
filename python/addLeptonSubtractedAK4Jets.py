@@ -181,7 +181,7 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     )
     for modifier in run2_miniAOD_80XLegacy, run2_nanoAOD_94X2016:
         modifier.toModify(getattr(process, jetsAK4LSWithUserData_str).userInts,
-            looseId = cms.InputTag("looseJetId"),
+            looseId = cms.InputTag(looseJetIdAK4LS_str),
         )
     #----------------------------------------------------------------------------
 
@@ -275,11 +275,11 @@ def addLeptonSubtractedAK4Jets(process, runOnMC, era, useFakeable):
     #----------------------------------------------------------------------------
 
     _leptonSubtractedJetSequence_80X = leptonSubtractedJetSequence.copy()
-    _leptonSubtractedJetSequence_80X.replace(getattr(process, tightJetIdLepVetoAK4LS_str), getattr(process, looseJetIdAK4LS_str))
+    _leptonSubtractedJetSequence_80X.insert(_leptonSubtractedJetSequence_80X.index(getattr(process, tightJetIdAK4LS_str)), getattr(process, looseJetIdAK4LS_str))
     run2_miniAOD_80XLegacy.toReplaceWith(leptonSubtractedJetSequence, _leptonSubtractedJetSequence_80X)
 
     _leptonSubtractedJetSequence_94X2016 = leptonSubtractedJetSequence.copy()
-    _leptonSubtractedJetSequence_94X2016.replace(getattr(process, tightJetIdLepVetoAK4LS_str), getattr(process, looseJetIdAK4LS_str))
+    _leptonSubtractedJetSequence_94X2016.insert(_leptonSubtractedJetSequence_94X2016.index(getattr(process, tightJetIdAK4LS_str)), getattr(process, looseJetIdAK4LS_str))
     run2_nanoAOD_94X2016.toReplaceWith(leptonSubtractedJetSequence, _leptonSubtractedJetSequence_94X2016)
 
     leptonSubtractedJetSequence_str = 'leptonSubtractedJetSequenceAK4LS%s' % suffix
