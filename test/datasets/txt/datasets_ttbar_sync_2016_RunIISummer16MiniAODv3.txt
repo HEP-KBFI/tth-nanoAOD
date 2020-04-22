@@ -1,0 +1,9 @@
+# file generated at 2020-04-22 07:23:55 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets_ttbar_sync.json
+
+# ttbar
+/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM 1 background TTTo2L2Nu 88.4 /local/snandan/store/mc/RunIISummer16MiniAODv3/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v1/50000/ACE0EBE3-2B73-E911-8717-0242AC130002.root  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+
+# References:
+# [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO
+# [2] http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043
