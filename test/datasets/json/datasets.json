@@ -6001,12 +6001,12 @@
           ]
         },
         "xs": {
-          "value": 0.00159,
-          "order": "LO",
+          "value": 0.00349,
+          "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+            "https://arxiv.org/pdf/1609.09719.pdf"
           ],
-          "comment": ""
+          "comment": "Table 1, scale @ m(4l)/2"
         }
       },
       {
@@ -6050,12 +6050,12 @@
           ]
         },
         "xs": {
-          "value": 0.00159,
-          "order": "LO",
+          "value": 0.00349,
+          "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+            "https://arxiv.org/pdf/1609.09719.pdf"
           ],
-          "comment": ""
+          "comment": "Table 1, scale @ m(4l)/2"
         }
       },
       {
@@ -6099,12 +6099,12 @@
           ]
         },
         "xs": {
-          "value": 0.00159,
-          "order": "LO",
+          "value": 0.00349,
+          "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+            "https://arxiv.org/pdf/1609.09719.pdf"
           ],
-          "comment": ""
+          "comment": "Table 1, scale @ m(4l)/2"
         }
       },
       {
@@ -6140,12 +6140,12 @@
           ]
         },
         "xs": {
-          "value": 0.00319,
-          "order": "LO",
+          "value": 0.00698,
+          "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+            "https://arxiv.org/pdf/1609.09719.pdf"
           ],
-          "comment": ""
+          "comment": "Table 1, scale @ m(4l)/2"
         }
       },
       {
@@ -6181,12 +6181,12 @@
           ]
         },
         "xs": {
-          "value": 0.00319,
-          "order": "LO",
+          "value": 0.00698,
+          "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+            "https://arxiv.org/pdf/1609.09719.pdf"
           ],
-          "comment": ""
+          "comment": "Table 1, scale @ m(4l)/2"
         }
       },
       {
@@ -6222,12 +6222,12 @@
           ]
         },
         "xs": {
-          "value": 0.00319,
-          "order": "LO",
+          "value": 0.00698,
+          "order": "NLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+            "https://arxiv.org/pdf/1609.09719.pdf"
           ],
-          "comment": ""
+          "comment": "Table 1, scale @ m(4l)/2"
         }
       }
     ]
