@@ -37,7 +37,7 @@ html_template = """
       .content {
         padding-bottom: 100px;
         display: inline-block;
-        max-width: 1500px;
+        max-width: 1700px;
       }
     </style>
   </head>
@@ -59,7 +59,7 @@ html_template = """
 """
 
 table_template = """
-<table style="width:300px; float: left">
+<table style="width:250px; float: left">
   <tr>
     <th colspan="2" rowspan="2">resonant {{ decay_channel }}</th>
     {% for production_mode in production_modes %}
@@ -80,7 +80,7 @@ table_template = """
 """
 
 table_nonresonant_ggf_template = """
-<table style="width:300px; float: left">
+<table style="width:250px; float: left">
   <tr>
     <th>non-resonant ggf {{ decay_mode }}</th>
       {% for shape in shapes %}
