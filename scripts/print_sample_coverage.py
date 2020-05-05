@@ -165,6 +165,36 @@ table_nonresonant_vbf_template = """
 </table>
 """
 
+table_nonresonant_ggf_chhh_template = """
+<table style="width:600px; float: left">
+  <tr>
+    <th>non-resonant ggf {{ decay_mode }}</th>
+      {% for chhh in chhhs %}
+        <th>c<sub>3H</sub> = {{ chhh | replace("p",".") }}</th>
+      {% endfor %}
+  </tr>
+  {% for entry in entries %}
+    {{ entry }}
+  {% endfor %}
+  
+</table>
+"""
+
+entry_nonresonant_ggf_chhh_template = """
+{%- for era in eras -%}
+  <tr>
+      <td style="background-color: {% if loop.index % 3 == 0 %}#ffcccc{% elif loop.index % 3 == 1 %}#ccffcc{% else %}#ffffcc{% endif %}">{{ era }}</td>
+      {%- for chhh in chhhs -%}
+          <td {% if nonresonant_map[decay_channel][chhh][era] %}class="pos">
+            <a href="https://cmsweb.cern.ch/das/request?input={{ nonresonant_map[decay_channel][chhh][era] }}">
+              x
+            </a>
+          {% else %}class="neg">{% endif %}</td>
+      {%- endfor -%}
+  </tr> 
+{%- endfor -%}
+"""
+
 RR_PRODUCTION_MODE = 'production_mode'
 RR_SPIN            = 'spin'
 RR_MASS_POINT      = 'mass_point'
@@ -173,6 +203,7 @@ RR_SHAPE           = 'shape'
 RR_CV              = 'cv'
 RR_C2V             = 'c2v'
 RR_C3              = 'c3'
+RR_cHHH            = 'cHHH'
 
 RESONANT_REGEX_PATTERN = r'signal_(?P<%s>(ggf|vbf))_spin(?P<%s>[0|2]{1})_(?P<%s>\d+)_hh_(?P<%s>[0-9A-Za-z_]+)' % (
   RR_PRODUCTION_MODE, RR_SPIN, RR_MASS_POINT, RR_DECAY_CHANNEL
@@ -188,6 +219,11 @@ NONRESONANT_VBF_REGEX_PATTERN = r'signal_vbf_nonresonant_(?P<%s>(\d+(p\d+)?))_(?
   RR_CV, RR_C2V, RR_C3, RR_DECAY_CHANNEL
 )
 NONRESONANT_VBF_REGEX = re.compile(NONRESONANT_VBF_REGEX_PATTERN)
+
+NONRESONANT_GGF_CHHH_REGEX_PATTERN = r'signal_ggf_nonresonant_cHHH(?P<%s>[0-9A-Za-z_]+)_hh_(?P<%s>[0-9A-Za-z_]+)' % (
+  RR_cHHH, RR_DECAY_CHANNEL
+)
+NONRESONANT_GGF_CHHH_REGEX = re.compile(NONRESONANT_GGF_CHHH_REGEX_PATTERN)
 
 class SmartFormatter(argparse.HelpFormatter):
   def _split_lines(self, text, width):
@@ -206,23 +242,27 @@ def get_tables(fn, required):
   resonant_map = {}
   nonresonant_map_ggf = {}
   nonresonant_map_vbf = {}
+  nonresonant_map_ggf_chhh = {}
 
   resonant_map_agg = { name : [] for name in [ 'decay_channel', 'spin', 'production_mode', 'mass_point' ] }
   nonresonant_map_ggf_agg = { name : [] for name in [ 'decay_channel', 'shape' ] }
   nonresonant_map_vbf_agg = { name: [] for name in [ 'decay_channel', 'cv', 'c2v', 'c3' ] }
+  nonresonant_map_ggf_chhh_agg = { name: [] for name in [ 'decay_channel', 'chhh' ] }
 
   add_to_resonant_map_agg = lambda key, value: add_to_map(resonant_map_agg, key, value)
   add_to_nonresonant_ggf_agg = lambda key, value: add_to_map(nonresonant_map_ggf_agg, key, value)
   add_to_nonresonant_vbf_agg = lambda key, value: add_to_map(nonresonant_map_vbf_agg, key, value)
+  add_to_nonresonant_ggf_chh_agg = lambda key, value: add_to_map(nonresonant_map_ggf_chhh_agg, key, value)
 
   for e in j:
     for sample in e['samples']:
       c = sample['name']
       s = { camp : sample['datasets'][camp][0]['dbs'] if sample['datasets'][camp] else '' for camp in required }
 
-      m_res        = RESONANT_REGEX.match(c)
-      m_nonres_ggf = NONRESONANT_GGF_REGEX.match(c)
-      m_nonres_vbf = NONRESONANT_VBF_REGEX.match(c)
+      m_res             = RESONANT_REGEX.match(c)
+      m_nonres_ggf      = NONRESONANT_GGF_REGEX.match(c)
+      m_nonres_vbf      = NONRESONANT_VBF_REGEX.match(c)
+      m_nonres_ggf_chhh = NONRESONANT_GGF_CHHH_REGEX.match(c)
 
       if m_res:
         production_mode = m_res.group(RR_PRODUCTION_MODE)
@@ -278,6 +318,16 @@ def get_tables(fn, required):
         add_to_nonresonant_vbf_agg('cv', cv)
         add_to_nonresonant_vbf_agg('c2v', c2v)
         add_to_nonresonant_vbf_agg('c3', c3)
+      elif m_nonres_ggf_chhh:
+        decay_channel = m_nonres_ggf_chhh.group(RR_DECAY_CHANNEL)
+        chhh          = m_nonres_ggf_chhh.group(RR_cHHH)
+        if 'p' not in chhh:
+          chhh += 'p0'
+        if decay_channel not in nonresonant_map_ggf_chhh:
+          nonresonant_map_ggf_chhh[decay_channel] = {}
+        nonresonant_map_ggf_chhh[decay_channel][chhh] = copy.deepcopy(s)
+        add_to_nonresonant_ggf_chh_agg('decay_channel', decay_channel)
+        add_to_nonresonant_ggf_chh_agg('chhh', chhh)
 
       else:
         raise RuntimeError("Invalid category: %s" % c)
@@ -306,8 +356,6 @@ def get_tables(fn, required):
         nonresonant_map_ggf[decay_channel][shape] = { camp : '' for camp in required }
 
   for coupling in [ 'cv', 'c2v', 'c3' ]:
-    #for val in [ '0p5', '1p0', '1p5', '2p0' ]:
-    #  add_to_nonresonant_vbf_agg(coupling, val)
     nonresonant_map_vbf_agg[coupling] = sorted(
       nonresonant_map_vbf_agg[coupling],
       key = lambda val: float(val.replace('p', '.'))
@@ -324,6 +372,16 @@ def get_tables(fn, required):
         for c3 in nonresonant_map_vbf_agg['c3']:
           if c3 not in nonresonant_map_vbf[decay_channel][cv][c2v]:
             nonresonant_map_vbf[decay_channel][cv][c2v][c3] = { camp : '' for camp in required }
+
+  nonresonant_map_ggf_chhh_agg['chhh'] = sorted(
+    nonresonant_map_ggf_chhh_agg['chhh'], key = lambda val: float(val.replace('p', '.'))
+  )
+  for decay_channel in nonresonant_map_ggf_chhh_agg['decay_channel']:
+    if decay_channel not in nonresonant_map_ggf_chhh:
+      nonresonant_map_ggf_chhh[decay_channel] = {}
+    for chhh in nonresonant_map_ggf_chhh_agg['chhh']:
+      if chhh not in nonresonant_map_ggf_chhh[decay_channel]:
+        nonresonant_map_ggf_chhh[decay_channel][chhh] = { camp : '' for camp in required }
 
   tables_nonres_vbf = []
   for decay_channel in nonresonant_map_vbf_agg['decay_channel']:
@@ -354,6 +412,23 @@ def get_tables(fn, required):
     )
     tables_nonres_ggf.append(table)
 
+  tables_nonres_ggf_chhh = []
+  for decay_channel in nonresonant_map_ggf_chhh_agg['decay_channel']:
+    entries = []
+    entry = jinja2.Template(entry_nonresonant_ggf_chhh_template).render(
+      eras = required,
+      decay_channel = decay_channel,
+      chhhs = nonresonant_map_ggf_chhh_agg['chhh'],
+      nonresonant_map = nonresonant_map_ggf_chhh,
+    )
+    entries.append(entry)
+    table_nonres_ggf_chhh = jinja2.Template(table_nonresonant_ggf_chhh_template).render(
+      decay_mode = decay_channel,
+      entries = entries,
+      chhhs = nonresonant_map_ggf_chhh_agg['chhh'],
+    )
+    tables_nonres_ggf_chhh.append(table_nonres_ggf_chhh)
+
   tables_res = []
   for decay_channel in resonant_map_agg['decay_channel']:
     entries = []
@@ -377,7 +452,7 @@ def get_tables(fn, required):
     )
     tables_res.append(table)
 
-  return tables_res, tables_nonres_ggf, tables_nonres_vbf
+  return tables_res, tables_nonres_ggf, tables_nonres_vbf, tables_nonres_ggf_chhh
 
 if __name__ == '__main__':
   basedir = os.path.join(os.environ['CMSSW_BASE'], 'src', 'tthAnalysis', 'NanoAOD', 'test', 'datasets', 'json',)
@@ -403,17 +478,18 @@ if __name__ == '__main__':
   )
   args = parser.parse_args()
 
-  tables_res, tables_nonres_ggf, tables_nonres_vbf = [], [], []
+  tables_res, tables_nonres_ggf, tables_nonres_vbf, tables_nonres_ggf_chhh = [], [], [], []
   for fn in args.input:
     if not os.path.isfile(fn):
       raise ValueError("No such file: %s" % fn)
-    res, nonres_ggf, nonres_vbf = get_tables(fn, args.eras)
+    res, nonres_ggf, nonres_vbf, nonres_ggf_chhh = get_tables(fn, args.eras)
     tables_res.extend(res)
     tables_nonres_ggf.extend(nonres_ggf)
     tables_nonres_vbf.extend(nonres_vbf)
+    tables_nonres_ggf_chhh.extend(nonres_ggf_chhh)
 
   html = jinja2.Template(html_template).render(
-    table_sets = [ tables_res, tables_nonres_ggf, tables_nonres_vbf ],
+    table_sets = [ tables_res, tables_nonres_ggf, tables_nonres_vbf, tables_nonres_ggf_chhh ],
     current_time = str(datetime.datetime.now()),
   )
 
