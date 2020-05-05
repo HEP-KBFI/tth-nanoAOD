@@ -2614,6 +2614,150 @@
     ]
   },
   {
+    "category": "signal_ggf_nonresonant_cHHH0_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH0_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH1_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH1_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH2p45_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH2p45_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH5_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH5_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.026422,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_ggf_nonresonant_hh_bbvv_sl",
     "comment": "",
     "samples": [
@@ -3030,6 +3174,150 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.109352,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH0_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH0_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.109352,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH1_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH1_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.109352,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH2p45_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH2p45_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.109352,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH5_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH5_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2VLNu2J_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.109352,
@@ -9276,6 +9564,150 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH0_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH0_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH1_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH1_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH2p45_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH2p45_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.073056,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->tau tau)=2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_nonresonant_cHHH5_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_nonresonant_cHHH5_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo2B2Tau_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.073056,
