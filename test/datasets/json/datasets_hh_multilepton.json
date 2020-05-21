@@ -8320,13 +8320,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.0000067850,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.001668*1.034*0.06272^2"
         }
       }
     ]
@@ -8352,13 +8353,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.0000055932,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.001375*1.034*0.06272^2"
         }
       }
     ]
@@ -8384,13 +8386,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.0000558910,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01374*1.034*0.06272^2"
         }
       }
     ]
@@ -8416,13 +8419,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.0000181178,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.004454*1.034*0.06272^2"
         }
       }
     ]
@@ -8448,13 +8452,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.0000425487,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01046*1.034*0.06272^2"
         }
       }
     ]
@@ -8480,13 +8485,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.0002595228,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.0638*1.034*0.06272^2"
         }
       }
     ]
@@ -8512,13 +8518,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.0000519000,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.001668*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -8544,13 +8551,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.0000427833,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.001375*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -8576,13 +8584,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.0004275219,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01374*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -8608,13 +8617,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.0001385868,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.004454*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -8640,13 +8650,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.0003254642,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01046*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -8672,13 +8683,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.0019851452,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.0638*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -9176,13 +9188,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.00026349,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.06007*1.115*0.06272^2"
         }
       }
     ]
@@ -9212,13 +9225,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.00011734,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.02675*1.115*0.06272^2"
         }
       }
     ]
@@ -9248,13 +9262,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.00004970,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01133*1.115*0.06272^2"
         }
       }
     ]
@@ -9284,13 +9299,14 @@
           ]
         },
         "xs": {
-          "value": 0.003934,
-          "order": "",
+          "value": 0.00034666,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.07903*1.115*0.06272^2"
         }
       }
     ]
@@ -9686,13 +9702,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.00201550,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.06007*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -9722,13 +9739,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.00089753,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.02675*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -9758,13 +9776,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.00038015,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01133*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -9794,13 +9813,14 @@
           ]
         },
         "xs": {
-          "value": 0.030092,
-          "order": "",
+          "value": 0.00265166,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.07903*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10148,13 +10168,14 @@
           ]
         },
         "xs": {
-          "value": 0.057547,
-          "order": "",
+          "value": 0.00385439,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.06007*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10184,13 +10205,14 @@
           ]
         },
         "xs": {
-          "value": 0.057547,
-          "order": "",
+          "value": 0.00171641,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.02675*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10220,13 +10242,14 @@
           ]
         },
         "xs": {
-          "value": 0.057547,
-          "order": "",
+          "value": 0.00072699,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.01133*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10256,13 +10279,14 @@
           ]
         },
         "xs": {
-          "value": 0.057547,
-          "order": "",
+          "value": 0.00507095,
+          "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
-            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
-          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.07903*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
