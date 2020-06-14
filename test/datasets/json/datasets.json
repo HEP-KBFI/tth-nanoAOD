@@ -3429,12 +3429,12 @@
           ]
         },
         "xs": {
-          "value": 4620.52,
+          "value": 4953.2,
           "order": "NNLO",
           "references": [
             "https://indico.cern.ch/event/673253/contributions/2756806/attachments/1541203/2416962/20171016_VJetsXsecsUpdate_PH-GEN.pdf"
           ],
-          "comment": "will be redetermined because all components that enter the XS value have changed"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer: 5323.0 * k-factor = 5323.0 * 0.9305"
         }
       },
       {
@@ -3476,12 +3476,12 @@
           ]
         },
         "xs": {
-          "value": 859.59,
+          "value": 918.1,
           "order": "NNLO",
           "references": [
             "https://indico.cern.ch/event/673253/contributions/2756806/attachments/1541203/2416962/20171016_VJetsXsecsUpdate_PH-GEN.pdf"
           ],
-          "comment": "will be redetermined because all components that enter the XS value have changed"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer: 986.7 * k-factor = 986.7 * 0.9305"
         }
       },
       {
@@ -3523,12 +3523,12 @@
           ]
         },
         "xs": {
-          "value": 338.26,
+          "value": 343.4,
           "order": "NNLO",
           "references": [
             "https://indico.cern.ch/event/673253/contributions/2756806/attachments/1541203/2416962/20171016_VJetsXsecsUpdate_PH-GEN.pdf"
           ],
-          "comment": "will be redetermined because all components that enter the XS value have changed"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer: 369.0 * k-factor = 369.0 * 0.9305"
         }
       },
       {
@@ -4179,7 +4179,7 @@
             "https://indico.cern.ch/event/841566/contributions/3565385/attachments/1914850/3185933/Drell-Yan_jets_crosssection_September2019_update.pdf",
             "https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV"
           ],
-          "comment": "2075.14 * 3"
+          "comment": "2075.14 * 3; measured on 2018 sample(s) with GenXsecAnalyzer: k-factor = 6077.22 / 6531.0 = 0.9305"
         }
       },
       {
