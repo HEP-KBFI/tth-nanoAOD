@@ -1,4 +1,4 @@
-# file generated at 2020-06-13 15:35:52 with the following command:
+# file generated at 2020-06-14 13:11:38 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -98,8 +98,8 @@
 /DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM           0 EWK   DYJetsToLL_M-4to50_HT-600toInf                  2.1692      # NLO; measured on 2018 sample(s) with GenXsecAnalyzer is 1.844 x k-factor 1.17636
 /DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-RECOSIMstep_94X_mc2017_realistic_v10-v1/MINIAODSIM                     0 EWK   DYJetsToLL_M-50                              6077.22        # NNLO QCD, NLO EW [12][13]; 2075.14 * 3; measured on 2018 sample(s) with GenXsecAnalyzer is 5328.00; k-factor = 6077.22 / 5328.00 = 1.1406
 /DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-RECOSIMstep_94X_mc2017_realistic_v10_ext1-v1/MINIAODSIM                0 EWK   DYJetsToLL_M-50_ext1                         6077.22        # NNLO QCD, NLO EW [12][13]; 2075.14 * 3; measured on 2018 sample(s) with GenXsecAnalyzer is 5328.00; k-factor = 6077.22 / 5328.00 = 1.1406
-/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                         1 EWK   DYJetsToLL_M-50_amcatnloFXFX                 6077.22        # NNLO QCD, NLO EW [12][13]; 2075.14 * 3
-/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                    1 EWK   DYJetsToLL_M-50_amcatnloFXFX_ext1            6077.22        # NNLO QCD, NLO EW [12][13]; 2075.14 * 3
+/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                         1 EWK   DYJetsToLL_M-50_amcatnloFXFX                 6077.22        # NNLO QCD, NLO EW [12][13]; 2075.14 * 3; measured on 2018 sample(s) with GenXsecAnalyzer: k-factor = 6077.22 / 6531.0 = 0.9305
+/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                    1 EWK   DYJetsToLL_M-50_amcatnloFXFX_ext1            6077.22        # NNLO QCD, NLO EW [12][13]; 2075.14 * 3; measured on 2018 sample(s) with GenXsecAnalyzer: k-factor = 6077.22 / 6531.0 = 0.9305
 /DY1JetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                         0 EWK   DY1JetsToLL_M-50                              998.61        # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 875.50 x k-factor 1.1406
 /DY1JetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11_ext1-v1/MINIAODSIM                    0 EWK   DY1JetsToLL_M-50_ext1                         998.61        # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 875.50 x k-factor 1.1406
 /DY2JetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAOD-PU2017_94X_mc2017_realistic_v11-v1/MINIAODSIM                         0 EWK   DY2JetsToLL_M-50                              349.25        # NNLO QCD, NLO EW; measured on 2018 sample(s) with GenXsecAnalyzer is 306.20 x k-factor 1.1406
