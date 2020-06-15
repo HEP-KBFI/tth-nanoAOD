@@ -3429,12 +3429,12 @@
           ]
         },
         "xs": {
-          "value": 4953.2,
+          "value": 4843.6,
           "order": "NNLO",
           "references": [
             "https://indico.cern.ch/event/673253/contributions/2756806/attachments/1541203/2416962/20171016_VJetsXsecsUpdate_PH-GEN.pdf"
           ],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer: 5323.0 * k-factor = 5323.0 * 0.9305"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer, normalized to NNLO: s(njet=0) / sum(s(njet), njet = 0,1,2) * s(NNLO) = 5323.0 / 6678.7 * 6077.22"
         }
       },
       {
@@ -3476,12 +3476,12 @@
           ]
         },
         "xs": {
-          "value": 918.1,
+          "value": 897.8,
           "order": "NNLO",
           "references": [
             "https://indico.cern.ch/event/673253/contributions/2756806/attachments/1541203/2416962/20171016_VJetsXsecsUpdate_PH-GEN.pdf"
           ],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer: 986.7 * k-factor = 986.7 * 0.9305"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer, normalized to NNLO: s(njet=1) / sum(s(njet), njet = 0,1,2) * s(NNLO) = 986.7 / 6678.7 * 6077.22"
         }
       },
       {
@@ -3523,12 +3523,12 @@
           ]
         },
         "xs": {
-          "value": 343.4,
+          "value": 335.8,
           "order": "NNLO",
           "references": [
             "https://indico.cern.ch/event/673253/contributions/2756806/attachments/1541203/2416962/20171016_VJetsXsecsUpdate_PH-GEN.pdf"
           ],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer: 369.0 * k-factor = 369.0 * 0.9305"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer, normalized to NNLO: s(njet=2) / sum(s(njet), njet = 0,1,2) * s(NNLO) = 369.0 / 6678.7 * 6077.22"
         }
       },
       {
