@@ -1318,6 +1318,42 @@
         }
       },
       {
+        "name": "TTWJetsToLNu_EWK_5f_NLO",
+        "enabled": 0,
+        "use_case": "irreducible background",
+        "process": "ttW",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/TTWJetsToLNu_EWK_5f_NLO/RunIISummer16MiniAODv3/USER",
+              "loc": "/store/user/kaehatah/private/RunIISummer16MiniAODv3/TTWJetsToLNu_EWK_5f_NLO"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/TTWJetsToLNu_EWK_5f_NLO/RunIIFall17MiniAODv2/USER",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/TTWJetsToLNu_EWK_5f_NLO"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/TTWJetsToLNu_EWK_5f_NLO/RunIIAutumn18MiniAOD/USER",
+              "loc": "/store/user/kaehatah/private/RunIIAutumn18MiniAOD/TTWJetsToLNu_EWK_5f_NLO"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0162562,
+          "order": "NLO",
+          "references": [
+            "https://indico.cern.ch/event/922776/contributions/3876932/attachments/2057707/3451089/jun3.pdf"
+          ],
+          "comment": "xs figure circulated privately"
+        }
+      },
+      {
         "name": "TTWJetsToQQ",
         "enabled": 0,
         "use_case": "irreducible background",

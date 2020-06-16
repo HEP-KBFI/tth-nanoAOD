@@ -1,0 +1,8 @@
+# file generated at 2020-06-16 15:17:14 with the following command:
+# generate_dataset_table.py -i test/datasets/json/datasets.json
+
+# ttW
+/TTWJetsToLNu_EWK_5f_NLO/RunIISummer16MiniAODv3/USER 0 TTW TTWJetsToLNu_EWK_5f_NLO 0.0162562 /store/user/kaehatah/private/RunIISummer16MiniAODv3/TTWJetsToLNu_EWK_5f_NLO  # NLO [1]; xs figure circulated privately
+
+# References:
+# [1] https://indico.cern.ch/event/922776/contributions/3876932/attachments/2057707/3451089/jun3.pdf
