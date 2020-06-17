@@ -68,7 +68,7 @@ if WHITELIST:
 config.Site.storageSite = HOME_SITE
 
 if is_private:
-  config.Data.userInputFiles       = [ '/hdfs{}'.format(path) for path in PRIVATE_FILES.split('\n') ]
+  config.Data.userInputFiles       = [ 'file:/hdfs{}'.format(path) for path in PRIVATE_FILES.split('\n') ]
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
   config.Data.unitsPerJob          = 1
