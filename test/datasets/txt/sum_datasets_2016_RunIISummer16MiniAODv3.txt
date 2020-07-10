@@ -1,4 +1,4 @@
-# file generated at 2020-06-15 19:17:58 with the following command:
+# file generated at 2020-07-10 20:13:49 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 THQ_ctcvcp                              THQ_ctcvcp_CP5
@@ -42,6 +42,7 @@ WJetsToLNu_HT800To1200                  WJetsToLNu_HT800To1200_ext1
 WJetsToLNu_HT1200To2500                 WJetsToLNu_HT1200To2500_ext1
 WJetsToLNu_HT2500ToInf                  WJetsToLNu_HT2500ToInf_ext1
 WWToLNuQQ                               WWToLNuQQ_ext1
+ZZTo4L                                  ZZTo4L_ext1
 ZZTo2L2Nu                               ZZTo2L2Nu_ext1
 QCD_Pt30to50_EMEnriched                 QCD_Pt30to50_EMEnriched_ext1
 QCD_Pt50to80_EMEnriched                 QCD_Pt50to80_EMEnriched_ext1

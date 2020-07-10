@@ -5809,7 +5809,7 @@
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
             "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
           ],
-          "comment": "NLO-to-LO k-factor is 4.43 / 4.658 = 0.95105 (measured with xsecAnalyzer on 2018 sample)"
+          "comment": "NLO-to-LO k-factor is 4.43 / 4.658 = 0.95105 (measured with xsecAnalyzer on 2018 sample); sum of binned samples 4.38074 -> k-factor = 1.01124"
         }
       },
       {
@@ -5841,10 +5841,10 @@
           ]
         },
         "xs": {
-          "value": 2.3986,
+          "value": 2.55036,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 2.522 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 2.522 x k-factor 1.01124"
         }
       },
       {
@@ -5876,10 +5876,10 @@
           ]
         },
         "xs": {
-          "value": 0.6067,
+          "value": 0.64507,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.6379 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.6379 x k-factor 1.01124"
         }
       },
       {
@@ -5911,10 +5911,10 @@
           ]
         },
         "xs": {
-          "value": 0.46107,
+          "value": 0.49025,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.4848 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.4848 x k-factor 1.01124"
         }
       },
       {
@@ -5946,10 +5946,10 @@
           ]
         },
         "xs": {
-          "value": 0.3226,
+          "value": 0.34301,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.3392 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.3392 x k-factor 1.01124"
         }
       },
       {
@@ -5981,10 +5981,10 @@
           ]
         },
         "xs": {
-          "value": 0.15607,
+          "value": 0.16595,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.1641 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.1641 x k-factor 1.01124"
         }
       },
       {
@@ -6016,10 +6016,10 @@
           ]
         },
         "xs": {
-          "value": 0.063140,
+          "value": 0.06714,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.06639 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.06639 x k-factor 1.01124"
         }
       },
       {
@@ -6051,10 +6051,10 @@
           ]
         },
         "xs": {
-          "value": 0.06769,
+          "value": 0.07198,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.07118 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.07118 x k-factor 1.01124"
         }
       },
       {
@@ -6086,10 +6086,10 @@
           ]
         },
         "xs": {
-          "value": 0.090512,
+          "value": 0.09624,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.09517 x k-factor 0.95105"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.09517 x k-factor 1.01124"
         }
       },
       {
@@ -6193,7 +6193,12 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/ZZTo4L_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+              "dbs": "/ZZTo4L_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "ZZTo4L"
+            },
+            {
+              "dbs": "/ZZTo4L_13TeV_powheg_pythia8_ext1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "ZZTo4L_ext1"
             }
           ],
           "RunIIFall17MiniAOD": [
