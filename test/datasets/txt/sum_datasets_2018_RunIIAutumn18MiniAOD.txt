@@ -1,4 +1,4 @@
-# file generated at 2020-07-11 18:33:59 with the following command:
+# file generated at 2020-07-12 12:34:56 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 GluGluHToMuMu_M125                  GluGluHToMuMu_M125_ext1
@@ -10,6 +10,7 @@ WplusH_HToBB_WToLNu                 WplusH_HToBB_WToLNu_ext1
 DYJetsToLL_M-50_amcatnloFXFX        DYJetsToLL_M-50_amcatnloFXFX_ext2
 DYJetsToLL_M50_HT400to600_PSweights DYJetsToLL_M50_HT400to600_PSweights_ext2
 WZTo3LNu                            WZTo3LNu_ext1
+WZTo3LNu_powheg_ext1                WZTo3LNu_mllmin01
 ZZTo4L_ext1                         ZZTo4L_ext2
 ZZTo2L2Nu_ext1                      ZZTo2L2Nu_ext2
 ggZZTo4mu                           ggZZTo4mu_ext1

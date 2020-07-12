@@ -1,4 +1,4 @@
-# file generated at 2020-07-11 18:33:59 with the following command:
+# file generated at 2020-07-12 12:34:56 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 ttHToNonbb_M125_powheg           ttHToNonbb_M125_powheg_fastsim_p1     ttHToNonbb_M125_powheg_fastsim_p2 ttHToNonbb_M125_powheg_fastsim_p3
@@ -47,7 +47,7 @@ WJetsToLNu_HT1200To2500          WJetsToLNu_HT1200To2500_ext1
 WJetsToLNu_HT2500ToInf           WJetsToLNu_HT2500ToInf_ext1
 WWToLNuQQ                        WWToLNuQQ_ext1                        WWToLNuQQ_ext2
 WZTo3LNu                         WZTo3LNu_fastsim
-WZTo3LNu_mllmin01                WZTo3LNu_mllmin01_ext1
+WZTo3LNu_powheg                  WZTo3LNu_mllmin01                     WZTo3LNu_mllmin01_ext1
 ZZTo2L2Nu                        ZZTo2L2Nu_ext1
 QCD_Pt30to50_EMEnriched          QCD_Pt30to50_EMEnriched_ext1
 QCD_Pt50to80_EMEnriched          QCD_Pt50to80_EMEnriched_ext1
