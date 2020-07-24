@@ -109,6 +109,46 @@
           ],
           "comment": "s(ttH) * (1 - br(H -> bb)) = 0.5071 * (1 - 0.5824)"
         }
+      },
+      {
+        "name": "ttHJetTobb_M125",
+        "enabled": 0,
+        "use_case": "irreducible background",
+        "process": "ttH",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [
+            {
+              "dbs": "/ttHJetTobb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext3-v1/MINIAODSIM",
+              "alt": "ttHJetTobb_M125_ext3"
+            }
+          ],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/ttHJetTobb_M125_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext3-v2/MINIAODSIM",
+              "alt": "ttHJetTobb_M125_ext3"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/ttHJetTobb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/ttHJetTobb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.2953,
+          "order": "NLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"
+          ],
+          "comment": "s(ttH) * br(H -> bb) = 0.5071 * 0.5824"
+        }
       }
     ]
   },

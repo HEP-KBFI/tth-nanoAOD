@@ -1,9 +1,10 @@
-# file generated at 2020-07-12 12:34:56 with the following command:
+# file generated at 2020-07-24 21:05:33 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
 /ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                1 ttH        ttHJetToNonbb_M125_amcatnlo                   0.2118      # NLO [1][2]; s(ttH) * (1 - br(h -> bb)) = 0.5071 * (1 - 0.5824)
 /ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM                                 0 ttH        ttHToNonbb_M125_powheg                        0.2118      # NLO [1][2]; s(ttH) * (1 - br(H -> bb)) = 0.5071 * (1 - 0.5824)
+/ttHJetTobb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                   0 ttH        ttHJetTobb_M125                               0.2953      # NLO [1][2]; s(ttH) * br(H -> bb) = 0.5071 * 0.5824
 /TTH_4f_ctcvcp_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                 0 ttH_ctcvcp TTH_4f_ctcvcp                                 0.5071      # NLO [2]
 
 # THq
