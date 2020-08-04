@@ -1,4 +1,4 @@
-# file generated at 2020-07-24 21:05:33 with the following command:
+# file generated at 2020-08-04 17:43:49 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 GluGluHToZZTo4L                  GluGluHToZZTo4L_ext1
@@ -13,9 +13,6 @@ TTTo2L2Nu                        TTTo2L2Nu_PSweights
 TTToSemiLeptonic                 TTToSemiLeptonic_PSweights
 TTToHadronic                     TTToHadronic_PSweights
 TTGJets                          TTGJets_ext1
-DYJetsToLL_M-4to50_HT-100to200   DYJetsToLL_M-4to50_HT-100to200_ext1
-DYJetsToLL_M-4to50_HT-200to400   DYJetsToLL_M-4to50_HT-200to400_ext1
-DYJetsToLL_M-4to50_HT-400to600   DYJetsToLL_M-4to50_HT-400to600_ext1
 DYJetsToLL_M-50                  DYJetsToLL_M-50_ext1
 DYJetsToLL_M-50_amcatnloFXFX     DYJetsToLL_M-50_amcatnloFXFX_ext1
 DY1JetsToLL_M-50                 DY1JetsToLL_M-50_ext1
