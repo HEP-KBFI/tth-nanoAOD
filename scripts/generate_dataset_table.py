@@ -156,12 +156,13 @@ for category_entry in json_data:
         location = dataset_entry['loc'] if 'loc' in dataset_entry else ''
         filename = dataset_entry['file'] if 'file' in dataset_entry else ''
         sample_enabled = dataset_entry['enabled'] if 'enabled' in dataset_entry else enabled
-        sum_entry.append(dataset_name)
 
         if HH_NONRES_RE.match(category):
           if category not in sums_hh_nonres[era]:
             sums_hh_nonres[era][category] = []
           sums_hh_nonres[era][category].append(dataset_name)
+        else:
+          sum_entry.append(dataset_name)
 
         mc_type = 'mc'
         if dbs.endswith('/USER'):
