@@ -21,7 +21,14 @@ PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
 PUBLISH       = bool(int(get_env_var('PUBLISH')))
 NOF_EVENTS    = int(get_env_var('NOF_EVENTS'))
 DO_FILEBASED  = bool(int(get_env_var('FORCE_FILEBASED')))
+FILEBASED_NOF = get_env_var('FILEBASED_NOF', False)
 NTHREADS      = int(get_env_var('NTHREADS'))
+
+if FILEBASED_NOF:
+  FILEBASED_NOF = int(FILEBASED_NOF)
+else:
+  FILEBASED_NOF = 1
+assert(FILEBASED_NOF > 0)
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
 job_type        = get_env_var('JOB_TYPE')
@@ -76,7 +83,7 @@ if is_private:
 else:
   if DO_FILEBASED:
     config.Data.splitting   = 'FileBased'
-    config.Data.unitsPerJob = 1
+    config.Data.unitsPerJob = FILEBASED_NOF
   else:
     config.Data.splitting   = 'EventAwareLumiBased'
     config.Data.unitsPerJob = NOF_EVENTS
