@@ -1,4 +1,4 @@
-# file generated at 2020-05-21 14:25:49 with the following command:
+# file generated at 2020-09-20 21:13:15 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
 
 # HH -> bb tautau (GGF spin2 resonant)
