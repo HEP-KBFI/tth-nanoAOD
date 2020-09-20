@@ -240,7 +240,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4T_M-320_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-320_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -406,7 +410,12 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/GluGluToRadionToHHTo4Tau_M-450_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo4Tau_M-450_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt":  "signal_ggf_spin0_450_hh_4t"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo4T_M-450_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_450_hh_4t_PSWeights"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -842,7 +851,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo4Tau_M-1000_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo4Tau_M-1000_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_4t"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_4t_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -876,7 +890,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -940,7 +958,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -972,7 +994,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -1004,7 +1030,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -1036,7 +1066,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -2658,7 +2692,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo4Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo4Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_4t"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_4t_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -2692,7 +2731,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4T_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -2724,7 +2767,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4T_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -2756,7 +2803,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4T_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -2788,7 +2839,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4T_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -2820,7 +2875,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4T_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -2852,7 +2911,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4tau_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo4T_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -4378,7 +4441,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2V2Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2V2Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_2v2t"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_2v2t_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4412,7 +4480,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2V2Tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -4444,7 +4516,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2V2Tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -4476,7 +4552,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2V2Tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -4508,7 +4588,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2V2Tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -4540,7 +4624,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2V2Tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -4572,7 +4660,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2tau_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2V2Tau_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -6022,7 +6114,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_2v2t"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_2v2t_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -6056,7 +6153,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -6088,7 +6189,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -6120,7 +6225,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -6152,7 +6261,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -6184,7 +6297,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -6216,7 +6333,11 @@
           "RunIISummer16MiniAODv2": [],
           "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2V2tau_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2V2Tau_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -7085,7 +7206,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7117,7 +7242,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-260_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7149,7 +7278,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-270_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7181,7 +7314,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-280_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7213,7 +7350,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-300_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7245,7 +7386,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-320_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7277,7 +7422,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-350_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7315,7 +7464,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-400_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7347,7 +7500,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7379,7 +7536,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7411,7 +7572,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-550_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-550_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7443,7 +7608,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-600_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-600_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7475,7 +7644,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-650_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-650_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7513,7 +7686,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-700_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-700_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7545,7 +7722,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7577,7 +7758,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-800_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-800_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7609,7 +7794,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-850_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-850_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7641,7 +7830,11 @@
               "dbs": "/GluGluToRadionToHHTo4V_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-900_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7670,10 +7863,231 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo4V_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo4V_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_4v"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_4v_PSWeights"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_1250_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_1250_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_1500_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_1500_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_1750_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_1750_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
           "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_2000_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_2000_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_2500_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_2500_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin0_3000_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin0_3000_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin0 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7705,7 +8119,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7737,7 +8155,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-260_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7769,7 +8191,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-270_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7801,7 +8227,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-280_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7833,7 +8263,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-300_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7865,7 +8299,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-320_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7897,7 +8335,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-350_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7929,7 +8371,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-400_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7961,7 +8407,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -7993,7 +8443,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8025,7 +8479,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-550_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-550_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8057,7 +8515,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-600_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-600_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8089,7 +8551,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-650_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-650_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8121,7 +8587,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-700_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-700_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8153,7 +8623,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8185,7 +8659,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-800_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-800_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8217,7 +8695,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-850_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-850_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8249,7 +8731,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo4V_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-900_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8278,10 +8764,231 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_4v"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_4v_PSWeights"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_1250_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_1250_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_1500_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_1500_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_1750_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_1750_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_2000_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_2000_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_2500_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_2500_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_ggf_spin2_3000_hh_wwww",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_ggf_spin2_3000_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF spin2 resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8768,6 +9475,32 @@
         }
       },
       {
+        "name": "signal_ggf_nonresonant_node_1_hh_4t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4tau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
+        },
+        "xs": {
+          "value": 0.003934,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->tau tau)^2=0.06272^2"
+        }
+      },
+      {
         "name": "signal_ggf_nonresonant_node_2_hh_4t",
         "enabled": 1,
         "use_case": "signal extraction",
@@ -8860,7 +9593,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_4_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo4T_node_4_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -8894,7 +9631,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_5_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo4T_node_5_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -8928,7 +9669,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_6_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo4T_node_6_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -9000,7 +9745,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_8_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo4T_node_8_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -9072,7 +9821,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_10_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo4T_node_10_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -9106,7 +9859,11 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_11_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToHHTo4T_node_11_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -9174,7 +9931,11 @@
         "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_cHHH0_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -9211,7 +9972,11 @@
         "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -9248,7 +10013,11 @@
         "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_cHHH2p45_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -9285,7 +10054,11 @@
         "process": "HH -> 4tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_cHHH5_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -9334,6 +10107,32 @@
               "dbs": "/GluGluToHHTo2V2Tau_node_SM_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
             }
           ]
+        },
+        "xs": {
+          "value": 0.030092,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: 2*BR(H->tau tau)*BR(H->VV)=2*0.06272*0.23989=0.030092; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      },
+      {
+        "name": "signal_ggf_nonresonant_node_1_hh_2v2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 2W2tau (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo2V2tau_node_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": []
         },
         "xs": {
           "value": 0.030092,
@@ -9843,7 +10642,41 @@
               "dbs": "/GluGluToHHTo4V_node_SM_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_SM_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.057547,
+          "order": "",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
+          ],
+          "comment": "normalized to 1 pb: BR(H->VV)^2=0.23989^2=0.057547; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      },
+      {
+        "name": "signal_ggf_nonresonant_node_1_hh_4v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> 4W (GGF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -9869,7 +10702,11 @@
               "dbs": "/GluGluToHHTo4V_node_2_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_2_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -9895,7 +10732,11 @@
               "dbs": "/GluGluToHHTo4V_node_3_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_3_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -9921,7 +10762,11 @@
               "dbs": "/GluGluToHHTo4V_node_4_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_4_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -9947,7 +10792,11 @@
               "dbs": "/GluGluToHHTo4V_node_5_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_5_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -9973,7 +10822,11 @@
               "dbs": "/GluGluToHHTo4V_node_6_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_6_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -9999,7 +10852,11 @@
               "dbs": "/GluGluToHHTo4V_node_7_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_7_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -10025,7 +10882,11 @@
               "dbs": "/GluGluToHHTo4V_node_8_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_8_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -10051,7 +10912,11 @@
               "dbs": "/GluGluToHHTo4V_node_9_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_9_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -10077,7 +10942,11 @@
               "dbs": "/GluGluToHHTo4V_node_10_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_10_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -10103,7 +10972,11 @@
               "dbs": "/GluGluToHHTo4V_node_11_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_11_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -10129,7 +11002,11 @@
               "dbs": "/GluGluToHHTo4V_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToHHTo4V_node_12_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
