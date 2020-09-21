@@ -1,4 +1,4 @@
-# file generated at 2020-03-14 19:42:17 with the following command:
+# file generated at 2020-09-21 12:21:31 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_ttbar.json
 
 # ttbar, ME-PS matching scale (hdamp) down
@@ -44,10 +44,12 @@
 # ttbar, top mass = 169.5 GeV
 /TTTo2L2Nu_TuneCP5_PSweights_mtop1695_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM        0 TT_mtop169p5 TTTo2L2Nu_mtop169p5_PSweights_backup         88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
 /TTToSemiLeptonic_TuneCP5_PSweights_mtop1695_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM 0 TT_mtop169p5 TTToSemiLeptonic_mtop169p5_PSweights_backup 365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5_PSweights_mtop1695_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM     0 TT_mtop169p5 TTToHadronic_mtop169p5                      377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
 
 # ttbar, top mass = 175.5 GeV
 /TTTo2L2Nu_TuneCP5_PSweights_mtop1755_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM        0 TT_mtop175p5 TTTo2L2Nu_mtop175p5_PSweights_backup         88.4  # NNLO [1][2]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
 /TTToSemiLeptonic_TuneCP5_PSweights_mtop1755_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM 0 TT_mtop175p5 TTToSemiLeptonic_mtop175p5_PSweights_backup 365.52 # NNLO [1][2]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5_PSweights_mtop1755_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM     0 TT_mtop175p5 TTToHadronic_mtop175p5                      377.85 # NNLO [1][2][3]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO
