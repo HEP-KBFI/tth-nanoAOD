@@ -1,4 +1,4 @@
-# file generated at 2020-08-04 17:43:49 with the following command:
+# file generated at 2020-09-22 19:24:51 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -56,12 +56,12 @@
 /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM                  1 TT         ST_tWll_PSweights_ext1                        0.01096     # LO; measured on 2018 sample(s) with GenXsecAnalyzer
 
 # ttbar
-/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                       0 TT         TTTo2L2Nu                                    88.4         # NNLO [7][8]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
-/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                0 TT         TTToSemiLeptonic                            365.52        # NNLO [7][8]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
-/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    0 TT         TTToHadronic                                377.85        # NNLO [7][8][9]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
-/TTJets_DiLept_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                              1 TT         TTJets_DiLept                                88.4         # NNLO [7][8]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
-/TTJets_SingleLeptFromT_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                     1 TT         TTJets_SingleLeptFromT                      182.76        # NNLO [7][8]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) / 2 = 831.76 * 0.674 * (1 - 0.674) = 182.76
-/TTJets_SingleLeptFromTbar_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                  1 TT         TTJets_SingleLeptFromTbar                   182.76        # NNLO [7][8]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) / 2 = 831.76 * 0.674 * (1 - 0.674) = 182.76
+/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                       1 TT         TTTo2L2Nu                                    88.4         # NNLO [7][8]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                1 TT         TTToSemiLeptonic                            365.52        # NNLO [7][8]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
+/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                    1 TT         TTToHadronic                                377.85        # NNLO [7][8][9]; s(ttbar) * br(W -> qqbar)^2 = 831.76 * 0.674^2 = 377.85
+/TTJets_DiLept_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                              0 TT         TTJets_DiLept                                88.4         # NNLO [7][8]; s(ttbar) * (1 - br(W -> qqbar))^2 = 831.76 * (1 - 0.674)^2 = 88.40
+/TTJets_SingleLeptFromT_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                     0 TT         TTJets_SingleLeptFromT                      182.76        # NNLO [7][8]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) / 2 = 831.76 * 0.674 * (1 - 0.674) = 182.76
+/TTJets_SingleLeptFromTbar_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                  0 TT         TTJets_SingleLeptFromTbar                   182.76        # NNLO [7][8]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) / 2 = 831.76 * 0.674 * (1 - 0.674) = 182.76
 /TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM                               0 TT         TTJets_amcatnloFXFX_ext1                    831.76        # NNLO [8]
 /TTJets_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM                                     0 TT         TTJets_madgraphMLM                          831.76        # NNLO [8]
 
