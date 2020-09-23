@@ -9607,7 +9607,13 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToHHTo4Tau_node_4_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToHHTo4Tau_node_4_TuneCP5_PSWeights_13TeV-madgraph-pythia8_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_nonresonant_node_4_hh_4t"
+            },
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_4_13TeV/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_nonresonant_node_4_hh_4t_private",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/HH_Node4_TTTT"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -9917,7 +9923,13 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToHHTo4Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToHHTo4Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_nonresonant_node_12_hh_4t"
+            },
+            {
+              "dbs": "/GluGluToHHTo4Tau_node_12_13TeV/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_nonresonant_node_12_hh_4t_private",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/HH_Node12_TTTT"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -10245,7 +10257,13 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToHHTo2V2Tau_node_4_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToHHTo2V2Tau_node_4_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_nonresonant_node_4_hh_2v2t"
+            },
+            {
+              "dbs": "/GluGluToHHTo2V2Tau_node_4_13TeV/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_nonresonant_node_4_hh_2v2t_private",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/HH_Node4_VVTT"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -10491,7 +10509,13 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToHHTo2V2Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToHHTo2V2Tau_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_nonresonant_node_12_hh_2v2t"
+            },
+            {
+              "dbs": "/GluGluToHHTo2V2Tau_node_12_13TeV/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_nonresonant_node_12_hh_2v2t_private",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/HH_Node12_VVTT"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -10807,7 +10831,13 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToHHTo4V_node_4_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToHHTo4V_node_4_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_nonresonant_node_4_hh_4v"
+            },
+            {
+              "dbs": "/GluGluToHHTo4V_node_4_13TeV/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_nonresonant_node_4_hh_4v_private",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/HH_Node4_VVVV"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -11053,7 +11083,13 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToHHTo4V_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToHHTo4V_node_12_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_nonresonant_node_12_hh_4v"
+            },
+            {
+              "dbs": "/GluGluToHHTo4V_node_12_13TeV/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_nonresonant_node_12_hh_4v_private",
+              "loc": "/store/user/kaehatah/private/RunIIFall17MiniAODv2/HH_Node12_VVVV"
             }
           ],
           "RunIIAutumn18MiniAOD": [
