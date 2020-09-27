@@ -1,4 +1,4 @@
-# file generated at 2020-09-20 21:13:15 with the following command:
+# file generated at 2020-09-27 20:39:44 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
 
 # HH -> bbWW, WW -> 2l 2v (GGF spin0 resonant)
@@ -24,6 +24,7 @@
 /GluGluToRadionToHHTo2B2VTo2L2Nu_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM       1 signal_ggf_spin0_1500_hh_bbvv              signal_ggf_spin0_1500_hh_2b2v              0.026422     #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
 /GluGluToRadionToHHTo2B2VTo2L2Nu_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM       1 signal_ggf_spin0_1750_hh_bbvv              signal_ggf_spin0_1750_hh_2b2v              0.026422     #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
 /GluGluToRadionToHHTo2B2VTo2L2Nu_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM       1 signal_ggf_spin0_2000_hh_bbvv              signal_ggf_spin0_2000_hh_2b2v              0.026422     #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
+/GluGluToRadionToHHTo2B2VTo2L2Nu_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM       1 signal_ggf_spin0_2500_hh_bbvv              signal_ggf_spin0_2500_hh_2b2v              0.026422     #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
 /GluGluToRadionToHHTo2B2VTo2L2Nu_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM       1 signal_ggf_spin0_3000_hh_bbvv              signal_ggf_spin0_3000_hh_2b2v              0.026422     #  [1][2]; normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=2*0.5824*0.2137*0.3258^2
 
 # HH -> bbWW, WW -> 2l 2v (GGF spin2 resonant)
