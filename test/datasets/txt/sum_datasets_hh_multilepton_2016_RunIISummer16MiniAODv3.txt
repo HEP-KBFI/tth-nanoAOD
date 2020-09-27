@@ -1,5 +1,33 @@
-# file generated at 2020-09-23 18:50:49 with the following command:
+# file generated at 2020-09-27 13:10:29 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
 
-signal_ggf_spin0_450_hh_4t           signal_ggf_spin0_450_hh_4t_PSWeights
-signal_ggf_nonresonant_node_sm_hh_4t signal_ggf_nonresonant_node_box_hh_4t signal_ggf_nonresonant_node_2_hh_4t signal_ggf_nonresonant_node_3_hh_4t signal_ggf_nonresonant_node_4_hh_4t signal_ggf_nonresonant_node_5_hh_4t signal_ggf_nonresonant_node_6_hh_4t signal_ggf_nonresonant_node_7_hh_4t signal_ggf_nonresonant_node_8_hh_4t signal_ggf_nonresonant_node_9_hh_4t signal_ggf_nonresonant_node_10_hh_4t signal_ggf_nonresonant_node_11_hh_4t signal_ggf_nonresonant_node_12_hh_4t
+signal_ggf_spin0_250_hh_4t            signal_ggf_spin0_250_hh_4t_PSWeights
+signal_ggf_spin0_270_hh_4t            signal_ggf_spin0_270_hh_4t_PSWeights
+signal_ggf_spin0_280_hh_4t            signal_ggf_spin0_280_hh_4t_PSWeights
+signal_ggf_spin0_320_hh_4t            signal_ggf_spin0_320_hh_4t_PSWeights
+signal_ggf_spin0_350_hh_4t            signal_ggf_spin0_350_hh_4t_PSWeights
+signal_ggf_spin0_400_hh_4t            signal_ggf_spin0_400_hh_4t_PSWeights
+signal_ggf_spin0_450_hh_4t            signal_ggf_spin0_450_hh_4t_PSWeights
+signal_ggf_spin0_500_hh_4t            signal_ggf_spin0_500_hh_4t_PSWeights
+signal_ggf_spin0_550_hh_4t            signal_ggf_spin0_550_hh_4t_PSWeights
+signal_ggf_spin0_600_hh_4t            signal_ggf_spin0_600_hh_4t_PSWeights
+signal_ggf_spin0_650_hh_4t            signal_ggf_spin0_650_hh_4t_PSWeights
+signal_ggf_spin0_700_hh_4t            signal_ggf_spin0_700_hh_4t_PSWeights
+signal_ggf_spin0_750_hh_4t            signal_ggf_spin0_750_hh_4t_PSWeights
+signal_ggf_spin0_800_hh_4t            signal_ggf_spin0_800_hh_4t_PSWeights
+signal_ggf_spin0_900_hh_4t            signal_ggf_spin0_900_hh_4t_PSWeights
+signal_ggf_spin2_250_hh_4t            signal_ggf_spin2_250_hh_4t_PSWeights
+signal_ggf_spin2_260_hh_4t            signal_ggf_spin2_260_hh_4t_PSWeights
+signal_ggf_spin2_270_hh_4t            signal_ggf_spin2_270_hh_4t_PSWeights
+signal_ggf_spin2_280_hh_4t            signal_ggf_spin2_280_hh_4t_PSWeights
+signal_ggf_spin2_300_hh_4t            signal_ggf_spin2_300_hh_4t_PSWeights
+signal_ggf_spin2_350_hh_4t            signal_ggf_spin2_350_hh_4t_PSWeights
+signal_ggf_spin2_450_hh_4t            signal_ggf_spin2_450_hh_4t_PSWeights
+signal_ggf_spin2_500_hh_4t            signal_ggf_spin2_500_hh_4t_PSWeights
+signal_ggf_spin2_550_hh_4t            signal_ggf_spin2_550_hh_4t_PSWeights
+signal_ggf_spin2_650_hh_4t            signal_ggf_spin2_650_hh_4t_PSWeights
+signal_ggf_spin2_700_hh_4t            signal_ggf_spin2_700_hh_4t_PSWeights
+signal_ggf_spin2_750_hh_4t            signal_ggf_spin2_750_hh_4t_PSWeights
+signal_ggf_nonresonant_node_sm_hh_4v  signal_ggf_nonresonant_node_1_hh_4v   signal_ggf_nonresonant_node_2_hh_4v   signal_ggf_nonresonant_node_3_hh_4v   signal_ggf_nonresonant_node_4_hh_4v   signal_ggf_nonresonant_node_5_hh_4v    signal_ggf_nonresonant_node_6_hh_4v    signal_ggf_nonresonant_node_7_hh_4v signal_ggf_nonresonant_node_8_hh_4v signal_ggf_nonresonant_node_9_hh_4v signal_ggf_nonresonant_node_10_hh_4v signal_ggf_nonresonant_node_11_hh_4v signal_ggf_nonresonant_node_12_hh_4v
+signal_ggf_nonresonant_node_2_hh_2v2t signal_ggf_nonresonant_node_3_hh_2v2t signal_ggf_nonresonant_node_5_hh_2v2t signal_ggf_nonresonant_node_7_hh_2v2t signal_ggf_nonresonant_node_8_hh_2v2t signal_ggf_nonresonant_node_11_hh_2v2t signal_ggf_nonresonant_node_12_hh_2v2t
+signal_ggf_nonresonant_node_sm_hh_4t  signal_ggf_nonresonant_node_box_hh_4t signal_ggf_nonresonant_node_2_hh_4t   signal_ggf_nonresonant_node_3_hh_4t   signal_ggf_nonresonant_node_4_hh_4t   signal_ggf_nonresonant_node_5_hh_4t    signal_ggf_nonresonant_node_6_hh_4t    signal_ggf_nonresonant_node_7_hh_4t signal_ggf_nonresonant_node_8_hh_4t signal_ggf_nonresonant_node_9_hh_4t signal_ggf_nonresonant_node_10_hh_4t signal_ggf_nonresonant_node_11_hh_4t signal_ggf_nonresonant_node_12_hh_4t
