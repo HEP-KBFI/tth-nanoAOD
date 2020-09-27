@@ -3767,7 +3767,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_250_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_250_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -3811,7 +3816,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_260_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-260_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_260_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -3855,7 +3865,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_270_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-270_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_270_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -3891,7 +3906,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-280_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_280_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-280_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_280_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -3935,7 +3955,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_300_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-300_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_300_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -3971,7 +3996,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_320_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-320_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_320_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4015,7 +4045,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_350_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-350_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_350_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4059,7 +4094,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_400_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-400_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_400_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4103,7 +4143,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_450_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_450_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4147,7 +4192,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_500_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_500_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4191,7 +4241,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-550_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-550_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_550_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-550_narrow_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_550_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4235,7 +4290,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-600_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-600_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_600_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-600_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_600_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4271,7 +4331,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-650_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-650_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_650_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-650_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_650_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4315,7 +4380,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-700_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-700_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_700_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-700_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_700_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4351,7 +4421,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_750_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_750_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4395,7 +4470,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-800_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-800_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_800_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-800_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_800_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4480,7 +4560,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_900_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-900_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_900_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4524,7 +4609,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1000_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4601,7 +4691,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-1500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-1500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1500_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1500_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4637,7 +4732,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-1750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-1750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1750_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1750_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4673,7 +4773,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-2000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-2000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_2000_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_2000_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4709,7 +4814,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-2500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-2500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_2500_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_2500_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4745,7 +4855,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-3000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo2BLNu2J_M-3000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_3000_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_3000_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4789,7 +4904,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_ggf_spin2_250_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_250_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4833,7 +4953,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-260_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_260_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-260_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_260_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4877,7 +5002,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-270_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_270_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-270_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_270_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4962,7 +5092,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-300_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_300_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-300_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_300_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -4998,7 +5133,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-320_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_ggf_spin2_320_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_320_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5042,7 +5182,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-350_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_350_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-350_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_350_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5086,7 +5231,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-400_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_400_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-400_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_400_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5130,7 +5280,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-450_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_450_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_450_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5174,7 +5329,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_500_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_500_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5218,7 +5378,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-550_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-550_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_550_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-550_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_550_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5262,7 +5427,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-600_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-600_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_600_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-600_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_600_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5306,7 +5476,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-650_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-650_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_650_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-650_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_650_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5350,7 +5525,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-700_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-700_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_700_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-700_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_700_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5476,7 +5656,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-850_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-850_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_850_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_850_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5520,7 +5705,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-900_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_900_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-900_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_900_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5564,7 +5754,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1000_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5600,7 +5795,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1250_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1250_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1250_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5636,7 +5836,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1500_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1500_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5672,7 +5877,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-1750_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1750_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_1750_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5708,7 +5918,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-2000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-2000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_2000_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_2000_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5744,7 +5959,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-2500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-2500_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_2500_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_2500_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
@@ -5780,7 +6000,12 @@
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-3000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2BLNu2J_M-3000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_3000_hh_2b2v_sl"
+            },
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin2_3000_hh_2b2v_sl_PSWeights"
             }
           ],
           "RunIIAutumn18MiniAOD": [
