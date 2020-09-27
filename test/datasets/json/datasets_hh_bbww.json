@@ -4245,7 +4245,7 @@
               "alt": "signal_ggf_spin0_550_hh_2b2v_sl"
             },
             {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-550_narrow_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-550_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
               "alt": "signal_ggf_spin0_550_hh_2b2v_sl_PSWeights"
             }
           ],
