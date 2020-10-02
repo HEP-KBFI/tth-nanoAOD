@@ -171,6 +171,9 @@ for category_entry in json_data:
           else:
             mc_type = 'private'
 
+        if era not in dbs and mc_type == 'mc':
+          print("WARNING: DBS name '{}' does not contain era ID '{}'".format(dbs, era))
+
         table[mc_type][era].append(
           collections.OrderedDict([
             ('dbs',          dbs),
