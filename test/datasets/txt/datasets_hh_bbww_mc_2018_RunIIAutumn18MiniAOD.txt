@@ -1,4 +1,4 @@
-# file generated at 2020-10-06 14:49:49 with the following command:
+# file generated at 2020-10-06 16:09:11 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
 
 # HH -> bbWW, WW -> 2l 2v (GGF spin0 resonant)
