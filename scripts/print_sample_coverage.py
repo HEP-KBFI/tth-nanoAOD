@@ -147,9 +147,11 @@ table_nonresonant_vbf_template = """
       {% if c2v_loop.index == 1 and c3_loop.index == 1 %}
       <th rowspan="{{ c2vs|length * c3s|length }}">cv = {{ cv | replace("p",".") }}</th>
       {% endif %}
+      {% if not (cv != "1p0" and c2v != "1p0") %}
       {% if c3_loop.index == 1 %}
       <th rowspan="{{ c3s|length }}">c2v = {{ c2v | replace("p",".") }}</th>
       {% endif %}
+      {% if not ((cv != "1p0" and c2v == "1p0" and c3 != "1p0") or (cv == "1p0" and c2v != "1p0" and c3 != "1p0")) %}
       <th>c3 = {{ c3 | replace("p",".") }}</th>
       {% for era in eras %}
         <td {% if nonresonant_map[decay_channel][cv][c2v][c3][era] %}class="pos">
@@ -158,6 +160,8 @@ table_nonresonant_vbf_template = """
          </a>
         {% else %}class="neg">{% endif %}</td>
       {% endfor %} 
+      {% endif %}
+      {% endif %}
     </tr>
   {% endfor %}
   {% endfor %}
