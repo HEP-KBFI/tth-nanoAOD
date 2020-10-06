@@ -43,9 +43,9 @@ html_template = """
   </head>
 
   <body>
-  <em>
+  <p><em>
       file automatically generated at {{ current_time }}
-    </em>
+  </em></p>
    
    {% for table_set in table_sets %}
      <div class="content">
