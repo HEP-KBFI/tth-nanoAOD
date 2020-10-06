@@ -2152,16 +2152,23 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2v_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2v_dipoleRecoilOff"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
         },
         "xs": {
           "value": 0.0000455695,
@@ -2193,12 +2200,23 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
         },
         "xs": {
           "value": 0.0000375655,
@@ -2230,12 +2248,23 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
         },
         "xs": {
           "value": 0.0003753816,
@@ -2267,12 +2296,23 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
         },
         "xs": {
           "value": 0.0001216848,
@@ -2304,12 +2344,23 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
         },
         "xs": {
           "value": 0.0017430382,
@@ -2341,12 +2392,23 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
         },
         "xs": {
           "value": 0.0002857708,
@@ -2357,6 +2419,50 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
           "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=0.01046*1.034*2*0.5824*0.2137*0.3258^2"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_0_1_hh_bbvv",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_0_1_hh_2b2v",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> 2l 2v (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0007149609,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*BR(W->lnu)^2=0.02617*1.034*2*0.5824*0.2137*0.3258^2"
         }
       }
     ]
@@ -6072,6 +6178,314 @@
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043"
           ],
           "comment": "normalized to 1 pb: 2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_1_0_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_0_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0005036125,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.004454*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_1_1_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_1_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0001886003,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.001668*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_1_2_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_2_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0001554708,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.001375*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_2_1_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_2_1_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0015535777,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.01374*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_0p5_1_1_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0011827091,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.01046*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1p5_1_1_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.007213847,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.0638*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_0_1_hh_bbvv_sl",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_0_1_hh_2b2v_sl",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bbWW, WW -> lnu 2q (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2WToLNu2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_sl_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0029590341,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->WW)*(2*BR(W->lnu)*(1-BR(W-lnu)))=0.02617*1.034*2*0.5824*0.2137*2*0.3258*0.6742"
         }
       }
     ]
@@ -10127,18 +10541,21 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2t_dipoleRecoilOff"
             }
           ]
         },
@@ -10172,18 +10589,21 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ]
         },
@@ -10217,18 +10637,21 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2t_dipoleRecoilOff"
             }
           ]
         },
@@ -10262,18 +10685,21 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2t_dipoleRecoilOff"
             }
           ]
         },
@@ -10307,18 +10733,21 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ]
         },
@@ -10352,18 +10781,21 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/VBFHHTo2B2Tau_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2t_dipoleRecoilOff"
             }
           ]
         },
@@ -10376,6 +10808,62 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7"
           ],
           "comment": "s(HH)*k*2*BR(H->bb)*BR(H->tau tau)=0.01046*1.034*2*0.5824*0.06272"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_0_1_hh_bbtt",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_0_1_hh_2b2t",
+        "enabled": 1,
+        "use_case": "signal extraction",
+        "process": "HH -> bb tautau (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff"
+            },
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff_ext1"
+            }
+          ],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff"
+            },
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff_ext1"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff"
+            },
+            {
+              "dbs": "/VBFHHTo2B2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff_ext1"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0019768862,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->bb)*BR(H->tau tau)=0.02617*1.034*2*0.5824*0.06272"
         }
       }
     ]

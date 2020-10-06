@@ -1,56 +1,57 @@
-# file generated at 2020-10-05 18:00:58 with the following command:
+# file generated at 2020-10-06 12:56:48 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
 
-signal_ggf_spin0_250_hh_2b2v_sl           signal_ggf_spin0_250_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_260_hh_2b2v_sl           signal_ggf_spin0_260_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_270_hh_2b2v_sl           signal_ggf_spin0_270_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_280_hh_2b2v_sl           signal_ggf_spin0_280_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_300_hh_2b2v_sl           signal_ggf_spin0_300_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_320_hh_2b2v_sl           signal_ggf_spin0_320_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_350_hh_2b2v_sl           signal_ggf_spin0_350_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_400_hh_2b2v_sl           signal_ggf_spin0_400_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_450_hh_2b2v_sl           signal_ggf_spin0_450_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_500_hh_2b2v_sl           signal_ggf_spin0_500_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_550_hh_2b2v_sl           signal_ggf_spin0_550_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_600_hh_2b2v_sl           signal_ggf_spin0_600_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_650_hh_2b2v_sl           signal_ggf_spin0_650_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_700_hh_2b2v_sl           signal_ggf_spin0_700_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_750_hh_2b2v_sl           signal_ggf_spin0_750_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_800_hh_2b2v_sl           signal_ggf_spin0_800_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_850_hh_2b2v_sl           signal_ggf_spin0_850_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_900_hh_2b2v_sl           signal_ggf_spin0_900_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_1000_hh_2b2v_sl          signal_ggf_spin0_1000_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_1250_hh_2b2v_sl          signal_ggf_spin0_1250_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_1500_hh_2b2v_sl          signal_ggf_spin0_1500_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_1750_hh_2b2v_sl          signal_ggf_spin0_1750_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_2000_hh_2b2v_sl          signal_ggf_spin0_2000_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_2500_hh_2b2v_sl          signal_ggf_spin0_2500_hh_2b2v_sl_PSWeights
-signal_ggf_spin0_3000_hh_2b2v_sl          signal_ggf_spin0_3000_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_250_hh_2b2v_sl           signal_ggf_spin2_250_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_260_hh_2b2v_sl           signal_ggf_spin2_260_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_270_hh_2b2v_sl           signal_ggf_spin2_270_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_280_hh_2b2v_sl           signal_ggf_spin2_280_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_300_hh_2b2v_sl           signal_ggf_spin2_300_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_320_hh_2b2v_sl           signal_ggf_spin2_320_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_350_hh_2b2v_sl           signal_ggf_spin2_350_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_400_hh_2b2v_sl           signal_ggf_spin2_400_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_450_hh_2b2v_sl           signal_ggf_spin2_450_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_500_hh_2b2v_sl           signal_ggf_spin2_500_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_550_hh_2b2v_sl           signal_ggf_spin2_550_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_600_hh_2b2v_sl           signal_ggf_spin2_600_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_650_hh_2b2v_sl           signal_ggf_spin2_650_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_700_hh_2b2v_sl           signal_ggf_spin2_700_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_750_hh_2b2v_sl           signal_ggf_spin2_750_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_800_hh_2b2v_sl           signal_ggf_spin2_800_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_850_hh_2b2v_sl           signal_ggf_spin2_850_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_900_hh_2b2v_sl           signal_ggf_spin2_900_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_1000_hh_2b2v_sl          signal_ggf_spin2_1000_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_1250_hh_2b2v_sl          signal_ggf_spin2_1250_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_1500_hh_2b2v_sl          signal_ggf_spin2_1500_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_1750_hh_2b2v_sl          signal_ggf_spin2_1750_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_2000_hh_2b2v_sl          signal_ggf_spin2_2000_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_2500_hh_2b2v_sl          signal_ggf_spin2_2500_hh_2b2v_sl_PSWeights
-signal_ggf_spin2_3000_hh_2b2v_sl          signal_ggf_spin2_3000_hh_2b2v_sl_PSWeights
-signal_ggf_nonresonant_node_sm_hh_2b2v    signal_ggf_nonresonant_node_1_hh_2b2v               signal_ggf_nonresonant_node_2_hh_2b2v    signal_ggf_nonresonant_node_3_hh_2b2v    signal_ggf_nonresonant_node_4_hh_2b2v    signal_ggf_nonresonant_node_5_hh_2b2v    signal_ggf_nonresonant_node_6_hh_2b2v    signal_ggf_nonresonant_node_7_hh_2b2v    signal_ggf_nonresonant_node_8_hh_2b2v    signal_ggf_nonresonant_node_9_hh_2b2v    signal_ggf_nonresonant_node_10_hh_2b2v   signal_ggf_nonresonant_node_11_hh_2b2v    signal_ggf_nonresonant_node_12_hh_2b2v
-signal_ggf_nonresonant_node_sm_hh_2b2v_sl signal_ggf_nonresonant_node_sm_hh_2b2v_sl_PSWeights signal_ggf_nonresonant_node_1_hh_2b2v_sl signal_ggf_nonresonant_node_2_hh_2b2v_sl signal_ggf_nonresonant_node_3_hh_2b2v_sl signal_ggf_nonresonant_node_4_hh_2b2v_sl signal_ggf_nonresonant_node_5_hh_2b2v_sl signal_ggf_nonresonant_node_6_hh_2b2v_sl signal_ggf_nonresonant_node_7_hh_2b2v_sl signal_ggf_nonresonant_node_8_hh_2b2v_sl signal_ggf_nonresonant_node_9_hh_2b2v_sl signal_ggf_nonresonant_node_10_hh_2b2v_sl signal_ggf_nonresonant_node_11_hh_2b2v_sl signal_ggf_nonresonant_node_12_hh_2b2v_sl
-signal_ggf_nonresonant_node_sm_hh_2b2t    signal_ggf_nonresonant_node_2_hh_2b2t               signal_ggf_nonresonant_node_3_hh_2b2t    signal_ggf_nonresonant_node_4_hh_2b2t    signal_ggf_nonresonant_node_7_hh_2b2t    signal_ggf_nonresonant_node_9_hh_2b2t    signal_ggf_nonresonant_node_12_hh_2b2t
+signal_ggf_spin0_250_hh_2b2v_sl                      signal_ggf_spin0_250_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_260_hh_2b2v_sl                      signal_ggf_spin0_260_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_270_hh_2b2v_sl                      signal_ggf_spin0_270_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_280_hh_2b2v_sl                      signal_ggf_spin0_280_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_300_hh_2b2v_sl                      signal_ggf_spin0_300_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_320_hh_2b2v_sl                      signal_ggf_spin0_320_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_350_hh_2b2v_sl                      signal_ggf_spin0_350_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_400_hh_2b2v_sl                      signal_ggf_spin0_400_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_450_hh_2b2v_sl                      signal_ggf_spin0_450_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_500_hh_2b2v_sl                      signal_ggf_spin0_500_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_550_hh_2b2v_sl                      signal_ggf_spin0_550_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_600_hh_2b2v_sl                      signal_ggf_spin0_600_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_650_hh_2b2v_sl                      signal_ggf_spin0_650_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_700_hh_2b2v_sl                      signal_ggf_spin0_700_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_750_hh_2b2v_sl                      signal_ggf_spin0_750_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_800_hh_2b2v_sl                      signal_ggf_spin0_800_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_850_hh_2b2v_sl                      signal_ggf_spin0_850_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_900_hh_2b2v_sl                      signal_ggf_spin0_900_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_1000_hh_2b2v_sl                     signal_ggf_spin0_1000_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_1250_hh_2b2v_sl                     signal_ggf_spin0_1250_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_1500_hh_2b2v_sl                     signal_ggf_spin0_1500_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_1750_hh_2b2v_sl                     signal_ggf_spin0_1750_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_2000_hh_2b2v_sl                     signal_ggf_spin0_2000_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_2500_hh_2b2v_sl                     signal_ggf_spin0_2500_hh_2b2v_sl_PSWeights
+signal_ggf_spin0_3000_hh_2b2v_sl                     signal_ggf_spin0_3000_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_250_hh_2b2v_sl                      signal_ggf_spin2_250_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_260_hh_2b2v_sl                      signal_ggf_spin2_260_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_270_hh_2b2v_sl                      signal_ggf_spin2_270_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_280_hh_2b2v_sl                      signal_ggf_spin2_280_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_300_hh_2b2v_sl                      signal_ggf_spin2_300_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_320_hh_2b2v_sl                      signal_ggf_spin2_320_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_350_hh_2b2v_sl                      signal_ggf_spin2_350_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_400_hh_2b2v_sl                      signal_ggf_spin2_400_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_450_hh_2b2v_sl                      signal_ggf_spin2_450_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_500_hh_2b2v_sl                      signal_ggf_spin2_500_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_550_hh_2b2v_sl                      signal_ggf_spin2_550_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_600_hh_2b2v_sl                      signal_ggf_spin2_600_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_650_hh_2b2v_sl                      signal_ggf_spin2_650_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_700_hh_2b2v_sl                      signal_ggf_spin2_700_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_750_hh_2b2v_sl                      signal_ggf_spin2_750_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_800_hh_2b2v_sl                      signal_ggf_spin2_800_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_850_hh_2b2v_sl                      signal_ggf_spin2_850_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_900_hh_2b2v_sl                      signal_ggf_spin2_900_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_1000_hh_2b2v_sl                     signal_ggf_spin2_1000_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_1250_hh_2b2v_sl                     signal_ggf_spin2_1250_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_1500_hh_2b2v_sl                     signal_ggf_spin2_1500_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_1750_hh_2b2v_sl                     signal_ggf_spin2_1750_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_2000_hh_2b2v_sl                     signal_ggf_spin2_2000_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_2500_hh_2b2v_sl                     signal_ggf_spin2_2500_hh_2b2v_sl_PSWeights
+signal_ggf_spin2_3000_hh_2b2v_sl                     signal_ggf_spin2_3000_hh_2b2v_sl_PSWeights
+signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff signal_vbf_nonresonant_1_0_1_hh_2b2t_dipoleRecoilOff_ext1
+signal_ggf_nonresonant_node_sm_hh_2b2v               signal_ggf_nonresonant_node_1_hh_2b2v                     signal_ggf_nonresonant_node_2_hh_2b2v    signal_ggf_nonresonant_node_3_hh_2b2v    signal_ggf_nonresonant_node_4_hh_2b2v    signal_ggf_nonresonant_node_5_hh_2b2v    signal_ggf_nonresonant_node_6_hh_2b2v    signal_ggf_nonresonant_node_7_hh_2b2v    signal_ggf_nonresonant_node_8_hh_2b2v    signal_ggf_nonresonant_node_9_hh_2b2v    signal_ggf_nonresonant_node_10_hh_2b2v   signal_ggf_nonresonant_node_11_hh_2b2v    signal_ggf_nonresonant_node_12_hh_2b2v
+signal_ggf_nonresonant_node_sm_hh_2b2v_sl            signal_ggf_nonresonant_node_sm_hh_2b2v_sl_PSWeights       signal_ggf_nonresonant_node_1_hh_2b2v_sl signal_ggf_nonresonant_node_2_hh_2b2v_sl signal_ggf_nonresonant_node_3_hh_2b2v_sl signal_ggf_nonresonant_node_4_hh_2b2v_sl signal_ggf_nonresonant_node_5_hh_2b2v_sl signal_ggf_nonresonant_node_6_hh_2b2v_sl signal_ggf_nonresonant_node_7_hh_2b2v_sl signal_ggf_nonresonant_node_8_hh_2b2v_sl signal_ggf_nonresonant_node_9_hh_2b2v_sl signal_ggf_nonresonant_node_10_hh_2b2v_sl signal_ggf_nonresonant_node_11_hh_2b2v_sl signal_ggf_nonresonant_node_12_hh_2b2v_sl
+signal_ggf_nonresonant_node_sm_hh_2b2t               signal_ggf_nonresonant_node_2_hh_2b2t                     signal_ggf_nonresonant_node_3_hh_2b2t    signal_ggf_nonresonant_node_4_hh_2b2t    signal_ggf_nonresonant_node_7_hh_2b2t    signal_ggf_nonresonant_node_9_hh_2b2t    signal_ggf_nonresonant_node_12_hh_2b2t
