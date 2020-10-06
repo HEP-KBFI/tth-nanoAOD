@@ -3178,10 +3178,6 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node_SM_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_sm_hh_2b2v_sl"
-            },
-            {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_SM_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_sm_hh_2b2v_sl_PSWeights"
             }
@@ -3224,11 +3220,7 @@
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node_box_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node_box_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
+          "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [],
           "RunIIAutumn18MiniAOD": []
@@ -3255,10 +3247,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-1_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_1_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_1_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_1_hh_2b2v_sl_PSWeights"
@@ -3294,10 +3282,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-2_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_2_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_2_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_2_hh_2b2v_sl_PSWeights"
@@ -3336,11 +3320,7 @@
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-3_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-3_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
+          "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -3375,10 +3355,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-4_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_4_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_4_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_4_hh_2b2v_sl_PSWeights"
@@ -3417,11 +3393,7 @@
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-5_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-5_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
+          "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -3456,10 +3428,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-6_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_6_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_6_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_6_hh_2b2v_sl_PSWeights"
@@ -3498,11 +3466,7 @@
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-7_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-7_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
+          "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -3537,10 +3501,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-8_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_8_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_8_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_8_hh_2b2v_sl_PSWeights"
@@ -3579,11 +3539,7 @@
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-9_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-9_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
+          "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -3617,11 +3573,7 @@
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-10_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
             }
           ],
-          "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-10_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
-            }
-          ],
+          "RunIISummer16MiniAODv3": [],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -3656,10 +3608,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-11_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_11_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_11_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_11_hh_2b2v_sl_PSWeights"
@@ -3699,10 +3647,6 @@
             }
           ],
           "RunIISummer16MiniAODv3": [
-            {
-              "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_node-12_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
-              "alt": "signal_ggf_nonresonant_node_12_hh_2b2v_sl"
-            },
             {
               "dbs": "/GluGluToHHTo2B2WToLNu2J_node_12_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_ggf_nonresonant_node_12_hh_2b2v_sl_PSWeights"
