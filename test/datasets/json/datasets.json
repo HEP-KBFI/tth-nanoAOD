@@ -5428,11 +5428,10 @@
           ]
         },
         "xs": {
-          "value": 4.43,
-          "order": "NLO",
+          "value": 4.9173,
+          "order": "NNLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
-            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+            "https://indico.cern.ch/event/963958/contributions/4058869/attachments/2119607/3566972/2020_10_09_WZ_cross_section.pdf"
           ],
           "comment": ""
         }
@@ -5494,13 +5493,13 @@
           ]
         },
         "xs": {
-          "value": 4.43,
+          "value": 4.9173,
           "order": "NLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
             "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
           ],
-          "comment": "NLO-to-LO k-factor is 4.43 / 4.658 = 0.95105 (measured with xsecAnalyzer on 2018 sample); sum of binned samples 4.38074 -> k-factor = 1.01124; mllmin01 requires mll > 4 GeV"
+          "comment": "NNLO-to-LO k-factor is 4.9173 / 4.658 = 1.0557 (measured with xsecAnalyzer on 2018 sample); sum of binned samples 4.38074 -> k-factor = 1.1225; mllmin01 requires mll > 4 GeV"
         }
       },
       {
@@ -5532,10 +5531,10 @@
           ]
         },
         "xs": {
-          "value": 2.55036,
+          "value": 2.8309,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 2.522 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 2.522 x k-factor 1.1225"
         }
       },
       {
@@ -5567,10 +5566,10 @@
           ]
         },
         "xs": {
-          "value": 0.64507,
+          "value": 0.7160,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.6379 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.6379 x k-factor 1.1225"
         }
       },
       {
@@ -5602,10 +5601,10 @@
           ]
         },
         "xs": {
-          "value": 0.49025,
+          "value": 0.5442,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.4848 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.4848 x k-factor 1.1225"
         }
       },
       {
@@ -5637,10 +5636,10 @@
           ]
         },
         "xs": {
-          "value": 0.34301,
+          "value": 0.3807,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.3392 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.3392 x k-factor 1.1225"
         }
       },
       {
@@ -5672,10 +5671,10 @@
           ]
         },
         "xs": {
-          "value": 0.16595,
+          "value": 0.1842,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.1641 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.1641 x k-factor 1.1225"
         }
       },
       {
@@ -5707,10 +5706,10 @@
           ]
         },
         "xs": {
-          "value": 0.06714,
+          "value": 0.07452,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.06639 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.06639 x k-factor 1.1225"
         }
       },
       {
@@ -5742,10 +5741,10 @@
           ]
         },
         "xs": {
-          "value": 0.07198,
+          "value": 0.07990,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.07118 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.07118 x k-factor 1.1225"
         }
       },
       {
@@ -5777,10 +5776,10 @@
           ]
         },
         "xs": {
-          "value": 0.09624,
+          "value": 0.1068,
           "order": "NLO",
           "references": [],
-          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.09517 x k-factor 1.01124"
+          "comment": "measured on 2018 sample(s) with GenXsecAnalyzer 0.09517 x k-factor 1.1225"
         }
       },
       {

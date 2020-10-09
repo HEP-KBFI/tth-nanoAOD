@@ -1,4 +1,4 @@
-# file generated at 2020-09-22 19:24:51 with the following command:
+# file generated at 2020-10-09 16:06:25 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 # ttH
@@ -21,7 +21,7 @@
 /TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/matze-faster_v8_ttjets_sl_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9-v1/USER 1 TT  TTToSemiLeptonic_fastsim_p2       365.52   /store/user/matze/TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/faster_v8_ttjets_sl_maod_p3_3a2fa29ab1d54ae0995b28f27b405be9  # NNLO [5][6]; s(ttbar) * 2 * br(W -> qqbar) * (1 - br(W -> qqbar)) = 831.76 * 2 * 0.674 * (1 - 0.674) = 365.52
 
 # di-bosons
-/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/matze-faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                             1 WZ  WZTo3LNu_fastsim                    4.43   /store/user/matze/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a                              # NLO [7][8]
+/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/matze-faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a-v1/USER                             1 WZ  WZTo3LNu_fastsim                    4.9173 /store/user/matze/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/faster_v9_WZ_maod_54aa74f75231422e9f4d3766cb92a64a                              # NNLO [7]
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
@@ -30,5 +30,4 @@
 # [4] http://pdglive.lbl.gov/Particle.action?node=S044&init=0
 # [5] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO
 # [6] http://pdglive.lbl.gov/BranchingRatio.action?desig=8&parCode=S043
-# [7] https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns
-# [8] https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf
+# [7] https://indico.cern.ch/event/963958/contributions/4058869/attachments/2119607/3566972/2020_10_09_WZ_cross_section.pdf
