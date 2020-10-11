@@ -164,7 +164,7 @@ def recomputeQGL(process):
   )
   process.es_prefer_qgl = cms.ESPrefer("PoolDBESSource", "QGPoolDBESSource")
 
-def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages = True):
+def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages = True, checkUniqueness = True):
 
   process.electronTable.variables.hoe.precision = cms.int32(12)
   process.electronTable.variables.deltaPhiSC = Var(
@@ -381,5 +381,8 @@ def addVariables(process, is_mc, year, reportEvery, hlt_filter, suppressMessages
     process.MessageLogger.suppressWarning.append('genJetAK4FlavourAssociation')
     process.MessageLogger.suppressWarning.append('genJetAK8FlavourAssociation')
     process.MessageLogger.suppressWarning.append('mergedGenParticles')
+
+  if not checkUniqueness:
+    process.source.duplicateCheckMode = cms.untracked.string('noDuplicateCheck')
 
   process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
