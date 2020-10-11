@@ -77,6 +77,7 @@ export NTHREADS=1
 
 GENERATE_CFGS_ONLY=false
 DRYRUN=""
+UNIQUE_EVENTS="True"
 export DATASET_FILE=""
 export JOB_TYPE=""
 export PUBLISH=0
@@ -91,7 +92,7 @@ TYPE_SYNC="sync"
 
 show_help() {
   THIS_SCRIPT=$0;
-  echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-f <dataset file>] [-v version] [-w whitelist = ''] " 1>&2;
+  echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-u] [-f <dataset file>] [-v version] [-w whitelist = ''] " 1>&2;
   echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
   echo -ne "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ] [ -F <trigger filter: 0|1 = $HLT_FILTER> ]" 1>&2;
   echo     "[-x <file listing datasets to exclude> = '' ]" 1>&2;
@@ -100,7 +101,7 @@ show_help() {
   exit 0;
 }
 
-while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:F:x:" opt; do
+while getopts "h?dguf:j:e:v:w:n:N:r:t:p:s:F:x:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -111,6 +112,8 @@ while getopts "h?dgf:j:e:v:w:n:N:r:t:p:s:F:x:" opt; do
   j) export JOB_TYPE=${OPTARG}
      ;;
   g) GENERATE_CFGS_ONLY=true
+     ;;
+  u) UNIQUE_EVENTS="False";
      ;;
   e) export ERA=${OPTARG}
      ;;
@@ -398,7 +401,7 @@ generate_cfgs() {
   NANOAOD_GIT_STATUS=$(git -C $BASE_DIR log -n1 --format="%D %H %cd")
   export CUSTOMISE_COMMANDS="process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, is_mc = $PY_IS_MC, year = '$YEAR', reportEvery = $REPORT_FREQUENCY, hlt_filter = '$HLT_FILTER_ARG')\\n\
+from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, is_mc = $PY_IS_MC, year = '$YEAR', reportEvery = $REPORT_FREQUENCY, hlt_filter = '$HLT_FILTER_ARG', checkUniqueness = $UNIQUE_EVENTS)\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False, timing = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
