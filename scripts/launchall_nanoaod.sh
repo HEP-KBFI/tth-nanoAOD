@@ -516,6 +516,7 @@ while read LINE; do
   unset NANOCFG;
   unset FORCE_FILEBASED;
   unset HLT_FILTER_OPT;
+  unset PRIVATE_DATASET_PATH;
   export IS_PRIVATE=0;
 
   is_valid_dataset ${DATASET};
@@ -580,24 +581,7 @@ while read LINE; do
       echo "The path to private datasets must start with /store";
       exit 1;
     fi
-    PRIVATE_DATASET_PATH="/cms${PRIVATE_DATASET_PATH}"
-    export PRIVATE_DATASET_FILES=`JAVA_HOME="" hdfs dfs -ls $PRIVATE_DATASET_PATH | grep root$ | awk '{print $8}'`;
-    if [ -z "$PRIVATE_DATASET_FILES" ]; then
-      echo "No files found in $PRIVATE_DATASET_PATH";
-      exit 1;
-    fi
-    echo "Found the following files in $DATASET:"
-    NOF_FILES_PRINTED=1;
-    for PRIVATE_DATASET_FILE in $PRIVATE_DATASET_FILES; do
-      echo "  $PRIVATE_DATASET_FILE"
-      NOF_FILES_PRINTED=$(( NOF_FILES_PRINTED + 1 ));
-      if [[ $NOF_FILES_PRINTED -gt 10 ]]; then
-        break;
-      fi
-    done
-    if [[ $NOF_FILES_PRINTED -gt 10 ]]; then
-      echo "...";
-    fi
+    export PRIVATE_DATASET_PATH="/hdfs/cms/$PRIVATE_DATASET_PATH/*.root"
   fi
 
   if [ ${DATASET_ARR["$DATASET"]} ]; then

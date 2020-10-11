@@ -2,6 +2,7 @@ from CRABClient.UserUtilities import config, getUsernameFromCRIC
 
 import re
 import os
+import glob
 
 def get_env_var(env_var, fail_if_not_exists = True):
   if env_var not in os.environ:
@@ -17,7 +18,7 @@ JSON_LUMI     = get_env_var('JSON_LUMI')
 NANOAOD_VER   = get_env_var('NANOAOD_VER')
 CHUNK_VER     = get_env_var('CHUNK_VER', False)
 WHITELIST     = get_env_var('WHITELIST', False)
-PRIVATE_FILES = get_env_var('PRIVATE_DATASET_FILES', False)
+PRIVATE_FILES = get_env_var('PRIVATE_DATASET_PATH', False)
 PUBLISH       = bool(int(get_env_var('PUBLISH')))
 NOF_EVENTS    = int(get_env_var('NOF_EVENTS'))
 DO_FILEBASED  = bool(int(get_env_var('FORCE_FILEBASED')))
@@ -29,6 +30,7 @@ if FILEBASED_NOF:
 else:
   FILEBASED_NOF = 1
 assert(FILEBASED_NOF > 0)
+print("Using {} files per input when running with the FileBased option".format(FILEBASED_NOF))
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
 job_type        = get_env_var('JOB_TYPE')
@@ -75,10 +77,18 @@ if WHITELIST:
 config.Site.storageSite = HOME_SITE
 
 if is_private:
-  config.Data.userInputFiles       = [ 'file:/hdfs{}'.format(path) for path in PRIVATE_FILES.split('\n') ]
+  PRIVATE_FILES_ARRAY = [ 'file:{}'.format(path) for path in glob.glob(PRIVATE_FILES) ]
+  print("Found the following input files:")
+  if len(PRIVATE_FILES_ARRAY) > 10:
+    print('\n'.join([ '  {}'.format(path) for path in PRIVATE_FILES_ARRAY[:10] ]))
+    print('...')
+    print('\n'.join([ '  {}'.format(path) for path in PRIVATE_FILES_ARRAY[-10:] ]))
+  else:
+    print('\n'.join([ '  {}'.format(path) for path in PRIVATE_FILES_ARRAY ]))
+  config.Data.userInputFiles       = PRIVATE_FILES_ARRAY
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
-  config.Data.unitsPerJob          = 1
+  config.Data.unitsPerJob          = FILEBASED_NOF
   config.Site.whitelist            = [ HOME_SITE ]
 else:
   if DO_FILEBASED:
