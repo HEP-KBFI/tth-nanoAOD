@@ -87,7 +87,7 @@ if is_private:
   config.Data.userInputFiles       = PRIVATE_FILES_ARRAY
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
-  config.Data.unitsPerJob          = 1
+  config.Data.unitsPerJob          = FILEBASED_NOF
   config.Site.whitelist            = [ HOME_SITE ]
 else:
   if DO_FILEBASED:
