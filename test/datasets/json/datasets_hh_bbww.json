@@ -2121,7 +2121,11 @@
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-3000_narrow_13TeV-madgraph_correctedcfg/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-3000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 0.026422,

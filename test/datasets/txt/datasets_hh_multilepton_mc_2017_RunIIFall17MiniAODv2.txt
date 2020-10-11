@@ -1,4 +1,4 @@
-# file generated at 2020-10-06 21:50:09 with the following command:
+# file generated at 2020-10-11 14:12:05 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_multilepton.json
 
 # HH -> 4tau (GGF spin0 resonant)
@@ -23,6 +23,7 @@
 /GluGluToRadionToHHTo4Tau_M-1000_narrow_13TeV-madgraph/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM                                    1 signal_ggf_spin0_1000_hh_tttt           signal_ggf_spin0_1000_hh_4t                            0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2
 /GluGluToRadionToHHTo4tau_M-1000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM          1 signal_ggf_spin0_1000_hh_tttt           signal_ggf_spin0_1000_hh_4t_PSWeights                  0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2
 /GluGluToRadionToHHTo4tau_M-1250_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM          1 signal_ggf_spin0_1250_hh_tttt           signal_ggf_spin0_1250_hh_4t_PSWeights                  0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2
+/GluGluToRadionToHHTo4tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM          1 signal_ggf_spin0_1500_hh_tttt           signal_ggf_spin0_1500_hh_4t_PSWeights                  0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2
 /GluGluToRadionToHHTo4tau_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM          1 signal_ggf_spin0_1750_hh_tttt           signal_ggf_spin0_1750_hh_4t_PSWeights                  0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2
 /GluGluToRadionToHHTo4tau_M-2000_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM          1 signal_ggf_spin0_2000_hh_tttt           signal_ggf_spin0_2000_hh_4t_PSWeights                  0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2
 /GluGluToRadionToHHTo4tau_M-2500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM          1 signal_ggf_spin0_2500_hh_tttt           signal_ggf_spin0_2500_hh_4t_PSWeights                  0.003934     #  [1][2]; normalized to 1 pb: BR(H->tau tau)^2=0.06272^2

@@ -65,7 +65,12 @@
           ],
           "RunIISummer16MiniAODv3": [
             {
-              "dbs": "/GluGluToRadionToHHTo4Tau_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"
+              "dbs": "/GluGluToRadionToHHTo4Tau_M-260_narrow_13TeV-madgraph/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM",
+              "alt": "signal_ggf_spin0_260_hh_4t"
+            },
+            {
+              "dbs": "/GluGluToRadionToHHTo4T_M-260_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_260_hh_4t_PSWeights"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -1022,7 +1027,12 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4tau_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1500_hh_4t_PSWeights"
+            }
+          ],
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo4T_M-1500_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
@@ -1094,7 +1104,12 @@
         "process": "HH -> 4tau (GGF spin0 resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4T_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_2000_hh_4t_PSWeights"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -4463,7 +4478,11 @@
         "process": "HH -> 2W2tau (GGF spin0 resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToRadionToHHTo2V2Tau_M-600_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -8518,7 +8537,12 @@
               "alt": "signal_ggf_spin0_1750_hh_4v_PSWeights"
             }
           ],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/GluGluToRadionToHHTo4V_M-1750_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "signal_ggf_spin0_1750_hh_4v_PSWeights"
+            }
+          ]
         },
         "xs": {
           "value": 0.057547,
@@ -8866,7 +8890,11 @@
         "process": "HH -> 4W (GGF spin2 resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToBulkGravitonToHHTo4V_M-320_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -9673,7 +9701,12 @@
         "process": "HH -> 4tau (VBF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/VBFHHTo4T_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
+              "alt": "signal_vbf_nonresonant_1_1_1_hh_4t_dipoleRecoilOff"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
@@ -11530,7 +11563,11 @@
         "process": "HH -> 2W2tau (GGF non-resonant)",
         "datasets": {
           "RunIISummer16MiniAODv2": [],
-          "RunIISummer16MiniAODv3": [],
+          "RunIISummer16MiniAODv3": [
+            {
+              "dbs": "/GluGluToHHTo2V2Tau_node_6_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM"
+            }
+          ],
           "RunIIFall17MiniAOD": [],
           "RunIIFall17MiniAODv2": [
             {
