@@ -30,6 +30,7 @@ if FILEBASED_NOF:
 else:
   FILEBASED_NOF = 1
 assert(FILEBASED_NOF > 0)
+print("Using {} files per input when running with the FileBased option".format(FILEBASED_NOF))
 
 is_private      = bool(int(get_env_var('IS_PRIVATE')))
 job_type        = get_env_var('JOB_TYPE')
