@@ -587,9 +587,17 @@ while read LINE; do
       exit 1;
     fi
     echo "Found the following files in $DATASET:"
+    NOF_FILES_PRINTED=1;
     for PRIVATE_DATASET_FILE in $PRIVATE_DATASET_FILES; do
       echo "  $PRIVATE_DATASET_FILE"
+      NOF_FILES_PRINTED=$(( NOF_FILES_PRINTED + 1 ));
+      if [[ $NOF_FILES_PRINTED -gt 10 ]]; then
+        break;
+      fi
     done
+    if [[ $NOF_FILES_PRINTED -gt 10 ]]; then
+      echo "...";
+    fi
   fi
 
   if [ ${DATASET_ARR["$DATASET"]} ]; then
