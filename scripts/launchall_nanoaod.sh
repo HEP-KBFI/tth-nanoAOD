@@ -568,6 +568,7 @@ while read LINE; do
 
   if [ "$DATASET_THIRD_PART" == "USER" ]; then
     echo "It's a privately produced sample";
+    export IS_PRIVATE=1;
     PRIVATE_DATASET_PATH=$(echo $LINE | awk '{print $6}');
     if [[ "$PRIVATE_DATASET_PATH" != /store/* ]]; then
       echo "The path to private datasets must start with /store";
