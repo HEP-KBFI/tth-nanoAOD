@@ -1964,7 +1964,12 @@
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "TTToSemiLeptonic"
+            },
+            {
+              "dbs": "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext3-v2/MINIAODSIM",
+              "alt": "TTToSemiLeptonic_ext3"
             }
           ]
         },
@@ -2012,7 +2017,12 @@
           ],
           "RunIIAutumn18MiniAOD": [
             {
-              "dbs": "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+              "dbs": "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",
+              "alt": "TTToHadronic"
+            },
+            {
+              "dbs": "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v2/MINIAODSIM",
+              "alt": "TTToHadronic_ext2"
             }
           ]
         },

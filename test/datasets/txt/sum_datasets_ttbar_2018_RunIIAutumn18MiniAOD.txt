@@ -1,12 +1,15 @@
-# file generated at 2020-09-21 12:21:31 with the following command:
+# file generated at 2020-10-13 12:43:00 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_ttbar.json
 
-TTTo2L2Nu_hdampDOWN        TTTo2L2Nu_hdampDOWN_ext1
-TTTo2L2Nu_hdampUP          TTTo2L2Nu_hdampUP_ext1
+TTTo2L2Nu_hdampDOWN        TTTo2L2Nu_hdampDOWN_ext1        TTTo2L2Nu_hdampDOWN_ext2
+TTTo2L2Nu_hdampUP          TTTo2L2Nu_hdampUP_ext1          TTTo2L2Nu_hdampUP_ext2
 TTTo2L2Nu_ueDown           TTTo2L2Nu_ueDown_ext1
 TTTo2L2Nu_ueUp             TTTo2L2Nu_ueUp_ext1
-TTTo2L2Nu_erdON            TTTo2L2Nu_erdON_ext1
-TTTo2L2Nu_mtop169p5        TTTo2L2Nu_mtop169p5_ext1
+TTTo2L2Nu_QCDbased         TTTo2L2Nu_QCDbased_ext1
+TTTo2L2Nu_GluonMove        TTTo2L2Nu_GluonMove_ext1
+TTTo2L2Nu_erdON            TTTo2L2Nu_erdON_ext1            TTTo2L2Nu_erdON_ext2
+TTTo2L2Nu_mtop169p5        TTTo2L2Nu_mtop169p5_ext1        TTTo2L2Nu_mtop169p5_ext2
 TTToSemiLeptonic_mtop169p5 TTToSemiLeptonic_mtop169p5_ext1
-TTTo2L2Nu_mtop175p5        TTTo2L2Nu_mtop175p5_ext1
+TTTo2L2Nu_mtop171p5        TTTo2L2Nu_mtop171p5_ext1
+TTTo2L2Nu_mtop175p5        TTTo2L2Nu_mtop175p5_ext1        TTTo2L2Nu_mtop175p5_ext2
 TTToSemiLeptonic_mtop175p5 TTToSemiLeptonic_mtop175p5_ext1
