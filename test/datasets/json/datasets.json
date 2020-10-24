@@ -5937,13 +5937,13 @@
           ]
         },
         "xs": {
-          "value": 1.256,
-          "order": "NLO",
+          "value": 1.3816,
+          "order": "NNLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
-            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1405.2219.pdf"
           ],
-          "comment": ""
+          "comment": "Inclusive NLO-to-NNLO k-factor of 1.1 on top of NLO XS 1.256 pb; process actually qq->(Z/gamma*)(Z/gamma*)->4l"
         }
       },
       {
@@ -5969,13 +5969,13 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 1.256,
-          "order": "NLO",
+          "value": 1.3816,
+          "order": "NNLO",
           "references": [
-            "https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns",
-            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1405.2219.pdf"
           ],
-          "comment": ""
+          "comment": "Inclusive NLO-to-NNLO k-factor of 1.1 on top of NLO XS 1.256 pb; process actually qq->(Z/gamma*)(Z/gamma*)->4l"
         }
       },
       {
@@ -6026,12 +6026,14 @@
           ]
         },
         "xs": {
-          "value": 0.564,
-          "order": "NLO",
+          "value": 0.6204,
+          "order": "NNLO",
           "references": [
-            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf",
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1405.2219.pdf"
           ],
-          "comment": ""
+          "comment": "Inclusive NLO-to-NNLO k-factor of 1.1 on top of NLO XS 0.564 pb; process actually qq->(Z/gamma*)(Z/gamma*)->2l2v"
         }
       },
       {
@@ -6067,12 +6069,14 @@
           ]
         },
         "xs": {
-          "value": 5.52,
-          "order": "NLO",
+          "value": 6.072,
+          "order": "NNLO",
           "references": [
-            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf"
+            "https://indico.cern.ch/event/448517/contributions/1943045/attachments/1164999/1679225/Long_Generators_WZxsec_05_10_15.pdf",
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1405.2219.pdf"
           ],
-          "comment": ""
+          "comment": "Inclusive NLO-to-NNLO k-factor of 1.1 on top of NLO XS 5.52 pb; process actually qq->(Z/gamma*)(Z/gamma*)->2l2q"
         }
       },
       {
@@ -6112,12 +6116,13 @@
           ]
         },
         "xs": {
-          "value": 0.00349,
+          "value": 0.002703,
           "order": "NLO",
           "references": [
-            "https://arxiv.org/pdf/1609.09719.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1509.06734.pdf"
           ],
-          "comment": "Table 1, scale @ m(4l)/2"
+          "comment": "Inclusive LO-to-NLO k-factor of 1.7 on top of LO XS 0.00159 pb; process actually gg->(Z/gamma*)(Z/gamma*)->4tau"
         }
       },
       {
@@ -6161,12 +6166,13 @@
           ]
         },
         "xs": {
-          "value": 0.00349,
+          "value": 0.002703,
           "order": "NLO",
           "references": [
-            "https://arxiv.org/pdf/1609.09719.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1509.06734.pdf"
           ],
-          "comment": "Table 1, scale @ m(4l)/2"
+          "comment": "Inclusive LO-to-NLO k-factor of 1.7 on top of LO XS 0.00159 pb; process actually gg->(Z/gamma*)(Z/gamma*)->4mu"
         }
       },
       {
@@ -6210,12 +6216,13 @@
           ]
         },
         "xs": {
-          "value": 0.00349,
+          "value": 0.002703,
           "order": "NLO",
           "references": [
-            "https://arxiv.org/pdf/1609.09719.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1509.06734.pdf"
           ],
-          "comment": "Table 1, scale @ m(4l)/2"
+          "comment": "Inclusive LO-to-NLO k-factor of 1.7 on top of LO XS 0.00159 pb; process actually gg->(Z/gamma*)(Z/gamma*)->4e"
         }
       },
       {
@@ -6251,12 +6258,13 @@
           ]
         },
         "xs": {
-          "value": 0.00698,
+          "value": 0.005406,
           "order": "NLO",
           "references": [
-            "https://arxiv.org/pdf/1609.09719.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1509.06734.pdf"
           ],
-          "comment": "Table 1, scale @ m(4l)/2"
+          "comment": "Inclusive LO-to-NLO k-factor of 1.7 on top of LO XS 2x0.00159 pb; process actually gg->(Z/gamma*)(Z/gamma*)->2e2tau"
         }
       },
       {
@@ -6292,12 +6300,13 @@
           ]
         },
         "xs": {
-          "value": 0.00698,
+          "value": 0.005406,
           "order": "NLO",
           "references": [
-            "https://arxiv.org/pdf/1609.09719.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1509.06734.pdf"
           ],
-          "comment": "Table 1, scale @ m(4l)/2"
+          "comment": "Inclusive LO-to-NLO k-factor of 1.7 on top of LO XS 2x0.00159 pb; process actually gg->(Z/gamma*)(Z/gamma*)->2e2mu"
         }
       },
       {
@@ -6333,12 +6342,13 @@
           ]
         },
         "xs": {
-          "value": 0.00698,
+          "value": 0.005406,
           "order": "NLO",
           "references": [
-            "https://arxiv.org/pdf/1609.09719.pdf"
+            "http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2019_004_v10.pdf",
+            "https://arxiv.org/pdf/1509.06734.pdf"
           ],
-          "comment": "Table 1, scale @ m(4l)/2"
+          "comment": "Inclusive LO-to-NLO k-factor of 1.7 on top of LO XS 2x0.00159 pb; process actually gg->(Z/gamma*)(Z/gamma*)->2mu2tau"
         }
       }
     ]
