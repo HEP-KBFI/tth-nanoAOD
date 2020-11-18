@@ -31,8 +31,8 @@ export ERA_KEY_2017_v1="2017v1"
 export DATASET_ERA_2017_v1="RunIIFall17MiniAOD"
 
 # requires CMSSW version 102x
-export COND_DATA_2017_v2="102X_dataRun2_v8" # JEC Fall17_17Nov2017_V32_102X_DATA
-export COND_MC_2017_v2="102X_mc2017_realistic_v6" # JEC Fall17_17Nov2017_V32_102X_MC
+export COND_DATA_2017_v2="102X_dataRun2_v13" # JEC Fall17_17Nov2017_V32_102X_DATA
+export COND_MC_2017_v2="102X_mc2017_realistic_v8" # JEC Fall17_17Nov2017_V32_102X_MC
 export ERA_ARGS_2017_v2="Run2_2017,run2_nanoAOD_94XMiniAODv2"
 export ERA_KEY_2017_v2="2017v2"
 export DATASET_ERA_2017_v2="RunIIFall17MiniAODv2"
@@ -407,7 +407,6 @@ generate_cfgs() {
   NANOAOD_GIT_STATUS=$(git -C $BASE_DIR log -n1 --format="%D %H %cd")
   export CUSTOMISE_COMMANDS="process.source.fileNames = cms.untracked.vstring($INPUT_FILE)\\n\
 #process.source.eventsToProcess = cms.untracked.VEventRange()\\n\
-from tthAnalysis.NanoAOD.addVariables import addVariables; addVariables(process, is_mc = $PY_IS_MC, year = '$YEAR', reportEvery = $REPORT_FREQUENCY, hlt_filter = '$HLT_FILTER_ARG', checkUniqueness = $UNIQUE_EVENTS)\\n\
 from tthAnalysis.NanoAOD.debug import debug; debug(process, dump = False, dumpFile = 'nano.dump', tracer = False, memcheck = False, timing = False)\\n\
 print('CMSSW_VERSION: $CMSSW_VERSION')\\n\
 print('CMSSW repo: $CMSSW_GIT_STATUS')\\n\
