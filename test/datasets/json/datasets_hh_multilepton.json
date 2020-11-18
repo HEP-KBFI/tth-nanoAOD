@@ -9739,6 +9739,43 @@
     ]
   },
   {
+    "category": "signal_vbf_nonresonant_1_1_1_hh_tttt_dipoleRecoilOn",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_1_hh_4t_dipoleRecoilOn",
+        "enabled": 0,
+        "use_case": "systematics",
+        "process": "HH -> 4tau (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo4T_CV_1_C2V_1_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo4T_CV_1_C2V_1_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0000067850,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.001668*1.034*0.06272^2"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_vbf_nonresonant_1_1_2_hh_tttt",
     "comment": "",
     "samples": [
@@ -9810,6 +9847,43 @@
             {
               "dbs": "/VBFHHTo4T_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_2_1_hh_4t_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0000558910,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01374*1.034*0.06272^2"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_2_1_hh_tttt_dipoleRecoilOn",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_2_1_hh_4t_dipoleRecoilOn",
+        "enabled": 0,
+        "use_case": "systematics",
+        "process": "HH -> 4tau (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo4T_CV_1_C2V_2_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo4T_CV_1_C2V_2_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
             }
           ]
         },
@@ -10047,6 +10121,43 @@
     ]
   },
   {
+    "category": "signal_vbf_nonresonant_1_1_1_hh_wwtt_dipoleRecoilOn",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_1_hh_2v2t_dipoleRecoilOn",
+        "enabled": 0,
+        "use_case": "systematics",
+        "process": "HH -> 2W2tau (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_1_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_1_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0000519000,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.001668*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_vbf_nonresonant_1_1_2_hh_wwtt",
     "comment": "",
     "samples": [
@@ -10118,6 +10229,43 @@
             {
               "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_2_1_hh_2v2t_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0004275219,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01374*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_2_1_hh_wwtt_dipoleRecoilOn",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_2_1_hh_2v2t_dipoleRecoilOn",
+        "enabled": 0,
+        "use_case": "systematics",
+        "process": "HH -> 2W2tau (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
             }
           ]
         },
@@ -10355,6 +10503,43 @@
     ]
   },
   {
+    "category": "signal_vbf_nonresonant_1_1_1_hh_wwww_dipoleRecoilOn",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_1_1_hh_4v_dipoleRecoilOn",
+        "enabled": 0,
+        "use_case": "systematics",
+        "process": "HH -> 4W (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo4V_CV_1_C2V_1_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo4V_CV_1_C2V_1_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0000992524,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*BR(H->VV)^2=0.001668*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
     "category": "signal_vbf_nonresonant_1_1_2_hh_wwww",
     "comment": "",
     "samples": [
@@ -10470,6 +10655,43 @@
             {
               "dbs": "/VBFHHTo4V_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_2_1_hh_4v_dipoleRecoilOff"
+            }
+          ]
+        },
+        "xs": {
+          "value": 0.0008175824,
+          "order": "NNLO",
+          "references": [
+            "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+            "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+          ],
+          "comment": "s(HH)*k*BR(H->VV)^2=0.01374*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+        }
+      }
+    ]
+  },
+  {
+    "category": "signal_vbf_nonresonant_1_2_1_hh_wwww_dipoleRecoilOn",
+    "comment": "",
+    "samples": [
+      {
+        "name": "signal_vbf_nonresonant_1_2_1_hh_4v_dipoleRecoilOn",
+        "enabled": 0,
+        "use_case": "systematics",
+        "process": "HH -> 4W (VBF non-resonant)",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/VBFHHTo4V_CV_1_C2V_2_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/VBFHHTo4V_CV_1_C2V_2_C3_1_dipoleRecoilOn-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM"
             }
           ]
         },
