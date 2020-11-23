@@ -2188,7 +2188,7 @@
     ]
   },
   {
-    "category": "signal_vbf_nonresonant_1_1_1_hh_bbvv_dipoleRecoilOn",
+    "category": "signal_vbf_nonresonant_1_1_1_hh_dipoleRecoilOn_bbvv",
     "comment": "",
     "samples": [
       {
@@ -2321,7 +2321,7 @@
     ]
   },
   {
-    "category": "signal_vbf_nonresonant_1_2_1_hh_bbvv_dipoleRecoilOn",
+    "category": "signal_vbf_nonresonant_1_2_1_hh_dipoleRecoilOn_bbvv",
     "comment": "",
     "samples": [
       {
@@ -6315,7 +6315,7 @@
     ]
   },
   {
-    "category": "signal_vbf_nonresonant_1_1_1_hh_bbvv_sl_dipoleRecoilOn",
+    "category": "signal_vbf_nonresonant_1_1_1_hh_dipoleRecoilOn_bbvv_sl",
     "comment": "",
     "samples": [
       {
@@ -6440,7 +6440,7 @@
     ]
   },
   {
-    "category": "signal_vbf_nonresonant_1_2_1_hh_bbvv_sl_dipoleRecoilOn",
+    "category": "signal_vbf_nonresonant_1_2_1_hh_dipoleRecoilOn_bbvv_sl",
     "comment": "",
     "samples": [
       {
@@ -10739,7 +10739,7 @@
     ]
   },
   {
-    "category": "signal_vbf_nonresonant_1_1_1_hh_bbtt_dipoleRecoilOn",
+    "category": "signal_vbf_nonresonant_1_1_1_hh_dipoleRecoilOn_bbtt",
     "comment": "",
     "samples": [
       {
@@ -10872,7 +10872,7 @@
     ]
   },
   {
-    "category": "signal_vbf_nonresonant_1_2_1_hh_bbtt_dipoleRecoilOn",
+    "category": "signal_vbf_nonresonant_1_2_1_hh_dipoleRecoilOn_bbtt",
     "comment": "",
     "samples": [
       {
