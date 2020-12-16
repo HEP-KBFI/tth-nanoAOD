@@ -136,9 +136,6 @@ for category_entry in json_data:
     xs_comment = sample_entry['xs']['comment']
     xs_references = sample_entry['xs']['references']
 
-    if xs_value > 1e6:
-      xs_value = '%.5e' % xs_value
-
     if not eras_initialized:
       for era in sample_entry['datasets']:
           for mc_type in table:
@@ -156,6 +153,10 @@ for category_entry in json_data:
         location = dataset_entry['loc'] if 'loc' in dataset_entry else ''
         filename = dataset_entry['file'] if 'file' in dataset_entry else ''
         sample_enabled = dataset_entry['enabled'] if 'enabled' in dataset_entry else enabled
+        xs_final = dataset_entry['xsec'] if 'xsec' in dataset_entry else xs_value
+
+        if xs_final > 1e6:
+          xs_final = '%.5e' % xs_final
 
         if HH_NONRES_RE.match(category):
           if category not in sums_hh_nonres[era]:
@@ -181,7 +182,7 @@ for category_entry in json_data:
             ('category',     category),
             ('comment',      process),
             ('process_name', dataset_name),
-            ('xs_value',     xs_value),
+            ('xs_value',     xs_final),
             ('xs_order',     xs_order),
             ('xs_refs',      xs_references),
             ('xs_comment',   xs_comment),
