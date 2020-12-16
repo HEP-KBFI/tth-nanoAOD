@@ -9726,14 +9726,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000067850,
+          "value": 0.00000679,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.001668*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -9763,14 +9764,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000067850,
+          "value": 0.00000679,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.001668*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -9789,7 +9791,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4T_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_1_2_hh_4t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_4t_dipoleRecoilOff",
+              "xsec": 0.000005628
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -9807,14 +9810,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000055932,
+          "value": 0.000005597,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.001375*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.001327,2017/2018:0.001375]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -9833,7 +9837,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4T_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_2_1_hh_4t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_4t_dipoleRecoilOff",
+              "xsec": 0.000056616
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -9851,14 +9856,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000558910,
+          "value": 0.00005593,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01374*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -9888,14 +9894,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000558910,
+          "value": 0.00005593,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01374*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -9914,7 +9921,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4T_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_1_0_hh_4t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_4t_dipoleRecoilOff",
+              "xsec": 0.000018062
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -9932,14 +9940,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000181178,
+          "value": 0.00001813,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.004454*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.0042589,2017/2018:0.004454]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -9958,7 +9967,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4T_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_4t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_4t_dipoleRecoilOff",
+              "xsec": 0.000042791
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -9976,14 +9986,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000425487,
+          "value": 0.000042578,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01046*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.0100898,2017/2018:0.01046]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -10002,7 +10013,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4T_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_4t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_4t_dipoleRecoilOff",
+              "xsec": 0.000260945
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10020,14 +10032,15 @@
           ]
         },
         "xs": {
-          "value": 0.0002595228,
+          "value": 0.000259704,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.0638*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.0615286,2017/2018:0.0638002]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -10046,7 +10059,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4T_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_0_1_hh_4t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_4t_dipoleRecoilOff",
+              "xsec": 0.000107126
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10064,14 +10078,15 @@
           ]
         },
         "xs": {
-          "value": 0.0001064477,
+          "value": 0.000106527,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.02617*1.034*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=[2016:0.0252594,2017/2018:0.0261701]*[2016:1.0781,2017/2018:1.03477]*0.06272^2"
         }
       }
     ]
@@ -10108,14 +10123,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000519000,
+          "value": 0.000051938,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.001668*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10145,14 +10161,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000519000,
+          "value": 0.000051938,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.001668*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10171,7 +10188,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_1_2_hh_2v2t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_2v2t_dipoleRecoilOff",
+              "xsec": 0.00004305
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10189,14 +10207,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000427833,
+          "value": 0.000042815,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.001375*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.001327,2017/2018:0.001375]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10215,7 +10234,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_2_1_hh_2v2t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_2v2t_dipoleRecoilOff",
+              "xsec": 0.000433091
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10233,14 +10253,15 @@
           ]
         },
         "xs": {
-          "value": 0.0004275219,
+          "value": 0.000427841,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01374*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10270,14 +10291,15 @@
           ]
         },
         "xs": {
-          "value": 0.0004275219,
+          "value": 0.000427841,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01374*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10296,7 +10318,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_1_0_hh_2v2t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_2v2t_dipoleRecoilOff",
+              "xsec": 0.000138167
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10314,14 +10337,15 @@
           ]
         },
         "xs": {
-          "value": 0.0001385868,
+          "value": 0.000138689,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.004454*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.0042589,2017/2018:0.004454]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10340,7 +10364,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo2V2Tau_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2v2t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2v2t_dipoleRecoilOff",
+              "xsec": 0.000327333
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10358,14 +10383,15 @@
           ]
         },
         "xs": {
-          "value": 0.0003254642,
+          "value": 0.000325704,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01046*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.0100898,2017/2018:0.01046]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10384,7 +10410,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo2V2Tau_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2v2t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2v2t_dipoleRecoilOff",
+              "xsec": 0.001996109
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10402,14 +10429,15 @@
           ]
         },
         "xs": {
-          "value": 0.0019851452,
+          "value": 0.001986617,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.0638*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.0615286,2017/2018:0.0638002]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10428,7 +10456,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo2V2Tau_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_0_1_hh_2v2t_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_2v2t_dipoleRecoilOff",
+              "xsec": 0.000819465
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10446,14 +10475,15 @@
           ]
         },
         "xs": {
-          "value": 0.0008142775,
+          "value": 0.000814887,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.02617*1.034*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=[2016:0.0252594,2017/2018:0.0261701]*[2016:1.0781,2017/2018:1.03477]*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10490,14 +10520,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000992524,
+          "value": 0.000099326,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.001668*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10527,14 +10558,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000992524,
+          "value": 0.000099326,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.001668*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10553,7 +10585,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4V_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_1_2_hh_4v_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_1_2_hh_4v_dipoleRecoilOff",
+              "xsec": 0.000082329
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10571,14 +10604,15 @@
           ]
         },
         "xs": {
-          "value": 0.0000818177,
+          "value": 0.000081879,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.001375*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.001327,2017/2018:0.001375]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10597,7 +10631,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4V_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_1_0_hh_4v_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_1_0_hh_4v_dipoleRecoilOff",
+              "xsec": 0.000264229
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10615,14 +10650,15 @@
           ]
         },
         "xs": {
-          "value": 0.0002650300,
+          "value": 0.000265227,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.004454*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.0042589,2017/2018:0.004454]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10641,7 +10677,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4V_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_2_1_hh_4v_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_2_1_hh_4v_dipoleRecoilOff",
+              "xsec": 0.000828237
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10659,14 +10696,15 @@
           ]
         },
         "xs": {
-          "value": 0.0008175824,
+          "value": 0.000818197,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.01374*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10696,14 +10734,15 @@
           ]
         },
         "xs": {
-          "value": 0.0008175824,
+          "value": 0.000818197,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.01374*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10722,7 +10761,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4V_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_4v_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_0p5_1_1_hh_4v_dipoleRecoilOff",
+              "xsec": 0.000625988
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10740,14 +10780,15 @@
           ]
         },
         "xs": {
-          "value": 0.0006224099,
+          "value": 0.000622873,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.01046*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.0100898,2017/2018:0.01046]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10766,7 +10807,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4V_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_4v_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1p5_1_1_hh_4v_dipoleRecoilOff",
+              "xsec": 0.003817336
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10784,14 +10826,15 @@
           ]
         },
         "xs": {
-          "value": 0.0037963435,
+          "value": 0.003799183,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.0638*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.0615286,2017/2018:0.0638002]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -10810,7 +10853,8 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/VBFHHTo4V_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
-              "alt": "signal_vbf_nonresonant_1_0_1_hh_4v_dipoleRecoilOff"
+              "alt": "signal_vbf_nonresonant_1_0_1_hh_4v_dipoleRecoilOff",
+              "xsec": 0.001567135
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -10828,14 +10872,15 @@
           ]
         },
         "xs": {
-          "value": 0.0037963435,
+          "value": 0.00155838,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
-            "https://github.com/HEP-KBFI/hh-bbww/issues/7"
+            "https://github.com/HEP-KBFI/hh-bbww/issues/7",
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.02617*1.034*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=[2016:0.0252594,2017/2018:0.0261701]*[2016:1.0781,2017/2018:1.03477]*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
