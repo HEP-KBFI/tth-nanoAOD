@@ -11466,15 +11466,16 @@
           ]
         },
         "xs": {
-          "value": 0.00026593,
+          "value": 0.00027429,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.06063*1.115*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.062534*1.115*0.06272^2"
         }
       }
     ]
@@ -11508,15 +11509,16 @@
           ]
         },
         "xs": {
-          "value": 0.00011841,
+          "value": 0.00012213,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.026997*1.115*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.027845*1.115*0.06272^2"
         }
       }
     ]
@@ -11550,15 +11552,16 @@
           ]
         },
         "xs": {
-          "value": 0.00005006,
+          "value": 0.00005163,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.011412*1.115*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.01177*1.115*0.06272^2"
         }
       }
     ]
@@ -11592,15 +11595,16 @@
           ]
         },
         "xs": {
-          "value": 0.00034774,
+          "value": 0.00035865,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->tau tau)^2=0.07928*1.115*0.06272^2"
+          "comment": "s(HH)*k*BR(H->tau tau)^2=0.081768*1.115*0.06272^2"
         }
       }
     ]
@@ -12112,15 +12116,16 @@
           ]
         },
         "xs": {
-          "value": 0.00203428,
+          "value": 0.00209816,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.06063*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.062534*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12154,15 +12159,16 @@
           ]
         },
         "xs": {
-          "value": 0.00090581,
+          "value": 0.00093427,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.026997*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.027845*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12196,15 +12202,16 @@
           ]
         },
         "xs": {
-          "value": 0.00038290,
+          "value": 0.00039491,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.011412*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.01177*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12238,15 +12245,16 @@
           ]
         },
         "xs": {
-          "value": 0.00266003,
+          "value": 0.00274351,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.07928*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*2*BR(H->tau tau)*BR(H->VV)=0.081768*1.115*2*0.06272*0.23989; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12758,15 +12766,16 @@
           ]
         },
         "xs": {
-          "value": 0.00389033,
+          "value": 0.00401250,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.06063*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.062534*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12800,15 +12809,16 @@
           ]
         },
         "xs": {
-          "value": 0.00173227,
+          "value": 0.00178668,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.026997*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.027845*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12842,15 +12852,16 @@
           ]
         },
         "xs": {
-          "value": 0.00073225,
+          "value": 0.00075522,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.011412*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.01177*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
@@ -12884,15 +12895,16 @@
           ]
         },
         "xs": {
-          "value": 0.00508701,
+          "value": 0.00524666,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
-            "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
+            "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
+            "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*BR(H->VV)^2=0.07928*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
+          "comment": "s(HH)*k*BR(H->VV)^2=0.081768*1.115*0.23989^2; BR(H->VV)=BR(H->WW)+BR(H->ZZ)=0.2137+0.02619=0.23989"
         }
       }
     ]
