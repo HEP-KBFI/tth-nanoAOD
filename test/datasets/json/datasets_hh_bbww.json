@@ -20,14 +20,14 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -53,14 +53,14 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -86,14 +86,14 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -119,14 +119,14 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -160,14 +160,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -205,14 +205,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -250,14 +250,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -287,14 +287,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -328,14 +328,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -365,14 +365,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -410,14 +410,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -455,14 +455,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -496,14 +496,14 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -541,14 +541,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -582,14 +582,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -627,14 +627,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -672,14 +672,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -709,14 +709,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -754,14 +754,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -799,14 +799,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -836,14 +836,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -881,14 +881,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -922,14 +922,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -959,14 +959,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -996,14 +996,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1033,14 +1033,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1070,14 +1070,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1107,14 +1107,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1144,14 +1144,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1181,14 +1181,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1226,14 +1226,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1271,14 +1271,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1308,14 +1308,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1353,14 +1353,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1390,14 +1390,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1435,14 +1435,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1480,14 +1480,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1525,14 +1525,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1570,14 +1570,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1615,14 +1615,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1660,14 +1660,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1705,14 +1705,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1750,14 +1750,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1787,14 +1787,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1832,14 +1832,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1869,14 +1869,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1914,14 +1914,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1959,14 +1959,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -1996,14 +1996,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2033,14 +2033,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2070,14 +2070,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2107,14 +2107,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2144,14 +2144,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2181,14 +2181,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2229,7 +2229,7 @@
           ]
         },
         "xs": {
-          "value": 0.000047915,
+          "value": 0.00004773,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2238,7 +2238,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2268,7 +2268,7 @@
           ]
         },
         "xs": {
-          "value": 0.000047915,
+          "value": 0.00004773,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2277,7 +2277,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.001601,2017/2018:0.001668]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2301,7 +2301,7 @@
             {
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_1_2_hh_2b2v_dipoleRecoilOff",
-              "xsec": 0.000039715
+              "xsec": 0.000039562
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -2319,7 +2319,7 @@
           ]
         },
         "xs": {
-          "value": 0.000039498,
+          "value": 0.000039346,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2328,7 +2328,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.001327,2017/2018:0.001375]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.001327,2017/2018:0.001375]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2352,7 +2352,7 @@
             {
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_2_1_hh_2b2v_dipoleRecoilOff",
-              "xsec": 0.000399540
+              "xsec": 0.000398001
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -2370,7 +2370,7 @@
           ]
         },
         "xs": {
-          "value": 0.000394696,
+          "value": 0.000393175,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2379,7 +2379,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2409,7 +2409,7 @@
           ]
         },
         "xs": {
-          "value": 0.000394696,
+          "value": 0.000393175,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2418,7 +2418,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0133497,2017/2018:0.0137401]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2442,7 +2442,7 @@
             {
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_1_0_hh_2b2v_dipoleRecoilOff",
-              "xsec": 0.000127463
+              "xsec": 0.000126972
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -2460,7 +2460,7 @@
           ]
         },
         "xs": {
-          "value": 0.000127945,
+          "value": 0.000127452,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2469,7 +2469,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0042589,2017/2018:0.004454]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0042589,2017/2018:0.004454]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2493,7 +2493,7 @@
             {
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1p5_1_1_hh_2b2v_dipoleRecoilOff",
-              "xsec": 0.001841473
+              "xsec": 0.001834377
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -2511,7 +2511,7 @@
           ]
         },
         "xs": {
-          "value": 0.001832716,
+          "value": 0.001825654,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2520,7 +2520,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0615286,2017/2018:0.0638002]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0615286,2017/2018:0.0638002]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2544,7 +2544,7 @@
             {
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_0p5_1_1_hh_2b2v_dipoleRecoilOff",
-              "xsec": 0.000301975
+              "xsec": 0.000300811
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -2562,7 +2562,7 @@
           ]
         },
         "xs": {
-          "value": 0.000300473,
+          "value": 0.000299315,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2571,7 +2571,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0100898,2017/2018:0.01046]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0100898,2017/2018:0.01046]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2591,7 +2591,7 @@
             {
               "dbs": "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM",
               "alt": "signal_vbf_nonresonant_1_0_1_hh_2b2v_dipoleRecoilOff",
-              "xsec": 0.000755982
+              "xsec": 0.000753069
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -2609,7 +2609,7 @@
           ]
         },
         "xs": {
-          "value": 0.000751759,
+          "value": 0.000748862,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -2618,7 +2618,7 @@
             "https://github.com/HEP-KBFI/hh-bbww/issues/7",
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0252594,2017/2018:0.0261701]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=[2016:0.0252594,2017/2018:0.0261701]*[2016:1.0781,2017/2018:1.03477]*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -2656,14 +2656,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2687,14 +2687,14 @@
           "RunIIAutumn18MiniAOD": []
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2726,14 +2726,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2765,14 +2765,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2804,14 +2804,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2843,14 +2843,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2882,14 +2882,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2921,14 +2921,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2960,14 +2960,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -2999,14 +2999,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -3038,14 +3038,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -3077,14 +3077,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -3116,14 +3116,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       },
       {
@@ -3155,14 +3155,14 @@
           ]
         },
         "xs": {
-          "value": 0.027761,
+          "value": 0.027654,
           "order": "",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
             "http://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S043",
             "https://pdglive.lbl.gov/Particle.action?node=S044&init=0"
           ],
-          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -3196,7 +3196,7 @@
           ]
         },
         "xs": {
-          "value": 0.00193562,
+          "value": 0.001928162,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -3206,7 +3206,7 @@
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
             "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.062534*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.062534*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -3240,7 +3240,7 @@
           ]
         },
         "xs": {
-          "value": 0.00086189,
+          "value": 0.000858569,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -3250,7 +3250,7 @@
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
             "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.027845*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.027845*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -3284,7 +3284,7 @@
           ]
         },
         "xs": {
-          "value": 0.00036432,
+          "value": 0.000362916,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -3294,7 +3294,7 @@
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
             "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.01177*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.01177*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
@@ -3328,7 +3328,7 @@
           ]
         },
         "xs": {
-          "value": 0.00253097,
+          "value": 0.002521218,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
@@ -3338,7 +3338,7 @@
             "https://github.com/HEP-KBFI/hh-multilepton/issues/31",
             "https://docs.google.com/spreadsheets/d/1XQQsN4rl3xGDa35W516TwKyadccpfoT7M1mFGxZ4UjQ/edit#gid=1223976475"
           ],
-          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.081768*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.10974*0.2)"
+          "comment": "s(HH)*k*2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=0.081768*1.115*2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)"
         }
       }
     ]
