@@ -1,5 +1,5 @@
-from tthAnalysis.NanoAOD.LeptonFakeRate_trigger_cfi import leptonFR_triggers ## USED IN LFR IN HH MULTI-LEPTON AND TTH ANALYSIS
-#from tthAnalysis.NanoAOD.LeptonFakeRate_bbWWSL_trigger_cfi import leptonFR_triggers ## USED IN LFR IN HH bbWW SL ANALYSIS
+#from tthAnalysis.NanoAOD.LeptonFakeRate_trigger_cfi import leptonFR_triggers ## Uncomment this line (and comment the next line) before running Lepton Fake Rates for ttH/HH Multi-lepton casees
+from tthAnalysis.NanoAOD.LeptonFakeRate_bbWWSL_trigger_cfi import leptonFR_triggers ## Uncomment this line (and comment the above line) before running Lepton Fake Rates for bbWW Single Lepton case
 
 import FWCore.ParameterSet.Config as cms
 
