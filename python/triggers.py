@@ -1,4 +1,5 @@
 from tthAnalysis.NanoAOD.LeptonFakeRate_trigger_cfi import leptonFR_triggers
+from tthAnalysis.NanoAOD.LeptonFakeRate_bbWWSL_trigger_cfi import leptonFR_triggers as leptonFR_triggers_bbWWSL
 
 import FWCore.ParameterSet.Config as cms
 
@@ -18589,9 +18590,13 @@ class Triggers(object):
       raise ValueError("Invalid era: %s" % era)
   
     self.triggers_leptonFR = {}
+    self.triggers_leptonFR_bbWWSL = {}
     for trigger_type in [ '1e', '1mu', '2e', '2mu' ]:
       self.triggers_leptonFR[trigger_type] = {
         hlt.path.value() for hlt in leptonFR_triggers[era][trigger_type[1:]] if hlt.trigger_type.value() == trigger_type
+      }
+      self.triggers_leptonFR_bbWWSL[trigger_type] = {
+        hlt.path.value() for hlt in leptonFR_triggers_bbWWSL[era][trigger_type[1:]] if hlt.trigger_type.value() == trigger_type
       }
 
     self.triggers_all = {}
@@ -18602,9 +18607,10 @@ class Triggers(object):
       if trigger_name in self.triggers_leptonFR:
         self.triggers_all[trigger_name].update(self.triggers_leptonFR[trigger_name])
 
-    self.triggers_analysis_flat = { trigger['name'] for triggers in self.triggers_analysis for trigger in self.triggers_analysis[triggers] }
-    self.triggers_leptonFR_flat = { trigger         for triggers in self.triggers_leptonFR for trigger in self.triggers_leptonFR[triggers] }
-    self.triggers_flat          = self.triggers_analysis_flat | self.triggers_leptonFR_flat
+    self.triggers_analysis_flat        = { trigger['name'] for triggers in self.triggers_analysis        for trigger in self.triggers_analysis[triggers] }
+    self.triggers_leptonFR_flat        = { trigger         for triggers in self.triggers_leptonFR        for trigger in self.triggers_leptonFR[triggers] }
+    self.triggers_leptonFR_bbWWSL_flat = { trigger         for triggers in self.triggers_leptonFR_bbWWSL for trigger in self.triggers_leptonFR_bbWWSL[triggers] }
+    self.triggers_flat                 = self.triggers_analysis_flat | self.triggers_leptonFR_flat | self.triggers_leptonFR_bbWWSL_flat
 
     self.runs = cms.PSet()
     for trigger_name in self.triggers_analysis_flat:
