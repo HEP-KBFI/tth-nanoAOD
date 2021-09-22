@@ -96,7 +96,7 @@ show_help() {
   echo -ne "Usage: $(basename $THIS_SCRIPT) -e <era>  -j <type> [-d] [-g] [-u] [-f <dataset file>] [-v version] [-w whitelist = ''] " 1>&2;
   echo -ne "[-n <job events = $NOF_EVENTS>] [-N <cfg events = $NOF_CMSDRIVER_EVENTS>] [-r <frequency = $REPORT_FREQUENCY>] " 1>&2;
   echo -ne "[-t <threads = $NTHREADS>] [ -p <publish: 0|1 = $PUBLISH> ] [ -s <label> = '' ] [ -F <trigger filter: 0|1 = $HLT_FILTER> ]" 1>&2;
-  echo     "[-x <file listing datasets to exclude> = '' ]" 1>&2;
+  echo     "[-x <file listing datasets to exclude> = '' ] [-c <custom lumimask>]" 1>&2;
   echo "Available eras: $ERA_KEY_2016_v2, $ERA_KEY_2016_v3, $ERA_KEY_2017_v1, $ERA_KEY_2017_v2, $ERA_KEY_2018, $ERA_KEY_2018_PROMPT" 1>&2;
   echo "Available job types: $TYPE_DATA, $TYPE_MC, $TYPE_FAST, $TYPE_SYNC"
   exit 0;
