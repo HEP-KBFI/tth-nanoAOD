@@ -84,6 +84,7 @@ export PUBLISH=0
 export HLT_FILTER=0
 export CFG_LABEL_STR=""
 DATASETS_EXCLUDE_FILE=""
+JSON_FILE_CUSTOM=""
 
 TYPE_DATA="data"
 TYPE_MC="mc"
@@ -101,7 +102,7 @@ show_help() {
   exit 0;
 }
 
-while getopts "h?dguf:j:e:v:w:n:N:r:t:p:s:F:x:" opt; do
+while getopts "h?dguf:j:e:v:w:n:N:r:t:p:s:F:x:c:" opt; do
   case "${opt}" in
   h|\?) show_help
         ;;
@@ -136,6 +137,8 @@ while getopts "h?dguf:j:e:v:w:n:N:r:t:p:s:F:x:" opt; do
   F) export HLT_FILTER=${OPTARG}
      ;;
   x) DATASETS_EXCLUDE_FILE=${OPTARG}
+     ;;
+  c) JSON_FILE_CUSTOM=${OPTARG}
      ;;
   esac
 done
@@ -244,6 +247,11 @@ elif [ "$ERA" == "$ERA_KEY_2018_PROMPT" ]; then
   fi
 else
   echo "Invalid era: $ERA";
+fi
+
+if [ ! -z "$JSON_FILE_CUSTOM" ]; then
+  echo "Using custom golden JSON $JSON_FILE_CUSTOM";
+  JSON_FILE=$JSON_FILE_CUSTOM;
 fi
 
 export BASE_DIR="$CMSSW_BASE/src/tthAnalysis/NanoAOD"
