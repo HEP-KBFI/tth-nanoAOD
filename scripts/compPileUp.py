@@ -11,17 +11,17 @@ import urllib
 CONFIG = {
   '2016' : {
     'json'   : 'Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt',
-    'pileup' : 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions16/13TeV/PileUp/pileup_latest.txt',
-    'md5sum' : '19d2189b731d6fee4e7ba80b53464206',
+    'pileup' : 'https://cms-service-dqmdc.web.cern.ch/CAF/certification/Collisions16/13TeV/PileUp/pileup_latest.txt',
+    'md5sum' : '5e5907d1a7f322a3c26a59813b35a2d7',
   },
   '2017' : {
     'json'   : 'Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt',
-    'pileup' : 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/13TeV/PileUp/pileup_latest.txt',
+    'pileup' : 'https://cms-service-dqmdc.web.cern.ch/CAF/certification/Collisions17/13TeV/PileUp/pileup_latest.txt',
     'md5sum' : 'ea3389cd1d992aeaef66b842c5085d05',
   },
   '2018' : {
     'json'   : 'Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt',
-    'pileup' : 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/PileUp/pileup_latest.txt',
+    'pileup' : 'https://cms-service-dqmdc.web.cern.ch/CAF/certification/Collisions18/13TeV/PileUp/pileup_latest.txt',
     'md5sum' : '09636a2cd8259eafd45723e0c3a27d6a',
   },
 }
