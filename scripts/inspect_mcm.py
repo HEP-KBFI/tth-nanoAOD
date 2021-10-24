@@ -144,7 +144,7 @@ def get_fragment(mcm, campaign_data, print_notes = False):
   ancestor_id = chain_data['chain'][0]
   logging.debug('Got ancestor ID: {}'.format(ancestor_id))
 
-  ancestor_data = mcm.get('requests', ancestor_id)
+  ancestor_data = get_campaign_data(mcm, ancestor_id)
   fragment = ancestor_data['fragment']
 
   if not fragment and print_notes:
