@@ -118,6 +118,8 @@ def parse_args():
                       help = 'Verbose output')
   parser.add_argument('-n', '--notes', dest = 'notes', action = 'store_true', default = False,
                       help = 'Print notes if fragment missing')
+  parser.add_argument('-u', '--url', dest = 'url', action='store_true', default = False,
+                      help = 'Return URL instead')
   args = parser.parse_args()
 
   return args
@@ -134,7 +136,7 @@ def get_prep_id(dataset):
 def get_campaign_data(mcm, prep_id):
   return mcm.get('requests', prep_id)
 
-def get_fragment(mcm, campaign_data, print_notes = False):
+def get_fragment(mcm, campaign_data, print_notes = False, return_url = False):
   join_chain = [ history for history in campaign_data['history'] if history['action'] == 'join chain' ]
   assert(join_chain)
   first_ancestor = join_chain[0]['step'] # first one in history
@@ -146,6 +148,9 @@ def get_fragment(mcm, campaign_data, print_notes = False):
 
   ancestor_data = get_campaign_data(mcm, ancestor_id)
   fragment = ancestor_data['fragment']
+
+  if return_url:
+    return 'https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/{}'.format(ancestor_id)
 
   if not fragment and print_notes:
     logging.debug('No fragment found, returning notes instead') # may contain a link to original cards
@@ -170,7 +175,7 @@ if __name__ == '__main__':
     generators = [ generator for generator in campaign_data['generators'] if generator ]
     print(', '.join(generators))
   elif args.query == 'fragment':
-    fragment = get_fragment(mcm, campaign_data, args.notes)
+    fragment = get_fragment(mcm, campaign_data, args.notes, args.url)
     print(fragment)
   else:
     assert(False)
