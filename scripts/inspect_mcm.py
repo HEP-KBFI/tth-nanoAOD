@@ -114,6 +114,8 @@ def parse_args():
                       help = 'Requested query')
   parser.add_argument('-c', '--cookie', dest = 'cookie', metavar = 'path', required = False, type = str, default = 'cookie.txt',
                       help = 'SSO cookie')
+  parser.add_argument('-o', '--output', dest = 'output', metavar = 'output', required = False, type = str, default = '',
+                      help = 'Output file (only if no -n or -u supplied)')
   parser.add_argument('-d', '--debug', dest = 'debug', action = 'store_true', default = False,
                       help = 'Verbose output')
   parser.add_argument('-n', '--notes', dest = 'notes', action = 'store_true', default = False,
@@ -177,5 +179,11 @@ if __name__ == '__main__':
   elif args.query == 'fragment':
     fragment = get_fragment(mcm, campaign_data, args.notes, args.url)
     print(fragment)
+    if args.output and not (args.notes or args.url):
+      output_dir = os.path.dirname(os.path.abspath(args.output))
+      if not os.path.isdir(output_dir):
+        raise RuntimeError("No such directory: %s" % output_dir)
+      with open(args.output, 'w') as output:
+        output.write(fragment)
   else:
     assert(False)
