@@ -120,8 +120,10 @@ def parse_args():
                       help = 'Verbose output')
   parser.add_argument('-n', '--notes', dest = 'notes', action = 'store_true', default = False,
                       help = 'Print notes if fragment missing')
-  parser.add_argument('-u', '--url', dest = 'url', action='store_true', default = False,
+  parser.add_argument('-u', '--url', dest = 'url', action = 'store_true', default = False,
                       help = 'Return URL instead')
+  parser.add_argument('-s', '--silent', dest = 'silent', action = 'store_true', default = False,
+                      help = 'Silent mode')
   args = parser.parse_args()
 
   return args
@@ -164,7 +166,7 @@ if __name__ == '__main__':
 
   logging.basicConfig(
     stream = sys.stdout,
-    level  = logging.DEBUG if args.debug else logging.INFO,
+    level  = logging.DEBUG if (args.debug and not args.silent) else logging.INFO,
     format = '%(asctime)s - %(levelname)s: %(message)s',
   )
 
@@ -178,7 +180,8 @@ if __name__ == '__main__':
     print(', '.join(generators))
   elif args.query == 'fragment':
     fragment = get_fragment(mcm, campaign_data, args.notes, args.url)
-    print(fragment)
+    if not args.silent:
+      print(fragment)
     if args.output and not (args.notes or args.url):
       output_dir = os.path.dirname(os.path.abspath(args.output))
       if not os.path.isdir(output_dir):
