@@ -39,6 +39,9 @@ options.parseArguments()
 inputFiles = prepend(options.inputFiles)
 if not inputFiles:
   raise RuntimeError("No input files given")
+max_to_print = max(options.maxEvents, len(options.eventsToProcess) if options.eventsToProcess else -1)
+if max_to_print < 0:
+  raise RuntimeError("Attempting to dump the gen particle listing of ALL events")
 
 process = cms.Process('printGenParticles')
 
@@ -60,7 +63,7 @@ process.s = cms.Sequence()
 process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi',)
 process.printGenParticleList = cms.EDAnalyzer('ParticleListDrawer',
   src = cms.InputTag('prunedGenParticles'),
-  maxEventsToPrint = cms.untracked.int32(max(options.maxEvents, len(options.eventsToProcess))),
+  maxEventsToPrint = cms.untracked.int32(max_to_print),
 )
 
 process.s += process.printGenParticleList
