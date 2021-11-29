@@ -225,19 +225,21 @@ def process(input_filename, evt_str, dump_header, print_weights, output_dir):
         print(''.join(header['content']))
         print('=' * 150)
 
-  event_handle = DataFormats.FWLite.Events(input_filename)
-  evt_nr = find_event(event_handle, evt_str)
-  if evt_nr >= 0:
-    event_handle.to(evt_nr)
-    rle = get_rle(event_handle)
-    logging.debug("Parsing event {}".format(rle))
+  if print_weights:
+    event_handle = DataFormats.FWLite.Events(input_filename)
+    evt_nr = find_event(event_handle, evt_str)
+    if evt_nr >= 0:
+      event_handle.to(evt_nr)
+      rle = get_rle(event_handle)
+      logging.debug("Parsing event {}".format(rle))
 
-    check_generator(event_handle)
-    if print_weights:
+      check_generator(event_handle)
       weights_parsed = dump_lhe_weights(event_handle)
       print('\n'.join(weights_parsed))
 
-  del event_handle
+    del event_handle
+
+  return
 
 def parse_args():
   parser = argparse.ArgumentParser(description = DESCRIPTION, formatter_class = RawFormatter)
