@@ -202,8 +202,9 @@ def sanitize_input(input_filename):
     else:
       logging.debug("File name starts with /store -> will prefix xdr schema")
       input_filename = XDR_SCHEMA + input_filename
-  if not input_filename.startswith(XDR_SCHEMA):
+  if not input_filename.startswith(XDR_SCHEMA) and not input_filename.startswith(FILE_SCHEMA):
     input_filename = FILE_SCHEMA + input_filename
+  logging.debug('Processing: {}'.format(input_filename))
   return input_filename
 
 def process(input_filename, evt_str, dump_header, print_weights, output_dir):
