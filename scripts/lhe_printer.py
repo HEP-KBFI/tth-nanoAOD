@@ -2,7 +2,12 @@
 
 # Script for dumpting LHE headers and weights
 
-from tthAnalysis.HiggsToTauTau.safe_root import ROOT # force batch mode
+import sys
+argv = sys.argv
+sys.argv = []
+import ROOT
+ROOT.gSystem.ResetSignals()
+sys.argv = argv
 
 import DataFormats.FWLite # Events, Handle, Runs
 
@@ -10,7 +15,6 @@ import os.path
 import argparse
 import textwrap
 import logging
-import sys
 
 DESCRIPTION = r"""In case you want to open remote files,
 make sure that you've opened your proxy:
