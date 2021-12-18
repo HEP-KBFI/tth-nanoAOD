@@ -18,29 +18,12 @@ inputFiles = [{% for file_name in file_names %}
 
 process = cms.Process('XSEC')
 
-# import of standard configurations
-process.load('Configuration.StandardSequences.Services_cff')
-process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi')
 process.load('FWCore.MessageService.MessageLogger_cfi')
-process.load('Configuration.EventContent.EventContent_cff')
-process.load('SimGeneral.MixingModule.mixNoPU_cfi')
-process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
-process.load('Configuration.StandardSequences.MagneticField_38T_cff')
-process.load('Configuration.StandardSequences.Generator_cff')
-process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic8TeVCollision_cfi')
-process.load('GeneratorInterface.Core.genFilterSummary_cff')
-process.load('Configuration.StandardSequences.EndOfProcess_cff')
-process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
+process.MessageLogger.cerr.FwkReport.reportEvery = 10000
 
-from Configuration.AlCa.GlobalTag import GlobalTag
-
-process.GlobalTag = GlobalTag(process.GlobalTag, '{{ global_tag }}', '')
 process.maxEvents = cms.untracked.PSet(
   input = cms.untracked.int32({{ max_events }}),
 )
-
-process.MessageLogger.cerr.FwkReport.reportEvery = 10000
-
 process.source = cms.Source(
   "PoolSource",
   fileNames          = cms.untracked.vstring(inputFiles),
@@ -52,6 +35,8 @@ process.genxsec = cms.EDAnalyzer("GenXSecAnalyzer")
 process.p = cms.Path(process.genxsec)
 process.schedule = cms.Schedule(process.p)
 """
+
+MAX_NAME_LEN = os.pathconf('/', 'PC_NAME_MAX')
 
 parent_id = os.getpid()
 def handle_worker():
@@ -160,12 +145,11 @@ with open(args.input, 'r') as f:
     line_stripped = line.rstrip('\n')
     if not line_stripped.startswith('/'):
       continue
-    if len(line_stripped.split()) < 5:
-      raise RuntimeError('Expected at least 5 columns at line %d in file %s' % (line_idx, args.input))
     line_split = line_stripped.split()
     dbs_key = line_split[0]
-    sample_name = line_split[3]
-    expected_xs = float(line_split[4])
+    sample_name = line_split[3] if len(line_split) > 3 else \
+                  dbs_key[1:dbs_key.rfind('/')].replace('/', '__')[:MAX_NAME_LEN]
+    expected_xs = float(line_split[4]) if len(line_split) > 4 else 0.
     if sample_name_regex.match(sample_name):
       logging.debug('Found sample {}'.format(sample_name))
       samples[sample_name] = {
