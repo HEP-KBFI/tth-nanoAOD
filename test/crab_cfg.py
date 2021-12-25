@@ -85,6 +85,7 @@ if is_private:
     print('\n'.join([ '  {}'.format(path) for path in PRIVATE_FILES_ARRAY[-10:] ]))
   else:
     print('\n'.join([ '  {}'.format(path) for path in PRIVATE_FILES_ARRAY ]))
+    assert(PRIVATE_FILES_ARRAY)
   config.Data.userInputFiles       = PRIVATE_FILES_ARRAY
   config.Data.outputPrimaryDataset = dataset_match.group(1)
   config.Data.splitting            = 'FileBased'
