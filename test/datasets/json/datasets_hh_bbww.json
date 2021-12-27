@@ -516,7 +516,7 @@
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v4/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/2021Dec26_GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8_v4/000000_000000/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v4/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8/2021Dec26_GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8_v4/000000_000000/000*"
             }
           ]
         },
@@ -1210,7 +1210,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8_v0/211225_124242/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -1342,7 +1342,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8_v0/211225_124302/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -1429,7 +1429,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8_v0/211225_124459/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -1831,7 +1831,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8_v0/211225_200505/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -1918,7 +1918,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8_v0/211225_200533/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -5439,7 +5439,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8_v0/211225_124141/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -5534,7 +5534,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8_v0/211225_124212/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -5972,7 +5972,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8_v0/211225_180325/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
@@ -6067,7 +6067,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
-              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8_v0/211225_200333/000*"
+              "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
           "RunIIFall17MiniAOD": [],
