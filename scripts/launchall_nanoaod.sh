@@ -498,7 +498,12 @@ echo "Checking if VOMS is open long enough ..."
 export MIN_HOURSLEFT=72
 export MIN_TIMELEFT=$((3600 * $MIN_HOURSLEFT))
 VOMS_PROXY_TIMELEFT=$(voms-proxy-info --timeleft)
-if [ "$VOMS_PROXY_TIMELEFT" -lt "$MIN_TIMELEFT" ]; then
+VOMS_EXIT_CODE=$?
+if [ $VOMS_EXIT_CODE -gt 0 ]; then
+  echo "Exiting...";
+  exit 1;
+fi
+if [[ "$VOMS_PROXY_TIMELEFT" -lt "$MIN_TIMELEFT" ]]; then
   echo "Less than $MIN_HOURSLEFT hours left for the proxy to be open: $VOMS_PROXY_TIMELEFT seconds";
   echo "Please update your proxy: voms-proxy-init -voms cms -valid 192:00";
   exit 1;
