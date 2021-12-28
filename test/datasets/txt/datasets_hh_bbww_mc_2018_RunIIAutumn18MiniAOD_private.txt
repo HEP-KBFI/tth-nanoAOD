@@ -1,8 +1,8 @@
-# file generated at 2021-12-27 16:05:10 with the following command:
+# file generated at 2021-12-28 16:30:10 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets_hh_bbww.json
 
 # HH -> bbWW, WW -> 2l 2v (GGF spin0 resonant)
-/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD/USER 1 signal_ggf_spin0_450_hh_bbvv signal_ggf_spin0_450_hh_2b2v 0.027654 /store/user/kaehatah/CustomResonantHHProduction/v4/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8/2021Dec26_GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8_v4/000000_000000/000*  #  [1][2][3]; normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)
+/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD/USER 1 signal_ggf_spin0_450_hh_bbvv signal_ggf_spin0_450_hh_2b2v_private 0.027654 /store/user/kaehatah/CustomResonantHHProduction/v4/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8/2021Dec26_GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8_v4/000000_000000/000*  #  [1][2][3]; normalized to 1 pb: 2*BR(H->bb)*(BR(H->WW)*BR(W->lnu)^2+2*BR(H->ZZ)*BR(Z->ll)*BR(Z->vv))=2*0.5824*(0.2137*0.3258^2+2*0.02619*0.100974*0.2)
 
 # References:
 # [1] https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR

@@ -149,6 +149,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_250_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8_v0/211225_020357/000*"
             }
           ],
@@ -281,6 +282,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_280_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8_v0/211225_020504/000*"
             }
           ],
@@ -333,6 +335,7 @@
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-300_narrow_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_spin0_300_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-300_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-300_narrow_13TeV-madgraph-pythia8_v0/211225_124357/000*"
             }
           ],
@@ -369,6 +372,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_320_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8_v0/211225_020540/000*"
             }
           ],
@@ -516,6 +520,7 @@
           "RunIIAutumn18MiniAOD": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD/USER",
+              "alt": "signal_ggf_spin0_450_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v4/GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8/2021Dec26_GluGluToRadionToHHTo2B2VTo2L2Nu_M-450_narrow_13TeV-madgraph-pythia8_v4/000000_000000/000*"
             }
           ]
@@ -602,6 +607,7 @@
           "RunIIFall17MiniAODv2": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-550_narrow_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2/USER",
+              "alt": "signal_ggf_spin0_550_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-550_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-550_narrow_13TeV-madgraph-pythia8_v0/211225_200602/000*"
             }
           ],
@@ -728,6 +734,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-700_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_700_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-700_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-700_narrow_13TeV-madgraph-pythia8_v0/211225_180215/000*"
             }
           ],
@@ -860,6 +867,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_850_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8_v0/211225_180300/000*"
             }
           ],
@@ -1210,6 +1218,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_250_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-250_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -1342,6 +1351,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_280_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-280_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -1429,6 +1439,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_320_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-320_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -1831,6 +1842,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_750_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-750_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -1918,6 +1930,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_850_hh_2b2v_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2VTo2L2Nu_M-850_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -4278,6 +4291,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_280_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8_v0/211225_020019/000*"
             }
           ],
@@ -4373,6 +4387,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_320_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8_v0/211225_020324/000*"
             }
           ],
@@ -4807,6 +4822,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_750_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8_v0/211225_175418/000*"
             }
           ],
@@ -4902,6 +4918,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToRadionToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin0_850_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToRadionToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToRadionToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8_v0/211225_180101/000*"
             }
           ],
@@ -5439,6 +5456,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_280_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-280_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -5534,6 +5552,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_320_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-320_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -5972,6 +5991,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_750_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-750_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
@@ -6067,6 +6087,7 @@
           "RunIISummer16MiniAODv3": [
             {
               "dbs": "/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3/USER",
+              "alt": "signal_ggf_spin2_850_hh_2b2v_sl_private",
               "loc": "/store/user/kaehatah/CustomResonantHHProduction/v0/GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8/2021Dec25_GluGluToBulkGravitonToHHTo2B2WToLNu2J_M-850_narrow_13TeV-madgraph-pythia8_v0/0/000*"
             }
           ],
