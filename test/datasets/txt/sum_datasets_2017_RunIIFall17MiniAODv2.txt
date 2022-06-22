@@ -1,4 +1,4 @@
-# file generated at 2020-10-24 18:51:13 with the following command:
+# file generated at 2022-06-22 18:37:31 with the following command:
 # generate_dataset_table.py -i test/datasets/json/datasets.json
 
 ttHToNonbb_M125_powheg                  ttHToNonbb_M125_powheg_ext1
@@ -32,6 +32,8 @@ DYJetsToLL_M50_HT100to200               DYJetsToLL_M50_HT100to200_ext1
 DYJetsToLL_M50_HT200to400               DYJetsToLL_M50_HT200to400_ext1
 DYJetsToLL_M50_HT400to600               DYJetsToLL_M50_HT400to600_ext1
 DYBBJetsToLL_M-50                       DYBBJetsToLL_M-50_ext1
+WJetsToLNu_1J                           WJetsToLNu_1J_ext1
+WJetsToLNu_2J                           WJetsToLNu_2J_ext1
 WJetsToLNu_madgraphMLM                  WJetsToLNu_madgraphMLM_ext1
 WWTo2L2Nu                               WWTo2L2Nu_PSweights_ext1
 WWToLNuQQ                               WWToLNuQQ_ext1                                    WWToLNuQQ_PSweights_ext1

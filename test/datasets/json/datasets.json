@@ -4526,14 +4526,119 @@
             }
           ],
           "RunIIFall17MiniAOD": [],
-          "RunIIFall17MiniAODv2": [],
-          "RunIIAutumn18MiniAOD": []
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
         },
         "xs": {
           "value": 61526.7,
           "order": "NNLO",
           "references": [
             "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns"
+          ],
+          "comment": ""
+        }
+      },
+      {
+        "name": "WJetsToLNu_0J",
+        "enabled": 0,
+        "use_case": "irreducible background",
+        "process": "W+jets",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 50062.0,
+          "order": "NNLO",
+          "references": [
+            "https://gitlab.cern.ch/cms-hh-bbww/cms-hh-to-bbww/-/blob/master/Legacy/datasets.md#510-nlo-wjets-samples"
+          ],
+          "comment": ""
+        }
+      },
+      {
+        "name": "WJetsToLNu_1J",
+        "enabled": 0,
+        "use_case": "irreducible background",
+        "process": "W+jets",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "WJetsToLNu_1J"
+            },
+            {
+              "dbs": "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM",
+              "alt": "WJetsToLNu_1J_ext1"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 8331.0,
+          "order": "NNLO",
+          "references": [
+            "https://gitlab.cern.ch/cms-hh-bbww/cms-hh-to-bbww/-/blob/master/Legacy/datasets.md#510-nlo-wjets-samples"
+          ],
+          "comment": ""
+        }
+      },
+      {
+        "name": "WJetsToLNu_2J",
+        "enabled": 0,
+        "use_case": "irreducible background",
+        "process": "W+jets",
+        "datasets": {
+          "RunIISummer16MiniAODv2": [],
+          "RunIISummer16MiniAODv3": [],
+          "RunIIFall17MiniAOD": [],
+          "RunIIFall17MiniAODv2": [
+            {
+              "dbs": "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM",
+              "alt": "WJetsToLNu_2J"
+            },
+            {
+              "dbs": "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM",
+              "alt": "WJetsToLNu_2J_ext1"
+            }
+          ],
+          "RunIIAutumn18MiniAOD": [
+            {
+              "dbs": "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM"
+            }
+          ]
+        },
+        "xs": {
+          "value": 3133.0,
+          "order": "NNLO",
+          "references": [
+            "https://gitlab.cern.ch/cms-hh-bbww/cms-hh-to-bbww/-/blob/master/Legacy/datasets.md#510-nlo-wjets-samples"
           ],
           "comment": ""
         }
